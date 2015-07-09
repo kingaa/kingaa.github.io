@@ -1,27 +1,36 @@
+---
+title: Aaron King on github
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
   <head>
-    <meta name="generator" content=
-	  "HTML Tidy for Linux (vers 25 March 2009), see www.w3.org">
-    <meta http-equiv="Content-Type" content=
-	  "text/html; charset=us-ascii">
-    <meta name="keywords" content=
-	  "stochastic dynamics, inference, hidden Markov model, state space model, pomp, R">
-    <link href="http://kingaa.github.io/whitestyle.css" rel=
-	  "stylesheet" type="text/css">
-    <title>Aaron King on github</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+    <meta name="keywords" content="stochastic dynamics, inference, hidden Markov model, state space model, pomp, R">
+    <link href="http://kingaa.github.io/whitestyle.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="bluefish.ico" type="image/ico">
+    <title>{{ page.title }}</title>
   </head>
   <body>
-    <h2>Aaron King on github</h2>
-    <ul>
-      <li><a href="./pomp"><b>pomp<br>
-	    <br></b></a></li>
-      <li><a href="http://github.com/kingaa/tao/"><b>tao<br>
-	    <br></b></a></li>
-      <li><a href="http://github.com/kingaa/"><b>All repos<br>
-	    <br></b></a></li>
-      <li><a href="http://kinglab.eeb.lsa.umich.edu/king"><b>Aaron's homepage<br>
-	    <br></b></a></li>
-    </ul>
+    <hr width="80%" align="left">
+    <h2>{{ page.title}}</h2>
+    <hr width="80%" align="left">
+    <table width="80%">
+      <tr>
+	<td width="30%">
+	  <img height="60" align="bottom" src="images/bluefish.png">
+	</td>
+	<td width="70%">
+	  <ul>
+	    {% for site in site.data.sites %}
+	    <li><a href="{{ site.url }}"><b>{{ site.name }}</b></a></li>
+	    {% endfor %}
+	  </ul>
+	</td>
+      </tr>
+    </table>
+    <hr width="80%" align="left">
+    <a href="http://github.com/kingaa"><b>All repos</b></a><br>
+    <a href="http://kinglab.eeb.lsa.umich.edu/king"><b>Homepage</b></a><br>
+    <hr width="80%" align="left">
   </body>
 </html>

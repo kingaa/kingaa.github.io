@@ -1,0 +1,9 @@
+---
+date: 10 Jul 2015
+title: smoothed trajectories via PMCMC
+layout: pomp
+---
+
+`pmcmc` and `pfilter` now have the capability of saving filtered trajectories.  These can be extracted using the new method `filter.traj`.
+The principal use will be in conjunction with `pmcmc`, where, upon convergence to the posterior, samples from the filtered trajectories will be draws from the posterior $P[x_{1:T} | y_{1:T}]$.
+Thanks to Sebastian Funk for initiating this development.

@@ -10,8 +10,8 @@ body {
 }
 
 .emph {
-      color: #ff0000;
-      font-weight: bold;
+    color: #ff0000;
+    font-weight: bold;
 }
 
 .firstcharacter { 
@@ -23,6 +23,11 @@ body {
     padding-top: 2px; 
     padding-right: 2px; 
     padding-left: 2px; 
+}
+
+code {
+    font-family: monospace;
+    font-size: 1em;
 }
 
 h1, h2, h3, h4 {

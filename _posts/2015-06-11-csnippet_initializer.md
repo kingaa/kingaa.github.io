@@ -1,6 +1,6 @@
 ---
 date: 11 Jun 2015
-title: initializer can now be furnished as a Csnippet
+title: Initializer can now be furnished as a Csnippet
 layout: pomp
 ---
 

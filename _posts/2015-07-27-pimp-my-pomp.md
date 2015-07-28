@@ -1,6 +1,6 @@
 ---
 date: 27 Jul 2015
-title: pimp my pomp
+title: Pimp my pomp
 layout: pomp
 ---
 

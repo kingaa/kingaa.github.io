@@ -1,6 +1,6 @@
 ---
 date: Mon, 5 Jun 2015
-title: full-featured version of mif2 now implemented
+title: Full-featured version of mif2 now implemented
 layout: pomp
 ---
 

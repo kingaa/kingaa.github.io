@@ -4,9 +4,9 @@ title: Deprecated arguments removed
 layout: pomp
 ---
 
-A number of minor changes to \pkg{pomp} have been made since the last blog post.
+A number of minor changes to **pomp** have been made since the last blog post.
 <!--more-->
-In particular, in \pkg{pomp} version 0.77-1:
+Specifically, in **pomp** version 0.77-1:
 
 - The deprecated `transform.params` argument to `nlf` has been removed.
 - The deprecated `pars` and `rw.sd` arguments to `abc` and `pmcmc` have been removed.

@@ -12,6 +12,14 @@ Suggests: ape, geiger
 License: GPL (>= 2)
 MD5sum: 7c383e2e96157413c65eb1de4458299c
 
+Package: pompExamples
+Version: 0.28-3
+Depends: R(>= 3.0.0), stats, graphics, pomp(>= 0.65-1)
+LinkingTo: pomp
+Suggests: plyr, reshape2
+License: GPL (>= 2)
+MD5sum: 7c50f73cfa72dd6425085ac75f6ef17a
+
 Package: pomp
 Version: 1.1.5.1
 Depends: R(>= 3.1.0), methods
@@ -20,14 +28,6 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
 MD5sum: f38cf2d53a97c87b3b3de0c6b17ca651
-
-Package: pompExamples
-Version: 0.28-2
-Depends: R(>= 3.0.0), stats, graphics, pomp(>= 0.65-1)
-LinkingTo: pomp
-Suggests: plyr, reshape2
-License: GPL (>= 2)
-MD5sum: 1e8fabc97fbb32832f212478d5bb9692
 
 Package: subplex
 Version: 1.1-6

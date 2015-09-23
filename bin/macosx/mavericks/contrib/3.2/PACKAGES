@@ -3,23 +3,23 @@ Version: 0.18-1
 Depends: R(>= 3.0.0), plyr, reshape2, ggplot2, scales, grid, magrittr
 Imports: methods, curl, DBI, RPostgreSQL
 License: GPL (>= 3)
-MD5sum: 48fde06807264d7e9f37aadf5f89ac5d
+MD5sum: 61546f226d5cdd88762e357c06d1af18
 
 Package: ouch
 Version: 2.9-2
 Depends: R(>= 3.0.0), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL (>= 2)
-MD5sum: ab9157d00748b030a1d99bf5accb5bb9
+MD5sum: 7c383e2e96157413c65eb1de4458299c
 
 Package: pomp
-Version: 1.1.4.1
+Version: 1.1.5.1
 Depends: R(>= 3.1.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
-MD5sum: 1c9a96edd0ef017ad16d150f50821a14
+MD5sum: f38cf2d53a97c87b3b3de0c6b17ca651
 
 Package: pompExamples
 Version: 0.28-2
@@ -33,7 +33,7 @@ Package: subplex
 Version: 1.1-6
 Depends: R(>= 2.5.1)
 License: GPL (>= 2)
-MD5sum: 0f203e1a46dd63d3a97b7a4a95f490d6
+MD5sum: 16b48499a3300fcbfb453655d04b3def
 
 Package: tao
 Version: 1.1-1

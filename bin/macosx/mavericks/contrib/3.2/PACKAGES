@@ -23,12 +23,12 @@ License: GPL (>= 2)
 MD5sum: 3b505726cda2d7053fb6e7cdf43a69c8
 
 Package: pompExamples
-Version: 0.28-3
-Depends: R(>= 3.0.0), stats, graphics, pomp(>= 0.65-1)
+Version: 0.30-1
+Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.4.1.1)
 LinkingTo: pomp
-Suggests: plyr, reshape2
+Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
-MD5sum: 7c50f73cfa72dd6425085ac75f6ef17a
+MD5sum: 1710779849186e5882a19ab875885879
 
 Package: subplex
 Version: 1.1-6

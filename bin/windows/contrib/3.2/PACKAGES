@@ -22,10 +22,10 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: pompExamples
-Version: 0.28-3
-Depends: R(>= 3.0.0), stats, graphics, pomp(>= 0.65-1)
+Version: 0.30-1
+Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.4.1.1)
 LinkingTo: pomp
-Suggests: plyr, reshape2
+Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
 Archs: i386, x64
 

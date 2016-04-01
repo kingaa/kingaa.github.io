@@ -30,7 +30,7 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
-MD5sum: db58db0a4c3a8857f82f80152f4862c0
+MD5sum: 23fde58f6be36a35a195a5aee127b3ef
 NeedsCompilation: yes
 
 Package: pompExamples
@@ -39,7 +39,7 @@ Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.4.1.1)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
-MD5sum: 99ec5cf31d99b98eaa7330ed69ae7390
+MD5sum: 8456873e7344fc85bfb7bd061d8f5b12
 NeedsCompilation: yes
 
 Package: subplex

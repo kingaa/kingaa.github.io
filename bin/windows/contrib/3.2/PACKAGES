@@ -6,14 +6,14 @@ Imports: methods, curl, DBI, RPostgreSQL
 License: GPL (>= 3)
 
 Package: ouch
-Version: 2.9-2
+Version: 2.9-3
 Depends: R(>= 3.0.0), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL (>= 2)
 Archs: i386, x64
 
 Package: pomp
-Version: 1.4.1.2
+Version: 1.4.1.3
 Depends: R(>= 3.1.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
@@ -22,7 +22,7 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: pompExamples
-Version: 0.30-1
+Version: 0.30-2
 Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.4.1.1)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2

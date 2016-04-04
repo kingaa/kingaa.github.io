@@ -16,30 +16,30 @@ MD5sum: 59bd487b93174eda9749b59eb7fb6a19
 NeedsCompilation: no
 
 Package: ouch
-Version: 2.9-2
+Version: 2.9-3
 Depends: R(>= 3.0.0), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL (>= 2)
-MD5sum: 92197ab9de0324b17224fd43af0b585f
+MD5sum: 4b9f9d8457a2aac0d80ba2f44e6b21b0
 NeedsCompilation: yes
 
 Package: pomp
-Version: 1.4.1.2
+Version: 1.4.1.3
 Depends: R(>= 3.1.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
-MD5sum: 23fde58f6be36a35a195a5aee127b3ef
+MD5sum: 80b67596b0929864a7ac41411af30734
 NeedsCompilation: yes
 
 Package: pompExamples
-Version: 0.30-1
+Version: 0.30-2
 Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.4.1.1)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
-MD5sum: 8456873e7344fc85bfb7bd061d8f5b12
+MD5sum: 2594dbbc433f1cdefe6b276be6c543bb
 NeedsCompilation: yes
 
 Package: subplex

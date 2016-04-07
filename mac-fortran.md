@@ -28,7 +28,7 @@ If these still don't work, complaining about a lack of FORTRAN support, try inst
 
 Make sure you have `Xcode` installed.  It is available at https://developer.apple.com/xcode/downloads/.  You may need to follow the "Additional Tools" link to find an older version of `Xcode`.
 
-The following is based on the [instructions given on the *R* website](http://cran.r-project.org/bin/macosx/tools).
+The following is based on the [instructions given on the **R** website](http://cran.r-project.org/bin/macosx/tools).
 
 To install `gfortran` in your user space in such a way that it can be easily removed later, download and run the `mac-fortran.sh` script from the course website by opening a terminal and executing
 
@@ -37,7 +37,7 @@ curl -O http://kingaa.github.io/scripts/mac-fortran.sh
 sh mac-fortran.sh
 ```
 
-This will download and unpack a new version of `gfortran`, putting it into a new directory: `~/gfortran`.  It will also put a `Makevars` file into your `~/.R` directory so that `R` knows where to look when it wants `gfortran`.
+This will download and unpack a new version of `gfortran`, putting it into a new directory: `~/gfortran`.  It will also put a `Makevars` file into your `~/.R` directory so that **R** knows where to look when it wants `gfortran`.
 
 To test it, install **pomp** from source by running the following in an **R** session
 

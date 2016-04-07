@@ -18,7 +18,7 @@ To test it, try to install **pomp** from source.
 To do so, run the following in an **R** session
 
 ```
-library(devtools)
+library(devtools)  
 install_github("kingaa/pomp")
 ```
 
@@ -33,7 +33,7 @@ The following is based on the [instructions given on the **R** website](http://c
 To install `gfortran` in your user space in such a way that it can be easily removed later, download and run the `mac-fortran.sh` script from the course website by opening a terminal and executing
 
 ```
-curl -O http://kingaa.github.io/scripts/mac-fortran.sh
+curl -O http://kingaa.github.io/scripts/mac-fortran.sh  
 sh mac-fortran.sh
 ```
 
@@ -42,7 +42,7 @@ This will download and unpack a new version of `gfortran`, putting it into a new
 To test it, install **pomp** from source by running the following in an **R** session
 
 ```
-library(devtools)
+library(devtools)  
 install_github("kingaa/pomp")
 ```
 

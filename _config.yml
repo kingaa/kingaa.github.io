@@ -1,4 +1,6 @@
 name: Aaron A. King
-markdown: kramdown
 excerpt_separator: <!--more-->
 exclude: [pomp, ouch]
+markdown: kramdown
+kramdown:
+  parse_block_html: true

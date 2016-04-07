@@ -29,7 +29,7 @@ This will download and unpack a new version of `gfortran`, putting it into a new
 
 If it works, you should be able to run the [installation and test scripts](./preparation.html).
 
-### Location of **gfortran** binaries
+### Links
 
 - [**R** project's recommendations on development tools and libraries for Mac OS X](http://cran.r-project.org/bin/macosx/tools)
-- [Some more recent binaries of the GCC Fortran compiler (<code>gfortran</code>)on gcc.gnu.org](http://gcc.gnu.org/wiki/GFortranBinaries#MacOS)
+- [Some more recent binaries of the <code>gfortran</code> compiler on gcc.gnu.org](http://gcc.gnu.org/wiki/GFortranBinaries#MacOS)

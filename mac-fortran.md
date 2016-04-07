@@ -39,7 +39,7 @@ sh mac-fortran.sh
 
 This will download and unpack a new version of `gfortran`, putting it into a new directory: `~/gfortran`.  It will also put a `Makevars` file into your `~/.R` directory so that `R` knows where to look when it wants `gfortran`.
 
-To test it, install **pomp** from source by runnign the following in an **R** session
+To test it, install **pomp** from source by running the following in an **R** session
 
 ```
 library(devtools)
@@ -48,5 +48,5 @@ install_github("kingaa/pomp")
 
 ### Links
 
-- [**R** project&apos;s recommendations on development tools and libraries for Mac OS X](http://cran.r-project.org/bin/macosx/tools)
+- [**R** project's recommendations on development tools and libraries for Mac OS X](http://cran.r-project.org/bin/macosx/tools)
 - [Some more recent binaries of the <code>gfortran</code> compiler on gcc.gnu.org](http://gcc.gnu.org/wiki/GFortranBinaries#MacOS)

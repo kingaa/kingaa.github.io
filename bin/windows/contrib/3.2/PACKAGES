@@ -13,8 +13,8 @@ License: GPL (>= 2)
 Archs: i386, x64
 
 Package: pomp
-Version: 1.4.5.1
-Depends: R(>= 3.1.0), methods
+Version: 1.4.7.1
+Depends: R(>= 3.1.2), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr

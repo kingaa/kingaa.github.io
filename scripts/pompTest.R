@@ -3,7 +3,6 @@
 
 install.packages(c("pomp","pompExamples"),
                  repos="http://kingaa.github.io")
-require(devtools)
 
 require(pomp)
 

@@ -8,7 +8,7 @@ install.packages(c("pomp","pompExamples"),
                  repos="http://kingaa.github.io",
                  lib=lib)
 
-require(pomp)
+library(pomp,lib.loc=lib)
 
 gomp2 <- pomp(
               data=data.frame(time=1:50,Y=NA),

@@ -2,7 +2,7 @@
 ## If this script runs without errors, pomp is usable on your system.
 
 lib <- Sys.getenv("R_LIBS_USER")
-dir.create(lib,recursive=TRUE)
+dir.create(lib,recursive=TRUE,showWarnings=FALSE)
 
 install.packages(c("pomp","pompExamples"),
                  repos="http://kingaa.github.io",

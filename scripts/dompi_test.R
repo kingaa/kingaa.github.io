@@ -1,17 +1,24 @@
-library(foreach)
-library(doMPI)
+## Run with e.g., mpirun -n 51 Rscript --vanilla <this file> chunk=2 ncore=2
+
+library(foreach,quietly=TRUE)
+library(doMPI,quietly=TRUE)
 
 njobs <- 1600
 ncore <- 1
 chunk <- 1
 
 ## set njobs, ncore, chunk from the command line
-eval(parse(text=commandArgs(trailingOnly=TRUE)))
+invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
 cl <- startMPIcluster(maxcores=ncore)
 registerDoMPI(cl)
 
 nnode <- clusterSize(cl)
+
+cat("Starting computation of size",njobs,"using",
+    nnode,"nodes, with",
+    ncore,"cores/node,",
+    "and chunksize",chunk,"\n")
 
 tic <- Sys.time()
 res <- foreach (i = seq_len(njobs),
@@ -28,9 +35,10 @@ res <- foreach (i = seq_len(njobs),
 toc <- Sys.time()
 
 closeCluster(cl)
-mpi.finalize()
+invisible(mpi.finalize())
 
-library(aakmisc)
+suppressMessages(library(aakmisc,quietly=TRUE))
+library(digest,quietly=TRUE)
 
 cat(nnode,'nodes x',ncore,'cores,',
     'chunksize',chunk,'\n')
@@ -60,16 +68,16 @@ res %>%
   annotate("segment",x=tic,xend=toc,y=0,yend=njobs,color='black')+
   theme(legend.position=c(0.8,0.2)) -> pl
 
-png(filename="test3.png",width=7,height=8,
+png(filename="dompi_test.png",width=7,height=8,
     units='in',res=300)
 print(pl)
 print(txt,vp=viewport(x=unit(0.15,"npc"),y=unit(0.8,"npc"),width=unit(0.4,"npc"),height=0.2,"npc"),just=c("left","top"))
 dev.off()
-
-library(digest)
 
 res %>%
   subset(select=c(id,x)) %>%
   arrange(id) %>%
   set_rownames(NULL) %>%
   digest()
+
+## 1ad5a2898de4e21b2baf3a7b7c88afe5

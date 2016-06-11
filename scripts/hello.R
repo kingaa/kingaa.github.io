@@ -1,7 +1,7 @@
 try({
     cat("#include <R.h>
      void hello (void) {
-     Rprintf(\"\\\n\\n\\nHello world! from native C\\n\\n\\n\");
+     Rprintf(\"\\\n\\n\\nHello from native C!\\n\\n\\n\");
      }",file="helloC.c")
     system2(command=R.home("bin/R"),
             args=c("CMD","SHLIB","helloC.c"))
@@ -18,7 +18,7 @@ try({
       call dblepr(\" \",-1,0,0)
       call dblepr(\" \",-1,0,0)
       call dblepr(\" \",-1,0,0)
-      call dblepr(\"hello world! from native FORTRAN\",-1,0,0)
+      call dblepr(\"Hello from native FORTRAN!\",-1,0,0)
       call dblepr(\" \",-1,0,0)
       call dblepr(\" \",-1,0,0)
       call dblepr(\" \",-1,0,0)

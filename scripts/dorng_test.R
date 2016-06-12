@@ -70,7 +70,7 @@ res %>%
   annotate("segment",x=tic,xend=toc,y=0,yend=njobs,color='black')+
   theme(legend.position=c(0.8,0.2)) -> pl
 
-png(filename="dompi_test.png",width=7,height=8,
+png(filename="dorng_test.png",width=7,height=8,
     units='in',res=300)
 print(pl)
 print(txt,vp=viewport(x=unit(0.15,"npc"),y=unit(0.8,"npc"),width=unit(0.4,"npc"),height=0.2,"npc"),just=c("left","top"))

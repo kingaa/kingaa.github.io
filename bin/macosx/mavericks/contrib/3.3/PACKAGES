@@ -5,13 +5,5 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
-Archs: i386, x64
-
-Package: pompExamples
-Version: 0.31-1
-Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
-LinkingTo: pomp
-Suggests: plyr, reshape2, magrittr, ggplot2
-License: GPL (>= 2)
-Archs: i386, x64
+MD5sum: e45c376e4df6d2ebd9d89dd2728bb739
 

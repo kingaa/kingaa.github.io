@@ -30,16 +30,16 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
-MD5sum: 0ded600e95d9a976eb1a8e2587c49b3b
+MD5sum: 3714226905e171b021ba131f0dac6f6f
 NeedsCompilation: yes
 
 Package: pompExamples
-Version: 0.31-1
+Version: 0.31-2
 Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
-MD5sum: 3c549bc731f4f4da4ccfff787705d013
+MD5sum: 9a9da58a856e67ca971d950e954303c6
 NeedsCompilation: yes
 
 Package: subplex

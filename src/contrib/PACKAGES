@@ -4,7 +4,7 @@ Depends: R(>= 3.0.0), plyr, reshape2, ggplot2(>= 1.0.1.9003), grid,
         magrittr
 Imports: methods, curl, DBI, RPostgreSQL
 License: GPL (>= 3)
-MD5sum: 8832a62216c7a861bc1367d245b6f4fa
+MD5sum: 98278282015e0197e0369be570c460ad
 NeedsCompilation: no
 
 Package: mpifarm
@@ -12,7 +12,7 @@ Version: 1.20-1
 Depends: R(>= 3.0.0)
 Imports: Rmpi
 License: GPL (>= 2)
-MD5sum: 59bd487b93174eda9749b59eb7fb6a19
+MD5sum: 235e88b96c445a048e1c06e808fdb382
 NeedsCompilation: no
 
 Package: ouch
@@ -20,7 +20,7 @@ Version: 2.10-1
 Depends: R(>= 3.0.0), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL (>= 2)
-MD5sum: 54903f696ab959afba9a528c40765c47
+MD5sum: 5530e4352ecfa6ea6a7c532f63dd4285
 NeedsCompilation: yes
 
 Package: pomp
@@ -39,20 +39,20 @@ Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
-MD5sum: 9a9da58a856e67ca971d950e954303c6
+MD5sum: f122fa218a9a5c1a52013ff63acbfda9
 NeedsCompilation: yes
 
 Package: subplex
-Version: 1.1-6
+Version: 1.1-7
 Depends: R(>= 2.5.1)
 License: GPL (>= 2)
-MD5sum: 82d5df828c320f63176946b0e221e03d
+MD5sum: 7cae1d42505df9167357ecf5e7767e91
 NeedsCompilation: yes
 
 Package: tao
 Version: 1.1-1
 Depends: R(>= 3.0.0)
 License: GPL (>= 2)
-MD5sum: c97fed5536b4ca9237963feafcaa22c7
+MD5sum: 12973c2ed4566b7a1f75ceb4b2d05e44
 NeedsCompilation: no
 

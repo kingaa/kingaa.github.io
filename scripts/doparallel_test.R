@@ -1,57 +1,49 @@
-## Run with e.g., mpirun -n 51 Rscript --vanilla <this file> chunk=2 ncore=2
-
 library(foreach,quietly=TRUE)
-library(doMPI,quietly=TRUE)
-suppressMessages(library(doRNG,quietly=TRUE))
+library(doParallel,quietly=TRUE)
+library(doRNG,quietly=TRUE)
 
 njobs <- 1600
-ncore <- 1
+nnode <- 100
 chunk <- 1
 
-## set njobs, ncore, chunk from the command line
+## set njobs, nnode chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
-cl <- startMPIcluster(maxcores=ncore)
-registerDoMPI(cl)
-registerDoRNG(1218461302L)
+cl <- makeCluster(type="MPI",spec=nnode)
+registerDoParallel(cl)
 
-nnode <- clusterSize(cl)
+clusterSetRNGStream(cl,iseed=1218461302L)
 
 cat("Starting computation of size",njobs,"using",
-    nnode,"nodes, with",
-    ncore,"cores/node,",
-    "and chunksize",chunk,"\n")
+    nnode,"nodes, with chunksize",chunk,"\n")
 
 tic <- Sys.time()
 res <- foreach (i = seq_len(njobs),
-                .options.mpi=list(chunkSize=chunk),
                 .combine=rbind,
                 .inorder=FALSE) %dopar% {
-                  t1 <- Sys.time()
-                  h <- system("hostname",intern=TRUE)
-                  pid <- Sys.getpid()
-                  x <- quantile(rnorm(n=10000000),prob=0.9)
-                  t2 <- Sys.time()
-                  data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
+                    t1 <- Sys.time()
+                    h <- system("hostname",intern=TRUE)
+                    pid <- Sys.getpid()
+                    x <- quantile(rnorm(n=10000000),prob=0.9)
+                    t2 <- Sys.time()
+                    data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
                 }
 toc <- Sys.time()
 
-closeCluster(cl)
-invisible(mpi.finalize())
+stopCluster(cl)
 
 suppressMessages(library(aakmisc,quietly=TRUE))
 library(digest,quietly=TRUE)
 
-cat(nnode,'nodes x',ncore,'cores,','chunksize',chunk,'\n')
+cat(nnode,'nodes,','chunksize',chunk,'\n')
 
 res %>% mutate(etime=difftime(t2,t1,units='secs')) %>%
     summarize(stime=as.numeric(sum(etime)),
               etime=as.numeric(difftime(max(t2),min(t1),units="secs"))) %>%
     mutate(otime=as.numeric(difftime(toc,tic,units='secs')),
-           ieffic=stime/etime/ncore/nnode,
-           oeffic=stime/otime/ncore/nnode,
+           ieffic=stime/etime/nnode,
+           oeffic=stime/otime/nnode,
            nnode=nnode,
-           ncore=ncore,
            chunk=chunk) %>%
     melt(id=NULL) %>%
     mutate(y=-seq_along(variable),label=paste0(variable,"\t",signif(value,4))) -> eff
@@ -76,7 +68,7 @@ res %>%
     guides(fill=FALSE,color=FALSE)+
     theme(axis.text.x=element_text(angle=90)) -> pl1
 
-png(filename="dorng_test.png",width=7,height=8,
+png(filename="doparallel_test.png",width=7,height=8,
     units='in',res=300)
 print(pl)
 print(txt,vp=viewport(x=0.2,y=0.8,width=0.4,height=0.2))

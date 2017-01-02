@@ -2,16 +2,20 @@ library(foreach,quietly=TRUE)
 library(doMC,quietly=TRUE)
 
 njobs <- 1600
-nnode <- 20
+ncore <- 20
 chunk <- 1
 
 ## set njobs, nnode chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
-registerDoMC(nnode)
+nnode <- 1
+
+registerDoMC(ncore)
 
 cat("Starting computation of size",njobs,"using",
-    nnode,"cores, with chunksize",chunk,"\n")
+    nnode,"nodes, with",
+    ncore,"cores/node,",
+    "and chunksize",chunk,"\n")
 
 tic <- Sys.time()
 res <- foreach (i = seq_len(njobs),
@@ -29,16 +33,17 @@ toc <- Sys.time()
 suppressMessages(library(aakmisc,quietly=TRUE))
 library(digest,quietly=TRUE)
 
-cat(nnode,'nodes,','chunksize',chunk,'\n')
+cat(nnode,'nodes x',ncore,'cores,','chunksize',chunk,'\n')
 
 res %>% mutate(etime=difftime(t2,t1,units='secs')) %>%
     summarize(stime=as.numeric(sum(etime)),
               etime=as.numeric(difftime(max(t2),min(t1),units="secs"))) %>%
     mutate(otime=as.numeric(difftime(toc,tic,units='secs')),
-           ieffic=stime/etime/nnode,
-           oeffic=stime/otime/nnode,
+           ieffic=stime/etime/ncore,
+           oeffic=stime/otime/ncore,
            njobs=njobs,
            nnode=nnode,
+           ncore=ncore,
            chunk=chunk) %>%
     melt(id=NULL) %>%
     mutate(y=-seq_along(variable),label=paste0(variable,"\t",signif(value,4))) -> eff

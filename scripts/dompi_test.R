@@ -48,6 +48,7 @@ res %>% mutate(etime=difftime(t2,t1,units='secs')) %>%
     mutate(otime=as.numeric(difftime(toc,tic,units='secs')),
            ieffic=stime/etime/ncore/nnode,
            oeffic=stime/otime/ncore/nnode,
+           njobs=njobs,
            nnode=nnode,
            ncore=ncore,
            chunk=chunk) %>%

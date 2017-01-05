@@ -27,7 +27,7 @@ switch(backend,
        },
        doMCRNG={
          library(doMC,quietly=TRUE)
-         library(doRNG,quietly=TRUE)
+         suppressMessages(library(doRNG,quietly=TRUE))
          nnode <- 1
          registerDoMC(ncore)
          registerDoRNG(1218461302L)
@@ -47,7 +47,7 @@ switch(backend,
        },
        doRNG={
          library(doMPI,quietly=TRUE)
-         library(doRNG,quietly=TRUE)
+         suppressMessages(library(doRNG,quietly=TRUE))
          cl <- startMPIcluster(count=nnode,maxcores=ncore)
          registerDoMPI(cl)
          registerDoRNG(1218461302L)
@@ -90,7 +90,6 @@ res %>%
   summarize(stime=as.numeric(sum(etime)),
             etime=as.numeric(difftime(max(t2),min(t1),units="secs"))) %>%
   mutate(
-    backend=backend,
     otime=round(as.numeric(difftime(toc,tic,units='secs')),1),
     ieffic=signif(stime/etime/nwork,3),
     oeffic=signif(stime/otime/nwork,3),
@@ -117,7 +116,8 @@ res %>%
   geom_segment()+
   guides(color=FALSE)+
   theme_bw()+
-  labs(x='time',y='job id')+
+  labs(x='time',y='job id',
+       title=paste("with",backend,"backend"))+
   annotate("segment",x=tic,xend=toc,y=0,yend=njobs,color='black') -> pl
 
 res %>%

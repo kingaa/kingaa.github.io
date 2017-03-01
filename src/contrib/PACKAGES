@@ -24,13 +24,13 @@ MD5sum: 5530e4352ecfa6ea6a7c532f63dd4285
 NeedsCompilation: yes
 
 Package: pomp
-Version: 1.10.4.1
+Version: 1.10.6.1
 Depends: R(>= 3.1.2), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
-MD5sum: ac6efcc6fbd7626b39435a96a20c7c58
+MD5sum: 9ad581409388230b848528ad4f39dfc3
 NeedsCompilation: yes
 
 Package: pompExamples

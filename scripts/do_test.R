@@ -16,6 +16,21 @@ chunk <- 1
 backend <- doMC
 options.mpi <- list()
 
+helpmsg <- sprintf("
+
+usage: Rscript do_test.R backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>
+where  <backend> is one of doMC, doMPI, doParallel, doRNG, doMCRNG
+       and the other parameters are positive integers
+       by default, backend = %s, njobs = %d, nnode = %d, ncore = %d, chunk = %d
+
+",backend,njobs,nnode,ncore,chunk)
+
+cargs <- commandArgs(trailingOnly=TRUE)
+if (length(cargs)==0) {
+    cat(helpmsg)
+    q(save="no")
+}
+
 ## set njobs, ncore, chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
@@ -56,6 +71,7 @@ switch(backend,
 )
 
 cat("Starting computation of size",njobs,"using",
+    "backend", backend,"on",
     nnode,"nodes, with",
     ncore,"cores/node,",
     "and chunksize",chunk,"\n")

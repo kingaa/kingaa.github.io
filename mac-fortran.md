@@ -62,11 +62,13 @@ library(devtools)
 install_github("kingaa/pomp")
 ```
 
-Should you ever need to uninstall the `gfortran` installation, simply remove the `~/gfortran` directory by executing the following in a terminal window:
+Should you ever need to uninstall the `gfortran` installation, simply remove the `~/gfortran` directory by executing the following in a terminal window,
 
 ```
 rm -rf ~/gfortran
 ```
+
+then edit the `~/.R/Makevars` file to remove the lines that refer to `~/gfortran`.
 
 ### Links
 

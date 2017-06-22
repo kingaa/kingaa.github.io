@@ -3,9 +3,11 @@ layout: default
 title: osx gfortran installation instructions
 ---
 
-### OSX 10.10 (Yosemite) users
+### OSX 10.10 (Yosemite) and 10.11 (El Capitan) users
 
-Make sure you have `Xcode` installed.  This can be downloaded from the App Store or from https://developer.apple.com/xcode/downloads/.
+Make sure you have `Xcode` installed.
+`Xcode` contains the tools needed to compile native code on your machine.
+It can be downloaded from the App Store or from https://developer.apple.com/xcode/downloads/.
 
 Open a terminal window and execute
 
@@ -13,7 +15,6 @@ Open a terminal window and execute
 xcode-select --install
 ```
 
-This should have the result of installing command-line versions of all the tools you'll need to compile C and FORTRAN code.
 To test it, try to install **pomp** from source.
 To do so, run the following in an **R** session
 
@@ -22,11 +23,25 @@ library(devtools)
 install_github("kingaa/pomp")
 ```
 
-If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` as shown in the instructions below for older versions of the OS.
+If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` as shown in the [instructions below](#installing-gfortran).)
 
 ### OSX 10.9 (Mavericks) and older
 
-Make sure you have `Xcode` installed.  It is available at https://developer.apple.com/xcode/downloads/.  You may need to follow the "Additional Tools" link to find an older version of `Xcode`.
+Make sure you have `Xcode` installed.
+It is available at https://developer.apple.com/xcode/downloads/.
+You may need to follow the "Additional Tools" link to find an older version of `Xcode`.
+
+To test it, try to install **pomp** from source.
+To do so, run the following in an **R** session
+
+```
+library(devtools)  
+install_github("kingaa/pomp")
+```
+
+If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` as shown in the [instructions below](#installing-gfortran).)
+
+### Installing `gfortran`
 
 The following is based on the [instructions given on the **R** website](http://cran.r-project.org/bin/macosx/tools).
 
@@ -37,13 +52,20 @@ curl -O http://kingaa.github.io/scripts/mac-fortran.sh
 sh mac-fortran.sh
 ```
 
-This will download and unpack a new version of `gfortran`, putting it into a new directory: `~/gfortran`.  It will also put a `Makevars` file into your `~/.R` directory so that **R** knows where to look when it wants `gfortran`.
+This will download and unpack a new version of `gfortran`, putting it into a new directory: `~/gfortran`.
+It will also put a `Makevars` file into your `~/.R` directory so that **R** knows where to look when it wants `gfortran`.
 
 To test it, install **pomp** from source by running the following in an **R** session
 
 ```
 library(devtools)  
 install_github("kingaa/pomp")
+```
+
+Should you ever need to uninstall the `gfortran` installation, simply remove the `~/gfortran` directory by executing the following in a terminal window:
+
+```
+rm -rf ~/gfortran
 ```
 
 ### Links

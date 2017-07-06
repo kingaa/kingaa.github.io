@@ -3,11 +3,11 @@ layout: default
 title: osx gfortran installation instructions
 ---
 
-### OSX 10.10 (Yosemite) and 10.11 (El Capitan) users
+### OSX 10.10 (Yosemite), 10.11 (El Capitan), and 10.12 (Sierra) users
 
 Make sure you have `Xcode` installed.
 `Xcode` contains the tools needed to compile native code on your machine.
-It can be downloaded from the App Store or from https://developer.apple.com/xcode/downloads/.
+It can be downloaded from the App Store or from [https://developer.apple.com/xcode/downloads/](https://developer.apple.com/xcode/downloads/).
 
 Open a terminal window and execute
 
@@ -23,12 +23,15 @@ library(devtools)
 install_github("kingaa/pomp")
 ```
 
+Some users of `Xcode 9 beta 2` have reported needing to install the Command Line Tools package separately.
+It is available at [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/).
+
 If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` as shown in the [instructions below](#installing-gfortran).)
 
 ### OSX 10.9 (Mavericks) and older
 
 Make sure you have `Xcode` installed.
-It is available at https://developer.apple.com/xcode/downloads/.
+It is available at [https://developer.apple.com/xcode/downloads/](https://developer.apple.com/xcode/downloads/).
 You may need to follow the "Additional Tools" link to find an older version of `Xcode`.
 
 To test it, try to install **pomp** from source.
@@ -43,12 +46,12 @@ If these still don't work, complaining about a lack of FORTRAN support, try inst
 
 ### Installing `gfortran`
 
-The following is based on the [instructions given on the **R** website](http://cran.r-project.org/bin/macosx/tools).
+The following is based on the [instructions given on the **R** website](https://cran.r-project.org/bin/macosx/tools).
 
 To install `gfortran` in your user space in such a way that it can be easily removed later, download and run the `mac-fortran.sh` script from the course website by opening a terminal and executing
 
 ```
-curl -O http://kingaa.github.io/scripts/mac-fortran.sh  
+curl -O https://kingaa.github.io/scripts/mac-fortran.sh  
 sh mac-fortran.sh
 ```
 
@@ -72,5 +75,5 @@ then edit the `~/.R/Makevars` file to remove the lines that refer to `~/gfortran
 
 ### Links
 
-- [**R** project's recommendations on development tools and libraries for Mac OS X](http://cran.r-project.org/bin/macosx/tools)
-- [Some more recent binaries of the <code>gfortran</code> compiler on gcc.gnu.org](http://gcc.gnu.org/wiki/GFortranBinaries#MacOS)
+- [**R** project's recommendations on development tools and libraries for Mac OS X](https://cran.r-project.org/bin/macosx/tools)
+- [Some more recent binaries of the <code>gfortran</code> compiler on gcc.gnu.org](https://gcc.gnu.org/wiki/GFortranBinaries#MacOS)

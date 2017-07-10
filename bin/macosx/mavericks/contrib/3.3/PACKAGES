@@ -4,7 +4,7 @@ Depends: R(>= 3.0.0), plyr, reshape2, ggplot2(>= 1.0.1.9003), grid,
         magrittr
 Imports: methods, curl, DBI, RPostgreSQL
 License: GPL (>= 3)
-MD5sum: 33d722445fff26e8ffbe9c4864a76620
+MD5sum: c645408518e92942bfe534aed00a64f5
 
 Package: ouch
 Version: 2.10-1
@@ -28,17 +28,16 @@ Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2
 License: GPL (>= 2)
-MD5sum: e68d9be8fcb77bc584301b584f7d9cc0
+MD5sum: 21747f71f13e70fa36082d9a6706669c
 
 Package: subplex
-Version: 1.2-2
+Version: 1.3-2
 Depends: R(>= 2.5.1)
 License: GPL (>= 2)
-MD5sum: 2685677152f2b67e99ac555ac7258add
+MD5sum: 0f8e9dd18cec215d38fce780edde07fe
 
 Package: tao
 Version: 1.1-1
 Depends: R(>= 3.0.0)
 License: GPL (>= 2)
-MD5sum: 569c86ab95ff95b9b9ddd231fc7aa381
-
+MD5sum: e1a2ac889e1fbaa66544d1e720460fde

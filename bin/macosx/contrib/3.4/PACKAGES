@@ -3,7 +3,7 @@ Version: 2.10-1
 Depends: R(>= 3.0.0), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL (>= 2)
-MD5sum: 9e28ea21ae10cd37dd7bfe795b996083
+MD5sum: f25995624d653c6c088fc8589fa2054a
 
 Package: pomp
 Version: 1.12.2.1
@@ -14,8 +14,16 @@ Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL (>= 2)
 MD5sum: a453dfa248a57ee990ca5e904ba22a0a
 
+Package: pompExamples
+Version: 0.31-3
+Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
+LinkingTo: pomp
+Suggests: plyr, reshape2, magrittr, ggplot2
+License: GPL (>= 2)
+MD5sum: f5ca835f4c4fc1d9fc686a2ece96deb1
+
 Package: subplex
 Version: 1.3-2
 Depends: R(>= 2.5.1)
 License: GPL (>= 2)
-MD5sum: 2b9bf29a7ceb69da2862ef9ff956a2e8
+MD5sum: ad564b5a7f1125522324320282b92273

@@ -14,5 +14,5 @@ mkdir -p ~/.R
 cat >> ~/.R/Makevars <<EOF
 F77 = ~/gfortran/usr/local/bin/gfortran
 FC = ~/gfortran/usr/local/bin/gfortran
-FLIBS = -L~/gfortran/usr/local/lib
+FLIBS = -L ~/gfortran/usr/local/lib
 EOF

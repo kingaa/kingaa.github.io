@@ -26,7 +26,7 @@ install_github("kingaa/pomp")
 Some users of `Xcode 9 beta 2` have reported needing to install the Command Line Tools package separately.
 It is available at [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/).
 
-If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` as shown in the [instructions below](#installing-gfortran).)
+If these still don't work, complaining about a lack of FORTRAN support, try [installing `gfortran` binaries from GCC](https://gcc.gnu.org/wiki/GFortranBinaries#MacOS) as [recommended by CRAN](https://cran.r-project.org/bin/macosx/tools/).
 
 ### OSX 10.9 (Mavericks) and older
 
@@ -42,9 +42,7 @@ library(devtools)
 install_github("kingaa/pomp")
 ```
 
-If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` as shown in the [instructions below](#installing-gfortran).)
-
-### Installing `gfortran`
+If these still don't work, complaining about a lack of FORTRAN support, try installing `gfortran` according to the following instructions.
 
 The following is based on the [instructions given on the **R** website](https://cran.r-project.org/bin/macosx/tools).
 

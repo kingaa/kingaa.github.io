@@ -1,29 +1,29 @@
 Package: ouch
-Version: 2.11-1
+Version: 2.12-1
 Depends: R(>= 3.0.0), methods, stats, graphics, subplex
 Suggests: ape, geiger
-License: GPL (>= 2)
-MD5sum: 6b22800c60be49c78f605c046af223b7
+License: GPL (>= 3)
+MD5sum: 06169e3f240de38d5f06120eed58ecbb
 
 Package: pomp
-Version: 1.13.1.2
+Version: 1.13.2.1
 Depends: R(>= 3.1.2), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
-License: GPL (>= 2)
-MD5sum: 0ae0d2eafe91bc100ca45f7abe9bae1f
+License: GPL (>= 3)
+MD5sum: f9f0752ff31ecb777c92ff0bfd00610c
 
 Package: pompExamples
-Version: 0.31-3
+Version: 0.32-1
 Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
 LinkingTo: pomp
 Suggests: plyr, reshape2, magrittr, ggplot2
-License: GPL (>= 2)
-MD5sum: f5ca835f4c4fc1d9fc686a2ece96deb1
+License: GPL (>= 3)
+MD5sum: e026323553618e42c263a8b896808722
 
 Package: subplex
 Version: 1.4-1
 Depends: R(>= 2.5.1)
 License: GPL (>= 2)
-MD5sum: 78c97c50547300c016dbe9086e8d5432
+MD5sum: 7de5b185107e4b9fd917573ab15b0d68

@@ -14,13 +14,13 @@ License: GPL (>= 3)
 MD5sum: 71d8000b5ca74ebbaf787978f8cd309d
 
 Package: pomp
-Version: 1.13.4.2
+Version: 1.14.1.1
 Depends: R(>= 3.1.2), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL-3
-MD5sum: 1d4b0b5968cf7b0e373a5335470c49ad
+MD5sum: 8eca86fbc2f2c3d43b5e3bab34003848
 
 Package: pompExamples
 Version: 0.32-1

@@ -18,7 +18,11 @@ options.mpi <- list()
 
 helpmsg <- sprintf("
 
-usage: Rscript do_test.R backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>
+usage:
+Rscript do_test.R backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>
+   --or--
+R CMD BATCH --no-save --no-restore '--args backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>' do_test.R
+
 where  <backend> is one of doMC, doMPI, doParallel, doRNG, doMCRNG
        and the other parameters are positive integers
        by default, backend = %s, njobs = %d, nnode = %d, ncore = %d, chunk = %d

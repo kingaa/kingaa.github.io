@@ -5,7 +5,8 @@ library(digest,quietly=TRUE)
 doMC <- "doMC"
 doMPI <- "doMPI"
 doParallel <- "doParallel"
-doRNG <- "doRNG"
+doParRNG <- "doParRNG"
+doMPIRNG <- "doMPIRNG"
 doMCRNG <- "doMCRNG"
 
 ## set defaults
@@ -23,7 +24,7 @@ Rscript do_test.R backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> ch
    --or--
 R CMD BATCH --no-save --no-restore '--args backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>' do_test.R
 
-where  <backend> is one of doMC, doMPI, doParallel, doRNG, doMCRNG
+where  <backend> is one of doMC, doMPI, doMPIRNG, doParallel, doParRNG, doMCRNG
        and the other parameters are positive integers
        by default, backend = %s, njobs = %d, nnode = %d, ncore = %d, chunk = %d
 
@@ -40,39 +41,47 @@ invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
 switch(backend,
        doMC={
-         library(doMC,quietly=TRUE)
-         nnode <- 1
-         registerDoMC(ncore)
+           library(doMC,quietly=TRUE)
+           nnode <- 1
+           registerDoMC(ncore)
        },
        doMCRNG={
-         library(doMC,quietly=TRUE)
-         suppressMessages(library(doRNG,quietly=TRUE))
-         nnode <- 1
-         registerDoMC(ncore)
-         registerDoRNG(1218461302L)
+           library(doMC,quietly=TRUE)
+           suppressMessages(library(doRNG,quietly=TRUE))
+           nnode <- 1
+           registerDoMC(ncore)
+           registerDoRNG(1218461302L)
        },
        doMPI={
-         library(doMPI,quietly=TRUE)
-         cl <- startMPIcluster(count=nnode,maxcores=ncore)
-         registerDoMPI(cl)
-         options.mpi <- list(chunkSize=chunk,seed=1218461302L)
+           library(doMPI,quietly=TRUE)
+           cl <- startMPIcluster(count=nnode,maxcores=ncore)
+           registerDoMPI(cl)
+           options.mpi <- list(chunkSize=chunk,seed=1218461302L)
+       },
+       doMPIRNG={
+           library(doMPI,quietly=TRUE)
+           suppressMessages(library(doRNG,quietly=TRUE))
+           cl <- startMPIcluster(count=nnode,maxcores=ncore)
+           registerDoMPI(cl)
+           registerDoRNG(1218461302L)
+           options.mpi <- list(chunkSize=chunk)
        },
        doParallel={
-         library(doParallel,quietly=TRUE)
-         cl <- makeCluster(type="MPI",spec=nnode)
-         ncore <- 1
-         registerDoParallel(cl)
-         clusterSetRNGStream(cl,iseed=1218461302L)
+           library(doParallel,quietly=TRUE)
+           cl <- makeCluster(type="MPI",spec=nnode)
+           ncore <- 1
+           registerDoParallel(cl)
+           clusterSetRNGStream(cl,iseed=1218461302L)
        },
-       doRNG={
-         library(doMPI,quietly=TRUE)
-         suppressMessages(library(doRNG,quietly=TRUE))
-         cl <- startMPIcluster(count=nnode,maxcores=ncore)
-         registerDoMPI(cl)
-         registerDoRNG(1218461302L)
-         options.mpi <- list(chunkSize=chunk)
+       doParRNG={
+           library(doParallel,quietly=TRUE)
+           suppressMessages(library(doRNG,quietly=TRUE))
+           cl <- makeCluster(type="MPI",spec=nnode)
+           ncore <- 1
+           registerDoParallel(cl)
+           registerDoRNG(1218461302L)
        }
-)
+       )
 
 cat("Starting computation of size",njobs,"using",
     "backend", backend,"on",

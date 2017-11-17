@@ -76,7 +76,7 @@ res %>%
     stat_count()+
     labs(x="",y="")+
     guides(fill=FALSE,color=FALSE)+
-    theme(axis.text.x=element_text(angle=90)) -> pl1
+    theme(axis.text.x=element_text(angle=90,vjust=0.5)) -> pl1
 
 png(filename="dompi_test.png",width=7,height=8,
     units='in',res=300)

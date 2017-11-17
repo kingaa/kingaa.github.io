@@ -16,17 +16,18 @@ ncore <- 1
 chunk <- 1
 backend <- doMC
 options.mpi <- list()
+id <- Sys.getpid()
 
 helpmsg <- sprintf("
 
 usage:
-Rscript do_test.R backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>
+Rscript do_test.R backend=<backend> id=<id> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>
    --or--
-R CMD BATCH --no-save --no-restore '--args backend=<backend> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>' do_test.R
+R CMD BATCH --no-save --no-restore '--args backend=<backend> id=<id> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>' do_test.R
 
 where  <backend> is one of doMC, doMPI, doMPIRNG, doParallel, doParRNG, doMCRNG
        and the other parameters are positive integers
-       by default, backend = %s, njobs = %d, nnode = %d, ncore = %d, chunk = %d
+       by default, backend = %s, njobs = %d, nnode = %d, ncore = %d, chunk = %d, id = pid
 
 ",backend,njobs,nnode,ncore,chunk)
 
@@ -39,16 +40,20 @@ if (length(cargs)==0) {
 ## set njobs, ncore, chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
+img <- paste0("do_test_",id,".png")
+
 switch(backend,
        doMC={
            library(doMC,quietly=TRUE)
            nnode <- 1
+           chunk <- 1
            registerDoMC(ncore)
        },
        doMCRNG={
            library(doMC,quietly=TRUE)
            suppressMessages(library(doRNG,quietly=TRUE))
            nnode <- 1
+           chunk <- 1
            registerDoMC(ncore)
            registerDoRNG(1218461302L)
        },
@@ -70,6 +75,7 @@ switch(backend,
            library(doParallel,quietly=TRUE)
            cl <- makeCluster(type="MPI",spec=nnode)
            ncore <- 1
+           chunk <- 1
            registerDoParallel(cl)
            clusterSetRNGStream(cl,iseed=1218461302L)
        },
@@ -78,6 +84,7 @@ switch(backend,
            suppressMessages(library(doRNG,quietly=TRUE))
            cl <- makeCluster(type="MPI",spec=nnode)
            ncore <- 1
+           chunk <- 1
            registerDoParallel(cl)
            registerDoRNG(1218461302L)
        }
@@ -105,7 +112,8 @@ toc <- Sys.time()
 
 nwork <- getDoParWorkers()
 
-cat(nnode,'nodes x',ncore,'cores','\tchunksize:',chunk,'\tnworkers:',nwork,'\n')
+cat(nnode,'nodes x',ncore,'cores','\tchunksize:',chunk,'\tnworkers:',nwork,'\n',
+    'output to image file',sQuote(img),'\n')
 
 if (backend %in% c("doMPI","doRNG")) {
   closeCluster(cl)
@@ -157,7 +165,7 @@ res %>%
   theme(axis.text.x=element_text(angle=90,vjust=0.5),
         plot.background=element_rect(fill=NA)) -> pl1
 
-png(filename="do_test.png",width=7,height=8,units='in',res=300)
+png(filename=img,width=7,height=8,units='in',res=300)
 print(pl)
 print(txt,vp=viewport(x=0.2,y=0.8,width=0.4,height=0.2))
 print(pl1,vp=viewport(x=0.75,y=0.3,width=0.4,height=0.4))

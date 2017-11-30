@@ -115,7 +115,7 @@ nwork <- getDoParWorkers()
 cat(nnode,'nodes x',ncore,'cores','\tchunksize:',chunk,'\tnworkers:',nwork,'\n',
     'output to image file',sQuote(img),'\n')
 
-if (backend %in% c("doMPI","doRNG")) {
+if (backend %in% c("doMPI","doMPIRNG")) {
   closeCluster(cl)
   invisible(mpi.finalize())
 } else if (backend == "doParallel") {

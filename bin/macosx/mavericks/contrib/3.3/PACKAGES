@@ -1,10 +1,10 @@
 Package: aakmisc
-Version: 0.25-2
-Depends: R(>= 3.0.0), plyr, reshape2, ggplot2(>= 1.0.1.9003), scales,
-        grid, magrittr, readr
-Imports: methods, curl, DBI, RPostgreSQL
+Version: 0.26-1
+Depends: R(>= 3.3.1)
+Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
+Suggests: scales, magrittr, reshape2, readr
 License: GPL-3
-MD5sum: 2eddccffefa1f0001c543f89b56cd368
+MD5sum: 698394ad7161b94dc5d8dc3bee4b2331
 
 Package: ouch
 Version: 2.12-2

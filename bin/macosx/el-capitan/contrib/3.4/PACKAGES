@@ -6,3 +6,9 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL-3
 MD5sum: c61d7dc51b32c43d3ee023c99677c39f
+
+Package: subplex
+Version: 1.5-2
+Depends: R(>= 2.5.1)
+License: GPL-3
+MD5sum: 7759b7ae6390700b5e764538a77d0697

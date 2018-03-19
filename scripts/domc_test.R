@@ -31,6 +31,11 @@ res <- foreach (i = seq_len(njobs),
 toc <- Sys.time()
 
 suppressMessages(library(aakmisc,quietly=TRUE))
+library(magrittr)
+library(plyr)
+library(reshape2)
+library(ggplot2)
+library(grid)
 library(digest,quietly=TRUE)
 
 cat(nnode,'nodes x',ncore,'cores,','chunksize',chunk,'\n')

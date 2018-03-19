@@ -38,6 +38,11 @@ closeCluster(cl)
 invisible(mpi.finalize())
 
 suppressMessages(library(aakmisc,quietly=TRUE))
+library(magrittr)
+library(plyr)
+library(reshape2)
+library(ggplot2)
+library(grid)
 library(digest,quietly=TRUE)
 
 nwork <- getDoParWorkers()

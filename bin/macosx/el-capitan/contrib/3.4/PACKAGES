@@ -1,11 +1,11 @@
 Package: pomp
-Version: 1.16.2.1
+Version: 1.16.1.2
 Depends: R(>= 3.1.2), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL-3
-MD5sum: 8480fc77887f3190a60542339400a486
+MD5sum: c61d7dc51b32c43d3ee023c99677c39f
 
 Package: subplex
 Version: 1.5-4

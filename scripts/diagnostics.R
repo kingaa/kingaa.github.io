@@ -6,7 +6,7 @@ if (nchar(site_environ)>0) {
     cat("\n-----------------------------------\n",
         "contents of site Renviron file",
         "\n-----------------------------------\n")
-    file.show(site_environ,pager="cat")
+    cat(readLines(site_environ),sep="\n")
 }
 
 user_environ <- Sys.getenv("R_ENVIRON_USER")
@@ -20,7 +20,7 @@ if (nchar(user_environ)>0) {
     cat("\n-----------------------------------\n",
         "contents of user Renviron file",
         "\n-----------------------------------\n")
-    file.show(user_environ,pager='cat')
+    cat(readLines(user_environ),sep="\n")
 }
 
 site_profile <- Sys.getenv("R_PROFILE")
@@ -31,7 +31,7 @@ if (nchar(site_profile)>0) {
     cat("\n-----------------------------------\n",
         "contents of site Rprofile file",
         "\n-----------------------------------\n")
-    file.show(site_profile,pager='cat')
+    cat(readLines(site_profile),sep="\n")
 }
 
 user_profile <- Sys.getenv("R_PROFILE_USER")
@@ -45,7 +45,7 @@ if (nchar(user_profile)>0) {
     cat("\n-----------------------------------\n",
         "contents of user Rprofile file",
         "\n-----------------------------------\n")
-    file.show(user_profile,pager='cat')
+    cat(readLines(user_profile),sep="\n")
 }
 
 
@@ -54,7 +54,7 @@ if (isTRUE(nchar(site_makevars)>0)) {
     cat("\n-----------------------------------\n",
         "contents of site Makevars file",
         "\n-----------------------------------\n")
-    file.show(site_makevars,pager='cat')
+    cat(readLines(site_makevars),sep="\n")
 }
 
 user_makevars <- tools::makevars_user()
@@ -62,7 +62,7 @@ if (isTRUE(nchar(user_makevars)>0)) {
     cat("\n-----------------------------------\n",
         "contents of user Makevars file",
         "\n-----------------------------------\n")
-    file.show(user_makevars,pager='cat')
+    cat(readLines(user_makevars),sep="\n")
 }
 
 cat("\n-----------------------------------\n",

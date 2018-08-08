@@ -24,11 +24,11 @@ MD5sum: 0b25ac8a10cf63644e88006d1c5972c2
 NeedsCompilation: yes
 
 Package: panelPomp
-Version: 0.8.1
-Depends: R(>= 3.1.2), pomp(>= 1.7.5.2)
+Version: 0.8.2
+Depends: R(>= 3.1.2), pomp(>= 1.18.6.3)
 Imports: methods
 License: MIT + file LICENSE
-MD5sum: 0cef1c85f80095521f7df528affb3f7f
+MD5sum: 524a1eee10c6d88d82bd493794934ba5
 NeedsCompilation: no
 
 Package: pomp

@@ -12,6 +12,12 @@ Suggests: ape, geiger
 License: GPL-3
 Archs: i386, x64
 
+Package: panelPomp
+Version: 0.8.2
+Depends: R(>= 3.1.2), pomp(>= 1.18.6.3)
+Imports: methods
+License: MIT + file LICENSE
+
 Package: pomp
 Version: 1.18.6.3
 Depends: R(>= 3.1.2), methods

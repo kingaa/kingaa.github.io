@@ -20,7 +20,7 @@ Version: 2.13-1
 Depends: R(>= 3.3), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL-3
-MD5sum: 7dbd332a02db5b024494d9892d8d352e
+MD5sum: 5a9200b9af5a77b4e40eb388b00a5b3c
 NeedsCompilation: yes
 
 Package: panelPomp
@@ -42,12 +42,12 @@ MD5sum: c5a6afe2d49654d1b5c4508b7871ebd0
 NeedsCompilation: yes
 
 Package: pomp2
-Version: 2.0.1.0
-Depends: R(>= 3.1.2), methods
+Version: 2.0.2.0
+Depends: R(>= 3.5.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2
-Suggests: magrittr, plyr, ggplot2, knitr, tidyr, dplyr, subplex, nloptr
+Suggests: magrittr, plyr, ggplot2, knitr, tidyr, dplyr, subplex
 License: GPL-3
-MD5sum: 17cc73817261e4aeefb74f467a7a2a53
+MD5sum: 4df3a4599057a6df3065f27022f7232a
 NeedsCompilation: yes
 
 Package: pompExamples
@@ -60,10 +60,10 @@ MD5sum: 7202322bdf2d374d3d0ffc8c851edede
 NeedsCompilation: yes
 
 Package: subplex
-Version: 1.5-4
+Version: 1.5-5
 Depends: R(>= 2.5.1)
 License: GPL-3
-MD5sum: 07909802c069453e197cd5e2373aeafb
+MD5sum: 463ac4778dec89916cb98843f3e97fcf
 NeedsCompilation: yes
 
 Package: tao

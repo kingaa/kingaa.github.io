@@ -1,3 +1,11 @@
+Package: aakmisc
+Version: 0.27-1
+Depends: R(>= 3.4.0)
+Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
+Suggests: scales, magrittr
+License: GPL-3
+MD5sum: e5edb278053f87ab85e49d501674c860
+
 Package: ouch
 Version: 2.13-1
 Depends: R(>= 3.3), methods, stats, graphics, subplex
@@ -30,7 +38,7 @@ License: GPL-3
 MD5sum: ff3d2ba20c8d72a2ec3ad94f4944874f
 
 Package: subplex
-Version: 1.5-5
+Version: 1.5-6
 Depends: R(>= 2.5.1)
 License: GPL-3
-MD5sum: 5d058b2cc1963f02edf5365c05f8eb8c
+MD5sum: 98f4f8a0963ec91549dd2f27d06cf9cb

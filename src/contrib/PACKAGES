@@ -1,10 +1,10 @@
 Package: aakmisc
-Version: 0.26-2
-Depends: R(>= 3.3.1)
+Version: 0.27-1
+Depends: R(>= 3.4.0)
 Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
-Suggests: scales, magrittr, reshape2, readr
+Suggests: scales, magrittr
 License: GPL-3
-MD5sum: 3c1399a46f3c044ce24f6028edf74956
+MD5sum: d56650f188758d67eb5942bb8f86694e
 NeedsCompilation: no
 
 Package: mpifarm
@@ -60,10 +60,10 @@ MD5sum: 7202322bdf2d374d3d0ffc8c851edede
 NeedsCompilation: yes
 
 Package: subplex
-Version: 1.5-5
+Version: 1.5-6
 Depends: R(>= 2.5.1)
 License: GPL-3
-MD5sum: 463ac4778dec89916cb98843f3e97fcf
+MD5sum: 1f63022abe7b37ef0bedbb2765c57a79
 NeedsCompilation: yes
 
 Package: tao

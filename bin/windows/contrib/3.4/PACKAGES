@@ -19,8 +19,8 @@ Imports: methods
 License: MIT + file LICENSE
 
 Package: pomp
-Version: 1.18.8.2
-Depends: R(>= 3.1.2), methods
+Version: 1.19.0.0
+Depends: R(>= 3.4.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr

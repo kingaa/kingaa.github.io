@@ -21,21 +21,22 @@ License: MIT + file LICENSE
 MD5sum: e6e4126e4e52f0d63022a59b100a7230
 
 Package: pomp
-Version: 1.18.8.2
-Depends: R(>= 3.1.2), methods
+Version: 1.19.0.0
+Depends: R(>= 3.4.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, subplex,
         nloptr
 Suggests: magrittr, plyr, reshape2, ggplot2, knitr
 License: GPL-3
-MD5sum: 9ab403e7161b79246fdc7d929023bcd8
+MD5sum: 9a42644dda70fbe9b3e78dbc5aa6e2ce
 
 Package: pomp2
-Version: 2.0.6.0
+Version: 2.0.7.0
 Depends: R(>= 3.5.0), methods
-Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2
-Suggests: magrittr, plyr, ggplot2, knitr, tidyr, dplyr, subplex
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
+        magrittr
+Suggests: plyr, ggplot2, knitr, tidyr, dplyr, subplex
 License: GPL-3
-MD5sum: d23f525b0e5e94e4b6ae4260b7c0ffc6
+MD5sum: 6dec33c87d7a1e8d48ad77578bb53359
 
 Package: subplex
 Version: 1.5-6

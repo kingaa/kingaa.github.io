@@ -30,13 +30,13 @@ License: GPL-3
 MD5sum: 9a42644dda70fbe9b3e78dbc5aa6e2ce
 
 Package: pomp2
-Version: 2.0.8.0
+Version: 2.0.9.0
 Depends: R(>= 3.5.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex
 License: GPL-3
-MD5sum: f666648f9a29f2d464545ad8b298ba24
+MD5sum: f736f2b18eb6f3081206e210f70e4d95
 
 Package: subplex
 Version: 1.5-6

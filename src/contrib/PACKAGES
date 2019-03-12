@@ -7,6 +7,14 @@ License: GPL-3
 MD5sum: d56650f188758d67eb5942bb8f86694e
 NeedsCompilation: no
 
+Package: circumstance
+Version: 0.0.0.0
+Depends: R(>= 3.5.0), methods, pomp2, foreach
+Suggests: doParallel, doRNG
+License: GPL-3
+MD5sum: 7fa3bb03f0a06996c6701bb02ae37dcb
+NeedsCompilation: no
+
 Package: mpifarm
 Version: 1.20-1
 Depends: R(>= 3.0.0)

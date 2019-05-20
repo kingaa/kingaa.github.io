@@ -4,3 +4,12 @@ Depends: R(>= 3.6), methods, stats, graphics, subplex
 Suggests: ape, geiger
 License: GPL-3
 MD5sum: 46549ad3cdf7ef84621daae55aaeecfc
+
+Package: pomp2
+Version: 2.0.14.1
+Depends: R(>= 3.5.0), methods
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
+        magrittr, plyr
+Suggests: ggplot2, knitr, tidyr, dplyr, subplex
+License: GPL-3
+MD5sum: 141aae2e668bfc463230675b630d454b

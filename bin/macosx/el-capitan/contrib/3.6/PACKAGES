@@ -5,6 +5,15 @@ Suggests: ape, geiger
 License: GPL-3
 MD5sum: 46549ad3cdf7ef84621daae55aaeecfc
 
+Package: pomp
+Version: 2.1.0.0
+Depends: R(>= 3.5.0), methods
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
+        magrittr, plyr
+Suggests: ggplot2, knitr, tidyr, dplyr, subplex
+License: GPL-3
+MD5sum: 5da04c35ef1bc6728db1f66661771597
+
 Package: pomp2
 Version: 2.0.14.1
 Depends: R(>= 3.5.0), methods

@@ -5,6 +5,13 @@ Suggests: ape, geiger
 License: GPL-3
 MD5sum: 46549ad3cdf7ef84621daae55aaeecfc
 
+Package: panelPomp
+Version: 0.9.1.3
+Depends: R(>= 3.5.0), pomp(>= 2.1.0)
+Imports: methods
+License: MIT + file LICENSE
+MD5sum: 2444d65266f0d66e396706bb817063ed
+
 Package: pomp
 Version: 2.1.0.0
 Depends: R(>= 3.5.0), methods

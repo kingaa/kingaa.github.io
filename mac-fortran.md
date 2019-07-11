@@ -3,7 +3,7 @@ layout: default
 title: osx gfortran installation instructions
 ---
 
-### OSX 10.10 (Yosemite), 10.11 (El Capitan), and 10.12 (Sierra) users
+### OSX 10.10 (Yosemite) and later
 
 Make sure you have `Xcode` installed.
 `Xcode` contains the tools needed to compile native code on your machine.

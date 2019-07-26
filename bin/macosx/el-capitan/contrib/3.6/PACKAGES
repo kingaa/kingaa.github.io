@@ -13,10 +13,10 @@ License: MIT + file LICENSE
 MD5sum: 2444d65266f0d66e396706bb817063ed
 
 Package: pomp
-Version: 2.2.1.0
+Version: 2.2.2.0
 Depends: R(>= 3.5.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex
 License: GPL-3
-MD5sum: caf0ca9f61c31cc73f6131d67ddc5090
+MD5sum: 3d6bb1fc3b83466cc4e0dc2d36d6576e

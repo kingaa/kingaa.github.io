@@ -118,9 +118,9 @@ output to image file %s\n",ncore,chunk,nwork,sQuote(img)))
 
 if (backend %in% c("doMPI","doMPIRNG")) {
 #  closeCluster(cl)
-  invisible(mpi.finalize())
+#  invisible(mpi.finalize())
 } else if (backend == "doParallel") {
-#  stopCluster(cl)
+  stopCluster(cl)
 }
 
 res %>%
@@ -187,3 +187,5 @@ res %>%
   arrange(id) %>%
   pull(x) %>%
   digest()
+
+mpi.quit()

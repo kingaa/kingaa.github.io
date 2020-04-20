@@ -1,3 +1,10 @@
+Package: circumstance
+Version: 0.0.1.0
+Depends: R(>= 3.6.0), methods, foreach, pomp(>= 2.8)
+Suggests: doParallel, doRNG, tidyr, ggplot2
+License: GPL-3
+MD5sum: 6997979a6426fa31532ef0dd7dae136e
+
 Package: ouch
 Version: 2.14-1
 Depends: R(>= 3.6), methods, stats, graphics, subplex

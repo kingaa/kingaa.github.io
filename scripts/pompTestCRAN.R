@@ -39,7 +39,7 @@ tryCatch(
   cat("Success!\n")
 },
 error=function (e) {
-  stop("pomp installation failure! Consult the instructions!",
+  stop("pomp installation failure! Consult the instructions!\n",
     conditionMessage(e),call.=FALSE)
 }
 )

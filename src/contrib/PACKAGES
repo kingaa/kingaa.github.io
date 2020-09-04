@@ -1,10 +1,10 @@
 Package: aakmisc
-Version: 0.27-1
-Depends: R(>= 3.4.0)
+Version: 0.28-1
+Depends: R(>= 4.0.0)
 Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
 Suggests: scales, magrittr
 License: GPL-3
-MD5sum: d56650f188758d67eb5942bb8f86694e
+MD5sum: 988edf859a36cecf62e0dea6cbd9cec2
 NeedsCompilation: no
 
 Package: circumstance
@@ -39,6 +39,15 @@ License: MIT + file LICENSE
 MD5sum: 0876c83c1f9cdeb960c95cab3e7792d7
 NeedsCompilation: no
 
+Package: pompExamples
+Version: 0.32-1
+Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
+LinkingTo: pomp
+Suggests: plyr, reshape2, magrittr, ggplot2
+License: GPL (>= 3)
+MD5sum: 7202322bdf2d374d3d0ffc8c851edede
+NeedsCompilation: yes
+
 Package: pomp
 Version: 3.1.1.7
 Depends: R(>= 4.0.0), methods
@@ -47,15 +56,6 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
 MD5sum: eed0e94308f1395869fa0e9f09757268
-NeedsCompilation: yes
-
-Package: pompExamples
-Version: 0.32-1
-Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
-LinkingTo: pomp
-Suggests: plyr, reshape2, magrittr, ggplot2
-License: GPL (>= 3)
-MD5sum: 7202322bdf2d374d3d0ffc8c851edede
 NeedsCompilation: yes
 
 Package: subplex

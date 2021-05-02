@@ -24,12 +24,12 @@ MD5sum: 235e88b96c445a048e1c06e808fdb382
 NeedsCompilation: no
 
 Package: ouch
-Version: 2.15-1
+Version: 2.16-1
 Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
 License: GPL-3
-MD5sum: de760d6cce830b2a384c58c221e6d518
+MD5sum: af9d3f583e7094197b64f231bf2f8ffa
 NeedsCompilation: yes
 
 Package: panelPomp
@@ -40,6 +40,15 @@ License: MIT + file LICENSE
 MD5sum: 0876c83c1f9cdeb960c95cab3e7792d7
 NeedsCompilation: no
 
+Package: pompExamples
+Version: 0.32-1
+Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
+LinkingTo: pomp
+Suggests: plyr, reshape2, magrittr, ggplot2
+License: GPL (>= 3)
+MD5sum: 7202322bdf2d374d3d0ffc8c851edede
+NeedsCompilation: yes
+
 Package: pomp
 Version: 3.3.0.4
 Depends: R(>= 4.0.0), methods
@@ -48,15 +57,6 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
 MD5sum: 8076c30f3a41ec888ae45363431960c5
-NeedsCompilation: yes
-
-Package: pompExamples
-Version: 0.32-1
-Depends: R(>= 3.1.0), stats, graphics, pomp(>= 1.5.3)
-LinkingTo: pomp
-Suggests: plyr, reshape2, magrittr, ggplot2
-License: GPL (>= 3)
-MD5sum: 7202322bdf2d374d3d0ffc8c851edede
 NeedsCompilation: yes
 
 Package: subplex

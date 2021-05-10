@@ -1,0 +1,7 @@
+Package: ouch
+Version: 2.16-7
+Depends: R(>= 3.6)
+Imports: methods, stats, graphics, grDevices, utils, subplex
+Suggests: ape, geiger
+License: GPL-3
+Archs: i386, x64

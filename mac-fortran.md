@@ -28,6 +28,8 @@ It is available at [https://developer.apple.com/download/more/](https://develope
 
 If these still don't work, complaining about a lack of FORTRAN support, try [installing `gfortran` binaries from GCC](https://gcc.gnu.org/wiki/GFortranBinaries#MacOS) as [recommended by CRAN](https://cran.r-project.org/bin/macosx/tools/).
 
+Another option is to install from [this github site](https://github.com/fxcoudert/gfortran-for-macOS/).
+
 ### OSX 10.9 (Mavericks) and older
 
 Make sure you have `Xcode` installed.

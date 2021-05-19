@@ -5,3 +5,12 @@ Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
 License: GPL-3
 Archs: i386, x64
+
+Package: pomp
+Version: 3.4.0.0
+Depends: R(>= 4.0.0), methods
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
+        magrittr, plyr
+Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
+License: GPL-3
+Archs: i386, x64

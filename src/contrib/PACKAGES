@@ -24,12 +24,12 @@ MD5sum: 235e88b96c445a048e1c06e808fdb382
 NeedsCompilation: no
 
 Package: ouch
-Version: 2.16-7
+Version: 2.17
 Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
 License: GPL-3
-MD5sum: e169d0e8908663570e3c3b1a17dab8b2
+MD5sum: b632b8b0ebf14e074bb951a64250a31d
 NeedsCompilation: yes
 
 Package: panelPomp

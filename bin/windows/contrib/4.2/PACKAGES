@@ -14,3 +14,9 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
 Archs: x64
+
+Package: subplex
+Version: 1.6
+Depends: R(>= 2.5.1)
+License: GPL-3
+Archs: x64

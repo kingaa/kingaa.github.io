@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Minimization of a function by the subplex algorithm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for subplex {subplex}"><tr><td>subplex {subplex}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Minimization of a function by the subplex algorithm</h2>
+
+<h3>Description</h3>
+
+<p><code>subplex</code> minimizes a function.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+subplex(par, fn, control = list(), hessian = FALSE, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>par</code></td>
+<td>
+<p>Initial guess of the parameters to be optimized over.</p>
+</td></tr>
+<tr valign="top"><td><code>fn</code></td>
+<td>
+<p>The function to be minimized.  Its first argument must be the
+vector of parameters to be optimized over.  It should return a scalar
+result.</p>
+</td></tr>
+<tr valign="top"><td><code>control</code></td>
+<td>
+<p>A list of control parameters, consisting of some or all of
+the following: </p>
+ <dl>
+<dt>reltol</dt><dd><p> The relative optimization tolerance
+for <code>par</code>.  This must be a positive number.  The default value is
+<code>.Machine$double.eps</code>.  </p>
+</dd> <dt>maxit</dt><dd><p> Maximum number of function
+evaluations to perform before giving up.  The default value is <code>10000</code>.
+</p>
+</dd> <dt>parscale</dt><dd><p> The scale and initial stepsizes for the components of
+<code>par</code>.  This must either be a single scalar, in which case the same
+scale is used for all parameters, or a vector of length equal to the length
+of <code>par</code>.  For <code>parscale</code> to be valid, it must not be too small
+relative to <code>par</code>: if <code>par + parscale = par</code> in any component,
+<code>parscale</code> is too small.  The default value is <code>1</code>.  </p>
+</dd> </dl>
+</td></tr>
+<tr valign="top"><td><code>hessian</code></td>
+<td>
+<p>If <code>hessian=TRUE</code>, the Hessian of the objective at the
+estimated optimum will be numerically computed.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>Additional arguments to be passed to the function <code>fn</code>.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The convergence codes are as follows: </p>
+ <dl>
+<dt>-2</dt><dd><p>invalid input</p>
+</dd>
+<dt>-1</dt><dd><p>number of function evaluations needed exceeds <code>maxnfe</code></p>
+</dd>
+<dt>0</dt><dd><p>success: tolerance <code>tol</code> satisfied</p>
+</dd> <dt>1</dt><dd><p>limit of machine
+precision reached</p>
+</dd> </dl>
+
+<p>For more details, see the source code.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>subplex</code> returns a list containing the following:
+</p>
+<table summary="R valueblock">
+<tr valign="top"><td><code>par</code></td>
+<td>
+<p>Estimated parameters that minimize the function.</p>
+</td></tr>
+<tr valign="top"><td><code>value</code></td>
+<td>
+<p>Minimized value of the function.</p>
+</td></tr> <tr valign="top"><td><code>count</code></td>
+<td>
+<p>Number of
+function evaluations required.</p>
+</td></tr> <tr valign="top"><td><code>convergence</code></td>
+<td>
+<p>Convergence code (see
+Details).</p>
+</td></tr> <tr valign="top"><td><code>message</code></td>
+<td>
+<p> A character string giving a diagnostic message
+from the optimizer, or 'NULL'.  </p>
+</td></tr> <tr valign="top"><td><code>hessian</code></td>
+<td>
+<p>Hessian matrix.</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Aaron A. King <a href="mailto:kingaa@umich.edu">kingaa@umich.edu</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>T. Rowan, &ldquo;Functional Stability Analysis of Numerical
+Algorithms&rdquo;, Ph.D. thesis, Department of Computer Sciences, University of
+Texas at Austin, 1990.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../stats/html/optim.html">optim</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+rosen &lt;- function (x) {   ## Rosenbrock Banana function
+  x1 &lt;- x[1]
+  x2 &lt;- x[2]
+  100*(x2-x1*x1)^2+(1-x1)^2
+}
+subplex(par=c(11,-33),fn=rosen)
+
+rosen2 &lt;- function (x) {
+  X &lt;- matrix(x,ncol=2)
+  sum(apply(X,1,rosen))
+}
+subplex(par=c(-33,11,14,9,0,12),fn=rosen2,control=list(maxit=30000))
+## compare with optim:
+optim(par=c(-33,11,14,9,0,12),fn=rosen2,control=list(maxit=30000))
+
+ripple &lt;- function (x) {
+  r &lt;- sqrt(sum(x^2))
+  1-exp(-r^2)*cos(10*r)^2
+}
+subplex(par=c(1),fn=ripple,hessian=TRUE)
+subplex(par=c(0.1,3),fn=ripple,hessian=TRUE)
+subplex(par=c(0.1,3,2),fn=ripple,hessian=TRUE)
+
+rosen &lt;- function (x, g = 0, h = 0) {   ## Rosenbrock Banana function (using names)
+  x1 &lt;- x['a']
+  x2 &lt;- x['b']-h
+  100*(x2-x1*x1)^2+(1-x1)^2+g
+}
+subplex(par=c(b=11,a=-33),fn=rosen,h=22,control=list(abstol=1e-9,parscale=5),hessian=TRUE)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.6 <a href="00Index.html">Index</a>]</div>
+</body></html>

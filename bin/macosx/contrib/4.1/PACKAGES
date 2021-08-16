@@ -1,10 +1,10 @@
 Package: ouch
-Version: 2.17
+Version: 2.17-0
 Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
 License: GPL-3
-MD5sum: 3e47104eb4d60a6bca4b54864a271c58
+MD5sum: 34daf469910dbe868e6c2c85af52f22f
 
 Package: pomp
 Version: 3.5.1.0
@@ -13,4 +13,4 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
-MD5sum: bdb13028677d7a596fa27181641256b4
+MD5sum: 1e8c927c9dfca61b354d632c9d4e0a0f

@@ -24,12 +24,12 @@ MD5sum: 235e88b96c445a048e1c06e808fdb382
 NeedsCompilation: no
 
 Package: ouch
-Version: 2.17
+Version: 2.17-0
 Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
 License: GPL-3
-MD5sum: 1aaf525763ec465b6150bb9e342890a3
+MD5sum: c80f143c4bffee1b0337d5b27c2424d7
 NeedsCompilation: yes
 
 Package: panelPomp
@@ -47,7 +47,7 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
-MD5sum: 4ed5cd60bfd84ee6d07c08617dbc2a21
+MD5sum: 7e2d622ec45ee2ad7c81727a60559d9d
 NeedsCompilation: yes
 
 Package: subplex

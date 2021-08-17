@@ -1,5 +1,12 @@
+Package: aakmisc
+Version: 0.29-1
+Depends: R(>= 4.0.0)
+Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
+Suggests: scales, magrittr
+License: GPL-3
+
 Package: ouch
-Version: 2.17
+Version: 2.17-0
 Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
@@ -7,10 +14,21 @@ License: GPL-3
 Archs: i386, x64
 
 Package: pomp
-Version: 3.4.5.0
+Version: 3.5.1.1
 Depends: R(>= 4.0.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
 Archs: i386, x64
+
+Package: subplex
+Version: 1.6
+Depends: R(>= 2.5.1)
+License: GPL-3
+Archs: i386, x64
+
+Package: tao
+Version: 1.1.1
+Depends: R(>= 3.0.0)
+License: GPL-3

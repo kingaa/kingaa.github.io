@@ -4,7 +4,7 @@ Depends: R(>= 4.0.0)
 Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
 Suggests: scales, magrittr
 License: GPL-3
-MD5sum: b43ca5ce2275e4dd8ec6fbf9b11e417a
+MD5sum: c00c5955b4e95ab36032e2a7e3783f39
 NeedsCompilation: no
 
 Package: circumstance
@@ -29,7 +29,7 @@ Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape, geiger
 License: GPL-3
-MD5sum: 2c063bc842777d7c82aafbe9a584db79
+MD5sum: d8bfa1b9a4d111e2587d4cc559142349
 NeedsCompilation: yes
 
 Package: panelPomp
@@ -41,25 +41,25 @@ MD5sum: 0876c83c1f9cdeb960c95cab3e7792d7
 NeedsCompilation: no
 
 Package: pomp
-Version: 3.5.1.0
+Version: 3.5.1.1
 Depends: R(>= 4.0.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
-MD5sum: 7e2d622ec45ee2ad7c81727a60559d9d
+MD5sum: 66fe14cb604dcb32978ad42171f7209e
 NeedsCompilation: yes
 
 Package: subplex
 Version: 1.6
 Depends: R(>= 2.5.1)
 License: GPL-3
-MD5sum: 3409e32693ead4ddab01dc111a2de07c
+MD5sum: a5fbf152df4aa211aea7e2b148194ddb
 NeedsCompilation: yes
 
 Package: tao
 Version: 1.1.1
 Depends: R(>= 3.0.0)
 License: GPL-3
-MD5sum: f7ab9f83d8c8c371c9e276b60439495d
+MD5sum: 071347d5eb26434ef900475f1e85cd06
 NeedsCompilation: no

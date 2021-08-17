@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Evaluates a Residual Derivative Function Represented in a DLL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for DLLres {deSolve}"><tr><td>DLLres {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Evaluates a Residual Derivative Function Represented in a DLL
+</h2>
+
+<h3>Description</h3>
+
+<p>Calls a residual function, <i>F(t,y,y')</i> of a DAE system
+(differential algebraic equations) defined in a compiled language as a
+DLL.
+</p>
+<p>To be used for testing the implementation of DAE problems in compiled code
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>DLLres(res, times, y, dy, parms, dllname,
+  initfunc = dllname, rpar = NULL, ipar = NULL, nout = 0,
+  outnames = NULL, forcings = NULL, initforc = NULL,
+  fcontrol = NULL)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>res </code></td>
+<td>
+<p>the name of the function in the dynamically loaded
+shared library,
+</p>
+</td></tr>
+<tr valign="top"><td><code>times </code></td>
+<td>
+<p>first value = the time at which the function needs to be
+evaluated,
+</p>
+</td></tr>
+<tr valign="top"><td><code>y </code></td>
+<td>
+<p>the values of the dependent variables for which the function needs
+to be evaluated,
+</p>
+</td></tr>
+<tr valign="top"><td><code>dy </code></td>
+<td>
+<p>the derivative of the values of the dependent variables for
+which the function needs to be evaluated,
+</p>
+</td></tr>
+<tr valign="top"><td><code>parms </code></td>
+<td>
+<p>the parameters that are passed to the initialiser function,
+</p>
+</td></tr>
+<tr valign="top"><td><code>dllname </code></td>
+<td>
+<p>a string giving the name of the shared library (without
+extension) that contains the compiled function or subroutine definitions
+referred to in <code>func</code>,
+</p>
+</td></tr>
+<tr valign="top"><td><code>initfunc </code></td>
+<td>
+<p>if not NULL, the name of the initialisation function
+(which initialises values of parameters), as provided in &lsquo;<span class="file">dllname</span>&rsquo;.
+See details,
+</p>
+</td></tr>
+<tr valign="top"><td><code>rpar </code></td>
+<td>
+<p>a vector with double precision values passed to the
+DLL-function <code>func</code> and <code>jacfunc</code> present in the DLL, via
+argument <code>rpar</code>,
+</p>
+</td></tr>
+<tr valign="top"><td><code>ipar </code></td>
+<td>
+<p>a vector with integer values passed to the DLL-function
+<code>func</code> and <code>jacfunc</code> present in the DLL, via function argument
+<code>ipar</code>,
+</p>
+</td></tr>
+<tr valign="top"><td><code>nout </code></td>
+<td>
+<p>the number of output variables.
+</p>
+</td></tr>
+<tr valign="top"><td><code>outnames </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
+<code>nout</code> &gt; 0: the names of output variables calculated in the
+compiled function <code>func</code>, present in the shared library.
+</p>
+</td></tr>
+<tr valign="top"><td><code>forcings </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
+the forcing function data sets, each present as a two-columned matrix,
+with (time,value); interpolation outside the interval
+[min(<code>times</code>), max(<code>times</code>)] is done by taking the value at
+the closest data extreme.
+</p>
+<p>See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initforc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the forcing function
+initialisation function, as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. It MUST be present if <code>forcings</code> has been given a
+value.
+See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>fcontrol </code></td>
+<td>
+<p>A list of control parameters for the forcing functions.
+See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function is meant to help developing FORTRAN or C models that are to be
+used to solve differential algebraic equations (DAE) in
+package <code>deSolve</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a list containing:
+</p>
+<table summary="R valueblock">
+<tr valign="top"><td><code>res </code></td>
+<td>
+<p>the residual of derivative estimated by the function</p>
+</td></tr>
+<tr valign="top"><td><code>var </code></td>
+<td>
+<p>the ordinary output variables of the function</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Karline Soetaert &lt;karline.soetaert@nioz.nl&gt;</p>
+
+
+<h3>See Also</h3>
+
+<p><a href="../../deSolve/help/daspk.html">daspk</a> to solve DAE problems
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## =========================================================================
+## Residuals from the daspk chemical model, production a forcing function
+## =========================================================================
+## Parameter values and initial conditions
+## see example(daspk) for a more comprehensive implementation
+
+pars &lt;- c(K = 1, ka = 1e6, r = 1)
+
+## Initial conc; D is in equilibrium with A,B
+y &lt;- c(A = 2, B = 3, D = 2 * 3/pars["K"])
+
+## Initial rate of change
+dy &lt;- c(dA = 0, dB = 0, dD = 0)
+
+## production increases with time
+prod &lt;- matrix(ncol = 2,
+          data = c(seq(0, 100, by = 10), seq(0.1, 0.5, len = 11)))
+
+DLLres(y = y, dy = dy, times = 5, res = "chemres",
+          dllname = "deSolve", initfunc = "initparms",
+          initforc = "initforcs", parms = pars, forcings = prod,
+          nout = 2, outnames = c("CONC", "Prod"))
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

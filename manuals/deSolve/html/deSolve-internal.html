@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Internal deSolve Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for deSolve-internal {deSolve}"><tr><td>deSolve-internal {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Internal deSolve Functions</h2>
+
+<h3>Description</h3>
+
+<p>Internal deSolve functions, these are not to be called by the user.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+timestep(prev = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>prev </code></td>
+<td>
+<p>if <code>TRUE</code> will return the timestep previously used;
+when <code>FALSE</code> will return the time step to be currently tried by 
+the integrator.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Function <code>timestep</code> is intended to return the current or next
+timestep of the integration.  It works only under specific
+circumstances and should not be used by the end user.
+</p>
+<p>Instead of this, please see the example below for a pure
+<span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> solution.  
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code> for information about the time steps used,<br />
+<code><a href="../../deSolve/help/lagvalue.html">lagvalue</a></code> and <code><a href="../../deSolve/help/lagderiv.html">lagderiv</a></code> that can be used for DDEs. 
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+###################################################
+### This example shows how to retrieve information 
+### about the used time steps.
+###################################################
+
+## a function closure  ('lexical scoping')
+modelClosure &lt;- function(t0) {
+  t.old &lt;- t.act &lt;- t0
+  function(t, y, parms) {
+    t.old  &lt;&lt;- t.act
+    t.act  &lt;&lt;- t
+    cat(t, "\t", t - t.old, "\n")
+    with (as.list(c(y, parms)), {
+      dP &lt;- a * P      -  b * P * K
+      dK &lt;- b * P * K  -  c * K
+      list(c(dP, dK))
+    })
+  }
+}
+
+model &lt;- modelClosure(0) # initialization
+
+parms &lt;- c(a = 0.1, b = 0.1, c = 0.1)
+
+y &lt;- c(P = 1, K = 2)
+
+out &lt;- ode(y = y, func = model, times = c(0, 2),
+ parms = parms, method = "lsoda")
+
+ls() # prove that t.old and t.new are local within 'model' 
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

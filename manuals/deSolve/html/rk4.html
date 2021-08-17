@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solve System of ODE (Ordinary Differential Equation)s by...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for rk4 {deSolve}"><tr><td>rk4 {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Solve System of ODE (Ordinary Differential Equation)s by
+Euler's Method or Classical Runge-Kutta 4th Order Integration.
+</h2>
+
+<h3>Description</h3>
+
+<p>Solving initial value problems for systems of first-order
+ordinary differential equations (ODEs) using Euler's method or the
+classical Runge-Kutta 4th order integration.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+euler(y, times, func, parms, verbose = FALSE, ynames = TRUE,
+  dllname = NULL, initfunc = dllname, initpar = parms,
+  rpar = NULL, ipar = NULL, nout = 0, outnames = NULL,
+  forcings = NULL, initforc = NULL, fcontrol = NULL, ...)
+
+rk4(y, times, func, parms, verbose = FALSE, ynames = TRUE,
+  dllname = NULL, initfunc = dllname, initpar = parms,
+  rpar = NULL, ipar = NULL, nout = 0, outnames = NULL,
+  forcings = NULL, initforc = NULL, fcontrol = NULL, ...)
+
+euler.1D(y, times, func, parms, nspec = NULL, dimens = NULL,
+  names = NULL, verbose = FALSE, ynames = TRUE,
+  dllname = NULL, initfunc = dllname, initpar = parms,
+  rpar = NULL,  ipar = NULL, nout = 0, outnames = NULL,
+  forcings = NULL, initforc = NULL, fcontrol = NULL, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y </code></td>
+<td>
+<p>the initial (state) values for the ODE system. If <code>y</code>
+has a name attribute, the names will be used to label the output
+matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>times </code></td>
+<td>
+<p>times at which explicit estimates for <code>y</code> are
+desired.  The first value in <code>times</code> must be the initial time.
+</p>
+</td></tr>
+<tr valign="top"><td><code>func </code></td>
+<td>
+<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+derivatives in the ODE system (the <em>model definition</em>) at time
+t, or a character string giving the name of a compiled function in a
+dynamically loaded shared library.
+</p>
+<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current
+time point in the integration, <code>y</code> is the current estimate of
+the variables in the ODE system.  If the initial values <code>y</code> has
+a <code>names</code> attribute, the names will be available inside <code>func</code>.
+<code>parms</code> is a vector or list of parameters; ... (optional) are
+any other arguments passed to the function.
+</p>
+<p>The return value of <code>func</code> should be a list, whose first
+element is a vector containing the derivatives of <code>y</code> with
+respect to <code>time</code>, and whose next elements are global values
+that are required at each point in <code>times</code>.  The derivatives
+must be specified in the <b>same order</b> as the state variables <code>y</code>.
+</p>
+<p>If <code>func</code> is a string, then <code>dllname</code> must give the name
+of the shared library (without extension) which must be loaded
+before <code>rk4</code> is called. See package vignette
+<code>"compiledCode"</code> for more details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>parms </code></td>
+<td>
+<p>vector or list of parameters used in <code>func</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nspec </code></td>
+<td>
+<p>for 1D models only: the number of <b>species</b> (components)
+in the model. If <code>NULL</code>, then <code>dimens</code> should be specified.
+</p>
+</td></tr>
+<tr valign="top"><td><code>dimens</code></td>
+<td>
+<p>for 1D models only: the number of <b>boxes</b> in the
+model. If <code>NULL</code>, then <code>nspec</code> should be specified.
+</p>
+</td></tr>
+<tr valign="top"><td><code>names </code></td>
+<td>
+<p>for 1D models only: the names of the components; used
+for plotting.
+</p>
+</td></tr>
+<tr valign="top"><td><code>verbose </code></td>
+<td>
+<p>a logical value that, when <code>TRUE</code>, triggers more
+verbose output from the ODE solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ynames </code></td>
+<td>
+<p>if <code>FALSE</code>: names of state variables are not passed
+to function <code>func</code> ; this may speed up the simulation especially
+for large models.
+</p>
+</td></tr>
+<tr valign="top"><td><code>dllname </code></td>
+<td>
+<p>a string giving the name of the shared library
+(without extension) that contains all the compiled function or
+subroutine definitions refered to in <code>func</code>.
+See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the initialisation function
+(which initialises values of parameters), as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>,
+</p>
+</td></tr>
+<tr valign="top"><td><code>initpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
+initialisation function <code>initfunc</code> is in the DLL: the
+parameters passed to the initialiser, to initialise the common
+blocks (FORTRAN) or global variables (C, C++).
+</p>
+</td></tr>
+<tr valign="top"><td><code>rpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+double precision values passed to the DLL-functions whose names are
+specified by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ipar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+integer values passed to the dll-functions whose names are specified
+by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nout </code></td>
+<td>
+<p>only used if <code>dllname</code> is specified and the model is
+defined in compiled code: the number of output variables calculated
+in the compiled function <code>func</code>, present in the shared
+library. Note: it is not automatically checked whether this is
+indeed the number of output variables calculated in the DLL - you have
+to perform this check in the code. See package vignette
+<code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>outnames </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
+<code>nout</code> &gt; 0: the names of output variables calculated in the
+compiled function <code>func</code>, present in the shared library.
+</p>
+</td></tr>
+<tr valign="top"><td><code>forcings </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
+the forcing function data sets, each present as a two-columned matrix,
+with (time, value); interpolation outside the interval
+[min(<code>times</code>), max(<code>times</code>)] is done by taking the value at
+the closest data extreme.
+</p>
+<p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initforc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the forcing function
+initialisation function, as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. It MUST be present if <code>forcings</code> has been given a
+value.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>fcontrol </code></td>
+<td>
+<p>A list of control parameters for the forcing functions.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or vignette <code>compiledCode</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>... </code></td>
+<td>
+<p>additional arguments passed to <code>func</code> allowing this
+to be a generic function.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>rk4</code> and <code>euler</code> are special versions of the two fixed step
+solvers with less overhead and less functionality (e.g. no interpolation
+and no events) compared to the generic Runge-Kutta codes called by 
+<code><a href="../../deSolve/help/ode.html">ode</a></code> resp. <code><a href="../../deSolve/help/rk.html">rk</a></code>.
+</p>
+<p>If you need different internal and external time steps or want to use events, 
+please use:
+<code>rk(y, times, func, parms, method = "rk4")</code> or
+<code>rk(y, times, func, parms, method = "euler")</code>.
+</p>
+<p>See help pages of <code><a href="../../deSolve/help/rk.html">rk</a></code> and <code><a href="../../deSolve/help/rkMethod.html">rkMethod</a></code>
+for details.
+</p>
+<p>Function <code>euler.1D</code> essentially calls function<code>euler</code> but
+contains additional code to support plotting of 1D models, see
+<code><a href="../../deSolve/help/ode.1D.html">ode.1D</a></code> and <code><a href="../../deSolve/help/plot.1D.html">plot.1D</a></code> for details.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A matrix of class <code>deSolve</code> with up to as many rows as elements
+in <code>times</code> and as many columns as elements in <code>y</code> plus the
+number of &quot;global&quot; values returned in the next elements of the return
+from <code>func</code>, plus and additional column for the time value.
+There will be a row for each element in <code>times</code> unless the
+integration routine returns with an unrecoverable error. If <code>y</code>
+has a names attribute, it will be used to label the columns of the
+output value.
+</p>
+
+
+<h3>Note</h3>
+
+<p>For most practical cases, solvers with flexible timestep
+(e.g. <code>rk(method = "ode45")</code> and especially solvers of the
+Livermore family (ODEPACK, e.g. <code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>) are superior.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Thomas Petzoldt <a href="mailto:thomas.petzoldt@tu-dresden.de">thomas.petzoldt@tu-dresden.de</a></p>
+
+
+<h3>See Also</h3>
+
+
+<ul>
+<li> <p><code><a href="../../deSolve/help/rkMethod.html">rkMethod</a></code> for a list of available Runge-Kutta
+parameter sets,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/rk.html">rk</a></code> for the more general Runge-Code,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>, <code><a href="../../deSolve/help/lsode.html">lsode</a></code>,
+<code><a href="../../deSolve/help/lsodes.html">lsodes</a></code>, <code><a href="../../deSolve/help/lsodar.html">lsodar</a></code>, <code><a href="../../deSolve/help/vode.html">vode</a></code>,
+<code><a href="../../deSolve/help/daspk.html">daspk</a></code> for solvers of the Livermore family,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.html">ode</a></code> for a general interface to most of the ODE solvers,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.band.html">ode.band</a></code> for solving models with a banded
+Jacobian,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.1D.html">ode.1D</a></code> for integrating 1-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.2D.html">ode.2D</a></code> for integrating 2-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.3D.html">ode.3D</a></code> for integrating 3-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/dede.html">dede</a></code> for integrating models with delay
+differential equations,
+</p>
+</li></ul>
+
+<p><code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code> to print diagnostic messages.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## =======================================================================
+## Example: Analytical and numerical solutions of logistic growth
+## =======================================================================
+
+## the derivative of the logistic
+logist &lt;- function(t, x, parms) {
+  with(as.list(parms), {
+    dx &lt;- r * x[1] * (1 - x[1]/K)
+    list(dx)
+  })
+}
+
+time  &lt;- 0:100
+N0    &lt;- 0.1; r &lt;- 0.5; K &lt;- 100
+parms &lt;- c(r = r, K = K)
+x &lt;- c(N = N0)
+
+## analytical solution
+plot(time, K/(1 + (K/N0-1) * exp(-r*time)), ylim = c(0, 120),
+  type = "l", col = "red", lwd = 2)
+
+## reasonable numerical solution with rk4
+time &lt;- seq(0, 100, 2)
+out &lt;- as.data.frame(rk4(x, time, logist, parms))
+points(out$time, out$N, pch = 16, col = "blue", cex = 0.5)
+
+## same time step with euler, systematic under-estimation
+time &lt;- seq(0, 100, 2)
+out &lt;- as.data.frame(euler(x, time, logist, parms))
+points(out$time, out$N, pch = 1)
+
+## unstable result
+time &lt;- seq(0, 100, 4)
+out &lt;- as.data.frame(euler(x, time, logist, parms))
+points(out$time, out$N, pch = 8, cex = 0.5)
+
+## method with automatic time step
+out &lt;- as.data.frame(lsoda(x, time, logist, parms))
+points(out$time, out$N, pch = 1, col = "green")
+
+legend("bottomright",
+  c("analytical","rk4, h=2", "euler, h=2",
+    "euler, h=4", "lsoda"),
+  lty = c(1, NA, NA, NA, NA), lwd = c(2, 1, 1, 1, 1),
+  pch = c(NA, 16, 1, 8, 1),
+  col = c("red", "blue", "black", "black", "green"))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

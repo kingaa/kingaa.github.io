@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver for Ordinary Differential Equations (ODE)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for vode {deSolve}"><tr><td>vode {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Solver for Ordinary Differential Equations (ODE)</h2>
+
+<h3>Description</h3>
+
+<p>Solves the initial value problem for stiff or nonstiff systems of 
+ordinary differential equations (ODE) in the form:
+</p>
+<p style="text-align: center;"><i>dy/dt = f(t,y)</i></p>
+
+<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function <code>vode</code> provides an interface to the FORTRAN ODE
+solver of the same name, written by Peter N. Brown, Alan C. Hindmarsh
+and George D. Byrne.
+</p>
+<p>The system of ODE's is written as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function or be defined in
+compiled code that has been dynamically loaded.
+</p>
+<p>In contrast to <code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>, the user has to specify whether or
+not the problem is stiff and choose the appropriate solution method.
+</p>
+<p><code>vode</code> is very similar to <code><a href="../../deSolve/help/lsode.html">lsode</a></code>, but uses a
+variable-coefficient method rather than the fixed-step-interpolate
+methods in <code><a href="../../deSolve/help/lsode.html">lsode</a></code>.  In addition, in vode it is possible
+to choose whether or not a copy of the Jacobian is saved for reuse in
+the corrector iteration algorithm; In <code>lsode</code>, a copy is not
+kept.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>vode(y, times, func, parms, rtol = 1e-6, atol = 1e-6,  
+  jacfunc = NULL, jactype = "fullint", mf = NULL, verbose = FALSE,   
+  tcrit = NULL, hmin = 0, hmax = NULL, hini = 0, ynames = TRUE,
+  maxord = NULL, bandup = NULL, banddown = NULL, maxsteps = 5000,
+  dllname = NULL, initfunc = dllname, initpar = parms, rpar = NULL,
+  ipar = NULL, nout = 0, outnames = NULL, forcings=NULL,
+  initforc = NULL, fcontrol=NULL, events=NULL, lags = NULL,...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y </code></td>
+<td>
+<p>the initial (state) values for the ODE system. If <code>y</code>
+has a name attribute, the names will be used to label the output
+matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>times </code></td>
+<td>
+<p>time sequence for which output is wanted; the first
+value of <code>times</code> must be the initial time; if only one step is
+to be taken; set <code>times = NULL</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>func </code></td>
+<td>
+<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+derivatives in the ODE system (the <em>model definition</em>) at time
+<code>t</code>, or a character string giving the name of a compiled function in a
+dynamically loaded shared library.
+</p>
+<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current time
+point in the integration, <code>y</code> is the current estimate of the
+variables in the ODE system.  If the initial values <code>y</code> has a
+<code>names</code> attribute, the names will be available inside <code>func</code>.
+<code>parms</code> is a vector or list of parameters; ... (optional) are
+any other arguments passed to the function.
+</p>
+<p>The return value of <code>func</code> should be a list, whose first
+element is a vector containing the derivatives of <code>y</code> with
+respect to <code>time</code>, and whose next elements are global values
+that are required at each point in <code>times</code>.  The derivatives
+must be specified in the <b>same order</b> as the state variables <code>y</code>.
+</p>
+<p>If <code>func</code> is
+a string, then <code>dllname</code> must give the name of the shared
+library (without extension) which must be loaded before
+<code>vode()</code> is called. See package vignette <code>"compiledCode"</code>
+for more details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>parms </code></td>
+<td>
+<p>vector or list of parameters used in <code>func</code> or
+<code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>rtol </code></td>
+<td>
+<p>relative error tolerance, either a scalar or an array as
+long as <code>y</code>.  See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>atol </code></td>
+<td>
+<p>absolute error tolerance, either a scalar or an array as
+long as <code>y</code>.  See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>jacfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that computes the
+Jacobian of the system of differential equations 
+<i>dydot(i)/dy(j)</i>, or
+a string giving the name of a function or subroutine in
+&lsquo;<span class="file">dllname</span>&rsquo; that computes the Jacobian (see vignette
+<code>"compiledCode"</code> for more about this option).
+</p>
+<p>In some circumstances, supplying
+<code>jacfunc</code> can speed up the computations, if the system is
+stiff.  The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> calling sequence for <code>jacfunc</code> is identical to
+that of <code>func</code>.
+</p>
+<p>If the Jacobian is a full matrix, <code>jacfunc</code> should return a
+matrix <i>dydot/dy</i>, where the ith row contains the derivative of
+<i>dy_i/dt</i> with respect to <i>y_j</i>, or a vector containing the
+matrix elements by columns (the way <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> and FORTRAN store matrices).
+</p>
+<p>If the Jacobian is banded, <code>jacfunc</code> should return a matrix
+containing only the nonzero bands of the Jacobian, rotated
+row-wise. See first example of <a href="../../deSolve/help/lsode.html">lsode</a>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>jactype </code></td>
+<td>
+<p>the structure of the Jacobian, one of
+<code>"fullint"</code>, <code>"fullusr"</code>, <code>"bandusr"</code> or
+<code>"bandint"</code> - either full or banded and estimated internally or
+by user; overruled if <code>mf</code> is not <code>NULL</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>mf </code></td>
+<td>
+<p>the &quot;method flag&quot; passed to function vode - overrules
+<code>jactype</code> - provides more options than <code>jactype</code> - see
+details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>verbose </code></td>
+<td>
+<p>if TRUE: full output to the screen, e.g. will
+print the <code>diagnostiscs</code> of the integration - see details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>tcrit </code></td>
+<td>
+<p>if not <code>NULL</code>, then <code>vode</code> cannot integrate
+past <code>tcrit</code>. The FORTRAN routine <code>dvode</code> overshoots its
+targets (times points in the vector <code>times</code>), and interpolates
+values for the desired time points.  If there is a time beyond which
+integration should not proceed (perhaps because of a singularity),
+that should be provided in <code>tcrit</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>hmin </code></td>
+<td>
+<p>an optional minimum value of the integration stepsize. In
+special situations this parameter may speed up computations with the
+cost of precision. Don't use hmin if you don't know why!
+</p>
+</td></tr>
+<tr valign="top"><td><code>hmax </code></td>
+<td>
+<p>an optional maximum value of the integration stepsize. If
+not specified, hmax is set to the largest difference in
+<code>times</code>, to avoid that the simulation possibly ignores
+short-term events. If 0, no maximal size is specified.
+</p>
+</td></tr>
+<tr valign="top"><td><code>hini </code></td>
+<td>
+<p>initial step size to be attempted; if 0, the initial step
+size is determined by the solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ynames </code></td>
+<td>
+<p>logical; if <code>FALSE</code>: names of state variables are not
+passed to function <code>func</code> ; this may speed up the simulation
+especially for multi-D models.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxord </code></td>
+<td>
+<p>the maximum order to be allowed. <code>NULL</code> uses the default,
+i.e. order 12 if implicit Adams method (meth = 1), order 5 if BDF
+method (meth = 2). Reduce maxord to save storage space.
+</p>
+</td></tr>
+<tr valign="top"><td><code>bandup </code></td>
+<td>
+<p>number of non-zero bands above the diagonal, in case
+the Jacobian is banded.
+</p>
+</td></tr>
+<tr valign="top"><td><code>banddown </code></td>
+<td>
+<p>number of non-zero bands below the diagonal, in case
+the Jacobian is banded.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxsteps </code></td>
+<td>
+<p>maximal number of steps per output interval taken by the
+solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>dllname </code></td>
+<td>
+<p>a string giving the name of the shared library
+(without extension) that contains all the compiled function or
+subroutine definitions refered to in <code>func</code> and <code>jacfunc</code>.
+See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the initialisation function
+(which initialises values of parameters), as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
+initialisation function <code>initfunc</code> is in the dll: the
+parameters passed to the initialiser, to initialise the common
+blocks (FORTRAN) or global variables (C, C++).
+</p>
+</td></tr>
+<tr valign="top"><td><code>rpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+double precision values passed to the dll-functions whose names are
+specified by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ipar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+integer values passed to the dll-functions whose names are specified
+by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nout </code></td>
+<td>
+<p>only used if <code>dllname</code> is specified and the model is
+defined in compiled code: the number of output variables calculated
+in the compiled function <code>func</code>, present in the shared
+library. Note: it is not automatically checked whether this is
+indeed the number of output variables calculated in the dll - you have
+to perform this check in the code - See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>outnames </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
+<code>nout</code> &gt; 0: the names of output variables calculated in the
+compiled function <code>func</code>, present in the shared library.
+These names will be used to label the output matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>forcings </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
+the forcing function data sets, each present as a two-columned matrix,
+with (time,value); interpolation outside the interval
+[min(<code>times</code>), max(<code>times</code>)] is done by taking the value at
+the closest data extreme.
+</p>
+<p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initforc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the forcing function
+initialisation function, as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. It MUST be present if <code>forcings</code> has been given a
+value.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>fcontrol </code></td>
+<td>
+<p>A list of control parameters for the forcing functions.
+<a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>
+</p>
+</td></tr>
+<tr valign="top"><td><code>events </code></td>
+<td>
+<p>A matrix or data frame that specifies events, i.e. when the value of a 
+state variable is suddenly changed. See <a href="../../deSolve/help/events.html">events</a> for more information.
+</p>
+</td></tr>
+<tr valign="top"><td><code>lags </code></td>
+<td>
+<p>A list that specifies timelags, i.e. the number of steps 
+that has to be kept. To be used for delay differential equations. 
+See <a href="../../deSolve/help/timelags.html">timelags</a>, <a href="../../deSolve/help/dede.html">dede</a> for more information.
+</p>
+</td></tr>
+<tr valign="top"><td><code>... </code></td>
+<td>
+<p>additional arguments passed to <code>func</code> and
+<code>jacfunc</code> allowing this to be a generic function.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Before using the integrator <code>vode</code>, the user has to decide
+whether or not the problem is stiff.
+</p>
+<p>If the problem is nonstiff, use method flag <code>mf</code> = 10, which
+selects a nonstiff (Adams) method, no Jacobian used.
+</p>
+<p>If the problem is stiff, there are four standard choices which can be
+specified with <code>jactype</code> or <code>mf</code>.
+</p>
+<p>The options for <b>jactype</b> are
+</p>
+
+<dl>
+<dt>jac = &quot;fullint&quot;:</dt><dd><p>a full Jacobian, calculated internally by
+vode, corresponds to <code>mf</code> = 22,
+</p>
+</dd>
+<dt>jac = &quot;fullusr&quot;:</dt><dd><p>a full Jacobian, specified by user function
+<code>jacfunc</code>, corresponds to <code>mf</code> = 21,
+</p>
+</dd>
+<dt>jac = &quot;bandusr&quot;:</dt><dd><p>a banded Jacobian, specified by user
+function <code>jacfunc</code>; the size of the bands specified by
+<code>bandup</code> and <code>banddown</code>, corresponds to <code>mf</code> = 24,
+</p>
+</dd>
+<dt>jac = &quot;bandint&quot;:</dt><dd><p>a banded Jacobian, calculated by vode; the
+size of the bands specified by <code>bandup</code> and <code>banddown</code>,
+corresponds to <code>mf</code> = 25.
+</p>
+</dd>
+</dl>
+
+<p>More options are available when specifying <b>mf</b> directly.
+</p>
+<p>The legal values of <code>mf</code> are 10, 11, 12, 13, 14, 15, 20, 21, 22,
+23, 24, 25, -11, -12, -14, -15, -21, -22, -24, -25.
+</p>
+<p><code>mf</code> is a signed two-digit integer, <code>mf = JSV*(10*METH +
+  MITER)</code>, where
+</p>
+
+<dl>
+<dt>JSV = SIGN(mf)</dt><dd><p>indicates the Jacobian-saving strategy: JSV =
+1 means a copy of the Jacobian is saved for reuse in the corrector
+iteration algorithm. JSV = -1 means a copy of the Jacobian is not
+saved.
+</p>
+</dd>
+<dt>METH</dt><dd><p>indicates the basic linear multistep method: METH = 1
+means the implicit Adams method. METH = 2 means the method based
+on backward differentiation formulas (BDF-s).
+</p>
+</dd>
+<dt>MITER</dt><dd><p>indicates the corrector iteration method: MITER = 0
+means functional iteration (no Jacobian matrix is involved).
+</p>
+<p>MITER = 1 means chord iteration with a user-supplied full (NEQ by
+NEQ) Jacobian.
+</p>
+<p>MITER = 2 means chord iteration with an internally generated
+(difference quotient) full Jacobian (using NEQ extra calls to
+<code>func</code> per df/dy value).
+</p>
+<p>MITER = 3 means chord iteration with an internally generated
+diagonal Jacobian approximation (using 1 extra call to <code>func</code>
+per df/dy evaluation).
+</p>
+<p>MITER = 4 means chord iteration with a user-supplied banded
+Jacobian.
+</p>
+<p>MITER = 5 means chord iteration with an internally generated
+banded Jacobian (using ML+MU+1 extra calls to <code>func</code> per
+df/dy evaluation).
+</p>
+</dd>
+</dl>
+
+<p>If MITER = 1 or 4, the user must supply a subroutine <code>jacfunc</code>.
+</p>
+<p>The example for integrator <code><a href="../../deSolve/help/lsode.html">lsode</a></code> demonstrates how to
+specify both a banded and full Jacobian.
+</p>
+<p>The input parameters <code>rtol</code>, and <code>atol</code> determine the
+<b>error control</b> performed by the solver.  If the request for
+precision exceeds the capabilities of the machine, vode will return an
+error code. See <code><a href="../../deSolve/help/lsoda.html">lsoda</a></code> for details.
+</p>
+<p>The diagnostics of the integration can be printed to screen
+by calling <code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code>. If <code>verbose</code> = <code>TRUE</code>,
+the diagnostics will written to the screen at the end of the integration.
+</p>
+<p>See vignette(&quot;deSolve&quot;) for an explanation of each element in the vectors
+containing the diagnostic properties and how to directly access them.
+</p>
+<p><b>Models</b> may be defined in compiled C or FORTRAN code, as well as
+in an R-function. See package vignette <code>"compiledCode"</code> for details.
+</p>
+<p>More information about models defined in compiled code is in the package
+vignette (&quot;compiledCode&quot;); information about linking forcing functions
+to compiled code is in <a href="../../deSolve/help/forcings.html">forcings</a>.
+</p>
+<p>Examples in both C and FORTRAN are in the &lsquo;<span class="file">dynload</span>&rsquo; subdirectory
+of the <code>deSolve</code> package directory.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A matrix of class <code>deSolve</code> with up to as many rows as elements
+in <code>times</code> and as many columns as elements in <code>y</code> plus the number of &quot;global&quot;
+values returned in the next elements of the return from <code>func</code>,
+plus and additional column for the time value.  There will be a row
+for each element in <code>times</code> unless the FORTRAN routine &lsquo;vode&rsquo;
+returns with an unrecoverable error. If <code>y</code> has a names
+attribute, it will be used to label the columns of the output value.
+</p>
+
+
+<h3>Note</h3>
+
+<p>From version 1.10.4, the default of <code>atol</code> was changed from 1e-8 to 1e-6,
+to be consistent with the other solvers.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Karline Soetaert &lt;karline.soetaert@nioz.nl&gt;</p>
+
+
+<h3>References</h3>
+
+<p>P. N. Brown, G. D. Byrne, and A. C. Hindmarsh, 1989.  VODE: A Variable
+Coefficient ODE Solver, SIAM J. Sci. Stat. Comput., 10, pp. 1038-1051.
+<br /> Also, LLNL Report UCRL-98412, June 1988.
+</p>
+<p>G. D. Byrne and A. C. Hindmarsh, 1975. A Polyalgorithm for the
+Numerical Solution of Ordinary Differential Equations.  ACM
+Trans. Math. Software, 1, pp. 71-96.
+</p>
+<p>A. C. Hindmarsh and G. D. Byrne, 1977. EPISODE: An Effective Package
+for the Integration of Systems of Ordinary Differential
+Equations. LLNL Report UCID-30112, Rev. 1.
+</p>
+<p>G. D. Byrne and A. C. Hindmarsh, 1976. EPISODEB: An Experimental
+Package for the Integration of Systems of Ordinary Differential
+Equations with Banded Jacobians. LLNL Report UCID-30132, April 1976.
+</p>
+<p>A. C. Hindmarsh, 1983. ODEPACK, a Systematized Collection of ODE
+Solvers. in Scientific Computing, R. S. Stepleman et al., eds.,
+North-Holland, Amsterdam, pp. 55-64.
+</p>
+<p>K. R. Jackson and R. Sacks-Davis, 1980. An Alternative Implementation
+of Variable Step-Size Multistep Formulas for Stiff ODEs.  ACM
+Trans. Math. Software, 6, pp. 295-318.
+</p>
+<p>Netlib: <a href="http://www.netlib.org">http://www.netlib.org</a>
+</p>
+
+
+<h3>See Also</h3>
+
+
+<ul>
+<li> <p><code><a href="../../deSolve/help/rk.html">rk</a></code>, </p>
+</li>
+<li> <p><code><a href="../../deSolve/help/rk4.html">rk4</a></code> and <code><a href="../../deSolve/help/euler.html">euler</a></code> for
+Runge-Kutta integrators.
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>, <code><a href="../../deSolve/help/lsode.html">lsode</a></code>,
+<code><a href="../../deSolve/help/lsodes.html">lsodes</a></code>, <code><a href="../../deSolve/help/lsodar.html">lsodar</a></code>,
+<code><a href="../../deSolve/help/daspk.html">daspk</a></code> for other solvers of the Livermore family,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.html">ode</a></code> for a general interface to most of the ODE solvers,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.band.html">ode.band</a></code> for solving models with a banded
+Jacobian,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.1D.html">ode.1D</a></code> for integrating 1-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.2D.html">ode.2D</a></code> for integrating 2-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.3D.html">ode.3D</a></code> for integrating 3-D models,
+</p>
+</li></ul>
+
+<p><code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code> to print diagnostic messages.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## =======================================================================
+## ex. 1
+## The famous Lorenz equations: chaos in the earth's atmosphere
+## Lorenz 1963. J. Atmos. Sci. 20, 130-141.
+## =======================================================================
+
+chaos &lt;- function(t, state, parameters) {
+  with(as.list(c(state)), {
+
+    dx     &lt;- -8/3 * x + y * z
+    dy     &lt;- -10 * (y - z)
+    dz     &lt;- -x * y + 28 * y - z
+
+    list(c(dx, dy, dz))
+  })
+}
+
+state &lt;- c(x = 1, y = 1, z = 1)
+times &lt;- seq(0, 100, 0.01)
+
+out   &lt;- vode(state, times, chaos, 0)
+
+plot(out, type = "l")   # all versus time
+plot(out[,"x"], out[,"y"], type = "l", main = "Lorenz butterfly",
+  xlab = "x", ylab = "y")
+
+
+## =======================================================================
+## ex. 2
+## SCOC model, in FORTRAN  - to see the FORTRAN code:
+## browseURL(paste(system.file(package="deSolve"),
+##                             "/doc/examples/dynload/scoc.f",sep=""))
+## example from Soetaert and Herman, 2009, chapter 3. (simplified)
+## =======================================================================
+
+## Forcing function data
+Flux &lt;- matrix(ncol = 2, byrow = TRUE, data = c(
+  1,  0.654, 11, 0.167,  21, 0.060, 41, 0.070, 73, 0.277, 83, 0.186,
+  93, 0.140,103, 0.255, 113, 0.231,123, 0.309,133, 1.127,143, 1.923,
+  153,1.091,163, 1.001, 173, 1.691,183, 1.404,194, 1.226,204, 0.767,
+  214,0.893,224, 0.737, 234, 0.772,244, 0.726,254, 0.624,264, 0.439,
+  274,0.168,284, 0.280, 294, 0.202,304, 0.193,315, 0.286,325, 0.599,
+  335,1.889,345, 0.996, 355, 0.681,365, 1.135))
+
+parms &lt;- c(k = 0.01)
+
+meanDepo &lt;- mean(approx(Flux[,1], Flux[,2], xout = seq(1, 365, by = 1))$y)
+
+Yini &lt;- c(y = as.double(meanDepo/parms))
+
+times &lt;- 1:365
+out &lt;- vode(Yini, times, func = "scocder",
+    parms = parms, dllname = "deSolve",
+    initforc = "scocforc", forcings = Flux,
+    initfunc = "scocpar", nout = 2,
+    outnames = c("Mineralisation", "Depo"))
+
+matplot(out[,1], out[,c("Depo", "Mineralisation")], 
+        type = "l", col = c("red", "blue"), xlab = "time", ylab = "Depo")
+
+## Constant interpolation of forcing function - left side of interval
+fcontrol &lt;- list(method = "constant")
+
+out2 &lt;- vode(Yini, times, func = "scocder",
+    parms = parms, dllname = "deSolve",
+    initforc = "scocforc",  forcings = Flux, fcontrol = fcontrol,
+    initfunc = "scocpar", nout = 2,
+    outnames = c("Mineralisation", "Depo"))
+matplot(out2[,1], out2[,c("Depo", "Mineralisation")], 
+        type = "l", col = c("red", "blue"), xlab = "time", ylab = "Depo")
+
+## Constant interpolation of forcing function - middle of interval
+fcontrol &lt;- list(method = "constant", f = 0.5)
+
+out3 &lt;- vode(Yini, times, func = "scocder",
+    parms = parms, dllname = "deSolve",
+    initforc = "scocforc",  forcings = Flux, fcontrol = fcontrol,
+    initfunc = "scocpar", nout = 2,
+    outnames = c("Mineralisation", "Depo"))
+
+matplot(out3[,1], out3[,c("Depo", "Mineralisation")], 
+        type = "l", col = c("red", "blue"), xlab = "time", ylab = "Depo")
+
+plot(out, out2, out3)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

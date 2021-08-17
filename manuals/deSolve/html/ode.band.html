@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver for Ordinary Differential Equations; Assumes a Banded...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for ode.band {deSolve}"><tr><td>ode.band {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Solver for Ordinary Differential Equations; Assumes a Banded
+Jacobian
+</h2>
+
+<h3>Description</h3>
+
+<p>Solves a system of ordinary differential equations.
+</p>
+<p>Assumes a banded Jacobian matrix, but does not rearrange the state
+variables (in contrast to ode.1D).  Suitable for 1-D models that
+include transport only between adjacent layers and that model only one
+species.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>ode.band(y, times, func, parms, nspec = NULL, dimens = NULL, 
+  bandup = nspec, banddown = nspec, method = "lsode", names = NULL, 
+  ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y </code></td>
+<td>
+<p>the initial (state) values for the ODE system, a vector. If
+<code>y</code> has a name attribute, the names will be used to label the
+output matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>times </code></td>
+<td>
+<p>time sequence for which output is wanted; the first
+value of <code>times</code> must be the initial time.
+</p>
+</td></tr>
+<tr valign="top"><td><code>func </code></td>
+<td>
+<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+derivatives in the ODE system (the model definition) at time
+<code>t</code>, or a character string giving the name of a compiled
+function in a dynamically loaded shared library.
+</p>
+<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<code>func &lt;- function(t, y, parms, ...)</code>.  <code>t</code> is the current time
+point in the integration, <code>y</code> is the current estimate of the
+variables in the ODE system.  If the initial values <code>y</code> has a
+<code>names</code> attribute, the names will be available inside <code>func</code>.
+<code>parms</code> is a vector or list of parameters; <code>...</code> (optional) are
+any other arguments passed to the function.
+</p>
+<p>The return value of <code>func</code> should be a list, whose first
+element is a vector containing the derivatives of <code>y</code> with
+respect to <code>time</code>, and whose next elements are global values
+that are required at each point in <code>times</code>.The derivatives
+must be specified in the <b>same order</b> as the state variables <code>y</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>parms </code></td>
+<td>
+<p>parameters passed to <code>func</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nspec </code></td>
+<td>
+<p>the number of *species* (components) in the model.
+</p>
+</td></tr>
+<tr valign="top"><td><code>dimens</code></td>
+<td>
+<p>the number of <b>boxes</b> in the model. If <code>NULL</code>, then
+<code>nspec</code> should be specified.
+</p>
+</td></tr>
+<tr valign="top"><td><code>bandup </code></td>
+<td>
+<p>the number of nonzero bands above the Jacobian
+diagonal.
+</p>
+</td></tr>
+<tr valign="top"><td><code>banddown </code></td>
+<td>
+<p>the number of nonzero bands below the Jacobian
+diagonal.
+</p>
+</td></tr>
+<tr valign="top"><td><code>method </code></td>
+<td>
+<p>the integrator to use, one of <code>"vode"</code>,
+<code>"lsode"</code>, <code>"lsoda"</code>, <code>"lsodar"</code>, <code>"radau"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>names </code></td>
+<td>
+<p>the names of the components; used for plotting.
+</p>
+</td></tr>
+<tr valign="top"><td><code>... </code></td>
+<td>
+<p>additional arguments passed to the integrator.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This is the method of choice for single-species 1-D reactive transport
+models.
+</p>
+<p>For multi-species 1-D models, this method can only be used if the
+state variables are arranged per box, per species (e.g. A[1], B[1],
+A[2], B[2], A[3], B[3], ... for species A, B).  By default, the
+<b>model</b> function will have the species arranged as A[1], A[2],
+A[3], ... B[1], B[2], B[3], ...  in this case, use <code>ode.1D</code>.
+</p>
+<p>See the selected integrator for the additional options.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A matrix of class <code>deSolve</code> with up to as many rows as elements in <code>times</code> and as
+many columns as elements in <code>y</code> plus the number of &quot;global&quot;
+values returned in the second element of the return from <code>func</code>,
+plus an additional column (the first) for the time value.  There will
+be one row for each element in <code>times</code> unless the integrator
+returns with an unrecoverable error.  If <code>y</code> has a names
+attribute, it will be used to label the columns of the output value.
+</p>
+<p>The output will have the attributes <code>istate</code> and <code>rstate</code>,
+two vectors with several elements. See the help for the selected
+integrator for details.  the first element of istate returns the
+conditions under which the last call to the integrator returned. Normal is
+<code>istate = 2</code>.  If <code>verbose = TRUE</code>, the settings of
+<code>istate</code> and <code>rstate</code> will be written to the screen.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Karline Soetaert &lt;karline.soetaert@nioz.nl&gt;</p>
+
+
+<h3>See Also</h3>
+
+
+<ul>
+<li> <p><code><a href="../../deSolve/help/ode.html">ode</a></code> for a general interface to most of the ODE solvers,
+</p>
+</li>
+<li>  <p><code><a href="../../deSolve/help/ode.1D.html">ode.1D</a></code> for integrating 1-D models
+</p>
+</li>
+<li>  <p><code><a href="../../deSolve/help/ode.2D.html">ode.2D</a></code> for integrating 2-D models
+</p>
+</li>
+<li>  <p><code><a href="../../deSolve/help/ode.3D.html">ode.3D</a></code> for integrating 3-D models
+</p>
+</li>
+<li>  <p><code><a href="../../deSolve/help/lsode.html">lsode</a></code>, <code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>, <code><a href="../../deSolve/help/lsodar.html">lsodar</a></code>,
+<code><a href="../../deSolve/help/vode.html">vode</a></code> for the integration options.
+</p>
+</li></ul>
+
+<p><code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code> to print diagnostic messages.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+## =======================================================================
+## The Aphid model from Soetaert and Herman, 2009.
+## A practical guide to ecological modelling.
+## Using R as a simulation platform. Springer.
+## =======================================================================
+
+## 1-D diffusion model
+
+## ================
+## Model equations
+## ================
+Aphid &lt;- function(t, APHIDS, parameters) {
+  deltax  &lt;- c (0.5*delx, rep(delx, numboxes-1), 0.5*delx)
+  Flux    &lt;- -D*diff(c(0, APHIDS, 0))/deltax
+  dAPHIDS &lt;- -diff(Flux)/delx + APHIDS*r
+
+  list(dAPHIDS)   # the output
+}
+  
+## ==================
+## Model application
+## ==================
+
+## the model parameters:
+D         &lt;- 0.3    # m2/day  diffusion rate
+r         &lt;- 0.01   # /day    net growth rate
+delx      &lt;- 1      # m       thickness of boxes
+numboxes  &lt;- 60 
+
+## distance of boxes on plant, m, 1 m intervals
+Distance  &lt;- seq(from = 0.5, by = delx, length.out = numboxes)
+
+## Initial conditions, ind/m2
+## aphids present only on two central boxes
+APHIDS        &lt;- rep(0, times = numboxes)
+APHIDS[30:31] &lt;- 1
+state         &lt;- c(APHIDS = APHIDS)      # initialise state variables 
+                  
+## RUNNING the model:
+times &lt;- seq(0, 200, by = 1)   # output wanted at these time intervals
+out   &lt;- ode.band(state, times, Aphid, parms = 0, 
+                  nspec = 1, names = "Aphid")
+
+## ================
+## Plotting output
+## ================
+image(out, grid = Distance, method = "filled.contour", 
+      xlab = "time, days", ylab = "Distance on plant, m",
+      main = "Aphid density on a row of plants")
+
+matplot.1D(out, grid = Distance, type = "l", 
+   subset = time %in% seq(0, 200, by = 10))
+
+# add an observed dataset to 1-D plot (make sure to use correct name):
+data &lt;- cbind(dist  = c(0,10, 20,  30,  40, 50, 60), 
+              Aphid = c(0,0.1,0.25,0.5,0.25,0.1,0))
+
+matplot.1D(out, grid = Distance, type = "l", 
+   subset = time %in% seq(0, 200, by = 10), 
+   obs = data, obspar = list(pch = 18, cex = 2, col="red"))
+## Not run: 
+plot.1D(out, grid = Distance, type = "l")
+
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

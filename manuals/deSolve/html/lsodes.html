@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver for Ordinary Differential Equations (ODE) With Sparse...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for lsodes {deSolve}"><tr><td>lsodes {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Solver for Ordinary Differential Equations (ODE) With
+Sparse Jacobian
+</h2>
+
+<h3>Description</h3>
+
+<p>Solves the initial value problem for stiff systems of ordinary
+differential equations (ODE) in the form: </p>
+<p style="text-align: center;"><i>dy/dt = f(t,y)</i></p>
+<p> and
+where the Jacobian matrix df/dy has an arbitrary sparse structure.
+</p>
+<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function <code>lsodes</code> provides an interface to the FORTRAN ODE
+solver of the same name, written by Alan C. Hindmarsh and Andrew
+H. Sherman.
+</p>
+<p>The system of ODE's is written as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function or be defined in
+compiled code that has been dynamically loaded.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+lsodes(y, times, func, parms, rtol = 1e-6, atol = 1e-6, 
+  jacvec = NULL, sparsetype = "sparseint", nnz = NULL,
+  inz = NULL,  rootfunc = NULL,
+  verbose = FALSE, nroot = 0, tcrit = NULL, hmin = 0,
+  hmax = NULL, hini = 0, ynames = TRUE, maxord = NULL,
+  maxsteps = 5000, lrw = NULL, liw = NULL, dllname = NULL,
+  initfunc = dllname, initpar = parms, rpar = NULL,
+  ipar = NULL, nout = 0, outnames = NULL, forcings=NULL,
+  initforc = NULL, fcontrol=NULL, events=NULL, lags = NULL, 
+  ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y </code></td>
+<td>
+<p>the initial (state) values for the ODE system. If <code>y</code>
+has a name attribute, the names will be used to label the output
+matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>times </code></td>
+<td>
+<p>time sequence for which output is wanted; the first
+value of <code>times</code> must be the initial time; if only one step is
+to be taken; set <code>times</code> = <code>NULL</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>func </code></td>
+<td>
+<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+derivatives in the ODE system (the <em>model definition</em>) at time
+<code>t</code>, or a character string giving the name of a compiled
+function in a dynamically loaded shared library.
+</p>
+<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current
+time point in the integration, <code>y</code> is the current estimate of
+the variables in the ODE system.  If the initial values <code>y</code> has
+a <code>names</code> attribute, the names will be available inside <code>func</code>.
+<code>parms</code> is a vector or list of parameters; ... (optional) are
+any other arguments passed to the function.
+</p>
+<p>The return value of <code>func</code> should be a list, whose first
+element is a vector containing the derivatives of <code>y</code> with
+respect to <code>time</code>, and whose next elements are global values
+that are required at each point in <code>times</code>.  The derivatives
+must be specified in the <b>same order</b> as the state variables <code>y</code>.
+</p>
+<p>If <code>func</code> is
+a string, then <code>dllname</code> must give the name of the shared
+library (without extension) which must be loaded before
+<code>lsodes()</code> is called. See package vignette <code>"compiledCode"</code>
+for more details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>parms </code></td>
+<td>
+<p>vector or list of parameters used in <code>func</code> or
+<code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>rtol </code></td>
+<td>
+<p>relative error tolerance, either a scalar or an array as
+long as <code>y</code>.  See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>atol </code></td>
+<td>
+<p>absolute error tolerance, either a scalar or an array as
+long as <code>y</code>.  See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>jacvec </code></td>
+<td>
+<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that computes a
+column of the Jacobian of the system of differential equations
+<i>dydot(i)/dy(j)</i>, 
+or a string giving the name of a function or
+subroutine in &lsquo;<span class="file">dllname</span>&rsquo; that computes the column of the
+Jacobian (see vignette <code>"compiledCode"</code> for more about this option).
+</p>
+<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>
+calling sequence for <code>jacvec</code> is identical to that of
+<code>func</code>, but with extra parameter <code>j</code>, denoting the column
+number.  Thus, <code>jacvec</code> should be called as: <code>jacvec =
+    func(t, y, j, parms)</code> and <code>jacvec</code> should return a vector
+containing column <code>j</code> of the Jacobian, i.e.  its i-th value is
+<i>dydot(i)/dy(j)</i>.
+If this function is absent, <code>lsodes</code> will
+generate the Jacobian by differences.
+</p>
+</td></tr>
+<tr valign="top"><td><code>sparsetype </code></td>
+<td>
+<p>the sparsity structure of the Jacobian, one of
+&quot;sparseint&quot; or &quot;sparseusr&quot;, &quot;sparsejan&quot;, ..., 
+The sparsity can be estimated internally by lsodes (first option)
+or given by the user (last two). See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nnz </code></td>
+<td>
+<p>the number of nonzero elements in the sparse Jacobian (if
+this is unknown, use an estimate).
+</p>
+</td></tr>
+<tr valign="top"><td><code>inz </code></td>
+<td>
+<p>if <code>sparsetype</code> equal to &quot;sparseusr&quot;, a two-columned matrix
+with the (row, column) indices to the nonzero elements in the sparse
+Jacobian. If <code>sparsetype</code> = &quot;sparsejan&quot;, a vector with the elements 
+ian followed by he elements jan as used in the lsodes code. See details.
+In all other cases, ignored.
+</p>
+</td></tr>
+<tr valign="top"><td><code>rootfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that computes the
+function whose root has to be estimated or a string giving the name
+of a function or subroutine in &lsquo;<span class="file">dllname</span>&rsquo; that computes the root
+function.  The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> calling sequence for <code>rootfunc</code> is identical
+to that of <code>func</code>.  <code>rootfunc</code> should return a vector with
+the function values whose root is sought.
+</p>
+</td></tr>
+<tr valign="top"><td><code>verbose </code></td>
+<td>
+<p>if <code>TRUE</code>: full output to the screen, e.g. will
+print the <code>diagnostiscs</code> of the integration - see details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nroot </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo;  is specified: the number of
+constraint functions whose roots are desired during the integration;
+if <code>rootfunc</code> is an R-function, the solver estimates the number
+of roots.
+</p>
+</td></tr>
+<tr valign="top"><td><code>tcrit </code></td>
+<td>
+<p>if not <code>NULL</code>, then <code>lsodes</code> cannot integrate
+past <code>tcrit</code>. The FORTRAN routine <code>lsodes</code> overshoots its
+targets (times points in the vector <code>times</code>), and interpolates
+values for the desired time points.  If there is a time beyond which
+integration should not proceed (perhaps because of a singularity),
+that should be provided in <code>tcrit</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>hmin </code></td>
+<td>
+<p>an optional minimum value of the integration stepsize. In
+special situations this parameter may speed up computations with the
+cost of precision. Don't use <code>hmin</code> if you don't know why!
+</p>
+</td></tr>
+<tr valign="top"><td><code>hmax </code></td>
+<td>
+<p>an optional maximum value of the integration stepsize. If
+not specified, <code>hmax</code> is set to the largest difference in
+<code>times</code>, to avoid that the simulation possibly ignores
+short-term events. If 0, no maximal size is specified.
+</p>
+</td></tr>
+<tr valign="top"><td><code>hini </code></td>
+<td>
+<p>initial step size to be attempted; if 0, the initial step
+size is determined by the solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ynames </code></td>
+<td>
+<p>logical, if <code>FALSE</code> names of state variables are
+not passed to function <code>func</code>; this may speed up the simulation
+especially for multi-D models.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxord </code></td>
+<td>
+<p>the maximum order to be allowed. <code>NULL</code> uses the
+default, i.e. order 12 if implicit Adams method (meth = 1), order 5
+if BDF method (meth = 2). Reduce maxord to save storage space.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxsteps </code></td>
+<td>
+<p>maximal number of steps per output interval taken by the
+solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>lrw </code></td>
+<td>
+<p>the length of the real work array rwork; due to the
+sparsicity, this cannot be readily predicted. If <code>NULL</code>, a
+guess will be made, and if not sufficient, <code>lsodes</code> will return
+with a message indicating the size of rwork actually required.
+Therefore, some experimentation may be necessary to estimate the
+value of <code>lrw</code>.
+</p>
+<p>For instance, if you get the error:
+</p>
+<pre> 
+DLSODES- RWORK length is insufficient to proceed.                               
+  Length needed is .ge. LENRW (=I1), exceeds LRW (=I2)                    
+  In above message,  I1 =     27627   I2 =     25932 
+</pre>    
+<p>set <code>lrw</code> equal to 27627 or a higher value
+</p>
+</td></tr>
+<tr valign="top"><td><code>liw </code></td>
+<td>
+<p>the length of the integer work array iwork; due to the
+sparsicity, this cannot be readily predicted. If <code>NULL</code>, a guess will
+be made, and if not sufficient, <code>lsodes</code> will return with a
+message indicating the size of iwork actually required.  Therefore,
+some experimentation may be necessary to estimate the value of
+<code>liw</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>dllname </code></td>
+<td>
+<p>a string giving the name of the shared library
+(without extension) that contains all the compiled function or
+subroutine definitions refered to in <code>func</code> and
+<code>jacfunc</code>. See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the initialisation function
+(which initialises values of parameters), as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
+initialisation function <code>initfunc</code> is in the dll: the
+parameters passed to the initialiser, to initialise the common
+blocks (FORTRAN) or global variables (C, C++).
+</p>
+</td></tr>
+<tr valign="top"><td><code>rpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+double precision values passed to the dll-functions whose names are
+specified by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ipar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+integer values passed to the dll-functions whose names are specified
+by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nout </code></td>
+<td>
+<p>only used if <code>dllname</code> is specified and the model is
+defined in compiled code: the number of output variables calculated
+in the compiled function <code>func</code>, present in the shared
+library. Note: it is not automatically checked whether this is
+indeed the number of output variables calculated in the dll - you have
+to perform this check in the code. See package vignette
+<code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>outnames </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
+<code>nout</code> &gt; 0: the names of output variables calculated in the
+compiled function <code>func</code>, present in the shared library.
+These names will be used to label the output matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>forcings </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
+the forcing function data sets, each present as a two-columned matrix,
+with (time,value); interpolation outside the interval
+[min(<code>times</code>), max(<code>times</code>)] is done by taking the value at
+the closest data extreme.
+</p>
+<p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initforc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the forcing function
+initialisation function, as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. It MUST be present if <code>forcings</code> has been given a
+value.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>fcontrol </code></td>
+<td>
+<p>A list of control parameters for the forcing functions.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or vignette <code>compiledCode</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>events </code></td>
+<td>
+<p>A matrix or data frame that specifies events, i.e. when the value of a 
+state variable is suddenly changed. See <a href="../../deSolve/help/events.html">events</a> for more information.
+</p>
+</td></tr>
+<tr valign="top"><td><code>lags </code></td>
+<td>
+<p>A list that specifies timelags, i.e. the number of steps 
+that has to be kept. To be used for delay differential equations. 
+See <a href="../../deSolve/help/timelags.html">timelags</a>, <a href="../../deSolve/help/dede.html">dede</a> for more information.
+</p>
+</td></tr>
+<tr valign="top"><td><code>... </code></td>
+<td>
+<p>additional arguments passed to <code>func</code> and
+<code>jacfunc</code> allowing this to be a generic function.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The work is done by the FORTRAN subroutine <code>lsodes</code>, whose
+documentation should be consulted for details (it is included as
+comments in the source file &lsquo;<span class="file">src/opkdmain.f</span>&rsquo;). The implementation
+is based on the November, 2003 version of lsodes, from Netlib.
+</p>
+<p><code>lsodes</code> is applied for stiff problems, where the Jacobian has a
+sparse structure.
+</p>
+<p>There are several choices depending on whether <code>jacvec</code>
+is specified and depending on the setting of <code>sparsetype</code>.
+</p>
+<p>If function <code>jacvec</code> is present, then it should return the j-th
+column of the Jacobian matrix.
+</p>
+<p>There are also several choices for the sparsity specification, selected by
+argument <code>sparsetype</code>.
+</p>
+
+<ul>
+<li> <p><code>sparsetype</code> = <code>"sparseint"</code>.  The sparsity is estimated
+by the solver, based on numerical differences.
+In this case, it is advisable to provide an estimate of the number
+of non-zero elements in the Jacobian (<code>nnz</code>).
+This value can be approximate; upon return the number of nonzero
+elements actually required will be known (1st element of attribute
+<code>dims</code>).
+In this case, <code>inz</code> need not be specified. 
+</p>
+</li>
+<li> <p><code>sparsetype</code> = <code>"sparseusr"</code>. The sparsity is determined by
+the user. In this case, <code>inz</code> should be a <code>matrix</code>, containing indices 
+(row, column) to the  nonzero elements in the Jacobian matrix.
+The number of nonzeros <code>nnz</code> will be set equal to the number of rows
+in <code>inz</code>.
+</p>
+</li>
+<li> <p><code>sparsetype</code> = <code>"sparsejan"</code>. The sparsity is also determined by
+the user.
+In this case, <code>inz</code> should be a <code>vector</code>, containting the <code>ian</code> and 
+<code>jan</code> elements of the sparse storage format, as used in the sparse solver.
+Elements of <code>ian</code> should be the first <code>n+1</code> elements of this vector, and 
+contain the starting locations in <code>jan</code> of columns 1.. n. 
+<code>jan</code> contains the row indices of the nonzero locations of           
+the Jacobian, reading in columnwise order.
+The number of nonzeros <code>nnz</code> will be set equal to the length of <code>inz</code> - (n+1).
+</p>
+</li>
+<li> <p><code>sparsetype</code> = <code>"1D"</code>, <code>"2D"</code>, <code>"3D"</code>. 
+The sparsity is estimated by the solver, based on numerical differences.
+Assumes finite differences in a 1D, 2D or 3D regular grid - used by 
+functions <code>ode.1D</code>, <code>ode.2D</code>, <code>ode.3D</code>.
+Similar are <code>"2Dmap"</code>, and <code>"3Dmap"</code>, which also include a 
+mapping variable (passed in nnz). 
+</p>
+</li></ul>
+
+<p>The input parameters <code>rtol</code>, and <code>atol</code> determine the
+<b>error control</b> performed by the solver.  See <code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>
+for details.
+</p>
+<p>The diagnostics of the integration can be printed to screen
+by calling <code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code>. If <code>verbose</code> = <code>TRUE</code>,
+the diagnostics will written to the screen at the end of the integration.
+</p>
+<p>See vignette(&quot;deSolve&quot;) for an explanation of each element in the vectors
+containing the diagnostic properties and how to directly access them.
+</p>
+<p><b>Models</b> may be defined in compiled C or FORTRAN code, as well as
+in an R-function. See package vignette <code>"compiledCode"</code> for details.
+</p>
+<p>More information about models defined in compiled code is in the package
+vignette (&quot;compiledCode&quot;); information about linking forcing functions
+to compiled code is in <a href="../../deSolve/help/forcings.html">forcings</a>.
+</p>
+<p>Examples in both C and FORTRAN are in the &lsquo;<span class="file">doc/examples/dynload</span>&rsquo; subdirectory
+of the <code>deSolve</code> package directory.
+</p>
+<p><code>lsodes</code> can find the root of at least one of a set of constraint functions
+<code>rootfunc</code> of the independent and dependent variables.  It then returns the
+solution at the root if that occurs sooner than the specified stop
+condition, and otherwise returns the solution according the specified
+stop condition.
+</p>
+<p>Caution:  Because of numerical errors in the function
+<code>rootfun</code> due to roundoff and integration error, <code>lsodes</code> may
+return false roots, or return the same root at two or more
+nearly equal values of <code>time</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A matrix of class <code>deSolve</code> with up to as many rows as elements
+in <code>times</code> and as many columns as elements in <code>y</code> plus the number of &quot;global&quot;
+values returned in the next elements of the return from <code>func</code>,
+plus and additional column for the time value.  There will be a row
+for each element in <code>times</code> unless the FORTRAN routine &lsquo;lsodes&rsquo;
+returns with an unrecoverable error. If <code>y</code> has a names
+attribute, it will be used to label the columns of the output value.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Karline Soetaert &lt;karline.soetaert@nioz.nl&gt;</p>
+
+
+<h3>References</h3>
+
+<p>Alan C. Hindmarsh, ODEPACK, A Systematized Collection of ODE Solvers,
+in Scientific Computing, R. S. Stepleman et al. (Eds.), North-Holland,
+Amsterdam, 1983, pp. 55-64.
+</p>
+<p>S. C. Eisenstat, M. C. Gursky, M. H. Schultz, and A. H. Sherman, Yale
+Sparse Matrix Package: I. The Symmetric Codes,
+Int. J. Num. Meth. Eng., 18 (1982), pp. 1145-1151.
+</p>
+<p>S. C. Eisenstat, M. C. Gursky, M. H. Schultz, and A. H. Sherman, Yale
+Sparse Matrix Package: II. The Nonsymmetric Codes, Research Report
+No. 114, Dept. of Computer Sciences, Yale University, 1977.
+</p>
+
+
+<h3>See Also</h3>
+
+
+<ul>
+<li> <p><code><a href="../../deSolve/help/rk.html">rk</a></code>, </p>
+</li>
+<li> <p><code><a href="../../deSolve/help/rk4.html">rk4</a></code> and <code><a href="../../deSolve/help/euler.html">euler</a></code> for
+Runge-Kutta integrators.
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>, <code><a href="../../deSolve/help/lsode.html">lsode</a></code>,
+<code><a href="../../deSolve/help/lsodar.html">lsodar</a></code>, <code><a href="../../deSolve/help/vode.html">vode</a></code>,
+<code><a href="../../deSolve/help/daspk.html">daspk</a></code> for other solvers of the Livermore family,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.html">ode</a></code> for a general interface to most of the ODE solvers,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.band.html">ode.band</a></code> for solving models with a banded
+Jacobian,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.1D.html">ode.1D</a></code> for integrating 1-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.2D.html">ode.2D</a></code> for integrating 2-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.3D.html">ode.3D</a></code> for integrating 3-D models,
+</p>
+</li></ul>
+
+<p><code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code> to print diagnostic messages.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Various ways to solve the same model.
+
+## =======================================================================
+## The example from lsodes source code
+## A chemical model
+## =======================================================================
+
+n  &lt;- 12
+y  &lt;- rep(1, n)
+dy &lt;- rep(0, n)
+
+times &lt;- c(0, 0.1*(10^(0:4)))
+
+rtol &lt;- 1.0e-4
+atol &lt;- 1.0e-6
+
+parms &lt;- c(rk1  = 0.1,   rk2 = 10.0, rk3 = 50.0,  rk4 = 2.5,  rk5 = 0.1,
+           rk6  = 10.0,  rk7 = 50.0, rk8 = 2.5,   rk9 = 50.0, rk10 = 5.0,
+           rk11 = 50.0, rk12 = 50.0,rk13 = 50.0, rk14 = 30.0,
+           rk15 = 100.0,rk16 = 2.5, rk17 = 100.0,rk18 = 2.5,
+           rk19 = 50.0, rk20 = 50.0)
+
+#
+chemistry &lt;- function (time, Y, pars) {
+  with (as.list(pars), {
+    dy[1] &lt;- -rk1 *Y[1]
+    dy[2] &lt;-  rk1 *Y[1]        + rk11*rk14*Y[4]  + rk19*rk14*Y[5]  -
+              rk3 *Y[2]*Y[3]   - rk15*Y[2]*Y[12] - rk2*Y[2]
+    dy[3] &lt;-  rk2 *Y[2]        - rk5 *Y[3]       - rk3*Y[2]*Y[3]   -
+              rk7*Y[10]*Y[3]   + rk11*rk14*Y[4]   + rk12*rk14*Y[6]
+    dy[4] &lt;-  rk3 *Y[2]*Y[3]   - rk11*rk14*Y[4]  - rk4*Y[4]
+    dy[5] &lt;-  rk15*Y[2]*Y[12]  - rk19*rk14*Y[5]  - rk16*Y[5]
+    dy[6] &lt;-  rk7 *Y[10]*Y[3]  - rk12*rk14*Y[6]  - rk8*Y[6]
+    dy[7] &lt;-  rk17*Y[10]*Y[12] - rk20*rk14*Y[7]  - rk18*Y[7]
+    dy[8] &lt;-  rk9 *Y[10]       - rk13*rk14*Y[8]  - rk10*Y[8]
+    dy[9] &lt;-  rk4 *Y[4]        + rk16*Y[5]       + rk8*Y[6]         +
+              rk18*Y[7]
+    dy[10] &lt;- rk5 *Y[3]        + rk12*rk14*Y[6]  + rk20*rk14*Y[7]   +
+              rk13*rk14*Y[8]   - rk7 *Y[10]*Y[3] - rk17*Y[10]*Y[12] -
+              rk6 *Y[10]       - rk9*Y[10]
+    dy[11] &lt;- rk10*Y[8]
+    dy[12] &lt;- rk6 *Y[10]       + rk19*rk14*Y[5]  + rk20*rk14*Y[7]   -
+              rk15*Y[2]*Y[12]  - rk17*Y[10]*Y[12]
+    return(list(dy))
+  })
+}
+
+## =======================================================================
+## application 1. lsodes estimates the structure of the Jacobian
+##                and calculates the Jacobian by differences
+## =======================================================================
+out &lt;- lsodes(func = chemistry, y = y, parms = parms, times = times,
+              atol = atol, rtol = rtol, verbose = TRUE)
+
+## =======================================================================
+## application 2. the structure of the Jacobian is input
+##                lsodes calculates the Jacobian by differences
+##                this is not so efficient...
+## =======================================================================
+
+## elements of Jacobian that are not zero
+nonzero &lt;-  matrix(nc = 2, byrow = TRUE, data = c(
+  1, 1,   2, 1,    # influence of sp1 on rate of change of others
+  2, 2,   3, 2,   4, 2,   5, 2,  12, 2,
+  2, 3,   3, 3,   4, 3,   6, 3,  10, 3,
+  2, 4,   3, 4,   4, 4,   9, 4,  # d (dyi)/dy4
+  2, 5,   5, 5,   9, 5,  12, 5,
+  3, 6,   6, 6,   9, 6,  10, 6,
+  7, 7,   9, 7,  10, 7,  12, 7,
+  8, 8,  10, 8,  11, 8,
+  3,10,   6,10,   7,10,   8,10,  10,10,  12,10,
+  2,12,   5,12,   7,12,  10,12,  12,12)
+)
+
+## when run, the default length of rwork is too small
+## lsodes will tell the length actually needed
+# out2 &lt;- lsodes(func = chemistry, y = y, parms = parms, times = times,
+#              inz = nonzero, atol = atol,rtol = rtol)  #gives warning
+out2 &lt;- lsodes(func = chemistry, y = y, parms = parms, times = times, 
+            sparsetype = "sparseusr", inz = nonzero,   
+             atol = atol, rtol = rtol, verbose = TRUE, lrw = 353)
+                            
+## =======================================================================
+## application 3. lsodes estimates the structure of the Jacobian
+##                the Jacobian (vector) function is input
+## =======================================================================
+chemjac &lt;- function (time, Y, j, pars) {
+  with (as.list(pars), {
+    PDJ &lt;- rep(0,n)
+
+    if (j == 1){
+       PDJ[1] &lt;- -rk1
+       PDJ[2] &lt;- rk1
+    } else if (j == 2) {
+       PDJ[2] &lt;- -rk3*Y[3] - rk15*Y[12] - rk2
+       PDJ[3] &lt;- rk2 - rk3*Y[3]
+       PDJ[4] &lt;- rk3*Y[3]
+       PDJ[5] &lt;- rk15*Y[12]
+       PDJ[12] &lt;- -rk15*Y[12]
+    } else if (j == 3) {
+       PDJ[2] &lt;- -rk3*Y[2]
+       PDJ[3] &lt;- -rk5 - rk3*Y[2] - rk7*Y[10]
+       PDJ[4] &lt;- rk3*Y[2]
+       PDJ[6] &lt;- rk7*Y[10]
+       PDJ[10] &lt;- rk5 - rk7*Y[10]
+    } else if (j == 4) {
+       PDJ[2] &lt;- rk11*rk14
+       PDJ[3] &lt;- rk11*rk14
+       PDJ[4] &lt;- -rk11*rk14 - rk4
+       PDJ[9] &lt;- rk4
+    } else if (j == 5) {
+       PDJ[2] &lt;- rk19*rk14
+       PDJ[5] &lt;- -rk19*rk14 - rk16
+       PDJ[9] &lt;- rk16
+       PDJ[12] &lt;- rk19*rk14
+    } else if (j == 6) {
+       PDJ[3] &lt;- rk12*rk14
+       PDJ[6] &lt;- -rk12*rk14 - rk8
+       PDJ[9] &lt;- rk8
+       PDJ[10] &lt;- rk12*rk14
+    } else if (j == 7) {
+       PDJ[7] &lt;- -rk20*rk14 - rk18
+       PDJ[9] &lt;- rk18
+       PDJ[10] &lt;- rk20*rk14
+       PDJ[12] &lt;- rk20*rk14
+    } else if (j == 8) {
+       PDJ[8] &lt;- -rk13*rk14 - rk10
+       PDJ[10] &lt;- rk13*rk14
+       PDJ[11] &lt;- rk10
+    } else if (j == 10) {
+       PDJ[3] &lt;- -rk7*Y[3]
+       PDJ[6] &lt;- rk7*Y[3]
+       PDJ[7] &lt;- rk17*Y[12]
+       PDJ[8] &lt;- rk9
+       PDJ[10] &lt;- -rk7*Y[3] - rk17*Y[12] - rk6 - rk9
+       PDJ[12] &lt;- rk6 - rk17*Y[12]
+    } else if (j == 12) {
+       PDJ[2] &lt;- -rk15*Y[2]
+       PDJ[5] &lt;- rk15*Y[2]
+       PDJ[7] &lt;- rk17*Y[10]
+       PDJ[10] &lt;- -rk17*Y[10]
+       PDJ[12] &lt;- -rk15*Y[2] - rk17*Y[10]
+    }
+    return(PDJ)
+  })
+} 
+
+out3 &lt;- lsodes(func = chemistry, y = y, parms = parms, times = times,
+              jacvec = chemjac, atol = atol, rtol = rtol)
+
+## =======================================================================
+## application 4. The structure of the Jacobian (nonzero elements) AND
+##                the Jacobian (vector) function is input
+## =======================================================================
+out4 &lt;- lsodes(func = chemistry, y = y, parms = parms, times = times,
+               lrw = 351, sparsetype = "sparseusr", inz = nonzero,
+               jacvec = chemjac, atol = atol, rtol = rtol,
+               verbose = TRUE)
+               
+# The sparsejan variant 
+# note: errors in inz may cause R to break, so this is not without danger...
+# out5 &lt;- lsodes(func = chemistry, y = y, parms = parms, times = times,
+#               jacvec = chemjac, atol = atol, rtol = rtol, sparsetype = "sparsejan",
+#               inz = c(1,3,8,13,17,21,25,29,32,32,38,38,43,                   # ian
+#               1,2, 2,3,4,5,12, 2,3,4,6,10, 2,3,4,9, 2,5,9,12, 3,6,9,10,      # jan 
+#               7,9,10,12, 8,10,11, 3,6,7,8,10,12, 2,5,7,10,12), lrw = 343) 
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

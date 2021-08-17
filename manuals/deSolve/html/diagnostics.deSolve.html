@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Print Diagnostic Characteristics of ODE and DAE Solvers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for diagnostics.deSolve {deSolve}"><tr><td>diagnostics.deSolve {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Print Diagnostic Characteristics of ODE and DAE Solvers</h2>
+
+<h3>Description</h3>
+
+<p>Prints several diagnostics of the simulation to the screen, e.g.
+number of steps taken, the last step size, ...
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'deSolve'
+diagnostics(obj, Full = FALSE, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>obj</code></td>
+<td>
+<p>is the output matrix as produced by one of the
+integration routines.
+</p>
+</td></tr>
+<tr valign="top"><td><code>Full</code></td>
+<td>
+<p>when <code>TRUE</code> then all messages will be printed, including
+the ones that are not relevant for the solver. If <code>FALSE</code>, then only
+the relevant messages will be printed.
+</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>optional arguments allowing to extend <code>diagnostics</code>
+as a generic function.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>When the integration output is saved as a <code>data.frame</code>, then the required
+attributes are lost and method <code>diagnostics</code> will not work anymore.
+</p>
+
+
+<h3>Value</h3>
+
+<p>The integer and real vector with diagnostic values; for function <code>lsodar</code>
+also the root information.
+</p>
+<p>See tables 2 and 3 in vignette(&quot;deSolve&quot;) for what these vectors contain.
+</p>
+<p>Note: the number of function evaluations are *without* the extra calls 
+performed to generate the ordinary output variables (if present). 
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## The famous Lorenz equations: chaos in the earth's atmosphere
+## Lorenz 1963. J. Atmos. Sci. 20, 130-141.
+
+chaos &lt;- function(t, state, parameters) {
+  with(as.list(c(state)), {
+
+    dx     &lt;- -8/3 * x + y * z
+    dy     &lt;- -10 * (y - z)
+    dz     &lt;- -x * y + 28 * y - z
+
+    list(c(dx, dy, dz))
+  })
+}
+
+state &lt;- c(x = 1, y = 1, z = 1)
+times &lt;- seq(0, 50, 0.01)
+out   &lt;- vode(state, times, chaos, 0)
+pairs(out, pch = ".")
+diagnostics(out)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

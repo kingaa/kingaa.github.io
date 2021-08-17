@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver for Ordinary Differential Equations (ODE), Switching...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for lsodar {deSolve}"><tr><td>lsodar {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Solver for Ordinary Differential Equations (ODE),
+Switching Automatically Between Stiff and Non-stiff Methods and With
+Root Finding
+</h2>
+
+<h3>Description</h3>
+
+<p>Solving initial value problems for stiff or non-stiff
+systems of first-order ordinary differential equations (ODEs) and
+including root-finding.
+</p>
+<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function <code>lsodar</code> provides an interface to the FORTRAN ODE
+solver of the same name, written by Alan C. Hindmarsh and Linda
+R. Petzold.
+</p>
+<p>The system of ODE's is written as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function or be defined in
+compiled code that has been dynamically loaded. - see description of
+<code><a href="../../deSolve/help/lsoda.html">lsoda</a></code> for details.
+</p>
+<p><code>lsodar</code> differs from <code>lsode</code> in two respects.
+</p>
+
+<ul>
+<li><p> It switches automatically between stiff and nonstiff methods
+(similar as lsoda).
+</p>
+</li>
+<li><p> It finds the root of at least one of a set of constraint
+functions g(i) of the independent and dependent variables.
+</p>
+</li></ul>
+
+<p>Two uses of <code>lsodar</code> are: 
+</p>
+
+<ul>
+<li><p> To stop the simulation when a certain condition is met
+</p>
+</li>
+<li><p> To trigger <a href="../../deSolve/help/events.html">events</a>, i.e. sudden changes in one of the 
+state variables when a certain condition is met.
+</p>
+</li></ul>
+
+<p>when a particular condition is met. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>lsodar(y, times, func, parms, rtol = 1e-6, atol = 1e-6, 
+  jacfunc = NULL, jactype = "fullint", rootfunc = NULL,
+  verbose = FALSE, nroot = 0, tcrit = NULL, hmin = 0,
+  hmax = NULL, hini = 0, ynames = TRUE, maxordn = 12,
+  maxords = 5, bandup = NULL, banddown = NULL, maxsteps = 5000,
+  dllname = NULL, initfunc = dllname, initpar = parms,
+  rpar = NULL, ipar = NULL, nout = 0, outnames = NULL, forcings=NULL,
+  initforc = NULL, fcontrol=NULL, events=NULL, lags = NULL, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y </code></td>
+<td>
+<p>the initial (state) values for the ODE system. If <code>y</code>
+has a name attribute, the names will be used to label the output
+matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>times </code></td>
+<td>
+<p>times at which explicit estimates for <code>y</code> are
+desired.  The first value in <code>times</code> must be the initial time.
+</p>
+</td></tr>
+<tr valign="top"><td><code>func </code></td>
+<td>
+<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+derivatives in the ODE system (the <em>model definition</em>) at time
+t, or a character string giving the name of a compiled function in a
+dynamically loaded shared library.
+</p>
+<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current time
+point in the integration, <code>y</code> is the current estimate of the
+variables in the ODE system.  If the initial values <code>y</code> has a
+<code>names</code> attribute, the names will be available inside <code>func</code>.
+<code>parms</code> is a vector or list of parameters; ... (optional) are
+any other arguments passed to the function.
+</p>
+<p>The return value of <code>func</code> should be a list, whose first
+element is a vector containing the derivatives of <code>y</code> with
+respect to <code>time</code>, and whose next elements are global values
+that are required at each point in <code>times</code>.  The derivatives
+must be specified in the <b>same order</b> as the state variables <code>y</code>.
+</p>
+<p>If <code>func</code> is a string, then <code>dllname</code> must give the name
+of the shared library (without extension) which must be loaded
+before <code>lsodar()</code> is called. See package vignette
+<code>"compiledCode"</code> for more
+details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>parms </code></td>
+<td>
+<p>vector or list of parameters used in <code>func</code> or
+<code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>rtol </code></td>
+<td>
+<p>relative error tolerance, either a scalar or an array as
+long as <code>y</code>. See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>atol </code></td>
+<td>
+<p>absolute error tolerance, either a scalar or an array as
+long as <code>y</code>. See details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>jacfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, that computes the
+Jacobian of the system of differential equations
+<i>dydot(i)/dy(j)</i>, or
+a string giving the name of a function or subroutine in
+&lsquo;<span class="file">dllname</span>&rsquo; that computes the Jacobian (see vignette
+<code>"compiledCode"</code> for more about this option).
+</p>
+<p>In some circumstances, supplying
+<code>jacfunc</code> can speed up the computations, if the system is
+stiff.  The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> calling sequence for <code>jacfunc</code> is identical to
+that of <code>func</code>.
+</p>
+<p>If the Jacobian is a full matrix, <code>jacfunc</code> should return a
+matrix <i>dydot/dy</i>, where the ith row
+contains the derivative of
+<i>dy_i/dt</i> with respect to <i>y_j</i>, or a vector containing the
+matrix elements by columns (the way <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> and FORTRAN store matrices).
+</p>
+<p>If the Jacobian is banded, <code>jacfunc</code> should return a matrix
+containing only the nonzero bands of the Jacobian, rotated
+row-wise. See first example of <a href="../../deSolve/help/lsode.html">lsode</a>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>jactype </code></td>
+<td>
+<p>the structure of the Jacobian, one of
+<code>"fullint"</code>, <code>"fullusr"</code>, <code>"bandusr"</code> or
+<code>"bandint"</code> - either full or banded and estimated internally or
+by user.
+</p>
+</td></tr>
+<tr valign="top"><td><code>rootfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that computes the
+function whose root has to be estimated or a string giving the name
+of a function or subroutine in &lsquo;<span class="file">dllname</span>&rsquo; that computes the root
+function.  The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> calling sequence for <code>rootfunc</code> is identical
+to that of <code>func</code>.  <code>rootfunc</code> should return a vector with
+the function values whose root is sought.
+</p>
+</td></tr>
+<tr valign="top"><td><code>verbose </code></td>
+<td>
+<p>a logical value that, when <code>TRUE</code>,  will
+print the <code>diagnostiscs</code> of the integration - see details.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nroot </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo;  is specified: the number of
+constraint functions whose roots are desired during the integration;
+if <code>rootfunc</code> is an R-function, the solver estimates the number
+of roots.
+</p>
+</td></tr>
+<tr valign="top"><td><code>tcrit </code></td>
+<td>
+<p>if not <code>NULL</code>, then <code>lsodar</code> cannot integrate
+past <code>tcrit</code>. The FORTRAN routine <code>lsodar</code> overshoots its
+targets (times points in the vector <code>times</code>), and interpolates
+values for the desired time points.  If there is a time beyond which
+integration should not proceed (perhaps because of a singularity),
+that should be provided in <code>tcrit</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>hmin </code></td>
+<td>
+<p>an optional minimum value of the integration stepsize. In
+special situations this parameter may speed up computations with the
+cost of precision. Don't use <code>hmin</code> if you don't know why!
+</p>
+</td></tr>
+<tr valign="top"><td><code>hmax </code></td>
+<td>
+<p>an optional maximum value of the integration stepsize. If
+not specified, <code>hmax</code> is set to the largest difference in
+<code>times</code>, to avoid that the simulation possibly ignores
+short-term events. If 0, no maximal size is specified.
+</p>
+</td></tr>
+<tr valign="top"><td><code>hini </code></td>
+<td>
+<p>initial step size to be attempted; if 0, the initial step
+size is determined by the solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ynames </code></td>
+<td>
+<p>logical, if <code>FALSE</code>: names of state variables are not
+passed to function <code>func</code>; this may speed up the simulation
+especially for large models.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxordn </code></td>
+<td>
+<p>the maximum order to be allowed in case the method is
+non-stiff. Should be &lt;= 12. Reduce <code>maxord</code> to save storage space.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxords </code></td>
+<td>
+<p>the maximum order to be allowed in case the method is
+stiff. Should be &lt;= 5. Reduce maxord to save storage space.
+</p>
+</td></tr>
+<tr valign="top"><td><code>bandup </code></td>
+<td>
+<p>number of non-zero bands above the diagonal, in case
+the Jacobian is banded.
+</p>
+</td></tr>
+<tr valign="top"><td><code>banddown </code></td>
+<td>
+<p>number of non-zero bands below the diagonal, in case
+the Jacobian is banded.
+</p>
+</td></tr>
+<tr valign="top"><td><code>maxsteps </code></td>
+<td>
+<p>maximal number of steps per output interval taken by the
+solver.
+</p>
+</td></tr>
+<tr valign="top"><td><code>dllname </code></td>
+<td>
+<p>a string giving the name of the shared library
+(without extension) that contains all the compiled function or
+subroutine definitions refered to in <code>func</code> and
+<code>jacfunc</code>. See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initfunc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the initialisation function
+(which initialises values of parameters), as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
+initialisation function <code>initfunc</code> is in the dll: the
+parameters passed to the initialiser, to initialise the common
+blocks (FORTRAN) or global variables (C, C++).
+</p>
+</td></tr>
+<tr valign="top"><td><code>rpar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+double precision values passed to the dll-functions whose names are
+specified by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>ipar </code></td>
+<td>
+<p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
+integer values passed to the dll-functions whose names are specified
+by <code>func</code> and <code>jacfunc</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>nout </code></td>
+<td>
+<p>only used if <code>dllname</code> is specified and the model is
+defined in compiled code: the number of output variables calculated
+in the compiled function <code>func</code>, present in the shared
+library. Note: it is not automatically checked whether this is
+indeed the number of output variables calculated in the dll - you have
+to perform this check in the code - See package vignette
+<code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>outnames </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
+<code>nout</code> &gt; 0: the names of output variables calculated in the
+compiled function <code>func</code>, present in the shared library.
+These names will be used to label the output matrix.
+</p>
+</td></tr>
+<tr valign="top"><td><code>forcings </code></td>
+<td>
+<p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
+the forcing function data sets, each present as a two-columned matrix,
+with (time,value); interpolation outside the interval
+[min(<code>times</code>), max(<code>times</code>)] is done by taking the value at
+the closest data extreme.
+</p>
+<p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>initforc </code></td>
+<td>
+<p>if not <code>NULL</code>, the name of the forcing function
+initialisation function, as provided in
+&lsquo;<span class="file">dllname</span>&rsquo;. It MUST be present if <code>forcings</code> has been given a
+value.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>fcontrol </code></td>
+<td>
+<p>A list of control parameters for the forcing functions.
+See <a href="../../deSolve/help/forcings.html">forcings</a> or vignette <code>compiledCode</code>.
+</p>
+</td></tr>
+<tr valign="top"><td><code>events </code></td>
+<td>
+<p>A matrix or data frame that specifies events, i.e. when the value of a 
+state variable is suddenly changed. See <a href="../../deSolve/help/events.html">events</a> for more information.
+</p>
+</td></tr>
+<tr valign="top"><td><code>lags </code></td>
+<td>
+<p>A list that specifies timelags, i.e. the number of steps 
+that has to be kept. To be used for delay differential equations. 
+See <a href="../../deSolve/help/timelags.html">timelags</a>, <a href="../../deSolve/help/dede.html">dede</a> for more information.
+</p>
+</td></tr>
+<tr valign="top"><td><code>... </code></td>
+<td>
+<p>additional arguments passed to <code>func</code> and
+<code>jacfunc</code> allowing this to be a generic function.
+</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The work is done by the FORTRAN subroutine <code>lsodar</code>, whose
+documentation should be consulted for details (it is included as
+comments in the source file &lsquo;<span class="file">src/opkdmain.f</span>&rsquo;).  The
+implementation is based on the November, 2003 version of lsodar, from
+Netlib.
+</p>
+<p><code>lsodar</code> switches automatically between stiff and nonstiff
+methods (similar as <code>lsoda</code>).  This means that the user does not
+have to determine whether the problem is stiff or not, and the solver
+will automatically choose the appropriate method.  It always starts
+with the nonstiff method.
+</p>
+<p><code>lsodar</code> can find the root of at least one of a set of constraint functions
+<code>rootfunc</code> of the independent and dependent variables.  It then returns the
+solution at the root if that occurs sooner than the specified stop
+condition, and otherwise returns the solution according the specified
+stop condition.
+</p>
+<p>Caution:  Because of numerical errors in the function
+<code>rootfun</code> due to roundoff and integration error, <code>lsodar</code> may
+return false roots, or return the same root at two or more
+nearly equal values of <code>time</code>.
+</p>
+<p>The form of the <b>Jacobian</b> can be specified by <code>jactype</code>
+which can take the following values:
+</p>
+
+<dl>
+<dt>jactype = &quot;fullint&quot;:</dt><dd><p>a full Jacobian, calculated internally
+by lsodar, the default,
+</p>
+</dd>
+<dt>jactype = &quot;fullusr&quot;:</dt><dd><p>a full Jacobian, specified by user
+function <code>jacfunc</code>,
+</p>
+</dd>
+<dt>jactype = &quot;bandusr&quot;:</dt><dd><p>a banded Jacobian, specified by user
+function <code>jacfunc</code>; the size of the bands specified by
+<code>bandup</code> and <code>banddown</code>,
+</p>
+</dd>
+<dt>jactype = &quot;bandint&quot;:</dt><dd><p>banded Jacobian, calculated by lsodar;
+the size of the bands specified by <code>bandup</code> and
+<code>banddown</code>.
+</p>
+</dd>
+</dl>
+
+<p>If <code>jactype</code> = &quot;fullusr&quot; or &quot;bandusr&quot; then the user must supply a
+subroutine <code>jacfunc</code>.
+</p>
+<p>The input parameters <code>rtol</code>, and <code>atol</code> determine the
+<b>error control</b> performed by the solver. See <code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>
+for details.
+</p>
+<p>The output will have the attribute <b>iroot</b>, if a root was found
+<b>iroot</b> is a vector, its length equal to the number of constraint
+functions it will have a value of 1 for the constraint function whose
+root that has been found and 0 otherwise.
+</p>
+<p>The diagnostics of the integration can be printed to screen
+by calling <code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code>. If <code>verbose</code> = <code>TRUE</code>,
+the diagnostics will written to the screen at the end of the integration.
+</p>
+<p>See vignette(&quot;deSolve&quot;) for an explanation of each element in the vectors
+containing the diagnostic properties and how to directly access them.
+</p>
+<p><b>Models</b> may be defined in compiled C or FORTRAN code, as well as
+in an R-function. See package vignette <code>"compiledCode"</code> for details.
+</p>
+<p>More information about models defined in compiled code is in the package
+vignette (&quot;compiledCode&quot;); information about linking forcing functions
+to compiled code is in <a href="../../deSolve/help/forcings.html">forcings</a>.
+</p>
+<p>Examples in both C and FORTRAN are in the &lsquo;<span class="file">dynload</span>&rsquo; subdirectory
+of the <code>deSolve</code> package directory.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A matrix of class <code>deSolve</code> with up to as many rows as elements
+in <code>times</code> and as many columns as elements in <code>y</code> plus the number of &quot;global&quot;
+values returned in the next elements of the return from <code>func</code>,
+plus and additional column for the time value.  There will be a row
+for each element in <code>times</code> unless the FORTRAN routine &lsquo;lsodar&rsquo;
+returns with an unrecoverable error. If <code>y</code> has a names
+attribute, it will be used to label the columns of the output value.
+</p>
+<p>If a root has been found, the output will have the attribute
+<code>iroot</code>, an integer indicating which root has been found.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Karline Soetaert &lt;karline.soetaert@nioz.nl&gt;</p>
+
+
+<h3>References</h3>
+
+<p>Alan C. Hindmarsh, ODEPACK, A Systematized Collection of ODE Solvers,
+in Scientific Computing, R. S. Stepleman et al. (Eds.), North-Holland,
+Amsterdam, 1983, pp. 55-64.
+</p>
+<p>Linda R. Petzold, Automatic Selection of Methods for Solving Stiff and
+Nonstiff Systems of Ordinary Differential Equations, Siam
+J. Sci. Stat. Comput. 4 (1983), pp. 136-148.
+</p>
+<p>Kathie L. Hiebert and Lawrence F. Shampine, Implicitly Defined Output
+Points for Solutions of ODEs, Sandia Report SAND80-0180, February 1980.
+</p>
+<p>Netlib: <a href="http://www.netlib.org">http://www.netlib.org</a>
+</p>
+
+
+<h3>See Also</h3>
+
+
+<ul>
+<li> <p><code><a href="../../deSolve/help/roots.html">roots</a></code> for more examples on roots and events 
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/rk.html">rk</a></code>, <code><a href="../../deSolve/help/rkMethod.html">rkMethod</a></code>, <code><a href="../../deSolve/help/rk4.html">rk4</a></code> and <code><a href="../../deSolve/help/euler.html">euler</a></code> for
+Runge-Kutta integrators.
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/lsoda.html">lsoda</a></code>, <code><a href="../../deSolve/help/lsode.html">lsode</a></code>,
+<code><a href="../../deSolve/help/lsodes.html">lsodes</a></code>, <code><a href="../../deSolve/help/vode.html">vode</a></code>,
+<code><a href="../../deSolve/help/daspk.html">daspk</a></code> for other solvers of the Livermore family,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.html">ode</a></code> for a general interface to most of the ODE solvers,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.band.html">ode.band</a></code> for solving models with a banded
+Jacobian,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.1D.html">ode.1D</a></code> for integrating 1-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.2D.html">ode.2D</a></code> for integrating 2-D models,
+</p>
+</li>
+<li> <p><code><a href="../../deSolve/help/ode.3D.html">ode.3D</a></code> for integrating 3-D models,
+</p>
+</li></ul>
+
+<p><code><a href="../../deSolve/help/diagnostics.html">diagnostics</a></code> to print diagnostic messages.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## =======================================================================
+## Example 1:
+##   from lsodar source code
+## =======================================================================
+
+Fun &lt;- function (t, y, parms) {
+  ydot &lt;- vector(len = 3)
+  ydot[1] &lt;- -.04*y[1] + 1.e4*y[2]*y[3]
+  ydot[3] &lt;- 3.e7*y[2]*y[2]
+  ydot[2] &lt;- -ydot[1] - ydot[3]
+  return(list(ydot, ytot = sum(y)))
+}
+
+rootFun &lt;- function (t, y, parms) {
+  yroot &lt;- vector(len = 2)
+  yroot[1] &lt;- y[1] - 1.e-4
+  yroot[2] &lt;- y[3] - 1.e-2
+  return(yroot)
+}
+
+y     &lt;- c(1, 0, 0)
+times &lt;- c(0, 0.4*10^(0:8))
+
+out   &lt;- lsodar(y = y, times = times, fun = Fun, rootfun = rootFun,
+                rtol = 1e-4, atol = c(1e-6, 1e-10, 1e-6), parms = NULL)
+print(paste("root is found for eqn", which(attributes(out)$iroot == 1)))
+print(out[nrow(out),])
+
+diagnostics(out)
+  
+## =======================================================================
+## Example 2:
+##   using lsodar to estimate steady-state conditions
+## =======================================================================
+
+## Bacteria (Bac) are growing on a substrate (Sub)
+model &lt;- function(t, state, pars) {
+  with (as.list(c(state, pars)), {
+    ##        substrate uptake             death     respiration
+    dBact &lt;-  gmax*eff*Sub/(Sub+ks)*Bact - dB*Bact - rB*Bact
+    dSub  &lt;- -gmax    *Sub/(Sub+ks)*Bact + dB*Bact            + input
+
+    return(list(c(dBact,dSub)))
+  })
+}
+
+## root is the condition where sum of |rates of change|
+## is very small
+
+rootfun &lt;- function (t, state, pars) {
+  dstate &lt;- unlist(model(t, state, pars)) # rate of change vector
+  return(sum(abs(dstate)) - 1e-10)
+}
+
+pars &lt;- list(Bini = 0.1, Sini = 100, gmax = 0.5, eff = 0.5,
+             ks = 0.5, rB = 0.01, dB = 0.01, input = 0.1)
+
+tout    &lt;- c(0, 1e10)
+state   &lt;- c(Bact = pars$Bini, Sub = pars$Sini)
+out     &lt;- lsodar(state, tout, model, pars, rootfun = rootfun)
+print(out)
+
+
+## =======================================================================
+## Example 3:
+##   using lsodar to trigger an event
+## =======================================================================
+
+## a state variable is decaying at a first-order rate. 
+## when it reaches the value 0.1, a random amount is added.
+
+derivfun &lt;- function (t,y,parms)
+  list (-0.05 * y)
+
+rootfun &lt;- function (t,y,parms)
+  return(y - 0.1) 
+
+eventfun &lt;- function(t,y,parms)
+  return(y + runif(1))  
+
+yini &lt;- 0.8
+times &lt;- 0:200
+
+out &lt;- lsodar(func=derivfun, y = yini, times=times, 
+  rootfunc = rootfun, events = list(func=eventfun, root = TRUE))
+
+plot(out, type = "l", lwd = 2, main = "lsodar with event")
+  
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

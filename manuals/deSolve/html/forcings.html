@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Passing Forcing Functions to Models Written in R or Compiled...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for forcings {deSolve}"><tr><td>forcings {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+Passing Forcing Functions to Models Written in R or Compiled Code.
+</h2>
+
+<h3>Description</h3>
+
+<p>A <code>forcing function</code> is an external variable that is essential to the 
+model, but not explicitly modeled. Rather, it is imposed as a time-series.
+Thus, if a model uses forcing variables, their value at each time point 
+needs to be estimated by interpolation of a data series.
+</p>
+
+
+<h3>Details</h3>
+
+<p>The <code>forcing functions</code> are imposed as a data series, that contains
+the values of the forcings at specified times.
+</p>
+<p>Models may be defined in compiled C or FORTRAN code, as well as in R.
+</p>
+<p>If the model is defined in <em>R code</em>, it is most efficient to:
+</p>
+<p>1. define  a function that performs the linear interpolation,
+using <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>'s <code><a href="../../stats/html/approxfun.html">approxfun</a></code>. It is generally recommended to use 
+<code>rule = 2</code>, such as to allow extrapolation outside of the time interval,
+especially when using the Livermore solvers, as these may exceed the last
+time point.
+</p>
+<p>2. call this function within the model's derivative function, 
+to interpolate at the current timestep.
+</p>
+<p>See first example.
+</p>
+<p>If the models are defined in <em>compiled C or FORTRAN code</em>, it is possible to
+use <code>deSolve</code>s forcing function update algorithm. This is the
+compiled-code equivalent of <code>approxfun</code> or <code>approx</code>.
+</p>
+<p>In this case:<br />
+1. the forcing function data series is provided by means 
+of argument <code>forcings</code>, 
+</p>
+<p>2. <code>initforc</code> is the name of the forcing function initialisation function, 
+as provided in &lsquo;<span class="file">dllname</span>&rsquo;, while 
+</p>
+<p>3. <code>fcontrol</code> is a list used to finetune how the forcing update should 
+be performed.
+</p>
+<p>The <b>fcontrol</b> argument is a list that can supply any of the following
+components (conform the definitions in the <a href="../../stats/help/approxfun.html">approxfun</a> function):
+</p>
+
+<dl>
+<dt>method </dt><dd><p>specifies the interpolation method to be used.
+Choices are <code>"linear"</code> or <code>"constant"</code>,</p>
+</dd>
+<dt>rule </dt><dd><p>an integer describing how interpolation is to take place
+outside the interval [min(times), max(times)].
+If <code>rule</code> is <code>1</code> then an error will be triggered and the
+calculation will stop if <code>times</code> extends the interval of the
+forcing function data set. If it is <code>2</code>, the <b>default</b>, the
+value at the closest data extreme is used, a warning will be printed if
+<code>verbose</code> is <code>TRUE</code>,
+</p>
+<p>Note that the default differs from the <code>approx</code> default.</p>
+</dd>
+<dt>f </dt><dd><p>For <code>method = "constant"</code> a number between <code>0</code> and
+<code>1</code> inclusive, indicating a compromise between left- and
+right-continuous step functions. If <code>y0</code> and <code>y1</code> are the
+values to the left and right of the point then the value is
+<code>y0 * (1 - f) + y1 * f</code> so that <code>f = 0</code> is right-continuous and
+<code>f = 1</code> is left-continuous,
+</p>
+</dd>
+<dt>ties </dt><dd><p>Handling of tied <code>times</code> values. Either a function
+with a single vector argument returning a single number result or the
+string <code>"ordered"</code>.
+</p>
+<p>Note that the default is <code>"ordered"</code>, hence the existence of ties will
+NOT be investigated; in the <code>C</code> code this will mean that -if ties
+exist, the first value will be used; if the dataset is not ordered,
+then nonsense will be produced.
+</p>
+<p>Alternative values for <code>ties</code> are <code>mean</code>, <code>min</code> etc
+</p>
+</dd>
+</dl>
+
+<p>The defaults are:
+</p>
+<p><code>fcontrol = list(method = "linear", rule = 2,  f = 0, ties = "ordered")</code>
+</p>
+<p>Note that only ONE specification is allowed, even if there is more than
+one forcing function data set.
+</p>
+<p>More information about models defined in compiled code is in the package
+vignette (&quot;compiledCode&quot;).
+</p>
+
+
+<h3>Note</h3>
+
+<p>How to write compiled code is described in package vignette
+<code>"compiledCode"</code>, which should be referred to for details.
+</p>
+<p>This vignette also contains examples on how to pass forcing functions.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Karline Soetaert,
+</p>
+<p>Thomas Petzoldt,
+</p>
+<p>R. Woodrow Setzer
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../stats/html/approxfun.html">approx</a></code> or <code><a href="../../stats/html/approxfun.html">approxfun</a></code>, the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function,
+</p>
+<p><code><a href="../../deSolve/help/events.html">events</a></code> for how to implement events.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## =============================================================================
+## FORCING FUNCTION: The sediment oxygen consumption example - R-code:
+## =============================================================================
+
+## Forcing function data
+Flux &lt;- matrix(ncol=2,byrow=TRUE,data=c(
+  1, 0.654, 11, 0.167,   21, 0.060, 41, 0.070, 73,0.277, 83,0.186,
+  93,0.140,103, 0.255,  113, 0.231,123, 0.309,133,1.127,143,1.923,
+  153,1.091,163,1.001,  173, 1.691,183, 1.404,194,1.226,204,0.767,
+  214, 0.893,224,0.737, 234,0.772,244, 0.726,254,0.624,264,0.439,
+  274,0.168,284 ,0.280, 294,0.202,304, 0.193,315,0.286,325,0.599,
+  335, 1.889,345, 0.996,355,0.681,365,1.135))
+
+parms &lt;- c(k=0.01)
+
+times &lt;- 1:365
+
+## the model
+sediment &lt;- function( t, O2, k) 
+  list (c(Depo(t) - k * O2), depo = Depo(t))
+
+# the forcing functions; rule = 2 avoids NaNs in interpolation
+Depo &lt;- approxfun(x = Flux[,1], y = Flux[,2], method = "linear", rule = 2)
+
+Out &lt;- ode(times = times, func = sediment, y = c(O2 = 63), parms = parms)
+  
+## same forcing functions, now constant interpolation
+Depo &lt;- approxfun(x = Flux[,1], y = Flux[,2], method = "constant",
+  f = 0.5, rule = 2)
+
+Out2 &lt;- ode(times = times, func = sediment, y = c(O2 = 63), parms = parms)
+
+mf &lt;- par(mfrow = c(2, 1))
+plot (Out, which = "depo", type = "l", lwd = 2, mfrow = NULL)
+lines(Out2[,"time"], Out2[,"depo"], col = "red", lwd = 2)
+
+plot (Out, which = "O2", type = "l", lwd = 2, mfrow = NULL)
+lines(Out2[,"time"], Out2[,"O2"], col = "red", lwd = 2)
+
+## =============================================================================
+## SCOC is the same model, as implemented in FORTRAN
+## =============================================================================
+
+out&lt;- SCOC(times, parms = parms, Flux = Flux)
+
+plot(out[,"time"], out[,"Depo"], type = "l", col = "red")
+lines(out[,"time"], out[,"Mineralisation"], col = "blue")
+
+## Constant interpolation of forcing function - left side of interval
+fcontrol &lt;- list(method = "constant")
+
+out2 &lt;- SCOC(times, parms = parms, Flux = Flux, fcontrol = fcontrol)
+
+plot(out2[,"time"], out2[,"Depo"], type = "l", col = "red")
+lines(out2[,"time"], out2[,"Mineralisation"], col = "blue")
+
+
+## Not run: 
+## =============================================================================
+## show examples (see respective help pages for details)
+## =============================================================================
+
+example(aquaphy)
+
+## show package vignette with tutorial about how to use compiled models
+## + source code of the vignette
+## + directory with C and FORTRAN sources
+vignette("compiledCode")
+edit(vignette("compiledCode"))
+browseURL(paste(system.file(package = "deSolve"), "/doc", sep = ""))
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.28 <a href="00Index.html">Index</a>]</div>
+</body></html>

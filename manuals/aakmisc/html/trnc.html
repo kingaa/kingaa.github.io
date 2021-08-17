@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Truncation of plots.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for trnc {aakmisc}"><tr><td>trnc {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Truncation of plots.</h2>
+
+<h3>Description</h3>
+
+<p>Truncate to the specified window.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+trnc(x, range = c(0, 1), only.finite = TRUE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Numeric vector of values to manipulate.</p>
+</td></tr>
+<tr valign="top"><td><code>range</code></td>
+<td>
+<p>Numeric vector of length two giving desired output range.</p>
+</td></tr>
+<tr valign="top"><td><code>only.finite</code></td>
+<td>
+<p>if TRUE (the default), will only modify finite values.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>trnc</code> is a function for truncating data to a specified window.
+It is suitable for use in <code>scale_{x,y}_{continuous,discrete}</code>, for example.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Aaron A. King <a href="mailto:kingaa at umich dot edu">kingaa at umich dot edu</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../scales/help/censor.html">censor</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+trnc(c(-1,0.5,1,2,NA))
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+</body></html>

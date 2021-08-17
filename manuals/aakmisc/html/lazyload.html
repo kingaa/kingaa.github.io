@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Functions for lazy-loading knitr caches.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for lazyload {aakmisc}"><tr><td>lazyload {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Functions for lazy-loading knitr caches.</h2>
+
+<h3>Description</h3>
+
+<p>These functions are helpful for loading cached chunks into an interactive
+session.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+lazyload_cache_dir(
+  path = "./cache",
+  envir = parent.frame(),
+  ask = FALSE,
+  verbose = getOption("verbose", FALSE),
+  full.names = TRUE,
+  ...
+)
+
+lazyload_cache_labels(
+  labels,
+  path = "./cache/",
+  envir = parent.frame(),
+  verbose = getOption("verbose", FALSE),
+  filter,
+  full.names = TRUE,
+  ...
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>path</code></td>
+<td>
+<p>the path to the cache directory</p>
+</td></tr>
+<tr valign="top"><td><code>envir</code></td>
+<td>
+<p>the environment to load the objects into</p>
+</td></tr>
+<tr valign="top"><td><code>ask</code></td>
+<td>
+<p>if <code>TRUE</code>, interactively ask whether to load each database
+discovered in <code>path</code></p>
+</td></tr>
+<tr valign="top"><td><code>verbose</code></td>
+<td>
+<p>if <code>TRUE</code>, display the names of chunk labels being
+loaded</p>
+</td></tr>
+<tr valign="top"><td><code>full.names</code></td>
+<td>
+<p>use the full name, i.e., include the path, for the chunk
+label?  This argument is passed to <code><a href="../../base/help/list.files.html">list.files</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>additional arguments passed to <code><a href="../../base/help/list.files.html">list.files</a></code></p>
+</td></tr>
+<tr valign="top"><td><code>labels</code></td>
+<td>
+<p>character vector; chunk labels to load</p>
+</td></tr>
+<tr valign="top"><td><code>filter</code></td>
+<td>
+<p>optional function; passed to <code><a href="../../base/help/lazyLoad.html">lazyLoad</a></code>.
+When called on a character vector of object names, this function should
+return a logical vector: objects for which this is <code>TRUE</code> will be
+loaded.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Use <code>lazyload_cache_dir</code> to load a whole directory of cached objects.
+</p>
+<p>Use <code>lazyload_cache_labels</code> to load and explicit set of cached chunks.
+</p>
+
+
+<h3>Value</h3>
+
+<p>Both functions return <code>NULL</code>, invisibly.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Peter DeWitt (https://github.com/dewittpe).
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Interface with databases</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for db {aakmisc}"><tr><td>db {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Interface with databases</h2>
+
+<h3>Description</h3>
+
+<p>Interface with project databases.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+writeDBTable(
+  name,
+  value,
+  overwrite = FALSE,
+  append = FALSE,
+  row.names = FALSE,
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+getQuery(
+  statement,
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+getMLEs(
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+recMLEs(
+  mle,
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+recScript(
+  files,
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+dropScript(
+  script,
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+listScripts(
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+
+catScript(
+  script,
+  file = "",
+  host = getOption("aakmisc.dbhost", "localhost"),
+  dbname = getOption("aakmisc.dbname", NULL),
+  port = getOption("aakmisc.port", 5432),
+  user = getOption("aakmisc.user", NULL),
+  ...
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>name, value</code></td>
+<td>
+<p>Name and contents of table to create.</p>
+</td></tr>
+<tr valign="top"><td><code>overwrite, append, row.names</code></td>
+<td>
+<p>See <code><a href="../../DBI/help/dbWriteTable.html">dbWriteTable</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>host</code></td>
+<td>
+<p>Hostname on which to connect to the PostgreSQL server.</p>
+</td></tr>
+<tr valign="top"><td><code>dbname</code></td>
+<td>
+<p>Name of PostgreSQL database.</p>
+</td></tr>
+<tr valign="top"><td><code>port</code></td>
+<td>
+<p>Port on which to connect to PostgreSQL database.  If NULL, a
+random port number will be used.</p>
+</td></tr>
+<tr valign="top"><td><code>user</code></td>
+<td>
+<p>Username to use in conneting to PostgreSQL database.  If NULL,
+Sys.getenv(&quot;USER&quot;) will be used.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>Additional arguments will be passed to
+<code><a href="../../DBI/help/dbConnect.html">dbConnect</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>statement</code></td>
+<td>
+<p>SQL statement passed to <code><a href="../../DBI/help/dbGetQuery.html">dbGetQuery</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>mle</code></td>
+<td>
+<p>A data-frame of MLEs to be recorded.</p>
+</td></tr>
+<tr valign="top"><td><code>files</code></td>
+<td>
+<p>Files containing R scripts to be recorded.</p>
+</td></tr>
+<tr valign="top"><td><code>script</code></td>
+<td>
+<p>Name of script.</p>
+</td></tr>
+<tr valign="top"><td><code>file</code></td>
+<td>
+<p>File to which the script will be written.  See
+<code><a href="../../base/html/cat.html">cat</a></code>.</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Aaron A. King
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+## Not run: 
+startTunnel()
+listScripts()
+stopTunnel()
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+</body></html>

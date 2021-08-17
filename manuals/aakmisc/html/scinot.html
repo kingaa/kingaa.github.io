@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Scientific notation.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for scinot {aakmisc}"><tr><td>scinot {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Scientific notation.</h2>
+
+<h3>Description</h3>
+
+<p>Format using scientific notation.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+scinot(
+  x,
+  digits = 2,
+  format = c("expression", "latex", "math"),
+  simplify = FALSE
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>number(s) to format.</p>
+</td></tr>
+<tr valign="top"><td><code>digits</code></td>
+<td>
+<p>number of significant digits in mantissa.</p>
+</td></tr>
+<tr valign="top"><td><code>format</code></td>
+<td>
+<p>format specification.
+<code>format="expression"</code> results in an R expression.
+<code>format="latex"</code> results in a latex expression.
+<code>format="math"</code> is like &quot;latex&quot; but wraps the text in &quot;$&quot;.</p>
+</td></tr>
+<tr valign="top"><td><code>simplify</code></td>
+<td>
+<p>logical.
+If <code>simplify=TRUE</code>, then <i>1x10^n</i> is simplified to <i>10^n</i>.</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Aaron A. King
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../scales/help/scientific.html">scientific</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+x &lt;- c(0.0309595,8577676.441,10000)
+scinot(x[2],4)
+scinot(x[1],2,"latex")
+sapply(x,scinot,digits=3,format='math')
+scinot(x,digits=0,simplify=FALSE)
+scinot(x,digits=0,simplify=TRUE)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: A scatterplot matrix with densities on the diagonal.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for plotMatrix {aakmisc}"><tr><td>plotMatrix {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>A scatterplot matrix with densities on the diagonal.</h2>
+
+<h3>Description</h3>
+
+<p>A special scatterplot matrix.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+plotMatrix(data, ...)
+
+## S3 method for class 'list'
+plotMatrix(
+  data,
+  marg.exp = 0.02,
+  labels = names(data),
+  alpha = 1,
+  pch = 16,
+  size = unit(2, "mm"),
+  ...
+)
+
+## S3 method for class 'data.frame'
+plotMatrix(
+  data,
+  marg.exp = 0.02,
+  labels = names(data),
+  alpha = 1,
+  pch = 16,
+  size = unit(2, "mm"),
+  ...
+)
+
+## S3 method for class 'aakplot'
+print(x, newpage = is.null(vp), vp = NULL, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>Data to plot.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>optional arguments, passed to <code><a href="../../graphics/html/hist.html">hist</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>marg.exp</code></td>
+<td>
+<p>Fraction by which to expand the plot at the margins.</p>
+</td></tr>
+<tr valign="top"><td><code>labels</code></td>
+<td>
+<p>Names of variables plotted.</p>
+</td></tr>
+<tr valign="top"><td><code>alpha, pch, size</code></td>
+<td>
+<p>Refer to the plotted points in the scatterplots.</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p><code>plotMatrix</code> object to display.</p>
+</td></tr>
+<tr valign="top"><td><code>newpage</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, <code>grid.newpage()</code> will be called
+before the graphics are drawn.</p>
+</td></tr>
+<tr valign="top"><td><code>vp</code></td>
+<td>
+<p>viewport to use.  See <code><a href="../../grid/help/viewport.html">viewport</a></code>.</p>
+</td></tr>
+</table>
+
+
+<h3>Author(s)</h3>
+
+<p>Aaron A. King <a href="mailto:kingaa at umich dot edu">kingaa at umich dot edu</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+  ## Not run: 
+x &lt;- data.frame(a=rexp(n=1000,rate=1/3),b=rnorm(1000))
+mutate(x,c=a+b^2,d=a-b^3) -&gt; x
+
+print(plotMatrix(x,alpha=0.2))
+
+g &lt;- plotMatrix(
+                x[-2],
+                labels=c(
+                  expression(alpha),
+                  expression(beta),
+                  expression(phi)
+                  ),
+                alpha=0.3
+                )
+print(g)
+
+print(plotMatrix(as.list(x),alpha=0.2,breaks='scott'))
+  
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+</body></html>

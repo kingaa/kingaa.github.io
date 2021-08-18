@@ -202,7 +202,7 @@ Finally, it computes the quasi-likelihood of the data under the fitted GAM.
 <h3>Value</h3>
 
 <p><code>nlf_objfun</code> constructs a stateful objective function for NLF estimation.
-Specfically, <code>nlf_objfun</code> returns an object of class &lsquo;nlf_objfun&rsquo;, which is a function suitable for use in an <code><a href="../../stats/html/optim.html">optim</a></code>-like optimizer.
+Specfically, <code>nlf_objfun</code> returns an object of class &lsquo;nlf_objfun&rsquo;, which is a function suitable for use in an <code><a href="../../stats/help/optim.html">optim</a></code>-like optimizer.
 In particular, this function takes a single numeric-vector argument that is assumed to contain the parameters named in <code>est</code>, in that order.
 When called, it will return the negative log quasilikelihood.
 It is a stateful function:

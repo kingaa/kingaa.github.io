@@ -205,7 +205,7 @@ It can be passed to any one of a variety of numerical optimization routines, whi
 <h3>Value</h3>
 
 <p><code>spect_objfun</code> constructs a stateful objective function for spectrum matching.
-Specifically, <code>spect_objfun</code> returns an object of class &lsquo;spect_match_objfun&rsquo;, which is a function suitable for use in an <code><a href="../../stats/html/optim.html">optim</a></code>-like optimizer.
+Specifically, <code>spect_objfun</code> returns an object of class &lsquo;spect_match_objfun&rsquo;, which is a function suitable for use in an <code><a href="../../stats/help/optim.html">optim</a></code>-like optimizer.
 This function takes a single numeric-vector argument that is assumed to contain the parameters named in <code>est</code>, in that order.
 When called, it will return the (optionally weighted) <i>L2</i> distance between the data spectrum and simulated spectra.
 It is a stateful function:
@@ -230,7 +230,7 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 <h3>See Also</h3>
 
-<p><code><a href="../../pomp/help/spect.html">spect</a></code> <code><a href="../../stats/html/optim.html">optim</a></code>
+<p><code><a href="../../pomp/help/spect.html">spect</a></code> <code><a href="../../stats/help/optim.html">optim</a></code>
 <code><a href="../../subplex/help/subplex.html">subplex</a></code> <code><a href="../../nloptr/help/nloptr.html">nloptr</a></code>
 </p>
 <p>More on <span class="pkg">pomp</span> estimation algorithms:

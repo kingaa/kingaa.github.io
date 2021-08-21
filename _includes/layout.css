@@ -1,0 +1,81 @@
+#main {
+    position: absolute;
+    top: 20px;
+    right: 150px;
+}
+
+#header {
+    text-align: left;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 40px;
+    font-family: "DejaVu Sans", "Arial Sans", Arial, sans;
+    font-weight: bold;
+    font-variant: normal;
+    font-size: 1.5em;
+    width: min(90%, 22em);
+}
+
+#content {
+    text-align: left;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+#toplink {
+    text-align: right;
+    padding-right: 40px;
+    display: none;
+}
+
+#icon {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    z-index: 10;
+    display: block;
+}
+
+@media print {
+    #icon {
+        display: none;
+    }
+    #main {
+        left: 1in;
+        width: calc(100% - 2in);
+    }
+}
+
+@media screen {
+
+    #main {
+        left: 180px;
+        width: min(30em, calc(90% - 180px));
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+
+    #icon {
+	top: 10px;
+        display: block;
+    }
+
+    #main {
+        left: 20px;
+	top: 180px;
+        width: max(270px, calc(90% - 20px));
+    }
+    
+}

@@ -1,25 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="keywords" content="stochastic dynamics, inference, pomp, subplex, ouch, R">
-    <link href="assets/whitestyle.css" rel="stylesheet" type="text/css">
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head id="{{ page.id }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="stochastic dynamics, inference, comparative methods, optimization, hidden Markov model, state space model, pomp, ouch, subplex, R" />
     <link rel="shortcut icon" href="bluefish.ico" type="image/ico">
     <title>{{ page.title }}</title>
+    <style type="text/css">
+      {% include pompstyle.css %}
+      {% include layout.css %}
+    </style>
   </head>
   <body>
-    <hr width="90%" align="left">
-    <h2 style="padding-left: 20px;">{{ page.title}}</h2>
-    <hr width="90%" align="left">
-    <table width="90%">
-      <tr>
-	<td width="10%">
-	  <a href="https://kingaa.github.io"><img height="90" align="bottom" src="/images/bluefish.png"></a>
-	</td>
-	<td width="80%">
-	  {{ content }}
-	</td>
-      </tr>
-    </table>
+
+    <div id="icon">
+      <img width="100%" src="/images/bluefish.png">
+    </div>
+
+    <div id="main">
+      <div id="header">
+	{{ page.title }}
+      </div>
+      
+      <div id="content">
+	
+	{{ content }}
+	
+	<div id="toplink">
+	  <a href="#top">Top</a>
+	</div>
+	
+      </div>
+
+    </div>
+
   </body>
 </html>

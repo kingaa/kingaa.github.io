@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body>
 
-<table width="100%" summary="page for trajectory_matching {pomp}"><tr><td>trajectory_matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%" summary="page for trajectory matching {pomp}"><tr><td>trajectory matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Trajectory matching</h2>
 
@@ -87,21 +87,21 @@ This will be coerced internally to storage mode <code>double</code>.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit_spec.html">?rinit_spec</a>.</p>
+For more information, see <a href="../../pomp/help/rinit specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>skeleton</code></td>
 <td>
 <p>optional; the deterministic skeleton of the unobserved state process.
 Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
-Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton_spec.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton_spec.html">map</a></code> fnctions.
-For more information, see <a href="../../pomp/help/skeleton_spec.html">?skeleton_spec</a>.
+Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton specification.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton specification.html">map</a></code> fnctions.
+For more information, see <a href="../../pomp/help/skeleton specification.html">skeleton specification</a>.
 Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 </td></tr>
 <tr valign="top"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
-For more information, see <a href="../../pomp/help/dmeasure_spec.html">?dmeasure_spec</a>.</p>
+For more information, see <a href="../../pomp/help/dmeasure specification.html">dmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>partrans</code></td>
 <td>
@@ -110,7 +110,7 @@ For more information, see <a href="../../pomp/help/dmeasure_spec.html">?dmeasure
 <p>Many algorithms for parameter estimation search an unconstrained space of parameters.
 When working with such an algorithm and a model for which the parameters are constrained, it can be useful to transform parameters.
 One should supply the <code>partrans</code> argument via a call to <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
-For more information, see <a href="../../pomp/help/parameter_trans.html">?parameter_trans</a>.
+For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
 </td></tr>
 <tr valign="top"><td><code>...</code></td>
@@ -152,7 +152,7 @@ Each time it is called, it will remember the values of the parameters and its es
 
 <p>Some Windows users report problems when using C snippets in parallel computations.
 These appear to arise when the temporary files created during the C snippet compilation process are not handled properly by the operating system.
-To circumvent this problem, use the <code>cdir</code> and <code>cfile</code> options <a href="../../pomp/help/pomp.html">(described here)</a> to cause the C snippets to be written to a file of your choice, thus avoiding the use of temporary files altogether.
+To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cdir</a></code> and <code><a href="../../pomp/help/pomp.html">cfile</a></code> options to cause the C snippets to be written to a file of your choice, thus avoiding the use of temporary files altogether.
 </p>
 
 
@@ -167,17 +167,17 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 <p><code><a href="../../stats/help/optim.html">optim</a></code>, <code><a href="../../subplex/help/subplex.html">subplex</a></code>, <code><a href="../../nloptr/help/nloptr.html">nloptr</a></code>
 </p>
-<p>More on <span class="pkg">pomp</span> methods for deterministic process models: 
+<p>More on methods for deterministic process models: 
 <code><a href="../../pomp/help/flow.html">flow</a>()</code>,
-<code><a href="../../pomp/help/skeleton_spec.html">skeleton_spec</a></code>,
+<code><a href="../../pomp/help/skeleton specification.html">skeleton specification</a></code>,
 <code><a href="../../pomp/help/skeleton.html">skeleton</a>()</code>,
 <code><a href="../../pomp/help/trajectory.html">trajectory</a>()</code>
 </p>
-<p>More on estimation methods based on maximization:
+<p>More on maximization-based estimation methods:
 <code><a href="../../pomp/help/mif2.html">mif2</a>()</code>,
-<code><a href="../../pomp/help/nonlinear_forecasting.html">nonlinear_forecasting</a></code>,
-<code><a href="../../pomp/help/probe_matching.html">probe_matching</a></code>,
-<code><a href="../../pomp/help/spectrum_matching.html">spectrum_matching</a></code>
+<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/probe matching.html">probe matching</a></code>,
+<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>
 </p>
 
 
@@ -208,5 +208,5 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.1.5 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.2.0 <a href="00Index.html">Index</a>]</div>
 </body></html>

@@ -9,7 +9,7 @@ abc,pomp-method	abc
 abc,probed_pomp-method	abc
 accumulators	accumulators
 accumvars	accumulators
-approximate_Bayesian_computation	abc
+approximate Bayesian computation	abc
 as.data.frame	as_data_frame
 as.data.frame.abcList	as_data_frame
 as.data.frame.bsmcd_pomp	as_data_frame
@@ -24,7 +24,8 @@ as.data.frame.probed_pomp	as_data_frame
 as.data.frame.wpfilterd_pomp	as_data_frame
 as.pomp	as_pomp
 bake	bake
-basic_components	basic_components
+basic components	basic_components
+basic probes	basic_probes
 basic_probes	basic_probes
 blowflies	blowflies
 blowflies1	blowflies
@@ -89,19 +90,19 @@ deulermultinom	distributions
 discrete_time	rprocess_spec
 distributions	distributions
 dmeasure	dmeasure
+dmeasure specification	dmeasure_spec
 dmeasure,ANY-method	dmeasure
 dmeasure,missing-method	dmeasure
 dmeasure,pomp-method	dmeasure
-dmeasure_spec	dmeasure_spec
 dprior	dprior
 dprior,ANY-method	dprior
 dprior,missing-method	dprior
 dprior,pomp-method	dprior
 dprocess	dprocess
+dprocess specification	dprocess_spec
 dprocess,ANY-method	dprocess
 dprocess,missing-method	dprocess
 dprocess,pomp-method	dprocess
-dprocess_spec	dprocess_spec
 eakf	kalman
 eakf,ANY-method	kalman
 eakf,data.frame-method	kalman
@@ -116,13 +117,13 @@ eff.sample.size,bsmcd_pomp-method	eff_sample_size
 eff.sample.size,missing-method	eff_sample_size
 eff.sample.size,pfilterd_pomp-method	eff_sample_size
 eff.sample.size,wpfilterd_pomp-method	eff_sample_size
-elementary_algorithms	elementary_algorithms
+elementary algorithms	elementary_algorithms
 enkf	kalman
 enkf,ANY-method	kalman
 enkf,data.frame-method	kalman
 enkf,missing-method	kalman
 enkf,pomp-method	kalman
-estimation_algorithms	estimation_algorithms
+estimation algorithms	estimation_algorithms
 euler	rprocess_spec
 ewcitmeas	measles
 ewmeas	measles
@@ -189,18 +190,21 @@ mif2,pomp-method	mif2
 mvn.diag.rw	proposals
 mvn.rw	proposals
 mvn.rw.adaptive	proposals
+nlf	nlf
 nlf_objfun	nlf
 nlf_objfun,ANY-method	nlf
 nlf_objfun,data.frame-method	nlf
 nlf_objfun,missing-method	nlf
 nlf_objfun,nlf_objfun-method	nlf
 nlf_objfun,pomp-method	nlf
+nonlinear forecasting	nlf
 nonlinear_forecasting	nlf
 objfun	objfun
 obs	obs
 obs,pomp-method	obs
 onestep	rprocess_spec
 ou2	ou2
+parameter transformations	parameter_trans
 parameter_trans	parameter_trans
 parameter_trans,ANY,ANY-method	parameter_trans
 parameter_trans,ANY,missing-method	parameter_trans
@@ -246,15 +250,13 @@ pmcmc,pfilterd_pomp-method	pmcmc
 pmcmc,pmcmcd_pomp-method	pmcmc
 pmcmc,pomp-method	pmcmc
 pomp	pomp
+pomp examples	pomp_examp
 pomp,package	pomp-package
 pomp-class	pomp_class
-pompExample	pomp_examp
-pompExamples	pomp_examp
 pompLoad	load
 pompLoad,pomp-method	load
 pompUnload	load
 pompUnload,pomp-method	load
-pomp_example	pomp_examp
 pomp_examples	pomp_examp
 pomp_fun	pomp_fun
 pomp_fun,character-method	pomp_fun
@@ -275,8 +277,9 @@ print	print
 print,listie-method	print
 print,pomp_fun-method	print
 print,unshowable-method	print
-prior_spec	prior_spec
+prior specification	prior_spec
 probe	probe
+probe matching	probe_match
 probe,ANY-method	probe
 probe,data.frame-method	probe
 probe,missing-method	probe
@@ -294,7 +297,7 @@ probe.period	basic_probes
 probe.quantile	basic_probes
 probe.sd	basic_probes
 probe.var	basic_probes
-probe_matching	probe_match
+probe_match	probe_match
 probe_objfun	probe_match
 probe_objfun,ANY-method	probe_match
 probe_objfun,data.frame-method	probe_match
@@ -309,29 +312,30 @@ pStop_	pStop
 pWarn	pStop
 pWarn_	pStop
 reexports	melt
+reproducibility tools	bake
 resample	resample
 reulermultinom	distributions
 rgammawn	distributions
 ricker	ricker
 rinit	rinit
+rinit specification	rinit_spec
 rinit,ANY-method	rinit
 rinit,missing-method	rinit
 rinit,pomp-method	rinit
-rinit_spec	rinit_spec
 rmeasure	rmeasure
+rmeasure specification	rmeasure_spec
 rmeasure,ANY-method	rmeasure
 rmeasure,missing-method	rmeasure
 rmeasure,pomp-method	rmeasure
-rmeasure_spec	rmeasure_spec
 rprior	rprior
 rprior,ANY-method	rprior
 rprior,missing-method	rprior
 rprior,pomp-method	rprior
 rprocess	rprocess
+rprocess specification	rprocess_spec
 rprocess,ANY-method	rprocess
 rprocess,missing-method	rprocess
 rprocess,pomp-method	rprocess
-rprocess_spec	rprocess_spec
 runif_design	design
 rw.sd	rw_sd
 rw2	rw2
@@ -364,10 +368,10 @@ sir	sir
 sir2	sir
 sir_models	sir
 skeleton	skeleton
+skeleton specification	skeleton_spec
 skeleton,ANY-method	skeleton
 skeleton,missing-method	skeleton
 skeleton,pomp-method	skeleton
-skeleton_spec	skeleton_spec
 slice_design	design
 sobol_design	design
 solibs<-	load
@@ -380,7 +384,8 @@ spect,objfun-method	spect
 spect,pomp-method	spect
 spect,spectd_pomp-method	spect
 spect,spect_match_objfun-method	spect
-spectrum_matching	spect_match
+spectrum matching	spect_match
+spect_match	spect_match
 spect_objfun	spect_match
 spect_objfun,ANY-method	spect_match
 spect_objfun,data.frame-method	spect_match
@@ -399,7 +404,6 @@ summary	summary
 summary,objfun-method	summary
 summary,probed_pomp-method	summary
 summary,spectd_pomp-method	summary
-synthetic_likelihood	probe
 systematic_resample	resample
 time	time
 time,missing-method	time
@@ -424,11 +428,12 @@ traces,missing-method	traces
 traces,pmcmcd_pomp-method	traces
 traces,pmcmcList-method	traces
 trajectory	trajectory
+trajectory matching	traj_match
 trajectory,ANY-method	trajectory
 trajectory,missing-method	trajectory
 trajectory,pomp-method	trajectory
 trajectory,traj_match_objfun-method	trajectory
-trajectory_matching	traj_match
+traj_match	traj_match
 traj_objfun	traj_match
 traj_objfun,ANY-method	traj_match
 traj_objfun,data.frame-method	traj_match

@@ -123,19 +123,19 @@ This will be coerced internally to storage mode <code>double</code>.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit_spec.html">?rinit_spec</a>.</p>
+For more information, see <a href="../../pomp/help/rinit specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess_spec.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, <a href="../../pomp/help/rprocess_spec.html">see ?rprocess_spec for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
-For more information, see <a href="../../pomp/help/dmeasure_spec.html">?dmeasure_spec</a>.</p>
+For more information, see <a href="../../pomp/help/dmeasure specification.html">dmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>partrans</code></td>
 <td>
@@ -144,7 +144,7 @@ For more information, see <a href="../../pomp/help/dmeasure_spec.html">?dmeasure
 <p>Many algorithms for parameter estimation search an unconstrained space of parameters.
 When working with such an algorithm and a model for which the parameters are constrained, it can be useful to transform parameters.
 One should supply the <code>partrans</code> argument via a call to <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
-For more information, see <a href="../../pomp/help/parameter_trans.html">?parameter_trans</a>.
+For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
 </td></tr>
 <tr valign="top"><td><code>...</code></td>
@@ -154,7 +154,7 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 </p>
 <p>When named arguments not recognized by <code><a href="../../pomp/help/pomp.html">pomp</a></code> are provided, these are made available to all basic components via the so-called <dfn>userdata</dfn> facility.
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
-See <a href="../../pomp/help/userdata.html">?userdata</a> for information on how to use this facility.</p>
+See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
 <tr valign="top"><td><code>verbose</code></td>
 <td>
@@ -201,7 +201,8 @@ To obtain the latter, it is advisable to run several <code><a href="../../pomp/h
 <h3>Specifying the perturbations</h3>
 
 <p>The <code>rw.sd</code> function simply returns a list containing its arguments as unevaluated expressions.
-These are then evaluated in a context containing the model <code>time</code> variable.  This allows for easy specification of the structure of the perturbations that are to be applied.
+These are then evaluated in a context containing the model <code>time</code> variable.
+This allows for easy specification of the structure of the perturbations that are to be applied.
 For example,
 </p>
 <pre>
@@ -239,7 +240,7 @@ If one does specify additional arguments, these will override the defaults.
 
 <p>Some Windows users report problems when using C snippets in parallel computations.
 These appear to arise when the temporary files created during the C snippet compilation process are not handled properly by the operating system.
-To circumvent this problem, use the <code>cdir</code> and <code>cfile</code> options <a href="../../pomp/help/pomp.html">(described here)</a> to cause the C snippets to be written to a file of your choice, thus avoiding the use of temporary files altogether.
+To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cdir</a></code> and <code><a href="../../pomp/help/pomp.html">cfile</a></code> options to cause the C snippets to be written to a file of your choice, thus avoiding the use of temporary files altogether.
 </p>
 
 
@@ -257,13 +258,13 @@ To circumvent this problem, use the <code>cdir</code> and <code>cfile</code> opt
 
 <h3>See Also</h3>
 
-<p>More on full-information (i.e., likelihood-based) methods in <span class="pkg">pomp</span>:
+<p>More on full-information (i.e., likelihood-based) methods:
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
 <code><a href="../../pomp/help/pfilter.html">pfilter</a>()</code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
-<p>More on sequential Monte Carlo methods in <span class="pkg">pomp</span>: 
+<p>More on sequential Monte Carlo methods: 
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
 <code><a href="../../pomp/help/cond.logLik.html">cond.logLik</a>()</code>,
 <code><a href="../../pomp/help/eff.sample.size.html">eff.sample.size</a>()</code>,
@@ -278,21 +279,21 @@ To circumvent this problem, use the <code>cdir</code> and <code>cfile</code> opt
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 <p>More on <span class="pkg">pomp</span> estimation algorithms:
-<code><a href="../../pomp/help/abc.html">abc</a>()</code>,
+<code><a href="../../pomp/help/approximate Bayesian computation.html">approximate Bayesian computation</a></code>,
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
-<code><a href="../../pomp/help/estimation_algorithms.html">estimation_algorithms</a></code>,
-<code><a href="../../pomp/help/nonlinear_forecasting.html">nonlinear_forecasting</a></code>,
+<code><a href="../../pomp/help/estimation algorithms.html">estimation algorithms</a></code>,
+<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
-<code><a href="../../pomp/help/probe_matching.html">probe_matching</a></code>,
-<code><a href="../../pomp/help/spectrum_matching.html">spectrum_matching</a></code>
+<code><a href="../../pomp/help/probe matching.html">probe matching</a></code>,
+<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>
 </p>
-<p>More on estimation methods based on maximization:
-<code><a href="../../pomp/help/nonlinear_forecasting.html">nonlinear_forecasting</a></code>,
-<code><a href="../../pomp/help/probe_matching.html">probe_matching</a></code>,
-<code><a href="../../pomp/help/spectrum_matching.html">spectrum_matching</a></code>,
-<code><a href="../../pomp/help/trajectory_matching.html">trajectory_matching</a></code>
+<p>More on maximization-based estimation methods:
+<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/probe matching.html">probe matching</a></code>,
+<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>,
+<code><a href="../../pomp/help/trajectory matching.html">trajectory matching</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.1.5 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.2.0 <a href="00Index.html">Index</a>]</div>
 </body></html>

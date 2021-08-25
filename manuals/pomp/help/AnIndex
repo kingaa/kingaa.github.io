@@ -26,7 +26,6 @@ as.pomp	as_pomp
 bake	bake
 basic components	basic_components
 basic probes	basic_probes
-basic_probes	basic_probes
 blowflies	blowflies
 blowflies1	blowflies
 blowflies2	blowflies
@@ -70,6 +69,7 @@ continue,ANY-method	continue
 continue,mif2d_pomp-method	continue
 continue,missing-method	continue
 continue,pmcmcd_pomp-method	continue
+covariates	covariate_table
 covariate_table	covariate_table
 covariate_table,ANY-method	covariate_table
 covariate_table,character-method	covariate_table
@@ -198,7 +198,6 @@ nlf_objfun,missing-method	nlf
 nlf_objfun,nlf_objfun-method	nlf
 nlf_objfun,pomp-method	nlf
 nonlinear forecasting	nlf
-nonlinear_forecasting	nlf
 objfun	objfun
 obs	obs
 obs,pomp-method	obs
@@ -257,7 +256,6 @@ pompLoad	load
 pompLoad,pomp-method	load
 pompUnload	load
 pompUnload,pomp-method	load
-pomp_examples	pomp_examp
 pomp_fun	pomp_fun
 pomp_fun,character-method	pomp_fun
 pomp_fun,Csnippet-method	pomp_fun
@@ -297,7 +295,6 @@ probe.period	basic_probes
 probe.quantile	basic_probes
 probe.sd	basic_probes
 probe.var	basic_probes
-probe_match	probe_match
 probe_objfun	probe_match
 probe_objfun,ANY-method	probe_match
 probe_objfun,data.frame-method	probe_match
@@ -385,7 +382,6 @@ spect,pomp-method	spect
 spect,spectd_pomp-method	spect
 spect,spect_match_objfun-method	spect
 spectrum matching	spect_match
-spect_match	spect_match
 spect_objfun	spect_match
 spect_objfun,ANY-method	spect_match
 spect_objfun,data.frame-method	spect_match
@@ -433,7 +429,6 @@ trajectory,ANY-method	trajectory
 trajectory,missing-method	trajectory
 trajectory,pomp-method	trajectory
 trajectory,traj_match_objfun-method	trajectory
-traj_match	traj_match
 traj_objfun	traj_match
 traj_objfun,ANY-method	traj_match
 traj_objfun,data.frame-method	traj_match

@@ -43,6 +43,7 @@ c.Mif2	concat
 c.Pfilter	concat
 c.Pmcmc	concat
 c.Pomp	concat
+childhood disease data	childhood
 coef	coef
 coef,listie-method	coef
 coef,objfun-method	coef
@@ -125,8 +126,8 @@ enkf,missing-method	kalman
 enkf,pomp-method	kalman
 estimation algorithms	estimation_algorithms
 euler	rprocess_spec
-ewcitmeas	measles
-ewmeas	measles
+ewcitmeas	childhood
+ewmeas	childhood
 expit	transformations
 filter.mean	filter_mean
 filter.mean,ANY-method	filter_mean
@@ -173,10 +174,9 @@ logLik,spect_match_objfun-method	loglik
 logLik,wpfilterd_pomp-method	loglik
 logmeanexp	logmeanexp
 log_barycentric	transformations
-LondonYorke	measles
+LondonYorke	childhood
 lookup	lookup
 map	skeleton_spec
-measles	measles
 melt	melt
 melt,listie-method	melt
 melt,pomp-method	melt

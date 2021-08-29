@@ -91,5 +91,40 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/userdata.html">userdata</a></code>
 </p>
 
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+  ## We start with the pre-built Ricker example:
+  
+  ricker() -&gt; po
+
+  ## To change the measurement model simulator, rmeasure,
+  ## we use the 'rmeasure' argument in any 'pomp'
+  ## elementary or estimation function.
+  ## Here, we pass the rmeasure specification to 'simulate'
+  ## as an R function.
+
+  po %&gt;%
+    simulate(
+      rmeasure=function (N, phi, ...) {
+        c(y=rpois(n=1,lambda=phi*N))
+      }
+    ) -&gt; sim
+
+  ## We can also pass it as a C snippet:
+
+  po %&gt;%
+    simulate(
+      rmeasure=Csnippet("y = rpois(phi*N);"),
+      paramnames="phi",
+      statenames="N"
+    ) -&gt; sim
+
+
+## End(Not run)
+</pre>
+
 <hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.2.2 <a href="00Index.html">Index</a>]</div>
 </body></html>

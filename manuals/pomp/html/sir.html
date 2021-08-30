@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body>
 
-<table width="100%" summary="page for sir_models {pomp}"><tr><td>sir_models {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%" summary="page for SIR models {pomp}"><tr><td>SIR models {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Compartmental epidemiological models</h2>
 
@@ -147,18 +147,19 @@ available on the <a href="https://kingaa.github.io/pomp/">package website</a>.
 <h3>Examples</h3>
 
 <pre>
-po &lt;- sir()
-plot(po)
-coef(po)
 
-po &lt;- sir2()
-plot(po)
-plot(simulate(window(po,end=3)))
-coef(po)
-
-po %&gt;% as.data.frame() %&gt;% head()
+  po &lt;- sir()
+  plot(po)
+  coef(po)
+  
+  po &lt;- sir2()
+  plot(po)
+  plot(simulate(window(po,end=3)))
+  coef(po)
+  
+  po %&gt;% as.data.frame() %&gt;% head()
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.2.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
 </body></html>

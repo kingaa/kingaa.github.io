@@ -136,66 +136,70 @@ See the example below.
 <h3>Examples</h3>
 
 <pre>
-## The familiar Ricker example
-## For some bizarre reason, we wish to pass 'phi' via the userdata facility.
 
-## C snippet approach:
+  ## The familiar Ricker example
+  ## For some bizarre reason, we wish to pass 'phi'
+  ## via the userdata facility.
 
-simulate(times=1:100,t0=0,
-  phi=as.double(100),
-  params=c(r=3.8,sigma=0.3,N.0=7),
-  rprocess=discrete_time(
-    step.fun=Csnippet("
+  ## C snippet approach:
+
+  simulate(times=1:100,t0=0,
+    phi=as.double(100),
+    params=c(r=3.8,sigma=0.3,N.0=7),
+    rprocess=discrete_time(
+      step.fun=Csnippet("
       double e = (sigma &gt; 0.0) ? rnorm(0,sigma) : 0.0;
       N = r*N*exp(-N+e);"
+      ),
+      delta.t=1
     ),
-    delta.t=1
-  ),
-  rmeasure=Csnippet("
+    rmeasure=Csnippet("
        double phi = *(get_userdata_double(\"phi\"));
        y = rpois(phi*N);"
-  ),
-  paramnames=c("r","sigma"),
-  statenames="N",
-  obsnames="y"
-) -&gt; rick1
+    ),
+    paramnames=c("r","sigma"),
+    statenames="N",
+    obsnames="y"
+  ) -&gt; rick1
 
-## The same problem solved using 'globals':
-simulate(times=1:100,t0=0,
-  globals=Csnippet("static double phi = 100;"),
-  params=c(r=3.8,sigma=0.3,N.0=7),
-  rprocess=discrete_time(
-    step.fun=Csnippet("
+  ## The same problem solved using 'globals':
+  simulate(times=1:100,t0=0,
+    globals=Csnippet("static double phi = 100;"),
+    params=c(r=3.8,sigma=0.3,N.0=7),
+    rprocess=discrete_time(
+      step.fun=Csnippet("
       double e = (sigma &gt; 0.0) ? rnorm(0,sigma) : 0.0;
       N = r*N*exp(-N+e);"
+      ),
+      delta.t=1
     ),
-    delta.t=1
-  ),
-  rmeasure=Csnippet("
+    rmeasure=Csnippet("
        y = rpois(phi*N);"
-  ),
-  paramnames=c("r","sigma"),
-  statenames="N",
-  obsnames="y"
-) -&gt; rick2
+    ),
+    paramnames=c("r","sigma"),
+    statenames="N",
+    obsnames="y"
+  ) -&gt; rick2
 
-## Finally, the R function approach:
+  ## Finally, the R function approach:
 
-simulate(times=1:100,t0=0,
-  phi=100,
-  params=c(r=3.8,sigma=0.3,N_0=7),
-  rprocess=discrete_time(
-    step.fun=function (r, N, sigma, ...) {
-      e &lt;- rnorm(n=1,mean=0,sd=sigma)
-       c(N=r*N*exp(-N+e))
-    },
-    delta.t=1
-  ),
-  rmeasure=function(phi, N, ...) {
+  simulate(times=1:100,t0=0,
+    phi=100,
+    params=c(r=3.8,sigma=0.3,N_0=7),
+    rprocess=discrete_time(
+      step.fun=function (r, N, sigma, ...) {
+        e &lt;- rnorm(n=1,mean=0,sd=sigma)
+        c(N=r*N*exp(-N+e))
+      },
+      delta.t=1
+    ),
+    rmeasure=function(phi, N, ...) {
       c(y=rpois(n=1,lambda=phi*N))
-  }
-) -&gt; rick3
+    }
+  ) -&gt; rick3
+
+
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.2.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
 </body></html>

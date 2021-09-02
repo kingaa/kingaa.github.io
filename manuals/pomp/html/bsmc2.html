@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: The Liu and West Bayesian particle filter</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for bsmc2 {pomp}"><tr><td>bsmc2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -43,7 +44,8 @@ bsmc2(data, Np, smooth = 0.1, ..., verbose = getOption("verbose", FALSE))
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
-i.e., the output of another <span class="pkg">pomp</span> calculation.</p>
+i.e., the output of another <span class="pkg">pomp</span> calculation.
+Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
 <tr valign="top"><td><code>Np</code></td>
 <td>
@@ -72,7 +74,7 @@ This will be coerced internally to storage mode <code>double</code>.</p>
 <tr valign="top"><td><code>rprior</code></td>
 <td>
 <p>optional; prior distribution sampler, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
-For more information, see <a href="../../pomp/help/prior specification.html">prior specification</a>.
+For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
 </td></tr>
 <tr valign="top"><td><code>rinit</code></td>
@@ -80,19 +82,19 @@ Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit specification.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess specification.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess specification.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
-For more information, see <a href="../../pomp/help/dmeasure specification.html">dmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>partrans</code></td>
 <td>
@@ -138,7 +140,7 @@ The following methods are avaiable:
 </p>
 
 <dl>
-<dt><code><a href="../../pomp/help/plot,bsmcd_pomp-method.html">plot</a></code></dt><dd><p>produces diagnostic plots</p>
+<dt><code><a href="../../pomp/help/plot+2Cbsmcd_pomp-method.html">plot</a></code></dt><dd><p>produces diagnostic plots</p>
 </dd>
 <dt><code><a href="../../pomp/help/as.data.frame.html">as.data.frame</a></code></dt><dd><p>puts the prior and posterior samples into a data frame</p>
 </dd>
@@ -173,10 +175,10 @@ Springer, New York, 2001.
 <h3>See Also</h3>
 
 <p>More on Bayesian methods:
-<code><a href="../../pomp/help/approximate Bayesian computation.html">approximate Bayesian computation</a></code>,
+<code><a href="../../pomp/help/approximate+20Bayesian+20computation.html">approximate Bayesian computation</a></code>,
 <code><a href="../../pomp/help/dprior.html">dprior</a>()</code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
-<code><a href="../../pomp/help/prior specification.html">prior specification</a></code>,
+<code><a href="../../pomp/help/prior+20specification.html">prior specification</a></code>,
 <code><a href="../../pomp/help/rprior.html">rprior</a>()</code>
 </p>
 <p>More on full-information (i.e., likelihood-based) methods:
@@ -200,15 +202,15 @@ Springer, New York, 2001.
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 <p>More on <span class="pkg">pomp</span> estimation algorithms:
-<code><a href="../../pomp/help/approximate Bayesian computation.html">approximate Bayesian computation</a></code>,
-<code><a href="../../pomp/help/estimation algorithms.html">estimation algorithms</a></code>,
+<code><a href="../../pomp/help/approximate+20Bayesian+20computation.html">approximate Bayesian computation</a></code>,
+<code><a href="../../pomp/help/estimation+20algorithms.html">estimation algorithms</a></code>,
 <code><a href="../../pomp/help/mif2.html">mif2</a>()</code>,
-<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
-<code><a href="../../pomp/help/probe matching.html">probe matching</a></code>,
-<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>
+<code><a href="../../pomp/help/probe+20matching.html">probe matching</a></code>,
+<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
-</body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.5.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

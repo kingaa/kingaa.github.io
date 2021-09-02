@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Probe matching</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for probe matching {pomp}"><tr><td>probe matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -76,7 +77,8 @@ probe_objfun(
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
-i.e., the output of another <span class="pkg">pomp</span> calculation.</p>
+i.e., the output of another <span class="pkg">pomp</span> calculation.
+Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
 <tr valign="top"><td><code>est</code></td>
 <td>
@@ -94,7 +96,7 @@ It should be a large number (i.e., bigger than any legitimate values the objecti
 A probe is simply a scalar- or vector-valued function of one argument that can be applied to the data array of a &lsquo;pomp&rsquo;.
 A vector-valued probe must always return a vector of the same size.
 A number of useful probes are provided with the package:
-see <a href="../../pomp/help/basic probes.html">basic probes</a>.</p>
+see <a href="../../pomp/help/basic+20probes.html">basic probes</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>nsim</code></td>
 <td>
@@ -117,19 +119,19 @@ This will be coerced internally to storage mode <code>double</code>.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit specification.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess specification.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess specification.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
-For more information, see <a href="../../pomp/help/rmeasure specification.html">rmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>partrans</code></td>
 <td>
@@ -201,28 +203,28 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 <p><code><a href="../../stats/help/optim.html">optim</a></code> <code><a href="../../subplex/help/subplex.html">subplex</a></code> <code><a href="../../nloptr/help/nloptr.html">nloptr</a></code>
 </p>
 <p>More on methods based on summary statistics: 
-<code><a href="../../pomp/help/approximate Bayesian computation.html">approximate Bayesian computation</a></code>,
-<code><a href="../../pomp/help/basic probes.html">basic probes</a></code>,
-<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/approximate+20Bayesian+20computation.html">approximate Bayesian computation</a></code>,
+<code><a href="../../pomp/help/basic+20probes.html">basic probes</a></code>,
+<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
 <code><a href="../../pomp/help/probe.html">probe</a>()</code>,
-<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>,
+<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>,
 <code><a href="../../pomp/help/spect.html">spect</a>()</code>
 </p>
 <p>More on <span class="pkg">pomp</span> estimation algorithms:
-<code><a href="../../pomp/help/approximate Bayesian computation.html">approximate Bayesian computation</a></code>,
+<code><a href="../../pomp/help/approximate+20Bayesian+20computation.html">approximate Bayesian computation</a></code>,
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
-<code><a href="../../pomp/help/estimation algorithms.html">estimation algorithms</a></code>,
+<code><a href="../../pomp/help/estimation+20algorithms.html">estimation algorithms</a></code>,
 <code><a href="../../pomp/help/mif2.html">mif2</a>()</code>,
-<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
-<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>
+<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>
 </p>
 <p>More on maximization-based estimation methods:
 <code><a href="../../pomp/help/mif2.html">mif2</a>()</code>,
-<code><a href="../../pomp/help/nonlinear forecasting.html">nonlinear forecasting</a></code>,
-<code><a href="../../pomp/help/spectrum matching.html">spectrum matching</a></code>,
-<code><a href="../../pomp/help/trajectory matching.html">trajectory matching</a></code>
+<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>,
+<code><a href="../../pomp/help/trajectory+20matching.html">trajectory matching</a></code>
 </p>
 
 
@@ -276,5 +278,5 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
-</body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.5.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

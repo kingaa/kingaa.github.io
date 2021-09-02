@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Trajectory of a deterministic model</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for trajectory {pomp}"><tr><td>trajectory {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -48,11 +49,13 @@ Each column is treated as an independent parameter set, in correspondence with t
 <tr valign="top"><td><code>times</code></td>
 <td>
 <p>a numeric vector (length <code>ntimes</code>) containing times at which the itineraries are desired.
-These must be in non-decreasing order with <code>times[1]&gt;t0</code>.</p>
+These must be in non-decreasing order with <code>times[1]&gt;t0</code>.
+By default, this is the full set of observation times (see <code><a href="../../pomp/help/time.html">time</a></code>).</p>
 </td></tr>
 <tr valign="top"><td><code>t0</code></td>
 <td>
-<p>the time at which the initial conditions are assumed to hold.</p>
+<p>the time at which the initial conditions are assumed to hold.
+By default, this is the zero-time (see <code><a href="../../pomp/help/timezero.html">timezero</a></code>).</p>
 </td></tr>
 <tr valign="top"><td><code>format</code></td>
 <td>
@@ -70,7 +73,8 @@ An ordered factor variable, &lsquo;.id&rsquo;, distinguishes the trajectories fr
 <tr valign="top"><td><code>...</code></td>
 <td>
 <p>Additional arguments are passed to the ODE integrator (if the skeleton is a vectorfield) and are ignored if it is a map.
-See <code><a href="../../deSolve/help/ode.html">ode</a></code> for a description of the additional arguments accepted by the ODE integrator.</p>
+See <code><a href="../../deSolve/help/ode.html">ode</a></code> for a description of the additional arguments accepted by the ODE integrator.
+By default, this is the parameter vector stored in <code>object</code> (see <code><a href="../help/coef.html">coef</a></code>).</p>
 </td></tr>
 <tr valign="top"><td><code>verbose</code></td>
 <td>
@@ -100,7 +104,7 @@ If <code>x</code> is the returned matrix, <code>x[i,j,k]</code> is the i-th comp
 <h3>See Also</h3>
 
 <p>More on <span class="pkg">pomp</span> elementary algorithms: 
-<code><a href="../../pomp/help/elementary algorithms.html">elementary algorithms</a></code>,
+<code><a href="../../pomp/help/elementary+20algorithms.html">elementary algorithms</a></code>,
 <code><a href="../../pomp/help/kalman.html">kalman</a></code>,
 <code><a href="../../pomp/help/pfilter.html">pfilter</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
@@ -111,10 +115,10 @@ If <code>x</code> is the returned matrix, <code>x[i,j,k]</code> is the i-th comp
 </p>
 <p>More on methods for deterministic process models: 
 <code><a href="../../pomp/help/flow.html">flow</a>()</code>,
-<code><a href="../../pomp/help/skeleton specification.html">skeleton specification</a></code>,
+<code><a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a></code>,
 <code><a href="../../pomp/help/skeleton.html">skeleton</a>()</code>,
-<code><a href="../../pomp/help/trajectory matching.html">trajectory matching</a></code>
+<code><a href="../../pomp/help/trajectory+20matching.html">trajectory matching</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
-</body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.5.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

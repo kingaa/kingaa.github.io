@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Simulations of a partially-observed Markov process</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for simulate {pomp}"><tr><td>simulate {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -82,10 +83,9 @@ The RNG will be restored to its original state afterward.</p>
 </td></tr>
 <tr valign="top"><td><code>times</code></td>
 <td>
-<p>the times at which observations are made.
+<p>the sequence of observation times.
 <code>times</code> must indicate the column of observation times by name or index.
-The time vector must be numeric and non-decreasing.
-Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
+The time vector must be numeric and non-decreasing.</p>
 </td></tr>
 <tr valign="top"><td><code>t0</code></td>
 <td>
@@ -102,19 +102,19 @@ containing the parameters at which the simulations are to be performed.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit specification.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess specification.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess specification.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
-For more information, see <a href="../../pomp/help/rmeasure specification.html">rmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>format</code></td>
 <td>
@@ -156,7 +156,8 @@ See <a href="../../pomp/help/userdata.html">userdata</a> for information on how 
 </td></tr>
 <tr valign="top"><td><code>object</code></td>
 <td>
-<p>optional; if present, it should be the output of one of <span class="pkg">pomp</span>'s methods</p>
+<p>optional;
+if present, it should be a data frame or a &lsquo;pomp&rsquo; object.</p>
 </td></tr>
 </table>
 
@@ -200,7 +201,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <h3>See Also</h3>
 
 <p>More on <span class="pkg">pomp</span> elementary algorithms: 
-<code><a href="../../pomp/help/elementary algorithms.html">elementary algorithms</a></code>,
+<code><a href="../../pomp/help/elementary+20algorithms.html">elementary algorithms</a></code>,
 <code><a href="../../pomp/help/kalman.html">kalman</a></code>,
 <code><a href="../../pomp/help/pfilter.html">pfilter</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
@@ -210,5 +211,5 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
-</body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.5.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

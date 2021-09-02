@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Parus major population dynamics</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for parus {pomp}"><tr><td>parus {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -34,20 +35,20 @@ Original source: McCleer and Perrins (1991).
 <p>More data sets provided with <span class="pkg">pomp</span>: 
 <code><a href="../../pomp/help/blowflies.html">blowflies</a></code>,
 <code><a href="../../pomp/help/bsflu.html">bsflu</a></code>,
-<code><a href="../../pomp/help/childhood disease data.html">childhood disease data</a></code>,
+<code><a href="../../pomp/help/childhood+20disease+20data.html">childhood disease data</a></code>,
 <code><a href="../../pomp/help/dacca.html">dacca</a>()</code>,
 <code><a href="../../pomp/help/ebola.html">ebola</a></code>
 </p>
 <p>More examples provided with <span class="pkg">pomp</span>: 
-<code><a href="../../pomp/help/SIR models.html">SIR models</a></code>,
+<code><a href="../../pomp/help/SIR+20models.html">SIR models</a></code>,
 <code><a href="../../pomp/help/blowflies.html">blowflies</a></code>,
 <code><a href="../../pomp/help/bsflu.html">bsflu</a></code>,
-<code><a href="../../pomp/help/childhood disease data.html">childhood disease data</a></code>,
+<code><a href="../../pomp/help/childhood+20disease+20data.html">childhood disease data</a></code>,
 <code><a href="../../pomp/help/dacca.html">dacca</a>()</code>,
 <code><a href="../../pomp/help/ebola.html">ebola</a></code>,
 <code><a href="../../pomp/help/gompertz.html">gompertz</a>()</code>,
 <code><a href="../../pomp/help/ou2.html">ou2</a>()</code>,
-<code><a href="../../pomp/help/pomp examples.html">pomp examples</a></code>,
+<code><a href="../../pomp/help/pomp+20examples.html">pomp examples</a></code>,
 <code><a href="../../pomp/help/ricker.html">ricker</a>()</code>,
 <code><a href="../../pomp/help/rw2.html">rw2</a>()</code>,
 <code><a href="../../pomp/help/verhulst.html">verhulst</a>()</code>
@@ -57,32 +58,33 @@ Original source: McCleer and Perrins (1991).
 <h3>Examples</h3>
 
 <pre>
+## Not run: 
+  parus %&gt;%
+    pfilter(Np=1000,times="year",t0=1960,
+      params=c(K=190,r=2.7,sigma=0.2,theta=0.05,N.0=148),
+      rprocess=discrete_time(
+        function (r, K, sigma, N, ...) {
+          e &lt;- rnorm(n=1,mean=0,sd=sigma)
+          c(N = exp(log(N)+r*(1-N/K)+e))
+        },
+        delta.t=1
+      ),
+      rmeasure=function (N, theta, ...) {
+        c(pop=rnbinom(n=1,size=1/theta,mu=N+1e-10))
+      },
+      dmeasure=function (pop, N, theta, ..., log) {
+        dnbinom(x=pop,mu=N+1e-10,size=1/theta,log=log)
+      },
+      partrans=parameter_trans(log=c("sigma","theta","N_0","r","K")),
+      paramnames=c("sigma","theta","N_0","r","K")
+    ) -&gt; pf
 
-parus %&gt;%
-  pfilter(Np=1000,times="year",t0=1960,
-  params=c(K=190,r=2.7,sigma=0.2,theta=0.05,N.0=148),
-  rprocess=discrete_time(
-     function (r, K, sigma, N, ...) {
-       e &lt;- rnorm(n=1,mean=0,sd=sigma)
-       c(N = exp(log(N)+r*(1-N/K)+e))
-     },
-     delta.t=1
-  ),
-  rmeasure=function (N, theta, ...) {
-     c(pop=rnbinom(n=1,size=1/theta,mu=N+1e-10))
-  },
-  dmeasure=function (pop, N, theta, ..., log) {
-     dnbinom(x=pop,mu=N+1e-10,size=1/theta,log=log)
-  },
-  partrans=parameter_trans(log=c("sigma","theta","N_0","r","K")),
-  paramnames=c("sigma","theta","N_0","r","K")
-) -&gt; pf
+  pf %&gt;% logLik()
 
-pf %&gt;% logLik()
+  pf %&gt;% simulate() %&gt;% plot()
 
-pf %&gt;% simulate() %&gt;% plot()
-
+## End(Not run)
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
-</body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.5.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

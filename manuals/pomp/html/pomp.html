@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Constructor of the basic pomp object</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for pomp {pomp}"><tr><td>pomp {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -82,14 +83,14 @@ pomp(
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
-i.e., the output of another <span class="pkg">pomp</span> calculation.</p>
+i.e., the output of another <span class="pkg">pomp</span> calculation.
+Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
 <tr valign="top"><td><code>times</code></td>
 <td>
-<p>the times at which observations are made.
+<p>the sequence of observation times.
 <code>times</code> must indicate the column of observation times by name or index.
-The time vector must be numeric and non-decreasing.
-Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
+The time vector must be numeric and non-decreasing.</p>
 </td></tr>
 <tr valign="top"><td><code>t0</code></td>
 <td>
@@ -110,51 +111,51 @@ See <a href="../../pomp/help/userdata.html">userdata</a> for information on how 
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit specification.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess specification.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess specification.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>dprocess</code></td>
 <td>
 <p>optional;
 specification of the probability density evaluation function of the unobserved state process.
 Setting <code>dprocess=NULL</code> removes the latent-state density evaluator.
-For more information, see <a href="../../pomp/help/dprocess specification.html">dprocess specification</a>.</p>
+For more information, see <a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
-For more information, see <a href="../../pomp/help/rmeasure specification.html">rmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
-For more information, see <a href="../../pomp/help/dmeasure specification.html">dmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>skeleton</code></td>
 <td>
 <p>optional; the deterministic skeleton of the unobserved state process.
 Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
-Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton specification.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton specification.html">map</a></code> fnctions.
-For more information, see <a href="../../pomp/help/skeleton specification.html">skeleton specification</a>.
+Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton+20specification.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton+20specification.html">map</a></code> fnctions.
+For more information, see <a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a>.
 Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 </td></tr>
 <tr valign="top"><td><code>rprior</code></td>
 <td>
 <p>optional; prior distribution sampler, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
-For more information, see <a href="../../pomp/help/prior specification.html">prior specification</a>.
+For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
 </td></tr>
 <tr valign="top"><td><code>dprior</code></td>
 <td>
 <p>optional; prior distribution density evaluator, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
-For more information, see <a href="../../pomp/help/prior specification.html">prior specification</a>.
+For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>dprior=NULL</code> resets the prior distribution to its default, which is a flat improper prior.</p>
 </td></tr>
 <tr valign="top"><td><code>partrans</code></td>
@@ -184,7 +185,7 @@ This will be coerced internally to storage mode <code>double</code>.</p>
 <td>
 <p>optional character vector;
 contains the names of accumulator variables.
-See <a href="../../pomp/help/accumulator variables.html">accumulators</a> for a definition and discussion of accumulator variables.</p>
+See <a href="../../pomp/help/accumulator+20variables.html">accumulators</a> for a definition and discussion of accumulator variables.</p>
 </td></tr>
 <tr valign="top"><td><code>obsnames</code></td>
 <td>
@@ -308,22 +309,22 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 <p>More on implementing POMP models: 
 <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code>,
-<code><a href="../../pomp/help/accumulator variables.html">accumulator variables</a></code>,
-<code><a href="../../pomp/help/basic components.html">basic components</a></code>,
+<code><a href="../../pomp/help/accumulator+20variables.html">accumulator variables</a></code>,
+<code><a href="../../pomp/help/basic+20components.html">basic components</a></code>,
 <code><a href="../../pomp/help/covariates.html">covariates</a></code>,
 <code><a href="../../pomp/help/distributions.html">distributions</a></code>,
-<code><a href="../../pomp/help/dmeasure specification.html">dmeasure specification</a></code>,
-<code><a href="../../pomp/help/dprocess specification.html">dprocess specification</a></code>,
-<code><a href="../../pomp/help/parameter transformations.html">parameter transformations</a></code>,
+<code><a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a></code>,
+<code><a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a></code>,
+<code><a href="../../pomp/help/parameter+20transformations.html">parameter transformations</a></code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
-<code><a href="../../pomp/help/prior specification.html">prior specification</a></code>,
-<code><a href="../../pomp/help/rinit specification.html">rinit specification</a></code>,
-<code><a href="../../pomp/help/rmeasure specification.html">rmeasure specification</a></code>,
-<code><a href="../../pomp/help/rprocess specification.html">rprocess specification</a></code>,
-<code><a href="../../pomp/help/skeleton specification.html">skeleton specification</a></code>,
+<code><a href="../../pomp/help/prior+20specification.html">prior specification</a></code>,
+<code><a href="../../pomp/help/rinit+20specification.html">rinit specification</a></code>,
+<code><a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a></code>,
+<code><a href="../../pomp/help/rprocess+20specification.html">rprocess specification</a></code>,
+<code><a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a></code>,
 <code><a href="../../pomp/help/transformations.html">transformations</a></code>,
 <code><a href="../../pomp/help/userdata.html">userdata</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.3.0 <a href="00Index.html">Index</a>]</div>
-</body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 3.5.5.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

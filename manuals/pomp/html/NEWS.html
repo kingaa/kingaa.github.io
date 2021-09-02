@@ -1,20 +1,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: News for package 'pomp'</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
 <table width="100%" summary="page for NEWS"><tr><td>NEWS</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
+
+<h3>Changes in <span class="pkg">pomp</span> version 3.5.4</h3>
+
+
+<ul>
+<li><p> Stateful objective functions created by <code>traj_objfun</code>, <code>nlf_objfun</code>, <code>probe_objfun</code>, and <code>spect_objfun</code> now have default arguments.
+In particular, the default is argument is a zero-length numeric vector.
+Calling such a function with no arguments is valid if and only if the objective function was created with no variables to estimate (empty <code>est</code>).
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">pomp</span> version 3.5.3</h3>
+
+
+<ul>
+<li><p> Fixed bug in <code>rprior</code> arising with integer-valued return vectors.
+</p>
+</li></ul>
+
+
 
 <h3>Changes in <span class="pkg">pomp</span> version 3.5.2</h3>
 
 
 <ul>
 <li><p> Major improvements to the package manual, including richer cross-linking and better organization.
-</p>
-</li>
-<li><p> Fixed bug in <code>rprior</code> arising with integer-valued return vectors.
 </p>
 </li></ul>
 
@@ -1910,4 +1930,4 @@ Also, incompleteness in the <code>sannbox</code> documentation has been correcte
 
 
 
-</body></html>
+</div></body></html>

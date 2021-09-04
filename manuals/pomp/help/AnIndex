@@ -200,6 +200,7 @@ nlf_objfun,pomp-method	nlf
 nonlinear forecasting	nlf
 objfun	objfun
 obs	obs
+obs,listie-method	obs
 obs,pomp-method	obs
 onestep	rprocess_spec
 ou2	ou2
@@ -394,6 +395,7 @@ spy,ANY-method	spy
 spy,missing-method	spy
 spy,pomp-method	spy
 states	states
+states,listie-method	states
 states,pomp-method	states
 stew	bake
 summary	summary

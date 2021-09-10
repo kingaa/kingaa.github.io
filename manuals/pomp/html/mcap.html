@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Monte Carlo adjusted profile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for mcap {pomp}"><tr><td>mcap {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Monte Carlo adjusted profile</h2>
+
+<h3>Description</h3>
+
+<p>Given a collection of points maximizing the likelihood over a range
+of fixed values of a focal parameter, this function constructs 
+a profile likelihood confidence interval accommodating both
+Monte Carlo error in the profile and statistical uncertainty present
+in the likelihood function.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+mcap(logLik, parameter, level = 0.95, span = 0.75, Ngrid = 1000)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>logLik</code></td>
+<td>
+<p>numeric; a vector of profile log likelihood evaluations.</p>
+</td></tr>
+<tr valign="top"><td><code>parameter</code></td>
+<td>
+<p>numeric; the corresponding values of the focal parameter.</p>
+</td></tr>
+<tr valign="top"><td><code>level</code></td>
+<td>
+<p>numeric; the confidence level required.</p>
+</td></tr>
+<tr valign="top"><td><code>span</code></td>
+<td>
+<p>numeric; the <code><a href="../../stats/help/loess.html">loess</a></code> smoothing parameter.</p>
+</td></tr>
+<tr valign="top"><td><code>Ngrid</code></td>
+<td>
+<p>integer; the number of points to evaluate the smoothed profile.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>mcap</code> returns a list including the' <code><a href="../../stats/help/loess.html">loess</a></code>-smoothed
+profile, a quadratic approximation, and the constructed confidence interval.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Edward L. Ionides
+</p>
+
+
+<h3>References</h3>
+
+<p>E. L. Ionides, C. Breto, J. Park, R. A. Smith, and A. A. King. Monte Carlo profile confidence intervals for dynamic systems. <em>Journal of the Royal Society, Interface</em> <b>14</b>, 20170126, 2017.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.2.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

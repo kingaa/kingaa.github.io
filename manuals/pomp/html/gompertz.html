@@ -65,12 +65,17 @@ gompertz(
 
 <h3>Details</h3>
 
-<p>The state process is <i>X[t+1]=K^(1-S) X[t]^S eps[t]</i>, where <i>S=e^{-r}</i>
+<p>The state process is
+</p>
+<p style="text-align: center;"><i>X[t+1]=K^(1-S) X[t]^S eps[t],</i></p>
+<p> where <i>S=e^{-r}</i>
 and the <i>eps[t]</i> are i.i.d. lognormal random deviates with
-variance <i>sigma^2</i>.  The observed variables <i>Y_t</i> are
-distributed as
-<i>lognormal(log(X[t]),tau)</i>.
-Parameters include the per-capita growth rate <i>r</i>, the carrying
+variance <i>sigma^2</i>.
+The observed variables <i>Y_t</i> are distributed as
+</p>
+<p style="text-align: center;"><i>Y[t]~lognormal(log(X[t]),tau).</i></p>
+
+<p>Parameters include the per-capita growth rate <i>r</i>, the carrying
 capacity <i>K</i>, the process noise s.d. <i>sigma</i>, the
 measurement error s.d. <i>tau</i>, and the initial condition
 <i>X[0]</i>.  The &lsquo;pomp&rsquo; object includes parameter
@@ -89,12 +94,10 @@ transformations that log-transform the parameters for estimation purposes.
 <p>More examples provided with <span class="pkg">pomp</span>: 
 <code><a href="../../pomp/help/SIR+20models.html">SIR models</a></code>,
 <code><a href="../../pomp/help/blowflies.html">blowflies</a></code>,
-<code><a href="../../pomp/help/bsflu.html">bsflu</a></code>,
 <code><a href="../../pomp/help/childhood+20disease+20data.html">childhood disease data</a></code>,
 <code><a href="../../pomp/help/dacca.html">dacca</a>()</code>,
 <code><a href="../../pomp/help/ebola.html">ebola</a></code>,
 <code><a href="../../pomp/help/ou2.html">ou2</a>()</code>,
-<code><a href="../../pomp/help/parus.html">parus</a></code>,
 <code><a href="../../pomp/help/pomp+20examples.html">pomp examples</a></code>,
 <code><a href="../../pomp/help/ricker.html">ricker</a>()</code>,
 <code><a href="../../pomp/help/rw2.html">rw2</a>()</code>,
@@ -111,5 +114,5 @@ plot(gompertz(K=2,r=0.01))
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.2.1 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

@@ -56,10 +56,16 @@ parmat(params, nrep = 1)
   ## generate a bifurcation diagram for the Ricker map
   p &lt;- parmat(coef(ricker()),nrep=500)
   p["r",] &lt;- exp(seq(from=1.5,to=4,length=500))
-  x &lt;- trajectory(ricker(),times=seq(from=1000,to=2000,by=1),params=p)
-  matplot(p["r",],x["N",,],pch='.',col='black',xlab="log(r)",ylab="N",log='x')
+  trajectory(
+    ricker(),
+    times=seq(from=1000,to=2000,by=1),
+    params=p,
+    format="array"
+  ) -&gt; x
+  matplot(p["r",],x["N",,],pch='.',col='black',
+    xlab=expression(log(r)),ylab="N",log='x')
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.2.1 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

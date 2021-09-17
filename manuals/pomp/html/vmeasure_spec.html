@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: The variance of the measurement model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for vmeasure specification {pomp}"><tr><td>vmeasure specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>The variance of the measurement model</h2>
+
+<h3>Description</h3>
+
+<p>Specification of the measurement-model covariance  matrix, vmeasure.
+</p>
+
+
+<h3>Details</h3>
+
+<p>The measurement model is the link between the data and the unobserved state process.
+Some algorithms require the conditional covariance of the measurement model, given the latent state and parameters.
+This is supplied using the <code>vmeasure</code> argument.
+</p>
+<p>Suppose you have a procedure to compute this conditional covariance matrix, given the value of the latent state variables.
+Then you can furnish </p>
+<pre>
+  vmeasure = f</pre>
+<p>to <span class="pkg">pomp</span> algorithms,
+where <code>f</code> is a C snippet or <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that implements your procedure.
+</p>
+<p>Using a C snippet is much preferred, due to its much greater computational efficiency.
+See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for general rules on writing C snippets.
+</p>
+<p>In writing a <code>vmeasure</code> C snippet, bear in mind that:
+</p>
+
+<ol>
+<li><p> The goal of such a snippet is to fill variables named <code>V_y_z</code> with the conditional covariances of observables <code>y</code>, <code>z</code>.
+Accordingly, there should be one assignment of <code>V_y_z</code> and one assignment of <code>V_z_y</code> for each pair of observables <code>y</code> and <code>z</code>.
+</p>
+</li>
+<li><p> In addition to the states, parameters, and covariates (if any), the variable <code>t</code>, containing the time of the observation, will be defined in the context in which the snippet is executed.
+</p>
+</li></ol>
+
+<p>The demos and the tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a> give examples.
+</p>
+<p>It is also possible, though less efficient, to specify <code>vmeasure</code> using an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function.
+In this case, specify it by furnishing </p>
+<pre>
+  vmeasure = f</pre>
+<p>to <code>pomp</code>, where <code>f</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function.
+The arguments of <code>f</code> should be chosen from among the state variables, parameters, covariates, and time.
+It must also have the argument <code>...</code>.
+<code>f</code> must return a square matrix of dimension equal to the number of observable variables.
+The row- and column-names of this matrix should match the names of the observable variables.
+The matrix should of course be symmetric.
+</p>
+
+
+<h3>Default behavior</h3>
+
+<p>The default <code>vmeasure</code> is undefined.
+It will yield missing values (<code>NA</code>).
+</p>
+
+
+<h3>Note for Windows users</h3>
+
+<p>Some Windows users report problems when using C snippets in parallel computations.
+These appear to arise when the temporary files created during the C snippet compilation process are not handled properly by the operating system.
+To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cdir</a></code> and <code><a href="../../pomp/help/pomp.html">cfile</a></code> options to cause the C snippets to be written to a file of your choice, thus avoiding the use of temporary files altogether.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../pomp/help/vmeasure.html">vmeasure</a></code>
+</p>
+<p>More on implementing POMP models: 
+<code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code>,
+<code><a href="../../pomp/help/accumulator+20variables.html">accumulator variables</a></code>,
+<code><a href="../../pomp/help/basic+20components.html">basic components</a></code>,
+<code><a href="../../pomp/help/covariates.html">covariates</a></code>,
+<code><a href="../../pomp/help/distributions.html">distributions</a></code>,
+<code><a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a></code>,
+<code><a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a></code>,
+<code><a href="../../pomp/help/emeasure+20specification.html">emeasure specification</a></code>,
+<code><a href="../../pomp/help/parameter+20transformations.html">parameter transformations</a></code>,
+<code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
+<code><a href="../../pomp/help/pomp.html">pomp</a></code>,
+<code><a href="../../pomp/help/prior+20specification.html">prior specification</a></code>,
+<code><a href="../../pomp/help/rinit+20specification.html">rinit specification</a></code>,
+<code><a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a></code>,
+<code><a href="../../pomp/help/rprocess+20specification.html">rprocess specification</a></code>,
+<code><a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a></code>,
+<code><a href="../../pomp/help/transformations.html">transformations</a></code>,
+<code><a href="../../pomp/help/userdata.html">userdata</a></code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.4.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

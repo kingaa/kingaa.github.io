@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Kalman filter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for kalmanFilter {pomp}"><tr><td>kalmanFilter {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Kalman filter</h2>
+
+<h3>Description</h3>
+
+<p>The basic Kalman filter for multivariate, linear, Gaussian processes.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+kalmanFilter(object, X0, A, Q, C, R, tol = 1e-06)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p>a pomp object containing data;</p>
+</td></tr>
+<tr valign="top"><td><code>X0</code></td>
+<td>
+<p>length-m vector containing initial state.
+This is assumed known without uncertainty.</p>
+</td></tr>
+<tr valign="top"><td><code>A</code></td>
+<td>
+<p><i>m x m</i> latent state-process transition matrix.
+<i>E[X(t+1) | X(t)] = A.X(t)</i>.</p>
+</td></tr>
+<tr valign="top"><td><code>Q</code></td>
+<td>
+<p><i>m x m</i> latent state-process covariance matrix.
+<i>Var[X(t+1) | X(t)] = Q</i></p>
+</td></tr>
+<tr valign="top"><td><code>C</code></td>
+<td>
+<p><i>n x m</i> link matrix.
+<i>E[Y(t) | X(t)] = C.X(t)</i>.</p>
+</td></tr>
+<tr valign="top"><td><code>R</code></td>
+<td>
+<p><i>n x n</i> observation process covariance matrix.
+<i>Var[Y(t) | X(t)] = R</i></p>
+</td></tr>
+<tr valign="top"><td><code>tol</code></td>
+<td>
+<p>numeric;
+the tolerance to be used in computing matrix pseudoinverses via singular-value decomposition.
+Singular values smaller than <code>tol</code> are set to zero.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>If the latent state is <i>X</i>, the observed variable is <i>Y</i>,
+<i>X(t) \in R^m</i>, <i>Y(t) \in R^n</i>, and
+</p>
+<p style="text-align: center;"><i>X(t) ~ MultivariateNormal(A X(t-1), Q)</i></p>
+
+<p style="text-align: center;"><i>Y(t) ~ MultivariateNormal(C X(t), R)</i></p>
+
+<p>Then the Kalman filter computes the exact likelihood of <i>Y</i> given
+<i>A</i>, <i>C</i>, <i>Q</i>, and <i>R</i>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A named list containing the following elements:
+</p>
+
+<dl>
+<dt>object</dt><dd><p>the &lsquo;pomp&rsquo; object</p>
+</dd>
+<dt>A, Q, C, R</dt><dd><p>as in the call</p>
+</dd>
+<dt>filter.mean</dt><dd><p><i>E[X(t)|y^*(1),&hellip;,y^*(t)]</i></p>
+</dd>
+<dt>pred.mean</dt><dd><p><i>E[X(t)|y^*(1),&hellip;,y^*(t-1)]</i></p>
+</dd>
+<dt>forecast</dt><dd><p><i>E[Y(t)|y^*(1),&hellip;,y^*(t-1)]</i></p>
+</dd>
+<dt>cond.logLik</dt><dd><p><i>f(y^*(t)|y^*(1),&hellip;,y^*(t-1))</i></p>
+</dd>
+<dt>logLik</dt><dd><p><i>f(y^*(1),&hellip;,y^*(T))</i></p>
+</dd>
+</dl>
+
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../pomp/help/enkf.html">enkf</a></code>, <code><a href="../../pomp/help/eakf.html">eakf</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+
+  library(dplyr)
+
+  gompertz() -&gt; po
+
+  po %&gt;%
+    as.data.frame() %&gt;%
+    mutate(
+      logY=log(Y)
+    ) %&gt;%
+    select(time,logY) %&gt;%
+    pomp(times="time",t0=0) %&gt;%
+    kalmanFilter(
+      X0=c(logX=0),
+      A=matrix(exp(-0.1),1,1),
+      Q=matrix(0.01,1,1),
+      C=matrix(1,1,1),
+      R=matrix(0.01,1,1)
+    ) -&gt; kf
+
+  po %&gt;%
+    pfilter(Np=1000) -&gt; pf
+
+  kf$logLik
+  logLik(pf) + sum(log(obs(pf)))
+  
+
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.4.0 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

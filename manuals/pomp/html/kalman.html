@@ -21,33 +21,36 @@
 enkf(
   data,
   Np,
-  h,
-  R,
   params,
   rinit,
   rprocess,
+  emeasure,
+  vmeasure,
   ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
-enkf(data, Np, h, R, ..., verbose = getOption("verbose", FALSE))
+enkf(data, Np, ..., verbose = getOption("verbose", FALSE))
+
+## S4 method for signature 'kalmand_pomp'
+enkf(data, Np, ..., verbose = getOption("verbose", FALSE))
 
 ## S4 method for signature 'data.frame'
 eakf(
   data,
   Np,
-  C,
-  R,
   params,
   rinit,
   rprocess,
+  emeasure,
+  vmeasure,
   ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
-eakf(data, Np, C, R, ..., verbose = getOption("verbose", FALSE))
+eakf(data, Np, ..., verbose = getOption("verbose", FALSE))
 </pre>
 
 
@@ -63,16 +66,7 @@ Internally, <code>data</code> will be internally coerced to an array with storag
 </td></tr>
 <tr valign="top"><td><code>Np</code></td>
 <td>
-<p>the number of particles to use.</p>
-</td></tr>
-<tr valign="top"><td><code>h</code></td>
-<td>
-<p>function returning the expected value of the observation given the
-state.</p>
-</td></tr>
-<tr valign="top"><td><code>R</code></td>
-<td>
-<p>matrix; variance of the measurement noise.</p>
+<p>integer; the number of particles to use, i.e., the size of the ensemble.</p>
 </td></tr>
 <tr valign="top"><td><code>params</code></td>
 <td>
@@ -92,6 +86,20 @@ For more information, see <a href="../../pomp/help/rinit+20specification.html">r
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
+<tr valign="top"><td><code>emeasure</code></td>
+<td>
+<p>the expectation of the measured variables, conditional on the latent state.
+This can be specified as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>emeasure=NULL</code> removes the emeasure component.
+For more information, see <a href="../../pomp/help/emeasure+20specification.html">emeasure specification</a>.</p>
+</td></tr>
+<tr valign="top"><td><code>vmeasure</code></td>
+<td>
+<p>the covariance of the measured variables, conditional on the latent state.
+This can be specified as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>vmeasure=NULL</code> removes the vmeasure component.
+For more information, see <a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a>.</p>
+</td></tr>
 <tr valign="top"><td><code>...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
@@ -104,11 +112,6 @@ See <a href="../../pomp/help/userdata.html">userdata</a> for information on how 
 <tr valign="top"><td><code>verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
-</td></tr>
-<tr valign="top"><td><code>C</code></td>
-<td>
-<p>matrix converting state vector into expected value of the
-observation.</p>
 </td></tr>
 </table>
 
@@ -145,6 +148,8 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 <h3>See Also</h3>
 
+<p><code><a href="../../pomp/help/kalmanFilter.html">kalmanFilter</a></code>
+</p>
 <p>More on sequential Monte Carlo methods: 
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
 <code><a href="../../pomp/help/cond.logLik.html">cond.logLik</a>()</code>,
@@ -170,5 +175,5 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.2.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.4.0 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

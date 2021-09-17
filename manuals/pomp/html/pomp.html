@@ -27,6 +27,10 @@ These comprise:
 </dd>
 <dt>dmeasure,</dt><dd><p>the evaluator of the measurement model probability density function;</p>
 </dd>
+<dt>emeasure,</dt><dd><p>the expectation of the measurements, conditional on the latent state;</p>
+</dd>
+<dt>vmeasure,</dt><dd><p>the covariance matrix of the measurements, conditional on the latent state;</p>
+</dd>
 <dt>rprior,</dt><dd><p>which samples from a prior probability distribution on the parameters;</p>
 </dd>
 <dt>dprior,</dt><dd><p>which evaluates the prior probability density function;</p>
@@ -54,6 +58,8 @@ pomp(
   dprocess,
   rmeasure,
   dmeasure,
+  emeasure,
+  vmeasure,
   skeleton,
   rprior,
   dprior,
@@ -137,6 +143,20 @@ For more information, see <a href="../../pomp/help/rmeasure+20specification.html
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
 For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
+</td></tr>
+<tr valign="top"><td><code>emeasure</code></td>
+<td>
+<p>the expectation of the measured variables, conditional on the latent state.
+This can be specified as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>emeasure=NULL</code> removes the emeasure component.
+For more information, see <a href="../../pomp/help/emeasure+20specification.html">emeasure specification</a>.</p>
+</td></tr>
+<tr valign="top"><td><code>vmeasure</code></td>
+<td>
+<p>the covariance of the measured variables, conditional on the latent state.
+This can be specified as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>vmeasure=NULL</code> removes the vmeasure component.
+For more information, see <a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a>.</p>
 </td></tr>
 <tr valign="top"><td><code>skeleton</code></td>
 <td>
@@ -315,6 +335,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/distributions.html">distributions</a></code>,
 <code><a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a></code>,
 <code><a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a></code>,
+<code><a href="../../pomp/help/emeasure+20specification.html">emeasure specification</a></code>,
 <code><a href="../../pomp/help/parameter+20transformations.html">parameter transformations</a></code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
 <code><a href="../../pomp/help/prior+20specification.html">prior specification</a></code>,
@@ -323,8 +344,9 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/rprocess+20specification.html">rprocess specification</a></code>,
 <code><a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a></code>,
 <code><a href="../../pomp/help/transformations.html">transformations</a></code>,
-<code><a href="../../pomp/help/userdata.html">userdata</a></code>
+<code><a href="../../pomp/help/userdata.html">userdata</a></code>,
+<code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.2.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.4.0 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

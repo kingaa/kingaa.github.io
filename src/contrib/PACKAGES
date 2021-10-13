@@ -41,13 +41,13 @@ MD5sum: 0876c83c1f9cdeb960c95cab3e7792d7
 NeedsCompilation: no
 
 Package: pomp
-Version: 4.0.5.0
+Version: 4.0.7.0
 Depends: R(>= 4.0.0), methods
 Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
         magrittr, plyr
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
-MD5sum: 299b3a4549548f33f321c4695d3d9cae
+MD5sum: d227881b4c3f6c797ced66799146bcf5
 NeedsCompilation: yes
 
 Package: subplex

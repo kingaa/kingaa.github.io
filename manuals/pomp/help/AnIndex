@@ -50,6 +50,7 @@ coef,objfun-method	coef
 coef,pomp-method	coef
 coef<-	coef
 coef<-,missing-method	coef
+coef<-,objfun-method	coef
 coef<-,pomp-method	coef
 concat	concat
 concat,Abc-method	concat
@@ -225,6 +226,11 @@ parameter_trans,missing,missing-method	parameter_trans
 parameter_trans,NULL,NULL-method	parameter_trans
 parameter_trans,pomp_fun,pomp_fun-method	parameter_trans
 parmat	parmat
+parmat,ANY-method	parmat
+parmat,array-method	parmat
+parmat,data.frame-method	parmat
+parmat,missing-method	parmat
+parmat,numeric-method	parmat
 partrans	partrans
 partrans,ANY-method	partrans
 partrans,missing-method	partrans
@@ -258,6 +264,8 @@ pmcmc,missing-method	pmcmc
 pmcmc,pfilterd_pomp-method	pmcmc
 pmcmc,pmcmcd_pomp-method	pmcmc
 pmcmc,pomp-method	pmcmc
+pMess	pStop
+pMess_	pStop
 pomp	pomp
 pomp examples	pomp_examp
 pomp,package	pomp-package

@@ -26,6 +26,7 @@ sir(
   beta3 = 320,
   beta_sd = 0.001,
   rho = 0.6,
+  k = 0.1,
   pop = 2100000,
   S_0 = 26/400,
   I_0 = 0.001,
@@ -44,6 +45,7 @@ sir2(
   beta2 = 410,
   beta3 = 490,
   rho = 0.1,
+  k = 0.1,
   pop = 1e+06,
   S_0 = 0.05,
   I_0 = 1e-04,
@@ -82,6 +84,10 @@ sir2(
 <td>
 <p>reporting efficiency</p>
 </td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+<p>reporting overdispersion parameter (reciprocal of the negative-binomial <em>size</em> parameter)</p>
+</td></tr>
 <tr valign="top"><td><code>pop</code></td>
 <td>
 <p>overall host population size</p>
@@ -115,6 +121,9 @@ sir2(
 Simulation is performed using an Euler multinomial approximation.
 </p>
 <p><code>sir2()</code> has the same model implemented using Gillespie's algorithm.
+</p>
+<p>In both cases the measurement model is negative binomial:
+<code>reports</code> is distributed as a negative binomial random variable with mean equal to <code>rho*cases</code> and size equal to <code>1/k</code>.
 </p>
 <p>This and similar examples are discussed and constructed in tutorials
 available on the <a href="https://kingaa.github.io/pomp/">package website</a>.
@@ -160,5 +169,5 @@ available on the <a href="https://kingaa.github.io/pomp/">package website</a>.
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.7.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.8.0 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

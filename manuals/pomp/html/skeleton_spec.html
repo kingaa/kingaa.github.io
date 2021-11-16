@@ -74,6 +74,11 @@ The goal of such a snippet is to compute all the components.
 </li>
 <li><p> As with the other C snippets, all states, parameters and covariates, as well as the current time, <code>t</code>, will be defined in the context within which the snippet is executed.
 </p>
+</li>
+<li> <p><b>NB:</b> When the skeleton is a map, the duration of the timestep will <b>not</b> be defined in the context within which the snippet is executed.
+When the skeleton is a vectorfield, of course, no timestep is defined.
+In this regard, C snippets for the skeleton and rprocess components differ.
+</p>
 </li></ol>
 
 <p>The tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a> give some examples.
@@ -195,5 +200,5 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.11.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.0.11.1 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

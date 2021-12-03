@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Diagramming internals</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for tableauGrob {phylopomp}"><tr><td>tableauGrob {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Diagramming internals</h2>
+
+<h3>Description</h3>
+
+<p>Facilities to produce diagrammatic representations
+of genealogy process states.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+tableauGrob(data, n, vp = NULL)
+
+playerGrob(name, ballA, ballAcol, ballB, ballBcol, slate, vp = NULL)
+
+resizingTextGrob(y, ..., vp = NULL)
+
+## S3 method for class 'resizingTextGrob'
+drawDetails(x, recording = TRUE)
+
+## S3 method for class 'resizingTextGrob'
+preDrawDetails(x)
+
+## S3 method for class 'resizingTextGrob'
+postDrawDetails(x)
+
+ballGrob(y, label, color, ..., vp = NULL)
+
+## S3 method for class 'ballGrob'
+drawDetails(x, recording = TRUE)
+
+## S3 method for class 'ballGrob'
+preDrawDetails(x)
+
+## S3 method for class 'ballGrob'
+postDrawDetails(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>illustration vector</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>length of longest tableau</p>
+</td></tr>
+<tr valign="top"><td><code>vp</code></td>
+<td>
+<p>a <code><a href="../../grid/help/viewport.html">viewport</a></code> object (or <code>NULL</code>).</p>
+</td></tr>
+<tr valign="top"><td><code>name</code></td>
+<td>
+<p>player name</p>
+</td></tr>
+<tr valign="top"><td><code>ballA, ballB</code></td>
+<td>
+<p>ball names</p>
+</td></tr>
+<tr valign="top"><td><code>ballAcol, ballBcol</code></td>
+<td>
+<p>ball colors</p>
+</td></tr>
+<tr valign="top"><td><code>slate</code></td>
+<td>
+<p>time</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>height</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>arguments to be passed to <code><a href="../../grid/help/textGrob.html">textGrob</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> An <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> object. </p>
+</td></tr>
+<tr valign="top"><td><code>recording</code></td>
+<td>
+<p> A logical value indicating whether a grob
+is being added to the display list or redrawn from the display list. </p>
+</td></tr>
+<tr valign="top"><td><code>label</code></td>
+<td>
+<p>ball name</p>
+</td></tr>
+<tr valign="top"><td><code>color</code></td>
+<td>
+<p>ball color</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Code for the resizing text adapted from a blog post by Mark Heckmann
+(https://ryouready.wordpress.com/2012/08/01/creating-a-text-grob-that-automatically-adjusts-to-viewport-size/).
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.23.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

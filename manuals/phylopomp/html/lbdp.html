@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Linear birth-death process.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for lbdp {phylopomp}"><tr><td>lbdp {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Linear birth-death process.</h2>
+
+<h3>Description</h3>
+
+<p>Simulation and inference based on linear birth-death-sampling processes.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+playLBDP(
+  data = NULL,
+  lambda,
+  mu,
+  psi,
+  n0 = 1,
+  t0 = 0,
+  times,
+  tree = FALSE,
+  ill = FALSE
+)
+
+lbdp_exact(data, lambda, mu, psi)
+
+lbdp_pomp(data, lambda, mu, psi, n0 = 1, t0 = 0)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>data frame containing the genealogy event times and event codes.</p>
+</td></tr>
+<tr valign="top"><td><code>lambda</code></td>
+<td>
+<p>birth rate</p>
+</td></tr>
+<tr valign="top"><td><code>mu</code></td>
+<td>
+<p>death rate</p>
+</td></tr>
+<tr valign="top"><td><code>psi</code></td>
+<td>
+<p>sampling rate</p>
+</td></tr>
+<tr valign="top"><td><code>n0</code></td>
+<td>
+<p>initial population size</p>
+</td></tr>
+<tr valign="top"><td><code>t0</code></td>
+<td>
+<p>initial time</p>
+</td></tr>
+<tr valign="top"><td><code>times</code></td>
+<td>
+<p>times at which output is requested.</p>
+</td></tr>
+<tr valign="top"><td><code>tree</code></td>
+<td>
+<p>logical; represent the genealogical tree in Newick format?</p>
+</td></tr>
+<tr valign="top"><td><code>ill</code></td>
+<td>
+<p>logical; return an illustration?</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>playLBDP</code> is a simulator of the genealogy process induced by a linear birth-death-sampling process.
+</p>
+<p><code>lbdp_exact</code> gives the exact likelihood of a linear birth-death process, conditioned on <i>n0=0</i> (Stadler, 2010, Thm 3.5).
+The derivation is also given in comments in the code.
+</p>
+<p>The <code>data</code> argument should in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.
+</p>
+<p><code>lbdp_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and a linear birth-death-sampling process.
+</p>
+<p>It is assumed that <code>data</code> is in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>playLBDP</code> returns an object of class <code>gpsim</code>.
+Available methods for such objects include <code><a href="../../phylopomp/help/getInfo.html">getInfo</a></code> and <code><a href="../../graphics/html/plot.default.html">plot</a></code>.
+</p>
+<p><code>lbdp_exact</code> returns the log likelihood of the genealogy.
+Note that the time since the most recent sample is informative.
+</p>
+
+
+<h3>References</h3>
+
+<p>T. Stadler. Sampling-through-time in birth-death trees. <em>Journal of Theoretical Biology</em> <b>267</b>, 396&ndash;404, 2010.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other Genealogy processes: 
+<code><a href="../../phylopomp/help/leventhal.html">leventhal</a></code>,
+<code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/sirs.html">sirs</a></code>,
+<code><a href="../../phylopomp/help/sirws.html">sirws</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+playLBDP(lambda=1,mu=0.5,psi=1,n0=3,times=seq(0,4,by=0.2),tree=TRUE) -&gt; x
+plot(x,points=TRUE)
+
+y &lt;- getInfo(x,prune=FALSE)
+plot(y,points=TRUE)
+
+library(ggplot2)
+y$lineages |&gt;
+  ggplot(aes(x=time,y=lineages))+
+  geom_step()+
+  geom_vline(xintercept=y$etimes,alpha=0.1)
+
+y$cumhaz |&gt;
+  ggplot(aes(x=exp(-Lambda)))+
+  stat_ecdf()+
+  geom_abline(slope=1)
+
+playLBDP(lambda=2,mu=1,psi=0.5,n0=1,times=5) |&gt;
+  getInfo() -&gt; x
+plot(getInfo(x,compact=TRUE),points=TRUE)
+
+library(pomp)
+x$tree |&gt;
+  newick2df(time=5) |&gt;
+  lbdp_pomp(psi=0.5,lambda=2,mu=1,n0=1) |&gt;
+  pfilter(Np=2000) |&gt;
+  logLik()
+
+x$tree |&gt;
+  newick2df(time=5) |&gt;
+  lbdp_exact(psi=0.5,lambda=2,mu=1)
+
+
+
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.23.1 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

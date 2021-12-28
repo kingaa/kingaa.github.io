@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Two-deme model of superspreading</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for si2r {phylopomp}"><tr><td>si2r {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Two-deme model of superspreading</h2>
+
+<h3>Description</h3>
+
+<p>Deme 2 consists of &quot;superspreaders&quot; who engender clusters
+of infection in &quot;superspreading events&quot;.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+runSI2R(
+  time,
+  t0 = 0,
+  Beta = 5,
+  mu = 5,
+  gamma = 1,
+  delta = 0,
+  psi1 = 1,
+  psi2 = 0,
+  sigma12 = 1,
+  sigma21 = 3,
+  S0 = 500,
+  I0 = 10,
+  R0 = 0
+)
+
+continueSI2R(
+  object,
+  time,
+  Beta = NA,
+  mu = NA,
+  gamma = NA,
+  delta = NA,
+  psi1 = NA,
+  psi2 = NA,
+  sigma21 = NA,
+  sigma12 = NA
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>time</code></td>
+<td>
+<p>final time</p>
+</td></tr>
+<tr valign="top"><td><code>t0</code></td>
+<td>
+<p>initial time</p>
+</td></tr>
+<tr valign="top"><td><code>Beta</code></td>
+<td>
+<p>transmission rate</p>
+</td></tr>
+<tr valign="top"><td><code>mu</code></td>
+<td>
+<p>mean superspreading-event cluster size</p>
+</td></tr>
+<tr valign="top"><td><code>gamma</code></td>
+<td>
+<p>recovery rate</p>
+</td></tr>
+<tr valign="top"><td><code>delta</code></td>
+<td>
+<p>rate of waning of immunity</p>
+</td></tr>
+<tr valign="top"><td><code>psi1, psi2</code></td>
+<td>
+<p>sampling rates for demes 1 and 2, respectively</p>
+</td></tr>
+<tr valign="top"><td><code>sigma12, sigma21</code></td>
+<td>
+<p>movement rates from deme 1 to 2 and 2 to 1, respectively</p>
+</td></tr>
+<tr valign="top"><td><code>S0</code></td>
+<td>
+<p>initial size of susceptible population</p>
+</td></tr>
+<tr valign="top"><td><code>I0</code></td>
+<td>
+<p>initial size of I1 population (I2 = 0 at t = 0)</p>
+</td></tr>
+<tr valign="top"><td><code>R0</code></td>
+<td>
+<p>initial size of recovered population</p>
+</td></tr>
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p>either the name of the model to simulate
+<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Superspreaders (deme 2) behave differently than ordinary infections:
+transmission events occur at the same rate (<code>Beta</code>), but at each event,
+a superspreader infects <i>N</i> individuals, where
+</p>
+<p style="text-align: center;"><i>N~1+Geometric(1/mu).</i></p>
+
+<p>Thus, assuming susceptibles are not limiting, the mean number of infections
+resulting from a superspreading event is <i>mu</i>
+and the variance in this number is <i>mu^2-mu)</i>.
+If susceptibles are limiting,
+i.e., if the number of susceptibles is not greater than <i>N</i>,
+then all remaining susceptibles are infected.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An object of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;SI2R&rdquo;.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More example genealogy processes: 
+<code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
+<code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/siir.html">siir</a></code>,
+<code><a href="../../phylopomp/help/simulate.html">simulate</a>()</code>,
+<code><a href="../../phylopomp/help/sir.html">sir</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+simulate("SI2R",time=1) |&gt;
+  plot(obscure=FALSE)
+
+runSI2R(Beta=10,S0=2000,time=1,psi1=0) |&gt;
+  simulate(time=2,psi1=1) |&gt;
+  plot(points=TRUE,obscure=FALSE)
+
+simulate("SI2R",time=5) |&gt;
+  lineages() |&gt;
+  plot()
+
+simulate("SI2R",time=2) |&gt;
+  diagram(m=30)
+
+simulate("SI2R",time=20,delta=0.2,mu=20) -&gt; x
+plot_grid(
+  x |&gt; plot(obscure=FALSE),
+  x |&gt; lineages(obscure=FALSE) |&gt; plot(),
+  ncol=1,
+  align="v",axis="b"
+)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

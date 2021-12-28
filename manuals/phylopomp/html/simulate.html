@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: simulate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for simulate {phylopomp}"><tr><td>simulate {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>simulate</h2>
+
+<h3>Description</h3>
+
+<p>Simulate Markov genealogy processes
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+simulate(object, ...)
+
+## Default S3 method:
+simulate(object, ...)
+
+## S3 method for class 'character'
+simulate(object, time, ...)
+
+## S3 method for class 'gpsim'
+simulate(object, time, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p>either the name of the model to simulate
+<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>additional arguments to the model-specific simulation functions</p>
+</td></tr>
+<tr valign="top"><td><code>time</code></td>
+<td>
+<p>end timepoint of simulation</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>When <code>object</code> is of class &lsquo;gpsim&rsquo;, i.e., the result of a genealogy-process
+simulation, <code>simulate</code> acts to continue the simulation to a later timepoint.
+Note that, one cannot change initial conditions or <code>t0</code> when continuing a simulation.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An object of &lsquo;gpsim&rsquo; class.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More example genealogy processes: 
+<code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
+<code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
+<code><a href="../../phylopomp/help/siir.html">siir</a></code>,
+<code><a href="../../phylopomp/help/sir.html">sir</a></code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

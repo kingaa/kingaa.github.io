@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Lineage-count function</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for lineages {phylopomp}"><tr><td>lineages {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Lineage-count function</h2>
+
+<h3>Description</h3>
+
+<p>The number of lineages through time
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+lineages(object, prune = TRUE, obscure = TRUE)
+
+## S3 method for class 'gplin'
+plot(x, ..., palette = scales::hue_pal(l = 30, h = c(220, 580)))
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+<p><code>gpsim</code> object.</p>
+</td></tr>
+<tr valign="top"><td><code>prune</code></td>
+<td>
+<p>logical; prune the genealogy?</p>
+</td></tr>
+<tr valign="top"><td><code>obscure</code></td>
+<td>
+<p>logical; obscure the demes?</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>object of class &lsquo;gpsim&rsquo;</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>passed to <code><a href="../../phylopomp/help/treeplot.html">treeplot</a></code></p>
+</td></tr>
+<tr valign="top"><td><code>palette</code></td>
+<td>
+<p>color palette for branches.
+This can be furnished either as a function or a vector of colors.
+If this is a function, it should take a single integer argument, the number of colors required.
+If it is a vector, ....</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function.
+If the genealogy has been obscured (the default), the number in the <code>lineages</code>
+column is the total number of lineages present at the times in the <code>time</code> column.
+If the genealogy has not been obscured (<code>obscure = FALSE</code>), the deme-specific
+lineage counts are returned.
+</p>
+<p>The <code><a href="../../tibble/help/tibble.html">tibble</a></code> returned by <code>lineages</code> has a <code><a href="../../phylopomp/help/plot.gplin.html">plot</a></code> method.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+library(tidyverse)
+
+pal &lt;- c("#00274c","#ffcb05")
+
+simulate("SIIR",time=3) -&gt; x
+plot_grid(
+  x |&gt; plot(),
+  x |&gt; lineages() |&gt; plot(),
+  x |&gt; plot(obscure=FALSE,palette=pal),
+  x |&gt; lineages(obscure=FALSE) |&gt;
+    plot(palette=pal,legend.position=c(0.8,0.9)),
+  align="v",axis="b",
+  ncol=2,byrow=FALSE
+)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

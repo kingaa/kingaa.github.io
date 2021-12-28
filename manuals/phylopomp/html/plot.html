@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Fancy tree plotter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for plot {phylopomp}"><tr><td>plot {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Fancy tree plotter</h2>
+
+<h3>Description</h3>
+
+<p>Plots a genealogical tree.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'gpsim'
+plot(x, ..., time, t0, prune = TRUE, obscure = TRUE, compact = TRUE)
+
+treeplot(
+  tree,
+  time = NULL,
+  t0 = 0,
+  ladderize = TRUE,
+  points = FALSE,
+  ...,
+  palette = scales::hue_pal(l = 30, h = c(220, 580))
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>object of class &lsquo;gpsim&rsquo;</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>passed to <code><a href="../../phylopomp/help/treeplot.html">treeplot</a></code></p>
+</td></tr>
+<tr valign="top"><td><code>time</code></td>
+<td>
+<p>numeric; time of the genealogy.</p>
+</td></tr>
+<tr valign="top"><td><code>t0</code></td>
+<td>
+<p>numeric; time of the root.</p>
+</td></tr>
+<tr valign="top"><td><code>prune</code></td>
+<td>
+<p>logical; prune the genealogy?</p>
+</td></tr>
+<tr valign="top"><td><code>obscure</code></td>
+<td>
+<p>logical; obscure the demes?</p>
+</td></tr>
+<tr valign="top"><td><code>compact</code></td>
+<td>
+<p>logical; return the tree in compact representation?</p>
+</td></tr>
+<tr valign="top"><td><code>tree</code></td>
+<td>
+<p>character; tree representation in Newick format.</p>
+</td></tr>
+<tr valign="top"><td><code>ladderize</code></td>
+<td>
+<p>Ladderize?</p>
+</td></tr>
+<tr valign="top"><td><code>points</code></td>
+<td>
+<p>Show nodes and tips?</p>
+</td></tr>
+<tr valign="top"><td><code>palette</code></td>
+<td>
+<p>color palette for branches.
+This can be furnished either as a function or a vector of colors.
+If this is a function, it should take a single integer argument, the number of colors required.
+If it is a vector, ....</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A printable <code>ggplot</code> object.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## Not run: 
+  library(ggplot2)
+  times &lt;- seq(from=0,to=8,by=0.1)[-1]
+
+  png_files &lt;- sprintf(
+    file.path(tempdir(),"frame%05d.png"),
+    seq_along(times)
+  )
+
+  pb &lt;- utils::txtProgressBar(0,length(times),0,style=3)
+  x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,
+    psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,S0=500,I1_0=3,I2_0=2)
+  for (k in seq_len(length(times))) {
+    x &lt;- simulate(x,time=times[k])
+    ggsave(
+      filename=png_files[k],
+      plot=plot(
+        x, t0=0, time=max(times),
+        points=FALSE, prune=FALSE, obscure=FALSE,
+        palette=c("#ffcb05","#dddddd"),
+        axis.line=element_line(color="white"),
+        axis.ticks=element_line(color="white"),
+        axis.text=element_blank(),
+        plot.background=element_rect(fill=NA,color=NA),
+        panel.background=element_rect(fill=NA,color=NA)
+      ),
+      device="png",dpi=300,
+      height=2,width=3,units="in"
+    )
+    setTxtProgressBar(pb,k)
+  }
+
+  library(gifski)
+  gif_file &lt;- "movie1.gif"
+  gifski(png_files,gif_file,delay=0.02,loop=TRUE)
+  unlink(png_files)
+
+## End(Not run)
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
+</div></body></html>

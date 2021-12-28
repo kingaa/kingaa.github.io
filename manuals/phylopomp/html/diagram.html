@@ -17,53 +17,80 @@
 <h3>Usage</h3>
 
 <pre>
-diagram(illus, ...)
+diagram(
+  object,
+  prune = TRUE,
+  obscure = TRUE,
+  m = NULL,
+  n = NULL,
+  ...,
+  digits = 1
+)
+
+## S3 method for class 'gpdiag'
+print(x, newpage = is.null(vp), vp = NULL, ...)
 </pre>
 
 
 <h3>Arguments</h3>
 
 <table summary="R argblock">
-<tr valign="top"><td><code>illus</code></td>
+<tr valign="top"><td><code>object</code></td>
 <td>
-<p>character;
-illustrations produced by <code><a href="../../phylopomp/help/getInfo.html">getInfo</a></code> or one of the <code>playX</code> functions.</p>
+<p><code>gpsim</code> object.</p>
+</td></tr>
+<tr valign="top"><td><code>prune</code></td>
+<td>
+<p>logical; prune the genealogy?</p>
+</td></tr>
+<tr valign="top"><td><code>obscure</code></td>
+<td>
+<p>logical; obscure the demes?</p>
+</td></tr>
+<tr valign="top"><td><code>m</code></td>
+<td>
+<p>width of plotting window, in nodes.
+By default, the nodes will be adjusted in width to fit the window.</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>height of the pockets, in balls.
+By default, the balls will be adjusted in size to fit the space available.</p>
 </td></tr>
 <tr valign="top"><td><code>...</code></td>
 <td>
 <p>graphical parameter settings, suitable for passing to <code><a href="../../grid/help/gpar.html">gpar</a></code>.</p>
+</td></tr>
+<tr valign="top"><td><code>digits</code></td>
+<td>
+<p>non-negative integer;
+number of decimal digits to print in the node time</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> An <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> object. </p>
+</td></tr>
+<tr valign="top"><td><code>vp</code></td>
+<td>
+<p>a <code><a href="../../grid/help/viewport.html">viewport</a></code> object (or <code>NULL</code>).</p>
 </td></tr>
 </table>
 
 
 <h3>Value</h3>
 
-<p>A list of <span class="pkg">grid</span> graphics objects (<code>grob</code>s), invisibly.
+<p>A <span class="pkg">grid</span> graphics object (<code>grob</code>), invisibly.
 </p>
 
 
 <h3>Examples</h3>
 
 <pre>
-library(tidyverse)
-playMoran(n=5,mu=10,times=c(0,seq(100,200,by=25)),
-  stationary=FALSE,ill=TRUE,tree=TRUE) -&gt; x
-plot(x[5,],points=TRUE,diagram=TRUE)
-
-playMoran(n=8,mu=8,times=100:130,sample=FALSE,tree=TRUE,ill=TRUE) |&gt;
-  mutate(dg=diagram(illus)) -&gt; x
-plot(x,points=TRUE,diagram=TRUE,root_time=NA)
-
-playMoran(n=8,mu=8,times=0:30,sample=FALSE,tree=TRUE,ill=TRUE,
-  stationary=FALSE) |&gt;
-  mutate(dg=diagram(illus)) -&gt; x
-plot(x,points=TRUE,diagram=TRUE,root_time=NA)
-
-library(cowplot)
-playMoran(n=5,mu=5,times=0:3,stationary=TRUE,tree=TRUE,ill=TRUE) |&gt;
-  mutate(grob=diagram(illus)) -&gt; x
-plot_grid(plotlist=c(x$grob,treeplot(x$tree,points=TRUE)),ncol=2,byrow=FALSE)
+runSIR(Beta=3,gamma=0.1,psi=0.2,S0=100,I0=5,R0=0,time=2,t0=0) -&gt; x
+plot(x,points=TRUE,prune=FALSE,compact=FALSE)
+plot_grid(plotlist=list(plot(x,points=TRUE)[[1]],diagram(x)),
+  ncol=1,rel_heights=c(4,1))
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.23.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

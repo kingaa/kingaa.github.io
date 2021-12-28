@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Retrieve information from genealogy process simulation</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: getInfo</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" type="text/css" href="R.css" />
@@ -6,38 +6,75 @@
 
 <table width="100%" summary="page for getInfo {phylopomp}"><tr><td>getInfo {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Retrieve information from genealogy process simulation</h2>
+<h2>getInfo</h2>
 
 <h3>Description</h3>
 
-<p>getInfo
+<p>Retrieve information from genealogy process simulation
 </p>
 
 
 <h3>Usage</h3>
 
 <pre>
-getInfo(data, ...)
-
-## S3 method for class 'gpsim'
-getInfo(data, ..., prune = TRUE, compact = FALSE)
+getInfo(
+  object,
+  prune = TRUE,
+  obscure = TRUE,
+  t0 = FALSE,
+  time = FALSE,
+  description = FALSE,
+  structure = FALSE,
+  yaml = FALSE,
+  lineages = FALSE,
+  tree = FALSE,
+  compact = TRUE
+)
 </pre>
 
 
 <h3>Arguments</h3>
 
 <table summary="R argblock">
-<tr valign="top"><td><code>data</code></td>
+<tr valign="top"><td><code>object</code></td>
 <td>
 <p><code>gpsim</code> object.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
-<td>
-<p>arguments passed to specific methods.</p>
-</td></tr>
 <tr valign="top"><td><code>prune</code></td>
 <td>
-<p>logical; prune the tree?</p>
+<p>logical; prune the genealogy?</p>
+</td></tr>
+<tr valign="top"><td><code>obscure</code></td>
+<td>
+<p>logical; obscure the demes?</p>
+</td></tr>
+<tr valign="top"><td><code>t0</code></td>
+<td>
+<p>logical; return the zero-time?</p>
+</td></tr>
+<tr valign="top"><td><code>time</code></td>
+<td>
+<p>logical; return the current time?</p>
+</td></tr>
+<tr valign="top"><td><code>description</code></td>
+<td>
+<p>logical; return the description?</p>
+</td></tr>
+<tr valign="top"><td><code>structure</code></td>
+<td>
+<p>logical; return the structure in <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> list format?</p>
+</td></tr>
+<tr valign="top"><td><code>yaml</code></td>
+<td>
+<p>logical; return the structure in YAML format?</p>
+</td></tr>
+<tr valign="top"><td><code>lineages</code></td>
+<td>
+<p>logical; return the lineage-count function?</p>
+</td></tr>
+<tr valign="top"><td><code>tree</code></td>
+<td>
+<p>logical; return the tree?</p>
 </td></tr>
 <tr valign="top"><td><code>compact</code></td>
 <td>
@@ -46,52 +83,47 @@ getInfo(data, ..., prune = TRUE, compact = FALSE)
 </table>
 
 
+<h3>Value</h3>
+
+<p>A list containing the requested elements, including any or all of:
+</p>
+
+<dl>
+<dt>t0</dt><dd><p>the initial time</p>
+</dd>
+<dt>time</dt><dd><p>the current time</p>
+</dd>
+<dt>tree</dt><dd><p>the genealogical tree, in Newick format</p>
+</dd>
+<dt>description</dt><dd><p>a human readable description of the state of the genealogy process</p>
+</dd>
+<dt>yaml</dt><dd><p>the state of the genealogy process in YAML format</p>
+</dd>
+<dt>structure</dt><dd><p>the state of the genealogy process in <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> list format</p>
+</dd>
+<dt>lineages</dt><dd><p>a <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function through time</p>
+</dd>
+</dl>
+
+
+
 <h3>Examples</h3>
 
 <pre>
-library(tidyverse)
-library(cowplot)
+simulate("SIIR",time=3,psi1=1,psi2=0) |&gt;
+  simulate(Beta1=2,gamma=2,time=10,psi1=10,psi2=1) |&gt;
+  plot()
 
-playMoran(n=5,mu=5,times=0:10,t0=0,tree=TRUE,ill=TRUE) -&gt; x
-playMoran(x,times=11:20,tree=TRUE) -&gt; x
-plot(x)
+runSIIR(Beta1=10,Beta2=8,
+  S0=200,I1_0=10,I2_0=8,R0=0,time=0,t0=-1) |&gt;
+  simulate(psi1=10,time=2) |&gt;
+  plot(points=TRUE,obscure=FALSE)
 
-playMoran(n=5,mu=10,times=0:10,t0=-3) |&gt;
-  getInfo() -&gt; y
-plot(y,points=TRUE,diagram=TRUE)
-
-playMoran(n=20,mu=20,times=0:20,stationary=FALSE,tree=TRUE,ill=TRUE) -&gt; x
-plot(x,points=TRUE)
-
-y &lt;- getInfo(x,prune=FALSE)
-plot(y,points=TRUE)
-
-playMoran(n=5,mu=5,t0=-1,times=0:3,stationary=FALSE,tree=TRUE,ill=TRUE) -&gt; x
-plot(x,points=TRUE,diagram=TRUE)
-
-y &lt;- getInfo(x)
-plot(y,points=TRUE,diagram=TRUE)
-
-playMoran(n=20,mu=10,times=1:10,sample=TRUE,stationary=FALSE) -&gt; x
-x |&gt; getInfo(prune=FALSE,compact=TRUE) -&gt; y
-plot(y,points=TRUE,diagram=TRUE)
-
-x |&gt; getInfo(prune=TRUE,compact=TRUE) -&gt; y
-plot(y,points=TRUE,diagram=TRUE)
-
-playMoran(n=8,mu=8,times=0,tree=TRUE,ill=TRUE,sample=FALSE,stationary=TRUE) |&gt;
-  playMoranWChain(ntimes=4) |&gt;
-  mutate(diag=diagram(illus)) |&gt;
-  pull(diag) |&gt;
-  {\(x)plot_grid(plotlist=x,ncol=1)}()
-
-playMoran(n=8,mu=8,times=0,tree=TRUE,ill=TRUE,sample=FALSE,stationary=FALSE) |&gt;
-  playMoranWChain(ntimes=40) |&gt;
-  mutate(diag=diagram(illus)) |&gt;
-  slice(35:40) |&gt;
-  pull(diag) |&gt;
-  {\(x)plot_grid(plotlist=x,ncol=1)}()
+simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
+  S0=300,I1_0=20,I2_0=2,time=5) |&gt;
+  lineages() |&gt;
+  plot()
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.23.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

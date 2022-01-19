@@ -1,5 +1,7 @@
 phylopomp-package	phylopomp-package
 %dopar%	reexports
+as.data.frame	as_data_frame
+as.data.frame.gplin	as_data_frame
 as.yaml	reexports
 bake	reexports
 ballGrob	internals
@@ -17,6 +19,8 @@ genealogyGrob	internals
 getInfo	getinfo
 LBDP	lbdp
 lbdp	lbdp
+lbdp_exact	lbdp
+lbdp_pomp	lbdp
 lineages	lineages
 Moran	moran
 moran	moran

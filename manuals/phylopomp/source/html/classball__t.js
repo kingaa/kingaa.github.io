@@ -1,0 +1,25 @@
+var classball__t =
+[
+    [ "ball_t", "classball__t.html#a87e6cd9c5f32cbd65883308a2dbcf73c", null ],
+    [ "ball_t", "classball__t.html#acc57a0661a45a5e75106a404accf5473", null ],
+    [ "ball_t", "classball__t.html#a138d81675bebd933f65652c6a257752b", null ],
+    [ "~ball_t", "classball__t.html#ab87fc87694e3fae311df924db6ede99e", null ],
+    [ "child", "classball__t.html#a0e67e91ddd3b02df15175ff2151ab398", null ],
+    [ "color_name", "classball__t.html#ab87d8591dc302fca18a345cbe4c33b0a", null ],
+    [ "color_symbol", "classball__t.html#a3545dd485a4dfd8364552bf3d360555e", null ],
+    [ "deme", "classball__t.html#af9d150c4b014a92efb738062ae77f25a", null ],
+    [ "describe", "classball__t.html#a4c6efe3187ab90b7011d445291dd4cd5", null ],
+    [ "holder", "classball__t.html#a84b2949440ac7d1fcd8127076e082928", null ],
+    [ "is", "classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f", null ],
+    [ "newick", "classball__t.html#a6ea0514941c8f2a89306e60065562e83", null ],
+    [ "operator=", "classball__t.html#a54b3988414b186f130147910777eae55", null ],
+    [ "operator=", "classball__t.html#acef9053249f21e93b4c7a039533b7aa3", null ],
+    [ "owner", "classball__t.html#afe832c8be896c16e28afdd51baf8beb8", null ],
+    [ "structure", "classball__t.html#a7624737bc15d3d74fad0d4faa71f488c", null ],
+    [ "yaml", "classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd", null ],
+    [ "compare", "classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef", null ],
+    [ "operator>>", "classball__t.html#a6f6f397a35a9d8c4613aa04af51c72a9", null ],
+    [ "operator>>", "classball__t.html#a129033754b7a3af4cb7b1c3940f1b2c7", null ],
+    [ "color", "classball__t.html#ada6b9e789dc34806789eb6f41892dd46", null ],
+    [ "uniq", "classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675", null ]
+];

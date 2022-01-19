@@ -1,0 +1,26 @@
+var classnode__t =
+[
+    [ "node_t", "classnode__t.html#a1a78fe30aa439dddf2039e7107d18caa", null ],
+    [ "node_t", "classnode__t.html#a8711bfa5f6a0a5c424816f2c9d0e17da", null ],
+    [ "node_t", "classnode__t.html#aefe4ba2746fe009be474a1ba336a510a", null ],
+    [ "~node_t", "classnode__t.html#aa5732f792f8e1fce40ab441359a2a6f2", null ],
+    [ "bytesize", "classnode__t.html#a33991dff8295aa9f2f93393d934ec517", null ],
+    [ "compact_newick", "classnode__t.html#a00bafc21cee2554589034441366a589e", null ],
+    [ "describe", "classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae", null ],
+    [ "green_ball", "classnode__t.html#ab10430fd8addd5852699c30a23729880", null ],
+    [ "holds_own", "classnode__t.html#af2f3244314d00462007ba1853d60f3c6", null ],
+    [ "is_root", "classnode__t.html#a7b42edef9d30827acaef62beff27582f", null ],
+    [ "lineage_incr", "classnode__t.html#a4669a8b07bd17f1cdf298420327fa8af", null ],
+    [ "nchildren", "classnode__t.html#a48dea16ceab8f1edeef20257b0f8d73e", null ],
+    [ "newick", "classnode__t.html#a8fbcbc87b57e6d224e709777caf89609", null ],
+    [ "operator=", "classnode__t.html#a12251095cc0869eb9c17ea41f96fde85", null ],
+    [ "operator=", "classnode__t.html#aa1934f35f50d764584a764a8b36745a3", null ],
+    [ "set_owner", "classnode__t.html#ab01c8eaed82c6975d4abfb88697571ef", null ],
+    [ "structure", "classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52", null ],
+    [ "yaml", "classnode__t.html#abbf74b4aabeff165285a4f784e7737ba", null ],
+    [ "operator>>", "classnode__t.html#a1f0906c7111fc3c278a8a95326f50235", null ],
+    [ "operator>>", "classnode__t.html#a733973a96a0bc613baf7cdd5d7cba6ec", null ],
+    [ "deme", "classnode__t.html#a0d5ee78c6e3b4d5e155a9b73b88c1c03", null ],
+    [ "slate", "classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9", null ],
+    [ "uniq", "classnode__t.html#acaa19616699522ec853e82c3923b0ce7", null ]
+];

@@ -21,6 +21,19 @@ with constant-rate sampling.
 runLBDP(time, t0 = 0, lambda = 2, mu = 1, psi = 1, n0 = 5)
 
 continueLBDP(object, time, lambda = NA, mu = NA, psi = NA)
+
+lbdp_exact(data, lambda, mu, psi, n0 = 1)
+
+lbdp_pomp(
+  data,
+  lambda,
+  mu,
+  psi,
+  n0 = 1,
+  t0 = 0,
+  method = c("gillespie", "euler"),
+  delta.t = NULL
+)
 </pre>
 
 
@@ -56,12 +69,46 @@ continueLBDP(object, time, lambda = NA, mu = NA, psi = NA)
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>data frame containing the genealogy event times and event codes.</p>
+</td></tr>
+<tr valign="top"><td><code>method</code></td>
+<td>
+<p>integration method</p>
+</td></tr>
+<tr valign="top"><td><code>delta.t</code></td>
+<td>
+<p>Euler step-size when <code>method="euler"</code> is chosen</p>
+</td></tr>
 </table>
+
+
+<h3>Details</h3>
+
+<p><code>lbdp_exact</code> gives the exact likelihood of a linear birth-death process, conditioned on <i>n0=0</i> (Stadler, 2010, Thm 3.5).
+The derivation is also given in comments in the code.
+</p>
+<p>The <code>data</code> argument should in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.
+</p>
+<p><code>lbdp_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and a linear birth-death-sampling process.
+</p>
+<p>It is assumed that <code>data</code> is in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.
+</p>
 
 
 <h3>Value</h3>
 
 <p>An object of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;LBDP&rdquo;.
+</p>
+<p><code>lbdp_exact</code> returns the log likelihood of the genealogy.
+Note that the time since the most recent sample is informative.
+</p>
+
+
+<h3>References</h3>
+
+<p>T. Stadler. Sampling-through-time in birth-death trees. <em>Journal of Theoretical Biology</em> <b>267</b>, 396&ndash;404, 2010.
 </p>
 
 
@@ -91,5 +138,5 @@ simulate("LBDP",time=4) |&gt;
 
 </pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.9 <a href="00Index.html">Index</a>]</div>
 </div></body></html>

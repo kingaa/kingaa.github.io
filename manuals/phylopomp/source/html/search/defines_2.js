@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['declarations_451',['DECLARATIONS',['../init_8h.html#a88719a51b5f835edcb2fdaaf5e722d3d',1,'init.h']]],
-  ['delta_452',['Delta',['../sirs__pomp_8c.html#a35b7eb5ca51863be70bf9a60d5c6ca51',1,'sirs_pomp.c']]]
+  ['generics_415',['GENERICS',['../generics_8h.html#a2733882fe92c8eb7d252c113560e7962',1,'generics.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['compare_447',['compare',['../classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef',1,'ball_t']]]
+  ['compare_411',['compare',['../classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef',1,'ball_t']]]
 ];

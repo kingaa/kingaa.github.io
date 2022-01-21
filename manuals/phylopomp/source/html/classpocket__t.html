@@ -204,7 +204,16 @@ Friends</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                   {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classpocket__t.html#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  };</div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpocket__t_a88117aee1417a45775cb961551f95964_cgraph.png" border="0" usemap="#classpocket__t_a88117aee1417a45775cb961551f95964_cgraph" alt=""/></div>
+<map name="classpocket__t_a88117aee1417a45775cb961551f95964_cgraph" id="classpocket__t_a88117aee1417a45775cb961551f95964_cgraph">
+<area shape="rect" title="destructor" alt="" coords="5,5,156,32"/>
+<area shape="rect" href="classpocket__t.html#a01bb1db161b45b6770a082ad80d2f07f" title="delete balls and clear pocket" alt="" coords="204,5,324,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -415,8 +424,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph.png" border="0" usemap="#classpocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph" alt=""/></div>
 <map name="classpocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph" id="classpocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph">
-<area shape="rect" title="does this node hold the given ball?" alt="" coords="236,29,356,56"/>
+<area shape="rect" title="does this node hold the given ball?" alt="" coords="236,55,356,81"/>
 <area shape="rect" href="classnode__t.html#a00bafc21cee2554589034441366a589e" title="compact Newick format" alt="" coords="5,29,188,56"/>
+<area shape="rect" href="classgenealogy__t.html#a72148a28fcdca2a58aa2c50784898159" title=" " alt="" coords="15,80,179,107"/>
 </map>
 </div>
 
@@ -494,9 +504,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_a946cef04d564142f0e900b96a0d64dda_icgraph.png" border="0" usemap="#classpocket__t_a946cef04d564142f0e900b96a0d64dda_icgraph" alt=""/></div>
 <map name="classpocket__t_a946cef04d564142f0e900b96a0d64dda_icgraph" id="classpocket__t_a946cef04d564142f0e900b96a0d64dda_icgraph">
-<area shape="rect" title="retrieve the last ball" alt="" coords="195,31,335,57"/>
-<area shape="rect" href="classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe" title="birth into deme d" alt="" coords="6,5,146,32"/>
-<area shape="rect" href="classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366" title="graft a new lineage into deme d" alt="" coords="5,56,147,83"/>
+<area shape="rect" title="retrieve the last ball" alt="" coords="217,56,357,83"/>
+<area shape="rect" href="classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe" title="birth into deme d" alt="" coords="17,5,157,32"/>
+<area shape="rect" href="classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366" title="graft a new lineage into deme d" alt="" coords="17,56,158,83"/>
+<area shape="rect" href="classgenealogy__t.html#a72148a28fcdca2a58aa2c50784898159" title=" " alt="" coords="5,107,169,133"/>
 </map>
 </div>
 
@@ -620,13 +631,13 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00075">75</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                                        {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::unordered_map&lt;name_t,node_t*&gt;::const_iterator <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::unordered_map&lt;name_t,node_t*&gt;::const_iterator n;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <a class="code" href="classball__t.html">ball_t</a> *b = *i;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordflow">if</span> (b-&gt;<a class="code" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = node_name.find(b-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> != node_name.end()) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="classnode__t.html">node_t</a> *p = <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-&gt;second;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    n = node_name.find(b-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (n != node_name.end()) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="classnode__t.html">node_t</a> *p = n-&gt;second;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      b-&gt;<a class="code" href="classball__t.html#afe832c8be896c16e28afdd51baf8beb8">owner</a>() = p;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      ball_name-&gt;insert({b-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>,b});</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    } <span class="keywordflow">else</span> {</div>
@@ -635,7 +646,17 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  };</div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpocket__t_a894101ebbd55bf5258c261d22cf9a661_cgraph.png" border="0" usemap="#classpocket__t_a894101ebbd55bf5258c261d22cf9a661_cgraph" alt=""/></div>
+<map name="classpocket__t_a894101ebbd55bf5258c261d22cf9a661_cgraph" id="classpocket__t_a894101ebbd55bf5258c261d22cf9a661_cgraph">
+<area shape="rect" title="Sets the owner: needed in deserialization." alt="" coords="5,31,164,57"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title=" " alt="" coords="227,5,304,32"/>
+<area shape="rect" href="classball__t.html#afe832c8be896c16e28afdd51baf8beb8" title="view/change owner" alt="" coords="212,56,319,83"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a34e91db606900cc3766fdab1a2cfc2ae"></a>
@@ -846,7 +867,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclassball__t_html_afe832c8be896c16e28afdd51baf8beb8"><div class="ttname"><a href="classball__t.html#afe832c8be896c16e28afdd51baf8beb8">ball_t::owner</a></div><div class="ttdeci">node_t *&amp; owner(void)</div><div class="ttdoc">view/change owner</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00079">ball.h:79</a></div></div>
 <div class="ttc" id="aclassball__t_html_a4bba3277085b3623254524797250b6bc"><div class="ttname"><a href="classball__t.html#a4bba3277085b3623254524797250b6bc">ball_t::bytesize</a></div><div class="ttdeci">static const size_t bytesize</div><div class="ttdoc">size of binary serialization</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00037">ball.h:37</a></div></div>
 <div class="ttc" id="apocket_8h_html_a1d489f73333ce98b5df5cd25284e260f"><div class="ttname"><a href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_compare &gt;::const_iterator ball_it</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00024">pocket.h:24</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00010">lbdp_pomp.c:10</a></div></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00013">ball.h:13</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

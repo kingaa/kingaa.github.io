@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamma_454',['gamma',['../leventhal_8c.html#a42e729077189bab1dae844253dd2ad1d',1,'gamma():&#160;leventhal.c'],['../sirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d',1,'gamma():&#160;sirs_pomp.c']]],
-  ['generics_455',['GENERICS',['../generics_8h.html#a2733882fe92c8eb7d252c113560e7962',1,'generics.h']]]
+  ['makefn_417',['MAKEFN',['../generics_8h.html#ab5553bb581629a90c1654e17490555fe',1,'generics.h']]],
+  ['methods_418',['METHODS',['../init_8h.html#a06d5e17211e44605874f59f330a17c5b',1,'init.h']]]
 ];

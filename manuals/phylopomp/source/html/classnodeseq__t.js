@@ -9,7 +9,7 @@ var classnodeseq__t =
     [ "dusk", "classnodeseq__t.html#a7f3cefd2fdb27430074efc904d852ea9", null ],
     [ "newick", "classnodeseq__t.html#a0f763f9a3a5279dfddd40addcfb76875", null ],
     [ "ntime", "classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3", null ],
-    [ "set_owners", "classnodeseq__t.html#a472911aaae1074aef8f31b3bd4a75eda", null ],
+    [ "repair_owners", "classnodeseq__t.html#a78278bd9dd791d0190475d0acec6ca71", null ],
     [ "structure", "classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253", null ],
     [ "yaml", "classnodeseq__t.html#a1e165e9bd12ca6080c0e5aa2cab0625d", null ],
     [ "operator>>", "classnodeseq__t.html#aeeb424f6a8d8c31c309725edd406dc2c", null ],

@@ -379,7 +379,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="leventhal_8c_source.html#l00055">55</a> of file <a class="el" href="leventhal_8c_source.html">leventhal.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="leventhal_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeb03b63bbbd65360245f9331c23c381e"></a>
@@ -439,7 +442,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="leventhal_8c_source.html#l00014">14</a> of file <a class="el" href="leventhal_8c_source.html">leventhal.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> = nearbyint(<a class="code" href="leventhal_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aecd4f32ebf19516d1bae9b6893a02129"></a>
@@ -505,11 +512,52 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="leventhal_8c_source.html#l00020">20</a> of file <a class="el" href="leventhal_8c_source.html">leventhal.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">int</span> ind;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">double</span> tstep = 0, tmax = t + dt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  ind = nearbyint(<a class="code" href="leventhal_8c.html#a814f6dab3b0678113d97a3684282934a">code</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">if</span> (ind == 1) {                <span class="comment">// coalescent</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += (<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; 0 &amp;&amp; <a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &lt; <a class="code" href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) ? log(<a class="code" href="leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>*(<a class="code" href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)) : R_NegInf;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += (<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt;= <a class="code" href="leventhal_8c.html#adc60a2ae9a06d27bcf6c8034fe8f86a5">lineages</a> &amp;&amp; <a class="code" href="leventhal_8c.html#adc60a2ae9a06d27bcf6c8034fe8f86a5">lineages</a> &gt; 1) ? -log(<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>*(<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>-1)) : R_NegInf;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ind == -1) {        <span class="comment">// live sample</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += (<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; 0) ? log(<a class="code" href="leventhal_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>) : R_NegInf;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// Gillespie steps</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  tstep = exp_rand()/(<a class="code" href="leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>*(<a class="code" href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)+<a class="code" href="leventhal_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">while</span> (t + tstep &lt; tmax) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= <a class="code" href="leventhal_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>*tstep;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (unif_rand() &lt; <a class="code" href="leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*(<a class="code" href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)/(<a class="code" href="leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*(<a class="code" href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)+<a class="code" href="leventhal_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>)) {   <span class="comment">// infection</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += (<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; <a class="code" href="leventhal_8c.html#adc60a2ae9a06d27bcf6c8034fe8f86a5">lineages</a>) ? log(1-<a class="code" href="leventhal_8c.html#adc60a2ae9a06d27bcf6c8034fe8f86a5">lineages</a>*(<a class="code" href="leventhal_8c.html#adc60a2ae9a06d27bcf6c8034fe8f86a5">lineages</a>-1)/<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>/(<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>-1)) : R_NegInf;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    } <span class="keywordflow">else</span> {            <span class="comment">// recovery</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> -= 1;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    t += tstep;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    tstep = exp_rand()/(<a class="code" href="leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>*(<a class="code" href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)+<a class="code" href="leventhal_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  tstep = tmax - t;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= <a class="code" href="leventhal_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*<a class="code" href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>*tstep;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aleventhal_8c_html_a42e729077189bab1dae844253dd2ad1d"><div class="ttname"><a href="leventhal_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a></div><div class="ttdeci">#define gamma</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00005">leventhal.c:5</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="leventhal_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00007">leventhal.c:7</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_a814f6dab3b0678113d97a3684282934a"><div class="ttname"><a href="leventhal_8c.html#a814f6dab3b0678113d97a3684282934a">code</a></div><div class="ttdeci">#define code</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00010">leventhal.c:10</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_a73d113d91ab7ec355ca707cc930eb718"><div class="ttname"><a href="leventhal_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a></div><div class="ttdeci">#define I0</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00008">leventhal.c:8</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="leventhal_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00053">leventhal.c:53</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_adc60a2ae9a06d27bcf6c8034fe8f86a5"><div class="ttname"><a href="leventhal_8c.html#adc60a2ae9a06d27bcf6c8034fe8f86a5">lineages</a></div><div class="ttdeci">#define lineages</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00009">leventhal.c:9</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_ae1d1ec9482079231e898236e2b23c9ba"><div class="ttname"><a href="leventhal_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a></div><div class="ttdeci">#define ll</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00012">leventhal.c:12</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_a69481325cd251d42dac1c62fb459cddc"><div class="ttname"><a href="leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a></div><div class="ttdeci">#define Beta</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00004">leventhal.c:4</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_a60ef6e1bcfabb95cfeb300e1d03ce470"><div class="ttname"><a href="leventhal_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a></div><div class="ttdeci">#define I</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00011">leventhal.c:11</a></div></div>
+<div class="ttc" id="aleventhal_8c_html_aebfab0be95178c0a2497fca46e5eb377"><div class="ttname"><a href="leventhal_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a></div><div class="ttdeci">#define psi</div><div class="ttdef"><b>Definition:</b> <a href="leventhal_8c_source.html#l00006">leventhal.c:6</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

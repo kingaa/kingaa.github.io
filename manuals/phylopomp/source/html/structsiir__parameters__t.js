@@ -5,7 +5,6 @@ var structsiir__parameters__t =
     [ "gamma", "structsiir__parameters__t.html#aeef57dbb9706ca174d66fef5c0c3bcc3", null ],
     [ "I1_0", "structsiir__parameters__t.html#abca976604dc68916533c838186a12f63", null ],
     [ "I2_0", "structsiir__parameters__t.html#a28937e900aafb6bea05b051c8cf8b2f6", null ],
-    [ "N", "structsiir__parameters__t.html#a4715e24b3102e71de27b2ef216d63658", null ],
     [ "psi1", "structsiir__parameters__t.html#aaa2e9e061cc4e6aba0536a387eac64ad", null ],
     [ "psi2", "structsiir__parameters__t.html#a402c5078089e325c4c2b7883db1b91da", null ],
     [ "R0", "structsiir__parameters__t.html#a9320ead48f661f231e1ce6bc1dd71f65", null ],

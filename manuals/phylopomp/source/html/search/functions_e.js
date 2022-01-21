@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['r_5finit_5fphylopomp_312',['R_init_phylopomp',['../init_8c.html#a071d822d4db004b7729f6819ffabbc44',1,'init.c']]],
-  ['random_5fball_313',['random_ball',['../classinventory__t.html#ad612a62fbabb6751710d13f45748683f',1,'inventory_t']]],
-  ['random_5finteger_314',['random_integer',['../internal_8h.html#a30243865c01653487f851881a5a9fc28',1,'internal.h']]],
-  ['random_5fpair_315',['random_pair',['../classinventory__t.html#a63a241558955e601506bc55db01ba5cd',1,'inventory_t']]],
-  ['revive_316',['revive',['../generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373',1,'generics.h']]],
-  ['rinit_317',['rinit',['../classmaster__t.html#aaf98db199eea5e058023a412139633b2',1,'master_t::rinit()'],['../classpopul__proc__t.html#aa79dec602ad44715031a0defa2188374',1,'popul_proc_t::rinit()']]],
-  ['run_318',['run',['../generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe',1,'generics.h']]]
+  ['play_331',['play',['../classmaster__t.html#a192af9a2412fb7fe97fade765da8393a',1,'master_t::play()'],['../classpopul__proc__t.html#ad068ea25f9bf0e7f7630286e47c34aaf',1,'popul_proc_t::play()']]],
+  ['popul_5fproc_5ft_332',['popul_proc_t',['../classpopul__proc__t.html#a46fa08f2282f2c19bcda0bda9760f104',1,'popul_proc_t::popul_proc_t(double t0=0)'],['../classpopul__proc__t.html#a5a9fb1c0e7210f7e38c0c9152756d1ec',1,'popul_proc_t::popul_proc_t(raw_t *o)'],['../classpopul__proc__t.html#a0ed480e26187e90d35a563f7b35ede09',1,'popul_proc_t::popul_proc_t(const popul_proc_t &amp;X)'],['../classpopul__proc__t.html#aa38e91ea46e8712befe1fcadf1ac74bd',1,'popul_proc_t::popul_proc_t(popul_proc_t &amp;&amp;)=delete']]],
+  ['prune_333',['prune',['../classgenealogy__t.html#a8b7f0bc5234f029ba60f7df58f584008',1,'genealogy_t']]]
 ];

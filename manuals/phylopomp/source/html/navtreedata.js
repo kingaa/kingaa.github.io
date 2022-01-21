@@ -23,6 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "phylopomp", "index.html", [
+    [ "Source code for Markov genealogy process simulators", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -52,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"hierarchy.html"
+"generics_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

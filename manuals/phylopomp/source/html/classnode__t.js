@@ -5,6 +5,7 @@ var classnode__t =
     [ "node_t", "classnode__t.html#aefe4ba2746fe009be474a1ba336a510a", null ],
     [ "~node_t", "classnode__t.html#aa5732f792f8e1fce40ab441359a2a6f2", null ],
     [ "bytesize", "classnode__t.html#a33991dff8295aa9f2f93393d934ec517", null ],
+    [ "clean", "classnode__t.html#a1bd4e9ea8c49441bb786bdc866283601", null ],
     [ "compact_newick", "classnode__t.html#a00bafc21cee2554589034441366a589e", null ],
     [ "describe", "classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae", null ],
     [ "green_ball", "classnode__t.html#ab10430fd8addd5852699c30a23729880", null ],
@@ -20,6 +21,7 @@ var classnode__t =
     [ "yaml", "classnode__t.html#abbf74b4aabeff165285a4f784e7737ba", null ],
     [ "operator>>", "classnode__t.html#a1f0906c7111fc3c278a8a95326f50235", null ],
     [ "operator>>", "classnode__t.html#a733973a96a0bc613baf7cdd5d7cba6ec", null ],
+    [ "_green_ball", "classnode__t.html#a6da5bdf987dcd66fb927724b56d14738", null ],
     [ "deme", "classnode__t.html#a0d5ee78c6e3b4d5e155a9b73b88c1c03", null ],
     [ "slate", "classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9", null ],
     [ "uniq", "classnode__t.html#acaa19616699522ec853e82c3923b0ce7", null ]

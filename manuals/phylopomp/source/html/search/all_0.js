@@ -1,15 +1,12 @@
 var searchData=
 [
-  ['ball_0',['ball',['../classpocket__t.html#a691c0051eb3d93cb110d0c8dda55db15',1,'pocket_t']]],
-  ['ball_2eh_1',['ball.h',['../ball_8h.html',1,'']]],
-  ['ball_5fcompare_2',['ball_compare',['../structball__compare.html',1,'']]],
-  ['ball_5fit_3',['ball_it',['../pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f',1,'pocket.h']]],
-  ['ball_5ft_4',['ball_t',['../classball__t.html',1,'ball_t'],['../classball__t.html#a87e6cd9c5f32cbd65883308a2dbcf73c',1,'ball_t::ball_t(node_t *who=0, name_t u=0, color_t col=green, name_t d=0)'],['../classball__t.html#acc57a0661a45a5e75106a404accf5473',1,'ball_t::ball_t(const ball_t &amp;)=delete'],['../classball__t.html#a138d81675bebd933f65652c6a257752b',1,'ball_t::ball_t(ball_t &amp;&amp;)=delete']]],
-  ['beta_5',['Beta',['../structsi2r__parameters__t.html#a5c768da00ed369fb712c8f6bbf814be4',1,'si2r_parameters_t::Beta()'],['../structsir__parameters__t.html#a7273e292749e1861a646d34ea7fb32f9',1,'sir_parameters_t::Beta()'],['../leventhal_8c.html#a69481325cd251d42dac1c62fb459cddc',1,'Beta():&#160;leventhal.c'],['../sirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc',1,'Beta():&#160;sirs_pomp.c']]],
-  ['beta1_6',['Beta1',['../structsiir__parameters__t.html#a52cc98276049251e58cb872a8d385626',1,'siir_parameters_t']]],
-  ['beta2_7',['Beta2',['../structsiir__parameters__t.html#aea6cf6bc5b2f1403642276ec1a334c38',1,'siir_parameters_t']]],
-  ['birth_8',['birth',['../classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe',1,'genealogy_t::birth(ball_t *a, slate_t t, name_t d=0)'],['../classgenealogy__t.html#a95d20516743223f35bf58a104d92fe15',1,'genealogy_t::birth(node_t *p, name_t d=0)'],['../classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d',1,'master_t::birth()']]],
-  ['black_9',['black',['../ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370',1,'ball.h']]],
-  ['blue_10',['blue',['../ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2',1,'ball.h']]],
-  ['bytesize_11',['bytesize',['../classball__t.html#a4bba3277085b3623254524797250b6bc',1,'ball_t::bytesize()'],['../classgenealogy__t.html#ae4597c4907e61b218d231cff6506dbfb',1,'genealogy_t::bytesize()'],['../classmaster__t.html#aa59abe2a4005145b9553251239d888c7',1,'master_t::bytesize()'],['../classnode__t.html#a33991dff8295aa9f2f93393d934ec517',1,'node_t::bytesize()'],['../classnodeseq__t.html#a59269f90e8ac44b94f7610aaea662d0e',1,'nodeseq_t::bytesize()'],['../classpocket__t.html#a8d3ed4fcab81ac0ae7e8cd5d88408cbf',1,'pocket_t::bytesize()'],['../classpopul__proc__t.html#aa9d6fe96428ca78a499b4fa40b0f6a66',1,'popul_proc_t::bytesize()']]]
+  ['_5fdeme_0',['_deme',['../classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e',1,'ball_t']]],
+  ['_5fgreen_5fball_1',['_green_ball',['../classnode__t.html#a6da5bdf987dcd66fb927724b56d14738',1,'node_t']]],
+  ['_5fholder_2',['_holder',['../classball__t.html#a353e894ba3486713539eff3657137828',1,'ball_t']]],
+  ['_5finven_3',['_inven',['../classinventory__t.html#ad689a669a621ceec0cf5741b995ce307',1,'inventory_t']]],
+  ['_5fobscured_4',['_obscured',['../classgenealogy__t.html#a76a437abcdc39b62bee547b42afe8426',1,'genealogy_t']]],
+  ['_5fowner_5',['_owner',['../classball__t.html#ae596048561548a1d8334a59af8c2b48d',1,'ball_t']]],
+  ['_5ft0_6',['_t0',['../classgenealogy__t.html#a97f8f6bd1c008915c3731869d59248d9',1,'genealogy_t']]],
+  ['_5ftime_7',['_time',['../classgenealogy__t.html#a1a5d34ee615b5e0f934863b5eef3132a',1,'genealogy_t']]],
+  ['_5funique_8',['_unique',['../classgenealogy__t.html#a17b34dff82f3d3e2933f64a041c07a51',1,'genealogy_t']]]
 ];

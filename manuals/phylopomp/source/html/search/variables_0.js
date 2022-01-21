@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['beta_348',['Beta',['../structsi2r__parameters__t.html#a5c768da00ed369fb712c8f6bbf814be4',1,'si2r_parameters_t::Beta()'],['../structsir__parameters__t.html#a7273e292749e1861a646d34ea7fb32f9',1,'sir_parameters_t::Beta()']]],
-  ['beta1_349',['Beta1',['../structsiir__parameters__t.html#a52cc98276049251e58cb872a8d385626',1,'siir_parameters_t']]],
-  ['beta2_350',['Beta2',['../structsiir__parameters__t.html#aea6cf6bc5b2f1403642276ec1a334c38',1,'siir_parameters_t']]],
-  ['bytesize_351',['bytesize',['../classball__t.html#a4bba3277085b3623254524797250b6bc',1,'ball_t']]]
+  ['_5fdeme_372',['_deme',['../classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e',1,'ball_t']]],
+  ['_5fgreen_5fball_373',['_green_ball',['../classnode__t.html#a6da5bdf987dcd66fb927724b56d14738',1,'node_t']]],
+  ['_5fholder_374',['_holder',['../classball__t.html#a353e894ba3486713539eff3657137828',1,'ball_t']]],
+  ['_5finven_375',['_inven',['../classinventory__t.html#ad689a669a621ceec0cf5741b995ce307',1,'inventory_t']]],
+  ['_5fobscured_376',['_obscured',['../classgenealogy__t.html#a76a437abcdc39b62bee547b42afe8426',1,'genealogy_t']]],
+  ['_5fowner_377',['_owner',['../classball__t.html#ae596048561548a1d8334a59af8c2b48d',1,'ball_t']]],
+  ['_5ft0_378',['_t0',['../classgenealogy__t.html#a97f8f6bd1c008915c3731869d59248d9',1,'genealogy_t']]],
+  ['_5ftime_379',['_time',['../classgenealogy__t.html#a1a5d34ee615b5e0f934863b5eef3132a',1,'genealogy_t']]],
+  ['_5funique_380',['_unique',['../classgenealogy__t.html#a17b34dff82f3d3e2933f64a041c07a51',1,'genealogy_t']]]
 ];

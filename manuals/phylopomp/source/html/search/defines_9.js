@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['optional_5fint_5fpar_435',['OPTIONAL_INT_PAR',['../internal_8h.html#a90bf59b7ffe872df0bfe7e5601e5b00d',1,'internal.h']]],
-  ['optional_5freal_5fpar_436',['OPTIONAL_REAL_PAR',['../internal_8h.html#ae179a54e342592e5a49c67474a5a9f29',1,'internal.h']]]
+  ['param_5fset_468',['PARAM_SET',['../popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c',1,'popul_proc.h']]],
+  ['psi_469',['psi',['../lbdp__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377',1,'psi():&#160;lbdp_pomp.c'],['../leventhal_8c.html#aebfab0be95178c0a2497fca46e5eb377',1,'psi():&#160;leventhal.c'],['../sirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377',1,'psi():&#160;sirs_pomp.c']]]
 ];

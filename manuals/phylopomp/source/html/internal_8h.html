@@ -141,10 +141,6 @@ Macros</h2></td></tr>
 <tr class="separator:a8224a361dddd2ad59b411982e5ea746f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51e2ad0ec422f18f5d7e9a5cbd4f9613"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a51e2ad0ec422f18f5d7e9a5cbd4f9613">rprint</a>(<a class="el" href="sirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>)&#160;&#160;&#160;Rprintf(&quot;%s\n&quot;,(S).c_str())</td></tr>
 <tr class="separator:a51e2ad0ec422f18f5d7e9a5cbd4f9613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae179a54e342592e5a49c67474a5a9f29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#ae179a54e342592e5a49c67474a5a9f29">OPTIONAL_REAL_PAR</a>(x,  X,  d)</td></tr>
-<tr class="separator:ae179a54e342592e5a49c67474a5a9f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90bf59b7ffe872df0bfe7e5601e5b00d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a90bf59b7ffe872df0bfe7e5601e5b00d">OPTIONAL_INT_PAR</a>(x,  X,  d)</td></tr>
-<tr class="separator:a90bf59b7ffe872df0bfe7e5601e5b00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -184,90 +180,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00011">11</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-
-</div>
-</div>
-<a id="a90bf59b7ffe872df0bfe7e5601e5b00d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90bf59b7ffe872df0bfe7e5601e5b00d">&#9670;&nbsp;</a></span>OPTIONAL_INT_PAR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OPTIONAL_INT_PAR</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">X, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">d&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordtype">int</span> x;        \</div>
-<div class="line">  if (isNull(X)) {              \</div>
-<div class="line">    x = d;                  \</div>
-<div class="line">  } <span class="keywordflow">else</span> {                  \</div>
-<div class="line">    x = *(INTEGER(AS_INTEGER(X)));      \</div>
-<div class="line">  }                     \</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00065">65</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-
-</div>
-</div>
-<a id="ae179a54e342592e5a49c67474a5a9f29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae179a54e342592e5a49c67474a5a9f29">&#9670;&nbsp;</a></span>OPTIONAL_REAL_PAR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OPTIONAL_REAL_PAR</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">X, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">d&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordtype">double</span> x; \</div>
-<div class="line">  if (isNull(X)) {              \</div>
-<div class="line">    x = d;                  \</div>
-<div class="line">  } <span class="keywordflow">else</span> {                  \</div>
-<div class="line">    x = *(REAL(AS_NUMERIC(X)));         \</div>
-<div class="line">  }                     \</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00058">58</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
 
 </div>
 </div>
@@ -386,7 +298,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00037">37</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                             {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  SEXP x;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  PROTECT(x = NEW_LOGICAL(1));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  *LOGICAL(x) = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  UNPROTECT(1);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a30243865c01653487f851881a5a9fc28"></a>
@@ -414,13 +333,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00046">46</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) floor(R_unif_index((<span class="keywordtype">double</span>) <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="internal_8h_a30243865c01653487f851881a5a9fc28_icgraph.png" border="0" usemap="#internal_8h_a30243865c01653487f851881a5a9fc28_icgraph" alt=""/></div>
 <map name="internal_8h_a30243865c01653487f851881a5a9fc28_icgraph" id="internal_8h_a30243865c01653487f851881a5a9fc28_icgraph">
 <area shape="rect" title=" " alt="" coords="473,31,599,57"/>
-<area shape="rect" href="classinventory__t.html#ad612a62fbabb6751710d13f45748683f" title=" " alt="" coords="240,5,425,32"/>
+<area shape="rect" href="classinventory__t.html#ad612a62fbabb6751710d13f45748683f" title="choose a random ball from deme i" alt="" coords="240,5,425,32"/>
 <area shape="rect" href="classinventory__t.html#a63a241558955e601506bc55db01ba5cd" title=" " alt="" coords="5,31,192,57"/>
 </map>
 </div>
@@ -480,7 +402,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00051">51</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-<div class="dynheader">
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                                     {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  SET_ELEMENT(list,pos,element);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  SET_STRING_ELT(names,pos,mkChar(name));</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> ++pos;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="internal_8h_a53266ca5329fe6d2e931aee06e78578c_icgraph.png" border="0" usemap="#internal_8h_a53266ca5329fe6d2e931aee06e78578c_icgraph" alt=""/></div>
@@ -488,9 +415,9 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="408,123,517,149"/>
 <area shape="rect" href="generics_8h.html#aff48d5dbb1d4cf6a2c6739e5dbb3179c" title=" " alt="" coords="253,5,299,32"/>
 <area shape="rect" href="classgenealogy__t.html#a03edaddf1e13c57619ba8d11648eede3" title=" " alt="" coords="197,57,355,98"/>
-<area shape="rect" href="classball__t.html#a7624737bc15d3d74fad0d4faa71f488c" title=" " alt="" coords="214,123,338,149"/>
-<area shape="rect" href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52" title=" " alt="" coords="210,173,342,200"/>
-<area shape="rect" href="classgenealogy__t.html#a496ced7e46790af06316f076b5895685" title=" " alt="" coords="192,224,360,251"/>
+<area shape="rect" href="classball__t.html#a7624737bc15d3d74fad0d4faa71f488c" title="R list description." alt="" coords="214,123,338,149"/>
+<area shape="rect" href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52" title="R list description." alt="" coords="210,173,342,200"/>
+<area shape="rect" href="classgenealogy__t.html#a496ced7e46790af06316f076b5895685" title="R list description." alt="" coords="192,224,360,251"/>
 <area shape="rect" href="init_8c.html#a071d822d4db004b7729f6819ffabbc44" title=" " alt="" coords="5,5,144,32"/>
 </map>
 </div>
@@ -522,11 +449,19 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00029">29</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  SEXP x;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  PROTECT(x = NEW_LOGICAL(1));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  *LOGICAL(x) = 1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  UNPROTECT(1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00010">lbdp_pomp.c:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

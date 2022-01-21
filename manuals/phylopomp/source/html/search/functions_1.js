@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['check_5fgenealogy_5fsize_257',['check_genealogy_size',['../classgenealogy__t.html#af5d033ab4a4920e4922f25366373216d',1,'genealogy_t']]],
-  ['child_258',['child',['../classball__t.html#a0e67e91ddd3b02df15175ff2151ab398',1,'ball_t']]],
-  ['clean_259',['clean',['../classinventory__t.html#a17cde2ae17b62ccfbfff1e07fe714748',1,'inventory_t']]],
-  ['clear_260',['clear',['../classinventory__t.html#a180962f2d21dda4aeb1a0f481e175e9b',1,'inventory_t']]],
-  ['color_5fname_261',['color_name',['../classball__t.html#ab87d8591dc302fca18a345cbe4c33b0a',1,'ball_t']]],
-  ['color_5fsymbol_262',['color_symbol',['../classball__t.html#a3545dd485a4dfd8364552bf3d360555e',1,'ball_t']]],
-  ['colored_263',['colored',['../classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f',1,'nodeseq_t']]],
-  ['compact_5fnewick_264',['compact_newick',['../classnode__t.html#a00bafc21cee2554589034441366a589e',1,'node_t']]]
+  ['ball_270',['ball',['../classpocket__t.html#a691c0051eb3d93cb110d0c8dda55db15',1,'pocket_t']]],
+  ['ball_5ft_271',['ball_t',['../classball__t.html#a87e6cd9c5f32cbd65883308a2dbcf73c',1,'ball_t::ball_t(node_t *who=0, name_t u=0, color_t col=green, name_t d=0)'],['../classball__t.html#acc57a0661a45a5e75106a404accf5473',1,'ball_t::ball_t(const ball_t &amp;)=delete'],['../classball__t.html#a138d81675bebd933f65652c6a257752b',1,'ball_t::ball_t(ball_t &amp;&amp;)=delete']]],
+  ['birth_272',['birth',['../classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe',1,'genealogy_t::birth(ball_t *a, slate_t t, name_t d=0)'],['../classgenealogy__t.html#a95d20516743223f35bf58a104d92fe15',1,'genealogy_t::birth(node_t *p, name_t d=0)'],['../classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d',1,'master_t::birth()']]],
+  ['bytesize_273',['bytesize',['../classgenealogy__t.html#ae4597c4907e61b218d231cff6506dbfb',1,'genealogy_t::bytesize()'],['../classmaster__t.html#aa59abe2a4005145b9553251239d888c7',1,'master_t::bytesize()'],['../classnode__t.html#a33991dff8295aa9f2f93393d934ec517',1,'node_t::bytesize()'],['../classnodeseq__t.html#a59269f90e8ac44b94f7610aaea662d0e',1,'nodeseq_t::bytesize()'],['../classpocket__t.html#a8d3ed4fcab81ac0ae7e8cd5d88408cbf',1,'pocket_t::bytesize()'],['../classpopul__proc__t.html#aa9d6fe96428ca78a499b4fa40b0f6a66',1,'popul_proc_t::bytesize()']]]
 ];

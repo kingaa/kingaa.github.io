@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['nchildren_298',['nchildren',['../classnode__t.html#a48dea16ceab8f1edeef20257b0f8d73e',1,'node_t']]],
-  ['newick_299',['newick',['../classball__t.html#a6ea0514941c8f2a89306e60065562e83',1,'ball_t::newick()'],['../classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff',1,'genealogy_t::newick()'],['../classmaster__t.html#a76e84d14ef2bb374608e9fce7c2d4224',1,'master_t::newick()'],['../classnode__t.html#a8fbcbc87b57e6d224e709777caf89609',1,'node_t::newick()'],['../classnodeseq__t.html#a0f763f9a3a5279dfddd40addcfb76875',1,'nodeseq_t::newick()'],['../generics_8h.html#a5e21f177e3fd7fc7b2d6edd2ec61c88d',1,'newick():&#160;generics.h']]],
-  ['node_5ft_300',['node_t',['../classnode__t.html#a1a78fe30aa439dddf2039e7107d18caa',1,'node_t::node_t(name_t u=0, slate_t t=R_NaReal, name_t d=0)'],['../classnode__t.html#a8711bfa5f6a0a5c424816f2c9d0e17da',1,'node_t::node_t(const node_t &amp;p)=delete'],['../classnode__t.html#aefe4ba2746fe009be474a1ba336a510a',1,'node_t::node_t(node_t &amp;&amp;p)=delete']]],
-  ['ntime_301',['ntime',['../classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3',1,'nodeseq_t']]]
+  ['make_316',['make',['../generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1',1,'generics.h']]],
+  ['make_5fnode_317',['make_node',['../classgenealogy__t.html#a9976cd7e3f4f6af9c77783e787fa1a2f',1,'genealogy_t']]],
+  ['master_5ft_318',['master_t',['../classmaster__t.html#a50f38cb323f5afa3464a457bf55cd1d3',1,'master_t::master_t(double t0=0)'],['../classmaster__t.html#a364a1605ee2a2a5f1d55786ddeb443e9',1,'master_t::master_t(raw_t *o)'],['../classmaster__t.html#a83ec737eb164c3172f407d3277b0c4ed',1,'master_t::master_t(SEXP o)'],['../classmaster__t.html#a713721ba6ce42ffe1e08e6a6ab7b1a73',1,'master_t::master_t(const master_t &amp;A)'],['../classmaster__t.html#a440850e46a86ff71fe392d9f4f49774f',1,'master_t::master_t(master_t &amp;&amp;)=default']]],
+  ['migrate_319',['migrate',['../classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122',1,'genealogy_t::migrate()'],['../classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4',1,'master_t::migrate()']]]
 ];

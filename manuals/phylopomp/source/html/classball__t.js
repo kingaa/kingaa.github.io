@@ -20,6 +20,9 @@ var classball__t =
     [ "compare", "classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef", null ],
     [ "operator>>", "classball__t.html#a6f6f397a35a9d8c4613aa04af51c72a9", null ],
     [ "operator>>", "classball__t.html#a129033754b7a3af4cb7b1c3940f1b2c7", null ],
+    [ "_deme", "classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e", null ],
+    [ "_holder", "classball__t.html#a353e894ba3486713539eff3657137828", null ],
+    [ "_owner", "classball__t.html#ae596048561548a1d8334a59af8c2b48d", null ],
     [ "color", "classball__t.html#ada6b9e789dc34806789eb6f41892dd46", null ],
     [ "uniq", "classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675", null ]
 ];

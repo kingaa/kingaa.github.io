@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['g_37',['g',['../structmoran__state__t.html#a315322329482b4cc2ecac3ec3137dac6',1,'moran_state_t']]],
-  ['gamma_38',['gamma',['../structsi2r__parameters__t.html#a065e243533969eb9390ffdd67817873e',1,'si2r_parameters_t::gamma()'],['../structsiir__parameters__t.html#aeef57dbb9706ca174d66fef5c0c3bcc3',1,'siir_parameters_t::gamma()'],['../structsir__parameters__t.html#aaa8f925e0bdbf85034adf951855a5906',1,'sir_parameters_t::gamma()'],['../leventhal_8c.html#a42e729077189bab1dae844253dd2ad1d',1,'gamma():&#160;leventhal.c'],['../sirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d',1,'gamma():&#160;sirs_pomp.c']]],
-  ['geneal_39',['geneal',['../classmaster__t.html#a7ae6e41dbfeac513e9d70220dda54060',1,'master_t']]],
-  ['genealogy_2eh_40',['genealogy.h',['../genealogy_8h.html',1,'']]],
-  ['genealogy_5ft_41',['genealogy_t',['../classgenealogy__t.html',1,'genealogy_t&lt; ndeme &gt;'],['../classgenealogy__t.html#ab1b870d83ac2cc3457a7f24157bd6abe',1,'genealogy_t::genealogy_t(double t0=0)'],['../classgenealogy__t.html#a331b29cc611c069245da7c8dc404a03e',1,'genealogy_t::genealogy_t(raw_t *o)'],['../classgenealogy__t.html#af64e36810f1ab08955fb860c2a6a08ea',1,'genealogy_t::genealogy_t(const genealogy_t &amp;G)'],['../classgenealogy__t.html#ac5befd7a28b5c3a07229fe9316370bb3',1,'genealogy_t::genealogy_t(genealogy_t &amp;&amp;)=delete']]],
-  ['generics_42',['GENERICS',['../generics_8h.html#a2733882fe92c8eb7d252c113560e7962',1,'generics.h']]],
-  ['generics_2eh_43',['generics.h',['../generics_8h.html',1,'']]],
-  ['graft_44',['graft',['../classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366',1,'genealogy_t::graft()'],['../classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556',1,'master_t::graft()']]],
-  ['green_45',['green',['../ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca',1,'ball.h']]],
-  ['green_5fball_46',['green_ball',['../classnode__t.html#ab10430fd8addd5852699c30a23729880',1,'node_t']]],
-  ['grey_47',['grey',['../ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1ab04a7e12b0e8c41f7cbb6fcb5f6556c6',1,'ball.h']]]
+  ['empty_44',['empty',['../classinventory__t.html#ab873c70a57df79d98be1d5772f8d1285',1,'inventory_t']]],
+  ['erase_45',['erase',['../classinventory__t.html#a29124069de8f231217845de929ae5bb1',1,'inventory_t']]],
+  ['err_46',['err',['../internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024',1,'internal.h']]],
+  ['event_47',['event',['../classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7',1,'popul_proc_t']]],
+  ['event_5frates_48',['event_rates',['../classpopul__proc__t.html#a379239413f290a7744e97a12b50ad2e0',1,'popul_proc_t']]],
+  ['extant_49',['extant',['../classgenealogy__t.html#ae4c2a070730bfefe8564c648e5bf4144',1,'genealogy_t']]]
 ];

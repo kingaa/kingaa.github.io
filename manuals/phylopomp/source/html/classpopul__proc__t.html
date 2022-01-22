@@ -541,7 +541,7 @@ template&lt;class STATE , class PARAMETERS , size_t NEVENT, size_t NDEME = 1&gt;
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00040">40</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{};     <span class="comment">// memory cleanup</span></div>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{};         <span class="comment">// memory cleanup</span></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -922,7 +922,7 @@ template&lt;class STATE , class PARAMETERS , size_t NEVENT, size_t NDEME = 1&gt;
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">event</span> = 0;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">while</span> (u &gt; rate[<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>] &amp;&amp; <a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a> &lt; <a class="code" href="classpopul__proc__t.html#a33698e6780d44b730271a27dcf43fac8">nevent</a>) {</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">if</span> (rate[<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>] &lt; 0)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate[%ld]=%lg&quot;</span>,__func__,<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>,rate[<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>]); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate[%ld]=%lg&quot;</span>,__func__,<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>,rate[<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>]); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      u -= rate[<a class="code" href="classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7">event</a>];</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keyword">event</span>++;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>

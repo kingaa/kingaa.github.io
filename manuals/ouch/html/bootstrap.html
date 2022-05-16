@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Bootstrapping for uncertainty quantification</title>
+<!DOCTYPE html><html><head><title>R: Bootstrapping for uncertainty quantification</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for bootstrap {ouch}"><tr><td>bootstrap {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>bootstrap {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Bootstrapping for uncertainty quantification</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'missing'
+<pre><code class='language-R'>## S4 method for signature 'missing'
 bootstrap(object, ...)
 
 ## S4 method for signature 'ANY'
@@ -28,12 +37,12 @@ bootstrap(object, nboot = 200, seed = NULL, ...)
 
 ## S4 method for signature 'hansentree'
 bootstrap(object, nboot = 200, seed = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>object</code></td>
 <td>
 <p>A fitted model object.</p>
@@ -76,8 +85,7 @@ bootstrap(object, nboot = 200, seed = NULL, ...)
 
 <h3>Examples</h3>
 
-<pre>
-## Not run: 
+<pre><code class='language-R'>## Not run: 
 ## Fit BM and a 5-regime OU model to the A. bimaculatus data
 tree &lt;- with(bimac,ouchtree(node,ancestor,time/max(time),species))
 
@@ -116,7 +124,9 @@ cat("bootstrap 95% confidence intervals for h5:\n")
 print(t(sapply(boots.h5,quantile,probs=c(0.025,0.975))),digits=3)
 
 ## End(Not run)
-</pre>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.17-2 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

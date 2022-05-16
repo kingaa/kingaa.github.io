@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Ornstein-Uhlenbeck models of trait evolution</title>
+<!DOCTYPE html><html><head><title>R: Ornstein-Uhlenbeck models of trait evolution</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for hansen {ouch}"><tr><td>hansen {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>hansen {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Ornstein-Uhlenbeck models of trait evolution</h2>
 
@@ -17,8 +27,7 @@ The fitting is done using <code>optim</code> or <code>subplex</code>.
 
 <h3>Usage</h3>
 
-<pre>
-hansen(
+<pre><code class='language-R'>hansen(
   data,
   tree,
   regimes,
@@ -29,12 +38,12 @@ hansen(
   hessian = FALSE,
   ...
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>data</code></td>
 <td>
 <p>Phenotypic data for extant species, i.e., species at the terminal twigs of the phylogenetic tree.
@@ -59,9 +68,9 @@ If there are <code>nchar</code> quantitative characters, then one can specify a 
 <tr valign="top"><td><code>sqrt.alpha, sigma</code></td>
 <td>
 <p>These are used to initialize the optimization algorithm.
-The selection strength matrix <i>alpha</i> and the random drift variance-covariance matrix <i>sigma^2</i> are parameterized by their matrix square roots.
+The selection strength matrix <code class="reqn">\alpha</code> and the random drift variance-covariance matrix <code class="reqn">\sigma^2</code> are parameterized by their matrix square roots.
 Specifically, these initial guesses are each packed into lower-triangular matrices (column by column).
-The product of this matrix with its transpose is the <i>alpha</i> or <i>sigma^2</i> matrix.
+The product of this matrix with its transpose is the <code class="reqn">\alpha</code> or <code class="reqn">\sigma^2</code> matrix.
 See Details for more information.</p>
 </td></tr>
 <tr valign="top"><td><code>fit</code></td>
@@ -89,29 +98,30 @@ See <code><a href="../../stats/help/optim.html">stats::optim()</a></code> and <c
 
 <h3>Details</h3>
 
-<p>The Hansen model for the evolution of a multivariate trait <i>X</i> along a lineage can be written as a stochastic differential equation (Ito diffusion)
+<p>The Hansen model for the evolution of a multivariate trait <code class="reqn">X</code> along a lineage can be written as a stochastic differential equation (Ito diffusion)
 </p>
-<p style="text-align: center;"><i>dX = alpha (theta(t)-X(t)) dt + sigma dB(t),</i></p>
+<p style="text-align: center;"><code class="reqn">dX=\alpha(\theta(t)-X(t))dt+\sigma dB(t),</code>
+</p>
 
-<p>where <i>t</i> is time along the lineage,
-<i>theta(t)</i> is the optimum trait value, <i>B(t)</i> is a standard Wiener process (Brownian motion),
-and <i>alpha</i> and <i>sigma</i> are matrices
+<p>where <code class="reqn">t</code> is time along the lineage,
+<code class="reqn">\theta(t)</code> is the optimum trait value, <code class="reqn">B(t)</code> is a standard Wiener process (Brownian motion),
+and <code class="reqn">\alpha</code> and <code class="reqn">\sigma</code> are matrices
 quantifying, respectively, the strength of selection and random drift.
-Without loss of generality, one can assume <i>sigma</i> is lower-triangular.
+Without loss of generality, one can assume <code class="reqn">\sigma</code> is lower-triangular.
 This is because only the infinitesimal variance-covariance matrix
-<i>sigma^2 = sigma%*%transpose(sigma)</i>
-is identifiable, and for any admissible variance-covariance matrix, we can choose <i>sigma</i> to be lower-triangular.
-Moreover, if we view the basic model as describing evolution on a fitness landscape, then <i>alpha</i> will be symmetric.
-If we further restrict ourselves to the case of stabilizing selection, <i>alpha</i> will be positive definite as well.
-We make these assumptions and therefore can assume that the matrix <i>alpha</i> has a lower-triangular square root.
+<code class="reqn">\sigma^2=\sigma\sigma^T</code>
+is identifiable, and for any admissible variance-covariance matrix, we can choose <code class="reqn">\sigma</code> to be lower-triangular.
+Moreover, if we view the basic model as describing evolution on a fitness landscape, then <code class="reqn">\alpha</code> will be symmetric.
+If we further restrict ourselves to the case of stabilizing selection, <code class="reqn">\alpha</code> will be positive definite as well.
+We make these assumptions and therefore can assume that the matrix <code class="reqn">\alpha</code> has a lower-triangular square root.
 </p>
 <p>The <code>hansen</code> code uses unconstrained numerical optimization to maximize the likelihood.
-To do this, it parameterizes the <i>alpha</i> and <i>sigma^2</i> matrices in a special way:
+To do this, it parameterizes the <code class="reqn">\alpha</code> and <code class="reqn">\sigma^2</code> matrices in a special way:
 each matrix is parameterized by <code>nchar*(nchar+1)/2</code> parameters, where <code>nchar</code> is the number of quantitative characters.
 Specifically, the parameters initialized by the <code>sqrt.alpha</code> argument of <code>hansen</code> are used
 to fill the nonzero entries of a lower-triangular matrix (in column-major order),
 which is then multiplied by its transpose to give the selection-strength matrix.
-The parameters specified in <code>sigma</code> fill the nonzero entries in the lower triangular <i>sigma</i> matrix.
+The parameters specified in <code>sigma</code> fill the nonzero entries in the lower triangular <code class="reqn">\sigma</code> matrix.
 When <code>hansen</code> is executed, the numerical optimizer maximizes the likelihood over these parameters.
 </p>
 
@@ -152,8 +162,7 @@ When <code>hansen</code> is executed, the numerical optimizer maximizes the like
 
 <h3>Examples</h3>
 
-<pre>
-## Analysis of sexual size dimorphism data
+<pre><code class='language-R'>## Analysis of sexual size dimorphism data
 tree &lt;- with(anolis.ssd,ouchtree(node,ancestor,time/max(time),species))
 plot(tree,node.names=TRUE)
 
@@ -168,48 +177,49 @@ plot(h2)
 h3 &lt;- hansen(anolis.ssd['log.SSD'],tree,anolis.ssd['OU.7'],sqrt.alpha=1,sigma=1)
 h3
 plot(h3)
-### Darwin's finches
-library(geiger)
-data(geospiza)
 
-### check the correspondence between data and tree tips:
-print(nc &lt;- with(geospiza,name.check(geospiza.tree,geospiza.data)))
-### looks like one of the terminal twigs has no data associated
-### drop that tip:
-tree &lt;- with(geospiza,drop.tip(geospiza.tree,nc$tree_not_data))
-dat &lt;- as.data.frame(geospiza$dat)
+### Darwin's finches.
+### The data were taken from package 'geiger' due to the latter being orphaned.
+if (requireNamespace("ape")) {
 
+  data(geospiza)
+  plot(geospiza$phy)
+  print(geospiza$dat)
+  
 ### make an ouchtree out of the phy-format tree
-ot &lt;- ape2ouch(tree)
+  ot &lt;- ape2ouch(geospiza$phy)
 
 ### merge data with tree info
-otd &lt;- as(ot,"data.frame")
-### in these data, it so happens that the rownames correspond to node names
-### we will exploit this correspondence in the 'merge' operation:
-dat$labels &lt;- rownames(dat)
-otd &lt;- merge(otd,dat,by="labels",all=TRUE)
-rownames(otd) &lt;- otd$nodes
-print(otd)
+  otd &lt;- as(ot,"data.frame")
+  otd &lt;- merge(otd,geospiza$dat,by.x="labels",by.y="row.names",all=TRUE)
+### row-names are used by 'hansen'
+  rownames(otd) &lt;- otd$nodes
+  print(otd)
 ### this data-frame now contains the data as well as the tree geometry
 
 ### now remake the ouch tree
-ot &lt;- with(otd,ouchtree(nodes=nodes,ancestors=ancestors,times=times,labels=labels))
+  ot &lt;- with(otd,ouchtree(nodes=nodes,ancestors=ancestors,times=times,labels=labels))
+  plot(ot)
 
-b1 &lt;- brown(tree=ot,data=otd[c("tarsusL","beakD")])
-summary(b1)
+  b1 &lt;- brown(tree=ot,data=otd[c("tarsusL","beakD")])
+  summary(b1)
 
 ### evaluate an OU model with a single, global selective regime
-otd$regimes &lt;- as.factor("global")
-h1 &lt;- hansen(
-  tree=ot,
-  data=otd[c("tarsusL","beakD")],
-  regimes=otd["regimes"],
-  sqrt.alpha=c(1,0,1),
-  sigma=c(1,0,1),
-  maxit=10000
-)
-summary(h1)
-</pre>
+  otd$regimes &lt;- as.factor("global")
+  h1 &lt;- hansen(
+    tree=ot,
+    data=otd[c("tarsusL","beakD")],
+    regimes=otd["regimes"],
+    sqrt.alpha=c(1,0,1),
+    sigma=c(1,0,1),
+    maxit=10000
+  )
+  summary(h1)
+  plot(h1)
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.17-2 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+}
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

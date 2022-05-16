@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Greater Antillean anolis lizard sexual size dimorphism data</title>
+<!DOCTYPE html><html><head><title>R: Greater Antillean anolis lizard sexual size dimorphism data</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for anolis.ssd {ouch}"><tr><td>anolis.ssd {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>anolis.ssd {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Greater Antillean anolis lizard sexual size dimorphism data</h2>
 
@@ -85,14 +95,14 @@ The phylogeny of these species is consistent with and adaptive radiation, with a
 
 <p>Other examples: 
 <code><a href="../../ouch/help/bimac.html">bimac</a></code>,
+<code><a href="../../ouch/help/geospiza.html">geospiza</a></code>,
 <code><a href="../../ouch/help/ouch-package.html">ouch-package</a></code>
 </p>
 
 
 <h3>Examples</h3>
 
-<pre>
-## Analysis of sexual size dimorphism data
+<pre><code class='language-R'>## Analysis of sexual size dimorphism data
 tree &lt;- with(anolis.ssd,ouchtree(node,ancestor,time/max(time),species))
 plot(tree,node.names=TRUE)
 
@@ -107,7 +117,9 @@ plot(h2)
 h3 &lt;- hansen(anolis.ssd['log.SSD'],tree,anolis.ssd['OU.7'],sqrt.alpha=1,sigma=1)
 h3
 plot(h3)
-</pre>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.17-2 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

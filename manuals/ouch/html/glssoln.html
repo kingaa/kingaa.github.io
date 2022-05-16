@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Generalized least-squares solver</title>
+<!DOCTYPE html><html><head><title>R: Generalized least-squares solver</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for glssoln {ouch}"><tr><td>glssoln {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>glssoln {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Generalized least-squares solver</h2>
 
@@ -16,33 +26,36 @@
 
 <h3>Usage</h3>
 
-<pre>
-glssoln(a, x, v, tol = sqrt(.Machine$double.eps))
-</pre>
+<pre><code class='language-R'>glssoln(a, x, v, tol = sqrt(.Machine$double.eps))
+</code></pre>
 
 
 <h3>Details</h3>
 
-<p>Given matrices <i>a</i>, <i>x</i>, <i>v</i>, <code>glssoln</code> computes <i>y</i> such that
+<p>Given matrices <code class="reqn">a</code>, <code class="reqn">x</code>, <code class="reqn">v</code>, <code>glssoln</code> computes <code class="reqn">y</code> such that
 </p>
-<p style="text-align: center;"><i>(x-ay)^T v^{-1} (x-ay)</i></p>
+<p style="text-align: center;"><code class="reqn">(x-ay)^T v^{-1} (x-ay)</code>
+</p>
 
 <p>is minimized.
-This is accomplished by first computing the Choleski decomposition of <i>v</i>:
+This is accomplished by first computing the Choleski decomposition of <code class="reqn">v</code>:
 </p>
-<p style="text-align: center;"><i>v=LL^T.</i></p>
+<p style="text-align: center;"><code class="reqn">v=LL^T.</code>
+</p>
 
-<p>One then solves for <i>y</i> in the equation
+<p>One then solves for <code class="reqn">y</code> in the equation
 </p>
-<p style="text-align: center;"><i>L^{-1}ay=L^{-1}x.</i></p>
+<p style="text-align: center;"><code class="reqn">L^{-1}ay=L^{-1}x.</code>
+</p>
 
-<p>This is accomplished by means of a singular-value decomposition of <i>L^{-1} a</i>.
+<p>This is accomplished by means of a singular-value decomposition of <code class="reqn">L^{-1} a</code>.
 </p>
-<p>The resulting <i>y</i> then satisfies
+<p>The resulting <code class="reqn">y</code> then satisfies
 </p>
-<p style="text-align: center;"><i>x=ay+e,</i></p>
+<p style="text-align: center;"><code class="reqn">x=ay+e,</code>
+</p>
 
-<p>where the entries of <i>e</i> are the residuals.
+<p>where the entries of <code class="reqn">e</code> are the residuals.
 </p>
 
 
@@ -52,13 +65,14 @@ This is accomplished by first computing the Choleski decomposition of <i>v</i>:
 </p>
 
 <ul>
-<li> <p><code>coeff</code> is <i>y</i> as above.
+<li> <p><code>coeff</code> is <code class="reqn">y</code> as above.
 </p>
 </li>
-<li> <p><code>residuals</code> is <i>e</i> as above.
+<li> <p><code>residuals</code> is <code class="reqn">e</code> as above.
 </p>
 </li></ul>
 
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.17-2 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

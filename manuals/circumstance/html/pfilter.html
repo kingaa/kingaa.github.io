@@ -1,0 +1,120 @@
+<!DOCTYPE html><html><head><title>R: Parallel particle filter computations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%"><tr><td>pfilter {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Parallel particle filter computations</h2>
+
+<h3>Description</h3>
+
+<p>Runs multiple instances of <code>pfilter</code> using <code>foreach</code>.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'ANY,numeric'
+pfilter(data, Nrep, ...)
+
+## S4 method for signature 'ANY,missing'
+pfilter(data, Nrep, ...)
+
+## S4 method for signature 'pompList,numeric'
+pfilter(data, Nrep, ...)
+
+## S4 method for signature 'pompList,missing'
+pfilter(data, Nrep, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>passed to <code>pomp::<a href="../../pomp/help/pfilter.html">pfilter</a></code></p>
+</td></tr>
+<tr valign="top"><td><code>Nrep</code></td>
+<td>
+<p>number of replicate particle filter computations to run.
+By default, <code>Nrep = 1</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>all additional arguments are passed to <code>pomp::<a href="../../pomp/help/pfilter.html">pfilter</a></code></p>
+</td></tr>
+</table>
+
+
+<h3>See Also</h3>
+
+<p><code>pomp::<a href="../../pomp/help/pfilter.html">pfilter</a></code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>options(digits=3)
+png(filename="pfilter-%02d.png",res=100)
+
+set.seed(789744859)
+
+library(circumstance)
+library(tidyr)
+library(ggplot2)
+library(doParallel)
+library(doRNG)
+
+registerDoParallel()
+registerDoRNG(789744859)
+
+ou2() -&gt; ou2
+ou2 %&gt;%
+  pfilter(Np=1000,Nrep=6) -&gt; pfs
+
+pfs %&gt;%
+  logLik() %&gt;%
+  logmeanexp(se=TRUE)
+
+pfs %&gt;%
+  as.data.frame() %&gt;%
+  head()
+
+ou2 %&gt;%
+  pfilter(Np=1000) %&gt;%
+  logLik()
+
+pfs %&gt;%
+  lapply(simulate) %&gt;%
+  setNames(LETTERS[1:6]) %&gt;%
+  do.call(c,.) %&gt;%
+  pfilter(Nrep=2,Np=200) -&gt; pfs2
+
+pfs2 %&gt;%
+  data.frame() %&gt;%
+  separate(.id,c("po","rep")) %&gt;%
+  ggplot(aes(x=time,y=ess,group=rep,color=rep))+
+  geom_line()+
+  facet_wrap(~po)
+
+registerDoSEQ()
+
+dev.off()
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.1.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

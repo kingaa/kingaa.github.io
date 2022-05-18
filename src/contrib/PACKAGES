@@ -8,11 +8,11 @@ MD5sum: c00c5955b4e95ab36032e2a7e3783f39
 NeedsCompilation: no
 
 Package: circumstance
-Version: 0.0.1.0
-Depends: R(>= 3.6.0), methods, foreach, pomp(>= 2.8)
+Version: 0.0.2.0
+Depends: R(>= 4.1.0), methods, foreach, pomp(>= 4.2), parallel
 Suggests: doParallel, doRNG, tidyr, ggplot2
 License: GPL-3
-MD5sum: 3b39c380e2d29fa88151ba88c5879a70
+MD5sum: 87b0583cc6d39488e25488eb84837eb8
 NeedsCompilation: no
 
 Package: mpifarm

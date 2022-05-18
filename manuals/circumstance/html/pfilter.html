@@ -67,54 +67,12 @@ By default, <code>Nrep = 1</code>.</p>
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>options(digits=3)
-png(filename="pfilter-%02d.png",res=100)
-
-set.seed(789744859)
-
-library(circumstance)
-library(tidyr)
-library(ggplot2)
-library(doParallel)
-library(doRNG)
-
-registerDoParallel()
-registerDoRNG(789744859)
+<pre><code class='language-R'>library(circumstance)
 
 ou2() -&gt; ou2
-ou2 %&gt;%
-  pfilter(Np=1000,Nrep=6) -&gt; pfs
-
-pfs %&gt;%
-  logLik() %&gt;%
-  logmeanexp(se=TRUE)
-
-pfs %&gt;%
-  as.data.frame() %&gt;%
-  head()
-
-ou2 %&gt;%
-  pfilter(Np=1000) %&gt;%
-  logLik()
-
-pfs %&gt;%
-  lapply(simulate) %&gt;%
-  setNames(LETTERS[1:6]) %&gt;%
-  do.call(c,.) %&gt;%
-  pfilter(Nrep=2,Np=200) -&gt; pfs2
-
-pfs2 %&gt;%
-  data.frame() %&gt;%
-  separate(.id,c("po","rep")) %&gt;%
-  ggplot(aes(x=time,y=ess,group=rep,color=rep))+
-  geom_line()+
-  facet_wrap(~po)
-
-registerDoSEQ()
-
-dev.off()
+ou2 %&gt;% pfilter(Np=1000,Nrep=6) -&gt; pfs
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

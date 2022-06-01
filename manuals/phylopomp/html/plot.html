@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Fancy tree plotter</title>
+<!DOCTYPE html><html><head><title>R: Fancy tree plotter</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for plot {phylopomp}"><tr><td>plot {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>plot {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Fancy tree plotter</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S3 method for class 'gpsim'
+<pre><code class='language-R'>## S3 method for class 'gpsim'
 plot(x, ..., time, t0, prune = TRUE, obscure = TRUE, compact = TRUE)
 
 treeplot(
@@ -29,12 +38,12 @@ treeplot(
   ...,
   palette = scales::hue_pal(l = 30, h = c(220, 580))
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>x</code></td>
 <td>
 <p>object of class &lsquo;gpsim&rsquo;</p>
@@ -93,8 +102,7 @@ If it is a vector, ....</p>
 
 <h3>Examples</h3>
 
-<pre>
-## Not run: 
+<pre><code class='language-R'>## Not run: 
   library(ggplot2)
   times &lt;- seq(from=0,to=8,by=0.1)[-1]
 
@@ -104,8 +112,8 @@ If it is a vector, ....</p>
   )
 
   pb &lt;- utils::txtProgressBar(0,length(times),0,style=3)
-  x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,
-    psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,S0=500,I1_0=3,I2_0=2)
+  x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,delta=0.5,
+    psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,S0=200,I1_0=3,I2_0=2)
   for (k in seq_len(length(times))) {
     x &lt;- simulate(x,time=times[k])
     ggsave(
@@ -133,7 +141,8 @@ If it is a vector, ....</p>
 
 ## End(Not run)
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.11 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

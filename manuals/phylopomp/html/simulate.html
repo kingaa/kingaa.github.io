@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: simulate</title>
+<!DOCTYPE html><html><head><title>R: simulate</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for simulate {phylopomp}"><tr><td>simulate {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>simulate {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>simulate</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-simulate(object, ...)
+<pre><code class='language-R'>simulate(object, ...)
 
 ## Default S3 method:
 simulate(object, ...)
@@ -27,12 +36,12 @@ simulate(object, time, ...)
 
 ## S3 method for class 'gpsim'
 simulate(object, time, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>object</code></td>
 <td>
 <p>either the name of the model to simulate
@@ -68,10 +77,13 @@ Note that, one cannot change initial conditions or <code>t0</code> when continui
 <p>More example genealogy processes: 
 <code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
 <code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/seir.html">seir</a></code>,
 <code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
 <code><a href="../../phylopomp/help/siir.html">siir</a></code>,
+<code><a href="../../phylopomp/help/sirwr.html">sirwr</a></code>,
 <code><a href="../../phylopomp/help/sir.html">sir</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.11 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Two-strain SIR model.</title>
+<!DOCTYPE html><html><head><title>R: Two-strain SIR model.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for siir {phylopomp}"><tr><td>siir {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>siir {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Two-strain SIR model.</h2>
 
@@ -16,18 +26,18 @@
 
 <h3>Usage</h3>
 
-<pre>
-runSIIR(
+<pre><code class='language-R'>runSIIR(
   time,
   t0 = 0,
   Beta1 = 5,
   Beta2 = 5,
   gamma = 1,
   psi1 = 1,
-  psi2 = psi1,
+  psi2 = 0,
   sigma12 = 0,
   sigma21 = 0,
-  S0 = 100,
+  delta = 0,
+  S0 = 500,
   I1_0 = 10,
   I2_0 = 10,
   R0 = 0
@@ -41,15 +51,16 @@ continueSIIR(
   gamma = NA,
   psi1 = NA,
   psi2 = NA,
+  sigma12 = NA,
   sigma21 = NA,
-  sigma12 = NA
+  delta = NA
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>time</code></td>
 <td>
 <p>final time</p>
@@ -73,6 +84,10 @@ continueSIIR(
 <tr valign="top"><td><code>sigma12, sigma21</code></td>
 <td>
 <p>movement rates from deme 1 to 2 and 2 to 1, respectively</p>
+</td></tr>
+<tr valign="top"><td><code>delta</code></td>
+<td>
+<p>rate of loss of immunity</p>
 </td></tr>
 <tr valign="top"><td><code>S0</code></td>
 <td>
@@ -109,16 +124,17 @@ continueSIIR(
 <p>More example genealogy processes: 
 <code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
 <code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/seir.html">seir</a></code>,
 <code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
 <code><a href="../../phylopomp/help/simulate.html">simulate</a>()</code>,
+<code><a href="../../phylopomp/help/sirwr.html">sirwr</a></code>,
 <code><a href="../../phylopomp/help/sir.html">sir</a></code>
 </p>
 
 
 <h3>Examples</h3>
 
-<pre>
-simulate("SIIR",time=3,psi1=1,psi2=0) |&gt;
+<pre><code class='language-R'>simulate("SIIR",time=3,psi1=1,psi2=0) |&gt;
   simulate(Beta1=2,gamma=2,time=10,psi1=10,psi2=1) |&gt;
   plot()
 
@@ -131,7 +147,8 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   S0=300,I1_0=20,I2_0=2,time=5) |&gt;
   lineages() |&gt;
   plot()
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.11 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.0.999.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

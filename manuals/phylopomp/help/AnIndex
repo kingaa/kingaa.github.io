@@ -7,9 +7,11 @@ bake	reexports
 ballGrob	internals
 continueLBDP	lbdp
 continueMoran	moran
+continueSEIR	seir
 continueSI2R	si2r
 continueSIIR	siir
 continueSIR	sir
+continueSIRwr	sirwr
 diagram	diagram
 drawDetails.ballGrob	internals
 drawDetails.resizingTextGrob	internals
@@ -43,9 +45,13 @@ registerDoSEQ	reexports
 resizingTextGrob	internals
 runLBDP	lbdp
 runMoran	moran
+runSEIR	seir
 runSI2R	si2r
 runSIIR	siir
 runSIR	sir
+runSIRwr	sirwr
+SEIR	seir
+seir	seir
 SI2R	si2r
 si2r	si2r
 SIIR	siir
@@ -56,6 +62,8 @@ simulate.default	simulate
 simulate.gpsim	simulate
 SIR	sir
 sir	sir
+SIRwr	sirwr
+sirwr	sirwr
 sir_pomp	sir
 stew	reexports
 treeplot	plot

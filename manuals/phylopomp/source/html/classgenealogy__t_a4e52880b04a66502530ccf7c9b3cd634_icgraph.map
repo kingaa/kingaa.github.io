@@ -1,14 +1,24 @@
 <map id="genealogy_t::time" name="genealogy_t::time">
-<area shape="rect" id="node1" title="view/set current time." alt="" coords="221,275,361,301"/>
-<area shape="rect" id="node2" href="$classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe" title="birth into deme d" alt="" coords="19,5,159,32"/>
-<area shape="rect" id="node3" href="$classgenealogy__t.html#a723ba3a87ae3b232e74d035d7b573adf" title="death" alt="" coords="16,56,163,83"/>
-<area shape="rect" id="node4" href="$classgenealogy__t.html#a6b77138ca9e0e25d3e0234f92213cd5d" title="human&#45;readable info" alt="" coords="7,107,172,133"/>
-<area shape="rect" id="node5" href="$classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366" title="graft a new lineage into deme d" alt="" coords="19,157,160,184"/>
-<area shape="rect" id="node6" href="$classgenealogy__t.html#ae385e13f285c30ab555201ddbdda2ce1" title=" " alt="" coords="10,209,169,250"/>
-<area shape="rect" id="node7" href="$classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122" title="movement into deme d" alt="" coords="9,275,170,301"/>
-<area shape="rect" id="node8" href="$classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff" title="put genealogy at current time into Newick format." alt="" coords="11,325,167,352"/>
-<area shape="rect" id="node9" href="$classgenealogy__t.html#a47fa3b85b66c8241a1e6217113077534" title="insert a sample node" alt="" coords="10,376,169,403"/>
-<area shape="rect" id="node10" href="$classgenealogy__t.html#a496ced7e46790af06316f076b5895685" title="R list description." alt="" coords="5,427,173,453"/>
-<area shape="rect" id="node11" href="$classgenealogy__t.html#a72148a28fcdca2a58aa2c50784898159" title=" " alt="" coords="7,477,171,504"/>
-<area shape="rect" id="node12" href="$classgenealogy__t.html#ac5eda3e74d07265fe9a66f825aa2559d" title="machine&#45;readable info" alt="" coords="18,528,161,555"/>
+<area shape="rect" id="node2" href="$classgenealogy__t.html#ae385e13f285c30ab555201ddbdda2ce1" title="genealogy_t::lineage\l_count" alt="" coords="183,5,325,47"/>
+<area shape="rect" id="node4" href="$classgenealogy__t.html#a496ced7e46790af06316f076b5895685" title="R list description. " alt="" coords="179,75,329,102"/>
+<area shape="rect" id="node6" href="$classgenealogy__t.html#a6b77138ca9e0e25d3e0234f92213cd5d" title="human&#45;readable info " alt="" coords="179,133,329,159"/>
+<area shape="rect" id="node8" href="$classgenealogy__t.html#ac5eda3e74d07265fe9a66f825aa2559d" title="machine&#45;readable info " alt="" coords="190,197,318,223"/>
+<area shape="rect" id="node10" href="$classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff" title="put genealogy at current time into Newick format. " alt="" coords="183,259,325,286"/>
+<area shape="rect" id="node12" href="$classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe" title="birth into deme d " alt="" coords="191,310,317,337"/>
+<area shape="rect" id="node14" href="$classgenealogy__t.html#a723ba3a87ae3b232e74d035d7b573adf" title="death " alt="" coords="188,361,320,387"/>
+<area shape="rect" id="node16" href="$classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366" title="graft a new lineage into deme d " alt="" coords="191,411,317,438"/>
+<area shape="rect" id="node18" href="$classgenealogy__t.html#a47fa3b85b66c8241a1e6217113077534" title="insert a sample node " alt="" coords="183,462,325,489"/>
+<area shape="rect" id="node20" href="$classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122" title="movement into deme d " alt="" coords="183,513,325,539"/>
+<area shape="rect" id="node22" href="$classgenealogy__t.html#a72148a28fcdca2a58aa2c50784898159" title="genealogy_t::truncate" alt="" coords="181,563,327,590"/>
+<area shape="rect" id="node23" href="$classmaster__t.html#a192af9a2412fb7fe97fade765da8393a" title="runs the process to time tfin " alt="" coords="201,614,307,641"/>
+<area shape="rect" id="node3" href="$classmaster__t.html#acae105dd3437fc9a3c61478bee2e042e" title="lineage count table " alt="" coords="377,9,539,35"/>
+<area shape="rect" id="node5" href="$classmaster__t.html#ae7718a2fc6afc0852aa784a00c338ba9" title="structure in R list format " alt="" coords="392,59,524,86"/>
+<area shape="rect" id="node7" href="$classmaster__t.html#a3160c40c436623a25a257075406231ff" title="human&#45;readable info " alt="" coords="393,110,523,137"/>
+<area shape="rect" id="node9" href="$classmaster__t.html#a00933a9fa6af988b377c1c3d3c5d8cac" title="machine/human readable info " alt="" coords="403,185,513,211"/>
+<area shape="rect" id="node11" href="$classmaster__t.html#a76e84d14ef2bb374608e9fce7c2d4224" title="tree in Newick format " alt="" coords="397,259,519,286"/>
+<area shape="rect" id="node13" href="$classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d" title="n births into deme j with parent in deme i " alt="" coords="405,310,511,337"/>
+<area shape="rect" id="node15" href="$classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7" title="death in deme i " alt="" coords="401,361,515,387"/>
+<area shape="rect" id="node17" href="$classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556" title="new root in deme i " alt="" coords="405,411,511,438"/>
+<area shape="rect" id="node19" href="$classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c" title="sample in deme i " alt="" coords="397,462,519,489"/>
+<area shape="rect" id="node21" href="$classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4" title="migration from deme i to deme j " alt="" coords="396,513,520,539"/>
 </map>

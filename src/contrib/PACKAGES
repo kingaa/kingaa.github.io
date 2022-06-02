@@ -40,6 +40,17 @@ License: MIT + file LICENSE
 MD5sum: 0876c83c1f9cdeb960c95cab3e7792d7
 NeedsCompilation: no
 
+Package: phylopomp
+Version: 0.0.999.11
+Depends: R(>= 4.1.0)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp, cowplot
+LinkingTo: pomp
+Suggests: tidyverse, magrittr, doParallel, doRNG, broom
+License: GPL-3
+MD5sum: 4449ecc727edaa7ca331ac933e7e85a6
+NeedsCompilation: yes
+
 Package: pomp
 Version: 4.2.0.0
 Depends: R(>= 4.0.0), methods

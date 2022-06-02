@@ -14,6 +14,16 @@ Suggests: ape, geiger
 License: GPL-3
 MD5sum: 600a13491e4a2d4fe36b2e4008476f06
 
+Package: phylopomp
+Version: 0.0.999.11
+Depends: R(>= 4.1.0)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp, cowplot
+LinkingTo: pomp
+Suggests: tidyverse, magrittr, doParallel, doRNG, broom
+License: GPL-3
+MD5sum: a3fe61e2e62903d8f040ef0a72ea02d4
+
 Package: pomp
 Version: 4.2.0.0
 Depends: R(>= 4.0.0), methods

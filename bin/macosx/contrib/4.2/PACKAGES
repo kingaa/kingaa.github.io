@@ -12,3 +12,13 @@ Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape
 License: GPL-3
 MD5sum: 167e02c7af508767eb2d840d2b090293
+
+Package: phylopomp
+Version: 0.1.0.0
+Depends: R(>= 4.1.0)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp, cowplot
+LinkingTo: pomp
+Suggests: tidyverse, magrittr, doParallel, doRNG, broom
+License: GPL-3
+MD5sum: e9af8b2cb007b3845350eeadbfadd90d

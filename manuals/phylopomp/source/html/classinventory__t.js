@@ -11,13 +11,13 @@ var classinventory__t =
     [ "erase", "classinventory__t.html#a29124069de8f231217845de929ae5bb1", null ],
     [ "get_ball_idx", "classinventory__t.html#a64e55d4d1c7e210079bea046d35cc114", null ],
     [ "insert", "classinventory__t.html#a30a1374922f8892fac5eaa75a0db3cb1", null ],
-    [ "operator=", "classinventory__t.html#a587cb6c66cb791df807f57382f61d682", null ],
     [ "operator=", "classinventory__t.html#aaf9bd605275ccecd1f08e593039102de", null ],
     [ "operator=", "classinventory__t.html#a0691c8f0187a67a45384b1fcdc201f8a", null ],
+    [ "operator=", "classinventory__t.html#a587cb6c66cb791df807f57382f61d682", null ],
     [ "operator[]", "classinventory__t.html#ad311a7644bd1e8fd278086efd41ce199", null ],
     [ "random_ball", "classinventory__t.html#ad612a62fbabb6751710d13f45748683f", null ],
     [ "random_pair", "classinventory__t.html#a63a241558955e601506bc55db01ba5cd", null ],
-    [ "size", "classinventory__t.html#aaed066153c20be3e9e0d4748f278880e", null ],
     [ "size", "classinventory__t.html#a094c0986cb4fa9ab7eae263061d9b079", null ],
+    [ "size", "classinventory__t.html#aaed066153c20be3e9e0d4748f278880e", null ],
     [ "_inven", "classinventory__t.html#ad689a669a621ceec0cf5741b995ce307", null ]
 ];

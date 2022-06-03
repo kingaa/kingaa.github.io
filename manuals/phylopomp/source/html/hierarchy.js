@@ -13,7 +13,6 @@ var hierarchy =
     [ "moran_parameters_t", "structmoran__parameters__t.html", null ],
     [ "moran_state_t", "structmoran__state__t.html", null ],
     [ "POPN", null, [
-      [ "master_t< POPN, NDEME >", "classmaster__t.html", null ],
       [ "master_t< POPN, NDEME >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT, NDEME >", "classpopul__proc__t.html", null ],

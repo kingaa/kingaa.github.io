@@ -9,7 +9,6 @@ var classinventory__t =
     [ "clear", "classinventory__t.html#a180962f2d21dda4aeb1a0f481e175e9b", null ],
     [ "empty", "classinventory__t.html#ab873c70a57df79d98be1d5772f8d1285", null ],
     [ "erase", "classinventory__t.html#a29124069de8f231217845de929ae5bb1", null ],
-    [ "get_ball_idx", "classinventory__t.html#a64e55d4d1c7e210079bea046d35cc114", null ],
     [ "insert", "classinventory__t.html#a30a1374922f8892fac5eaa75a0db3cb1", null ],
     [ "operator=", "classinventory__t.html#aaf9bd605275ccecd1f08e593039102de", null ],
     [ "operator=", "classinventory__t.html#a0691c8f0187a67a45384b1fcdc201f8a", null ],

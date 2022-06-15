@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: B-spline bases</title>
+<!DOCTYPE html><html><head><title>R: B-spline bases</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for bsplines {pomp}"><tr><td>bsplines {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>bsplines {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>B-spline bases</h2>
 
@@ -18,8 +28,7 @@ basis of periodic spline functions.
 
 <h3>Usage</h3>
 
-<pre>
-bspline.basis(x, nbasis, degree = 3, deriv = 0, names = NULL)
+<pre><code class='language-R'>bspline.basis(x, nbasis, degree = 3, deriv = 0, names = NULL)
 
 periodic.bspline.basis(
   x,
@@ -29,12 +38,12 @@ periodic.bspline.basis(
   deriv = 0,
   names = NULL
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>x</code></td>
 <td>
 <p>Vector at which the spline functions are to be evaluated.</p>
@@ -71,7 +80,7 @@ vector.  By default, no column-names are given.</p>
 
 <h3>Value</h3>
 
-<table summary="R valueblock">
+<table>
 <tr valign="top"><td><code>bspline.basis</code></td>
 <td>
 <p> Returns a matrix with <code>length(x)</code> rows
@@ -113,8 +122,7 @@ for definition and documentation of the C API.
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 x &lt;- seq(0,2,by=0.01)
 y &lt;- bspline.basis(x,degree=3,nbasis=9,names="basis")
 matplot(x,y,type='l',ylim=c(0,1.1))
@@ -124,7 +132,8 @@ x &lt;- seq(-1,2,by=0.01)
 y &lt;- periodic.bspline.basis(x,nbasis=5,names="spline%d")
 matplot(x,y,type='l')
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

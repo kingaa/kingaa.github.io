@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Two-dimensional discrete-time Ornstein-Uhlenbeck process</title>
+<!DOCTYPE html><html><head><title>R: Two-dimensional discrete-time Ornstein-Uhlenbeck process</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for ou2 {pomp}"><tr><td>ou2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>ou2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Two-dimensional discrete-time Ornstein-Uhlenbeck process</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-ou2(
+<pre><code class='language-R'>ou2(
   alpha_1 = 0.8,
   alpha_2 = -0.5,
   alpha_3 = 0.3,
@@ -31,20 +40,20 @@ ou2(
   times = 1:100,
   t0 = 0
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>alpha_1, alpha_2, alpha_3, alpha_4</code></td>
 <td>
-<p>entries of the <i>alpha</i> matrix, in column-major order.
+<p>entries of the <code class="reqn">alpha</code> matrix, in column-major order.
 That is, <code>alpha_2</code> is in the lower-left position.</p>
 </td></tr>
 <tr valign="top"><td><code>sigma_1, sigma_2, sigma_3</code></td>
 <td>
-<p>entries of the lower-triangular <i>sigma</i> matrix.
+<p>entries of the lower-triangular <code class="reqn">sigma</code> matrix.
 <code>sigma_2</code> is the entry in the lower-left position.</p>
 </td></tr>
 <tr valign="top"><td><code>tau</code></td>
@@ -68,15 +77,16 @@ That is, <code>alpha_2</code> is in the lower-left position.</p>
 
 <h3>Details</h3>
 
-<p>If the state process is <i>X(t) = (x_{1}(t),x_{2}(t))</i>, then
+<p>If the state process is <code class="reqn">X(t) = (x_{1}(t),x_{2}(t))</code>, then
 </p>
-<p style="text-align: center;"><i>X(t+1) = &alpha; X(t) + &sigma; &epsilon;(t),</i></p>
+<p style="text-align: center;"><code class="reqn">X(t+1) = \alpha X(t) + \sigma \epsilon(t),</code>
+</p>
 
-<p>where <i>&alpha;</i> and <i>&sigma;</i> are 2x2 matrices,
-<i>&sigma;</i> is lower-triangular, and
-<i>&epsilon;(t)</i> is standard bivariate normal.
-The observation process is <i>Y(t) = (y_1(t),y_2(t))</i>, where
-<i>y_i(t) \sim \mathrm{normal}(x_i(t),&tau;)</i>.
+<p>where <code class="reqn">\alpha</code> and <code class="reqn">\sigma</code> are 2x2 matrices,
+<code class="reqn">\sigma</code> is lower-triangular, and
+<code class="reqn">\epsilon(t)</code> is standard bivariate normal.
+The observation process is <code class="reqn">Y(t) = (y_1(t),y_2(t))</code>, where
+<code class="reqn">y_i(t) \sim \mathrm{normal}(x_i(t),\tau)</code>.
 </p>
 
 
@@ -104,15 +114,15 @@ The observation process is <i>Y(t) = (y_1(t),y_2(t))</i>, where
 
 <h3>Examples</h3>
 
-<pre>
-po &lt;- ou2()
+<pre><code class='language-R'>po &lt;- ou2()
 plot(po)
 coef(po)
 x &lt;- simulate(po)
 plot(x)
 pf &lt;- pfilter(po,Np=1000)
 logLik(pf)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

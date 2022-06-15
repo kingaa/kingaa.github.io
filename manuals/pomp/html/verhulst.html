@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Verhulst-Pearl model</title>
+<!DOCTYPE html><html><head><title>R: Verhulst-Pearl model</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for verhulst {pomp}"><tr><td>verhulst {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>verhulst {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Verhulst-Pearl model</h2>
 
@@ -16,14 +26,13 @@
 
 <h3>Usage</h3>
 
-<pre>
-verhulst(n_0 = 10000, K = 10000, r = 0.9, sigma = 0.4, tau = 0.1, dt = 0.01)
-</pre>
+<pre><code class='language-R'>verhulst(n_0 = 10000, K = 10000, r = 0.9, sigma = 0.4, tau = 0.1, dt = 0.01)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>n_0</code></td>
 <td>
 <p>initial condition</p>
@@ -56,7 +65,8 @@ verhulst(n_0 = 10000, K = 10000, r = 0.9, sigma = 0.4, tau = 0.1, dt = 0.01)
 <p>A stochastic version of the Verhulst-Pearl logistic model.
 This evolves in continuous time, according to the stochastic differential equation
 </p>
-<p style="text-align: center;"><i>dn = r n (1-n/K) dt + sigma n dW.</i></p>
+<p style="text-align: center;"><code class="reqn">dn = r\,n\,\left(1-\frac{n}{K}\right)\,dt+\sigma\,n\,dW.</code>
+</p>
 
 <p>Numerically, we simulate the stochastic dynamics using an Euler approximation.
 </p>
@@ -90,8 +100,7 @@ The following basic components are included in the &lsquo;pomp&rsquo; object:
 
 <h3>Examples</h3>
 
-<pre>
-## Not run: 
+<pre><code class='language-R'>## Not run: 
   verhulst() -&gt; po
   plot(po)
   plot(simulate(po))
@@ -100,7 +109,8 @@ The following basic components are included in the &lsquo;pomp&rsquo; object:
   spy(po)
 
 ## End(Not run)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

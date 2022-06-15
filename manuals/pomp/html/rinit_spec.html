@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: The initial-state distribution</title>
+<!DOCTYPE html><html><head><title>R: The initial-state distribution</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for rinit specification {pomp}"><tr><td>rinit specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>rinit specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>The initial-state distribution</h2>
 
@@ -23,7 +33,7 @@ In the former case, bear in mind that:
 </p>
 
 <ol>
-<li><p> The goal of a this snippet is the construction of a state vector, i.e., the setting of the dynamical states at time <i>t0</i>.
+<li><p> The goal of a this snippet is the construction of a state vector, i.e., the setting of the dynamical states at time <code class="reqn">t_0</code>.
 </p>
 </li>
 <li><p> In addition to the parameters and covariates (if any), the variable <code>t</code>, containing the zero-time, will be defined in the context in which the snippet is executed.
@@ -98,8 +108,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
   ## Starting with an existing pomp object
 
   verhulst() -&gt; po
@@ -128,7 +137,8 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
     ) -&gt; sim
 
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

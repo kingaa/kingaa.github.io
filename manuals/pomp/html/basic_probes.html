@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Useful probes for partially-observed Markov processes</title>
+<!DOCTYPE html><html><head><title>R: Useful probes for partially-observed Markov processes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for basic probes {pomp}"><tr><td>basic probes {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>basic probes {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Useful probes for partially-observed Markov processes</h2>
 
@@ -17,8 +27,7 @@ These can be used directly and as templates for custom probes.
 
 <h3>Usage</h3>
 
-<pre>
-probe.mean(var, trim = 0, transform = identity, na.rm = TRUE)
+<pre><code class='language-R'>probe.mean(var, trim = 0, transform = identity, na.rm = TRUE)
 
 probe.median(var, na.rm = TRUE)
 
@@ -47,12 +56,12 @@ probe.ccf(
 probe.marginal(var, ref, order = 3, diff = 1, transform = identity)
 
 probe.nlar(var, lags, powers, transform = identity)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>var, vars</code></td>
 <td>
 <p>character; the name(s) of the observed variable(s).</p>
@@ -156,5 +165,6 @@ numerical value.
 <code><a href="../../pomp/help/spect.html">spect</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

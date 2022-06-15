@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Loading and unloading shared-object libraries</title>
+<!DOCTYPE html><html><head><title>R: Loading and unloading shared-object libraries</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for load {pomp}"><tr><td>load {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>load {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Loading and unloading shared-object libraries</h2>
 
@@ -17,8 +27,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'pomp'
+<pre><code class='language-R'>## S4 method for signature 'pomp'
 pompLoad(object, ...)
 
 ## S4 method for signature 'pomp'
@@ -26,12 +35,12 @@ pompUnload(object, ...)
 
 ## S4 replacement method for signature 'pomp'
 solibs(object, ...) &lt;- value
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>object</code></td>
 <td>
 <p>an object of class &lsquo;pomp&rsquo;, or extending this class.</p>
@@ -47,5 +56,6 @@ solibs(object, ...) &lt;- value
 to the &lsquo;solibs&rsquo; slot of a &lsquo;pomp&rsquo; object.
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,18 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Constructor of the basic pomp object</title>
+<!DOCTYPE html><html><head><title>R: Constructor of the basic pomp object</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for pomp {pomp}"><tr><td>pomp {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>pomp {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Constructor of the basic pomp object</h2>
 
 <h3>Description</h3>
 
-<p>This function constructs a &lsquo;pomp&rsquo; object, encoding a partially-observed Markov process (<acronym><span class="acronym">POMP</span></acronym>) model together with a uni- or multi-variate time series.
+<p>This function constructs a &lsquo;pomp&rsquo; object, encoding a partially-observed Markov process (<abbr><span class="acronym">POMP</span></abbr>) model together with a uni- or multi-variate time series.
 As such, it is central to all the package's functionality.
-One implements the <acronym><span class="acronym">POMP</span></acronym> model by specifying some or all of its <em>basic components</em>.
+One implements the <abbr><span class="acronym">POMP</span></abbr> model by specifying some or all of its <em>basic components</em>.
 These comprise:
 </p>
 
@@ -47,8 +57,7 @@ These comprise:
 
 <h3>Usage</h3>
 
-<pre>
-pomp(
+<pre><code class='language-R'>pomp(
   data,
   times,
   t0,
@@ -79,12 +88,12 @@ pomp(
   compile = TRUE,
   verbose = getOption("verbose", FALSE)
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
@@ -349,5 +358,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

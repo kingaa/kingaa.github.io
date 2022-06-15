@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Ricker model with Poisson observations.</title>
+<!DOCTYPE html><html><head><title>R: Ricker model with Poisson observations.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for ricker {pomp}"><tr><td>ricker {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>ricker {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Ricker model with Poisson observations.</h2>
 
@@ -17,14 +27,13 @@ with Poisson measurement error.
 
 <h3>Usage</h3>
 
-<pre>
-ricker(r = exp(3.8), sigma = 0.3, phi = 10, c = 1, N_0 = 7)
-</pre>
+<pre><code class='language-R'>ricker(r = exp(3.8), sigma = 0.3, phi = 10, c = 1, N_0 = 7)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>r</code></td>
 <td>
 <p>intrinsic growth rate</p>
@@ -50,11 +59,10 @@ ricker(r = exp(3.8), sigma = 0.3, phi = 10, c = 1, N_0 = 7)
 
 <h3>Details</h3>
 
-<p>The state process is <i>N[t+1] =
-r N[t] exp(-c N[t]+e[t])</i>, where the <i>e[t]</i> are i.i.d. normal
-random deviates with zero mean and variance <i>sigma^2</i>.  The
-observed variables <i>y[t]</i> are distributed as
-<i>Poisson(phi N[t])</i>.
+<p>The state process is <code class="reqn">N_{t+1} = r N_{t} \exp(-c N_{t}+e_{t})</code>, where the <code class="reqn">e_t</code> are i.i.d. normal
+random deviates with zero mean and variance <code class="reqn">\sigma^2</code>.  The
+observed variables <code class="reqn">y_t</code> are distributed as
+<code class="reqn">\mathrm{Poisson}(\phi N_t)</code>.
 </p>
 
 
@@ -82,8 +90,7 @@ observed variables <i>y[t]</i> are distributed as
 
 <h3>Examples</h3>
 
-<pre>
-po &lt;- ricker()
+<pre><code class='language-R'>po &lt;- ricker()
 plot(po)
 coef(po)
 simulate(po) %&gt;% plot()
@@ -100,7 +107,8 @@ simulate(po) %&gt;% plot()
   matplot(p["r",],x["N",,],pch='.',col='black',
     xlab=expression(log(r)),ylab="N",log='x')
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

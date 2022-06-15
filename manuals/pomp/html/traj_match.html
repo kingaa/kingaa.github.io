@@ -1,23 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Trajectory matching</title>
+<!DOCTYPE html><html><head><title>R: Trajectory matching</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for trajectory matching {pomp}"><tr><td>trajectory matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>trajectory matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Trajectory matching</h2>
 
 <h3>Description</h3>
 
-<p>Estimation of parameters for deterministic <acronym><span class="acronym">POMP</span></acronym> models via trajectory matching.
+<p>Estimation of parameters for deterministic <abbr><span class="acronym">POMP</span></abbr> models via trajectory matching.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'data.frame'
+<pre><code class='language-R'>## S4 method for signature 'data.frame'
 traj_objfun(
   data,
   est = character(0),
@@ -51,12 +60,12 @@ traj_objfun(
   ...,
   verbose = getOption("verbose", FALSE)
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
@@ -128,7 +137,7 @@ Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., 
 
 <h3>Details</h3>
 
-<p>In trajectory matching, one attempts to minimize the discrepancy between a <acronym><span class="acronym">POMP</span></acronym> model's predictions and data under the assumption that the latent state process is deterministic and all discrepancies between model and data are due to measurement error.
+<p>In trajectory matching, one attempts to minimize the discrepancy between a <abbr><span class="acronym">POMP</span></abbr> model's predictions and data under the assumption that the latent state process is deterministic and all discrepancies between model and data are due to measurement error.
 The measurement model likelihood (<code>dmeasure</code>), or rather its negative, is the natural measure of the discrepancy.
 </p>
 <p>Trajectory matching is a generalization of the traditional nonlinear least squares approach.
@@ -185,8 +194,7 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 
   ricker() %&gt;%
     traj_objfun(
@@ -208,7 +216,8 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
     ggplot(aes(x=time,y=N))+geom_line()+theme_bw()
 
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

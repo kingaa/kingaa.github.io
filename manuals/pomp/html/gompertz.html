@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Gompertz model with log-normal observations.</title>
+<!DOCTYPE html><html><head><title>R: Gompertz model with log-normal observations.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for gompertz {pomp}"><tr><td>gompertz {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>gompertz {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Gompertz model with log-normal observations.</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-gompertz(
+<pre><code class='language-R'>gompertz(
   K = 1,
   r = 0.1,
   sigma = 0.1,
@@ -26,12 +35,12 @@ gompertz(
   times = 1:100,
   t0 = 0
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>K</code></td>
 <td>
 <p>carrying capacity</p>
@@ -67,18 +76,20 @@ gompertz(
 
 <p>The state process is
 </p>
-<p style="text-align: center;"><i>X[t+1]=K^(1-S) X[t]^S eps[t],</i></p>
-<p> where <i>S=e^{-r}</i>
-and the <i>eps[t]</i> are i.i.d. lognormal random deviates with
-variance <i>sigma^2</i>.
-The observed variables <i>Y_t</i> are distributed as
+<p style="text-align: center;"><code class="reqn">X_{t+1} = K^{1-S} X_{t}^S \epsilon_{t},</code>
 </p>
-<p style="text-align: center;"><i>Y[t]~lognormal(log(X[t]),tau).</i></p>
+<p> where <code class="reqn">S=e^{-r}</code>
+and the <code class="reqn">\epsilon_t</code> are i.i.d. lognormal random deviates with
+variance <code class="reqn">\sigma^2</code>.
+The observed variables <code class="reqn">Y_t</code> are distributed as
+</p>
+<p style="text-align: center;"><code class="reqn">Y_t\sim\mathrm{lognormal}(\log{X_t},\tau).</code>
+</p>
 
-<p>Parameters include the per-capita growth rate <i>r</i>, the carrying
-capacity <i>K</i>, the process noise s.d. <i>sigma</i>, the
-measurement error s.d. <i>tau</i>, and the initial condition
-<i>X[0]</i>.  The &lsquo;pomp&rsquo; object includes parameter
+<p>Parameters include the per-capita growth rate <code class="reqn">r</code>, the carrying
+capacity <code class="reqn">K</code>, the process noise s.d. <code class="reqn">\sigma</code>, the
+measurement error s.d. <code class="reqn">\tau</code>, and the initial condition
+<code class="reqn">X_0</code>.  The &lsquo;pomp&rsquo; object includes parameter
 transformations that log-transform the parameters for estimation purposes.
 </p>
 
@@ -107,12 +118,12 @@ transformations that log-transform the parameters for estimation purposes.
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 plot(gompertz())
 plot(gompertz(K=2,r=0.01))
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

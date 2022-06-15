@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Ebola outbreak, West Africa, 2014-2016</title>
+<!DOCTYPE html><html><head><title>R: Ebola outbreak, West Africa, 2014-2016</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for ebola {pomp}"><tr><td>ebola {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>ebola {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Ebola outbreak, West Africa, 2014-2016</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-ebolaModel(
+<pre><code class='language-R'>ebolaModel(
   country = c("GIN", "LBR", "SLE"),
   data = NULL,
   timestep = 1/8,
@@ -30,12 +39,12 @@ ebolaModel(
   incubation_period = 11.4,
   infectious_period = 7
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>country</code></td>
 <td>
 <p>ISO symbol for the country (GIN=Guinea, LBR=Liberia, SLE=Sierra Leone).</p>
@@ -96,10 +105,11 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 </p>
 <p>The observation model is a hierarchical model for cases and deaths:
 </p>
-<p style="text-align: center;"><i>p(R_t, D_t| C_t) = p(R_t | C_t) p(D_t | C_t, R_t).</i></p>
+<p style="text-align: center;"><code class="reqn">p(R_t, D_t| C_t) = p(R_t | C_t) p(D_t | C_t, R_t).</code>
+</p>
 
-<p>Here, <i>p(R_t | C_t)</i> is negative binomial with mean <i>&rho; C_t</i> and dispersion parameter <i>1/k</i>;
-<i>p(D_t | C_t, R_t)</i> is binomial with size <i>R_t</i> and probability equal to the case fatality rate <code>cfr</code>.
+<p>Here, <code class="reqn">p(R_t | C_t)</code> is negative binomial with mean <code class="reqn">\rho C_t</code> and dispersion parameter <code class="reqn">1/k</code>;
+<code class="reqn">p(D_t | C_t, R_t)</code> is binomial with size <code class="reqn">R_t</code> and probability equal to the case fatality rate <code>cfr</code>.
 </p>
 
 
@@ -138,8 +148,7 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
   data(ebolaWA2014)
 
   library(ggplot2)
@@ -165,7 +174,8 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
   plot(ebolaModel(country="LBR"))
   plot(ebolaModel(country="GIN"))
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

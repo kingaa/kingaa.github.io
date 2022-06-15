@@ -1,22 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Inference for partially observed Markov processes</title>
+<!DOCTYPE html><html><head><title>R: Inference for partially observed Markov processes</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for pomp-package {pomp}"><tr><td>pomp-package {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>pomp-package {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Inference for partially observed Markov processes</h2>
 
 <h3>Description</h3>
 
 <p>The <span class="pkg">pomp</span> package provides facilities for inference on time series
-data using partially-observed Markov process (<acronym><span class="acronym">POMP</span></acronym>) models.
+data using partially-observed Markov process (<abbr><span class="acronym">POMP</span></abbr>) models.
 These models are also known as state-space models, hidden Markov models, or
 nonlinear stochastic dynamical systems.  One can use <span class="pkg">pomp</span> to fit
 nonlinear, non-Gaussian dynamic models to time-series data.  The package is
 both a set of tools for data analysis and a platform upon which statistical
-inference methods for <acronym><span class="acronym">POMP</span></acronym> models can be implemented.
+inference methods for <abbr><span class="acronym">POMP</span></abbr> models can be implemented.
 </p>
 
 
@@ -83,7 +93,7 @@ see <a href="../../pomp/help/trajectory+20matching.html">trajectory matching</a>
 
 <p><span class="pkg">pomp</span> algorithms are arranged on several levels.
 At the top level, <a href="../../pomp/help/estimation+20algorithms.html">estimation algorithms</a> estimate model parameters and return information needed for other aspects of inference.
-<a href="../../pomp/help/elementary+20algorithms.html">Elementary algorithms</a> perform common operations on <acronym><span class="acronym">POMP</span></acronym> models, including simulation, filtering, and application of diagnostic probes;
+<a href="../../pomp/help/elementary+20algorithms.html">Elementary algorithms</a> perform common operations on <abbr><span class="acronym">POMP</span></abbr> models, including simulation, filtering, and application of diagnostic probes;
 these functions may be useful in inference, but they do not themselves perform estimation.
 At the lowest level, <a href="../../pomp/help/workhorses.html">workhorse functions</a> provide the interface to <a href="../../pomp/help/basic+20components.html">basic POMP model components</a>.
 Beyond these, <span class="pkg">pomp</span> provides a variety of auxiliary functions for manipulating and extracting information from &lsquo;pomp&rsquo; objects, producing diagnostic plots, <a href="../../pomp/help/bake.html">facilitating reproducible computations</a>, and so on.
@@ -210,5 +220,6 @@ Tutorials and other documentation, including a <a href="https://kingaa.github.io
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Nicholson's blowflies.</title>
+<!DOCTYPE html><html><head><title>R: Nicholson's blowflies.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for blowflies {pomp}"><tr><td>blowflies {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>blowflies {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Nicholson's blowflies.</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-blowflies1(
+<pre><code class='language-R'>blowflies1(
   P = 3.2838,
   delta = 0.16073,
   N0 = 679.94,
@@ -34,12 +43,12 @@ blowflies2(
   sigma.d = 0.76033,
   sigma.y = 0.010846
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>P</code></td>
 <td>
 <p>reproduction parameter</p>
@@ -54,11 +63,11 @@ blowflies2(
 </td></tr>
 <tr valign="top"><td><code>sigma.P</code></td>
 <td>
-<p>intensity of <i>e</i> noise</p>
+<p>intensity of <code class="reqn">e</code> noise</p>
 </td></tr>
 <tr valign="top"><td><code>sigma.d</code></td>
 <td>
-<p>intensity of <i>eps</i> noise</p>
+<p>intensity of <code class="reqn">eps</code> noise</p>
 </td></tr>
 <tr valign="top"><td><code>sigma.y</code></td>
 <td>
@@ -78,22 +87,26 @@ The data were taken from the table provided by Brillinger et al. (1980).
 </p>
 <p>The models are discrete delay equations:
 </p>
-<p style="text-align: center;"><i>R[t+1] ~ Poisson(P N[t-tau] exp(-N[t-tau]/N0) e[t+1] dt)</i></p>
+<p style="text-align: center;"><code class="reqn">R(t+1) \sim \mathrm{Poisson}(P N(t-\tau) \exp{(-N(t-\tau)/N_{0})} e(t+1) {\Delta}t)</code>
+</p>
 
-<p style="text-align: center;"><i>S[t+1] ~ binomial(N[t],exp(-delta eps[t+1] dt))</i></p>
+<p style="text-align: center;"><code class="reqn">S(t+1) \sim \mathrm{Binomial}(N(t),\exp{(-\delta \epsilon(t+1) {\Delta}t)})</code>
+</p>
 
-<p style="text-align: center;"><i>N[t]=R[t]+S[t]</i></p>
+<p style="text-align: center;"><code class="reqn">N(t) = R(t)+S(t)</code>
+</p>
 
-<p>where <i>e[t]</i> and <i>eps[t]</i> are Gamma-distributed i.i.d. random variables
-with mean 1 and variances <i>sigma.P^2/dt</i>, <i>sigma.d^2/dt</i>, respectively.
-<code>blowflies1</code> has a timestep (<i>dt</i>) of 1 day; <code>blowflies2</code> has a timestep of 2 days.
+<p>where <code class="reqn">e(t)</code> and <code class="reqn">\epsilon(t)</code> are Gamma-distributed i.i.d. random variables
+with mean 1 and variances <code class="reqn">{\sigma_P^2}/{{\Delta}t}</code>, <code class="reqn">{\sigma_d^2}/{{\Delta}t}</code>, respectively.
+<code>blowflies1</code> has a timestep (<code class="reqn">{\Delta}t</code>) of 1 day; <code>blowflies2</code> has a timestep of 2 days.
 The process model in <code>blowflies1</code> thus corresponds exactly to that studied by Wood (2010).
 The measurement model in both cases is taken to be
 </p>
-<p style="text-align: center;"><i>y[t] ~ negbin(N[t],1/sigma.y^2),</i></p>
+<p style="text-align: center;"><code class="reqn">y(t) \sim  \mathrm{NegBin}(N(t),1/\sigma_y^2)</code>
+</p>
 
 <p>i.e., the observations are assumed to be negative-binomially distributed with
-mean <i>N[t]</i> and variance <i>N[t]+(sigma.y N[t])^2</i>.
+mean <code class="reqn">N(t)</code> and variance <code class="reqn">N(t)+(\sigma_y N(t))^2</code>.
 </p>
 <p>Default parameter values are the MLEs as estimated by Ionides (2011).
 </p>
@@ -146,12 +159,12 @@ mean <i>N[t]</i> and variance <i>N[t]+(sigma.y N[t])^2</i>.
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 plot(blowflies1())
 plot(blowflies2())
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

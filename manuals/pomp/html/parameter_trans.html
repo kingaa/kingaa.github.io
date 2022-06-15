@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Parameter transformations</title>
+<!DOCTYPE html><html><head><title>R: Parameter transformations</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for parameter transformations {pomp}"><tr><td>parameter transformations {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>parameter transformations {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Parameter transformations</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-parameter_trans(toEst, fromEst, ...)
+<pre><code class='language-R'>parameter_trans(toEst, fromEst, ...)
 
 ## S4 method for signature ''NULL','NULL''
 parameter_trans(toEst, fromEst, ...)
@@ -33,12 +42,12 @@ parameter_trans(toEst, fromEst, ...)
 
 ## S4 method for signature ''function','function''
 parameter_trans(toEst, fromEst, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>toEst, fromEst</code></td>
 <td>
 <p>procedures that perform transformation of model parameters to and from the estimation scale, respectively.
@@ -107,11 +116,13 @@ Therefore, you must make sure that variables named in any of these arguments are
 </p>
 <p>The logit transform is defined by
 </p>
-<p style="text-align: center;"><i>logit(theta) = log(theta/(1-theta)).</i></p>
-
-<p>The log barycentric transformation of variables <i>theta1,&hellip;,thetan</i> is given by
+<p style="text-align: center;"><code class="reqn">\mathrm{logit}(\theta)=\log\frac{\theta}{1-\theta}.</code>
 </p>
-<p style="text-align: center;"><i>logbarycentric(theta1,&hellip;,thetan)=(log(theta1/sum(theta)),&hellip;,log(thetan/sum(theta))).</i></p>
+
+<p>The log barycentric transformation of variables <code class="reqn">\theta_1,\dots,\theta_n</code> is given by
+</p>
+<p style="text-align: center;"><code class="reqn">\mathrm{logbarycentric}(\theta_1,\dots,\theta_n)=\left(\log\frac{\theta_1}{\sum_i \theta_i},\dots,\log\frac{\theta_n}{\sum_i \theta_i}\right).</code>
+</p>
 
 
 
@@ -149,5 +160,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

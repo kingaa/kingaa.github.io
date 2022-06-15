@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Spectrum matching</title>
+<!DOCTYPE html><html><head><title>R: Spectrum matching</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for spectrum matching {pomp}"><tr><td>spectrum matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>spectrum matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Spectrum matching</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'data.frame'
+<pre><code class='language-R'>## S4 method for signature 'data.frame'
 spect_objfun(
   data,
   est = character(0),
@@ -80,12 +89,12 @@ spect_objfun(
   ...,
   verbose = getOption("verbose", FALSE)
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
@@ -197,7 +206,7 @@ See <a href="../../pomp/help/userdata.html">userdata</a> for information on how 
 
 <h3>Details</h3>
 
-<p>In spectrum matching, one attempts to minimize the discrepancy between a <acronym><span class="acronym">POMP</span></acronym> model's predictions and data, as measured in the frequency domain by the power spectrum.
+<p>In spectrum matching, one attempts to minimize the discrepancy between a <abbr><span class="acronym">POMP</span></abbr> model's predictions and data, as measured in the frequency domain by the power spectrum.
 </p>
 <p><code>spect_objfun</code> constructs an objective function that measures the discrepancy.
 It can be passed to any one of a variety of numerical optimization routines, which will adjust model parameters to minimize the discrepancies between the power spectrum of model simulations and that of the data.
@@ -209,7 +218,7 @@ It can be passed to any one of a variety of numerical optimization routines, whi
 <p><code>spect_objfun</code> constructs a stateful objective function for spectrum matching.
 Specifically, <code>spect_objfun</code> returns an object of class &lsquo;spect_match_objfun&rsquo;, which is a function suitable for use in an <code><a href="../../stats/help/optim.html">optim</a></code>-like optimizer.
 This function takes a single numeric-vector argument that is assumed to contain the parameters named in <code>est</code>, in that order.
-When called, it will return the (optionally weighted) <i>L2</i> distance between the data spectrum and simulated spectra.
+When called, it will return the (optionally weighted) <code class="reqn">L^2</code> distance between the data spectrum and simulated spectra.
 It is a stateful function:
 Each time it is called, it will remember the values of the parameters and the discrepancy measure.
 </p>
@@ -263,8 +272,7 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 
   ricker() %&gt;%
     spect_objfun(
@@ -288,7 +296,8 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
   f %&gt;% spect() %&gt;% plot()
 
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

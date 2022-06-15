@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Iterated filtering: maximum likelihood by iterated, perturbed...</title>
+<!DOCTYPE html><html><head><title>R: Iterated filtering: maximum likelihood by iterated, perturbed...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for mif2 {pomp}"><tr><td>mif2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>mif2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Iterated filtering: maximum likelihood by iterated, perturbed Bayes maps</h2>
 
@@ -21,8 +31,7 @@ The algorithm is presented and justified in Ionides et al. (2015).
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'data.frame'
+<pre><code class='language-R'>## S4 method for signature 'data.frame'
 mif2(
   data,
   Nmif = 1,
@@ -64,12 +73,12 @@ mif2(
   ...,
   verbose = getOption("verbose", FALSE)
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
@@ -214,19 +223,22 @@ For example,
 </pre>
 <p>results in perturbations of parameter <code>a</code> with s.d. 0.05 at every time step, while parameters <code>b</code> and <code>c</code> both get perturbations of s.d. 0.2 only just before the first observation.
 Parameters <code>d</code> and <code>e</code>, by contrast, get perturbations of s.d.  0.2 only just before the thirteenth observation.
-Finally, parameter <code>f</code> gets a random perturbation of size 0.02 before every observation falling before <i>t=23</i>.
+Finally, parameter <code>f</code> gets a random perturbation of size 0.02 before every observation falling before <code class="reqn">t=23</code>.
 </p>
-<p>On the <i>m</i>-th IF2 iteration, prior to time-point <i>n</i>, the <i>d</i>-th parameter is given a random increment normally distributed with mean <i>0</i> and standard deviation <i>c[m,n] sigma[d,n]</i>, where <i>c</i> is the cooling schedule and <i>sigma</i> is specified using <code>rw.sd</code>, as described above.
-Let <i>N</i> be the length of the time series and <i>alpha=</i><code>cooling.fraction.50</code>.
+<p>On the <code class="reqn">m</code>-th IF2 iteration, prior to time-point <code class="reqn">n</code>, the <code class="reqn">d</code>-th parameter is given a random increment normally distributed with mean <code class="reqn">0</code> and standard deviation <code class="reqn">c_{m,n} \sigma_{d,n}</code>, where <code class="reqn">c</code> is the cooling schedule and <code class="reqn">\sigma</code> is specified using <code>rw.sd</code>, as described above.
+Let <code class="reqn">N</code> be the length of the time series and <code class="reqn">\alpha=</code><code>cooling.fraction.50</code>.
 Then, when <code>cooling.type="geometric"</code>, we have </p>
-<p style="text-align: center;"><i>c[m,n]=alpha^((n-1+(m-1)N)/(50N)).</i></p>
+<p style="text-align: center;"><code class="reqn">c_{m,n}=\alpha^{\frac{n-1+(m-1)N}{50N}}.</code>
+</p>
 
 <p>When <code>cooling.type="hyperbolic"</code>, we have </p>
-<p style="text-align: center;"><i>c[m,n]=(s+1)/(s+n+(m-1)N),</i></p>
-<p> where <i>s</i> satisfies </p>
-<p style="text-align: center;"><i>(s+1)/(s+50N)=alpha.</i></p>
+<p style="text-align: center;"><code class="reqn">c_{m,n}=\frac{s+1}{s+n+(m-1)N},</code>
+</p>
+<p> where <code class="reqn">s</code> satisfies </p>
+<p style="text-align: center;"><code class="reqn">\frac{s+1}{s+50N}=\alpha.</code>
+</p>
 
-<p>Thus, in either case, the perturbations at the end of 50 IF2 iterations are a fraction <i>alpha</i> smaller than they are at first.
+<p>Thus, in either case, the perturbations at the end of 50 IF2 iterations are a fraction <code class="reqn">\alpha</code> smaller than they are at first.
 </p>
 
 
@@ -297,5 +309,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/trajectory+20matching.html">trajectory matching</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

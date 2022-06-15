@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: The &quot;pomp_fun&quot; class</title>
+<!DOCTYPE html><html><head><title>R: The &quot;pomp_fun&quot; class</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for pomp_fun {pomp}"><tr><td>pomp_fun {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>pomp_fun {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>The &quot;pomp_fun&quot; class</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'missing'
+<pre><code class='language-R'>## S4 method for signature 'missing'
 pomp_fun(
   slotname = NULL,
   obsnames = character(0),
@@ -57,12 +66,12 @@ pomp_fun(
 
 ## S4 method for signature 'pomp_fun'
 pomp_fun(f, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>f</code></td>
 <td>
 <p>A function or the name of a native routine.</p>
@@ -101,5 +110,6 @@ which the native function <code>f</code> can be found.</p>
 <p><code><a href="../../pomp/help/pomp.html">pomp</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

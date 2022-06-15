@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Filtering trajectories</title>
+<!DOCTYPE html><html><head><title>R: Filtering trajectories</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for filter.traj {pomp}"><tr><td>filter.traj {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>filter.traj {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Filtering trajectories</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'pfilterd_pomp'
+<pre><code class='language-R'>## S4 method for signature 'pfilterd_pomp'
 filter.traj(object, vars, ...)
 
 ## S4 method for signature 'pfilterList'
@@ -28,12 +37,12 @@ filter.traj(object, vars, ...)
 
 ## S4 method for signature 'pmcmcList'
 filter.traj(object, vars, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>object</code></td>
 <td>
 <p>result of a filtering computation</p>
@@ -53,9 +62,10 @@ filter.traj(object, vars, ...)
 
 <p>The smoothing distribution is the distribution of
 </p>
-<p style="text-align: center;"><i>Xk | Y1=y1*, &hellip;, Yn=yn*,</i></p>
+<p style="text-align: center;"><code class="reqn">X(t_k) | Y(t_1)=y^*_1, \dots, Y(t_n)=y^*_n,</code>
+</p>
 
-<p>where <i>Xk</i> is the latent state process and <i>Yk</i> is the observable process at time <i>tk</i>, and <i>n</i> is the number of observations.
+<p>where <code class="reqn">X(t_k)</code> is the latent state process and <code class="reqn">Y(t_k)</code> is the observable process at time <code class="reqn">t_k</code>, and <code class="reqn">n</code> is the number of observations.
 </p>
 <p>To draw samples from this distribution, one can run a number of independent particle filter (<code><a href="../../pomp/help/pfilter.html">pfilter</a></code>) operations, sampling the full trajectory of <em>one</em> randomly-drawn particle from each one.
 One should view these as <em>weighted</em> samples from the smoothing distribution, where the weights are the <em>likelihoods</em> returned by each of the <code><a href="../../pomp/help/pfilter.html">pfilter</a></code> computations.
@@ -102,5 +112,6 @@ One should view these as <em>weighted</em> samples from the smoothing distributi
 <code><a href="../../pomp/help/traces.html">traces</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

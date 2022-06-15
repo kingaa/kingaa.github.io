@@ -1,12 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: News for package 'pomp'</title>
+<!DOCTYPE html><html><head><title>R: News for package 'pomp'</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for NEWS"><tr><td>NEWS</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>NEWS</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
+
+<h3>Changes in <span class="pkg">pomp</span> version 4.2.1</h3>
+
+
+<ul>
+<li><p> The archiving functions <code>bake</code> and <code>stew</code> now take the argument <code>dir</code>, which is the directory holding the archive files.
+By default, this is the current working directory or the value of the global option <code>pomp.archive.dir</code>.
+</p>
+</li>
+<li><p> A new global option, <code>pomp_archive_dir</code>, can be used to specify the locations of archive files used by <code>bake</code> and <code>stew</code>.
+</p>
+</li>
+<li><p> Documentation repair of issue flagged by Kurt Hornik (9 June 2022).
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">pomp</span> version 4.2.0</h3>
+
+
+<ul>
+<li><p> Minor changes, invisible to the user.
+</p>
+</li>
+<li><p> Minor changes to the C codes to keep up with R-devel.
+</p>
+</li></ul>
+
+
 
 <h3>Changes in <span class="pkg">pomp</span> version 4.1.0</h3>
 
@@ -441,7 +481,7 @@ See the <a href="https://kingaa.github.io/pomp/blog.html"><span class="pkg">pomp
 These have been replaced as follows
 </p>
 
-<table summary="Rd table">
+<table>
 <tr>
  <td style="text-align: left;">
       <code>onestep.dens</code> </td><td style="text-align: left;"> direct specification of <code>dprocess</code> component </td>
@@ -936,7 +976,7 @@ In addition, references to &ldquo;fromEstimationScale&rdquo; and &ldquo;toEstima
 </p>
 </li>
 <li><p> When writing C snippets for parameter transformations, the notation <code>T_p</code> refers to the value of <code>p</code> on the estimation scale.
-Thus, if parameter <i>alpha</i> is to be log-transformed for estimation, the <code>toEst</code> snippet would contain the line <code>T_alpha = log(alpha);</code> and the <code>fromEst</code> snippet would include <code>alpha = exp(T_alpha);</code>.
+Thus, if parameter <code class="reqn">alpha</code> is to be log-transformed for estimation, the <code>toEst</code> snippet would contain the line <code>T_alpha = log(alpha);</code> and the <code>fromEst</code> snippet would include <code>alpha = exp(T_alpha);</code>.
 </p>
 </li>
 <li><p> The <code>parameter_trans</code> function now takes optional arguments <code>log</code>, <code>logit</code>, and <code>barycentric</code>, with names of parameters to be log-, logit-, and log-barycentric transformed, respectively.
@@ -1378,8 +1418,8 @@ This function gives access, at the C level, to evaluation of the derivatives of 
 
 
 <ul>
-<li><p> The Ricker example has a new parameter, <i>c</i>, which scales the (unobserved) population size.
-By default, <i>c=1</i>, so that the behavior is as before.
+<li><p> The Ricker example has a new parameter, <code class="reqn">c</code>, which scales the (unobserved) population size.
+By default, <code class="reqn">c=1</code>, so that the behavior is as before.
 </p>
 </li></ul>
 
@@ -1606,7 +1646,7 @@ Code coverage is now 100%.
 
 
 <ul>
-<li><p> The generation of Sobol' sequences (<code>sobolDesign</code>, <code>profileDesign</code>) is now performed using the <span class="pkg">NLopt</span> routines written in C instead of the original <acronym><span class="acronym">TOMS</span></acronym> 659 FORTRAN codes.
+<li><p> The generation of Sobol' sequences (<code>sobolDesign</code>, <code>profileDesign</code>) is now performed using the <span class="pkg">NLopt</span> routines written in C instead of the original <abbr><span class="acronym">TOMS</span></abbr> 659 FORTRAN codes.
 The copyright notices are located in the source code.
 </p>
 </li>
@@ -2132,4 +2172,5 @@ Also, incompleteness in the <code>sannbox</code> documentation has been correcte
 
 
 
-</div></body></html>
+</div>
+</body></html>

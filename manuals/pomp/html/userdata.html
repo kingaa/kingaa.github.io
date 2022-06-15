@@ -1,22 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Facilities for making additional information to basic...</title>
+<!DOCTYPE html><html><head><title>R: Facilities for making additional information to basic...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for userdata {pomp}"><tr><td>userdata {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>userdata {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Facilities for making additional information to basic components</h2>
 
 <h3>Description</h3>
 
-<p>When <acronym><span class="acronym">POMP</span></acronym> basic components need information they can't get from parameters or covariates.
+<p>When <abbr><span class="acronym">POMP</span></abbr> basic components need information they can't get from parameters or covariates.
 </p>
 
 
 <h3>Details</h3>
 
-<p>It can happen that one desires to pass information to one of the <acronym><span class="acronym">POMP</span></acronym> model <dfn>basic components</dfn> (see <a href="../../pomp/help/pomp.html">here for a definition of this term</a>) outside of the standard routes (i.e., via model parameters or covariates).
+<p>It can happen that one desires to pass information to one of the <abbr><span class="acronym">POMP</span></abbr> model <dfn>basic components</dfn> (see <a href="../../pomp/help/pomp.html">here for a definition of this term</a>) outside of the standard routes (i.e., via model parameters or covariates).
 <span class="pkg">pomp</span> provides facilities for this purpose.
 We refer to the objects one wishes to pass in this way as <dfn>user data</dfn>.
 </p>
@@ -63,7 +73,7 @@ For example:
     simulate(..., rmeasure = f, theta = 42, ...)
 </pre>
 <p>where the <code>...</code> represent the other <code>simulate</code> arguments we might want to supply.
-When we do so, a message will be generated, informing us that <code>theta</code> is available for use by the <acronym><span class="acronym">POMP</span></acronym> basic components.
+When we do so, a message will be generated, informing us that <code>theta</code> is available for use by the <abbr><span class="acronym">POMP</span></abbr> basic components.
 This warning helps forestall accidental triggering of this facility due to typographical error.
 </p>
 
@@ -139,8 +149,7 @@ See the example below.
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
   ## The familiar Ricker example
   ## For some bizarre reason, we wish to pass 'phi'
   ## via the userdata facility.
@@ -203,7 +212,8 @@ See the example below.
   ) -&gt; rick3
 
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

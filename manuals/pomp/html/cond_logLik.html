@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Conditional log likelihood</title>
+<!DOCTYPE html><html><head><title>R: Conditional log likelihood</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for cond.logLik {pomp}"><tr><td>cond.logLik {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>cond.logLik {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Conditional log likelihood</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-## S4 method for signature 'kalmand_pomp'
+<pre><code class='language-R'>## S4 method for signature 'kalmand_pomp'
 cond.logLik(object, ...)
 
 ## S4 method for signature 'pfilterd_pomp'
@@ -28,12 +37,12 @@ cond.logLik(object, ...)
 
 ## S4 method for signature 'bsmcd_pomp'
 cond.logLik(object, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>object</code></td>
 <td>
 <p>result of a filtering computation</p>
@@ -49,15 +58,17 @@ cond.logLik(object, ...)
 
 <p>The conditional likelihood is defined to be the value of the density
 of </p>
-<p style="text-align: center;"><i>Yk | Y1,&hellip;,Y(k-1)</i></p>
-<p> evaluated at <i>Yk = yk*</i>.
-Here, <i>Yk</i> is the observable process, and <i>yk*</i> the data, at time <i>t_k</i>.
+<p style="text-align: center;"><code class="reqn">Y(t_k) | Y(t_1),\dots,Y(t_{k-1})</code>
 </p>
-<p>Thus the conditional log likelihood at time <i>t_k</i> is
+<p> evaluated at <code class="reqn">Y(t_k) = y^*_k</code>.
+Here, <code class="reqn">Y(t_k)</code> is the observable process, and <code class="reqn">y^*_k</code> the data, at time <code class="reqn">t_k</code>.
 </p>
-<p style="text-align: center;"><i>ell_k(theta)=log f[Yk = yk* | Y1=y1*, &hellip;, Y(k-1)=y(k-1)*],</i></p>
+<p>Thus the conditional log likelihood at time <code class="reqn">t_k</code> is
+</p>
+<p style="text-align: center;"><code class="reqn">\ell_k(\theta) = \log f[Y(t_k)=y^*_k \vert Y(t_1)=y^*_1, \dots, Y(t_{k-1})=y^*_{k-1}],</code>
+</p>
 
-<p>where <i>f</i> is the probability density above.
+<p>where <code class="reqn">f</code> is the probability density above.
 </p>
 
 
@@ -107,5 +118,6 @@ To keep the code simple, the <code>cond.logLik</code> function is nevertheless u
 <code><a href="../../pomp/help/traces.html">traces</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

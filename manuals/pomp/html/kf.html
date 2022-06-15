@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Kalman filter</title>
+<!DOCTYPE html><html><head><title>R: Kalman filter</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for kalmanFilter {pomp}"><tr><td>kalmanFilter {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>kalmanFilter {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Kalman filter</h2>
 
@@ -16,14 +26,13 @@
 
 <h3>Usage</h3>
 
-<pre>
-kalmanFilter(object, X0, A, Q, C, R, tol = 1e-06)
-</pre>
+<pre><code class='language-R'>kalmanFilter(object, X0, A, Q, C, R, tol = 1e-06)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>object</code></td>
 <td>
 <p>a pomp object containing data;</p>
@@ -35,23 +44,23 @@ This is assumed known without uncertainty.</p>
 </td></tr>
 <tr valign="top"><td><code>A</code></td>
 <td>
-<p><i>m x m</i> latent state-process transition matrix.
-<i>E[X(t+1) | X(t)] = A.X(t)</i>.</p>
+<p><code class="reqn">m\times m</code> latent state-process transition matrix.
+<code class="reqn">E[X(t+1) | X(t)] = A.X(t)</code>.</p>
 </td></tr>
 <tr valign="top"><td><code>Q</code></td>
 <td>
-<p><i>m x m</i> latent state-process covariance matrix.
-<i>Var[X(t+1) | X(t)] = Q</i></p>
+<p><code class="reqn">m\times m</code> latent state-process covariance matrix.
+<code class="reqn">Var[X(t+1) | X(t)] = Q</code></p>
 </td></tr>
 <tr valign="top"><td><code>C</code></td>
 <td>
-<p><i>n x m</i> link matrix.
-<i>E[Y(t) | X(t)] = C.X(t)</i>.</p>
+<p><code class="reqn">n\times m</code> link matrix.
+<code class="reqn">E[Y(t) | X(t)] = C.X(t)</code>.</p>
 </td></tr>
 <tr valign="top"><td><code>R</code></td>
 <td>
-<p><i>n x n</i> observation process covariance matrix.
-<i>Var[Y(t) | X(t)] = R</i></p>
+<p><code class="reqn">n\times n</code> observation process covariance matrix.
+<code class="reqn">Var[Y(t) | X(t)] = R</code></p>
 </td></tr>
 <tr valign="top"><td><code>tol</code></td>
 <td>
@@ -64,15 +73,17 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 
 <h3>Details</h3>
 
-<p>If the latent state is <i>X</i>, the observed variable is <i>Y</i>,
-<i>X(t) \in R^m</i>, <i>Y(t) \in R^n</i>, and
+<p>If the latent state is <code class="reqn">X</code>, the observed variable is <code class="reqn">Y</code>,
+<code class="reqn">X(t) \in R^m</code>, <code class="reqn">Y(t) \in R^n</code>, and
 </p>
-<p style="text-align: center;"><i>X(t) ~ MultivariateNormal(A X(t-1), Q)</i></p>
+<p style="text-align: center;"><code class="reqn">X(t) ~ MultivariateNormal(A X(t-1), Q)</code>
+</p>
 
-<p style="text-align: center;"><i>Y(t) ~ MultivariateNormal(C X(t), R)</i></p>
+<p style="text-align: center;"><code class="reqn">Y(t) ~ MultivariateNormal(C X(t), R)</code>
+</p>
 
-<p>Then the Kalman filter computes the exact likelihood of <i>Y</i> given
-<i>A</i>, <i>C</i>, <i>Q</i>, and <i>R</i>.
+<p>Then the Kalman filter computes the exact likelihood of <code class="reqn">Y</code> given
+<code class="reqn">A</code>, <code class="reqn">C</code>, <code class="reqn">Q</code>, and <code class="reqn">R</code>.
 </p>
 
 
@@ -86,15 +97,15 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 </dd>
 <dt>A, Q, C, R</dt><dd><p>as in the call</p>
 </dd>
-<dt>filter.mean</dt><dd><p><i>E[X(t)|y^*(1),&hellip;,y^*(t)]</i></p>
+<dt>filter.mean</dt><dd><p><code class="reqn">E[X(t)|y^*(1),\dots,y^*(t)]</code></p>
 </dd>
-<dt>pred.mean</dt><dd><p><i>E[X(t)|y^*(1),&hellip;,y^*(t-1)]</i></p>
+<dt>pred.mean</dt><dd><p><code class="reqn">E[X(t)|y^*(1),\dots,y^*(t-1)]</code></p>
 </dd>
-<dt>forecast</dt><dd><p><i>E[Y(t)|y^*(1),&hellip;,y^*(t-1)]</i></p>
+<dt>forecast</dt><dd><p><code class="reqn">E[Y(t)|y^*(1),\dots,y^*(t-1)]</code></p>
 </dd>
-<dt>cond.logLik</dt><dd><p><i>f(y^*(t)|y^*(1),&hellip;,y^*(t-1))</i></p>
+<dt>cond.logLik</dt><dd><p><code class="reqn">f(y^*(t)|y^*(1),\dots,y^*(t-1))</code></p>
 </dd>
-<dt>logLik</dt><dd><p><i>f(y^*(1),&hellip;,y^*(T))</i></p>
+<dt>logLik</dt><dd><p><code class="reqn">f(y^*(1),\dots,y^*(T))</code></p>
 </dd>
 </dl>
 
@@ -108,8 +119,7 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 
 <h3>Examples</h3>
 
-<pre>
-## Not run: 
+<pre><code class='language-R'>## Not run: 
 
   library(dplyr)
 
@@ -138,7 +148,8 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
   
 
 ## End(Not run)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

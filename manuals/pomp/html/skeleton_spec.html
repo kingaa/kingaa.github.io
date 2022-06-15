@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: The deterministic skeleton of a model</title>
+<!DOCTYPE html><html><head><title>R: The deterministic skeleton of a model</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for skeleton specification {pomp}"><tr><td>skeleton specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>skeleton specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>The deterministic skeleton of a model</h2>
 
@@ -16,16 +26,15 @@
 
 <h3>Usage</h3>
 
-<pre>
-vectorfield(f)
+<pre><code class='language-R'>vectorfield(f)
 
 map(f, delta.t = 1)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>f</code></td>
 <td>
 <p>procedure for evaluating the deterministic skeleton
@@ -69,7 +78,7 @@ The goal of such a snippet is to compute all the components.
 <li><p> When the skeleton is a map, the component corresponding to state variable <code>x</code> is named <code>Dx</code> and is the new value of <code>x</code> after one iteration of the map.
 </p>
 </li>
-<li><p> When the skeleton is a vectorfield, the component corresponding to state variable <code>x</code> is named <code>Dx</code> and is the value of <i>dx/dt</i>.
+<li><p> When the skeleton is a vectorfield, the component corresponding to state variable <code>x</code> is named <code>Dx</code> and is the value of <code class="reqn">dx/dt</code>.
 </p>
 </li>
 <li><p> As with the other C snippets, all states, parameters and covariates, as well as the current time, <code>t</code>, will be defined in the context within which the snippet is executed.
@@ -140,8 +149,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
   ## Starting with an existing pomp object,
   ## e.g., the continuous-time Verhulst-Pearl model,
 
@@ -198,7 +206,8 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   ofun()
 
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Beta-binomial distribution</title>
+<!DOCTYPE html><html><head><title>R: Beta-binomial distribution</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for betabinomial {pomp}"><tr><td>betabinomial {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>betabinomial {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Beta-binomial distribution</h2>
 
@@ -16,16 +26,15 @@
 
 <h3>Usage</h3>
 
-<pre>
-rbetabinom(n = 1, size, prob, theta)
+<pre><code class='language-R'>rbetabinom(n = 1, size, prob, theta)
 
 dbetabinom(x, size, prob, theta, log = FALSE)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>n</code></td>
 <td>
 <p>integer; number of random variates to generate.</p>
@@ -55,15 +64,15 @@ dbetabinom(x, size, prob, theta, log = FALSE)
 
 <h3>Details</h3>
 
-<p>A variable <i>X</i> is Beta-binomially distributed if
-<i>X~Binomial(n,P)</i> where <i>P~Beta(mu,theta)</i>.
-Using the standard (a,b) parameterization, <i>a=mu*theta</i> and <i>b=(1-mu)*theta</i>.
+<p>A variable <code class="reqn">X</code> is Beta-binomially distributed if
+<code class="reqn">X~Binomial(n,P)</code> where <code class="reqn">P~Beta(mu,theta)</code>.
+Using the standard (a,b) parameterization, <code class="reqn">a=mu*theta</code> and <code class="reqn">b=(1-mu)*theta</code>.
 </p>
 
 
 <h3>Value</h3>
 
-<table summary="R valueblock">
+<table>
 <tr valign="top"><td><code>rbetabinom</code></td>
 <td>
 
@@ -110,5 +119,6 @@ Visit the package homepage to view the <a href="https://kingaa.github.io/pomp/vi
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

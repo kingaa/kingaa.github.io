@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Design matrices for pomp calculations</title>
+<!DOCTYPE html><html><head><title>R: Design matrices for pomp calculations</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for design {pomp}"><tr><td>design {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>design {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Design matrices for pomp calculations</h2>
 
@@ -24,8 +34,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-profile_design(
+<pre><code class='language-R'>profile_design(
   ...,
   lower,
   upper,
@@ -39,12 +48,12 @@ runif_design(lower = numeric(0), upper = numeric(0), nseq)
 slice_design(center, ...)
 
 sobol_design(lower = numeric(0), upper = numeric(0), nseq)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>...</code></td>
 <td>
 <p>In <code>profile_design</code>, additional arguments specify the parameters over which to profile and the values of these parameters.
@@ -108,7 +117,7 @@ The &lsquo;slice&rsquo; variable indicates which slice the point belongs to.
 
 <h3>References</h3>
 
-<p>S. Kucherenko and Y. Sytsko. Application of deterministic low-discrepancy sequences in global optimization. <em>Computational Optimization and Applications</em> <b>30</b>, 297&ndash;318, 2005. doi: <a href="https://doi.org/10.1007/s10589-005-4615-1">10.1007/s10589-005-4615-1</a>.
+<p>S. Kucherenko and Y. Sytsko. Application of deterministic low-discrepancy sequences in global optimization. <em>Computational Optimization and Applications</em> <b>30</b>, 297&ndash;318, 2005. <a href="https://doi.org/10.1007/s10589-005-4615-1">doi:10.1007/s10589-005-4615-1</a>.
 </p>
 <p>S.G. Johnson. The <span class="pkg">NLopt</span> nonlinear-optimization package. <a href="https://github.com/stevengj/nlopt/">https://github.com/stevengj/nlopt/</a>.
 </p>
@@ -120,8 +129,7 @@ The &lsquo;slice&rsquo; variable indicates which slice the point belongs to.
 
 <h3>Examples</h3>
 
-<pre>
-## Sobol' low-discrepancy design
+<pre><code class='language-R'>## Sobol' low-discrepancy design
 plot(sobol_design(lower=c(a=0,b=100),upper=c(b=200,a=1),nseq=100))
 
 ## Uniform random design
@@ -152,7 +160,8 @@ x &lt;- slice_design(c(A=3,B=8,C=0),A=seq(0,5,by=1),C=seq(0,5,length=11))
 dim(x)
 plot(x)
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Probability distributions</title>
+<!DOCTYPE html><html><head><title>R: Probability distributions</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for distributions {pomp}"><tr><td>distributions {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>distributions {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Probability distributions</h2>
 
@@ -18,18 +28,17 @@ the the Gamma white-noise processes.
 
 <h3>Usage</h3>
 
-<pre>
-reulermultinom(n = 1, size, rate, dt)
+<pre><code class='language-R'>reulermultinom(n = 1, size, rate, dt)
 
 deulermultinom(x, size, rate, dt, log = FALSE)
 
 rgammawn(n = 1, sigma, dt)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>n</code></td>
 <td>
 <p>integer; number of random variates to generate.</p>
@@ -64,26 +73,29 @@ succumbed to each death process.</p>
 
 <h3>Details</h3>
 
-<p>If <i>N</i> individuals face constant hazards of death in <i>k</i> ways
-at rates <i>r1,r2,&hellip;,rk</i>,
-then in an interval of duration <i>dt</i>,
+<p>If <code class="reqn">N</code> individuals face constant hazards of death in <code class="reqn">k</code> ways
+at rates <code class="reqn">r_1, r_2, \dots, r_k</code>,
+then in an interval of duration <code class="reqn">\Delta t</code>,
 the number of individuals remaining alive and dying in each way is multinomially distributed:
 </p>
-<p style="text-align: center;"><i>(N-&sum;(dni), dn1, &hellip;, dnk) ~ multinomial(N;p0,p1,&hellip;,pk),</i></p>
+<p style="text-align: center;"><code class="reqn">(N-\sum_{i=1}^k \Delta n_i, \Delta n_1, \dots, \Delta n_k) \sim \mathrm{Multinomial}(N;p_0,p_1,\dots,p_k),</code>
+</p>
 
-<p>where <i>dni</i> is the number of individuals dying in way <i>i</i> over the interval,
-the probability of remaining alive is <i>p0=exp(-&sum;(ri dt))</i>,
-and the probability of dying in way <i>j</i> is </p>
-<p style="text-align: center;"><i>pj=(1-exp(-sum(ri dt))) rj/(&sum;(ri)).</i></p>
+<p>where <code class="reqn">\Delta n_i</code> is the number of individuals dying in way <code class="reqn">i</code> over the interval,
+the probability of remaining alive is <code class="reqn">p_0=\exp(-\sum_i r_i \Delta t)</code>,
+and the probability of dying in way <code class="reqn">j</code> is </p>
+<p style="text-align: center;"><code class="reqn">p_j=\frac{r_j}{\sum_i r_i} (1-\exp(-\sum_i r_i \Delta t)).</code>
+</p>
 
 <p>In this case, we say that </p>
-<p style="text-align: center;"><i>(dn1,&hellip;,dnk)~eulermultinom(N,r,dt),</i></p>
-<p> where <i>r=(r1,&hellip;,rk)</i>.
-Draw <i>m</i> random samples from this distribution by doing </p>
+<p style="text-align: center;"><code class="reqn">(\Delta n_1, \dots, \Delta n_k) \sim \mathrm{Eulermultinom}(N,r,\Delta t),</code>
+</p>
+<p> where <code class="reqn">r=(r_1,\dots,r_k)</code>.
+Draw <code class="reqn">m</code> random samples from this distribution by doing </p>
 <pre>
     dn &lt;- reulermultinom(n=m,size=N,rate=r,dt=dt),
 </pre><p> where <code>r</code> is the vector of rates.
-Evaluate the probability that <i>x=(x1,&hellip;,xk)</i> are the numbers of individuals who have died in each of the <i>k</i> ways over the interval <i></i><code>dt</code>,
+Evaluate the probability that <code class="reqn">x=(x_1,\dots,x_k)</code> are the numbers of individuals who have died in each of the <code class="reqn">k</code> ways over the interval <code class="reqn">\Delta t=</code><code>dt</code>,
 by doing </p>
 <pre>
     deulermultinom(x=x,size=N,rate=r,dt=dt).
@@ -95,11 +107,11 @@ Let the increments of the equidispersed process be given by
 <pre>
     reulermultinom(size=N,rate=r,dt=dt).
 </pre>
-<p>In this expression, replace the rate <i>r</i> with <i>r {&Delta; W}/{&Delta; t}</i>,
-where <i>&Delta; W \sim \mathrm{Gamma}(&Delta; t/&sigma;^2,&sigma;^2)</i>
-is the increment of an integrated Gamma white noise process with intensity <i>&sigma;</i>.
-That is, <i>&Delta; W</i> has mean <i>&Delta; t</i> and variance <i>&sigma;^2 &Delta; t</i>.
-The resulting process is overdispersed and converges (as <i>&Delta; t</i> goes to zero) to a well-defined process.
+<p>In this expression, replace the rate <code class="reqn">r</code> with <code class="reqn">r {\Delta W}/{\Delta t}</code>,
+where <code class="reqn">\Delta W \sim \mathrm{Gamma}(\Delta t/\sigma^2,\sigma^2)</code>
+is the increment of an integrated Gamma white noise process with intensity <code class="reqn">\sigma</code>.
+That is, <code class="reqn">\Delta W</code> has mean <code class="reqn">\Delta t</code> and variance <code class="reqn">\sigma^2 \Delta t</code>.
+The resulting process is overdispersed and converges (as <code class="reqn">\Delta t</code> goes to zero) to a well-defined process.
 The following lines of code accomplish this:
 </p>
 <pre>
@@ -120,7 +132,7 @@ see below.
 
 <h3>Value</h3>
 
-<table summary="R valueblock">
+<table>
 <tr valign="top"><td><code>reulermultinom</code></td>
 <td>
 
@@ -193,8 +205,7 @@ Visit the package homepage to view the <a href="https://kingaa.github.io/pomp/vi
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=0.1))
 deulermultinom(x=dn,size=100,rate=c(1,2,3),dt=0.1)
 ## an Euler-multinomial with overdispersed transitions:
@@ -202,7 +213,8 @@ dt &lt;- 0.1
 dW &lt;- rgammawn(sigma=0.1,dt=dt)
 print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW))
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

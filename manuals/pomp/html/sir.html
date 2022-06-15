@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Compartmental epidemiological models</title>
+<!DOCTYPE html><html><head><title>R: Compartmental epidemiological models</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for SIR models {pomp}"><tr><td>SIR models {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>SIR models {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Compartmental epidemiological models</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-sir(
+<pre><code class='language-R'>sir(
   gamma = 26,
   mu = 0.02,
   iota = 0.01,
@@ -54,12 +63,12 @@ sir2(
   times = seq(from = t0 + 1/12, to = t0 + 10, by = 1/12),
   seed = 1772464524
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>gamma</code></td>
 <td>
 <p>recovery rate</p>
@@ -154,8 +163,7 @@ available on the <a href="https://kingaa.github.io/pomp/">package website</a>.
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
   po &lt;- sir()
   plot(po)
   coef(po)
@@ -167,7 +175,8 @@ available on the <a href="https://kingaa.github.io/pomp/">package website</a>.
   
   po %&gt;% as.data.frame() %&gt;% head()
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

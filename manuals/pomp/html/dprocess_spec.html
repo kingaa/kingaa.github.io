@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: The latent state process density</title>
+<!DOCTYPE html><html><head><title>R: The latent state process density</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for dprocess specification {pomp}"><tr><td>dprocess specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>dprocess specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>The latent state process density</h2>
 
@@ -17,10 +27,10 @@
 <h3>Details</h3>
 
 <p>Suppose you have a procedure that allows you to compute the probability density
-of an arbitrary transition from state <i>x1</i> at time <i>t1</i>
-to state <i>x2</i> at time <i>t2</i>
+of an arbitrary transition from state <code class="reqn">x_1</code> at time <code class="reqn">t_1</code>
+to state <code class="reqn">x_2</code> at time <code class="reqn">t_2&gt;t_1</code>
 under the assumption that the state remains unchanged
-between <i>t1</i> and <i>t2</i>.
+between <code class="reqn">t_1</code> and <code class="reqn">t_2</code>.
 Then you can furnish
 </p>
 <pre>
@@ -94,5 +104,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

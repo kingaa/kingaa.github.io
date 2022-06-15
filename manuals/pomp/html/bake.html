@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Tools for reproducible computations.</title>
+<!DOCTYPE html><html><head><title>R: Tools for reproducible computations.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for reproducibility tools {pomp}"><tr><td>reproducibility tools {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>reproducibility tools {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Tools for reproducible computations.</h2>
 
@@ -16,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-bake(
+<pre><code class='language-R'>bake(
   file,
   expr,
   seed = NULL,
@@ -25,7 +34,8 @@ bake(
   normal.kind = NULL,
   dependson = NULL,
   info = FALSE,
-  timing = TRUE
+  timing = TRUE,
+  dir = getOption("pomp_archive_dir", getwd())
 )
 
 stew(
@@ -35,7 +45,8 @@ stew(
   kind = NULL,
   normal.kind = NULL,
   dependson = NULL,
-  info = FALSE
+  info = FALSE,
+  dir = getOption("pomp_archive_dir", getwd())
 )
 
 freeze(
@@ -46,15 +57,15 @@ freeze(
   envir = parent.frame(),
   enclos = if (is.list(envir) || is.pairlist(envir)) parent.frame() else baseenv()
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
+<table>
 <tr valign="top"><td><code>file</code></td>
 <td>
-<p>Name of the binary data file in which the result will be stored or retrieved, as appropriate.
+<p>Name of the archive file in which the result will be stored or retrieved, as appropriate.
 For <code>bake</code>, this will contain a single object and hence be an RDS file (extension &lsquo;rds&rsquo;);
 for <code>stew</code>, this will contain one or more named objects and hence be an RDA file (extension &lsquo;rda&rsquo;).</p>
 </td></tr>
@@ -92,6 +103,11 @@ In the case of <code>stew</code>, this list is a hidden object named &ldquo;.ing
 <p>logical.
 If <code>TRUE</code>, the time required for the computation is returned.
 This is returned as the &ldquo;system.time&rdquo; attribute of the returned object.</p>
+</td></tr>
+<tr valign="top"><td><code>dir</code></td>
+<td>
+<p>Directory holding archive files; by default, this is the current working directory.
+This can also be set using the global option <code>pomp_archive_dir</code>.</p>
 </td></tr>
 <tr valign="top"><td><code>envir</code></td>
 <td>
@@ -177,8 +193,7 @@ However, there will be no loss of information.
 
 <h3>Examples</h3>
 
-<pre>
-## Not run: 
+<pre><code class='language-R'>## Not run: 
   bake(file="example1.rds",{
     x &lt;- runif(1000)
     mean(x)
@@ -220,7 +235,8 @@ However, there will be no loss of information.
 
 
 ## End(Not run)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

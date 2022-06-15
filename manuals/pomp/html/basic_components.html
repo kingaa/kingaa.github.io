@@ -1,16 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Basic POMP model components.</title>
+<!DOCTYPE html><html><head><title>R: Basic POMP model components.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for basic components {pomp}"><tr><td>basic components {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table width="100%"><tr><td>basic components {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Basic POMP model components.</h2>
 
 <h3>Description</h3>
 
-<p>Mathematically, the parts of a <acronym><span class="acronym">POMP</span></acronym> model include the latent-state process transition distribution, the measurement-process distribution, the initial-state distribution, and possibly a prior parameter distribution.
+<p>Mathematically, the parts of a <abbr><span class="acronym">POMP</span></abbr> model include the latent-state process transition distribution, the measurement-process distribution, the initial-state distribution, and possibly a prior parameter distribution.
 Algorithmically, each of these corresponds to at least two distinct operations.
 In particular, for each of the above parts, one sometimes needs to make a random draw from the distribution and sometimes to evaluate the density function.
 Accordingly, for each such component, there are two basic model components, one prefixed by a &lsquo;r&rsquo;, the other by a &lsquo;d&rsquo;, following the usual <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> convention.
@@ -94,5 +104,6 @@ A basic model component can be unset by passing <code>NULL</code> in the same wa
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.0.0 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

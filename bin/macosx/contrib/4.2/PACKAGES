@@ -22,3 +22,12 @@ LinkingTo: pomp
 Suggests: tidyverse, magrittr, doParallel, doRNG, broom
 License: GPL-3
 MD5sum: e9af8b2cb007b3845350eeadbfadd90d
+
+Package: pomp
+Version: 4.2.1.2
+Depends: R(>= 4.0.0), methods
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
+        magrittr, plyr
+Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
+License: GPL-3
+MD5sum: 99c4e978a56ce88b1c435da29e966956

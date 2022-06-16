@@ -21,3 +21,12 @@ LinkingTo: pomp
 Suggests: tidyverse, magrittr, doParallel, doRNG, broom
 License: GPL-3
 Archs: x64
+
+Package: pomp
+Version: 4.2.1.2
+Depends: R(>= 4.0.0), methods
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
+        magrittr, plyr
+Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
+License: GPL-3
+Archs: x64

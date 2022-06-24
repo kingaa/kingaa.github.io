@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>nonlinear forecasting {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>nonlinear forecasting {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Nonlinear forecasting</h2>
 
@@ -86,28 +86,28 @@ nlf_objfun(
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>data</code></td>
+<tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>est</code></td>
+<tr style="vertical-align: top;"><td><code>est</code></td>
 <td>
 <p>character vector; the names of parameters to be estimated.</p>
 </td></tr>
-<tr valign="top"><td><code>lags</code></td>
+<tr style="vertical-align: top;"><td><code>lags</code></td>
 <td>
 <p>A vector specifying the lags to use when constructing the nonlinear autoregressive prediction model.
 The first lag is the prediction interval.</p>
 </td></tr>
-<tr valign="top"><td><code>nrbf</code></td>
+<tr style="vertical-align: top;"><td><code>nrbf</code></td>
 <td>
 <p>integer scalar;
 the number of radial basis functions to be used at each lag.</p>
 </td></tr>
-<tr valign="top"><td><code>ti, tf</code></td>
+<tr style="vertical-align: top;"><td><code>ti, tf</code></td>
 <td>
 <p>required numeric values.
 NLF works by generating simulating long time series from the model.
@@ -117,14 +117,14 @@ The simulated time series will be from <code>ti</code> to <code>tf</code>, with 
 An error will be generated unless the data-to-parameter ratio exceeds 10 and
 a warning will be given if the ratio is smaller than 30.</p>
 </td></tr>
-<tr valign="top"><td><code>seed</code></td>
+<tr style="vertical-align: top;"><td><code>seed</code></td>
 <td>
 <p>integer.
 When fitting, it is often best to fix the seed of the random-number generator (RNG).
 This is accomplished by setting <code>seed</code> to an integer.
 By default, <code>seed = NULL</code>, which does not alter the RNG state.</p>
 </td></tr>
-<tr valign="top"><td><code>transform.data</code></td>
+<tr style="vertical-align: top;"><td><code>transform.data</code></td>
 <td>
 <p>optional function.
 If specified, forecasting is performed using data and model simulations transformed by this function.
@@ -135,13 +135,13 @@ If the data are univariate, <code>transform.data</code> should take a scalar and
 scalar.
 If the data are multivariate, <code>transform.data</code> should assume a vector input and return a vector of the same length.</p>
 </td></tr>
-<tr valign="top"><td><code>period</code></td>
+<tr style="vertical-align: top;"><td><code>period</code></td>
 <td>
 <p>numeric; <code>period=NA</code> means the model is nonseasonal.
 <code>period &gt; 0</code> is the period of seasonal forcing.
 <code>period &lt;= 0</code> is equivalent to <code>period = NA</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>tensor</code></td>
+<tr style="vertical-align: top;"><td><code>tensor</code></td>
 <td>
 <p>logical;
 if FALSE, the fitted model is a generalized additive model with time mod period as one of the predictors,
@@ -149,37 +149,37 @@ i.e., a gam with time-varying intercept.
 If TRUE, the fitted model is a gam with lagged state variables as predictors and time-periodic coefficients, constructed using tensor products of basis functions of state variables with basis
 functions of time.</p>
 </td></tr>
-<tr valign="top"><td><code>fail.value</code></td>
+<tr style="vertical-align: top;"><td><code>fail.value</code></td>
 <td>
 <p>optional numeric scalar;
 if non-<code>NA</code>, this value is substituted for non-finite values of the objective function.
 It should be a large number (i.e., bigger than any legitimate values the objective function is likely to take).</p>
 </td></tr>
-<tr valign="top"><td><code>params</code></td>
+<tr style="vertical-align: top;"><td><code>params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>rinit</code></td>
+<tr style="vertical-align: top;"><td><code>rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rprocess</code></td>
+<tr style="vertical-align: top;"><td><code>rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -188,7 +188,7 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr valign="top"><td><code>verbose</code></td>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -299,22 +299,24 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 <pre><code class='language-R'>
 
-  ricker() %&gt;%
-    nlf_objfun(est=c("r","sigma","N_0"),lags=c(4,6),
-      partrans=parameter_trans(log=c("r","sigma","N_0")),
-      paramnames=c("r","sigma","N_0"),
-      ti=100,tf=2000,seed=426094906L) -&gt; m1
+  if (require(subplex)) {
 
-  library(subplex)
-  subplex(par=log(c(20,0.5,5)),fn=m1,control=list(reltol=1e-4)) -&gt; out
+    ricker() %&gt;%
+      nlf_objfun(est=c("r","sigma","N_0"),lags=c(4,6),
+        partrans=parameter_trans(log=c("r","sigma","N_0")),
+        paramnames=c("r","sigma","N_0"),
+        ti=100,tf=2000,seed=426094906L) -&gt; m1
 
-  m1(out$par)
-  coef(m1)
-  plot(simulate(m1))
+    subplex(par=log(c(20,0.5,5)),fn=m1,control=list(reltol=1e-4)) -&gt; out
 
+    m1(out$par)
+    coef(m1)
+    plot(simulate(m1))
+
+  }
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

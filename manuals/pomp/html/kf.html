@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>kalmanFilter {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>kalmanFilter {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Kalman filter</h2>
 
@@ -33,36 +33,36 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>object</code></td>
+<tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
 <p>a pomp object containing data;</p>
 </td></tr>
-<tr valign="top"><td><code>X0</code></td>
+<tr style="vertical-align: top;"><td><code>X0</code></td>
 <td>
 <p>length-m vector containing initial state.
 This is assumed known without uncertainty.</p>
 </td></tr>
-<tr valign="top"><td><code>A</code></td>
+<tr style="vertical-align: top;"><td><code>A</code></td>
 <td>
 <p><code class="reqn">m\times m</code> latent state-process transition matrix.
 <code class="reqn">E[X(t+1) | X(t)] = A.X(t)</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>Q</code></td>
+<tr style="vertical-align: top;"><td><code>Q</code></td>
 <td>
 <p><code class="reqn">m\times m</code> latent state-process covariance matrix.
 <code class="reqn">Var[X(t+1) | X(t)] = Q</code></p>
 </td></tr>
-<tr valign="top"><td><code>C</code></td>
+<tr style="vertical-align: top;"><td><code>C</code></td>
 <td>
 <p><code class="reqn">n\times m</code> link matrix.
 <code class="reqn">E[Y(t) | X(t)] = C.X(t)</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>R</code></td>
+<tr style="vertical-align: top;"><td><code>R</code></td>
 <td>
 <p><code class="reqn">n\times n</code> observation process covariance matrix.
 <code class="reqn">Var[Y(t) | X(t)] = R</code></p>
 </td></tr>
-<tr valign="top"><td><code>tol</code></td>
+<tr style="vertical-align: top;"><td><code>tol</code></td>
 <td>
 <p>numeric;
 the tolerance to be used in computing matrix pseudoinverses via singular-value decomposition.
@@ -121,35 +121,36 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 
 <pre><code class='language-R'>## Not run: 
 
-  library(dplyr)
+  if (require(dplyr)) {
 
-  gompertz() -&gt; po
+    gompertz() -&gt; po
 
-  po %&gt;%
-    as.data.frame() %&gt;%
-    mutate(
-      logY=log(Y)
-    ) %&gt;%
-    select(time,logY) %&gt;%
-    pomp(times="time",t0=0) %&gt;%
-    kalmanFilter(
-      X0=c(logX=0),
-      A=matrix(exp(-0.1),1,1),
-      Q=matrix(0.01,1,1),
-      C=matrix(1,1,1),
-      R=matrix(0.01,1,1)
-    ) -&gt; kf
+    po %&gt;%
+      as.data.frame() %&gt;%
+      mutate(
+        logY=log(Y)
+      ) %&gt;%
+      select(time,logY) %&gt;%
+      pomp(times="time",t0=0) %&gt;%
+      kalmanFilter(
+        X0=c(logX=0),
+        A=matrix(exp(-0.1),1,1),
+        Q=matrix(0.01,1,1),
+        C=matrix(1,1,1),
+        R=matrix(0.01,1,1)
+      ) -&gt; kf
 
-  po %&gt;%
-    pfilter(Np=1000) -&gt; pf
+    po %&gt;%
+      pfilter(Np=1000) -&gt; pf
 
-  kf$logLik
-  logLik(pf) + sum(log(obs(pf)))
-  
+    kf$logLik
+    logLik(pf) + sum(log(obs(pf)))
+    
+  }
 
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

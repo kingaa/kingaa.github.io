@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>distributions {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>distributions {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Probability distributions</h2>
 
@@ -39,32 +39,32 @@ rgammawn(n = 1, sigma, dt)
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>n</code></td>
+<tr style="vertical-align: top;"><td><code>n</code></td>
 <td>
 <p>integer; number of random variates to generate.</p>
 </td></tr>
-<tr valign="top"><td><code>size</code></td>
+<tr style="vertical-align: top;"><td><code>size</code></td>
 <td>
 <p>scalar integer; number of individuals at risk.</p>
 </td></tr>
-<tr valign="top"><td><code>rate</code></td>
+<tr style="vertical-align: top;"><td><code>rate</code></td>
 <td>
 <p>numeric vector of hazard rates.</p>
 </td></tr>
-<tr valign="top"><td><code>dt</code></td>
+<tr style="vertical-align: top;"><td><code>dt</code></td>
 <td>
 <p>numeric scalar; duration of Euler step.</p>
 </td></tr>
-<tr valign="top"><td><code>x</code></td>
+<tr style="vertical-align: top;"><td><code>x</code></td>
 <td>
 <p>matrix or vector containing number of individuals that have
 succumbed to each death process.</p>
 </td></tr>
-<tr valign="top"><td><code>log</code></td>
+<tr style="vertical-align: top;"><td><code>log</code></td>
 <td>
 <p>logical; if TRUE, return logarithm(s) of probabilities.</p>
 </td></tr>
-<tr valign="top"><td><code>sigma</code></td>
+<tr style="vertical-align: top;"><td><code>sigma</code></td>
 <td>
 <p>numeric scalar; intensity of the Gamma white noise process.</p>
 </td></tr>
@@ -133,7 +133,7 @@ see below.
 <h3>Value</h3>
 
 <table>
-<tr valign="top"><td><code>reulermultinom</code></td>
+<tr style="vertical-align: top;"><td><code>reulermultinom</code></td>
 <td>
 
 <p>Returns a <code>length(rate)</code> by <code>n</code> matrix.
@@ -141,14 +141,14 @@ Each column is a different random draw.
 Each row contains the numbers of individuals that have succumbed to the corresponding process.
 </p>
 </td></tr>
-<tr valign="top"><td><code>deulermultinom</code></td>
+<tr style="vertical-align: top;"><td><code>deulermultinom</code></td>
 <td>
 
 <p>Returns a vector (of length equal to the number of columns of <code>x</code>) containing
 the probabilities of observing each column of <code>x</code> given the specified parameters (<code>size</code>, <code>rate</code>, <code>dt</code>).
 </p>
 </td></tr>
-<tr valign="top"><td><code>rgammawn</code></td>
+<tr style="vertical-align: top;"><td><code>rgammawn</code></td>
 <td>
 
 <p>Returns a vector of length <code>n</code> containing random increments of the integrated Gamma white noise process with intensity <code>sigma</code>.
@@ -215,6 +215,6 @@ print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW))
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>trajectory matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>trajectory matching {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Trajectory matching</h2>
 
@@ -66,41 +66,41 @@ traj_objfun(
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>data</code></td>
+<tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>est</code></td>
+<tr style="vertical-align: top;"><td><code>est</code></td>
 <td>
 <p>character vector; the names of parameters to be estimated.</p>
 </td></tr>
-<tr valign="top"><td><code>fail.value</code></td>
+<tr style="vertical-align: top;"><td><code>fail.value</code></td>
 <td>
 <p>optional numeric scalar;
 if non-<code>NA</code>, this value is substituted for non-finite values of the objective function.
 It should be a large number (i.e., bigger than any legitimate values the objective function is likely to take).</p>
 </td></tr>
-<tr valign="top"><td><code>ode_control</code></td>
+<tr style="vertical-align: top;"><td><code>ode_control</code></td>
 <td>
 <p>optional list;
 the elements of this list will be passed to <code><a href="../../deSolve/html/deSolve.html">ode</a></code> if the skeleton is a vectorfield, and ignored if it is a map.</p>
 </td></tr>
-<tr valign="top"><td><code>params</code></td>
+<tr style="vertical-align: top;"><td><code>params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>rinit</code></td>
+<tr style="vertical-align: top;"><td><code>rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>skeleton</code></td>
+<tr style="vertical-align: top;"><td><code>skeleton</code></td>
 <td>
 <p>optional; the deterministic skeleton of the unobserved state process.
 Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
@@ -108,13 +108,13 @@ Accordingly, this is supplied using either the <code><a href="../../pomp/help/sk
 For more information, see <a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a>.
 Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 </td></tr>
-<tr valign="top"><td><code>dmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
 For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>partrans</code></td>
+<tr style="vertical-align: top;"><td><code>partrans</code></td>
 <td>
 <p>optional parameter transformations, constructed using <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
 </p>
@@ -124,11 +124,11 @@ One should supply the <code>partrans</code> argument via a call to <code><a href
 For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments will modify the model structure</p>
 </td></tr>
-<tr valign="top"><td><code>verbose</code></td>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -201,23 +201,29 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
       est=c("r","sigma","N_0"),
       partrans=parameter_trans(log=c("r","sigma","N_0")),
       paramnames=c("r","sigma","N_0"),
-    ) -&gt; f
+      ) -&gt; f
 
   f(log(c(20,0.3,10)))
 
-  library(subplex)
-  subplex(fn=f,par=log(c(20,0.3,10)),control=list(reltol=1e-5)) -&gt; out
+  if (require(subplex)) {
+    subplex(fn=f,par=log(c(20,0.3,10)),control=list(reltol=1e-5)) -&gt; out
+  } else {
+    optim(fn=f,par=log(c(20,0.3,10)),control=list(reltol=1e-5)) -&gt; out
+  }
+
   f(out$par)
 
-  library(ggplot2)
+  if (require(ggplot2)) {
 
-  f %&gt;%
-    trajectory(format="data.frame") %&gt;%
-    ggplot(aes(x=time,y=N))+geom_line()+theme_bw()
+    f %&gt;%
+      trajectory(format="data.frame") %&gt;%
+      ggplot(aes(x=time,y=N))+geom_line()+theme_bw()
+
+  }
 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

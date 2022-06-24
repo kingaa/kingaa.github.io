@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>rprocess specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>rprocess specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>The latent state process simulator</h2>
 
@@ -41,23 +41,23 @@ gillespie_hl(..., .pre = "", .post = "", hmax = Inf)
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>step.fun</code></td>
+<tr style="vertical-align: top;"><td><code>step.fun</code></td>
 <td>
 <p>a C snippet, an R function, or
 the name of a native routine in a shared-object library.
 This gives a procedure by which one simulates a single step of the latent state process.</p>
 </td></tr>
-<tr valign="top"><td><code>delta.t</code></td>
+<tr style="vertical-align: top;"><td><code>delta.t</code></td>
 <td>
 <p>positive numerical value; for <code>euler</code> and <code>discrete_time</code>, the size of the step to take</p>
 </td></tr>
-<tr valign="top"><td><code>rate.fun</code></td>
+<tr style="vertical-align: top;"><td><code>rate.fun</code></td>
 <td>
 <p>a C snippet, an R function, or
 the name of a native routine in a shared-object library.
 This gives a procedure by which one computes the event-rate of the elementary events in the continuous-time latent Markov chain.</p>
 </td></tr>
-<tr valign="top"><td><code>v</code></td>
+<tr style="vertical-align: top;"><td><code>v</code></td>
 <td>
 <p>integer matrix; giving the stoichiometry of the continuous-time latent Markov process.
 It should have dimensions <code>nvar</code> x <code>nevent</code>, where <code>nvar</code> is the number of state variables and <code>nevent</code> is the number of elementary events.
@@ -70,15 +70,15 @@ the names of the state variables returned by <code>rinit</code> will be matched
 to the rows of <code>v</code> to ensure a correct mapping.
 If any of the row names of <code>v</code> cannot be found among the state variables or if any row names of <code>v</code> are duplicated, an error will occur.</p>
 </td></tr>
-<tr valign="top"><td><code>hmax</code></td>
+<tr style="vertical-align: top;"><td><code>hmax</code></td>
 <td>
 <p>maximum time step allowed (see below)</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>individual C snippets corresponding to elementary events</p>
 </td></tr>
-<tr valign="top"><td><code>.pre, .post</code></td>
+<tr style="vertical-align: top;"><td><code>.pre, .post</code></td>
 <td>
 <p>C snippets (see Details)</p>
 </td></tr>
@@ -272,6 +272,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

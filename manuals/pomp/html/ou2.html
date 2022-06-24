@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>ou2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>ou2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Two-dimensional discrete-time Ornstein-Uhlenbeck process</h2>
 
@@ -46,29 +46,29 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>alpha_1, alpha_2, alpha_3, alpha_4</code></td>
+<tr style="vertical-align: top;"><td><code>alpha_1, alpha_2, alpha_3, alpha_4</code></td>
 <td>
 <p>entries of the <code class="reqn">alpha</code> matrix, in column-major order.
 That is, <code>alpha_2</code> is in the lower-left position.</p>
 </td></tr>
-<tr valign="top"><td><code>sigma_1, sigma_2, sigma_3</code></td>
+<tr style="vertical-align: top;"><td><code>sigma_1, sigma_2, sigma_3</code></td>
 <td>
 <p>entries of the lower-triangular <code class="reqn">sigma</code> matrix.
 <code>sigma_2</code> is the entry in the lower-left position.</p>
 </td></tr>
-<tr valign="top"><td><code>tau</code></td>
+<tr style="vertical-align: top;"><td><code>tau</code></td>
 <td>
 <p>measurement error s.d.</p>
 </td></tr>
-<tr valign="top"><td><code>x1_0, x2_0</code></td>
+<tr style="vertical-align: top;"><td><code>x1_0, x2_0</code></td>
 <td>
 <p>latent variable values at time <code>t0</code></p>
 </td></tr>
-<tr valign="top"><td><code>times</code></td>
+<tr style="vertical-align: top;"><td><code>times</code></td>
 <td>
 <p>vector of observation times</p>
 </td></tr>
-<tr valign="top"><td><code>t0</code></td>
+<tr style="vertical-align: top;"><td><code>t0</code></td>
 <td>
 <p>the zero time</p>
 </td></tr>
@@ -123,6 +123,6 @@ pf &lt;- pfilter(po,Np=1000)
 logLik(pf)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

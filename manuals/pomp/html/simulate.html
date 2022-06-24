@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>simulate {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>simulate {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Simulations of a partially-observed Markov process</h2>
 
@@ -79,53 +79,53 @@ simulate(object, nsim = 1, seed = NULL, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>nsim</code></td>
+<tr style="vertical-align: top;"><td><code>nsim</code></td>
 <td>
 <p>The number of simulations to perform.
 Note that the number of replicates will be <code>nsim</code> times <code>ncol(params)</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>seed</code></td>
+<tr style="vertical-align: top;"><td><code>seed</code></td>
 <td>
 <p>optional;
 if set, the pseudorandom number generator (RNG) will be initialized with <code>seed</code>.  the random seed to use.
 The RNG will be restored to its original state afterward.</p>
 </td></tr>
-<tr valign="top"><td><code>times</code></td>
+<tr style="vertical-align: top;"><td><code>times</code></td>
 <td>
 <p>the sequence of observation times.
 <code>times</code> must indicate the column of observation times by name or index.
 The time vector must be numeric and non-decreasing.</p>
 </td></tr>
-<tr valign="top"><td><code>t0</code></td>
+<tr style="vertical-align: top;"><td><code>t0</code></td>
 <td>
 <p>The zero-time, i.e., the time of the initial state.
 This must be no later than the time of the first observation, i.e., <code>t0 &lt;= times[1]</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>params</code></td>
+<tr style="vertical-align: top;"><td><code>params</code></td>
 <td>
 <p>a named numeric vector or a matrix with rownames
 containing the parameters at which the simulations are to be performed.</p>
 </td></tr>
-<tr valign="top"><td><code>rinit</code></td>
+<tr style="vertical-align: top;"><td><code>rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rprocess</code></td>
+<tr style="vertical-align: top;"><td><code>rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>format</code></td>
+<tr style="vertical-align: top;"><td><code>format</code></td>
 <td>
 <p>the format in which to return the results.
 </p>
@@ -145,12 +145,12 @@ Here, <code>nobs</code> is the number of observables.
 the time, states, and observations.
 An ordered factor variable, &lsquo;.id&rsquo;, distinguishes one simulation from another.</p>
 </td></tr>
-<tr valign="top"><td><code>include.data</code></td>
+<tr style="vertical-align: top;"><td><code>include.data</code></td>
 <td>
 <p>if <code>TRUE</code>, the original data and covariates (if any) are included (with <code>.id = "data"</code>).
 This option is ignored unless <code>format = "data.frame"</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -159,11 +159,11 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr valign="top"><td><code>verbose</code></td>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
-<tr valign="top"><td><code>object</code></td>
+<tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
 <p>optional;
 if present, it should be a data frame or a &lsquo;pomp&rsquo; object.</p>
@@ -220,6 +220,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

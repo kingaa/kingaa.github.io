@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>pomp {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>pomp {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Constructor of the basic pomp object</h2>
 
@@ -94,25 +94,25 @@ These comprise:
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>data</code></td>
+<tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>times</code></td>
+<tr style="vertical-align: top;"><td><code>times</code></td>
 <td>
 <p>the sequence of observation times.
 <code>times</code> must indicate the column of observation times by name or index.
 The time vector must be numeric and non-decreasing.</p>
 </td></tr>
-<tr valign="top"><td><code>t0</code></td>
+<tr style="vertical-align: top;"><td><code>t0</code></td>
 <td>
 <p>The zero-time, i.e., the time of the initial state.
 This must be no later than the time of the first observation, i.e., <code>t0 &lt;= times[1]</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -121,53 +121,53 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr valign="top"><td><code>rinit</code></td>
+<tr style="vertical-align: top;"><td><code>rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rprocess</code></td>
+<tr style="vertical-align: top;"><td><code>rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>dprocess</code></td>
+<tr style="vertical-align: top;"><td><code>dprocess</code></td>
 <td>
 <p>optional;
 specification of the probability density evaluation function of the unobserved state process.
 Setting <code>dprocess=NULL</code> removes the latent-state density evaluator.
 For more information, see <a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>dmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
 For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>emeasure</code></td>
+<tr style="vertical-align: top;"><td><code>emeasure</code></td>
 <td>
 <p>the expectation of the measured variables, conditional on the latent state.
 This can be specified as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>emeasure=NULL</code> removes the emeasure component.
 For more information, see <a href="../../pomp/help/emeasure+20specification.html">emeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>vmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>vmeasure</code></td>
 <td>
 <p>the covariance of the measured variables, conditional on the latent state.
 This can be specified as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>vmeasure=NULL</code> removes the vmeasure component.
 For more information, see <a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>skeleton</code></td>
+<tr style="vertical-align: top;"><td><code>skeleton</code></td>
 <td>
 <p>optional; the deterministic skeleton of the unobserved state process.
 Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
@@ -175,19 +175,19 @@ Accordingly, this is supplied using either the <code><a href="../../pomp/help/sk
 For more information, see <a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a>.
 Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 </td></tr>
-<tr valign="top"><td><code>rprior</code></td>
+<tr style="vertical-align: top;"><td><code>rprior</code></td>
 <td>
 <p>optional; prior distribution sampler, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
 </td></tr>
-<tr valign="top"><td><code>dprior</code></td>
+<tr style="vertical-align: top;"><td><code>dprior</code></td>
 <td>
 <p>optional; prior distribution density evaluator, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>dprior=NULL</code> resets the prior distribution to its default, which is a flat improper prior.</p>
 </td></tr>
-<tr valign="top"><td><code>partrans</code></td>
+<tr style="vertical-align: top;"><td><code>partrans</code></td>
 <td>
 <p>optional parameter transformations, constructed using <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
 </p>
@@ -197,7 +197,7 @@ One should supply the <code>partrans</code> argument via a call to <code><a href
 For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
 </td></tr>
-<tr valign="top"><td><code>covar</code></td>
+<tr style="vertical-align: top;"><td><code>covar</code></td>
 <td>
 <p>optional covariate table, constructed using <code><a href="../../pomp/help/covariate_table.html">covariate_table</a></code>.
 </p>
@@ -205,44 +205,44 @@ Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., 
 The resulting interpolated values are made available to the appropriate basic components.
 See the documentation for <code><a href="../../pomp/help/covariate_table.html">covariate_table</a></code> for details.</p>
 </td></tr>
-<tr valign="top"><td><code>params</code></td>
+<tr style="vertical-align: top;"><td><code>params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>accumvars</code></td>
+<tr style="vertical-align: top;"><td><code>accumvars</code></td>
 <td>
 <p>optional character vector;
 contains the names of accumulator variables.
 See <a href="../../pomp/help/accumulator+20variables.html">accumulators</a> for a definition and discussion of accumulator variables.</p>
 </td></tr>
-<tr valign="top"><td><code>obsnames</code></td>
+<tr style="vertical-align: top;"><td><code>obsnames</code></td>
 <td>
 <p>optional character vector;
 names of the observables.
 It is not usually necessary to specify <code>obsnames</code> since, by default,
 these are read from the names of the data variables.</p>
 </td></tr>
-<tr valign="top"><td><code>statenames</code></td>
+<tr style="vertical-align: top;"><td><code>statenames</code></td>
 <td>
 <p>optional character vector;
 names of the latent state variables.
 It is typically only necessary to supply <code>statenames</code> when C snippets are in use.</p>
 </td></tr>
-<tr valign="top"><td><code>paramnames</code></td>
+<tr style="vertical-align: top;"><td><code>paramnames</code></td>
 <td>
 <p>optional character vector;
 names of model parameters.
 It is typically only necessary to supply <code>paramnames</code> when C snippets are in use.</p>
 </td></tr>
-<tr valign="top"><td><code>covarnames</code></td>
+<tr style="vertical-align: top;"><td><code>covarnames</code></td>
 <td>
 <p>optional character vector;
 names of the covariates.
 It is not usually necessary to specify <code>covarnames</code> since, by default,
 these are read from the names of the covariates.</p>
 </td></tr>
-<tr valign="top"><td><code>PACKAGE</code></td>
+<tr style="vertical-align: top;"><td><code>PACKAGE</code></td>
 <td>
 <p>optional character;
 the name (without extension) of the external, dynamically loaded library in which any native routines are to be found.
@@ -250,37 +250,37 @@ This is only useful if one or more of the model components has been specified us
 it is not used for any component specified using C snippets.
 <code>PACKAGE</code> can name at most one library.</p>
 </td></tr>
-<tr valign="top"><td><code>globals</code></td>
+<tr style="vertical-align: top;"><td><code>globals</code></td>
 <td>
 <p>optional character;
 arbitrary C code that will be hard-coded into the shared-object library created when  C snippets are provided.
 If no C snippets are used, <code>globals</code> has no effect.</p>
 </td></tr>
-<tr valign="top"><td><code>cdir</code></td>
+<tr style="vertical-align: top;"><td><code>cdir</code></td>
 <td>
 <p>optional character variable.
 <code>cdir</code> specifies the name of the directory within which C snippet code will be compiled.
 By default, this is in a temporary directory specific to the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session.
 One can also set this directory using the <code>pomp_cdir</code> global option.</p>
 </td></tr>
-<tr valign="top"><td><code>cfile</code></td>
+<tr style="vertical-align: top;"><td><code>cfile</code></td>
 <td>
 <p>optional character variable.
 <code>cfile</code> gives the name of the file (in directory <code>cdir</code>) into which C snippet codes will be written.
 By default, a random filename is used.
 If the chosen filename would result in over-writing an existing file, an error is generated.</p>
 </td></tr>
-<tr valign="top"><td><code>shlib.args</code></td>
+<tr style="vertical-align: top;"><td><code>shlib.args</code></td>
 <td>
 <p>optional character variables.
 Command-line arguments to the <code>R CMD SHLIB</code> call that compiles the C snippets.</p>
 </td></tr>
-<tr valign="top"><td><code>compile</code></td>
+<tr style="vertical-align: top;"><td><code>compile</code></td>
 <td>
 <p>logical;
 if <code>FALSE</code>, compilation of the C snippets will be postponed until they are needed.</p>
 </td></tr>
-<tr valign="top"><td><code>verbose</code></td>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -358,6 +358,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['beta',['Beta',['../structsi2r__parameters__t.html#a5c768da00ed369fb712c8f6bbf814be4',1,'si2r_parameters_t::Beta()'],['../structsir__parameters__t.html#a7273e292749e1861a646d34ea7fb32f9',1,'sir_parameters_t::Beta()']]],
-  ['beta1',['Beta1',['../structsiir__parameters__t.html#a52cc98276049251e58cb872a8d385626',1,'siir_parameters_t']]],
-  ['beta2',['Beta2',['../structsiir__parameters__t.html#aea6cf6bc5b2f1403642276ec1a334c38',1,'siir_parameters_t']]],
-  ['bytesize',['bytesize',['../classball__t.html#a4bba3277085b3623254524797250b6bc',1,'ball_t']]]
+  ['beta_343',['Beta',['../structsi2r__parameters__t.html#a5c768da00ed369fb712c8f6bbf814be4',1,'si2r_parameters_t::Beta()'],['../structsir__parameters__t.html#a7273e292749e1861a646d34ea7fb32f9',1,'sir_parameters_t::Beta()']]],
+  ['beta1_344',['Beta1',['../structsiir__parameters__t.html#a52cc98276049251e58cb872a8d385626',1,'siir_parameters_t']]],
+  ['beta2_345',['Beta2',['../structsiir__parameters__t.html#aea6cf6bc5b2f1403642276ec1a334c38',1,'siir_parameters_t']]],
+  ['bytesize_346',['bytesize',['../classball__t.html#a4bba3277085b3623254524797250b6bc',1,'ball_t']]]
 ];

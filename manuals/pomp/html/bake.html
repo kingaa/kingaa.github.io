@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>reproducibility tools {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>reproducibility tools {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Tools for reproducible computations.</h2>
 
@@ -63,17 +63,17 @@ freeze(
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>file</code></td>
+<tr style="vertical-align: top;"><td><code>file</code></td>
 <td>
 <p>Name of the archive file in which the result will be stored or retrieved, as appropriate.
 For <code>bake</code>, this will contain a single object and hence be an RDS file (extension &lsquo;rds&rsquo;);
 for <code>stew</code>, this will contain one or more named objects and hence be an RDA file (extension &lsquo;rda&rsquo;).</p>
 </td></tr>
-<tr valign="top"><td><code>expr</code></td>
+<tr style="vertical-align: top;"><td><code>expr</code></td>
 <td>
 <p>Expression to be evaluated.</p>
 </td></tr>
-<tr valign="top"><td><code>seed, kind, normal.kind</code></td>
+<tr style="vertical-align: top;"><td><code>seed, kind, normal.kind</code></td>
 <td>
 <p>optional.
 To set the state and of the RNG.
@@ -81,7 +81,7 @@ The default, <code>seed = NULL</code>, will not change the RNG state.
 <code>seed</code> should be a single integer.
 See <code><a href="../../base/html/Random.html">set.seed</a></code> for more information.</p>
 </td></tr>
-<tr valign="top"><td><code>dependson</code></td>
+<tr style="vertical-align: top;"><td><code>dependson</code></td>
 <td>
 <p>arbitrary <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> object (optional).
 Variables on which the computation in <code>expr</code> depends.
@@ -89,33 +89,34 @@ A hash of these objects will be archived in <code>file</code>, along with the re
 When <code>bake</code> or <code>stew</code> are called and <code>file</code> exists, the hash of these objects will be compared against the archived hash;
 recomputation is forced when these do not match.
 The dependencies should be specified as unquoted symbols:
-use a list if there are multiple dependencies.</p>
+use a list if there are multiple dependencies.
+See the note below about avoiding using &lsquo;pomp&rsquo; objects as dependencies.</p>
 </td></tr>
-<tr valign="top"><td><code>info</code></td>
+<tr style="vertical-align: top;"><td><code>info</code></td>
 <td>
 <p>logical.
 If <code>TRUE</code>, the &ldquo;ingredients&rdquo; of the calculation are returned as a list.
 In the case of <code>bake</code>, this list is the &ldquo;ingredients&rdquo; attribute of the returned object.
 In the case of <code>stew</code>, this list is a hidden object named &ldquo;.ingredients&rdquo;, located in the environment within which <code>stew</code> was called.</p>
 </td></tr>
-<tr valign="top"><td><code>timing</code></td>
+<tr style="vertical-align: top;"><td><code>timing</code></td>
 <td>
 <p>logical.
 If <code>TRUE</code>, the time required for the computation is returned.
 This is returned as the &ldquo;system.time&rdquo; attribute of the returned object.</p>
 </td></tr>
-<tr valign="top"><td><code>dir</code></td>
+<tr style="vertical-align: top;"><td><code>dir</code></td>
 <td>
 <p>Directory holding archive files; by default, this is the current working directory.
 This can also be set using the global option <code>pomp_archive_dir</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>envir</code></td>
+<tr style="vertical-align: top;"><td><code>envir</code></td>
 <td>
 <p>the <code><a href="../../base/help/environment.html">environment</a></code> in which <code>expr</code> is to
 be evaluated.  May also be <code>NULL</code>, a list, a data frame,
 a pairlist or an integer as specified to <code><a href="../../base/help/sys.call.html">sys.call</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>enclos</code></td>
+<tr style="vertical-align: top;"><td><code>enclos</code></td>
 <td>
 <p>Relevant when <code>envir</code> is a (pair)list or a data frame.
 Specifies the enclosure, i.e., where <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> looks for objects not found
@@ -171,6 +172,14 @@ This information is returned only if <code>info=TRUE</code>.
 <code>bake</code> stores this in the &ldquo;system.time&rdquo; attribute of the archived <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> object;
 <code>stew</code> does so in a hidden variable named <code>.system.time</code>.
 The timing is obtained using <code><a href="../../base/html/system.time.html">system.time</a></code>.
+</p>
+
+
+<h3>Avoid using &lsquo;pomp&rsquo; objects as dependencies</h3>
+
+<p>Note that when a &lsquo;pomp&rsquo; object is built with one or more <a href="../../pomp/help/Csnippet.html">C snippets</a>, the resulting code is &ldquo;salted&rdquo; with a random element to prevent collisions in parallel computations.
+As a result, two such &lsquo;pomp&rsquo; objects will never match perfectly, even if the codes and data used to construct them are identical.
+Therefore, avoid using &lsquo;pomp&rsquo; objects as dependencies in <code>bake</code> and <code>stew</code>.
 </p>
 
 
@@ -237,6 +246,6 @@ However, there will be no loss of information.
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

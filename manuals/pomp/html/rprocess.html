@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>rprocess {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>rprocess {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>rprocess</h2>
 
@@ -34,12 +34,12 @@ rprocess(object, x0, t0, times, params, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>object</code></td>
+<tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
 <p>an object of class &lsquo;pomp&rsquo;, or of a class that extends &lsquo;pomp&rsquo;.
 This will typically be the output of <code>pomp</code>, <code>simulate</code>, or one of the <span class="pkg">pomp</span> inference algorithms.</p>
 </td></tr>
-<tr valign="top"><td><code>x0</code></td>
+<tr style="vertical-align: top;"><td><code>x0</code></td>
 <td>
 <p>an <code>nvar</code> x <code>nrep</code> matrix containing the starting state of the system.
 Columns of <code>x0</code> correspond to states;
@@ -47,21 +47,21 @@ rows to components of the state vector.
 One independent simulation will be performed for each column.
 Note that in this case, <code>params</code> must also have <code>nrep</code> columns.</p>
 </td></tr>
-<tr valign="top"><td><code>t0</code></td>
+<tr style="vertical-align: top;"><td><code>t0</code></td>
 <td>
 <p>the initial time, i.e., the time corresponding to the state in <code>x0</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>times</code></td>
+<tr style="vertical-align: top;"><td><code>times</code></td>
 <td>
 <p>a numeric vector (length <code>ntimes</code>) containing times.
 These must be in non-decreasing order.</p>
 </td></tr>
-<tr valign="top"><td><code>params</code></td>
+<tr style="vertical-align: top;"><td><code>params</code></td>
 <td>
 <p>a <code>npar</code> x <code>nrep</code> matrix of parameters.
 Each column is treated as an independent parameter set, in correspondence with the corresponding column of <code>x0</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments are ignored.</p>
 </td></tr>
@@ -109,6 +109,6 @@ The rownames of <code>x</code> will correspond to those of <code>x0</code>.
 <code><a href="../../pomp/help/workhorses.html">workhorses</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

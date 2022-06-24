@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>spect {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>spect {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Power spectrum</h2>
 
@@ -81,71 +81,71 @@ spect(data, seed = NULL, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>data</code></td>
+<tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>vars</code></td>
+<tr style="vertical-align: top;"><td><code>vars</code></td>
 <td>
 <p>optional; names of observed variables for which the power spectrum will be computed.
 By default, the spectrum will be computed for all observables.</p>
 </td></tr>
-<tr valign="top"><td><code>kernel.width</code></td>
+<tr style="vertical-align: top;"><td><code>kernel.width</code></td>
 <td>
 <p>width parameter for the smoothing kernel used for
 calculating the estimate of the spectrum.</p>
 </td></tr>
-<tr valign="top"><td><code>nsim</code></td>
+<tr style="vertical-align: top;"><td><code>nsim</code></td>
 <td>
 <p>number of model simulations to be computed.</p>
 </td></tr>
-<tr valign="top"><td><code>seed</code></td>
+<tr style="vertical-align: top;"><td><code>seed</code></td>
 <td>
 <p>optional; if non-<code>NULL</code>, the random number generator will
 be initialized with this seed for simulations.
 See <code><a href="../../pomp/help/simulate.html">simulate</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>transform.data</code></td>
+<tr style="vertical-align: top;"><td><code>transform.data</code></td>
 <td>
 <p>function; this transformation will be applied to the
 observables prior to estimation of the spectrum, and prior to any
 detrending.</p>
 </td></tr>
-<tr valign="top"><td><code>detrend</code></td>
+<tr style="vertical-align: top;"><td><code>detrend</code></td>
 <td>
 <p>de-trending operation to perform.  Options include no
 detrending, and subtraction of constant, linear, and quadratic trends from
 the data.  Detrending is applied to each data series and to each model
 simulation independently.</p>
 </td></tr>
-<tr valign="top"><td><code>params</code></td>
+<tr style="vertical-align: top;"><td><code>params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>rinit</code></td>
+<tr style="vertical-align: top;"><td><code>rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rprocess</code></td>
+<tr style="vertical-align: top;"><td><code>rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>rmeasure</code></td>
+<tr style="vertical-align: top;"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -154,7 +154,7 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr valign="top"><td><code>verbose</code></td>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -239,6 +239,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

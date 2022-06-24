@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>rw2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>rw2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Two-dimensional random-walk process</h2>
 
@@ -33,23 +33,23 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>x1_0, x2_0</code></td>
+<tr style="vertical-align: top;"><td><code>x1_0, x2_0</code></td>
 <td>
 <p>initial conditions (i.e., latent state variable values at the zero time <code>t0</code>)</p>
 </td></tr>
-<tr valign="top"><td><code>s1, s2</code></td>
+<tr style="vertical-align: top;"><td><code>s1, s2</code></td>
 <td>
 <p>random walk intensities</p>
 </td></tr>
-<tr valign="top"><td><code>tau</code></td>
+<tr style="vertical-align: top;"><td><code>tau</code></td>
 <td>
 <p>observation error s.d.</p>
 </td></tr>
-<tr valign="top"><td><code>times</code></td>
+<tr style="vertical-align: top;"><td><code>times</code></td>
 <td>
 <p>observation times</p>
 </td></tr>
-<tr valign="top"><td><code>t0</code></td>
+<tr style="vertical-align: top;"><td><code>t0</code></td>
 <td>
 <p>zero time</p>
 </td></tr>
@@ -87,19 +87,22 @@ function processMathHTML() {
 <h3>Examples</h3>
 
 <pre><code class='language-R'>
-  library(ggplot2)
 
-  rw2() %&gt;% plot()
+  if (require(ggplot2)) {
 
-  rw2(s1=1,s2=1,tau=0.1) %&gt;%
-    simulate(nsim=10,format="d") %&gt;%
-    ggplot(aes(x=y1,y=y2,group=.id,color=.id))+
-    geom_path()+
-    guides(color="none")+
-    theme_bw()
+    rw2() %&gt;% plot()
+
+    rw2(s1=1,s2=1,tau=0.1) %&gt;%
+      simulate(nsim=10,format="d") %&gt;%
+      ggplot(aes(x=y1,y=y2,group=.id,color=.id))+
+      geom_path()+
+      guides(color="none")+
+      theme_bw()
+
+  }
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

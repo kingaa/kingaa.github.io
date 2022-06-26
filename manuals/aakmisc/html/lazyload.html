@@ -1,9 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Functions for lazy-loading knitr caches.</title>
+<!DOCTYPE html><html><head><title>R: Functions for lazy-loading knitr caches.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
-<table width="100%" summary="page for lazyload {aakmisc}"><tr><td>lazyload {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>lazyload {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Functions for lazy-loading knitr caches.</h2>
 
@@ -16,8 +27,7 @@ session.
 
 <h3>Usage</h3>
 
-<pre>
-lazyload_cache_dir(
+<pre><code class='language-R'>lazyload_cache_dir(
   path = "./cache",
   envir = parent.frame(),
   ask = FALSE,
@@ -35,44 +45,44 @@ lazyload_cache_labels(
   full.names = TRUE,
   ...
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>path</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>path</code></td>
 <td>
 <p>the path to the cache directory</p>
 </td></tr>
-<tr valign="top"><td><code>envir</code></td>
+<tr style="vertical-align: top;"><td><code>envir</code></td>
 <td>
 <p>the environment to load the objects into</p>
 </td></tr>
-<tr valign="top"><td><code>ask</code></td>
+<tr style="vertical-align: top;"><td><code>ask</code></td>
 <td>
 <p>if <code>TRUE</code>, interactively ask whether to load each database
 discovered in <code>path</code></p>
 </td></tr>
-<tr valign="top"><td><code>verbose</code></td>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
 <p>if <code>TRUE</code>, display the names of chunk labels being
 loaded</p>
 </td></tr>
-<tr valign="top"><td><code>full.names</code></td>
+<tr style="vertical-align: top;"><td><code>full.names</code></td>
 <td>
 <p>use the full name, i.e., include the path, for the chunk
 label?  This argument is passed to <code><a href="../../base/help/list.files.html">list.files</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>additional arguments passed to <code><a href="../../base/help/list.files.html">list.files</a></code></p>
 </td></tr>
-<tr valign="top"><td><code>labels</code></td>
+<tr style="vertical-align: top;"><td><code>labels</code></td>
 <td>
 <p>character vector; chunk labels to load</p>
 </td></tr>
-<tr valign="top"><td><code>filter</code></td>
+<tr style="vertical-align: top;"><td><code>filter</code></td>
 <td>
 <p>optional function; passed to <code><a href="../../base/help/lazyLoad.html">lazyLoad</a></code>.
 When called on a character vector of object names, this function should
@@ -101,5 +111,6 @@ loaded.</p>
 <p>Peter DeWitt (https://github.com/dewittpe).
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.30-1 <a href="00Index.html">Index</a>]</div>
+</div>
 </body></html>

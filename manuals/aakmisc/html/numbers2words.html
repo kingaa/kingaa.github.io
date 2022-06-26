@@ -1,9 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Convert integers to English words.</title>
+<!DOCTYPE html><html><head><title>R: Convert integers to English words.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
-<table width="100%" summary="page for numbers2words {aakmisc}"><tr><td>numbers2words {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>numbers2words {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Convert integers to English words.</h2>
 
@@ -18,15 +29,14 @@ It has been improved somewhat by AAK
 
 <h3>Usage</h3>
 
-<pre>
-numbers2words(x)
-</pre>
+<pre><code class='language-R'>numbers2words(x)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>x</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>x</code></td>
 <td>
 <p>integer to format.</p>
 </td></tr>
@@ -35,12 +45,12 @@ numbers2words(x)
 
 <h3>Examples</h3>
 
-<pre>
-numbers2words(49968883)
+<pre><code class='language-R'>numbers2words(49968883)
 numbers2words(c(85999000,54,540,5400,54000,540000))
 numbers2words(1e13+3)
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.30-1 <a href="00Index.html">Index</a>]</div>
+</div>
 </body></html>

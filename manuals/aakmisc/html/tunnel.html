@@ -1,9 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: ssh tunneling</title>
+<!DOCTYPE html><html><head><title>R: ssh tunneling</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
-<table width="100%" summary="page for tunnel {aakmisc}"><tr><td>tunnel {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>tunnel {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>ssh tunneling</h2>
 
@@ -15,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-startTunnel(
+<pre><code class='language-R'>startTunnel(
   port = NULL,
   remotehost = getOption("aakmisc.remotehost", NULL),
   user = getOption("aakmisc.user", NULL),
@@ -24,42 +34,43 @@ startTunnel(
 )
 
 stopTunnel(..., pid = getOption("aakmisc.tunnelpid", NULL))
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>port</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>port</code></td>
 <td>
 <p>Port on which to connect to PostgreSQL database.  If NULL, a
 random port number will be used.</p>
 </td></tr>
-<tr valign="top"><td><code>remotehost</code></td>
+<tr style="vertical-align: top;"><td><code>remotehost</code></td>
 <td>
 <p>Hostname of PostgreSQL server.  An ssh tunnel to this host
 will be created.</p>
 </td></tr>
-<tr valign="top"><td><code>user</code></td>
+<tr style="vertical-align: top;"><td><code>user</code></td>
 <td>
 <p>Username to use in conneting to PostgreSQL database.  If NULL,
 Sys.getenv(&quot;USER&quot;) will be used.</p>
 </td></tr>
-<tr valign="top"><td><code>sleep</code></td>
+<tr style="vertical-align: top;"><td><code>sleep</code></td>
 <td>
 <p>Time in seconds to sleep after initiating the ssh tunnel.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>Additional arguments will be passed to
 <code><a href="../../DBI/help/dbConnect.html">dbConnect</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>pid</code></td>
+<tr style="vertical-align: top;"><td><code>pid</code></td>
 <td>
 <p>ID of ssh tunnel process.  Set automatically by
 <code>startTunnel</code>.</p>
 </td></tr>
 </table>
 
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.30-1 <a href="00Index.html">Index</a>]</div>
+</div>
 </body></html>

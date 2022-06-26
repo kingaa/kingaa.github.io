@@ -1,9 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Functions for generating and working with truly random...</title>
+<!DOCTYPE html><html><head><title>R: Functions for generating and working with truly random...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
-<table width="100%" summary="page for random {aakmisc}"><tr><td>random {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>random {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Functions for generating and working with truly random integers.</h2>
 
@@ -15,33 +26,32 @@
 
 <h3>Usage</h3>
 
-<pre>
-random.org(n = 10, rnd = "new")
+<pre><code class='language-R'>random.org(n = 10, rnd = "new")
 
 urandom(n = 10)
 
 rngControl(expr, seed = NULL)
 
 rngSeeds(n, seed = NULL)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>n</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>n</code></td>
 <td>
 <p>Number of integers required.</p>
 </td></tr>
-<tr valign="top"><td><code>rnd</code></td>
+<tr style="vertical-align: top;"><td><code>rnd</code></td>
 <td>
 <p>random.org parameter</p>
 </td></tr>
-<tr valign="top"><td><code>expr</code></td>
+<tr style="vertical-align: top;"><td><code>expr</code></td>
 <td>
 <p>Expression to be evaluated with RNG control.</p>
 </td></tr>
-<tr valign="top"><td><code>seed</code></td>
+<tr style="vertical-align: top;"><td><code>seed</code></td>
 <td>
 <p>RNG seed.</p>
 </td></tr>
@@ -56,7 +66,7 @@ rngSeeds(n, seed = NULL)
 </p>
 <p><code>rngControl</code> is a function to control RNG for the evaluation of an expression.
 </p>
-<p><code>rngSeeds</code> generates RNG seeds using <code><a href="../../stats/help/runif.html">runif</a></code>.
+<p><code>rngSeeds</code> generates RNG seeds using <code><a href="../../base/html/sample.html">sample.int</a></code>.
 It is included for situations when neither <code><a href="../../aakmisc/help/random.org.html">random.org</a></code> nor <code><a href="../../aakmisc/help/urandom.html">urandom</a></code> is available.
 </p>
 
@@ -75,30 +85,27 @@ It is included for situations when neither <code><a href="../../aakmisc/help/ran
 
 <h3>References</h3>
 
-<p><a href="http://www.random.org">http://www.random.org</a>
+<p><a href="https://www.random.org">https://www.random.org</a>
 </p>
 
 
 <h3>Examples</h3>
 
-<pre>
+<pre><code class='language-R'>
+random.org(n=5)
+seed &lt;- urandom(n=1)
+seeds &lt;- rngSeeds(5,seed=seed)
+set.seed(seed)
+runif(5)
+rngControl(runif(5),seed=seed[1])
+rngControl(runif(5),seed=seed[1])
+runif(5)
+set.seed(seed)
+runif(5)
+runif(5)
 
-  ## Not run: 
-  random.org(n=5)
-  seed &lt;- urandom(n=1)
-  seeds &lt;- rngSeeds(5,seed=seed)
-  set.seed(seed)
-  runif(5)
-  rngControl(runif(5),seed=seed[1])
-  rngControl(runif(5),seed=seed[1])
-  runif(5)
-  set.seed(seed)
-  runif(5)
-  runif(5)
-  
-## End(Not run)
+</code></pre>
 
-</pre>
-
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.30-1 <a href="00Index.html">Index</a>]</div>
+</div>
 </body></html>

@@ -1,9 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Interface with databases</title>
+<!DOCTYPE html><html><head><title>R: Interface with databases</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body>
+</head><body><div class="container">
 
-<table width="100%" summary="page for db {aakmisc}"><tr><td>db {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>db {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Interface with databases</h2>
 
@@ -15,8 +26,7 @@
 
 <h3>Usage</h3>
 
-<pre>
-writeDBTable(
+<pre><code class='language-R'>writeDBTable(
   name,
   value,
   overwrite = FALSE,
@@ -90,60 +100,60 @@ catScript(
   user = getOption("aakmisc.user", NULL),
   ...
 )
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>name, value</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>name, value</code></td>
 <td>
 <p>Name and contents of table to create.</p>
 </td></tr>
-<tr valign="top"><td><code>overwrite, append, row.names</code></td>
+<tr style="vertical-align: top;"><td><code>overwrite, append, row.names</code></td>
 <td>
 <p>See <code><a href="../../DBI/help/dbWriteTable.html">dbWriteTable</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>host</code></td>
+<tr style="vertical-align: top;"><td><code>host</code></td>
 <td>
 <p>Hostname on which to connect to the PostgreSQL server.</p>
 </td></tr>
-<tr valign="top"><td><code>dbname</code></td>
+<tr style="vertical-align: top;"><td><code>dbname</code></td>
 <td>
 <p>Name of PostgreSQL database.</p>
 </td></tr>
-<tr valign="top"><td><code>port</code></td>
+<tr style="vertical-align: top;"><td><code>port</code></td>
 <td>
 <p>Port on which to connect to PostgreSQL database.  If NULL, a
 random port number will be used.</p>
 </td></tr>
-<tr valign="top"><td><code>user</code></td>
+<tr style="vertical-align: top;"><td><code>user</code></td>
 <td>
 <p>Username to use in conneting to PostgreSQL database.  If NULL,
 Sys.getenv(&quot;USER&quot;) will be used.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>Additional arguments will be passed to
 <code><a href="../../DBI/help/dbConnect.html">dbConnect</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>statement</code></td>
+<tr style="vertical-align: top;"><td><code>statement</code></td>
 <td>
 <p>SQL statement passed to <code><a href="../../DBI/help/dbGetQuery.html">dbGetQuery</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>mle</code></td>
+<tr style="vertical-align: top;"><td><code>mle</code></td>
 <td>
 <p>A data-frame of MLEs to be recorded.</p>
 </td></tr>
-<tr valign="top"><td><code>files</code></td>
+<tr style="vertical-align: top;"><td><code>files</code></td>
 <td>
 <p>Files containing R scripts to be recorded.</p>
 </td></tr>
-<tr valign="top"><td><code>script</code></td>
+<tr style="vertical-align: top;"><td><code>script</code></td>
 <td>
 <p>Name of script.</p>
 </td></tr>
-<tr valign="top"><td><code>file</code></td>
+<tr style="vertical-align: top;"><td><code>file</code></td>
 <td>
 <p>File to which the script will be written.  See
 <code><a href="../../base/html/cat.html">cat</a></code>.</p>
@@ -159,16 +169,14 @@ Sys.getenv(&quot;USER&quot;) will be used.</p>
 
 <h3>Examples</h3>
 
-<pre>
-
-## Not run: 
+<pre><code class='language-R'>## Not run: 
 startTunnel()
 listScripts()
 stopTunnel()
 
 ## End(Not run)
+</code></pre>
 
-</pre>
-
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.29-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.30-1 <a href="00Index.html">Index</a>]</div>
+</div>
 </body></html>

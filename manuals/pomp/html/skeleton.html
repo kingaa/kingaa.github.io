@@ -31,7 +31,13 @@ it does not iterate or integrate (see <code><a href="../../pomp/help/trajectory.
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'pomp'
-skeleton(object, x, times, params, ...)
+skeleton(
+  object,
+  x = states(object),
+  times = time(object),
+  params = coef(object),
+  ...
+)
 </code></pre>
 
 
@@ -102,6 +108,6 @@ If <code>f</code> is the returned matrix, <code>f[i,j,k]</code> is the i-th comp
 <code><a href="../../pomp/help/trajectory.html">trajectory</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

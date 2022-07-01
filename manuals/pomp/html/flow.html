@@ -27,7 +27,15 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'pomp'
-flow(object, x0, t0, times, params, ..., verbose = getOption("verbose", FALSE))
+flow(
+  object,
+  x0,
+  t0 = timezero(object),
+  times = time(object),
+  params = coef(object),
+  ...,
+  verbose = getOption("verbose", FALSE)
+)
 </code></pre>
 
 
@@ -110,6 +118,6 @@ If <code>x</code> is the returned matrix, <code>x[i,j,k]</code> is the i-th comp
 <code><a href="../../pomp/help/trajectory.html">trajectory</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.2.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.2.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

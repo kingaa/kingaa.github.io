@@ -73,29 +73,33 @@ succumbed to each death process.</p>
 
 <h3>Details</h3>
 
-<p>If <code class="reqn">N</code> individuals face constant hazards of death in <code class="reqn">k</code> ways
-at rates <code class="reqn">r_1, r_2, \dots, r_k</code>,
-then in an interval of duration <code class="reqn">\Delta t</code>,
+<p>If <code class="reqn">N</code> individuals face constant hazards of death in <code class="reqn">K</code> ways
+at rates <code class="reqn">r_1, r_2, \dots, r_K</code>,
+then in an interval of duration <code class="reqn">\Delta{t}</code>,
 the number of individuals remaining alive and dying in each way is multinomially distributed:
 </p>
-<p style="text-align: center;"><code class="reqn">(N-\sum_{i=1}^k \Delta n_i, \Delta n_1, \dots, \Delta n_k) \sim \mathrm{Multinomial}(N;p_0,p_1,\dots,p_k),</code>
+<p style="text-align: center;"><code class="reqn">(\Delta{n_0}, \Delta{n_1}, \dots, \Delta{n_K}) \sim \mathrm{Multinomial}(N;p_0,p_1,\dots,p_K),</code>
 </p>
 
-<p>where <code class="reqn">\Delta n_i</code> is the number of individuals dying in way <code class="reqn">i</code> over the interval,
-the probability of remaining alive is <code class="reqn">p_0=\exp(-\sum_i r_i \Delta t)</code>,
-and the probability of dying in way <code class="reqn">j</code> is </p>
-<p style="text-align: center;"><code class="reqn">p_j=\frac{r_j}{\sum_i r_i} (1-\exp(-\sum_i r_i \Delta t)).</code>
+<p>where <code class="reqn">\Delta{n_0}=N-\sum_{k=1}^K \Delta{n_k}</code> is the number of individuals remaining alive and
+<code class="reqn">\Delta{n_k}</code> is the number of individuals dying in way <code class="reqn">k</code> over the interval.
+Here, the probability of remaining alive is </p>
+<p style="text-align: center;"><code class="reqn">p_0=\exp(-\sum_k r_k \Delta{t})</code>
+</p>
+
+<p>and the probability of dying in way <code class="reqn">k</code> is </p>
+<p style="text-align: center;"><code class="reqn">p_k=\frac{r_k}{\sum_j r_j} (1-p_0).</code>
 </p>
 
 <p>In this case, we say that </p>
-<p style="text-align: center;"><code class="reqn">(\Delta n_1, \dots, \Delta n_k) \sim \mathrm{Eulermultinom}(N,r,\Delta t),</code>
+<p style="text-align: center;"><code class="reqn">(\Delta{n_1},\dots,\Delta{n_K})\sim\mathrm{Eulermultinom}(N,r,\Delta t),</code>
 </p>
-<p> where <code class="reqn">r=(r_1,\dots,r_k)</code>.
+<p> where <code class="reqn">r=(r_1,\dots,r_K)</code>.
 Draw <code class="reqn">m</code> random samples from this distribution by doing </p>
 <pre>
     dn &lt;- reulermultinom(n=m,size=N,rate=r,dt=dt),
 </pre><p> where <code>r</code> is the vector of rates.
-Evaluate the probability that <code class="reqn">x=(x_1,\dots,x_k)</code> are the numbers of individuals who have died in each of the <code class="reqn">k</code> ways over the interval <code class="reqn">\Delta t=</code><code>dt</code>,
+Evaluate the probability that <code class="reqn">x=(x_1,\dots,x_K)</code> are the numbers of individuals who have died in each of the <code class="reqn">K</code> ways over the interval <code class="reqn">\Delta t=</code><code>dt</code>,
 by doing </p>
 <pre>
     deulermultinom(x=x,size=N,rate=r,dt=dt).
@@ -107,11 +111,11 @@ Let the increments of the equidispersed process be given by
 <pre>
     reulermultinom(size=N,rate=r,dt=dt).
 </pre>
-<p>In this expression, replace the rate <code class="reqn">r</code> with <code class="reqn">r {\Delta W}/{\Delta t}</code>,
-where <code class="reqn">\Delta W \sim \mathrm{Gamma}(\Delta t/\sigma^2,\sigma^2)</code>
+<p>In this expression, replace the rate <code class="reqn">r</code> with <code class="reqn">r\,{\Delta{W}}/{\Delta t}</code>,
+where <code class="reqn">\Delta{W} \sim \mathrm{Gamma}(\Delta{t}/\sigma^2,\sigma^2)</code>
 is the increment of an integrated Gamma white noise process with intensity <code class="reqn">\sigma</code>.
-That is, <code class="reqn">\Delta W</code> has mean <code class="reqn">\Delta t</code> and variance <code class="reqn">\sigma^2 \Delta t</code>.
-The resulting process is overdispersed and converges (as <code class="reqn">\Delta t</code> goes to zero) to a well-defined process.
+That is, <code class="reqn">\Delta{W}</code> has mean <code class="reqn">\Delta{t}</code> and variance <code class="reqn">\sigma^2 \Delta{t}</code>.
+The resulting process is overdispersed and converges (as <code class="reqn">\Delta{t}</code> goes to zero) to a well-defined process.
 The following lines of code accomplish this:
 </p>
 <pre>
@@ -123,7 +127,7 @@ The following lines of code accomplish this:
 <pre>
     dn &lt;- reulermultinom(size=N,rate=r*dW/dt,dt=dt).
 </pre>
-<p>He et al. (2010) use such overdispersed death processes in modeling measles.
+<p>He et al. (2010) use such overdispersed death processes in modeling measles and the <a href="https://kingaa.github.io/sbied/measles/">&quot;Simulation-based Inference&quot; course</a> discusses the value of allowing for overdispersion more generally.
 </p>
 <p>For all of the functions described here, access to the underlying C routines is available:
 see below.
@@ -160,7 +164,7 @@ the probabilities of observing each column of <code>x</code> given the specified
 <h3>C API</h3>
 
 <p>An interface for C codes using these functions is provided by the package.
-Visit the package homepage to view the <a href="https://kingaa.github.io/pomp/vignettes/C_API.html"><span class="pkg">pomp</span> C API document</a>.
+Visit the package homepage to view the <a href="https://kingaa.github.io/pomp/C_API.html"><span class="pkg">pomp</span> C API document</a>.
 </p>
 
 
@@ -215,6 +219,6 @@ print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW))
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.3.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.3.1.4 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

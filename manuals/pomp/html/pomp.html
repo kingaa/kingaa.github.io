@@ -253,7 +253,7 @@ it is not used for any component specified using C snippets.
 <tr style="vertical-align: top;"><td><code>globals</code></td>
 <td>
 <p>optional character;
-arbitrary C code that will be hard-coded into the shared-object library created when  C snippets are provided.
+arbitrary C code that will be hard-coded into the shared-object library created when C snippets are provided.
 If no C snippets are used, <code>globals</code> has no effect.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>cdir</code></td>
@@ -273,7 +273,10 @@ If the chosen filename would result in over-writing an existing file, an error i
 <tr style="vertical-align: top;"><td><code>shlib.args</code></td>
 <td>
 <p>optional character variables.
-Command-line arguments to the <code>R CMD SHLIB</code> call that compiles the C snippets.</p>
+Command-line arguments to the <code>R CMD SHLIB</code> call that compiles the C snippets.
+One can, for example, specify libraries against which the C snippets are to be linked.
+In doing so, take care to make sure the appropriate header files are available to the C snippets, e.g., using the <code>globals</code> argument.
+See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for more information.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>compile</code></td>
 <td>
@@ -358,6 +361,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.3.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.3.1.4 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

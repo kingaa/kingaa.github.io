@@ -21,6 +21,13 @@ Suggests: ape
 License: GPL-3
 MD5sum: 167e02c7af508767eb2d840d2b090293
 
+Package: panelPomp
+Version: 0.15.0
+Depends: R(>= 4.0.0), pomp(>= 4.0.0)
+Imports: methods
+License: MIT + file LICENSE
+MD5sum: 94ec583b8b423566eb714732b6a5e2b3
+
 Package: phylopomp
 Version: 0.1.0.0
 Depends: R(>= 4.1.0)

@@ -19,6 +19,12 @@ Suggests: ape
 License: GPL-3
 Archs: x64
 
+Package: panelPomp
+Version: 0.15.0
+Depends: R(>= 4.0.0), pomp(>= 4.0.0)
+Imports: methods
+License: MIT + file LICENSE
+
 Package: phylopomp
 Version: 0.1.0.0
 Depends: R(>= 4.1.0)

@@ -1,0 +1,191 @@
+<!DOCTYPE html><html><head><title>R: PIF: Panel iterated filtering</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>mif2 {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>PIF: Panel iterated filtering</h2>
+
+<h3>Description</h3>
+
+<p>Tools for applying iterated filtering algorithms to panel data.
+The panel iterated filtering of Breto et al. (2018) extends to
+panel models the improved iterated filtering algorithm (Ionides et al.,
+2015) for estimating parameters of a partially observed Markov process.
+Iterated filtering algorithms rely on extending a partially observed Markov
+process model of interest by introducing random perturbations to the model
+parameters. The space where the original parameters live is then explored
+at each iteration by running a particle filter. Convergence to a maximum
+likelihood estimate has been established for appropriately constructed
+procedures that iterate this search over the parameter space while
+diminishing the intensity of perturbations (Ionides et al. 2006, 2011, 2015).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'panelPomp'
+mif2(
+  data,
+  Nmif = 1,
+  shared.start,
+  specific.start,
+  start,
+  Np,
+  rw.sd,
+  cooling.type = c("hyperbolic", "geometric"),
+  cooling.fraction.50,
+  block = FALSE,
+  verbose = getOption("verbose"),
+  ...
+)
+
+## S4 method for signature 'mif2d.ppomp'
+mif2(
+  data,
+  Nmif,
+  shared.start,
+  specific.start,
+  start,
+  Np,
+  rw.sd,
+  cooling.type,
+  cooling.fraction.50,
+  block,
+  ...
+)
+
+## S4 method for signature 'mif2d.ppomp'
+traces(object, pars, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>An object of class <code>panelPomp</code> or inheriting class.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nmif</code></td>
+<td>
+<p>The number of filtering iterations to perform.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>shared.start</code></td>
+<td>
+<p>named numerical vector; the starting guess of the shared parameters.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>specific.start</code></td>
+<td>
+<p>matrix with row parameter names and column unit names;
+the starting guess of the specific parameters.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>start</code></td>
+<td>
+<p>A named numeric vector of parameters at which to start the IF2 procedure.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>the number of particles to use.
+This may be specified as a single positive integer, in which case the same number of particles will be used at each timestep.
+Alternatively, if one wishes the number of particles to vary across timesteps, one may specify <code>Np</code> either as a vector of positive integers of length </p>
+<pre>length(time(object,t0=TRUE))</pre><p> or as a function taking a positive integer argument.
+In the latter case, <code>Np(k)</code> must be a single positive integer, representing the number of particles to be used at the <code>k</code>-th timestep:
+<code>Np(0)</code> is the number of particles to use going from <code>timezero(object)</code> to <code>time(object)[1]</code>,
+<code>Np(1)</code>, from <code>timezero(object)</code> to <code>time(object)[1]</code>,
+and so on,
+while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number of particles to sample at the end of the time-series.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rw.sd</code></td>
+<td>
+<p>An unevaluated expression of the form <code>quote(rw.sd())</code> to
+be used for all panel units. If a <code>list</code> of such expressions of the
+same length as the <code>object</code> argument is provided, each list element
+will be used for the corresponding panel unit.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cooling.type</code></td>
+<td>
+<p>specifications for the cooling schedule,
+i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
+<code>cooling.type</code> specifies the nature of the cooling schedule.
+See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cooling.fraction.50</code></td>
+<td>
+<p>cooling.fraction.50 (seems to cause an error if
+documentation inherited from 'pomp' package).</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>block</code></td>
+<td>
+<p>A logical variable determining whther to carry out block
+resampling of unit-specific parameters.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>....</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>an object resulting from the application of IF2 (i.e., of 
+class <code>mif2d.ppomp</code>)</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>pars</code></td>
+<td>
+<p>names of parameters</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>traces</code> returns the estimated parameter values at different 
+iterations of the IF2 algorithm in the natural scale. The default is to 
+return values for all parameters but a subset of parameters can be passed 
+via the optional argument <code>pars</code>.
+</p>
+
+
+<h3>References</h3>
+
+<p>Breto, C., Ionides, E. L. and King, A. A. (2019) Panel Data Analysis via Mechanistic Models. <em>Journal of the American Statistical Association</em>, <b>115</b>, 1178&ndash;1188.
+</p>
+<p>Ionides, E. L., Breto, C. and King, A. A. (2006) Inference for nonlinear dynamical systems. <em>Proceedings of the National Academy of Sciences</em>, <b>103(49)</b>, 18438&ndash;18443. <abbr><span class="acronym">DOI</span></abbr>: 10.1073/pnas.0603181103
+</p>
+<p>Ionides, E. L., Bhadra, A., Atchade, Y. and King, A. A. (2011) Iterated filtering. <em>Ann. Statist.</em>, <b>39, no. 3</b>, 1776&ndash;1802. <abbr><span class="acronym">DOI</span></abbr>: 10.1214/11-AOS886
+</p>
+<p>Ionides, E. L., Nguyen, D., Atchade, Y., Stoev, S. and King, A. A. (2015) Inference via iterated, perturbed Bayes maps. <em>Proceedings of the National Academy of Sciences</em>, <b>112(3)</b>, 719&ndash;724. <abbr><span class="acronym">DOI</span></abbr>: 10.1073/pnas.1410597112
+</p>
+<p>King, A. A., Nguyen, D. and Ionides, E. L. (2016) Statistical Inference for Partially Observed Markov Processes via the R Package pomp. <em>Journal of Statistical Software</em>, <b>69(12)</b>, 1&ndash;43. <abbr><span class="acronym">DOI</span></abbr>: 10.18637/jss.v069.i12
+</p>
+
+
+<h3>See Also</h3>
+
+<p><span class="pkg">pomp</span>'s mif2 at <a href="../../pomp/html/mif2.html">mif2</a>,
+<a href="../../panelPomp/help/panel_loglik.html">panel_loglik</a>
+</p>
+<p>Other panelPomp workhorse functions: 
+<code><a href="../../panelPomp/help/panelPomp.html">panelPomp</a></code>,
+<code><a href="../../panelPomp/help/panel_loglik.html">panel_loglik</a></code>,
+<code><a href="../../panelPomp/help/pfilter.html">pfilter</a>()</code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.15.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

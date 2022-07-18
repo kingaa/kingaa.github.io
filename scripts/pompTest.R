@@ -1,7 +1,7 @@
 ## TEST SCRIPT
 ## If this script runs without errors, pomp is usable on your system.
 
-pomp.version <- "3.5"
+pomp.version <- "4.3"
 
 lib <- Sys.getenv("R_LIBS_USER")
 dir.create(lib,recursive=TRUE,showWarnings=FALSE)

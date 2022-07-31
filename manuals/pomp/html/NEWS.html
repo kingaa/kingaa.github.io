@@ -18,6 +18,18 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 4.3.3</h3>
+
+
+<ul>
+<li><p> The precise order in which the <code>pmcmc</code> function computes prior and likelihood of furnished and proposed parameters has changed slightly.
+This prevents proposals that are incompatible with the prior from being passed to <code>pfilter</code> and forestalls an associated class of errors.
+A consequence of this change, <code>pmcmc</code> computations using the new version will differ very slightly from previous computations, even with the RNG seed fixed at its previous values.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 4.3.2</h3>
 
 

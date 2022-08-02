@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Resample</title>
+<!DOCTYPE html><html><head><title>R: Weighted quantile function</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -14,40 +14,72 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>resample {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>wquant {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Resample</h2>
+<h2>Weighted quantile function</h2>
 
 <h3>Description</h3>
 
-<p>Systematic resampling.
+<p>Computes weighted quantiles.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>systematic_resample(weights, Np = length(weights))
+<pre><code class='language-R'>wquant(
+  x,
+  weights,
+  probs = c(`0%` = 0, `25%` = 0.25, `50%` = 0.5, `75%` = 0.75, `100%` = 1)
+)
 </code></pre>
 
 
 <h3>Arguments</h3>
 
 <table>
+<tr style="vertical-align: top;"><td><code>x</code></td>
+<td>
+<p>numeric; a vector of data.</p>
+</td></tr>
 <tr style="vertical-align: top;"><td><code>weights</code></td>
 <td>
 <p>numeric; vector of weights.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>np</code></td>
+<tr style="vertical-align: top;"><td><code>probs</code></td>
 <td>
-<p>integer scalar; number of samples to draw.</p>
+<p>numeric; desired quantiles.</p>
 </td></tr>
 </table>
 
 
+<h3>Details</h3>
+
+<p><code>wquant</code> computes a quantile of type 7 according to the typology of <code><a href="../../stats/help/quantile.html">quantile</a></code>.
+</p>
+
+
 <h3>Value</h3>
 
-<p>A vector of integers containing the indices of the resample.
+<p><code>wquant</code> returns a vector containing the quantiles.
+If <code>probs</code> has names, these are inherited.
 </p>
+
+
+<h3>Author(s)</h3>
+
+<p>Aaron A. King
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>x &lt;- c(1,1,1,2,2,3,3,3,3,4,5,5,6,6,6)
+quantile(x)
+wquant(c(1,2,3,4,5,6),weights=c(3,2,4,1,2,3))
+
+
+
+</code></pre>
 
 <hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.3.4.0 <a href="00Index.html">Index</a>]</div>
 </div>

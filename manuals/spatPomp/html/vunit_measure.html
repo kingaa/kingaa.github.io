@@ -1,0 +1,86 @@
+<!DOCTYPE html><html><head><title>R: vunit_measure</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>vunit_measure {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>vunit_measure</h2>
+
+<h3>Description</h3>
+
+<p><code>vunit_measure</code> evaluates the variance of a unit's observation given the entire state
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+vunit_measure(object, x, unit, time, params, Np = 1)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>An object of class <code>spatPomp</code></p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>x</code></td>
+<td>
+<p>A state vector for all units</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit</code></td>
+<td>
+<p>The unit for which to evaluate the variance</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>time</code></td>
+<td>
+<p>The time for which to evaluate the variance</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>parameters at which to evaluate the unit variance</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>numeric; defaults to 1 and the user need not change this</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A matrix with the unit measurement variance implied by the state, <code>x</code>,
+and the parameter set <code>params</code> for unit <code>unit</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>b &lt;- bm(U=3)
+s &lt;- states(b)[,1,drop=FALSE]
+rownames(s) -&gt; rn
+dim(s) &lt;- c(3,1,1)
+dimnames(s) &lt;- list(variable=rn, rep=NULL)
+p &lt;- coef(b); names(p) -&gt; rnp
+dim(p) &lt;- c(length(p),1); dimnames(p) &lt;- list(param=rnp)
+o &lt;- obs(b)[,1,drop=FALSE]
+vunit_measure(b, x=s, unit=2, time=1, params=p)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

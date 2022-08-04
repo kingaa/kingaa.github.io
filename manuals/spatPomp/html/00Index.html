@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Inference for Spatiotemporal Partially Observed Markov Processes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Inference for Spatiotemporal Partially Observed Markov Processes
+</h1>
+<hr/>
+<div style="text-align: center;">
+</div><h2>Documentation for package &lsquo;spatPomp&rsquo; version 0.29.0.1</h2>
+
+<ul>
+<li><a href="NEWS.html" target="_blank">Package NEWS</a></li>
+<li><a href="https://github.com/kidusasfaw/spatPomp/issues" target="_blank">Report issues with the package</a></li>
+<li><a href="../spatPomp.pdf">PDF version of this manual</a></li>
+<li><a href="https://github.com/kidusasfaw/spatPomp/" target="_blank">Source code</a></li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="spatPomp-package.html">spatPomp-package</a></td>
+<td>Inference for SpatPOMPs (Spatiotemporal Partially Observed Markov Processes)</td></tr>
+<tr><td style="width: 25%;"><a href="abf.html">abf</a></td>
+<td>Adapted Bagged Filter (ABF)</td></tr>
+<tr><td style="width: 25%;"><a href="abf.html">abf-abfd_spatPomp</a></td>
+<td>Adapted Bagged Filter (ABF)</td></tr>
+<tr><td style="width: 25%;"><a href="abf.html">abf-method</a></td>
+<td>Adapted Bagged Filter (ABF)</td></tr>
+<tr><td style="width: 25%;"><a href="abf.html">abf-spatPomp</a></td>
+<td>Adapted Bagged Filter (ABF)</td></tr>
+<tr><td style="width: 25%;"><a href="abfir.html">abfir</a></td>
+<td>Adapted Bagged Filter with Intermediate Resampling (ABF-IR)</td></tr>
+<tr><td style="width: 25%;"><a href="abfir.html">abfir-abfird_spatPomp</a></td>
+<td>Adapted Bagged Filter with Intermediate Resampling (ABF-IR)</td></tr>
+<tr><td style="width: 25%;"><a href="abfir.html">abfir-method</a></td>
+<td>Adapted Bagged Filter with Intermediate Resampling (ABF-IR)</td></tr>
+<tr><td style="width: 25%;"><a href="abfir.html">abfir-spatPomp</a></td>
+<td>Adapted Bagged Filter with Intermediate Resampling (ABF-IR)</td></tr>
+<tr><td style="width: 25%;"><a href="as_data_frame.html">as.data.frame</a></td>
+<td>Coerce to data frame</td></tr>
+<tr><td style="width: 25%;"><a href="as_data_frame.html">as.data.frame.spatPomp</a></td>
+<td>Coerce to data frame</td></tr>
+<tr><td style="width: 25%;"><a href="as_spatPomp.html">as_spatPomp</a></td>
+<td>Coerce to spatPomp</td></tr>
+<tr><td style="width: 25%;"><a href="bm.html">bm</a></td>
+<td>Brownian motion spatPomp simulator</td></tr>
+<tr><td style="width: 25%;"><a href="bpfilter.html">bpfilter</a></td>
+<td>Block particle filter (BPF)</td></tr>
+<tr><td style="width: 25%;"><a href="bpfilter.html">bpfilter-method</a></td>
+<td>Block particle filter (BPF)</td></tr>
+<tr><td style="width: 25%;"><a href="bpfilter.html">bpfilter-spatPomp</a></td>
+<td>Block particle filter (BPF)</td></tr>
+<tr><td style="width: 25%;"><a href="city_data_UK.html">city_data_UK</a></td>
+<td>City data in the United Kingdom</td></tr>
+<tr><td style="width: 25%;"><a href="as_data_frame.html">coerce-method</a></td>
+<td>Coerce to data frame</td></tr>
+<tr><td style="width: 25%;"><a href="as_spatPomp.html">coerce-method</a></td>
+<td>Coerce to spatPomp</td></tr>
+<tr><td style="width: 25%;"><a href="as_spatPomp.html">coerce-pomp-spatPomp</a></td>
+<td>Coerce to spatPomp</td></tr>
+<tr><td style="width: 25%;"><a href="dunit_measure.html">dunit_measure</a></td>
+<td>dunit_measure 'dunit_measure' evaluates the unit measurement density of a unit's observation given the entire state</td></tr>
+<tr><td style="width: 25%;"><a href="dunit_measure.html">dunit_measure-method</a></td>
+<td>dunit_measure 'dunit_measure' evaluates the unit measurement density of a unit's observation given the entire state</td></tr>
+<tr><td style="width: 25%;"><a href="dunit_measure.html">dunit_measure-spatPomp</a></td>
+<td>dunit_measure 'dunit_measure' evaluates the unit measurement density of a unit's observation given the entire state</td></tr>
+<tr><td style="width: 25%;"><a href="enkf.html">enkf</a></td>
+<td>Generalized Ensemble Kalman filter (EnKF)</td></tr>
+<tr><td style="width: 25%;"><a href="enkf.html">enkf-method</a></td>
+<td>Generalized Ensemble Kalman filter (EnKF)</td></tr>
+<tr><td style="width: 25%;"><a href="enkf.html">enkf-spatPomp</a></td>
+<td>Generalized Ensemble Kalman filter (EnKF)</td></tr>
+<tr><td style="width: 25%;"><a href="eunit_measure.html">eunit_measure</a></td>
+<td>eunit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="eunit_measure.html">eunit_measure-method</a></td>
+<td>eunit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="eunit_measure.html">eunit_measure-spatPomp</a></td>
+<td>eunit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="gbm.html">gbm</a></td>
+<td>Geometric Brownian motion spatPomp simulator</td></tr>
+<tr><td style="width: 25%;"><a href="girf.html">girf</a></td>
+<td>Guided intermediate resampling filter (GIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="girf.html">girf-ANY</a></td>
+<td>Guided intermediate resampling filter (GIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="girf.html">girf-girfd_spatPomp</a></td>
+<td>Guided intermediate resampling filter (GIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="girf.html">girf-method</a></td>
+<td>Guided intermediate resampling filter (GIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="girf.html">girf-missing</a></td>
+<td>Guided intermediate resampling filter (GIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="girf.html">girf-spatPomp</a></td>
+<td>Guided intermediate resampling filter (GIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="ienkf.html">ienkf</a></td>
+<td>Iterated ensemble Kalman filter (IEnKF)</td></tr>
+<tr><td style="width: 25%;"><a href="ienkf.html">ienkf-method</a></td>
+<td>Iterated ensemble Kalman filter (IEnKF)</td></tr>
+<tr><td style="width: 25%;"><a href="ienkf.html">ienkf-spatPomp</a></td>
+<td>Iterated ensemble Kalman filter (IEnKF)</td></tr>
+<tr><td style="width: 25%;"><a href="igirf.html">igirf</a></td>
+<td>Iterated guided intermediate resampling filter (IGIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="igirf.html">igirf-ANY</a></td>
+<td>Iterated guided intermediate resampling filter (IGIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="igirf.html">igirf-igirfd_spatPomp</a></td>
+<td>Iterated guided intermediate resampling filter (IGIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="igirf.html">igirf-method</a></td>
+<td>Iterated guided intermediate resampling filter (IGIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="igirf.html">igirf-missing</a></td>
+<td>Iterated guided intermediate resampling filter (IGIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="igirf.html">igirf-spatPomp</a></td>
+<td>Iterated guided intermediate resampling filter (IGIRF)</td></tr>
+<tr><td style="width: 25%;"><a href="iubf.html">iubf</a></td>
+<td>Iterated Unadapted Bagged Filter (IUBF)</td></tr>
+<tr><td style="width: 25%;"><a href="iubf.html">iubf-method</a></td>
+<td>Iterated Unadapted Bagged Filter (IUBF)</td></tr>
+<tr><td style="width: 25%;"><a href="iubf.html">iubf-spatPomp</a></td>
+<td>Iterated Unadapted Bagged Filter (IUBF)</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-abfd_spatPomp</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-abfird_spatPomp</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-bpfilterd_spatPomp</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-girfd_spatPomp</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-igirfd_spatPomp</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-iubfd_spatPomp</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="loglik.html">logLik-method</a></td>
+<td>Log likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="lorenz.html">lorenz</a></td>
+<td>Lorenz '96 spatPomp simulator</td></tr>
+<tr><td style="width: 25%;"><a href="mcap.html">mcap</a></td>
+<td>Monte Carlo adjusted profile</td></tr>
+<tr><td style="width: 25%;"><a href="measles.html">measles</a></td>
+<td>Measles in UK spatPomp generator</td></tr>
+<tr><td style="width: 25%;"><a href="measlesUK.html">measlesUK</a></td>
+<td>Measles in the United Kingdom</td></tr>
+<tr><td style="width: 25%;"><a href="munit_measure.html">munit_measure</a></td>
+<td>munit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="munit_measure.html">munit_measure-method</a></td>
+<td>munit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="munit_measure.html">munit_measure-spatPomp</a></td>
+<td>munit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot</a></td>
+<td>Plotting 'spatPomp' data</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot-igirfd_spatPomp</a></td>
+<td>Plotting 'spatPomp' data</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot-method</a></td>
+<td>Plotting 'spatPomp' data</td></tr>
+<tr><td style="width: 25%;"><a href="plot.html">plot-spatPomp</a></td>
+<td>Plotting 'spatPomp' data</td></tr>
+<tr><td style="width: 25%;"><a href="print.html">print</a></td>
+<td>Print methods</td></tr>
+<tr><td style="width: 25%;"><a href="print.html">print-method</a></td>
+<td>Print methods</td></tr>
+<tr><td style="width: 25%;"><a href="print.html">print-spatPomp</a></td>
+<td>Print methods</td></tr>
+<tr><td style="width: 25%;"><a href="runit_measure.html">runit_measure</a></td>
+<td>runit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="runit_measure.html">runit_measure-method</a></td>
+<td>runit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="runit_measure.html">runit_measure-spatPomp</a></td>
+<td>runit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="simulate.html">simulate</a></td>
+<td>Simulation of a spatiotemporal partially-observed Markov process</td></tr>
+<tr><td style="width: 25%;"><a href="simulate.html">simulate-method</a></td>
+<td>Simulation of a spatiotemporal partially-observed Markov process</td></tr>
+<tr><td style="width: 25%;"><a href="simulate.html">simulate-spatPomp</a></td>
+<td>Simulation of a spatiotemporal partially-observed Markov process</td></tr>
+<tr><td style="width: 25%;"><a href="spatPomp.html">spatPomp</a></td>
+<td>Constructor of the spatPomp object</td></tr>
+<tr><td style="width: 25%;"><a href="spatPomp-class.html">spatPomp-class</a></td>
+<td>An S4 class to represent a spatiotemporal POMP model and data.</td></tr>
+<tr><td style="width: 25%;"><a href="spatPomp_Csnippet.html">spatPomp_Csnippet</a></td>
+<td>C snippets</td></tr>
+<tr><td style="width: 25%;"><a href="spatPomp_Csnippet.html">spatPomp_Csnippet-character</a></td>
+<td>C snippets</td></tr>
+<tr><td style="width: 25%;"><a href="spatPomp_Csnippet.html">spatPomp_Csnippet-method</a></td>
+<td>C snippets</td></tr>
+<tr><td style="width: 25%;"><a href="unit_names.html">unit_names</a></td>
+<td>Unit names of a spatiotemporal model</td></tr>
+<tr><td style="width: 25%;"><a href="unit_names.html">unit_names-method</a></td>
+<td>Unit names of a spatiotemporal model</td></tr>
+<tr><td style="width: 25%;"><a href="unit_names.html">unit_names-spatPomp</a></td>
+<td>Unit names of a spatiotemporal model</td></tr>
+<tr><td style="width: 25%;"><a href="vec_dmeasure.html">vec_dmeasure</a></td>
+<td>Vector of measurement densities</td></tr>
+<tr><td style="width: 25%;"><a href="vec_dmeasure.html">vec_dmeasure-method</a></td>
+<td>Vector of measurement densities</td></tr>
+<tr><td style="width: 25%;"><a href="vec_dmeasure.html">vec_dmeasure-spatPomp</a></td>
+<td>Vector of measurement densities</td></tr>
+<tr><td style="width: 25%;"><a href="vec_rmeasure.html">vec_rmeasure</a></td>
+<td>Vector of simulated measurements</td></tr>
+<tr><td style="width: 25%;"><a href="vec_rmeasure.html">vec_rmeasure-method</a></td>
+<td>Vector of simulated measurements</td></tr>
+<tr><td style="width: 25%;"><a href="vec_rmeasure.html">vec_rmeasure-spatPomp</a></td>
+<td>Vector of simulated measurements</td></tr>
+<tr><td style="width: 25%;"><a href="vunit_measure.html">vunit_measure</a></td>
+<td>vunit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="vunit_measure.html">vunit_measure-method</a></td>
+<td>vunit_measure</td></tr>
+<tr><td style="width: 25%;"><a href="vunit_measure.html">vunit_measure-spatPomp</a></td>
+<td>vunit_measure</td></tr>
+</table>
+</div></body></html>

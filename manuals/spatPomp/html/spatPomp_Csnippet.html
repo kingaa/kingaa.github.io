@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head><title>R: C snippets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>spatPomp_Csnippet {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>C snippets</h2>
+
+<h3>Description</h3>
+
+<p><code>spatPomp_Csnippet()</code> is used to provide snippets of C
+code that specify model components. It functions similarly to <code>Csnippet()</code> from
+the <span class="pkg">pomp</span> package; in fact, the output of <code>spatPomp_Csnippet</code> is an object
+of class <code>Csnippet</code>.  It additionally provides some arguments that allow the user
+to stay focused on model development in the spatiotemporal context  where
+model size grows.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'character'
+spatPomp_Csnippet(
+  code,
+  unit_statenames,
+  unit_obsnames,
+  unit_covarnames,
+  unit_ivpnames,
+  unit_paramnames,
+  unit_vfnames
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>code</code></td>
+<td>
+<p>encodes a component of a spatiotemporal POMP model using C code</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_statenames</code></td>
+<td>
+<p>a subset of the <code>unit_statenames</code> slot of
+the <code>spatPomp</code> object for which we are writing a model. This argument
+allows the user to get variables that can be indexed conveniently to update
+states and measurements in a loop. See examples for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_obsnames</code></td>
+<td>
+<p>a subset of the <code>unit_obsnames</code> slot of
+the <code>spatPomp</code> object for which we are writing a model. This argument
+allows the user to get variables that can be indexed conveniently to update
+states and measurements in a loop. See examples for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_covarnames</code></td>
+<td>
+<p>if the model has covariate information for each unit,
+the names of the covariates for each unit can be supplied to this argument.
+This allows the user to get variables that can be indexed conveniently to
+use incorporate the covariate information in a loop. See examples for more
+details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_ivpnames</code></td>
+<td>
+<p>This argument is particularly useful when specifying the
+<code>rinit</code> model component. The <code>paramnames</code> argument to the
+<code>spatPomp()</code> constructor often has names for initial value
+parameters for the latent states (e.g. <code>S1_0</code>, <code>S2_0</code> for the
+the quantity of susceptibles at unit 1 and unit 2 at the initial time in an
+SIR model). By supplying <code>unit_ivpnames</code>, we can get variables
+that can be easily indexed to reference the initial value parameters (in
+the previous example, <code>unit_ivpnames=c('S')</code> we can get a variable
+named <code>S_0</code> that we can index as <code>S_0[0]</code> and <code>S_0[1]</code> to
+refer to <code>S1_0</code> and <code>S2_0</code>). See examples for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_paramnames</code></td>
+<td>
+<p>This argument is particularly useful when there
+are non-initial value parameters that are unit-specific.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_vfnames</code></td>
+<td>
+<p>This argument is particularly useful when specifying the
+<code>skeleton</code> model component. For all components of the latent state,
+the user can assume a variable defining the time-derivative is pre-defined (e.g.
+<code>DS1</code> and <code>DS2</code> for the time-derivative of the quantity of the
+susceptibles at unit 1 and unit 2 in an SIR model). By supplying
+<code>unit_vfnames</code>, we can get variables that can be easily indexed to
+reference these variables (in the previous example,
+setting <code>unit_vfnames=c('S')</code> gets us a variable
+named <code>DS</code> that we can index as <code>DS[0]</code> and <code>DS[1]</code> to
+refer to <code>DS1</code> and <code>DS2</code>). See examples for more details.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>An object of class &lsquo;Csnippet&rsquo; which represents a model specification in C code.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># Set initial states for Brownian motion
+bm_rinit &lt;- spatPomp_Csnippet(
+  unit_statenames = c("X"),
+  unit_ivpnames = c("X"),
+  code = "
+    for (int u = 0; u &lt; U; u++) {
+      X[u]=X_0[u];
+    }
+  "
+)
+# Skeleton for Brownian motion
+bm_skel &lt;- spatPomp_Csnippet(
+  unit_statenames = c("X"),
+  unit_vfnames = c("X"),
+  code = "
+      for (int u = 0 ; u &lt; U ; u++) {
+        DX[u] = 0;
+      }
+  "
+)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

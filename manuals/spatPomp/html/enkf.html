@@ -1,0 +1,103 @@
+<!DOCTYPE html><html><head><title>R: Generalized Ensemble Kalman filter (EnKF)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>enkf {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Generalized Ensemble Kalman filter (EnKF)</h2>
+
+<h3>Description</h3>
+
+<p>A function to perform filtering using the ensemble Kalman filter of Evensen, G. (1994).
+This function is generalized to allow for an measurement covariance matrix that varies over time.
+This is useful if the measurement model varies with the state.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+enkf(data, Np, ..., verbose = getOption("verbose", FALSE))
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>A <code>spatPomp</code> object.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>The number of Monte Carlo particles used to approximate the filter distribution.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>If a <code>params</code> argument is specified, <code>abf</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, messages updating the user on progress will be printed to the console.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>An object of class &lsquo;enkfd_spatPomp&rsquo; that contains the estimate of the log likelihood
+(via the <code>loglik</code> attribute), algorithmic parameters used to run <code>enkf()</code>. Also included
+are estimated filter means, prediction means and forecasts that are generated during an <code>enkf()</code> run.
+</p>
+
+
+<h3>References</h3>
+
+<p>G. Evensen. Sequential data assimilation with a nonlinear quasi-geostrophic model using Monte Carlo methods to forecast error statistics. <em>Journal of Geophysical Research: Oceans</em> <b>99</b>, 10143&ndash;10162, 1994.
+</p>
+<p>G. Evensen. <em>Data assimilation: the ensemble Kalman filter</em>. Springer-Verlag, 2009.
+</p>
+<p>J.L. Anderson. An Ensemble Adjustment Kalman Filter for Data Assimilation. <em>Monthly Weather Review</em> <b>129</b>, 2884&ndash;2903, 2001.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other particle filter methods: 
+<code><a href="../../spatPomp/help/abfir.html">abfir</a>()</code>,
+<code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
+<code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
+<code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
+<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># Create a simulation of a Brownian motion
+b &lt;- bm(U=6, N=10)
+
+# Run EnKF
+enkfd_bm &lt;- enkf(b, Np = 100)
+
+# Get a likelihood estimate
+logLik(enkfd_bm)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

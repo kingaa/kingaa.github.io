@@ -1,0 +1,168 @@
+<!DOCTYPE html><html><head><title>R: Guided intermediate resampling filter (GIRF)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>girf {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Guided intermediate resampling filter (GIRF)</h2>
+
+<h3>Description</h3>
+
+<p>An implementation of the algorithm of Park and Ionides (2020),
+following the pseudocode in Asfaw et al. (2020).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'missing'
+girf(object, ...)
+
+## S4 method for signature 'ANY'
+girf(object, ...)
+
+## S4 method for signature 'spatPomp'
+girf(
+  object,
+  Np,
+  Ninter,
+  lookahead = 1,
+  Nguide,
+  kind = c("bootstrap", "moment"),
+  tol,
+  ...,
+  verbose = getOption("verbose", FALSE)
+)
+
+## S4 method for signature 'girfd_spatPomp'
+girf(
+  object,
+  Np,
+  Ninter,
+  lookahead,
+  Nguide,
+  kind = c("bootstrap", "moment"),
+  tol,
+  ...
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>A <code>spatPomp</code> object.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>If a <code>params</code> argument is specified, <code>abf</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>The number of particles used within each replicate for the adapted simulations.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Ninter</code></td>
+<td>
+<p>the number of intermediate resampling time points.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>lookahead</code></td>
+<td>
+<p>The number of future observations included in the guide function.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nguide</code></td>
+<td>
+<p>The number of simulations used to estimate state process uncertainty for each particle.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>kind</code></td>
+<td>
+<p>One of two types of guide function construction. Defaults to <code>'bootstrap'</code>. See Park and Ionides (2020) for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>tol</code></td>
+<td>
+<p>If all of the guide function evaluations become too small (beyond floating-point precision limits), we set them to this value.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, messages updating the user on progress will be printed to the console.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Upon successful completion, <code>girf()</code> returns an object of class
+&lsquo;girfd_spatPomp&rsquo; which contains the algorithmic parameters that were used to
+run <code>girf()</code> and the resulting log likelihood estimate.
+</p>
+
+
+<h3>Methods</h3>
+
+<p>The following methods are available for such an object:
+</p>
+
+<dl>
+<dt><code><a href="../../spatPomp/help/logLik.html">logLik</a></code></dt><dd><p> yields an unbiased estimate of the log-likelihood of the data under the model. </p>
+</dd>
+</dl>
+
+
+
+<h3>References</h3>
+
+<p>Park, J. and Ionides, E. L. (2020) Inference on high-dimensional implicit dynamic models using a guided intermediate resampling filter. <em>Statistics and Computing</em>, <abbr><span class="acronym">DOI</span></abbr>: 10.1007/s11222-020-09957-3
+</p>
+<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other particle filter methods: 
+<code><a href="../../spatPomp/help/abfir.html">abfir</a>()</code>,
+<code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
+<code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
+<code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
+<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># Create a simulation of a Brownian motion
+b &lt;- bm(U=3, N=10)
+
+# Run GIRF
+girfd_bm &lt;- girf(b,
+                 Np = 100,
+                 Ninter = length(unit_names(b)),
+                 lookahead = 1,
+                 Nguide = 50
+)
+# Get the likelihood estimate from GIRF
+logLik(girfd_bm)
+
+# Compare with the likelihood estimate from particle filter
+pfd_bm &lt;- pfilter(b, Np = 500)
+logLik(pfd_bm)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

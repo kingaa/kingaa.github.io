@@ -1,0 +1,97 @@
+<!DOCTYPE html><html><head><title>R: dunit_measure 'dunit_measure' evaluates the unit measurement...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>dunit_measure {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>dunit_measure
+<code>dunit_measure</code> evaluates the unit measurement density of a unit's observation given the entire state</h2>
+
+<h3>Description</h3>
+
+<p>dunit_measure
+<code>dunit_measure</code> evaluates the unit measurement density of a unit's observation given the entire state
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+dunit_measure(object, y, x, unit, time, params, log = TRUE, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>An object of class <code>spatPomp</code></p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>y</code></td>
+<td>
+<p>A U by 1 matrix of observations for all units</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>x</code></td>
+<td>
+<p>A state vector for all units</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit</code></td>
+<td>
+<p>The unit for which to evaluate the unit measurement density</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>time</code></td>
+<td>
+<p>The time for which to evaluate the unit measurement density</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>parameters at which to evaluate the unit measurement density</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>log</code></td>
+<td>
+<p>logical; should the density be returned on log scale?</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>additional arguments will be ignored</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A class &lsquo;matrix&rsquo; with the unit measurement density for spatial unit <code>unit</code>
+corresponding to the corresponding measurement in <code>y</code> and states in <code>x</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>b &lt;- bm(U=3)
+s &lt;- states(b)[,1,drop=FALSE]
+rownames(s) -&gt; rn
+dim(s) &lt;- c(3,1,1)
+dimnames(s) &lt;- list(variable=rn, rep=NULL)
+p &lt;- coef(b); names(p) -&gt; rnp
+dim(p) &lt;- c(length(p),1); dimnames(p) &lt;- list(param=rnp)
+o &lt;- obs(b)[,1,drop=FALSE]
+dunit_measure(b, y=o, x=s, unit=1, time=1, params=p)
+
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

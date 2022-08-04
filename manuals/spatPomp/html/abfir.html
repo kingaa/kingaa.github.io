@@ -1,0 +1,154 @@
+<!DOCTYPE html><html><head><title>R: Adapted Bagged Filter with Intermediate Resampling (ABF-IR)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>abfir {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Adapted Bagged Filter with Intermediate Resampling (ABF-IR)</h2>
+
+<h3>Description</h3>
+
+<p>An algorithm for estimating the filter distribution and likelihood of a spatiotemporal partially-observed Markov process model.
+Running <code>abfir</code> causes the algorithm to run Monte Carlo replicated jobs which
+each carry out an adapted simulation using intermediate resampling.
+Adapted simulation is an easier task than filtering, since particles in each replicate
+remain close to each other. Intermediate resampling further assists against
+the curse of dimensionality (COD) problem for importance sampling.
+The adapted simulations are then weighted in a way that mitigates COD by
+making a weak coupling assumption to get an approximate filter distribution.
+As a by-product, we also get an approximation to the likelihood of the data.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+abfir(
+  object,
+  Np,
+  Nrep,
+  nbhd,
+  Ninter,
+  tol = (1e-300),
+  ...,
+  verbose = getOption("verbose", FALSE)
+)
+
+## S4 method for signature 'abfird_spatPomp'
+abfir(object, Np, Nrep, nbhd, Ninter, tol, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>A <code>spatPomp</code> object.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>The number of particles used within each replicate for the adapted simulations.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nrep</code></td>
+<td>
+<p>The number of bootstrap replicates for the adapted simulations.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>nbhd</code></td>
+<td>
+<p>A neighborhood function with three arguments: <code>object</code>, <code>time</code> and <code>unit</code>.
+The function should return a <code>list</code> of two-element vectors that represent space-time neighbors of <code class="reqn">(u,n)</code>,
+which is represented by <code>c(unit,time)</code>. See example below for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Ninter</code></td>
+<td>
+<p>the number of intermediate resampling time points.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>tol</code></td>
+<td>
+<p>If the resampling weight for a particle is zero due to floating-point precision issues, it is set to the value of <code>tol</code> since resampling has to be done.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>If a <code>params</code> argument is specified, <code>abf</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, messages updating the user on progress will be printed to the console.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Upon successful completion, <code>abfir()</code> returns an object of class
+&lsquo;abfird_spatPomp&rsquo; containing the algorithmic parameters used to run <code>abfir()</code>
+and the estimated likelihood.
+</p>
+
+
+<h3>Methods</h3>
+
+<p>The following methods are available for such an object:
+</p>
+
+<dl>
+<dt><code><a href="../../spatPomp/help/logLik.html">logLik</a></code></dt><dd><p> yields a biased estimate of the log-likelihood of
+the data under the model. </p>
+</dd>
+</dl>
+
+
+
+<h3>See Also</h3>
+
+<p>Other particle filter methods: 
+<code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
+<code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
+<code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
+<code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
+<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># Create a simulation of a Brownian motion
+b &lt;- bm(U=3, N=10)
+
+# Create a neighborhood function mapping a point in space-time
+# to a list of ``neighboring points" in space-time
+bm_nbhd &lt;- function(object, time, unit) {
+  nbhd_list = list()
+  if(time &gt; 1 &amp;&amp; unit &gt; 1){
+    nbhd_list = c(nbhd_list, list(c(unit-1, time-1)))
+  }
+  return(nbhd_list)
+}
+# Run ABFIR with specified number of Monte Carlo replicates and particles per replicate
+abfird_bm &lt;- abfir(b,
+                  Nrep = 2,
+                  Np=20,
+                  nbhd = bm_nbhd,
+                  Ninter = length(unit_names(b)))
+# Get the likelihood estimate from ABFIR
+logLik(abfird_bm)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html><html><head><title>R: Constructor of the spatPomp object</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>spatPomp {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Constructor of the spatPomp object</h2>
+
+<h3>Description</h3>
+
+<p>This function constructs a class &lsquo;spatPomp&rsquo; object, encoding a spatiotemporal partially observed Markov process (<abbr><span class="acronym">SpatPOMP</span></abbr>) model together with a uni- or multi-variate time series on a collection of units.
+Users will typically develop a POMP model for a single unit before embarking on a coupled SpatPOMP analysis.
+Consequently, we assume some familiarity with <span class="pkg">pomp</span> and its description by King, Nguyen and Ionides (2016).
+The <code>spatPomp</code> class inherits from <code>pomp</code> with the additional unit structure being a defining feature of the resulting models and inference algorithms.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>spatPomp(
+  data,
+  units,
+  times,
+  covar,
+  t0,
+  ...,
+  eunit_measure,
+  munit_measure,
+  vunit_measure,
+  dunit_measure,
+  runit_measure,
+  rprocess,
+  rmeasure,
+  dprocess,
+  dmeasure,
+  skeleton,
+  rinit,
+  rprior,
+  dprior,
+  unit_statenames,
+  unit_accumvars,
+  shared_covarnames,
+  globals,
+  paramnames,
+  params,
+  cdir,
+  cfile,
+  shlib.args,
+  PACKAGE,
+  partrans,
+  compile = TRUE,
+  verbose = getOption("verbose", FALSE)
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>either a dataframe holding the spatiotemporal data,
+or an object of class &lsquo;spatPomp&rsquo;, i.e., the output of another <span class="pkg">spatPomp</span> calculation.
+If dataframe, the user must provide the name of the times column using the <code>times</code> argument and
+the spatial unit column name using the <code>units</code> argument. The dataframe provided should be sorted in
+increasing order of time and unit name respectively, i.e. observation 1 in unit A should come before observation
+1 in unit B, which should come before observation 2 in unit A.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>units</code></td>
+<td>
+<p>when <code>data</code> is a <code>data.frame</code> this is the name of the column containing the spatial units.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>times</code></td>
+<td>
+<p>the sequence of observation times.
+<code>times</code> must indicate the column of observation times by name or index.
+The time vector must be numeric and non-decreasing.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>covar</code></td>
+<td>
+<p>An optional dataframe for supplying covariate information. If provided, there must be two
+columns that provide the observation time and the observation spatial unit with the same names and arrangement as the <code>data</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>t0</code></td>
+<td>
+<p>The zero-time, i.e., the time of the initial state.
+This must be no later than the time of the first observation, i.e., <code>t0 &lt;= times[1]</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>If there are arguments that the user would like to pass to <span class="pkg">pomp</span>'s basic constructor function's ... argument,
+this argument passes them along. Not recommended for this version of <span class="pkg">spatPomp</span>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>eunit_measure</code></td>
+<td>
+<p>Evaluator of the expected measurement given the latent states and model parameters. The <code>unit</code> variable is pre-defined, which allows the user to specify differing specifications for each unit using <code>if</code> conditions.
+Only C snippets are accepted. The C snippet should assign the scalar approximation to the expected measurement to the pre-defined variable <code>ey</code> given the latent state and the parameters.
+For more information, see the examples section below.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>munit_measure</code></td>
+<td>
+<p>Evaluator of a moment-matched parameter set (like the standard deviation parameter of a normal distribution or the size parameter of a negative binomial distribution) given an empirical variance estimate, the latent states and all model parameters.
+Only Csnippets are accepted. The Csnippet should assign the scalar approximation to the measurement variance parameter to the pre-defined variable corresponding to that parameter, which has been predefined with a <code>M_</code> prefix. For instance, if the moment-matched parameter is <code>psi</code>, then the user should assign <code>M_psi</code> to the moment-matched value.
+For more information, see the examples section below.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>vunit_measure</code></td>
+<td>
+<p>Evaluator of the theoretical measurement variance given the latent states and model parameters. The <code>unit</code> variable is pre-defined, which allows the user to specify differing specifications for each unit using <code>if</code> conditions.
+Only C snippets are accepted. The C snippet should assign the scalar approximation to the measurement variance to the pre-defined variable <code>vc</code> given the latent state and the parameters.
+For more information, see the examples section below.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>dunit_measure</code></td>
+<td>
+<p>Evaluator of the unit measurement model density given the measurement, the latent states and model parameters. The <code>unit</code> variable is pre-defined, which allows the user to specify differing specifications for each unit using <code>if</code> conditions.
+Only Csnippets are accepted. The Csnippet should assign the scalar measurement density to the pre-defined variable <code>lik</code>. The user is encouraged to provide a logged density in an <code>if</code> condition that checks whether the predefined <code>give_log</code> variable is true.
+For more information, see the examples section below.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>runit_measure</code></td>
+<td>
+<p>Simulator of the unit measurement model given the latent states and the model parameters.
+The <code>unit</code> variable is pre-defined, which allows the user to specify differing specifications for each unit using <code>if</code> conditions.
+Only Csnippets are accepted. The Csnippet should assign the scalar measurement density to the pre-defined which corresponds to the name of the observation for each unit (e.g. <code>cases</code> for the measles spatPomp example).
+For more information, see the examples section below.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rprocess</code></td>
+<td>
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess_spec.html">rprocess plugins</a>.
+Setting <code>rprocess=NULL</code> removes the latent-state simulator.
+For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess specification for the documentation on these plugins</a>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rmeasure</code></td>
+<td>
+<p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
+For more information, see <a href="../../pomp/help/rmeasure_spec.html">rmeasure specification</a>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>dprocess</code></td>
+<td>
+<p>optional;
+specification of the probability density evaluation function of the unobserved state process.
+Setting <code>dprocess=NULL</code> removes the latent-state density evaluator.
+For more information, see <a href="../../pomp/help/dprocess_spec.html">dprocess specification</a>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>dmeasure</code></td>
+<td>
+<p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
+For more information, see <a href="../../pomp/help/dmeasure_spec.html">dmeasure specification</a>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>skeleton</code></td>
+<td>
+<p>optional; the deterministic skeleton of the unobserved state process.
+Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
+Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton_spec.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton_spec.html">map</a></code> fnctions.
+For more information, see <a href="../../pomp/help/skeleton_spec.html">skeleton specification</a>.
+Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rinit</code></td>
+<td>
+<p>simulator of the initial-state distribution.
+This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
+For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rprior</code></td>
+<td>
+<p>optional; prior distribution sampler, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+For more information, see <a href="../../pomp/help/prior_spec.html">prior specification</a>.
+Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>dprior</code></td>
+<td>
+<p>optional; prior distribution density evaluator, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+For more information, see <a href="../../pomp/help/prior_spec.html">prior specification</a>.
+Setting <code>dprior=NULL</code> resets the prior distribution to its default, which is a flat improper prior.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_statenames</code></td>
+<td>
+<p>The names of the components of the latent state. E.g. if the user is constructing an joint SIR model
+over many spatial units, <code>c('S','I','R')</code> would be passed.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unit_accumvars</code></td>
+<td>
+<p>a subset of the <code>unit_statenames</code> argument that are accumulator variables. See <a href="../../pomp/help/accumulator+20variables.html">accumulator variables</a>
+for more on the concept of <span class="pkg">pomp</span> accumulator variables.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>shared_covarnames</code></td>
+<td>
+<p>If <code>covar</code> is supplied, covariates that are shared must still be specified for each unit, i.e.,
+rows with equal values for the same time over all units must be supplied. However, if such covariates exists, supply the names
+using this argument.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>globals</code></td>
+<td>
+<p>optional character;
+arbitrary C code that will be hard-coded into the shared-object library created when  C snippets are provided.
+If no C snippets are used, <code>globals</code> has no effect.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>paramnames</code></td>
+<td>
+<p>optional character vector;
+names of model parameters.
+It is typically only necessary to supply <code>paramnames</code> when C snippets are in use.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>optional; named numeric vector of parameters.
+This will be coerced internally to storage mode <code>double</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cdir</code></td>
+<td>
+<p>optional character variable.
+<code>cdir</code> specifies the name of the directory within which C snippet code will be compiled.
+By default, this is in a temporary directory specific to the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session.
+One can also set this directory using the <code>pomp_cdir</code> global option.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cfile</code></td>
+<td>
+<p>optional character variable.
+<code>cfile</code> gives the name of the file (in directory <code>cdir</code>) into which C snippet codes will be written.
+By default, a random filename is used.
+If the chosen filename would result in over-writing an existing file, an error is generated.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>shlib.args</code></td>
+<td>
+<p>optional character variables.
+Command-line arguments to the <code>R CMD SHLIB</code> call that compiles the C snippets.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>PACKAGE</code></td>
+<td>
+<p>optional character;
+the name (without extension) of the external, dynamically loaded library in which any native routines are to be found.
+This is only useful if one or more of the model components has been specified using a precompiled dynamically loaded library;
+it is not used for any component specified using C snippets.
+<code>PACKAGE</code> can name at most one library.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>partrans</code></td>
+<td>
+<p>optional parameter transformations, constructed using <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
+</p>
+<p>Many algorithms for parameter estimation search an unconstrained space of parameters.
+When working with such an algorithm and a model for which the parameters are constrained, it can be useful to transform parameters.
+One should supply the <code>partrans</code> argument via a call to <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
+For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
+Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>compile</code></td>
+<td>
+<p>logical;
+if <code>FALSE</code>, compilation of the C snippets will be postponed until they are needed.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>One implements a <abbr><span class="acronym">SpatPOMP</span></abbr> model by specifying some or all of its <em>basic components</em>, including:
+</p>
+
+<dl>
+<dt>rinit,</dt><dd><p>the simulator from the distribution of the latent state process at the zero-time;</p>
+</dd>
+<dt>rprocess,</dt><dd><p>the transition simulator of the latent state process;</p>
+</dd>
+<dt>dunit_measure,</dt><dd><p>the evaluator of the conditional density at a unit's measurement given the unit's latent state;</p>
+</dd>
+<dt>eunit_measure,</dt><dd><p>the evaluator of the expectation of a unit's measurement given the unit's latent state;</p>
+</dd>
+<dt>munit_measure,</dt><dd><p>the evaluator of the moment-matched parameter set given a unit's latent state and some empirical measurement variance;</p>
+</dd>
+<dt>vunit_measure,</dt><dd><p>the evaluator of the variance of a unit's measurement given the unit's latent state;</p>
+</dd>
+<dt>runit_measure,</dt><dd><p>the simulator of a unit's measurement conditional on the unit's latent state;</p>
+</dd>
+<dt>dprocess,</dt><dd><p>the evaluator of the density for transitions of the latent state process;</p>
+</dd>
+<dt>rmeasure,</dt><dd><p>the simulator of the measurements conditional on the latent state;</p>
+</dd>
+<dt>dmeasure,</dt><dd><p>the evaluator of the conditional density of the measurements given the latent state;</p>
+</dd>
+<dt>rprior,</dt><dd><p>the simulator from a prior distribution on the parameters;</p>
+</dd>
+<dt>dprior,</dt><dd><p>the evaluator of the prior density;</p>
+</dd>
+<dt>skeleton,</dt><dd><p>which computes the deterministic skeleton of the unobserved state process;</p>
+</dd>
+<dt>partrans,</dt><dd><p>which performs parameter transformations.</p>
+</dd>
+</dl>
+
+<p>The basic structure and its rationale are described in Asfaw et al. (2020).
+</p>
+<p>Each basic component is supplied via an argument of the same name to <code>spatPomp()</code>.
+The five unit-level model components must be provided via C snippets. The remaining components, whose behaviors are inherited from
+<span class="pkg">pomp</span> may be furnished using C snippets, <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions, or pre-compiled native routine available in user-provided dynamically loaded libraries.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An object of class &lsquo;spatPomp&rsquo; representing observations and model components from the spatiotemporal POMP model.
+</p>
+
+
+<h3>References</h3>
+
+<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

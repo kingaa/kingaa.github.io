@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><head><title>R: Plotting 'spatPomp' data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>plot {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Plotting <code>spatPomp</code> data</h2>
+
+<h3>Description</h3>
+
+<p>Visualize <code>spatPomp</code> data
+</p>
+<p>Diagnostic plot for <code>igirf()</code>
+</p>
+<p>Visualize <code>spatPomp</code> data
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'igirfd_spatPomp'
+plot(x, params = names(coef(x)), ncol = 3)
+
+## S4 method for signature 'spatPomp'
+plot(x, type = c("l", "h"), log = F, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>x</code></td>
+<td>
+<p>a <code>spatPomp</code> object</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>the names of the parameters for which the user would like to see a trace plot</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>ncol</code></td>
+<td>
+<p>the number of columns in the grid plot</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>type</code></td>
+<td>
+<p>for visualizing an object of class <code>spatPomp</code>, the user
+can obtain a grid of line plots by default (<code>'l'</code>) or a heat map by
+supplying argument <code>'h'</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>log</code></td>
+<td>
+<p>should the data be log-transformed before plotting?
+This helps in contexts where there are spikes that could take away
+attention from the dynamics illustrated by the rest of the data.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>for visualizing an object of class <code>spatPomp</code>, the user
+can add arguments like <code>nrow</code> to specify the number of rows in the
+grid.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>a <code>ggplot</code> facet plot of class &lsquo;gg&rsquo; and &lsquo;ggplot&rsquo; visualizing
+the convergence record of running <code>igirf()</code> with respect to the likelihood and the parameters of the model.
+</p>
+<p>a <code>ggplot</code> plot of class &lsquo;gg&rsquo; and &lsquo;ggplot&rsquo; visualizing
+the time series data over multiple spatial units via a tile-plot.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

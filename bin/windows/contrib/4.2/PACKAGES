@@ -43,3 +43,13 @@ Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
 Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
 License: GPL-3
 Archs: x64
+
+Package: spatPomp
+Version: 0.29.0.1
+Depends: pomp (>= 4.1), R(>= 4.0.0), methods
+Imports: foreach, dplyr, tidyr, stringr, abind, rlang, magrittr,
+        ggplot2
+LinkingTo: pomp
+Suggests: testthat, doParallel (>= 1.0.11), parallel
+License: GPL-3
+Archs: x64

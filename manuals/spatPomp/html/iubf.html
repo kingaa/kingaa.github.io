@@ -1,0 +1,170 @@
+<!DOCTYPE html><html><head><title>R: Iterated Unadapted Bagged Filter (IUBF)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>iubf {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Iterated Unadapted Bagged Filter (IUBF)</h2>
+
+<h3>Description</h3>
+
+<p>An algorithm for estimating the parameters of a spatiotemporal partially-observed Markov process.
+Running <code>iubf</code> causes the algorithm to perform a specified number of iterations of unadapted simulations with parameter perturbation and parameter resamplings.
+At each iteration, unadapted simulations are performed on a perturbed version of the model, in which the parameters to be estimated are subjected to random perturbations at each observation.
+After cycling through the data, each replicate's weight is calculated and is used to rank the bootstrap replictates. The highest ranking replicates are recycled into the next iteration.
+This extra variability introduced through parameter perturbation effectively smooths the likelihood surface and combats particle depletion by introducing diversity into particle population.
+As the iterations progress, the magnitude of the perturbations is diminished according to a user-specified cooling schedule.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+iubf(
+  object,
+  Nubf = 1,
+  Nrep_per_param,
+  Nparam,
+  nbhd,
+  prop,
+  rw.sd,
+  cooling.type = c("geometric", "hyperbolic"),
+  cooling.fraction.50,
+  tol = (1e-18)^17,
+  verbose = getOption("verbose"),
+  ...
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>A <code>spatPomp</code> object.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nubf</code></td>
+<td>
+<p>The number of iterations to perform</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nrep_per_param</code></td>
+<td>
+<p>The number of replicates used to estimate the likelihood at a parameter</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nparam</code></td>
+<td>
+<p>The number of parameters that will undergo the iterated perturbation</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>nbhd</code></td>
+<td>
+<p>A neighborhood function with three arguments: <code>object</code>, <code>time</code> and <code>unit</code>.
+The function should return a <code>list</code> of two-element vectors that represent space-time neighbors of <code class="reqn">(u,n)</code>,
+which is represented by <code>c(unit,time)</code>. See example below for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>prop</code></td>
+<td>
+<p>A numeric between 0 and 1. The top <code>prop</code>*100% of the parameters are resampled at each observation</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rw.sd</code></td>
+<td>
+<p>specification of the magnitude of the random-walk perturbations that will be applied to some or all model parameters.
+Parameters that are to be estimated should have positive perturbations specified here.
+The specification is given using the <code><a href="../../pomp/help/rw.sd.html">rw.sd</a></code> function, which creates a list of unevaluated expressions.
+The latter are evaluated in a context where the model time variable is defined (as <code>time</code>).
+The expression <code>ivp(s)</code> can be used in this context as shorthand for </p>
+<pre>ifelse(time==time[1],s,0).</pre>
+<p>Likewise, <code>ivp(s,lag)</code> is equivalent to </p>
+<pre>ifelse(time==time[lag],s,0).</pre>
+<p>See below for some examples.
+</p>
+<p>The perturbations that are applied are normally distributed with the specified s.d.
+If parameter transformations have been supplied, then the perturbations are applied on the transformed (estimation) scale.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cooling.type</code></td>
+<td>
+<p>specifications for the cooling schedule,
+i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
+<code>cooling.type</code> specifies the nature of the cooling schedule.
+See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cooling.fraction.50</code></td>
+<td>
+<p>specifications for the cooling schedule,
+i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
+<code>cooling.type</code> specifies the nature of the cooling schedule.
+See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>tol</code></td>
+<td>
+<p>If the resampling weight for a particle is zero due to floating-point precision issues, it is set to the value of <code>tol</code> since resampling has to be done.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>additional arguments supply new or modify existing model characteristics or components.
+See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
+</p>
+<p>When named arguments not recognized by <code><a href="../../pomp/help/pomp.html">pomp</a></code> are provided, these are made available to all basic components via the so-called <dfn>userdata</dfn> facility.
+This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
+See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Upon successful completion, <code>iubf()</code> returns an object of class
+&lsquo;iubfd_spatPomp&rsquo;. This object contains the convergence record of the iterative algorithm with
+respect to the likelihood and the parameters of the model (which can be accessed using the <code>traces</code>
+attribute) as well as a final parameter estimate, which can be accessed using the <code>coef()</code>. The
+algorithmic parameters used to run <code>iubf()</code> are also included.
+</p>
+
+
+<h3>Methods</h3>
+
+<p>The following methods are available for such an object:
+</p>
+
+<dl>
+<dt><code><a href="../../stats/html/coef.html">coef</a></code></dt><dd><p> extracts the point estimate </p>
+</dd>
+</dl>
+
+
+
+<h3>See Also</h3>
+
+<p>Other particle filter methods: 
+<code><a href="../../spatPomp/help/abfir.html">abfir</a>()</code>,
+<code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
+<code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
+<code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
+<code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>
+</p>
+<p>Other spatPomp parameter estimation methods: 
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

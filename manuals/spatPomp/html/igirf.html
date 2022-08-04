@@ -1,0 +1,196 @@
+<!DOCTYPE html><html><head><title>R: Iterated guided intermediate resampling filter (IGIRF)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>igirf {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Iterated guided intermediate resampling filter (IGIRF)</h2>
+
+<h3>Description</h3>
+
+<p>An implementation of a parameter estimation algorithm combining
+the intermediate resampling scheme of the guided intermediate resampling filter of Park and Ionides (2020)
+and the parameter perturbation scheme of Ionides et al. (2015) following the pseudocode in Asfaw, et al. (2020).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'missing'
+igirf(data, ...)
+
+## S4 method for signature 'ANY'
+igirf(data, ...)
+
+## S4 method for signature 'spatPomp'
+igirf(
+  data,
+  Ngirf,
+  Np,
+  rw.sd,
+  cooling.type,
+  cooling.fraction.50,
+  Ninter,
+  lookahead = 1,
+  Nguide,
+  kind = c("bootstrap", "moment"),
+  tol = 1e-300,
+  ...,
+  verbose = getOption("verbose", FALSE)
+)
+
+## S4 method for signature 'igirfd_spatPomp'
+igirf(
+  data,
+  Ngirf,
+  Np,
+  rw.sd,
+  cooling.type,
+  cooling.fraction.50,
+  Ninter,
+  lookahead,
+  Nguide,
+  kind = c("bootstrap", "moment"),
+  tol,
+  ...,
+  verbose = getOption("verbose", FALSE)
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>an object of class <code>spatPomp</code> or <code>igirfd_spatPomp</code></p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>If a <code>params</code> argument is specified, <code>abf</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Ngirf</code></td>
+<td>
+<p>the number of iterations of parameter-perturbed GIRF.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>The number of particles used within each replicate for the adapted simulations.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>rw.sd</code></td>
+<td>
+<p>specification of the magnitude of the random-walk perturbations that will be applied to some or all model parameters.
+Parameters that are to be estimated should have positive perturbations specified here.
+The specification is given using the <code><a href="../../pomp/help/rw.sd.html">rw.sd</a></code> function, which creates a list of unevaluated expressions.
+The latter are evaluated in a context where the model time variable is defined (as <code>time</code>).
+The expression <code>ivp(s)</code> can be used in this context as shorthand for </p>
+<pre>ifelse(time==time[1],s,0).</pre>
+<p>Likewise, <code>ivp(s,lag)</code> is equivalent to </p>
+<pre>ifelse(time==time[lag],s,0).</pre>
+<p>See below for some examples.
+</p>
+<p>The perturbations that are applied are normally distributed with the specified s.d.
+If parameter transformations have been supplied, then the perturbations are applied on the transformed (estimation) scale.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cooling.type</code></td>
+<td>
+<p>specifications for the cooling schedule,
+i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
+<code>cooling.type</code> specifies the nature of the cooling schedule.
+See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>cooling.fraction.50</code></td>
+<td>
+<p>specifications for the cooling schedule,
+i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
+<code>cooling.type</code> specifies the nature of the cooling schedule.
+See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Ninter</code></td>
+<td>
+<p>the number of intermediate resampling time points.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>lookahead</code></td>
+<td>
+<p>The number of future observations included in the guide function.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nguide</code></td>
+<td>
+<p>The number of simulations used to estimate state process uncertainty for each particle.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>kind</code></td>
+<td>
+<p>One of two types of guide function construction. Defaults to <code>'bootstrap'</code>. See Park and Ionides (2020) for more details.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>tol</code></td>
+<td>
+<p>If all of the guide function evaluations become too small (beyond floating-point precision limits), we set them to this value.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, messages updating the user on progress will be printed to the console.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Upon successful completion, <code>igirf()</code> returns an object of class
+&lsquo;igirfd_spatPomp&rsquo;. This object contains the convergence record of the iterative algorithm with
+respect to the likelihood and the parameters of the model (which can be accessed using the <code>traces</code>
+attribute) as well as a final parameter estimate, which can be accessed using the <code>coef()</code>. The
+algorithmic parameters used to run <code>igirf()</code> are also included.
+</p>
+
+
+<h3>Methods</h3>
+
+<p>The following methods are available for such an object:
+</p>
+
+<dl>
+<dt><code><a href="../../stats/html/coef.html">coef</a></code></dt><dd><p> gives the Monte Carlo maximum likelihood parameter estimate. </p>
+</dd>
+</dl>
+
+
+
+<h3>References</h3>
+
+<p>Park, J. and Ionides, E. L. (2020) Inference on high-dimensional implicit dynamic models using a guided intermediate resampling filter. <em>Statistics and Computing</em>, <abbr><span class="acronym">DOI</span></abbr>: 10.1007/s11222-020-09957-3
+</p>
+<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other particle filter methods: 
+<code><a href="../../spatPomp/help/abfir.html">abfir</a>()</code>,
+<code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
+<code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
+<code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
+<code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
+</p>
+<p>Other spatPomp parameter estimation methods: 
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

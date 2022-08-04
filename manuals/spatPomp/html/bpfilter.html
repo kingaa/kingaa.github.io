@@ -1,0 +1,151 @@
+<!DOCTYPE html><html><head><title>R: Block particle filter (BPF)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>bpfilter {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Block particle filter (BPF)</h2>
+
+<h3>Description</h3>
+
+<p>An implementation of the block particle filter algorithm of Rebeschini and van Handel (2015), which is used to estimate the filter distribution
+of a spatiotemporal partially-observed Markov process.
+<code>bpfilter</code> requires a partition of the spatial units which can be provided by either the <code>block_size</code> or the <code>block_list</code> argument.
+The elements of the partition are called blocks. We perform resampling for each block independently based on sample weights within the block.
+Each resampled block only contains latent states for the spatial components within the block which allows for a &ldquo;cross-pollination&quot; of
+particles where the highest weighted segments of each particle are more likely to be resampled and get combined with resampled components of
+other particles. The method mitigates the curse of dimensionality by resampling locally.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+bpfilter(
+  object,
+  Np,
+  block_size,
+  block_list,
+  save_states,
+  ...,
+  verbose = getOption("verbose", FALSE)
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>A <code>spatPomp</code> object.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>The number of particles used within each replicate for the adapted simulations.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>block_size</code></td>
+<td>
+<p>The number of spatial units per block. If this is provided, the method subdivides units approximately evenly
+into blocks with size <code>block_size</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>block_list</code></td>
+<td>
+<p>List that specifies an exact partition of the spatial units. Each partition element, or block, is
+an integer vector of neighboring units.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>save_states</code></td>
+<td>
+<p>logical. If True, the state-vector for each particle and
+block is saved.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>If a <code>params</code> argument is specified, <code>bpfilter</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, messages updating the user on progress will be printed to the console.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Upon successful completion, <code>bpfilter()</code> returns an object of class
+&lsquo;bpfilterd_spatPomp&rsquo; containing the algorithmic parameters used to run <code>bpfilter()</code>
+and the estimated likelihood.
+</p>
+
+
+<h3>Details</h3>
+
+<p>Only one of <code>block_size</code> or <code>block_list</code> should be specified.
+If both or neither is provided, an error is triggered.
+</p>
+
+
+<h3>Methods</h3>
+
+<p>The following methods are available for such an object:
+</p>
+
+<dl>
+<dt><code><a href="../../spatPomp/help/logLik.html">logLik</a></code></dt><dd><p> yields an estimate of the log-likelihood of the data under the model. </p>
+</dd>
+</dl>
+
+
+
+<h3>References</h3>
+
+<p>Rebeschini, P., &amp; Van Handel, R. (2015). Can local particle filters beat the curse of dimensionality?. <em>The Annals of Applied Probability</em>, <b>25(5)</b>, 2809-2866.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other particle filter methods: 
+<code><a href="../../spatPomp/help/abfir.html">abfir</a>()</code>,
+<code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
+<code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
+<code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
+<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
+<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># Create a simulation of a Brownian motion
+b &lt;- bm(U=6, N=10)
+
+# Run BPF with the specified number of units per block
+bpfilterd_b1 &lt;- bpfilter(b, Np = 100, block_size = 2)
+
+# Run BPF with the specified partition
+bpfilterd_b2 &lt;- bpfilter(b,
+                         Np = 20,
+                         block_list = list(c(1,2), c(3,4), c(5,6)))
+
+# Get a likelihood estimate
+logLik(bpfilterd_b2)
+
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><title>R: Print methods</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>print {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Print methods</h2>
+
+<h3>Description</h3>
+
+<p>Prints its argument.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S4 method for signature 'spatPomp'
+print(x)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>x</code></td>
+<td>
+<p>a <code>spatPomp</code> object</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>An object of class &lsquo;spatPomp&rsquo; is returned *invisibly*. The user is notified on the console only the class of the object.
+</p>
+
+
+<h3>Note</h3>
+
+<p>Use <code>spy()</code> to see model components of <code>x</code> instead.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

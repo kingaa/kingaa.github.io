@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head><title>R: Measles in the United Kingdom</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>measlesUK {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Measles in the United Kingdom</h2>
+
+<h3>Description</h3>
+
+<p>Measles case data from various cities and towns in England and Wales during the pre-vaccine era.
+</p>
+
+
+<h3>Details</h3>
+
+<p>Data includes bi-weekly case counts as well as births and population from 40 cities and towns.
+</p>
+
+
+<h3>Value</h3>
+
+<p>a &lsquo;data.frame&rsquo; of the 40 largest cities and towns in the UK and Wales, their latitude, longitude and
+bi-weekly measles case counts, population and birthrates.
+</p>
+
+
+<h3>References</h3>
+
+<p>Dalziel, Benjamin D. et al. (2016) Persistent chaos of measles epidemics in the prevaccination United States caused by a small change in seasonal transmission patterns. <em>PLoS computational biology</em>, <b>12(2)</b>, e1004655. <abbr><span class="acronym">DOI</span></abbr>: 10.5061/dryad.r4q34
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other datasets: 
+<code><a href="../../spatPomp/help/city_data_UK.html">city_data_UK</a></code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

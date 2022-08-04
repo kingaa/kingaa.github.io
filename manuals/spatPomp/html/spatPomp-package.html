@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head><title>R: Inference for SpatPOMPs (Spatiotemporal Partially Observed...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>spatPomp-package {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Inference for SpatPOMPs (Spatiotemporal Partially Observed Markov Processes)</h2>
+
+<h3>Description</h3>
+
+<p>The <span class="pkg">spatPomp</span> package provides facilities for inference
+on panel data using spatiotemporal partially-observed Markov process
+(<abbr><span class="acronym">SpatPOMP</span></abbr>) models. To do so, it relies on and extends a number
+of facilities that the <span class="pkg">pomp</span> package provides for inference on time
+series data using partially-observed Markov process (<abbr><span class="acronym">POMP</span></abbr>) models.
+</p>
+<p>The <span class="pkg">spatPomp</span> package concerns models consisting of a collection
+of interacting units. The methods in <span class="pkg">spatPomp</span> may be applicable
+whether or not these units correspond to spatial locations.
+</p>
+
+
+<h3>Data analysis using <span class="pkg">spatPomp</span></h3>
+
+<p>The first step in using <span class="pkg">spatPomp</span> is to encode one's model(s) and data
+in objects of class <code>spatPomp</code>.
+This can be done via a call to the <a href="../../spatPomp/help/spatPomp.html">spatPomp</a> constructor
+function.
+</p>
+
+
+<h3>Extending the <span class="pkg">pomp</span> platform for developing inference tools</h3>
+
+<p><span class="pkg">spatPomp</span> extends to panel data the general interface to the
+components of <abbr><span class="acronym">POMP</span></abbr> models provided by <span class="pkg">pomp</span>. In doing so, it
+contributes to the goal of the <span class="pkg">pomp</span> project of facilitating the
+development of new algorithms in an environment where they can be tested
+and compared on a growing body of models and datasets.
+</p>
+
+
+<h3>Documentation</h3>
+
+<p><span class="pkg">spatPomp</span> is described by Asfaw et al. (2020)
+</p>
+
+
+<h3>License</h3>
+
+<p><span class="pkg">spatPomp</span> is provided under the <abbr><span class="acronym">MIT</span></abbr> License.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw, Joonha Park, Allister Ho, Edward Ionides, Aaron King
+</p>
+
+
+<h3>References</h3>
+
+<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><a href="../../pomp/html/pomp-package.html">pomp package</a>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

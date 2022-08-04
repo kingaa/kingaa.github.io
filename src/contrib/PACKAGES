@@ -61,6 +61,17 @@ License: GPL-3
 MD5sum: 5ff34338c5cebf617eef393ca356f90f
 NeedsCompilation: yes
 
+Package: spatPomp
+Version: 0.29.0.1
+Depends: pomp (>= 4.1), R(>= 4.0.0), methods
+Imports: foreach, dplyr, tidyr, stringr, abind, rlang, magrittr,
+        ggplot2
+LinkingTo: pomp
+Suggests: testthat, doParallel (>= 1.0.11), parallel
+License: GPL-3
+MD5sum: 05bbfe97974dd026bc430561c05e6270
+NeedsCompilation: yes
+
 Package: subplex
 Version: 1.8
 Depends: R(>= 2.5.1)

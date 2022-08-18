@@ -56,3 +56,10 @@ LinkingTo: pomp
 Suggests: testthat, doParallel (>= 1.0.11), parallel
 License: GPL-3
 MD5sum: 267e9e23a313556d233d1ab9e6412b7e
+
+Package: tao
+Version: 1.1.1
+Depends: R(>= 3.0.0)
+Suggests: tinytest
+License: GPL-3
+MD5sum: 553af79ef62e55f05b142f33e1143f9f

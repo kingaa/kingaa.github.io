@@ -53,3 +53,9 @@ LinkingTo: pomp
 Suggests: testthat, doParallel (>= 1.0.11), parallel
 License: GPL-3
 Archs: x64
+
+Package: tao
+Version: 1.1.1
+Depends: R(>= 3.0.0)
+Suggests: tinytest
+License: GPL-3

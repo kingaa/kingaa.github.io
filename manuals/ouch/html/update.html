@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>update {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>update {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Update and refit an <span class="pkg">ouch</span> model</h2>
 
@@ -38,26 +38,26 @@ update(object, data, regimes, sqrt.alpha, sigma, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>object</code></td>
+<tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
 <p>fitted model object.</p>
 </td></tr>
-<tr valign="top"><td><code>data</code></td>
+<tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
 <p>data that replace those used in the original fit.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>Additional arguments replace the corresponding arguments in the original call.</p>
 </td></tr>
-<tr valign="top"><td><code>regimes</code></td>
+<tr style="vertical-align: top;"><td><code>regimes</code></td>
 <td>
 <p>A vector of codes, one for each node in the tree, specifying the selective regimes hypothesized to have been operative.
 Corresponding to each node, enter the code of the regime hypothesized for the branch segment terminating in that node.
 For the root node, because it has no branch segment terminating on it, the regime specification is irrelevant.
 If there are <code>nchar</code> quantitative characters, then one can specify a single set of <code>regimes</code> for all characters or a list of <code>nchar</code> regime specifications, one for each character.</p>
 </td></tr>
-<tr valign="top"><td><code>sqrt.alpha</code></td>
+<tr style="vertical-align: top;"><td><code>sqrt.alpha</code></td>
 <td>
 <p>These are used to initialize the optimization algorithm.
 The selection strength matrix <code class="reqn">\alpha</code> and the random drift variance-covariance matrix <code class="reqn">\sigma^2</code> are parameterized by their matrix square roots.
@@ -65,7 +65,7 @@ Specifically, these initial guesses are each packed into lower-triangular matric
 The product of this matrix with its transpose is the <code class="reqn">\alpha</code> or <code class="reqn">\sigma^2</code> matrix.
 See Details for more information.</p>
 </td></tr>
-<tr valign="top"><td><code>sigma</code></td>
+<tr style="vertical-align: top;"><td><code>sigma</code></td>
 <td>
 <p>These are used to initialize the optimization algorithm.
 The selection strength matrix <code class="reqn">\alpha</code> and the random drift variance-covariance matrix <code class="reqn">\sigma^2</code> are parameterized by their matrix square roots.

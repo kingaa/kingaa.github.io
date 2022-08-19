@@ -14,7 +14,7 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%"><tr><td>hansen {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>hansen {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Ornstein-Uhlenbeck models of trait evolution</h2>
 
@@ -44,7 +44,7 @@ The fitting is done using <code>optim</code> or <code>subplex</code>.
 <h3>Arguments</h3>
 
 <table>
-<tr valign="top"><td><code>data</code></td>
+<tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
 <p>Phenotypic data for extant species, i.e., species at the terminal twigs of the phylogenetic tree.
 This can either be a single named numeric vector, a list of <code>nchar</code> named vectors, or a data frame containing <code>nchar</code> data variables.
@@ -54,18 +54,18 @@ data are supplied as one or more named vectors, the names attributes are taken t
 If the data are supplied as a
 data-frame, the rownames serve that purpose.</p>
 </td></tr>
-<tr valign="top"><td><code>tree</code></td>
+<tr style="vertical-align: top;"><td><code>tree</code></td>
 <td>
 <p>A phylogenetic tree, specified as an <code>ouchtree</code> object.</p>
 </td></tr>
-<tr valign="top"><td><code>regimes</code></td>
+<tr style="vertical-align: top;"><td><code>regimes</code></td>
 <td>
 <p>A vector of codes, one for each node in the tree, specifying the selective regimes hypothesized to have been operative.
 Corresponding to each node, enter the code of the regime hypothesized for the branch segment terminating in that node.
 For the root node, because it has no branch segment terminating on it, the regime specification is irrelevant.
 If there are <code>nchar</code> quantitative characters, then one can specify a single set of <code>regimes</code> for all characters or a list of <code>nchar</code> regime specifications, one for each character.</p>
 </td></tr>
-<tr valign="top"><td><code>sqrt.alpha, sigma</code></td>
+<tr style="vertical-align: top;"><td><code>sqrt.alpha, sigma</code></td>
 <td>
 <p>These are used to initialize the optimization algorithm.
 The selection strength matrix <code class="reqn">\alpha</code> and the random drift variance-covariance matrix <code class="reqn">\sigma^2</code> are parameterized by their matrix square roots.
@@ -73,22 +73,22 @@ Specifically, these initial guesses are each packed into lower-triangular matric
 The product of this matrix with its transpose is the <code class="reqn">\alpha</code> or <code class="reqn">\sigma^2</code> matrix.
 See Details for more information.</p>
 </td></tr>
-<tr valign="top"><td><code>fit</code></td>
+<tr style="vertical-align: top;"><td><code>fit</code></td>
 <td>
 <p>If <code>fit=TRUE</code>, then the likelihood will be maximized.
 If <code>fit=FALSE</code>, the likelihood will be evaluated at the specified values of <code>sqrt.alpha</code> and <code>sigma</code>;
 the optima <code>theta</code> will be returned as well.</p>
 </td></tr>
-<tr valign="top"><td><code>method</code></td>
+<tr style="vertical-align: top;"><td><code>method</code></td>
 <td>
 <p>The method to be used by the optimization algorithm.
 See <code><a href="../../subplex/help/subplex.html">subplex::subplex</a></code> and <code><a href="../../stats/help/optim.html">stats::optim</a></code> for information on the available options.</p>
 </td></tr>
-<tr valign="top"><td><code>hessian</code></td>
+<tr style="vertical-align: top;"><td><code>hessian</code></td>
 <td>
 <p>If <code>hessian=TRUE</code>, then the Hessian matrix will be computed by <code>optim</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>Additional arguments will be passed as <code>control</code> options to <code>optim</code> or <code>subplex</code>.
 See <code><a href="../../stats/help/optim.html">stats::optim()</a></code> and <code><a href="../../subplex/help/subplex.html">subplex::subplex()</a></code> for information on the available options.</p>

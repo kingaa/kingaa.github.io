@@ -111,6 +111,18 @@ and the estimated likelihood.
 
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
+<h3>References</h3>
+
+<p>Ionides, E. L., Asfaw, K., Park, J., and King, A. A. (2021). Bagged filters for partially observed interacting systems. <em>Journal of the American Statistical Association</em>, <a href="https://doi.org/10.1080/01621459.2021.1974867">doi:10.1080/01621459.2021.1974867</a>
+</p>
+
+
 <h3>See Also</h3>
 
 <p>Other particle filter methods: 
@@ -118,6 +130,7 @@ and the estimated likelihood.
 <code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
 <code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
 <code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
 <code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
@@ -126,8 +139,10 @@ and the estimated likelihood.
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'># Create a simulation of a Brownian motion
-b &lt;- bm(U=3, N=10)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+# Create a simulation of a Brownian motion
+b &lt;- bm(U=2, N=5)
 
 # Create a neighborhood function mapping a point in space-time
 # to a list of neighboring points in space-time
@@ -144,8 +159,10 @@ abfd_bm &lt;- abf(b, Nrep=2, Np=10, nbhd=bm_nbhd)
 
 # Get the likelihood estimate from ABF
 logLik(abfd_bm)
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

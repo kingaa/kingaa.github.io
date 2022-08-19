@@ -136,35 +136,35 @@ For more information, see the examples section below.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess_spec.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
-For more information, see <a href="../../pomp/help/rmeasure_spec.html">rmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>dprocess</code></td>
 <td>
 <p>optional;
 specification of the probability density evaluation function of the unobserved state process.
 Setting <code>dprocess=NULL</code> removes the latent-state density evaluator.
-For more information, see <a href="../../pomp/help/dprocess_spec.html">dprocess specification</a>.</p>
+For more information, see <a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
-For more information, see <a href="../../pomp/help/dmeasure_spec.html">dmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>skeleton</code></td>
 <td>
 <p>optional; the deterministic skeleton of the unobserved state process.
 Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
-Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton_spec.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton_spec.html">map</a></code> fnctions.
-For more information, see <a href="../../pomp/help/skeleton_spec.html">skeleton specification</a>.
+Accordingly, this is supplied using either the <code><a href="../../pomp/help/skeleton+20specification.html">vectorfield</a></code> or <code><a href="../../pomp/help/skeleton+20specification.html">map</a></code> fnctions.
+For more information, see <a href="../../pomp/help/skeleton+20specification.html">skeleton specification</a>.
 Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>rinit</code></td>
@@ -172,18 +172,18 @@ Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>rprior</code></td>
 <td>
 <p>optional; prior distribution sampler, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
-For more information, see <a href="../../pomp/help/prior_spec.html">prior specification</a>.
+For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>dprior</code></td>
 <td>
 <p>optional; prior distribution density evaluator, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
-For more information, see <a href="../../pomp/help/prior_spec.html">prior specification</a>.
+For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>dprior=NULL</code> resets the prior distribution to its default, which is a flat improper prior.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>unit_statenames</code></td>
@@ -318,11 +318,19 @@ The five unit-level model components must be provided via C snippets. The remain
 </p>
 
 
-<h3>References</h3>
+<h3>Author(s)</h3>
 
-<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+<p>Kidus Asfaw, Edward L. Ionides, Aaron A. King
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+
+<h3>References</h3>
+
+<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
+</p>
+<p>King, A. A., Nguyen, D. and Ionides, E. L. (2016) Statistical Inference for Partially Observed Markov Processes via the R Package pomp. <em>Journal of Statistical Software</em>, <b>69(12)</b>, 1&ndash;43. <a href="https://doi.org/10.18637/jss.v069.i12">doi:10.18637/jss.v069.i12</a>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

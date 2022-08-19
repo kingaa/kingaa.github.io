@@ -80,6 +80,7 @@ are estimated filter means, prediction means and forecasts that are generated du
 <code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
 <code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
 <code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
 <code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
@@ -88,16 +89,20 @@ are estimated filter means, prediction means and forecasts that are generated du
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'># Create a simulation of a Brownian motion
-b &lt;- bm(U=6, N=10)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+# Create a simulation of a Brownian motion
+b &lt;- bm(U=2, N=5)
 
 # Run EnKF
-enkfd_bm &lt;- enkf(b, Np = 100)
+enkfd_bm &lt;- enkf(b, Np = 20)
 
 # Get a likelihood estimate
 logLik(enkfd_bm)
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

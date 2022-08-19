@@ -109,9 +109,17 @@ If both or neither is provided, an error is triggered.
 
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
 <h3>References</h3>
 
 <p>Rebeschini, P., &amp; Van Handel, R. (2015). Can local particle filters beat the curse of dimensionality?. <em>The Annals of Applied Probability</em>, <b>25(5)</b>, 2809-2866.
+</p>
+<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
 </p>
 
 
@@ -122,6 +130,7 @@ If both or neither is provided, an error is triggered.
 <code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
 <code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
 <code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
 <code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
@@ -130,22 +139,26 @@ If both or neither is provided, an error is triggered.
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'># Create a simulation of a Brownian motion
-b &lt;- bm(U=6, N=10)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+# Create a simulation of a Brownian motion
+b &lt;- bm(U=4, N=2)
 
 # Run BPF with the specified number of units per block
-bpfilterd_b1 &lt;- bpfilter(b, Np = 100, block_size = 2)
+bpfilterd_b1 &lt;- bpfilter(b, Np = 10, block_size = 2)
 
 # Run BPF with the specified partition
 bpfilterd_b2 &lt;- bpfilter(b,
-                         Np = 20,
-                         block_list = list(c(1,2), c(3,4), c(5,6)))
+                         Np = 10,
+                         block_list = list(c(1,2),c(3,4)) )
 
 # Get a likelihood estimate
 logLik(bpfilterd_b2)
 
+## End(Not run)
+
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

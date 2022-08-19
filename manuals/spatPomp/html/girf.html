@@ -77,7 +77,7 @@ girf(
 </td></tr>
 <tr style="vertical-align: top;"><td><code>Ninter</code></td>
 <td>
-<p>the number of intermediate resampling time points.</p>
+<p>the number of intermediate resampling time points. By default, this is set equal to the number of units.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>lookahead</code></td>
 <td>
@@ -122,11 +122,17 @@ run <code>girf()</code> and the resulting log likelihood estimate.
 
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
 <h3>References</h3>
 
-<p>Park, J. and Ionides, E. L. (2020) Inference on high-dimensional implicit dynamic models using a guided intermediate resampling filter. <em>Statistics and Computing</em>, <abbr><span class="acronym">DOI</span></abbr>: 10.1007/s11222-020-09957-3
+<p>Park, J. and Ionides, E. L. (2020) Inference on high-dimensional implicit dynamic models using a guided intermediate resampling filter. <em>Statistics and Computing</em>, <a href="https://doi.org/10.1007/s11222-020-09957-3">doi:10.1007/s11222-020-09957-3</a>
 </p>
-<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
 </p>
 
 
@@ -137,6 +143,7 @@ run <code>girf()</code> and the resulting log likelihood estimate.
 <code><a href="../../spatPomp/help/abf.html">abf</a>()</code>,
 <code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
 <code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
+<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
 <code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
@@ -145,24 +152,29 @@ run <code>girf()</code> and the resulting log likelihood estimate.
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'># Create a simulation of a Brownian motion
-b &lt;- bm(U=3, N=10)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+#
+# Create a simulation of a Brownian motion
+b &lt;- bm(U=2, N=5)
 
 # Run GIRF
 girfd_bm &lt;- girf(b,
-                 Np = 100,
+                 Np = 10,
                  Ninter = length(unit_names(b)),
                  lookahead = 1,
-                 Nguide = 50
+                 Nguide = 10
 )
 # Get the likelihood estimate from GIRF
 logLik(girfd_bm)
 
 # Compare with the likelihood estimate from particle filter
-pfd_bm &lt;- pfilter(b, Np = 500)
+pfd_bm &lt;- pfilter(b, Np = 10)
 logLik(pfd_bm)
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

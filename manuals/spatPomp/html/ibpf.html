@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Iterated ensemble Kalman filter (IEnKF)</title>
+<!DOCTYPE html><html><head><title>R: Iterated block particle filter (IBPF)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -14,29 +14,45 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>ienkf {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>ibpf {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Iterated ensemble Kalman filter (IEnKF)</h2>
+<h2>Iterated block particle filter (IBPF)</h2>
 
 <h3>Description</h3>
 
-<p>An implementation of a parameter estimation algorithm that uses
-the ensemble Kalman filter (Evensen, G. (1994)) to perform the filtering step in the
-parameter-perturbed iterated filtering scheme of Ionides et al. (2015)
-following the pseudocode in Asfaw, et al. (2020).
+<p>An iterated block particle filter, for both shared and unit-specific
+parameters. We require that the spatPomp has
+been constructed to have a unit-specific parameter &quot;thetau&quot;
+for unit u corresponding to an estimated parameter &quot;theta&quot;, whether
+theta is shared or unit-specific. This permits IBPF
+to implement a spatiotemporal random walk to estimate theta.
+We require that rw.sd is positive for, and only for, all parameters
+of the form &quot;thetau&quot; if &quot;theta&quot; is listed in sharedParNames or
+unitParNames.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>## S4 method for signature 'spatPomp'
-ienkf(
+<pre><code class='language-R'>## S4 method for signature 'missing'
+ibpf(data, ...)
+
+## S4 method for signature 'ANY'
+ibpf(data, ...)
+
+## S4 method for signature 'spatPomp'
+ibpf(
   data,
-  Nenkf = 1,
-  rw.sd,
-  cooling.type = c("geometric", "hyperbolic"),
-  cooling.fraction.50,
+  Nbpf,
   Np,
+  rw.sd,
+  sharedParNames,
+  unitParNames,
+  cooling.type = "geometric",
+  cooling.fraction.50,
+  block_size,
+  block_list,
+  spat_regression,
   ...,
   verbose = getOption("verbose", FALSE)
 )
@@ -48,11 +64,22 @@ ienkf(
 <table>
 <tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
-<p>an object of class <code>spatPomp</code></p>
+<p>either a data frame holding the time series data,
+or an object of class &lsquo;pomp&rsquo;,
+i.e., the output of another <span class="pkg">pomp</span> calculation.
+Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>Nenkf</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
-<p>number of iterations of perturbed EnKF.</p>
+<p>If a <code>params</code> argument is specified, <code>bpfilter</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Nbpf</code></td>
+<td>
+<p>the number of iterations of perturbed BPF.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>Np</code></td>
+<td>
+<p>The number of particles used within each replicate for the adapted simulations.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>rw.sd</code></td>
 <td>
@@ -69,6 +96,15 @@ The expression <code>ivp(s)</code> can be used in this context as shorthand for 
 <p>The perturbations that are applied are normally distributed with the specified s.d.
 If parameter transformations have been supplied, then the perturbations are applied on the transformed (estimation) scale.</p>
 </td></tr>
+<tr style="vertical-align: top;"><td><code>sharedParNames</code></td>
+<td>
+<p>estimated parameters that are equal for each unit.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>unitParNames</code></td>
+<td>
+<p>estimated parameters that are different for
+each unit.</p>
+</td></tr>
 <tr style="vertical-align: top;"><td><code>cooling.type, cooling.fraction.50</code></td>
 <td>
 <p>specifications for the cooling schedule,
@@ -76,13 +112,19 @@ i.e., the manner and rate with which the intensity of the parameter perturbation
 <code>cooling.type</code> specifies the nature of the cooling schedule.
 See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>Np</code></td>
+<tr style="vertical-align: top;"><td><code>block_size</code></td>
 <td>
-<p>The number of particles used within each replicate for the adapted simulations.</p>
+<p>The number of spatial units per block. If this is provided, the method subdivides units approximately evenly
+into blocks with size <code>block_size</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>block_list</code></td>
 <td>
-<p>If a <code>params</code> argument is specified, <code>abf</code> will estimate the likelihood at that parameter set instead of at <code>coef(object)</code>.</p>
+<p>List that specifies an exact partition of the spatial units. Each partition element, or block, is
+an integer vector of neighboring units.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>spat_regression</code></td>
+<td>
+<p>Fraction of each extended parameter regressed toward the unit mean.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>verbose</code></td>
 <td>
@@ -93,10 +135,8 @@ See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p
 
 <h3>Value</h3>
 
-<p>Upon successful completion, <code>ienkf</code> returns an object of class
-&lsquo;ienkfd_spatPomp&rsquo;. This object contains the convergence record of the iterative algorithm with
-respect to the likelihood and the parameters of the model (which can be accessed using the <code>traces</code>
-attribute) as well as a final parameter estimate, which can be accessed using the <code>coef()</code>.
+<p>Upon successful completion, <code>ibpf</code> returns an object of class
+&lsquo;ibpfd_spatPomp&rsquo;.
 </p>
 
 
@@ -114,23 +154,13 @@ attribute) as well as a final parameter estimate, which can be accessed using th
 
 <h3>Author(s)</h3>
 
-<p>Kidus Asfaw
+<p>Edward L. Ionides
 </p>
 
 
 <h3>References</h3>
 
-<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
-</p>
-<p>Evensen, G. (1994) Sequential data assimilation with a
-nonlinear quasi-geostrophic model using Monte Carlo methods to forecast
-error statistics Journal of Geophysical Research: Oceans 99:10143&ndash;10162
-</p>
-<p>Evensen, G. (2009) Data assimilation: the ensemble Kalman filter
-Springer-Verlag.
-</p>
-<p>Anderson, J. L. (2001) An Ensemble Adjustment Kalman Filter for Data
-Assimilation Monthly Weather Review 129:2884&ndash;2903
+<p>Ionides, E. L., Ning, N., and Wheeler, J. (2022). An iterated block particle filter for inference on coupled dynamic systems with shared and unit-specific parameters. <em>arXiv</em>:2206.03837, <a href="https://doi.org/10.48550/arXiv.2206.03837">doi:10.48550/arXiv.2206.03837</a>
 </p>
 
 
@@ -142,11 +172,7 @@ Assimilation Monthly Weather Review 129:2884&ndash;2903
 <code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
 <code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
 <code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
-<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
-<code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
-<code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
-</p>
-<p>Other spatPomp parameter estimation methods: 
+<code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>,
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
 </p>

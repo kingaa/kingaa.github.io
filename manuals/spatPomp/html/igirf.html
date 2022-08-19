@@ -104,14 +104,7 @@ The expression <code>ivp(s)</code> can be used in this context as shorthand for 
 <p>The perturbations that are applied are normally distributed with the specified s.d.
 If parameter transformations have been supplied, then the perturbations are applied on the transformed (estimation) scale.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>cooling.type</code></td>
-<td>
-<p>specifications for the cooling schedule,
-i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
-<code>cooling.type</code> specifies the nature of the cooling schedule.
-See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
-</td></tr>
-<tr style="vertical-align: top;"><td><code>cooling.fraction.50</code></td>
+<tr style="vertical-align: top;"><td><code>cooling.type, cooling.fraction.50</code></td>
 <td>
 <p>specifications for the cooling schedule,
 i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
@@ -120,7 +113,7 @@ See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p
 </td></tr>
 <tr style="vertical-align: top;"><td><code>Ninter</code></td>
 <td>
-<p>the number of intermediate resampling time points.</p>
+<p>the number of intermediate resampling time points. By default, this is set equal to the number of units.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>lookahead</code></td>
 <td>
@@ -167,11 +160,17 @@ algorithmic parameters used to run <code>igirf()</code> are also included.
 
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
 <h3>References</h3>
 
-<p>Park, J. and Ionides, E. L. (2020) Inference on high-dimensional implicit dynamic models using a guided intermediate resampling filter. <em>Statistics and Computing</em>, <abbr><span class="acronym">DOI</span></abbr>: 10.1007/s11222-020-09957-3
+<p>Park, J. and Ionides, E. L. (2020) Inference on high-dimensional implicit dynamic models using a guided intermediate resampling filter. <em>Statistics and Computing</em>, <a href="https://doi.org/10.1007/s11222-020-09957-3">doi:10.1007/s11222-020-09957-3</a>
 </p>
-<p>Asfaw, K. et al. (2020) Statistical inference for spatiotemporal partially observed Markov processes via the R package spatPomp. <em>Manuscript in preparation</em>.
+<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
 </p>
 
 
@@ -183,6 +182,7 @@ algorithmic parameters used to run <code>igirf()</code> are also included.
 <code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
 <code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
 <code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
 <code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
 </p>
@@ -191,6 +191,19 @@ algorithmic parameters used to run <code>igirf()</code> are also included.
 <code><a href="../../spatPomp/help/iubf.html">iubf</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+igirf(bm(U=2,N=4),Ngirf=2,
+  rw.sd = rw.sd(rho=0.02,X1_0=ivp(0.02)),
+  cooling.type="geometric",cooling.fraction.50=0.5,
+  Np=10,Ninter=2,lookahead=1,Nguide=5)
+
+## End(Not run)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

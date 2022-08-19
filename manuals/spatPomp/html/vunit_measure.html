@@ -68,9 +68,17 @@ and the parameter set <code>params</code> for unit <code>unit</code>.
 </p>
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
 <h3>Examples</h3>
 
-<pre><code class='language-R'>b &lt;- bm(U=3)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+b &lt;- bm(U=3)
 s &lt;- states(b)[,1,drop=FALSE]
 rownames(s) -&gt; rn
 dim(s) &lt;- c(3,1,1)
@@ -79,8 +87,10 @@ p &lt;- coef(b); names(p) -&gt; rnp
 dim(p) &lt;- c(length(p),1); dimnames(p) &lt;- list(param=rnp)
 o &lt;- obs(b)[,1,drop=FALSE]
 vunit_measure(b, x=s, unit=2, time=1, params=p)
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -32,7 +32,7 @@ enkf-spatPomp	enkf
 eunit_measure	eunit_measure
 eunit_measure,spatPomp-method	eunit_measure
 eunit_measure-spatPomp	eunit_measure
-gbm	gbm
+gbm	lorenz
 girf	girf
 girf,ANY-method	girf
 girf,girfd_spatPomp-method	girf
@@ -42,6 +42,18 @@ girf-ANY	girf
 girf-girfd_spatPomp	girf
 girf-missing	girf
 girf-spatPomp	girf
+he10	he10
+he10coordinates	he10
+he10demography	he10
+he10measles	he10
+he10mle	he10
+ibpf	ibpf
+ibpf,ANY-method	ibpf
+ibpf,missing-method	ibpf
+ibpf,spatPomp-method	ibpf
+ibpf-ANY	ibpf
+ibpf-missing	ibpf
+ibpf-spatPomp	ibpf
 ienkf	ienkf
 ienkf,spatPomp-method	ienkf
 ienkf-spatPomp	ienkf
@@ -71,7 +83,6 @@ logLik-girfd_spatPomp	loglik
 logLik-igirfd_spatPomp	loglik
 logLik-iubfd_spatPomp	loglik
 lorenz	lorenz
-mcap	mcap
 measles	measles
 measlesUK	measlesUK
 munit_measure	munit_measure

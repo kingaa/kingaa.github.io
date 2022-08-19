@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Lorenz '96 spatPomp simulator</title>
+<!DOCTYPE html><html><head><title>R: Geometric Brownian motion spatPomp simulator</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -16,10 +16,15 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>lorenz {spatPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Lorenz '96 spatPomp simulator</h2>
+<h2>Geometric Brownian motion spatPomp simulator</h2>
 
 <h3>Description</h3>
 
+<p>Generate a spatPomp object representing a <code>U</code>-dimensional
+geometric Brownian motion with spatial correlation decaying geometrically with
+distance around a circle. The model is defined in continuous time, but
+an Euler approximation is used for this numerical implementation.
+</p>
 <p>Generate a spatPomp object representing a <code>U</code>-dimensional stochastic Lorenz '96 process with
 <code>N</code> measurements made at times <code class="reqn">t_n = n * delta_obs</code>, simulated using an Euler method
 with time increment <code>delta_t</code>.
@@ -28,7 +33,9 @@ with time increment <code>delta_t</code>.
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>lorenz(
+<pre><code class='language-R'>gbm(U = 5, N = 100, delta_t = 0.1, IVP_values = 1, delta_obs = 1)
+
+lorenz(
   U = 5,
   N = 100,
   delta_t = 0.01,
@@ -53,6 +60,10 @@ with time increment <code>delta_t</code>.
 <td>
 <p>A length-one numeric giving the Euler time step for the numerical solution.</p>
 </td></tr>
+<tr style="vertical-align: top;"><td><code>IVP_values</code></td>
+<td>
+<p>initial value parameters for the latent states</p>
+</td></tr>
 <tr style="vertical-align: top;"><td><code>delta_obs</code></td>
 <td>
 <p>A length-one numeric giving the time between observations.</p>
@@ -69,23 +80,64 @@ with time increment <code>delta_t</code>.
 <h3>Value</h3>
 
 <p>An object of class &lsquo;spatPomp&rsquo; representing a simulation from a <code>U</code>-dimensional
+geometric Brownian motion
+</p>
+<p>An object of class &lsquo;spatPomp&rsquo; representing a simulation from a <code>U</code>-dimensional
 Lorenz 96 model
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+<p>Edward L. Ionides
 </p>
 
 
 <h3>References</h3>
 
+<p>Asfaw, K. T. (2021). Simulation-based Inference for Partially Observed Markov Process Models with Spatial Coupling. University of Michigan Doctoral dissertation. <a href="https://doi.org/10.7302/2751">doi:10.7302/2751</a>
+</p>
 <p>Lorenz, E. N. (1996) Predictability: A problem partly solved. <em>Proceedings of the seminar on predictability</em>
+</p>
+<p>Ionides, E. L., Asfaw, K., Park, J., and King, A. A. (2021). Bagged filters for partially observed interacting systems. <em>Journal of the American Statistical Association</em>, <a href="https://doi.org/10.1080/01621459.2021.1974867">doi:10.1080/01621459.2021.1974867</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other spatPomp examples: 
+<code><a href="../../spatPomp/help/bm.html">bm</a>()</code>,
+<code><a href="../../spatPomp/help/he10.html">he10</a>()</code>,
+<code><a href="../../spatPomp/help/measles.html">measles</a>()</code>
+</p>
+<p>Other spatPomp examples: 
+<code><a href="../../spatPomp/help/bm.html">bm</a>()</code>,
+<code><a href="../../spatPomp/help/he10.html">he10</a>()</code>,
+<code><a href="../../spatPomp/help/measles.html">measles</a>()</code>
 </p>
 
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>l &lt;- lorenz(U=5, N=100, delta_t=0.01, delta_obs=1)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+g &lt;- gbm(U=4, N=20)
+# See all the model specifications of the object
+spy(g)
+
+## End(Not run)
+
+# Complete examples are provided in the package tests
+## Not run: 
+l &lt;- lorenz(U=5, N=100, delta_t=0.01, delta_obs=1)
 # See all the model specifications of the object
 spy(l)
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

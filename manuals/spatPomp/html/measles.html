@@ -32,7 +32,6 @@ The data in the object is simulated using the process and measurement models of 
   U = 6,
   dt = 2/365,
   fixed_ivps = TRUE,
-  shared_ivps = TRUE,
   S_0 = 0.032,
   E_0 = 5e-05,
   I_0 = 4e-05
@@ -53,25 +52,21 @@ The data in the object is simulated using the process and measurement models of 
 </td></tr>
 <tr style="vertical-align: top;"><td><code>fixed_ivps</code></td>
 <td>
-<p>a logical. If <code>TRUE</code> initial value parameters will be declared in the <code>globals</code> slot and
+<p>a logical. If <code>TRUE</code> initial value parameters will be
+declared in the <code>globals</code> slot, shared for each unit, and
 will not be part of the parameter vector.</p>
-</td></tr>
-<tr style="vertical-align: top;"><td><code>shared_ivps</code></td>
-<td>
-<p>a logical. If <code>TRUE</code> and <code>fixed_ivps=TRUE</code> the values of <code>S_0</code>, <code>E_0</code> and <code>I_0</code> in the
-call to <code>measles</code> will be used as initial value parameters for all spatial units.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>S_0</code></td>
 <td>
-<p>a numeric. If <code>shared_ivps=TRUE</code> and <code>fixed_ivps=TRUE</code> this is the initial proportion of all of the spatial units that are susceptible.</p>
+<p>a numeric. If <code>fixed_ivps=TRUE</code> this is the initial proportion of all of the spatial units that are susceptible.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>E_0</code></td>
 <td>
-<p>a numeric. If <code>shared_ivps=TRUE</code> and <code>fixed_ivps=TRUE</code> this is the initial proportion of all of the spatial units that are exposed.</p>
+<p>a numeric. If <code>fixed_ivps=TRUE</code> this is the initial proportion of all of the spatial units that are exposed.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>I_0</code></td>
 <td>
-<p>a numeric. If <code>shared_ivps=TRUE</code> and <code>fixed_ivps=TRUE</code> this is the initial proportion of all of the spatial units that are infected.</p>
+<p>a numeric. If <code>fixed_ivps=TRUE</code> this is the initial proportion of all of the spatial units that are infected.</p>
 </td></tr>
 </table>
 
@@ -105,19 +100,38 @@ spatPomp object via a call to spatPomp().
 </p>
 
 
+<h3>Author(s)</h3>
+
+<p>Edward L. Ionides
+</p>
+
+
 <h3>References</h3>
 
 <p>Robert J. Hijmans (2019). The <span class="pkg">geosphere</span> spherical trigonometry package. <a href="https://CRAN.R-project.org/package=geosphere">https://CRAN.R-project.org/package=geosphere</a>.
 </p>
 
 
+<h3>See Also</h3>
+
+<p>Other spatPomp examples: 
+<code><a href="../../spatPomp/help/bm.html">bm</a>()</code>,
+<code><a href="../../spatPomp/help/he10.html">he10</a>()</code>,
+<code><a href="../../spatPomp/help/lorenz.html">lorenz</a>()</code>
+</p>
+
+
 <h3>Examples</h3>
 
-<pre><code class='language-R'>m &lt;- measles(U = 5)
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+m &lt;- measles(U = 5)
 # See all the model specifications of the object
 spy(m)
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

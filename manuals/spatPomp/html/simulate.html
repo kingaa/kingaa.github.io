@@ -89,14 +89,30 @@ If <code>format='data.frame'</code> then a class &lsquo;data.frame&rsquo; object
 </p>
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
+<h3>References</h3>
+
+<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
+</p>
+
+
 <h3>Examples</h3>
 
-<pre><code class='language-R'># Get a spatPomp object
-b &lt;- bm(U=5, N=10)
-# Get 10 simulations from same model as data.frame
-sims &lt;- simulate(b, nsim=10, format='data.frame')
+<pre><code class='language-R'># Complete examples are provided in the package tests
+## Not run: 
+# Get a spatPomp object
+b &lt;- bm(U=2, N=5)
+# Get 2 simulations from same model as data.frame
+sims &lt;- simulate(b, nsim=2, format='data.frame')
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

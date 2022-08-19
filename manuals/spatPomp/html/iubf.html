@@ -93,14 +93,7 @@ The expression <code>ivp(s)</code> can be used in this context as shorthand for 
 <p>The perturbations that are applied are normally distributed with the specified s.d.
 If parameter transformations have been supplied, then the perturbations are applied on the transformed (estimation) scale.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>cooling.type</code></td>
-<td>
-<p>specifications for the cooling schedule,
-i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
-<code>cooling.type</code> specifies the nature of the cooling schedule.
-See below (under &ldquo;Specifying the perturbations&rdquo;) for more detail.</p>
-</td></tr>
-<tr style="vertical-align: top;"><td><code>cooling.fraction.50</code></td>
+<tr style="vertical-align: top;"><td><code>cooling.type, cooling.fraction.50</code></td>
 <td>
 <p>specifications for the cooling schedule,
 i.e., the manner and rate with which the intensity of the parameter perturbations is reduced with successive filtering iterations.
@@ -149,6 +142,20 @@ algorithmic parameters used to run <code>iubf()</code> are also included.
 
 
 
+<h3>Author(s)</h3>
+
+<p>Kidus Asfaw
+</p>
+
+
+<h3>References</h3>
+
+<p>Asfaw, K., Park, J., Ho, A., King, A. A., and Ionides, E. L. (2020) Partially observed Markov processes with spatial structure via the R package spatPomp. <em>ArXiv</em>: 2101.01157. <a href="https://doi.org/10.48550/arXiv.2101.01157">doi:10.48550/arXiv.2101.01157</a>
+</p>
+<p>Ionides, E. L., Asfaw, K., Park, J., and King, A. A. (2021). Bagged filters for partially observed interacting systems. <em>Journal of the American Statistical Association</em>, <a href="https://doi.org/10.1080/01621459.2021.1974867">doi:10.1080/01621459.2021.1974867</a>
+</p>
+
+
 <h3>See Also</h3>
 
 <p>Other particle filter methods: 
@@ -157,6 +164,7 @@ algorithmic parameters used to run <code>iubf()</code> are also included.
 <code><a href="../../spatPomp/help/bpfilter.html">bpfilter</a>()</code>,
 <code><a href="../../spatPomp/help/enkf.html">enkf</a>()</code>,
 <code><a href="../../spatPomp/help/girf.html">girf</a>()</code>,
+<code><a href="../../spatPomp/help/ibpf.html">ibpf</a>()</code>,
 <code><a href="../../spatPomp/help/ienkf.html">ienkf</a>()</code>,
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>
 </p>
@@ -165,6 +173,6 @@ algorithmic parameters used to run <code>iubf()</code> are also included.
 <code><a href="../../spatPomp/help/igirf.html">igirf</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.29.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>spatPomp</em> version 0.30.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

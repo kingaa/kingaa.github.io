@@ -27,7 +27,7 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'pfilterd_pomp'
-saved.states(object, ...)
+saved.states(object, ..., format = c("list", "data.frame"))
 
 ## S4 method for signature 'pfilterList'
 saved.states(object, ...)
@@ -45,6 +45,11 @@ saved.states(object, ...)
 <td>
 <p>ignored</p>
 </td></tr>
+<tr style="vertical-align: top;"><td><code>format</code></td>
+<td>
+<p>character;
+format of the returned object (see below).</p>
+</td></tr>
 </table>
 
 
@@ -52,13 +57,22 @@ saved.states(object, ...)
 
 <p>When one calls <code><a href="../../pomp/help/pfilter.html">pfilter</a></code> with <code>save.states=TRUE</code>, the latent state vector associated with each particle is saved.
 This can be extracted by calling <code>saved.states</code> on the &lsquo;pfilterd.pomp&rsquo; object.
+These are the <em>unweighted</em> particles, saved <em>after</em> resampling.
 </p>
 
 
 <h3>Value</h3>
 
-<p>The saved states are returned in the form of a list, with one element per time-point.
+<p>According to the <code>format</code> argument, the saved states are returned either as a list or a data frame.
+</p>
+<p>If <code>format="data.frame"</code>, then the returned data frame holds the state variables and (optionally) the unnormalized log weight of each particle at each observation time.
+The <code>.id</code> variable distinguishes particles.
+</p>
+<p>If <code>format="list"</code> and <code><a href="../../pomp/help/pfilter.html">pfilter</a></code> was called with <code>save.states="unweighted"</code> or <code>save.states="TRUE"</code>, the returned list contains one element per observation time.
 Each element consists of a matrix, with one row for each state variable and one column for each particle.
+If <code><a href="../../pomp/help/pfilter.html">pfilter</a></code> was called with <code>save.states="weighted"</code>, the list itself contains two lists:
+the first holds the particles as above, the second holds the corresponding unnormalized log weights.
+In particular, it has one element per observation time; each element is the vector of per-particle log weights.
 </p>
 
 
@@ -98,6 +112,6 @@ Each element consists of a matrix, with one row for each state variable and one 
 <code><a href="../../pomp/help/traces.html">traces</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

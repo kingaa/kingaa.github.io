@@ -39,7 +39,7 @@ pfilter(
   pred.var = FALSE,
   filter.mean = FALSE,
   filter.traj = FALSE,
-  save.states = FALSE,
+  save.states = c("no", "weighted", "unweighted", "FALSE", "TRUE"),
   ...,
   verbose = getOption("verbose", FALSE)
 )
@@ -52,7 +52,7 @@ pfilter(
   pred.var = FALSE,
   filter.mean = FALSE,
   filter.traj = FALSE,
-  save.states = FALSE,
+  save.states = c("no", "weighted", "unweighted", "FALSE", "TRUE"),
   ...,
   verbose = getOption("verbose", FALSE)
 )
@@ -130,8 +130,12 @@ See <code><a href="../../pomp/help/filter.traj.html">filter.traj</a></code> for 
 </td></tr>
 <tr style="vertical-align: top;"><td><code>save.states</code></td>
 <td>
-<p>logical.
-If <code>save.states=TRUE</code>, the state-vector for each particle at each time is saved.</p>
+<p>character;
+If <code>save.states="unweighted"</code>, the state-vector for each unweighted particle at each time is saved.
+If <code>save.states="weighted"</code>, the state-vector for each weighted particle at each time is saved, along with the corresponding weight.
+If <code>save.states="no"</code>, information on the latent states is not saved.
+<code>"FALSE"</code> is a synonym for <code>"no"</code> and <code>"TRUE"</code> is a synonym for <code>"unweighted"</code>.
+To retrieve the saved states, applying <code><a href="../../pomp/help/saved.states.html">saved.states</a></code> to the result of the <code>pfilter</code> computation.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
@@ -176,9 +180,9 @@ Information can be extracted from this object using the methods documented below
 Useful for building up the smoothing distribution.
 </p>
 </dd>
-<dt><code><a href="../../pomp/help/saved.states.html">saved.states</a></code></dt><dd><p>retrieve list of saved states.</p>
+<dt><code><a href="../../pomp/help/saved.states.html">saved.states</a></code></dt><dd><p>retrieve saved states</p>
 </dd>
-<dt><code><a href="../../pomp/help/as.data.frame.html">as.data.frame</a></code></dt><dd><p> coerce to a data frame </p>
+<dt><code><a href="../../pomp/help/as.data.frame.html">as.data.frame</a></code></dt><dd><p>coerce to a data frame</p>
 </dd>
 <dt><code><a href="../../pomp/help/plot.html">plot</a></code></dt><dd><p>diagnostic plots</p>
 </dd>
@@ -253,14 +257,14 @@ eff.sample.size(pf)             ## effective sample size
 logLik(pfilter(pf))      	## run it again with 1000 particles
 
 ## run it again with 2000 particles
-pf &lt;- pfilter(pf,Np=2000,filter.mean=TRUE,filter.traj=TRUE,save.states=TRUE)
-fm &lt;- filter.mean(pf)    	## extract the filtering means
-ft &lt;- filter.traj(pf)    	## one draw from the smoothing distribution
-ss &lt;- saved.states(pf)          ## the latent-state portion of each particle
+pf &lt;- pfilter(pf,Np=2000,filter.mean=TRUE,filter.traj=TRUE,save.states="weighted")
+fm &lt;- filter.mean(pf) ## extract the filtering means
+ft &lt;- filter.traj(pf) ## one draw from the smoothing distribution
+ss &lt;- saved.states(pf,format="d") ## the latent-state portion of each particle
 
 as(pf,"data.frame") %&gt;% head()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

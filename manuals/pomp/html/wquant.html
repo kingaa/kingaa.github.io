@@ -20,7 +20,7 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>Computes weighted quantiles.
+<p>Estimate weighted quantiles.
 </p>
 
 
@@ -28,7 +28,7 @@ function processMathHTML() {
 
 <pre><code class='language-R'>wquant(
   x,
-  weights,
+  weights = rep(1, length(x)),
   probs = c(`0%` = 0, `25%` = 0.25, `50%` = 0.5, `75%` = 0.75, `100%` = 1)
 )
 </code></pre>
@@ -54,13 +54,13 @@ function processMathHTML() {
 
 <h3>Details</h3>
 
-<p><code>wquant</code> computes a quantile of type 7 according to the typology of <code><a href="../../stats/help/quantile.html">quantile</a></code>.
+<p><code>wquant</code> estimates quantiles of weighted data using the estimator of Harrell &amp; Davis (1982), with improvements recommended by Andrey Akinshin.
 </p>
 
 
 <h3>Value</h3>
 
-<p><code>wquant</code> returns a vector containing the quantiles.
+<p><code>wquant</code> returns a vector containing the estimated quantiles.
 If <code>probs</code> has names, these are inherited.
 </p>
 
@@ -71,14 +71,21 @@ If <code>probs</code> has names, these are inherited.
 </p>
 
 
+<h3>References</h3>
+
+<p>F. E. Harrell and C. E. Davis. A new distribution-free quantile estimator. <em>Biometrika</em> <b>69</b>, 635&ndash;640, 1982.
+</p>
+
+
 <h3>Examples</h3>
 
 <pre><code class='language-R'>x &lt;- c(1,1,1,2,2,3,3,3,3,4,5,5,6,6,6)
 quantile(x)
+wquant(x)
 wquant(c(1,2,3,4,5,6),weights=c(3,2,4,1,2,3))
-
+wquant(c(1,2,3,4,5),c(1,0,0,1,1))
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

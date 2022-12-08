@@ -18,6 +18,50 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 4.4.3</h3>
+
+
+<ul>
+<li><p> A bug in trajectory computation for maps (discrete-time dynamical systems) has been fixed.
+Thanks to Felicia Magpantay for noticing it and tracking it down.
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">pomp</span> version 4.4.2</h3>
+
+
+<ul>
+<li><p> The weighted quantile function <code>wquant</code> now uses the Harrell-Davis estimator instead of the type-7 estimator used previously.
+This eliminates bugs associated with non-integer weights.
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">pomp</span> version 4.4.1</h3>
+
+
+<ul>
+<li><p> It is now possible to retrieve the weighted particles computed in the course of a <code>pfilter</code> computation.
+To accomplish this, set <code>save.states="weighted"</code> in the call to <code>pfilter</code> and retrieve the particles and their weights using <code>saved.states</code>.
+Previously, one could obtain only the unweighted particles.
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">pomp</span> version 4.4.0</h3>
+
+
+<ul>
+<li><p> Some documentation improvements.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 4.3.4</h3>
 
 

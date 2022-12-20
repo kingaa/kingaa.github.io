@@ -26,7 +26,7 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>kalmanFilter(object, X0, A, Q, C, R, tol = 1e-06)
+<pre><code class='language-R'>kalmanFilter(object, X0 = rinit(object), A, Q, C, R, tol = 1e-06)
 </code></pre>
 
 
@@ -45,22 +45,22 @@ This is assumed known without uncertainty.</p>
 <tr style="vertical-align: top;"><td><code>A</code></td>
 <td>
 <p><code class="reqn">m\times m</code> latent state-process transition matrix.
-<code class="reqn">E[X(t+1) | X(t)] = A.X(t)</code>.</p>
+<code class="reqn">E[X_{t+1} | X_t] = A.X_t</code>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>Q</code></td>
 <td>
 <p><code class="reqn">m\times m</code> latent state-process covariance matrix.
-<code class="reqn">Var[X(t+1) | X(t)] = Q</code></p>
+<code class="reqn">Var[X_{t+1} | X_t] = Q</code></p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>C</code></td>
 <td>
 <p><code class="reqn">n\times m</code> link matrix.
-<code class="reqn">E[Y(t) | X(t)] = C.X(t)</code>.</p>
+<code class="reqn">E[Y_t | X_t] = C.X_t</code>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>R</code></td>
 <td>
 <p><code class="reqn">n\times n</code> observation process covariance matrix.
-<code class="reqn">Var[Y(t) | X(t)] = R</code></p>
+<code class="reqn">Var[Y_t | X_t] = R</code></p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>tol</code></td>
 <td>
@@ -74,16 +74,17 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 <h3>Details</h3>
 
 <p>If the latent state is <code class="reqn">X</code>, the observed variable is <code class="reqn">Y</code>,
-<code class="reqn">X(t) \in R^m</code>, <code class="reqn">Y(t) \in R^n</code>, and
+<code class="reqn">X_t \in R^m</code>, <code class="reqn">Y_t \in R^n</code>, and
 </p>
-<p style="text-align: center;"><code class="reqn">X(t) ~ MultivariateNormal(A X(t-1), Q)</code>
-</p>
-
-<p style="text-align: center;"><code class="reqn">Y(t) ~ MultivariateNormal(C X(t), R)</code>
+<p style="text-align: center;"><code class="reqn">X_t \sim \mathrm{MVN}(A X_{t-1}, Q)</code>
 </p>
 
-<p>Then the Kalman filter computes the exact likelihood of <code class="reqn">Y</code> given
-<code class="reqn">A</code>, <code class="reqn">C</code>, <code class="reqn">Q</code>, and <code class="reqn">R</code>.
+<p style="text-align: center;"><code class="reqn">Y_t \sim \mathrm{MVN}(C X_t, R)</code>
+</p>
+
+<p>where <code class="reqn">\mathrm{MVN}(M,V)</code> denotes the multivariate normal distribution with mean <code class="reqn">M</code> and variance <code class="reqn">V</code>.
+Then the Kalman filter computes the exact likelihood of <code class="reqn">Y</code>
+given <code class="reqn">A</code>, <code class="reqn">C</code>, <code class="reqn">Q</code>, and <code class="reqn">R</code>.
 </p>
 
 
@@ -97,15 +98,15 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 </dd>
 <dt>A, Q, C, R</dt><dd><p>as in the call</p>
 </dd>
-<dt>filter.mean</dt><dd><p><code class="reqn">E[X(t)|y^*(1),\dots,y^*(t)]</code></p>
+<dt>filter.mean</dt><dd><p><code class="reqn">E[X_t|y^*_1,\dots,y^*_t]</code></p>
 </dd>
-<dt>pred.mean</dt><dd><p><code class="reqn">E[X(t)|y^*(1),\dots,y^*(t-1)]</code></p>
+<dt>pred.mean</dt><dd><p><code class="reqn">E[X_t|y^*_1,\dots,y^*_{t-1}]</code></p>
 </dd>
-<dt>forecast</dt><dd><p><code class="reqn">E[Y(t)|y^*(1),\dots,y^*(t-1)]</code></p>
+<dt>forecast</dt><dd><p><code class="reqn">E[Y_t|y^*_1,\dots,y^*_{t-1}]</code></p>
 </dd>
-<dt>cond.logLik</dt><dd><p><code class="reqn">f(y^*(t)|y^*(1),\dots,y^*(t-1))</code></p>
+<dt>cond.logLik</dt><dd><p><code class="reqn">f(y^*_t|y^*_1,\dots,y^*_{t-1})</code></p>
 </dd>
-<dt>logLik</dt><dd><p><code class="reqn">f(y^*(1),\dots,y^*(T))</code></p>
+<dt>logLik</dt><dd><p><code class="reqn">f(y^*_1,\dots,y^*_T)</code></p>
 </dd>
 </dl>
 
@@ -151,6 +152,6 @@ Singular values smaller than <code>tol</code> are set to zero.</p>
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.4.3.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

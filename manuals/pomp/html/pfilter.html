@@ -166,21 +166,21 @@ Information can be extracted from this object using the methods documented below
 <dl>
 <dt><code><a href="../../pomp/help/logLik.html">logLik</a></code></dt><dd><p> the estimated log likelihood  </p>
 </dd>
-<dt><code><a href="../../pomp/help/cond.logLik.html">cond.logLik</a></code></dt><dd><p> the estimated conditional log likelihood </p>
+<dt><code><a href="../../pomp/help/cond_logLik.html">cond_logLik</a></code></dt><dd><p> the estimated conditional log likelihood </p>
 </dd>
-<dt><code><a href="../../pomp/help/eff.sample.size.html">eff.sample.size</a></code></dt><dd>
+<dt><code><a href="../../pomp/help/eff_sample_size.html">eff_sample_size</a></code></dt><dd>
 <p>the (time-dependent) estimated effective sample size </p>
 </dd>
-<dt><code><a href="../../pomp/help/pred.mean.html">pred.mean</a></code>, <code><a href="../../pomp/help/pred.var.html">pred.var</a></code></dt><dd><p> the mean and variance of the approximate prediction distribution </p>
+<dt><code><a href="../../pomp/help/pred_mean.html">pred_mean</a></code>, <code><a href="../../pomp/help/pred_var.html">pred_var</a></code></dt><dd><p> the mean and variance of the approximate prediction distribution </p>
 </dd>
-<dt><code><a href="../../pomp/help/filter.mean.html">filter.mean</a></code></dt><dd><p> the mean of the filtering distribution </p>
+<dt><code><a href="../../pomp/help/filter_mean.html">filter_mean</a></code></dt><dd><p> the mean of the filtering distribution </p>
 </dd>
-<dt><code><a href="../../pomp/help/filter.traj.html">filter.traj</a></code></dt><dd>
+<dt><code><a href="../../pomp/help/filter_traj.html">filter_traj</a></code></dt><dd>
 <p>retrieve one particle trajectory.
 Useful for building up the smoothing distribution.
 </p>
 </dd>
-<dt><code><a href="../../pomp/help/saved.states.html">saved.states</a></code></dt><dd><p>retrieve saved states</p>
+<dt><code><a href="../../pomp/help/saved_states.html">saved_states</a></code></dt><dd><p>retrieve saved states</p>
 </dd>
 <dt><code><a href="../../pomp/help/as.data.frame.html">as.data.frame</a></code></dt><dd><p>coerce to a data frame</p>
 </dd>
@@ -226,16 +226,16 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 </p>
 <p>More on sequential Monte Carlo methods: 
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
-<code><a href="../../pomp/help/cond.logLik.html">cond.logLik</a>()</code>,
-<code><a href="../../pomp/help/eff.sample.size.html">eff.sample.size</a>()</code>,
-<code><a href="../../pomp/help/filter.mean.html">filter.mean</a>()</code>,
-<code><a href="../../pomp/help/filter.traj.html">filter.traj</a>()</code>,
+<code><a href="../../pomp/help/cond_logLik.html">cond_logLik</a>()</code>,
+<code><a href="../../pomp/help/eff_sample_size.html">eff_sample_size</a>()</code>,
+<code><a href="../../pomp/help/filter_mean.html">filter_mean</a>()</code>,
+<code><a href="../../pomp/help/filter_traj.html">filter_traj</a>()</code>,
 <code><a href="../../pomp/help/kalman.html">kalman</a></code>,
 <code><a href="../../pomp/help/mif2.html">mif2</a>()</code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
-<code><a href="../../pomp/help/pred.mean.html">pred.mean</a>()</code>,
-<code><a href="../../pomp/help/pred.var.html">pred.var</a>()</code>,
-<code><a href="../../pomp/help/saved.states.html">saved.states</a>()</code>,
+<code><a href="../../pomp/help/pred_mean.html">pred_mean</a>()</code>,
+<code><a href="../../pomp/help/pred_var.html">pred_var</a>()</code>,
+<code><a href="../../pomp/help/saved_states.html">saved_states</a>()</code>,
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 <p>More on full-information (i.e., likelihood-based) methods:
@@ -252,19 +252,19 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 plot(pf)
 logLik(pf)
-cond.logLik(pf)			## conditional log-likelihoods
-eff.sample.size(pf)             ## effective sample size
+cond_logLik(pf)			## conditional log-likelihoods
+eff_sample_size(pf)             ## effective sample size
 logLik(pfilter(pf))      	## run it again with 1000 particles
 
 ## run it again with 2000 particles
 pf &lt;- pfilter(pf,Np=2000,filter.mean=TRUE,filter.traj=TRUE,save.states="weighted")
-fm &lt;- filter.mean(pf) ## extract the filtering means
-ft &lt;- filter.traj(pf) ## one draw from the smoothing distribution
-ss &lt;- saved.states(pf,format="d") ## the latent-state portion of each particle
+fm &lt;- filter_mean(pf) ## extract the filtering means
+ft &lt;- filter_traj(pf) ## one draw from the smoothing distribution
+ss &lt;- saved_states(pf,format="d") ## the latent-state portion of each particle
 
 as(pf,"data.frame") %&gt;% head()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

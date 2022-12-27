@@ -20,17 +20,18 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>These functions generate B-spline basis functions.  <code>bspline.basis</code>
-gives a basis of spline functions.  <code>periodic.bspline.basis</code> gives a
+<p>These functions generate B-spline basis functions.
+<code>bspline_basis</code> gives a basis of spline functions.
+<code>periodic_bspline_basis</code> gives a
 basis of periodic spline functions.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>bspline.basis(x, nbasis, degree = 3, deriv = 0, names = NULL, rg = range(x))
+<pre><code class='language-R'>bspline_basis(x, nbasis, degree = 3, deriv = 0, names = NULL, rg = range(x))
 
-periodic.bspline.basis(
+periodic_bspline_basis(
   x,
   nbasis,
   degree = 3,
@@ -86,13 +87,13 @@ To be properly specified, we must have <code>rg[1] &lt; rg[2]</code>.</p>
 <h3>Value</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>bspline.basis</code></td>
+<tr style="vertical-align: top;"><td><code>bspline_basis</code></td>
 <td>
 <p> Returns a matrix with <code>length(x)</code> rows
 and <code>nbasis</code> columns.  Each column contains the values one of the
 spline basis functions.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>periodic.bspline.basis</code></td>
+<tr style="vertical-align: top;"><td><code>periodic_bspline_basis</code></td>
 <td>
 <p> Returns a matrix with <code>length(x)</code> rows
 and <code>nbasis</code> columns.  The basis functions returned are periodic with
@@ -129,16 +130,16 @@ for definition and documentation of the C API.
 
 <pre><code class='language-R'>
 x &lt;- seq(0,2,by=0.01)
-y &lt;- bspline.basis(x,degree=3,nbasis=9,names="basis")
+y &lt;- bspline_basis(x,degree=3,nbasis=9,names="basis")
 matplot(x,y,type='l',ylim=c(0,1.1))
 lines(x,apply(y,1,sum),lwd=2)
 
 x &lt;- seq(-1,2,by=0.01)
-y &lt;- periodic.bspline.basis(x,nbasis=5,names="spline%d")
+y &lt;- periodic_bspline_basis(x,nbasis=5,names="spline%d")
 matplot(x,y,type='l')
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

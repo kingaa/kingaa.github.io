@@ -119,7 +119,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   ## Here, we pass the rmeasure specification to 'simulate'
   ## as an R function.
 
-  po %&gt;%
+  po |&gt;
     simulate(
       rmeasure=function (N, phi, ...) {
         c(y=rpois(n=1,lambda=phi*N))
@@ -128,7 +128,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
   ## We can also pass it as a C snippet:
 
-  po %&gt;%
+  po |&gt;
     simulate(
       rmeasure=Csnippet("y = rpois(phi*N);"),
       paramnames="phi",
@@ -138,6 +138,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

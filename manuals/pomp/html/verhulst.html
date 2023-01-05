@@ -65,13 +65,16 @@ function processMathHTML() {
 <p>A stochastic version of the Verhulst-Pearl logistic model.
 This evolves in continuous time, according to the stochastic differential equation
 </p>
-<p style="text-align: center;"><code class="reqn">dn = r\,n\,\left(1-\frac{n}{K}\right)\,dt+\sigma\,n\,dW.</code>
+<p style="text-align: center;"><code class="reqn">dn_t = r\,n_t\,\left(1-\frac{n_t}{K}\right)\,dt+\sigma\,n_t\,dW_t.</code>
 </p>
 
 <p>Numerically, we simulate the stochastic dynamics using an Euler approximation.
 </p>
-<p>The measurements are assumed to be log-normally distributed.
+<p>The measurements are assumed to be log-normally distributed:
 </p>
+<p style="text-align: center;"><code class="reqn">N_t \sim \mathrm{Lognormal}\left(\log{n_t},\tau\right).</code>
+</p>
+
 
 
 <h3>Value</h3>
@@ -111,6 +114,6 @@ The following basic components are included in the &lsquo;pomp&rsquo; object:
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Objects exported from other packages</title>
+<!DOCTYPE html><html><head><title>R: Melt</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -14,29 +14,26 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>reexports {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>melt {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Objects exported from other packages</h2>
+<h2>Melt</h2>
 
 <h3>Description</h3>
 
-<p>These objects are imported from other packages. Follow the links
-below to see their documentation.
+<p>Convert arrays, lists, and other objects to data frames.
 </p>
-
-<dl>
-<dt>reshape2</dt><dd><p><code><a href="../../reshape2/help/melt.html">melt</a></code></p>
-</dd>
-</dl>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>## S4 method for signature 'pomp'
-melt(data, ..., na.rm = FALSE, value.name = "value")
+<pre><code class='language-R'>## S4 method for signature 'ANY'
+melt(data, ...)
 
-## S4 method for signature 'listie'
-melt(data, ..., na.rm = FALSE, value.name = "value")
+## S4 method for signature 'array'
+melt(data, ...)
+
+## S4 method for signature 'list'
+melt(data, ..., level = 1)
 </code></pre>
 
 
@@ -45,31 +42,28 @@ melt(data, ..., na.rm = FALSE, value.name = "value")
 <table>
 <tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
-<p>Data set to melt</p>
+<p>object to convert</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
-<p>further arguments passed to or from other methods.</p>
-</td></tr>
-<tr style="vertical-align: top;"><td><code>na.rm</code></td>
-<td>
-<p>Should NA values be removed from the data set? This will
-convert explicit missings to implicit missings.</p>
-</td></tr>
-<tr style="vertical-align: top;"><td><code>value.name</code></td>
-<td>
-<p>name of variable used to store values</p>
+<p>ignored</p>
 </td></tr>
 </table>
 
 
 <h3>Details</h3>
 
-<p>See <code><a href="../../reshape2/help/melt.html">reshape2::melt</a></code> for details.
+<p><code>melt</code> converts its first argument to a data frame.
+It is a simplified version of the <code>melt</code> command provided by the now-deprecated <span class="pkg">reshape2</span> package.
 </p>
-<p>A &lsquo;pomp&rsquo; object can be melted into a data frame.
+<p>An array can be melted into a data frame.
+In this case, the data frame will have one row per entry in the array.
+</p>
+<p>A list can be melted into a data frame.
+This operation is recursive.
+A variable will be appended to distinguish the separate list entries.
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

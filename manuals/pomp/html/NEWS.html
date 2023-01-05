@@ -18,13 +18,36 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 4.5.2</h3>
+
+
+<ul>
+<li><p> A new <code>format</code> argument has been added to the extractor functions <code>cond_logLik</code>, <code>eff_sample_size</code>, <code>filter_mean</code>, <code>filter_traj</code>, <code>forecast</code>, <code>pred_mean</code>, <code>pred_var</code>, and <code>saved_states</code>.
+This allows the user to extract the relevant elements in data-frame format if desired.
+</p>
+</li>
+<li> <p><span class="pkg">pomp</span> no longer depends on the superseded packages <span class="pkg">reshape2</span> or <span class="pkg">plyr</span>.
+</p>
+</li>
+<li> <p><span class="pkg">pomp</span> has a new dependency on the package <span class="pkg">dplyr</span>.
+</p>
+</li>
+<li><p> The <span class="pkg">magrittr</span> pipe <code>%&gt;%</code> is no longer re-exported by <span class="pkg">pomp</span>: use the native <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> pipe <code>|&gt;</code> instead.
+</p>
+</li>
+<li><p> The package now requires <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> version 4.1 at least.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 4.5.1</h3>
 
 
 <ul>
 <li><p> All <span class="pkg">pomp</span> functions with names.that.contain.dots have been deprecated in favor of functions in &lsquo;snake_case&rsquo;.
 This is to avoid anticipated problems with CRAN checks, which (falsely) assume that certain functions with dotted.names are S3 methods.
-From this point, no expored <span class="pkg">pomp</span> function has such a name.
+From this point, no exported <span class="pkg">pomp</span> function has such a name.
 </p>
 </li>
 <li><p> The <code>dimnames</code> attributes for some of the arrays computed in <code>pfilter</code> and <code>pmcmc</code> computations have changed.

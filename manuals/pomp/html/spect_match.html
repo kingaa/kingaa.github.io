@@ -274,7 +274,7 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 <pre><code class='language-R'>
 
-  ricker() %&gt;%
+  ricker() |&gt;
     spect_objfun(
       est=c("r","sigma","N_0"),
       partrans=parameter_trans(log=c("r","sigma","N_0")),
@@ -285,7 +285,7 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
     ) -&gt; f
 
   f(log(c(20,0.3,10)))
-  f %&gt;% spect() %&gt;% plot()
+  f |&gt; spect() |&gt; plot()
 
   if (require(subplex)) {
     subplex(fn=f,par=log(c(20,0.3,10)),control=list(reltol=1e-5)) -&gt; out
@@ -294,13 +294,13 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
   }
   f(out$par)
 
-  f %&gt;% summary()
+  f |&gt; summary()
 
-  f %&gt;% spect() %&gt;% plot()
+  f |&gt; spect() |&gt; plot()
 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

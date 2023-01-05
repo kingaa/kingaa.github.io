@@ -39,13 +39,12 @@ License: GPL-3
 MD5sum: e9af8b2cb007b3845350eeadbfadd90d
 
 Package: pomp
-Version: 4.5.1.2
-Depends: R(>= 4.0.0), methods
-Imports: stats, graphics, digest, mvtnorm, deSolve, coda, reshape2,
-        magrittr, plyr
-Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
+Version: 4.5.2.1
+Depends: R(>= 4.1.0), methods
+Imports: stats, graphics, digest, mvtnorm, deSolve, coda, dplyr
+Suggests: ggplot2, knitr, tidyr, subplex, nloptr
 License: GPL-3
-MD5sum: c2cc2a835a0ad201cef2f211dd742d3d
+MD5sum: 628e8b0cb2bcf86fc01c8d426cb8d6c2
 
 Package: spatPomp
 Version: 0.29.0.1

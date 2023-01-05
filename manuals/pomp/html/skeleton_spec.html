@@ -164,7 +164,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   ## Since this is a continuous-time POMP, the
   ## skeleton is a vectorfield.
 
-  po %&gt;%
+  po |&gt;
     trajectory(
       skeleton=vectorfield(
         function(r, K, n, ...) {
@@ -176,7 +176,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
   ## We can also pass it as a C snippet:
 
-  po %&gt;%
+  po |&gt;
     traj_objfun(
       skeleton=vectorfield(Csnippet("Dn=r*n*(1-n/K);")),
       paramnames=c("r","K"),
@@ -190,7 +190,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
   gompertz() -&gt; po
 
-  po %&gt;%
+  po |&gt;
     traj_objfun(
       skeleton=map(
         Csnippet("
@@ -208,6 +208,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

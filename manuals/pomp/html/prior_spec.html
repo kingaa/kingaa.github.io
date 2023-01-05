@@ -129,14 +129,14 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <pre><code class='language-R'>## Not run: 
   ## Starting with an existing pomp object
 
-  verhulst() %&gt;% window(end=30) -&gt; po
+  verhulst() |&gt; window(end=30) -&gt; po
   
   ## we add or change prior distributions using the two
   ## arguments 'rprior' and 'dprior'. Here, we introduce
   ## a Gamma prior on the 'r' parameter.
   ## We construct 'rprior' and 'dprior' using R functions.
 
-  po %&gt;%
+  po |&gt;
     bsmc2(
       rprior=function (n_0, K0, K1, sigma, tau, r0, r1, ...) {
         c(
@@ -158,7 +158,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
   ## We can also pass them as C snippets:
 
-  po %&gt;%
+  po |&gt;
     bsmc2(
       rprior=Csnippet("
          K = rgamma(K0,K1);
@@ -178,7 +178,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   ## The prior is plotted in grey; the posterior, in blue.
   plot(B)
 
-  B %&gt;%
+  B |&gt;
     pmcmc(Nmcmc=100,Np=1000,proposal=mvn_diag_rw(c(r=0.01,K=10))) -&gt; Bb
 
   plot(Bb,pars=c("loglik","log.prior","r","K"))
@@ -187,6 +187,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

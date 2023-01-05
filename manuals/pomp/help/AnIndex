@@ -1,5 +1,4 @@
 pomp-package	pomp-package
-%>%	pipe
 abc	abc
 abc,abcd_pomp-method	abc
 abc,ANY-method	abc
@@ -22,7 +21,7 @@ as.data.frame.pomp	as_data_frame
 as.data.frame.pompList	as_data_frame
 as.data.frame.probed_pomp	as_data_frame
 as.data.frame.wpfilterd_pomp	as_data_frame
-as.pomp	deprecated
+as.pomp	pomp-deprecated
 as_pomp	as_pomp
 bake	bake
 basic components	basic_components
@@ -37,7 +36,7 @@ bsmc2,ANY-method	bsmc2
 bsmc2,data.frame-method	bsmc2
 bsmc2,missing-method	bsmc2
 bsmc2,pomp-method	bsmc2
-bspline.basis	deprecated
+bspline.basis	pomp-deprecated
 bsplines	bsplines
 bspline_basis	bsplines
 c	concat
@@ -61,7 +60,7 @@ concat,Mif2-method	concat
 concat,Pfilter-method	concat
 concat,Pmcmc-method	concat
 concat,Pomp-method	concat
-cond.logLik	deprecated
+cond.logLik	pomp-deprecated
 cond_logLik	cond_logLik
 cond_logLik,ANY-method	cond_logLik
 cond_logLik,bsmcd_pomp-method	cond_logLik
@@ -92,7 +91,7 @@ covmat,probed_pomp-method	covmat
 Csnippet	csnippet
 dacca	dacca
 dbetabinom	betabinom
-deprecated	deprecated
+deprecated	pomp-deprecated
 design	design
 deulermultinom	distributions
 discrete_time	rprocess_spec
@@ -119,7 +118,7 @@ eakf,pomp-method	kalman
 ebola	ebola
 ebolaModel	ebola
 ebolaWA2014	ebola
-eff.sample.size	deprecated
+eff.sample.size	pomp-deprecated
 eff_sample_size	eff_sample_size
 eff_sample_size,ANY-method	eff_sample_size
 eff_sample_size,bsmcd_pomp-method	eff_sample_size
@@ -143,8 +142,8 @@ euler	rprocess_spec
 ewcitmeas	childhood
 ewmeas	childhood
 expit	transformations
-filter.mean	deprecated
-filter.traj	deprecated
+filter.mean	pomp-deprecated
+filter.traj	pomp-deprecated
 filter_mean	filter_mean
 filter_mean,ANY-method	filter_mean
 filter_mean,kalmand_pomp-method	filter_mean
@@ -197,8 +196,10 @@ lookup	lookup
 map	skeleton_spec
 mcap	mcap
 melt	melt
-melt,listie-method	melt
-melt,pomp-method	melt
+melt,ANY-method	melt
+melt,array-method	melt
+melt,list-method	melt
+melt,missing-method	melt
 mif2	mif2
 mif2,ANY-method	mif2
 mif2,data.frame-method	mif2
@@ -206,9 +207,9 @@ mif2,mif2d_pomp-method	mif2
 mif2,missing-method	mif2
 mif2,pfilterd_pomp-method	mif2
 mif2,pomp-method	mif2
-mvn.diag.rw	deprecated
-mvn.rw	deprecated
-mvn.rw.adaptive	deprecated
+mvn.diag.rw	pomp-deprecated
+mvn.rw	pomp-deprecated
+mvn.rw.adaptive	pomp-deprecated
 mvn_diag_rw	proposals
 mvn_rw	proposals
 mvn_rw_adaptive	proposals
@@ -222,7 +223,9 @@ nlf_objfun,pomp-method	nlf
 nonlinear forecasting	nlf
 objfun	objfun
 obs	obs
+obs,ANY-method	obs
 obs,listie-method	obs
+obs,missing-method	obs
 obs,pomp-method	obs
 onestep	rprocess_spec
 ou2	ou2
@@ -249,7 +252,7 @@ partrans,missing-method	partrans
 partrans,objfun-method	partrans
 partrans,pomp-method	partrans
 parus	parus
-periodic.bspline.basis	deprecated
+periodic.bspline.basis	pomp-deprecated
 periodic_bspline_basis	bsplines
 pfilter	pfilter
 pfilter,ANY-method	pfilter
@@ -258,7 +261,6 @@ pfilter,missing-method	pfilter
 pfilter,objfun-method	pfilter
 pfilter,pfilterd_pomp-method	pfilter
 pfilter,pomp-method	pfilter
-pipe	pipe
 plot	plot
 plot,Abc-method	plot
 plot,bsmcd_pomp-method	plot
@@ -293,8 +295,8 @@ pomp_fun,Csnippet-method	pomp_fun
 pomp_fun,function-method	pomp_fun
 pomp_fun,missing-method	pomp_fun
 pomp_fun,pomp_fun-method	pomp_fun
-pred.mean	deprecated
-pred.var	deprecated
+pred.mean	pomp-deprecated
+pred.var	pomp-deprecated
 pred_mean	pred_mean
 pred_mean,ANY-method	pred_mean
 pred_mean,kalmand_pomp-method	pred_mean
@@ -318,16 +320,16 @@ probe,objfun-method	probe
 probe,pomp-method	probe
 probe,probed_pomp-method	probe
 probe,probe_match_objfun-method	probe
-probe.acf	deprecated
-probe.ccf	deprecated
-probe.marginal	deprecated
-probe.mean	deprecated
-probe.median	deprecated
-probe.nlar	deprecated
-probe.period	deprecated
-probe.quantile	deprecated
-probe.sd	deprecated
-probe.var	deprecated
+probe.acf	pomp-deprecated
+probe.ccf	pomp-deprecated
+probe.marginal	pomp-deprecated
+probe.mean	pomp-deprecated
+probe.median	pomp-deprecated
+probe.nlar	pomp-deprecated
+probe.period	pomp-deprecated
+probe.quantile	pomp-deprecated
+probe.sd	pomp-deprecated
+probe.var	pomp-deprecated
 probe_acf	basic_probes
 probe_ccf	basic_probes
 probe_marginal	basic_probes
@@ -352,7 +354,6 @@ pStop_	pStop
 pWarn	pStop
 pWarn_	pStop
 rbetabinom	betabinom
-reexports	melt
 reproducibility tools	bake
 resample	resample
 reulermultinom	distributions
@@ -378,11 +379,11 @@ rprocess,ANY-method	rprocess
 rprocess,missing-method	rprocess
 rprocess,pomp-method	rprocess
 runif_design	design
-rw.sd	deprecated
+rw.sd	pomp-deprecated
 rw2	rw2
 rw_sd	rw_sd
 sannbox	sannbox
-saved.states	deprecated
+saved.states	pomp-deprecated
 saved_states	saved_states
 saved_states,ANY-method	saved_states
 saved_states,missing-method	saved_states
@@ -440,7 +441,9 @@ spy,ANY-method	spy
 spy,missing-method	spy
 spy,pomp-method	spy
 states	states
+states,ANY-method	states
 states,listie-method	states
+states,missing-method	states
 states,pomp-method	states
 stew	bake
 summary	summary

@@ -125,7 +125,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   ## Here, we pass the dmeasure specification to 'pfilter'
   ## as an R function.
 
-  po %&gt;%
+  po |&gt;
     pfilter(
       dmeasure=function (y, N, phi, ..., log) {
         dpois(y,lambda=phi*N,log=log)
@@ -135,7 +135,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
   ## We can also pass it as a C snippet:
 
-  po %&gt;%
+  po |&gt;
     pfilter(
       dmeasure=Csnippet("lik = dpois(y,phi*N,give_log);"),
       paramnames="phi",
@@ -146,6 +146,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

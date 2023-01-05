@@ -77,7 +77,7 @@ That is, <code>alpha_2</code> is in the lower-left position.</p>
 
 <h3>Details</h3>
 
-<p>If the state process is <code class="reqn">X(t) = (x_{1}(t),x_{2}(t))</code>, then
+<p>If the state process is <code class="reqn">X(t) = (X_{1}(t),X_{2}(t))</code>, then
 </p>
 <p style="text-align: center;"><code class="reqn">X(t+1) = \alpha X(t) + \sigma \epsilon(t),</code>
 </p>
@@ -85,8 +85,8 @@ That is, <code>alpha_2</code> is in the lower-left position.</p>
 <p>where <code class="reqn">\alpha</code> and <code class="reqn">\sigma</code> are 2x2 matrices,
 <code class="reqn">\sigma</code> is lower-triangular, and
 <code class="reqn">\epsilon(t)</code> is standard bivariate normal.
-The observation process is <code class="reqn">Y(t) = (y_1(t),y_2(t))</code>, where
-<code class="reqn">y_i(t) \sim \mathrm{normal}(x_i(t),\tau)</code>.
+The observation process is <code class="reqn">Y(t) = (Y_1(t),Y_2(t))</code>, where
+<code class="reqn">Y_i(t) \sim \mathrm{normal}(X_i(t),\tau)</code>.
 </p>
 
 
@@ -123,6 +123,6 @@ pf &lt;- pfilter(po,Np=1000)
 logLik(pf)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

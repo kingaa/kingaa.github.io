@@ -54,7 +54,7 @@ Original source: McCleer and Perrins (1991).
 <h3>Examples</h3>
 
 <pre><code class='language-R'>## Not run: 
-  parus %&gt;%
+  parus |&gt;
     pfilter(Np=1000,times="year",t0=1960,
       params=c(K=190,r=2.7,sigma=0.2,theta=0.05,N.0=148),
       rprocess=discrete_time(
@@ -74,13 +74,13 @@ Original source: McCleer and Perrins (1991).
       paramnames=c("sigma","theta","N_0","r","K")
     ) -&gt; pf
 
-  pf %&gt;% logLik()
+  pf |&gt; logLik()
 
-  pf %&gt;% simulate() %&gt;% plot()
+  pf |&gt; simulate() |&gt; plot()
 
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

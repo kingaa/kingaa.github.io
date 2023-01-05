@@ -253,7 +253,7 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
   ## Construct the probe-matching objective function.
   ## Here, we just want to estimate 'K'.
-  po %&gt;%
+  po |&gt;
     probe_objfun(probes=plist,nsim=100,seed=5069977,
       est="K") -&gt; f
 
@@ -273,25 +273,25 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
   coef(f)
 
   ## There are 'plot' and 'summary' methods:
-  f %&gt;% as("probed_pomp") %&gt;% plot()
-  f %&gt;% summary()
+  f |&gt; as("probed_pomp") |&gt; plot()
+  f |&gt; summary()
 
   ## One can convert an objective function to a data frame:
-  f %&gt;% as("data.frame") %&gt;% head()
-  f %&gt;% as("probed_pomp") %&gt;% as("data.frame") %&gt;% head()
+  f |&gt; as("data.frame") |&gt; head()
+  f |&gt; as("probed_pomp") |&gt; as("data.frame") |&gt; head()
 
-  f %&gt;% probe() %&gt;% plot()
+  f |&gt; probe() |&gt; plot()
 
   ## One can modify the objective function with another call
   ## to 'probe_objfun':
 
-  f %&gt;% probe_objfun(est=c("r","K")) -&gt; f1
+  f |&gt; probe_objfun(est=c("r","K")) -&gt; f1
   optim(fn=f1,par=c(0.3,0.3),control=list(reltol=1e-5)) -&gt; out
   f1(out$par)
   coef(f1)
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

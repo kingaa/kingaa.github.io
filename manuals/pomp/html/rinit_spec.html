@@ -120,7 +120,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   ## Here, we pass the rinit specification to 'simulate'
   ## as an R function.
 
-  po %&gt;%
+  po |&gt;
     simulate(
       rinit=function (n_0, ...) {
         c(n=rpois(n=1,lambda=n_0))
@@ -129,7 +129,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
   ## We can also pass it as a C snippet:
 
-  po %&gt;%
+  po |&gt;
     simulate(
       rinit=Csnippet("n = rpois(n_0);"),
       paramnames="n_0",
@@ -139,6 +139,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -152,16 +152,16 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 
   data(ebolaWA2014)
 
-  ebolaWA2014 %&gt;%
-    gather(variable,count,cases,deaths) %&gt;%
+  ebolaWA2014 |&gt;
+    gather(variable,count,cases,deaths) |&gt;
     ggplot(aes(x=date,y=count,group=country,color=country))+
     geom_line()+
     facet_grid(variable~.,scales="free_y")+
     theme_bw()+
     theme(axis.text=element_text(angle=-90))
 
-  ebolaWA2014 %&gt;%
-    gather(variable,count,cases,deaths) %&gt;%
+  ebolaWA2014 |&gt;
+    gather(variable,count,cases,deaths) |&gt;
     ggplot(aes(x=date,y=count,group=variable,color=variable))+
     geom_line()+
     facet_grid(country~.,scales="free_y")+
@@ -174,6 +174,6 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 }
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

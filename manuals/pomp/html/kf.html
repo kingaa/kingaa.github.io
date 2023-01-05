@@ -126,13 +126,13 @@ given <code class="reqn">A</code>, <code class="reqn">C</code>, <code class="req
 
     gompertz() -&gt; po
 
-    po %&gt;%
-      as.data.frame() %&gt;%
+    po |&gt;
+      as.data.frame() |&gt;
       mutate(
         logY=log(Y)
-      ) %&gt;%
-      select(time,logY) %&gt;%
-      pomp(times="time",t0=0) %&gt;%
+      ) |&gt;
+      select(time,logY) |&gt;
+      pomp(times="time",t0=0) |&gt;
       kalmanFilter(
         X0=c(logX=0),
         A=matrix(exp(-0.1),1,1),
@@ -141,7 +141,7 @@ given <code class="reqn">A</code>, <code class="reqn">C</code>, <code class="req
         R=matrix(0.01,1,1)
       ) -&gt; kf
 
-    po %&gt;%
+    po |&gt;
       pfilter(Np=1000) -&gt; pf
 
     kf$logLik
@@ -152,6 +152,6 @@ given <code class="reqn">A</code>, <code class="reqn">C</code>, <code class="req
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

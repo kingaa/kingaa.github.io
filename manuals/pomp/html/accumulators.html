@@ -65,8 +65,8 @@ See <code><a href="../../pomp/help/sir.html">sir</a></code> and the tutorials on
 <pre><code class='language-R'>
   ## A simple SIR model.
 
-  ewmeas %&gt;%
-    subset(time &lt; 1952) %&gt;%
+  ewmeas |&gt;
+    subset(time &lt; 1952) |&gt;
     pomp(
       times="time",t0=1948,
       rprocess=euler(
@@ -113,13 +113,13 @@ See <code><a href="../../pomp/help/sir.html">sir</a></code> and the tutorials on
       S_0=0.07,I_0=0.001,R_0=0.93)
     ) -&gt; ew1
 
-  ew1 %&gt;%
-    simulate() %&gt;%
+  ew1 |&gt;
+    simulate() |&gt;
     plot(variables=c("S","I","R"))
 
   ## A simple SIR model that tracks cumulative incidence.
 
-  ew1 %&gt;%
+  ew1 |&gt;
     pomp(
       rprocess=euler(
         Csnippet("
@@ -173,22 +173,22 @@ See <code><a href="../../pomp/help/sir.html">sir</a></code> and the tutorials on
       S_0=0.07,I_0=0.001,R_0=0.93)
     ) -&gt; ew2
 
-  ew2 %&gt;%
-    simulate() %&gt;%
+  ew2 |&gt;
+    simulate() |&gt;
     plot()
 
   ## A simple SIR model that tracks weekly incidence.
 
-  ew2 %&gt;%
+  ew2 |&gt;
     pomp(accumvars="H") -&gt; ew3
 
-  ew3 %&gt;%
-    simulate() %&gt;%
+  ew3 |&gt;
+    simulate() |&gt;
     plot()
 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.1.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

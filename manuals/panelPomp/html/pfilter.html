@@ -53,27 +53,7 @@ unitlogLik(object, ...)
 <p>An object of class <code>panelPomp</code> or inheriting class 
 <code>panelPomp</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>shared</code></td>
-<td>
-<p>optional; these arguments depend on the type
-of <code>object</code>.
-</p>
-<p>If <code>object</code> is a <code>list</code> of <code>pomp</code>s, <code>shared</code> must be a
-numeric vector specifying parameter values shared among panel units.
-<code>specific</code> must be a <code>matrix</code> with parameter values that are
-unit-specific with rows naming parameters and columns naming units (these
-names must match those of <code>object</code>). If no values are specified and
-<code>object</code> has parameter values, these are set to be all unit-specific.
-</p>
-<p>If <code>object</code> is a <code>panelPomp</code> object, these arguments can still be
-used as described above to modify the parameters of <code>object</code>.
-Alternatively, the parameter configuration of <code>object</code> can be modified
-providing only a character <code>shared</code> naming parameters of <code>object</code>
-that should be shared (with values for parameters not originally shared
-taken from the unit-specific parameters of the first panel unit of
-<code>object</code>). <code>shared=NULL</code> sets all parameters as unit-specific.</p>
-</td></tr>
-<tr style="vertical-align: top;"><td><code>specific</code></td>
+<tr style="vertical-align: top;"><td><code>shared, specific</code></td>
 <td>
 <p>optional; these arguments depend on the type
 of <code>object</code>.
@@ -122,8 +102,17 @@ while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number
 </td></tr>
 <tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
-<p>An object of class <code>panelPomp</code> or inheriting class 
-<code>panelPomp</code>.</p>
+<p>required; either (i) a <code>list</code> of <code>pomp</code> objects; or
+(ii) an object of class <code>panelPomp</code> or inheriting class
+<code>panelPomp</code>.
+</p>
+<p>If <code>object</code> is a <code>list</code> of <code>pomp</code>s, the list must be named.
+All these <code>pomp</code>s must either have no parameters or have the same
+parameter names. (This is just a format requirement. <code>pomp</code> codes can
+ignore any parameter that is irrelevant to any given panel unit.)
+</p>
+<p>If <code>object</code> is a <code>panelPomp</code> object, the function allows modifying
+the shared and unit-specific configuration of <code>object</code>.</p>
 </td></tr>
 </table>
 
@@ -158,6 +147,6 @@ while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number
 <code><a href="../../panelPomp/help/panel_loglik.html">panel_loglik</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.15.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.15.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

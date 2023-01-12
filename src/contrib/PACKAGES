@@ -33,11 +33,11 @@ MD5sum: bc141af745c32265d9122b3b5bcf6bcd
 NeedsCompilation: yes
 
 Package: panelPomp
-Version: 0.15.1
-Depends: R(>= 4.0.0), pomp(>= 4.0.0)
+Version: 0.16.0
+Depends: R(>= 4.1.0), pomp(>= 4.5.2)
 Imports: methods
 License: MIT + file LICENSE
-MD5sum: 93022e2df8d1c3ab7e27c4c687ecb9ee
+MD5sum: 9f5eea1bda93eac97179fcd4d4099f3f
 NeedsCompilation: no
 
 Package: phylopomp

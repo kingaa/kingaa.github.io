@@ -20,8 +20,8 @@ License: GPL-3
 Archs: x64
 
 Package: panelPomp
-Version: 0.15.1
-Depends: R(>= 4.0.0), pomp(>= 4.0.0)
+Version: 0.16.0
+Depends: R(>= 4.1.0), pomp(>= 4.5.2)
 Imports: methods
 License: MIT + file LICENSE
 

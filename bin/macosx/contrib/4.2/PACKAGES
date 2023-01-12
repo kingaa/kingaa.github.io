@@ -22,11 +22,11 @@ License: GPL-3
 MD5sum: 167e02c7af508767eb2d840d2b090293
 
 Package: panelPomp
-Version: 0.15.1
-Depends: R(>= 4.0.0), pomp(>= 4.0.0)
+Version: 0.16.0
+Depends: R(>= 4.1.0), pomp(>= 4.5.2)
 Imports: methods
 License: MIT + file LICENSE
-MD5sum: 9c2e770b632cab944d7a379abcdf38ac
+MD5sum: 882dfa1f405059abeacc58e2405e5fd9
 
 Package: phylopomp
 Version: 0.1.0.0

@@ -30,7 +30,7 @@ optionally return an estimate of the standard error in this quantity.
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>logmeanexp(x, se = FALSE)
+<pre><code class='language-R'>logmeanexp(x, se = FALSE, ess = FALSE)
 </code></pre>
 
 
@@ -45,6 +45,10 @@ optionally return an estimate of the standard error in this quantity.
 <td>
 <p>logical; give approximate standard error?</p>
 </td></tr>
+<tr style="vertical-align: top;"><td><code>ess</code></td>
+<td>
+<p>logical; give effective sample size?</p>
+</td></tr>
 </table>
 
 
@@ -53,13 +57,15 @@ optionally return an estimate of the standard error in this quantity.
 <p>When <code>se = TRUE</code>, <code>logmeanexp</code> uses a jackknife estimate of the
 variance in <code class="reqn">log(x)</code>.
 </p>
+<p>When <code>ess = TRUE</code>, <code>logmeanexp</code> returns an estimate of the effective sample size.
+</p>
 
 
 <h3>Value</h3>
 
-<p><code>log(mean(exp(x)))</code> computed so as to avoid over- or
-underflow.  If <code>se = FALSE</code>, the approximate standard error is
-returned as well.
+<p><code>log(mean(exp(x)))</code> computed so as to avoid over- or underflow.
+If <code>se = TRUE</code>, the approximate standard error is returned as well.
+If <code>ess = TRUE</code>, the effective sample size is returned also.
 </p>
 
 
@@ -82,6 +88,6 @@ returned as well.
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.5.2.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.6.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

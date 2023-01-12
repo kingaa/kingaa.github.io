@@ -18,6 +18,31 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 4.6.1</h3>
+
+
+<ul>
+<li><p> When <code>melt</code> is applied to a list, the identifier variable is now &lsquo;.L<code>x</code>&rsquo;, where <code>x</code> denotes the level.
+This applies when <code>as.data.frame</code> is used to coerce a list of &lsquo;pomp&rsquo; objects, and when <code>saved_states</code> is used to extract the particles from a list of &lsquo;pfilterd_pomp&rsquo; objects.
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">pomp</span> version 4.5.3</h3>
+
+
+<ul>
+<li> <p><code>logmeanexp</code> can now compute the effective sample size, which can be useful in determining the reliability of its estimate.
+To do so, set <code>ess=TRUE</code> in a call to <code>logmeanexp</code>.
+</p>
+</li>
+<li> <p><code>logmeanexp</code> now returns a fully-named vector when either <code>se=TRUE</code> or <code>ess=TRUE</code>.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 4.5.2</h3>
 
 
@@ -26,10 +51,9 @@ function processMathHTML() {
 This allows the user to extract the relevant elements in data-frame format if desired.
 </p>
 </li>
-<li> <p><span class="pkg">pomp</span> no longer depends on the superseded packages <span class="pkg">reshape2</span> or <span class="pkg">plyr</span>.
-</p>
-</li>
-<li> <p><span class="pkg">pomp</span> has a new dependency on the package <span class="pkg">dplyr</span>.
+<li> <p><span class="pkg">pomp</span> no longer depends on the superseded package <span class="pkg">reshape2</span>.
+The <code>melt</code> function for converting arrays and nested lists into data frames is accordingly no longer re-exported from <span class="pkg">reshape2</span>.
+It has been replaced by a stricter version of <code>melt</code>.
 </p>
 </li>
 <li><p> The <span class="pkg">magrittr</span> pipe <code>%&gt;%</code> is no longer re-exported by <span class="pkg">pomp</span>: use the native <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> pipe <code>|&gt;</code> instead.

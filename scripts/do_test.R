@@ -123,14 +123,14 @@ if (backend %in% c("doMPI","doMPIRNG")) {
   stopCluster(cl)
 }
 
-res %>%
+res |>
   mutate(
     etime=difftime(t2,t1,units='secs')
-  ) %>%
+  ) |>
   summarize(
     stime=as.numeric(sum(etime)),
     etime=as.numeric(difftime(max(t2),min(t1),units="secs"))
-  ) %>%
+  ) |>
   mutate(
     otime=as.numeric(difftime(toc,tic,units='secs')),
     ieffic=signif(stime/etime/nnode/ncore,3),
@@ -141,26 +141,26 @@ res %>%
     ncore=ncore,
     nwork=nwork,
     chunk=chunk
-  ) %>%
+  ) |>
   mutate(
     stime=round(stime,1),
     etime=round(etime,1),
     otime=round(otime,1)
-  ) %>%
-  gather(variable,value) %>%
+  ) |>
+  gather(variable,value) |>
   mutate(
     y=-seq_along(variable),
     label=paste0(variable,"\t",value)
   ) -> eff
 
-eff %>% pull(label) %>% cat(sep="\n")
+eff |> pull(label) |> cat(sep="\n")
 
-eff %>%
+eff |>
   ggplot(aes(x=1,y=y,label=label))+
   geom_text(hjust="left")+
   theme_void() -> txt
 
-res %>%
+res |>
   ggplot(aes(x=t1,xend=t2,y=id,yend=id,color=host))+
   geom_segment()+
   guides(color=FALSE)+
@@ -168,7 +168,7 @@ res %>%
   labs(x='time',y='job id',title=paste("with",backend,"backend"))+
   annotate("segment",x=tic,xend=toc,y=0,yend=njobs,color='black') -> pl
 
-res %>%
+res |>
   ggplot(aes(x=host,fill=host,color=host))+
   stat_count()+
   labs(x="",y="")+
@@ -182,10 +182,10 @@ print(txt,vp=viewport(x=0.2,y=0.8,width=0.4,height=0.2))
 print(pl1,vp=viewport(x=0.75,y=0.3,width=0.4,height=0.4))
 dev.off()
 
-res %>%
-  select(id,x) %>%
-  arrange(id) %>%
-  pull(x) %>%
+res |>
+  select(id,x) |>
+  arrange(id) |>
+  pull(x) |>
   digest()
 
 mpi.quit()

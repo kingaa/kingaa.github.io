@@ -48,9 +48,9 @@ nwork <- getDoParWorkers()
 
 cat(nnode,'nodes x',ncore,'cores,','chunksize',chunk,'nworkers',nwork,'\n')
 
-res %>% mutate(etime=difftime(t2,t1,units='secs')) %>%
+res |> mutate(etime=difftime(t2,t1,units='secs')) |>
     summarize(stime=as.numeric(sum(etime)),
-              etime=as.numeric(difftime(max(t2),min(t1),units="secs"))) %>%
+              etime=as.numeric(difftime(max(t2),min(t1),units="secs"))) |>
     mutate(otime=as.numeric(difftime(toc,tic,units='secs')),
            ieffic=stime/etime/nwork,
            oeffic=stime/otime/nwork,
@@ -58,16 +58,16 @@ res %>% mutate(etime=difftime(t2,t1,units='secs')) %>%
            nnode=nnode,
            ncore=ncore,
            nwork=nwork,
-           chunk=chunk) %>%
-    melt(id=NULL) %>%
+           chunk=chunk) |>
+    melt(id=NULL) |>
     mutate(y=-seq_along(variable),label=paste0(variable,"\t",signif(value,4))) -> eff
 
-eff %>% use_series("label") %>% cat(sep="\n")
-eff %>% ggplot(aes(x=1,y=y,label=label))+
+eff |> use_series("label") |> cat(sep="\n")
+eff |> ggplot(aes(x=1,y=y,label=label))+
     geom_text(hjust="left")+
     theme_void() -> txt
 
-res %>%
+res |>
     ggplot(aes(x=t1,xend=t2,y=id,yend=id,color=host))+
     geom_segment()+
     guides(color=FALSE)+
@@ -75,7 +75,7 @@ res %>%
     labs(x='time',y='job id')+
     annotate("segment",x=tic,xend=toc,y=0,yend=njobs,color='black') -> pl
 
-res %>%
+res |>
     ggplot(aes(x=host,fill=host,color=host))+
     stat_count()+
     labs(x="",y="")+
@@ -89,10 +89,10 @@ print(txt,vp=viewport(x=0.2,y=0.8,width=0.4,height=0.2))
 print(pl1,vp=viewport(x=0.75,y=0.3,width=0.4,height=0.4))
 dev.off()
 
-res %>%
-    subset(select=c(id,x)) %>%
-    arrange(id) %>%
-    set_rownames(NULL) %>%
+res |>
+    subset(select=c(id,x)) |>
+    arrange(id) |>
+    set_rownames(NULL) |>
     digest()
 
 ## 1ad5a2898de4e21b2baf3a7b7c88afe5

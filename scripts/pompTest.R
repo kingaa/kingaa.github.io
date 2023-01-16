@@ -1,7 +1,7 @@
 ## TEST SCRIPT
 ## If this script runs without errors, pomp is usable on your system.
 
-pomp.version <- "4.3"
+pomp.version <- "4.6"
 
 lib <- Sys.getenv("R_LIBS_USER")
 dir.create(lib,recursive=TRUE,showWarnings=FALSE)
@@ -9,8 +9,7 @@ dir.create(lib,recursive=TRUE,showWarnings=FALSE)
 cat("Checking whether dependencies are installed....\n")
 ## install dependencies if necessary
 deps <- setdiff(
-  c("digest","mvtnorm","deSolve","coda","subplex","nloptr",
-    "magrittr","plyr","reshape2","pomp"),
+  c("digest","mvtnorm","deSolve","coda","subplex","nloptr","plyr","pomp"),
   rownames(installed.packages())
 )
 if (length(deps) > 0) {
@@ -47,7 +46,7 @@ tryCatch(
     paramnames=c("sigma","tau","r","K"),
     statenames="X",
     params=c(r=0.1,K=1,sigma=0.1,tau=0.1,X.0=1)
-  ) %>%
+  ) |>
     pfilter(Np=1000) -> p
   
   cat("Success!\n")

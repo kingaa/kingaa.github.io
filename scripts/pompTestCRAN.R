@@ -33,7 +33,7 @@ tryCatch(
     paramnames=c("sigma","tau","r","K"),
     statenames="X",
     params=c(r=0.1,K=1,sigma=0.1,tau=0.1,X.0=1)
-  ) %>%
+  ) |>
     pfilter(Np=1000) -> p
   
   cat("Success!\n")

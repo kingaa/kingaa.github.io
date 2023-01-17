@@ -26,8 +26,8 @@ Imports: methods
 License: MIT + file LICENSE
 
 Package: phylopomp
-Version: 0.1.0.0
-Depends: R(>= 4.1.0)
+Version: 0.1.0.2
+Depends: R(>= 4.1)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
         foreach, tidyr, pomp, cowplot
 LinkingTo: pomp

@@ -41,14 +41,14 @@ MD5sum: 9f5eea1bda93eac97179fcd4d4099f3f
 NeedsCompilation: no
 
 Package: phylopomp
-Version: 0.1.0.0
-Depends: R(>= 4.1.0)
+Version: 0.1.0.2
+Depends: R(>= 4.1)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
         foreach, tidyr, pomp, cowplot
 LinkingTo: pomp
 Suggests: tidyverse, magrittr, doParallel, doRNG, broom
 License: GPL-3
-MD5sum: d01df35d3f6ef907a131692b2490d52f
+MD5sum: f01548fc72900b889ad0903578431e8b
 NeedsCompilation: yes
 
 Package: pomp

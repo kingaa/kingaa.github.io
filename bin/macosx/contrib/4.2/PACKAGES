@@ -29,14 +29,14 @@ License: MIT + file LICENSE
 MD5sum: 882dfa1f405059abeacc58e2405e5fd9
 
 Package: phylopomp
-Version: 0.1.0.0
-Depends: R(>= 4.1.0)
+Version: 0.1.0.2
+Depends: R(>= 4.1)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
         foreach, tidyr, pomp, cowplot
 LinkingTo: pomp
 Suggests: tidyverse, magrittr, doParallel, doRNG, broom
 License: GPL-3
-MD5sum: e9af8b2cb007b3845350eeadbfadd90d
+MD5sum: e38b3a165d312717a14cf4327dfe443a
 
 Package: pomp
 Version: 4.6.1.1

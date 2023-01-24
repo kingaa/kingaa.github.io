@@ -6,9 +6,10 @@ Suggests: scales, magrittr
 License: GPL-3
 
 Package: circumstance
-Version: 0.0.2.0
-Depends: R(>= 4.1.0), methods, foreach, pomp(>= 4.2), parallel
-Suggests: doParallel, doRNG, tidyr, ggplot2
+Version: 0.0.4.0
+Depends: R(>= 4.1.0), pomp(>= 4.6)
+Imports: methods, foreach
+Suggests: doFuture, doRNG, dplyr, tidyr, ggplot2
 License: GPL-3
 
 Package: ouch

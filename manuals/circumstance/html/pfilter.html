@@ -45,7 +45,7 @@ pfilter(data, Nrep, ...)
 <table>
 <tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
-<p>passed to <code>pomp::<a href="../../pomp/help/pfilter.html">pfilter</a></code></p>
+<p>passed to <code><a href="../../pomp/help/pfilter.html">pomp::pfilter</a></code></p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>Nrep</code></td>
 <td>
@@ -54,25 +54,34 @@ By default, <code>Nrep = 1</code>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
-<p>all additional arguments are passed to <code>pomp::<a href="../../pomp/help/pfilter.html">pfilter</a></code></p>
+<p>all additional arguments are passed to <code><a href="../../pomp/help/pfilter.html">pomp::pfilter</a></code></p>
 </td></tr>
 </table>
 
 
 <h3>See Also</h3>
 
-<p><code>pomp::<a href="../../pomp/help/pfilter.html">pfilter</a></code>.
+<p><code><a href="../../pomp/help/pfilter.html">pomp::pfilter</a></code>.
 </p>
 
 
 <h3>Examples</h3>
 
 <pre><code class='language-R'>library(circumstance)
+library(doFuture)
+library(doRNG)
+registerDoFuture()
+registerDoRNG()
 
 ou2() -&gt; ou2
-ou2 %&gt;% pfilter(Np=1000,Nrep=6) -&gt; pfs
+
+plan(sequential)
+system.time(ou2 |&gt; pfilter(Np=10000,Nrep=6) -&gt; pfs)
+
+plan(multicore)
+system.time(ou2 |&gt; pfilter(Np=10000,Nrep=6) -&gt; pfs)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.2.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.4.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

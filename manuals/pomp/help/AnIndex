@@ -39,12 +39,8 @@ bsmc2,pomp-method	bsmc2
 bspline.basis	pomp-deprecated
 bsplines	bsplines
 bspline_basis	bsplines
-c	concat
-c.Abc	concat
-c.Mif2	concat
-c.Pfilter	concat
-c.Pmcmc	concat
-c.Pomp	concat
+c	conjoin
+c.Pomp	conjoin
 childhood disease data	childhood
 coef	coef
 coef,listie-method	coef
@@ -68,6 +64,7 @@ cond_logLik,kalmand_pomp-method	cond_logLik
 cond_logLik,missing-method	cond_logLik
 cond_logLik,pfilterd_pomp-method	cond_logLik
 cond_logLik,wpfilterd_pomp-method	cond_logLik
+conjoin	conjoin
 continue	continue
 continue,abcd_pomp-method	continue
 continue,ANY-method	continue
@@ -151,11 +148,10 @@ filter_mean,missing-method	filter_mean
 filter_mean,pfilterd_pomp-method	filter_mean
 filter_traj	filter_traj
 filter_traj,ANY-method	filter_traj
+filter_traj,listie-method	filter_traj
 filter_traj,missing-method	filter_traj
 filter_traj,pfilterd_pomp-method	filter_traj
-filter_traj,pfilterList-method	filter_traj
 filter_traj,pmcmcd_pomp-method	filter_traj
-filter_traj,pmcmcList-method	filter_traj
 flow	flow
 flow,ANY-method	flow
 flow,missing-method	flow

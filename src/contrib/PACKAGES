@@ -8,12 +8,12 @@ MD5sum: dad80df5fc3c0802340a44321dcbfdc9
 NeedsCompilation: no
 
 Package: circumstance
-Version: 0.0.4.0
-Depends: R(>= 4.1.0), pomp(>= 4.6)
+Version: 0.0.5.1
+Depends: R(>= 4.1.0), pomp(>= 4.6.4)
 Imports: methods, foreach
 Suggests: doFuture, doRNG, dplyr, tidyr, ggplot2
 License: GPL-3
-MD5sum: 2e2584297eaacf88b844357bc9362aa5
+MD5sum: 5c35d91a64c0f9a507d0db20788f776c
 NeedsCompilation: no
 
 Package: mpifarm

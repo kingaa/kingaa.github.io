@@ -1,5 +1,15 @@
 circumstance-package	circumstance-package
 circumstance,package	circumstance-package
+continue	continue
+continue,ANY-method	continue
+continue,mif2List-method	continue
+continue,missing-method	continue
+mif2	mif2
+mif2,ANY,data.frame-method	mif2
+mif2,ANY,missing-method	mif2
+mif2,mif2List,missing-method	mif2
+mif2,pfilterList,missing-method	mif2
+mif2,pompList,missing-method	mif2
 pfilter	pfilter
 pfilter,ANY,missing-method	pfilter
 pfilter,ANY,numeric-method	pfilter

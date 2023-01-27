@@ -6,8 +6,8 @@ Suggests: scales, magrittr
 License: GPL-3
 
 Package: circumstance
-Version: 0.0.4.0
-Depends: R(>= 4.1.0), pomp(>= 4.6)
+Version: 0.0.5.1
+Depends: R(>= 4.1.0), pomp(>= 4.6.4)
 Imports: methods, foreach
 Suggests: doFuture, doRNG, dplyr, tidyr, ggplot2
 License: GPL-3

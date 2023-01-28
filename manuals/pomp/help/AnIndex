@@ -39,8 +39,8 @@ bsmc2,pomp-method	bsmc2
 bspline.basis	pomp-deprecated
 bsplines	bsplines
 bspline_basis	bsplines
-c	conjoin
-c.Pomp	conjoin
+c	concat
+c.Pomp	concat
 childhood disease data	childhood
 coef	coef
 coef,listie-method	coef
@@ -50,12 +50,13 @@ coef<-	coef
 coef<-,missing-method	coef
 coef<-,objfun-method	coef
 coef<-,pomp-method	coef
+conc	conc
+conc,Abc-method	conc
+conc,Mif2-method	conc
+conc,Pfilter-method	conc
+conc,Pmcmc-method	conc
+conc,Pomp-method	conc
 concat	concat
-concat,Abc-method	concat
-concat,Mif2-method	concat
-concat,Pfilter-method	concat
-concat,Pmcmc-method	concat
-concat,Pomp-method	concat
 cond.logLik	pomp-deprecated
 cond_logLik	cond_logLik
 cond_logLik,ANY-method	cond_logLik
@@ -63,8 +64,8 @@ cond_logLik,bsmcd_pomp-method	cond_logLik
 cond_logLik,kalmand_pomp-method	cond_logLik
 cond_logLik,missing-method	cond_logLik
 cond_logLik,pfilterd_pomp-method	cond_logLik
+cond_logLik,pfilterList-method	cond_logLik
 cond_logLik,wpfilterd_pomp-method	cond_logLik
-conjoin	conjoin
 continue	continue
 continue,abcd_pomp-method	continue
 continue,ANY-method	continue
@@ -121,6 +122,7 @@ eff_sample_size,ANY-method	eff_sample_size
 eff_sample_size,bsmcd_pomp-method	eff_sample_size
 eff_sample_size,missing-method	eff_sample_size
 eff_sample_size,pfilterd_pomp-method	eff_sample_size
+eff_sample_size,pfilterList-method	eff_sample_size
 eff_sample_size,wpfilterd_pomp-method	eff_sample_size
 elementary algorithms	elementary_algorithms
 emeasure	emeasure
@@ -263,6 +265,7 @@ plot,bsmcd_pomp-method	plot
 plot,Mif2-method	plot
 plot,missing-method	plot
 plot,Pmcmc-method	plot
+plot,pomp-method	plot
 plot,pomp_plottable-method	plot
 plot,probed_pomp-method	plot
 plot,probe_match_objfun-method	plot

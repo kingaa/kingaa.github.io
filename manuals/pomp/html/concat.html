@@ -20,28 +20,55 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>Methods to concatenate objects into useful listie
+<p>Concatenate two or more &lsquo;pomp&rsquo; objects into a list-like &lsquo;listie&rsquo;.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>## S4 method for signature 'Pomp'
-concat(...)
+<pre><code class='language-R'>## S3 method for class 'Pomp'
+c(...)
 
-## S4 method for signature 'Pfilter'
-concat(...)
-
-## S4 method for signature 'Abc'
-concat(...)
-
-## S4 method for signature 'Mif2'
-concat(...)
-
-## S4 method for signature 'Pmcmc'
 concat(...)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.6.4.2 <a href="00Index.html">Index</a>]</div>
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>elements to be recursively combined into a &lsquo;listie&rsquo;</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>concat</code> applied to one or more &lsquo;pomp&rsquo; objects or lists of &lsquo;pomp&rsquo; objects converts the list into a &lsquo;listie&rsquo;.
+In particular, <code>concat(A,B,C)</code> is equivalent to <code>do.call(c,unlist(list(A,B,C)))</code>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>gompertz(sigma=2,tau=1) -&gt; g
+Np &lt;- c(low=100,med=1000,high=10000)
+lapply(
+  Np,
+  \(np) pfilter(g,Np=np)
+) |&gt;
+  concat() -&gt; pfs
+
+pfs
+coef(pfs)
+logLik(pfs)
+eff_sample_size(pfs)
+cond_logLik(pfs)
+
+pfs |&gt; plot()
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.6.4.5 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

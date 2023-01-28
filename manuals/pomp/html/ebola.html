@@ -150,30 +150,21 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 
 <pre><code class='language-R'>if (require(ggplot2) &amp;&amp; require(tidyr)) {
 
-  data(ebolaWA2014)
-
   ebolaWA2014 |&gt;
-    gather(variable,count,cases,deaths) |&gt;
-    ggplot(aes(x=date,y=count,group=country,color=country))+
-    geom_line()+
-    facet_grid(variable~.,scales="free_y")+
-    theme_bw()+
-    theme(axis.text=element_text(angle=-90))
-
-  ebolaWA2014 |&gt;
-    gather(variable,count,cases,deaths) |&gt;
-    ggplot(aes(x=date,y=count,group=variable,color=variable))+
+    pivot_longer(c(cases,deaths)) |&gt;
+    ggplot(aes(x=date,y=value,group=name,color=name))+
     geom_line()+
     facet_grid(country~.,scales="free_y")+
     theme_bw()+
     theme(axis.text=element_text(angle=-90))
 
-  plot(ebolaModel(country="SLE"))
-  plot(ebolaModel(country="LBR"))
-  plot(ebolaModel(country="GIN"))
 }
+
+plot(ebolaModel(country="SLE"))
+plot(ebolaModel(country="GIN"))
+plot(ebolaModel(country="LBR"))
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.6.4.2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.6.4.5 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

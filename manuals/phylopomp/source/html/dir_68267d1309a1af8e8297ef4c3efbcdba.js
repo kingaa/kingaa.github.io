@@ -19,6 +19,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "nodeseq.h", "nodeseq_8h.html", "nodeseq_8h" ],
     [ "pocket.h", "pocket_8h.html", "pocket_8h" ],
     [ "popul_proc.h", "popul__proc_8h.html", "popul__proc_8h" ],
+    [ "seir.cc", "seir_8cc.html", "seir_8cc" ],
     [ "si2r.cc", "si2r_8cc.html", "si2r_8cc" ],
     [ "siir.cc", "siir_8cc.html", "siir_8cc" ],
     [ "sir.cc", "sir_8cc.html", "sir_8cc" ]

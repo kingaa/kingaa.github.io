@@ -7,6 +7,7 @@ bake	reexports
 ballGrob	internals
 continueLBDP	lbdp
 continueMoran	moran
+continueSEIR	seir
 continueSI2R	si2r
 continueSIIR	siir
 continueSIR	sir
@@ -43,9 +44,12 @@ registerDoSEQ	reexports
 resizingTextGrob	internals
 runLBDP	lbdp
 runMoran	moran
+runSEIR	seir
 runSI2R	si2r
 runSIIR	siir
 runSIR	sir
+SEIR	seir
+seir	seir
 SI2R	si2r
 si2r	si2r
 SIIR	siir

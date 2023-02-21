@@ -13,6 +13,8 @@ var annotated_dup =
     [ "nodeseq_t", "classnodeseq__t.html", "classnodeseq__t" ],
     [ "pocket_t", "classpocket__t.html", "classpocket__t" ],
     [ "popul_proc_t", "classpopul__proc__t.html", "classpopul__proc__t" ],
+    [ "seir_parameters_t", "structseir__parameters__t.html", "structseir__parameters__t" ],
+    [ "seir_state_t", "structseir__state__t.html", "structseir__state__t" ],
     [ "si2r_parameters_t", "structsi2r__parameters__t.html", "structsi2r__parameters__t" ],
     [ "si2r_state_t", "structsi2r__state__t.html", "structsi2r__state__t" ],
     [ "siir_parameters_t", "structsiir__parameters__t.html", "structsiir__parameters__t" ],

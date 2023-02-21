@@ -16,6 +16,8 @@ var hierarchy =
       [ "master_t< POPN, NDEME >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT, NDEME >", "classpopul__proc__t.html", null ],
+    [ "seir_parameters_t", "structseir__parameters__t.html", null ],
+    [ "seir_state_t", "structseir__state__t.html", null ],
     [ "set", null, [
       [ "pocket_t", "classpocket__t.html", [
         [ "node_t", "classnode__t.html", null ]

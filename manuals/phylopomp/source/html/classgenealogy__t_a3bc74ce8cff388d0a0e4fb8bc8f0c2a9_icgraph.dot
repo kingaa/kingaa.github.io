@@ -1,0 +1,20 @@
+digraph "genealogy_t::unique"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="genealogy_t::unique",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="get the next unique name"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="genealogy_t::birth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a95d20516743223f35bf58a104d92fe15",tooltip="birth of second or subsequent sibling into deme d"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="genealogy_t::make_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a29db3270bcc329ea024d1dd5bdf2251d",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="genealogy_t::birth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe",tooltip="birth into deme d"];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="genealogy_t::graft",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366",tooltip="graft a new lineage into deme d"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="genealogy_t::migrate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122",tooltip="movement into deme d"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="genealogy_t::sample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a47fa3b85b66c8241a1e6217113077534",tooltip="insert a sample node"];
+}

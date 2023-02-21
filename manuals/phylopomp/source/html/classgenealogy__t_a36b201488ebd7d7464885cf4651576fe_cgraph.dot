@@ -1,0 +1,28 @@
+digraph "genealogy_t::birth"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="genealogy_t::birth",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="birth into deme d"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="genealogy_t::add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a140358dfddf568a26cff1d5933bf2627",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ball_t::deme",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d",tooltip="view deme"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="node_t::green_ball",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnode__t.html#ab10430fd8addd5852699c30a23729880",tooltip="pointer to my green ball"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="genealogy_t::swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a013b76878ca9297f0055be07e40a0bcd",tooltip="swap balls a and b, wherever they lie"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ball_t::holder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classball__t.html#a84b2949440ac7d1fcd8127076e082928",tooltip="in whose pocket do I lie?"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="genealogy_t::make_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a29db3270bcc329ea024d1dd5bdf2251d",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="genealogy_t::check\l_genealogy_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#af5d033ab4a4920e4922f25366373216d",tooltip=" "];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="genealogy_t::unique",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a3bc74ce8cff388d0a0e4fb8bc8f0c2a9",tooltip="get the next unique name"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="genealogy_t::time",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a4e52880b04a66502530ccf7c9b3cd634",tooltip="view/set current time."];
+}

@@ -1,0 +1,40 @@
+digraph "ball_t::holder"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ball_t::holder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="in whose pocket do I lie?"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="master_t::birth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d",tooltip="n births into deme j with parent in deme i"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="master_t::jump",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmaster__t.html#af0e3048867ca697ed1274dd09d92d60c",tooltip="makes a jump"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="node_t::holds_own",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnode__t.html#af2f3244314d00462007ba1853d60f3c6",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="node_t::compact_newick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnode__t.html#a00bafc21cee2554589034441366a589e",tooltip="compact Newick format"];
+  Node5 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="genealogy_t::destroy_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a6ef638f5c3d05891190c84f400148341",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="genealogy_t::truncate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a72148a28fcdca2a58aa2c50784898159",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="node_t::is_root",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnode__t.html#a7b42edef9d30827acaef62beff27582f",tooltip=" "];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="node_t::nchildren",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnode__t.html#a48dea16ceab8f1edeef20257b0f8d73e",tooltip="number of descendants"];
+  Node9 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="node_t::newick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnode__t.html#a8fbcbc87b57e6d224e709777caf89609",tooltip="Newick format."];
+  Node10 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="genealogy_t::swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a013b76878ca9297f0055be07e40a0bcd",tooltip="swap balls a and b, wherever they lie"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="genealogy_t::add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a140358dfddf568a26cff1d5933bf2627",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="genealogy_t::birth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe",tooltip="birth into deme d"];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="genealogy_t::migrate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122",tooltip="movement into deme d"];
+  Node12 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="genealogy_t::sample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a47fa3b85b66c8241a1e6217113077534",tooltip="insert a sample node"];
+  Node11 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

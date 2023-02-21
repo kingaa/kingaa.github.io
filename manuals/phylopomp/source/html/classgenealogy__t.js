@@ -19,7 +19,7 @@ var classgenealogy__t =
     [ "graft", "classgenealogy__t.html#ada7968e07a957d1c6b55da9e68133366", null ],
     [ "lineage_count", "classgenealogy__t.html#ae385e13f285c30ab555201ddbdda2ce1", null ],
     [ "lineage_count", "classgenealogy__t.html#a03edaddf1e13c57619ba8d11648eede3", null ],
-    [ "make_node", "classgenealogy__t.html#a9976cd7e3f4f6af9c77783e787fa1a2f", null ],
+    [ "make_node", "classgenealogy__t.html#a29db3270bcc329ea024d1dd5bdf2251d", null ],
     [ "migrate", "classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122", null ],
     [ "newick", "classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff", null ],
     [ "obscure", "classgenealogy__t.html#ad35cd81e778d84727b0fcfa8839b28cb", null ],

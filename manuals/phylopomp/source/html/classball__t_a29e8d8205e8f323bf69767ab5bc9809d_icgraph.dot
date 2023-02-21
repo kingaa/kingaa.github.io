@@ -1,0 +1,31 @@
+digraph "ball_t::deme"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ball_t::deme",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="view deme"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="genealogy_t::add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a140358dfddf568a26cff1d5933bf2627",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="genealogy_t::birth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a36b201488ebd7d7464885cf4651576fe",tooltip="birth into deme d"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="genealogy_t::migrate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122",tooltip="movement into deme d"];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="genealogy_t::sample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#a47fa3b85b66c8241a1e6217113077534",tooltip="insert a sample node"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="inventory_t::erase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinventory__t.html#a29124069de8f231217845de929ae5bb1",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="inventory_t::insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinventory__t.html#a30a1374922f8892fac5eaa75a0db3cb1",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="inventory_t::inventory_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinventory__t.html#ad66d52c55a1339e49e453c56f7b7ea60",tooltip=" "];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="inventory_t::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classinventory__t.html#a587cb6c66cb791df807f57382f61d682",tooltip="copy an inventory"];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="master_t::migrate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4",tooltip="migration from deme i to deme j"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="genealogy_t::obscure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgenealogy__t.html#ad35cd81e778d84727b0fcfa8839b28cb",tooltip="erase all deme information"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

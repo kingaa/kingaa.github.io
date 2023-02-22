@@ -5,7 +5,7 @@ CP = cp
 TOUCH = touch
 INSTALL = install
 
-default: index.html lbdp_compar.html moran.html
+default: index.html lbdp_compar.html moran.html seir.html
 
 %.tex: %.Rnw
 	$(RSCRIPT) -e "library(knitr); knit(\"$*.Rnw\")"
@@ -30,11 +30,9 @@ default: index.html lbdp_compar.html moran.html
 	$(MAKEIDX) $*
 
 %.html: %.Rmd
-	PATH=/usr/lib/rstudio/bin/pandoc:$$PATH \
 	$(RSCRIPT) -e "rmarkdown::render(\"$*.Rmd\",output_format=\"html_document\")"
 
 %.html: %.md
-	PATH=/usr/lib/rstudio/bin/pandoc:$$PATH \
 	$(RSCRIPT) -e "rmarkdown::render(\"$*.md\",output_format=\"html_document\")"
 
 %.R: %.Rmd

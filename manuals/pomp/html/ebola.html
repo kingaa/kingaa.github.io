@@ -148,7 +148,8 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>if (require(ggplot2) &amp;&amp; require(tidyr)) {
+<pre><code class='language-R'>## Not run: 
+if (require(ggplot2) &amp;&amp; require(tidyr)) {
 
   ebolaWA2014 |&gt;
     pivot_longer(c(cases,deaths)) |&gt;
@@ -163,8 +164,10 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 plot(ebolaModel(country="SLE"))
 plot(ebolaModel(country="GIN"))
 plot(ebolaModel(country="LBR"))
+
+## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.6.4.5 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.7.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

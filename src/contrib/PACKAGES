@@ -16,6 +16,15 @@ License: GPL-3
 MD5sum: 2fc8e1f941749f0bcd479411da8ce7f3
 NeedsCompilation: no
 
+Package: hte
+Version: 0.0.3.0
+Depends: R(>= 4.2.0)
+Imports: methods, utils, dplyr, tibble, tidyr, progress, lubridate
+Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
+License: GPL-3
+MD5sum: 63bb180ae1dd993b35a770f9ba5814f9
+NeedsCompilation: yes
+
 Package: mpifarm
 Version: 1.20-1
 Depends: R(>= 3.0.0)

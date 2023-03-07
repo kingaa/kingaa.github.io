@@ -1,0 +1,131 @@
+<!DOCTYPE html><html><head><title>R: Bernoulli filter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>Bernoulli_filter {hte}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Bernoulli filter</h2>
+
+<h3>Description</h3>
+
+<p>Filter the individual patient data with given forces of infection,
+recovery rates, and test characteristics.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>Bernoulli_filter(data, lambda, gamma, theta)
+
+Bfilter(data, theta)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>data set</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>lambda</code></td>
+<td>
+<p>unit-specific force of infection</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>gamma</code></td>
+<td>
+<p>unit-specific recovery rate</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>theta</code></td>
+<td>
+<p>list of parameters</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>Bernoulli_filter</code> runs a Bernoulli filter,
+updating the expected prevalence.
+It returns the log likelihood, occupancy, and expected prevalences.
+</p>
+<p><code>Bfilter</code> uses an alternative algorithm.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>Bernoulli_filter</code> returns a <code><a href="../../tibble/help/tibble.html">tibble</a></code>
+containing the expected prevalences (for both isolated and un-isolated
+patients), unit occupancy, force of infection, and conditional log
+likelihood for each unit at each event time.
+The sum of the log likelihood column (<code>logLik</code>) is the log
+likelihood of the data.
+</p>
+<p><code>Bfilter</code> returns the log likelihood of the furnished data.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>library(tidyverse)
+
+set.seed(626292345)
+
+fake_data |&gt;
+  arrange(patient,time) -&gt; dat
+
+theta &lt;- list(
+  lambda=c(out=0,A=0.01,B=0.1,C=0.2,D=0.3,E=0.5),
+  gamma=c(out=0.1,A=0.1,B=0.1,C=0.1,D=0.1,E=0.1),
+  p0=0.2,
+  isol_factor=0.1,
+  alpha=0.05,
+  beta=0.2
+)
+
+dat |&gt;
+  Bfilter(theta) -&gt; ll1
+sum(ll1)
+
+dat |&gt;
+  Bernoulli_filter(
+    lambda=theta$lambda,
+    gamma=theta$gamma,
+    theta
+  ) -&gt; f
+f |&gt; filter(logLik!=0) |&gt; pull(logLik) -&gt; ll2
+sum(ll2)
+
+f
+
+f |&gt;
+  select(unit,time,prev_i,prev_u) |&gt;
+  pivot_longer(c(prev_i,prev_u)) |&gt;
+  group_by(unit) |&gt;
+  ## prevalence is not estimated outside the hospital
+  filter(!all(is.na(value))) |&gt;
+  ungroup() |&gt;
+  ggplot(aes(x=time,color=name,y=value))+
+  geom_line(alpha=0.5)+
+  scale_color_manual(values=c(prev_i="blue",prev_u="red"))+
+  facet_grid(unit~.,labeller=label_both)+
+  labs(y="prevalence")+
+  theme_bw()
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.3.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

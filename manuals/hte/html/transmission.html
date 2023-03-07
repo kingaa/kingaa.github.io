@@ -1,0 +1,130 @@
+<!DOCTYPE html><html><head><title>R: Transmission model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>transmission {hte}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Transmission model</h2>
+
+<h3>Description</h3>
+
+<p>Model under which the force of infection in each unit is
+proportional to the prevalence of infection in that unit.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>trans_homog_objfun(params, data, est = character(0))
+
+trans_unit_spec_objfun(params, data, est = character(0))
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>named vector of parameters</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>patient movement, isolation, and testing data</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>est</code></td>
+<td>
+<p>names of parameters to estimate</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>trans_homog_objfun</code> is a stateful objective
+function for the transmission model with a global b and gamma.
+</p>
+<p><code>trans_unit_spec_objfun</code> is a stateful objective function
+for the transmission model with unit-specific transmission rates,
+an out-of-hospital force of infection parameter,
+and recovery rates that can be different inside and outside of hospital.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More on stateful objective functions: 
+<code><a href="../../hte/help/independent.html">independent</a></code>,
+<code><a href="../../hte/help/stobfun.html">stobfun</a>()</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>library(tidyverse)
+library(hte)
+
+set.seed(339613584)
+
+fake_data |&gt;
+  ## filter out tests prior to day 250
+  filter(
+    event!="test" | time &lt; 250,
+    time &lt; 1000
+  ) |&gt;
+  select(-infected) |&gt;
+  arrange(patient,time) -&gt; dat
+
+trans_homog_objfun(
+  params=c(
+    bi=0.1,bu=0.1,gamma=0.01,p0=0.1,
+    isol_factor=0.2,alpha=0.02,beta=0.1
+  ),
+  est=c("bu","bi"),
+  data=dat
+) -&gt; f
+f(log(c(0.4,0.02)))
+coef(f)
+
+## Not run: 
+
+optim(
+  par=log(c(0.4,0.2)),
+  fn=f,
+  control=list(reltol=1e-2)
+) -&gt; out
+f(out$par)
+coef(f)
+
+
+## End(Not run)
+
+trans_unit_spec_objfun(
+  params=c(
+    bi.A=0.1,bi.B=0.1,bi.C=0.1,bi.D=0.1,bi.E=0.1,
+    bu.A=0.1,bu.B=0.1,bu.C=0.1,bu.D=0.1,bu.E=0.1,
+    gamma=0.01,p0=0.1,
+    lambda.out=0.1,gamma.out=0.01,
+    isol_factor=0.2,alpha=0.02,beta=0.1
+  ),
+  data=dat
+) -&gt; f
+f()
+coef(f)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.3.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

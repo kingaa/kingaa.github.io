@@ -1,0 +1,152 @@
+<!DOCTYPE html><html><head><title>R: Independent infection model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>independent {hte}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Independent infection model</h2>
+
+<h3>Description</h3>
+
+<p>Model under which each patient's trajectory of infection is
+independent, conditional on the force of infection.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>indep_homog_objfun(params, data, est = character(0))
+
+indep_unit_spec_objfun(params, data, est = character(0))
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>named vector of parameters</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>patient movement, isolation, and testing data</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>est</code></td>
+<td>
+<p>names of parameters to estimate</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>indep_homog_objfun</code> is a stateful objective
+function for the independent model with a global lambda and gamma.
+</p>
+<p><code>indep_unit_spec_objfun</code> is a stateful objective
+function for the independent model with unit specific lambda, one
+gamma for inside the hospital, and one gamma outside the hospital.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More on the independent infection model: 
+<code><a href="../../hte/help/simuldat.html">simuldat</a>()</code>
+</p>
+<p>More on stateful objective functions: 
+<code><a href="../../hte/help/stobfun.html">stobfun</a>()</code>,
+<code><a href="../../hte/help/transmission.html">transmission</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>library(tidyverse)
+library(lubridate)
+library(pomp)
+library(hte)
+
+set.seed(626292345)
+
+fake_data |&gt;
+  ## filter out tests prior to day 250
+  filter(
+    event!="test" | time &lt; 250,
+    time &lt; 1000
+  ) |&gt;
+  arrange(patient,time) -&gt; dat
+
+indep_homog_objfun(
+  params=c(
+    lambda=0.1,gamma=0.01,p0=0.1,
+    isol_factor=0.2,alpha=0.02,beta=0.1
+  ),
+  est=c("lambda","gamma"),
+  data=dat
+) -&gt; f
+
+optim(
+  par=log(c(0.1,0.01)),
+  fn=f,
+  control=list(reltol=1e-3)
+) -&gt; out
+f(out$par)
+coef(f)
+
+indep_homog_objfun(
+  params=coef(f),
+  est=c("lambda"),
+  data=dat
+) -&gt; g
+
+log.lambda &lt;- seq(log(0.001),to=log(1),length=10)
+plot(exp(log.lambda),sapply(log.lambda,g),log='x')
+
+theta &lt;- coef(f)
+indep_unit_spec_objfun(
+  params=c(
+    lambda=setNames(rep.int(theta["lambda"],6),unique(dat$unit)),
+    gamma.out=unname(theta["gamma"]),
+    theta[c("p0","gamma","alpha","beta","isol_factor")]
+  ),
+  est=c(
+    "lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out",
+    "gamma","gamma.out"
+  ),
+  data=dat
+) -&gt; h
+
+## Not run: 
+
+optim(
+  par=log(coef(h)[
+    c("lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out",
+      "gamma","gamma.out")
+  ]),
+  fn=h,
+  control=list(reltol=1e-3)
+) -&gt; out
+h(out$par)
+coef(h)
+
+
+## End(Not run)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.3.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

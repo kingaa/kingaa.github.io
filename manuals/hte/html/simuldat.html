@@ -1,0 +1,326 @@
+<!DOCTYPE html><html><head><title>R: simuldat</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>simuldat {hte}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>simuldat</h2>
+
+<h3>Description</h3>
+
+<p><code>simuldat</code> simulates data representing the flow of a body of
+patients through a hospital over a specified window of time.
+</p>
+<p><code>simul_patient</code> simulates a single patient's
+history of movement, testing, isolation, and infection.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>simuldat(
+  nbeds = c(50, 60),
+  arrival = 20,
+  window = c("1999-12-31T23:59:59+0000", "2003-01-01T00:00:00+0000"),
+  units = list(A = list(shape = 10, scale = 2/10), B = list(shape = 5, scale = 0.5/5), C
+    = list(shape = 1, scale = 0.5/1), D = list(shape = 1, scale = 3/1), E = list(shape =
+    0.2, scale = 8/0.2), out = list(shape = 0.5, scale = 300/0.5)),
+  visits = list(size = 0.5, mu = 9),
+  uperv = list(size = 1, mu = 0.5),
+  min_dur = 1/24,
+  testing_freq = c(A = NA, B = NA, C = 1/7, D = 1/7, E = 1/7, out = NA),
+  isolation = list(on = 1/50, off = 1/50),
+  infection = list(lambda = c(A = 0.01, B = 0.02, C = 0.001, D = 0.5, E = 0.1, out =
+    0.05), gamma = 0.01, p0 = 0.1, isol_factor = 0.2),
+  alpha = 0.02,
+  beta = 0.1,
+  verbose = getOption("verbose", TRUE)
+)
+
+simul_patient(
+  patient,
+  t0,
+  tf,
+  units,
+  visits,
+  uperv,
+  min_dur,
+  testing_freq,
+  isolation,
+  infection,
+  alpha,
+  beta
+)
+
+indep_infect(lambda, gamma, p0, isol_factor, times, loc, isol)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>nbeds</code></td>
+<td>
+<p>upper and lower bounds on number of beds</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>arrival</code></td>
+<td>
+<p>Poisson arrival rate of new patients</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>window</code></td>
+<td>
+<p>window of simulation</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>units</code></td>
+<td>
+<p>a named list with one entry per unit.
+Each entry is itself a list with the parameters of the Gamma-distribution for the duration of stay in the unit.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>visits</code></td>
+<td>
+<p>list containing parameters of a negative binomial distribution
+for the number of visits per patient.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>uperv</code></td>
+<td>
+<p>list containing parameters for a negative binomial distribution
+for the number of units visited per visit.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>min_dur</code></td>
+<td>
+<p>minimum duration of stay in any unit</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>testing_freq</code></td>
+<td>
+<p>named numeric vector of unit-specific
+testing frequencies.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>isolation</code></td>
+<td>
+<p>list containing parameters of the isolation model</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>infection</code></td>
+<td>
+<p>parameters of the infection model</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>alpha, beta</code></td>
+<td>
+<p>false positive and negative testing error rates</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<td>
+<p>run-time information?</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>patient</code></td>
+<td>
+<p>patient name or number</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>t0, tf</code></td>
+<td>
+<p>initial and final times of patient itinerary</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>lambda</code></td>
+<td>
+<p>force of infection</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>gamma</code></td>
+<td>
+<p>recovery rate</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>p0</code></td>
+<td>
+<p>initial probability of infection</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>isol_factor</code></td>
+<td>
+<p>reduction in susceptibility due to isolation</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>times</code></td>
+<td>
+<p>times at which status is reported</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>loc</code></td>
+<td>
+<p>location of patient at each time</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>isol</code></td>
+<td>
+<p>isolation status</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Simulate hospital movement, testing, and isolation data.
+</p>
+
+
+<h3>Value</h3>
+
+<p>infection status vector
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More on simulated data: 
+<code><a href="../../hte/help/fake_data.html">fake_data</a></code>
+</p>
+<p>More on the independent infection model: 
+<code><a href="../../hte/help/independent.html">independent</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>library(tidyverse)
+library(lubridate)
+
+## Examine the data:
+fake_data
+
+## Verify certain conditions hold:
+stopifnot(
+  `admission condition violation`=fake_data |&gt;
+    group_by(patient,visit) |&gt; slice_head() |&gt;
+    filter(event!="admit") |&gt; nrow()==0,
+  `discharge condition violation`=fake_data |&gt;
+    group_by(patient,visit) |&gt; slice_tail() |&gt;
+    filter(event!="discharge",event!="stop") |&gt; nrow()==0,
+  `unit violation`=fake_data |&gt; filter(is.na(unit)) |&gt; nrow()==0,
+  `event violation`=fake_data |&gt; filter(is.na(event)) |&gt; nrow()==0
+)
+
+fake_data |&gt;
+  mutate(
+    time=as.numeric(
+      as.duration(
+        interval(date,start="2000-01-01T00:00:00+0000")
+      ),
+      units="day"
+    )
+  ) -&gt; fake_data
+
+fake_data |&gt;
+  group_by(patient,visit) |&gt;
+  summarize(dur=max(time)-min(time)) |&gt;
+  ungroup() |&gt;
+  group_by(patient) |&gt;
+  summarize(dur=sum(dur)) |&gt;
+  ggplot(aes(x=log10(dur)))+
+  geom_histogram(bins=20)+
+  labs(title="total duration of hospitalization")+
+  theme_bw()
+
+fake_data |&gt;
+  group_by(patient,visit) |&gt;
+  summarize(dur=max(time)-min(time)) |&gt;
+  ungroup() |&gt;
+  ggplot(aes(x=log10(dur)))+
+  geom_histogram(bins=40)+
+  labs(title="duration of hospital visit")+
+  theme_bw()
+
+fake_data |&gt;
+  filter(
+    event!="test",
+    event!="isolate",
+    event!="release",
+    event!="stop"
+  ) |&gt;
+  group_by(patient,visit) |&gt;
+  arrange(time) |&gt;
+  mutate(dur=lead(time)-time) |&gt;
+  ungroup() |&gt;
+  filter(unit!="out",!is.na(dur)) |&gt;
+  ggplot(aes(x=log10(dur),fill=unit,group=unit))+
+  geom_histogram(aes(y=after_stat(density)),bins=40)+
+  facet_grid(unit~.,scales="free_y")+
+  labs(title="duration of stay by unit")+
+  theme_bw()
+
+fake_data |&gt;
+  group_by(patient) |&gt;
+  summarize(ntest=sum(event=="test")) |&gt;
+  ungroup() |&gt;
+  ggplot(aes(x=ntest))+
+  geom_histogram(binwidth=1,center=0)+
+  labs(title="number of tests per patient")+
+  theme_bw()
+
+fake_data |&gt;
+  arrange(time) |&gt;
+  mutate(
+    dn=case_when(
+      event=="admit"~1L,
+      event=="discharge"~-1L,
+      TRUE~0L
+    ),
+    occ=cumsum(dn)
+  ) |&gt;
+  ggplot(aes(x=date,y=occ))+
+  geom_step()+
+  labs(title="hospital occupancy")+
+  theme_bw()
+
+fake_data |&gt;
+  arrange(time) |&gt;
+  select(date,test.result=result,isol,infected) |&gt;
+  pivot_longer(c(test.result,isol,infected)) |&gt;
+  filter(!is.na(value)) |&gt;
+  ggplot(aes(x=date,y=value,color=name))+
+  geom_point()+
+  geom_smooth()+
+  guides(color="none")+
+  labs(
+    title="infection and isolation status, test results",
+    y=""
+  )+
+  facet_grid(name~.)+
+  theme_bw()
+
+fake_data |&gt;
+  filter(event=="test") |&gt;
+  mutate(
+    interval=cut(time,breaks=72,ordered=TRUE)
+  ) |&gt;
+  select(interval,time,infected,isol,result) |&gt;
+  pivot_longer(c(infected,isol,result)) |&gt;
+  group_by(name,interval) |&gt;
+  summarize(
+    time=mean(time),
+    prev=mean(value),
+    n=n()
+  ) |&gt;
+  ungroup() |&gt;
+  ggplot(aes(x=time,y=prev,group=name,fill=name))+
+  geom_col(position="dodge")+
+  labs(title="infection, isolation, and detection through time")+
+  theme_bw()+
+  theme(axis.text.x=element_text(angle=90))
+
+fake_data |&gt;
+  filter(event=="test") |&gt;
+  select(infected,result) |&gt;
+  count(infected,result) |&gt;
+  group_by(infected) |&gt;
+  mutate(prob=n/sum(n)) |&gt;
+  ungroup()
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.3.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

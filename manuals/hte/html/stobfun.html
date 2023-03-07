@@ -1,0 +1,137 @@
+<!DOCTYPE html><html><head><title>R: Stateful objective functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>stobfun {hte}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Stateful objective functions</h2>
+
+<h3>Description</h3>
+
+<p>Convenience functions for constructing and working with stateful objective functions (&lsquo;stobfun&rsquo;-class objects).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>stobfun(
+  embed,
+  params,
+  est = character(0),
+  log = character(0),
+  logit = character(0),
+  objfun,
+  data
+)
+
+transf_fns(log = character(0), logit = character(0), est = character(0))
+
+embedding(...)
+
+## S3 method for class 'stobfun'
+coef(object, ...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr style="vertical-align: top;"><td><code>embed</code></td>
+<td>
+<p>embedding (see <code><a href="../../hte/help/embedding.html">embedding</a></code>).</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>params</code></td>
+<td>
+<p>vector of parameters</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>est</code></td>
+<td>
+<p>character: names of parameters to be estimated</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>log</code></td>
+<td>
+<p>character; names of parameters to log transform.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>logit</code></td>
+<td>
+<p>character; names of parameters to logit transform.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>objfun</code></td>
+<td>
+<p>underlying objective function</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>data</code></td>
+<td>
+<p>data</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>...</code></td>
+<td>
+<p>ignored.</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>object</code></td>
+<td>
+<p>&lsquo;stobfun&rsquo;-class stateful objective function</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p><code>objfun</code> will be called as <code>objfun(theta,data)</code>, where
+<code>theta</code> is the nested list constructed according to the given specifications
+and <code>data</code> is the data.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>transf_fns</code> returns a list of two functions.
+The first is the transformation to the estimation scale;
+the second is its inverse.
+</p>
+<p><code>embedding</code> returns the embedding function corresponding to the given specification.
+</p>
+<p><code>coef(f)</code> returns the parameter vector corresponding to the last call of the stateful objective function <code>f</code>.
+</p>
+
+
+<h3>Construction and usage of stateful objective functions</h3>
+
+<p>A stateful objective function is an ordinary function that can be used as an objective function in an optimization problem.
+In particular, it can be passed to optimizers such as <code><a href="../../stats/help/optim.html">optim</a></code>, <code><a href="../../subplex/help/subplex.html">subplex</a></code>, or <code><a href="../../nloptr/help/nloptr.html">nloptr</a></code>.
+It is stateful in the sense that it remembers the argument with which it was last called.
+</p>
+<p>To construct a stateful objective function, call the constructor function for the model of interest.
+The constructor function requires that you pass a vector of model parameters: this gives the default parameter values.
+It also requires that you pass the data and the names of the parameters that you wish to estimate.
+The constructor will return an object of class &lsquo;stobfun&rsquo;.
+</p>
+<p>Having constructed a &lsquo;stobfun&rsquo; stateful objective function, you can pass this to any suitable optimizer.
+Once the optimizer has returned, <b>it is important that you call the function one last time, at the parameters the optimizer has returned</b> (see examples).
+This ensures that the stored parameters are those at the (putative) optimum.
+You can retrieve these parameters via a call to <code>coef</code>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More on stateful objective functions: 
+<code><a href="../../hte/help/independent.html">independent</a></code>,
+<code><a href="../../hte/help/transmission.html">transmission</a></code>
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.3.0 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

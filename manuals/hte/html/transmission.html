@@ -53,8 +53,19 @@ trans_unit_spec_objfun(params, data, est = character(0))
 
 <h3>Details</h3>
 
+<p>The basic transmission model assumes that the force of infection
+on an unisolated patient is
+</p>
+<p style="text-align: center;"><code class="reqn">\lambda=b(P_u+aP_i),</code>
+</p>
+
+<p>where <code class="reqn">P_u</code>, <code class="reqn">P_i</code> are the prevalences among unisolated
+and isolated patients, respectively.
+On an isolated patient, this force of infection is reduced by the factor
+<code>isol_factor</code>.
+</p>
 <p><code>trans_homog_objfun</code> is a stateful objective
-function for the transmission model with a global b and gamma.
+function for the transmission model with global a, b, and gamma.
 </p>
 <p><code>trans_unit_spec_objfun</code> is a stateful objective function
 for the transmission model with unit-specific transmission rates,
@@ -89,19 +100,19 @@ fake_data |&gt;
 
 trans_homog_objfun(
   params=c(
-    bi=0.1,bu=0.1,gamma=0.01,p0=0.1,
+    a=1,b=0.1,gamma=0.01,p0=0.1,
     isol_factor=0.2,alpha=0.02,beta=0.1
   ),
-  est=c("bu","bi"),
+  est=c("a","b"),
   data=dat
 ) -&gt; f
-f(log(c(0.4,0.02)))
+f(log(c(0.05,0.4)))
 coef(f)
 
 ## Not run: 
 
 optim(
-  par=log(c(0.4,0.2)),
+  par=log(c(0.5,0.4)),
   fn=f,
   control=list(reltol=1e-2)
 ) -&gt; out
@@ -113,8 +124,8 @@ coef(f)
 
 trans_unit_spec_objfun(
   params=c(
-    bi.A=0.1,bi.B=0.1,bi.C=0.1,bi.D=0.1,bi.E=0.1,
-    bu.A=0.1,bu.B=0.1,bu.C=0.1,bu.D=0.1,bu.E=0.1,
+    a.A=1,a.B=1,a.C=1,a.D=1,a.E=1,
+    b.A=0.1,b.B=0.1,b.C=0.1,b.D=0.1,b.E=0.1,
     gamma=0.01,p0=0.1,
     lambda.out=0.1,gamma.out=0.01,
     isol_factor=0.2,alpha=0.02,beta=0.1
@@ -125,6 +136,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.4.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.5.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

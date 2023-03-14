@@ -17,12 +17,12 @@ MD5sum: 2fc8e1f941749f0bcd479411da8ce7f3
 NeedsCompilation: no
 
 Package: hte
-Version: 0.0.4.1
+Version: 0.0.5.0
 Depends: R(>= 4.2.0)
 Imports: methods, utils, dplyr, tibble, tidyr, progress, lubridate
 Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
 License: GPL-3
-MD5sum: 6e9bf9588d41262872e3a7665cfb1212
+MD5sum: e4bc8d040584945cb01f527fd288edfe
 NeedsCompilation: yes
 
 Package: mpifarm

@@ -285,8 +285,10 @@ pomp examples	pomp_examp
 pomp,package	pomp-package
 pomp-class	pomp_class
 pompLoad	load
+pompLoad,objfun-method	load
 pompLoad,pomp-method	load
 pompUnload	load
+pompUnload,objfun-method	load
 pompUnload,pomp-method	load
 pomp_fun	pomp_fun
 pomp_fun,character-method	pomp_fun

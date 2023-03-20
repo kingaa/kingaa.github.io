@@ -249,6 +249,20 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 </p>
 
 
+<h3>Objective functions based on C snippets</h3>
+
+<p>The use of C snippets (see <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code>) causes a dynamically loadable library to be built.
+As a rule, <span class="pkg">pomp</span> functions load this library as needed and unload it when it is no longer needed.
+The stateful objective functions are an exception to this rule.
+For efficiency, calls to the objective function do not execute <code><a href="../../pomp/help/pompLoad.html">pompLoad</a></code> or <code><a href="../../pomp/help/pompUnload.html">pompUnload</a></code>:
+rather, it is assumed that <code><a href="../../pomp/help/pompLoad.html">pompLoad</a></code> has been called before any call to the objective function.
+When a stateful objective function using one or more C snippets is created, <code><a href="../../pomp/help/pompLoad.html">pompLoad</a></code> is called internally to build and load the library:
+therefore, within a single <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session, if one creates a stateful objective function, one can freely call that objective function and (more to the point) pass it to an optimizer that calls it freely, without needing to call <code><a href="../../pomp/help/pompLoad.html">pompLoad</a></code>.
+On the other hand, if one retrieves a stored objective function from a file, or passes one to another <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session, one must call <code><a href="../../pomp/help/pompLoad.html">pompLoad</a></code> before using it.
+<strong>Failure to do this will typically result in a segmentation fault (i.e., it will crash the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session).</strong>
+</p>
+
+
 <h3>Author(s)</h3>
 
 <p>Stephen P. Ellner, Bruce E. Kendall, Aaron A. King
@@ -317,6 +331,6 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.7.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.7.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

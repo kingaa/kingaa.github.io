@@ -1,10 +1,10 @@
 Package: aakmisc
-Version: 0.30-1
-Depends: R(>= 4.0.0)
-Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
+Version: 0.31-1
+Depends: R(>= 4.1.0)
+Imports: methods, grid, curl, DBI, RPostgreSQL, dplyr, ggplot2
 Suggests: scales, magrittr
 License: GPL-3
-MD5sum: 7e7028743864770c100ac74ba3ab3111
+MD5sum: 06a635ff3b739222a4408c934b3dea73
 
 Package: circumstance
 Version: 0.0.5.2

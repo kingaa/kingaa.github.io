@@ -1,7 +1,7 @@
 Package: aakmisc
-Version: 0.30-1
-Depends: R(>= 4.0.0)
-Imports: methods, grid, curl, DBI, RPostgreSQL, plyr, ggplot2
+Version: 0.31-1
+Depends: R(>= 4.1.0)
+Imports: methods, grid, curl, DBI, RPostgreSQL, dplyr, ggplot2
 Suggests: scales, magrittr
 License: GPL-3
 

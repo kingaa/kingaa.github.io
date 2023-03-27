@@ -6,8 +6,12 @@
 ## 3. Call the `to_snake_case` function with the path to your new
 ##    directory as its sole argument
 ## 4. Examine the differences between the files for correctness.
+##
+## The script requires version R version >= 4.2
 
-to_snake_case <- function (dir) {
+to_snake_case <- function (dir, extensions = c("R", "Rmd", "Rnw")) {
+
+  stopifnot(`insufficient R version`=getRversion()>="4.2")
   
   require(readr,quietly=TRUE)
   require(stringi,quietly=TRUE)
@@ -58,7 +62,17 @@ to_snake_case <- function (dir) {
       r"{$1\(}"
     ) -> repl
 
-  filelist <- list.files(path=dir,full.names=TRUE)
+  lapply(
+    paste0(r"{^.*\.}",extensions,r"{$}"),
+    \(.) list.files(path=dir,pattern=.,full.names=TRUE)
+  ) |>
+    do.call(c,args=_) -> filelist
+      
+  cat(
+    "scanning files:\n",
+    paste("\t",filelist,sep="",collapse="\n"),
+    "\n\n"
+  )
 
   filelist |>
     sapply(

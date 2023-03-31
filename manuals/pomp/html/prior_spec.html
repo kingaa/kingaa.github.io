@@ -126,12 +126,11 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>## Not run: 
-  ## Starting with an existing pomp object
-
+<pre><code class='language-R'> # takes too long for R CMD check
+  ## Starting with an existing pomp object:
   verhulst() |&gt; window(end=30) -&gt; po
   
-  ## we add or change prior distributions using the two
+  ## We add or change prior distributions using the two
   ## arguments 'rprior' and 'dprior'. Here, we introduce
   ## a Gamma prior on the 'r' parameter.
   ## We construct 'rprior' and 'dprior' using R functions.
@@ -184,9 +183,8 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
   plot(Bb,pars=c("loglik","log.prior","r","K"))
 
 
-## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.7.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.0.0.3 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

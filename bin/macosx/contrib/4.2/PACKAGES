@@ -40,12 +40,13 @@ License: GPL-3
 MD5sum: e38b3a165d312717a14cf4327dfe443a
 
 Package: pomp
-Version: 4.7.0.1
+Version: 5.0.0.3
 Depends: R(>= 4.1.0)
-Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda, plyr
-Suggests: ggplot2, knitr, tidyr, dplyr, subplex, nloptr
+Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
+        dplyr
+Suggests: ggplot2, knitr, tidyr, subplex, nloptr
 License: GPL-3
-MD5sum: 2fde4dc2dee21ce12be561fe90c51f52
+MD5sum: 6459ca9d67624a5b7a6a30a94fdc0c88
 
 Package: spatPomp
 Version: 0.29.0.1

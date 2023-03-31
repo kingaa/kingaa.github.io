@@ -174,9 +174,9 @@ Therefore, it is a good idea to evaluate the function on the parameters returned
 </p>
 
 
-<h3>Objective functions based on C snippets</h3>
+<h3>Warning! Objective functions based on C snippets</h3>
 
-<p>The use of C snippets (see <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code>) causes a dynamically loadable library to be built.
+<p>If you use C snippets (see <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code>), a dynamically loadable library will be built.
 As a rule, <span class="pkg">pomp</span> functions load this library as needed and unload it when it is no longer needed.
 The stateful objective functions are an exception to this rule.
 For efficiency, calls to the objective function do not execute <code><a href="../../pomp/help/pompLoad.html">pompLoad</a></code> or <code><a href="../../pomp/help/pompUnload.html">pompUnload</a></code>:
@@ -238,6 +238,6 @@ On the other hand, if one retrieves a stored objective function from a file, or 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.7.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.0.0.3 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

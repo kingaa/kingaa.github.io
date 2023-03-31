@@ -94,7 +94,7 @@ observed variables <code class="reqn">y_t</code> are distributed as
 plot(po)
 coef(po)
 simulate(po) |&gt; plot()
-
+ # takes too long for R CMD check
   ## generate a bifurcation diagram for the Ricker map
   p &lt;- parmat(coef(ricker()),nrep=500)
   p["r",] &lt;- exp(seq(from=1.5,to=4,length=500))
@@ -109,6 +109,6 @@ simulate(po) |&gt; plot()
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 4.7.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.0.0.3 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

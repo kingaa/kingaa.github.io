@@ -18,6 +18,25 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 5.0.0</h3>
+
+
+<ul>
+<li><p> We no longer import from <span class="pkg">plyr</span>.
+</p>
+</li>
+<li><p> The <code>dimnames</code> attributes of various arrays that appear in <span class="pkg">pomp</span>, including arrays of observables, state variables, parameters, covariates, and so on, have been made uniform.
+In particular, when a dimension of an array corresponds to variables with different names, this dimension is itself named &quot;name&quot;.
+Previously, its name was sometimes &quot;variable&quot; and sometimes &quot;parameter&quot;.
+This change is meant to streamline interaction with the <span class="pkg">tidyverse</span>.
+</p>
+</li>
+<li><p> Some minor bugfixes.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 4.7.0</h3>
 
 

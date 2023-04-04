@@ -1,19 +1,17 @@
-## Run with e.g., mpirun -n 51 Rscript --vanilla <this file> chunk=2 ncore=2
-
 library(foreach,quietly=TRUE)
-library(doMPI,quietly=TRUE)
+library(doFuture,quietly=TRUE)
+registerDoFuture()
 
 njobs <- 1600
+nnode <- 220
 ncore <- 1
 chunk <- 1
 
 ## set njobs, ncore, chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
-cl <- startMPIcluster(maxcores=ncore,verbose=TRUE)
-registerDoMPI(cl)
-
-nnode <- clusterSize(cl)
+cl <- makeClusterMPI(nnode,autostop=TRUE,verbose=TRUE)
+plan(cluster,workers=cl)
 
 cat("Starting computation of size",njobs,"using",
   nnode,"nodes, with",
@@ -23,7 +21,6 @@ cat("Starting computation of size",njobs,"using",
 tic <- Sys.time()
 res <- foreach (
   i = seq_len(njobs),
-  .options.mpi=list(chunkSize=chunk,seed=1218461302L),
   .combine=rbind,
   .inorder=FALSE
 ) %dopar% {
@@ -35,9 +32,6 @@ res <- foreach (
   data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
 }
 toc <- Sys.time()
-
-##closeCluster(cl)
-##invisible(mpi.finalize())
 
 suppressMessages(library(aakmisc,quietly=TRUE))
 library(magrittr)
@@ -64,10 +58,7 @@ res |>
     nwork=nwork,
     chunk=chunk) |>
   melt(id=NULL) |>
-  mutate(
-    y=-seq_along(variable),
-    label=paste0(variable,"\t",signif(value,4))
-  ) -> eff
+  mutate(y=-seq_along(variable),label=paste0(variable,"\t",signif(value,4))) -> eff
 
 eff |> use_series("label") |> cat(sep="\n")
 eff |> ggplot(aes(x=1,y=y,label=label))+
@@ -89,7 +80,7 @@ res |>
   guides(fill="none",color="none")+
   theme(axis.text.x=element_text(angle=90,vjust=0.5)) -> pl1
 
-png(filename="dompi_test.png",width=7,height=8,
+png(filename="dofuture_test.png",width=7,height=8,
   units='in',res=300)
 print(pl)
 print(txt,vp=viewport(x=0.2,y=0.8,width=0.4,height=0.2))
@@ -103,5 +94,3 @@ res |>
   digest()
 
 ## 1ad5a2898de4e21b2baf3a7b7c88afe5
-
-## Rmpi::mpi.quit()

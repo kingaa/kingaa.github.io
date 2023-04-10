@@ -6,9 +6,9 @@ Suggests: scales
 License: GPL-3
 
 Package: circumstance
-Version: 0.0.5.2
+Version: 0.0.6.0
 Depends: R(>= 4.1.0), pomp(>= 4.6.4)
-Imports: methods, foreach
+Imports: methods, foreach, grid, grDevices, graphics, utils
 Suggests: doFuture, doRNG, dplyr, tidyr, ggplot2
 License: GPL-3
 

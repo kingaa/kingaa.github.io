@@ -20,8 +20,8 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>Subset matrix dropping dimension but without dropping dimname 
-(which is R's default).
+<p>Subset matrix dropping dimension but without dropping dimname
+(as done by <code>`[`</code> by default).
 </p>
 
 
@@ -42,22 +42,43 @@ get_row(matrix, row, cols)
 </td></tr>
 <tr style="vertical-align: top;"><td><code>rows</code></td>
 <td>
-<p>numeric; rows to subset; like with '[', this argument can be left empty to designate all rows.</p>
+<p>numeric; rows to subset; like with <code>`[`</code>, this argument can be left empty to designate all rows.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>col</code></td>
 <td>
-<p>numeric; single column to subset.</p>
+<p>integer; single column to subset.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>row</code></td>
 <td>
-<p>numeric; single row to subset.</p>
+<p>integer; single row to subset.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>cols</code></td>
 <td>
-<p>numeric; columns to subset; like with '[', this argument can be left empty to designate all columns.</p>
+<p>numeric; columns to subset; like with <code>`[`</code>, this argument can be left empty to designate all columns.</p>
 </td></tr>
 </table>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.16.0 <a href="00Index.html">Index</a>]</div>
+
+<h3>Value</h3>
+
+<p>A named <code>vector</code> object.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Carles Bret&oacute;
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>m &lt;- matrix(NA,dimnames=list('r1','c1'))
+m[1,1] # = NA; R removes both names
+get_col(m,rows=1,col=1) # = c(r1=NA) keeps colname
+get_row(m,row=1,cols=1) # = c(c1=NA) keeps rowname
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

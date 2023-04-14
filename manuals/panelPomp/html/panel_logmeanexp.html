@@ -36,12 +36,12 @@ squared, summed and the squared root is taken.
 <table>
 <tr style="vertical-align: top;"><td><code>x</code></td>
 <td>
-<p>Matrix with the same number of replicated estimates for each panel 
+<p>Matrix with the same number of replicated estimates for each panel
 unit loglikelihood.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>MARGIN</code></td>
 <td>
-<p>The dimension of the matrix that corresponds to a panel unit 
+<p>The dimension of the matrix that corresponds to a panel unit
 and over which averaging occurs (1 indicates rows, 2 indicates columns).</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>se</code></td>
@@ -51,11 +51,31 @@ and over which averaging occurs (1 indicates rows, 2 indicates columns).</p>
 </table>
 
 
+<h3>Value</h3>
+
+<p>A <code>numeric</code> value with the average panel log likelihood or, when
+<code>se = TRUE</code>, a <code>numeric</code> vector adding the corresponding standard error.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Carles Bret&oacute;
+</p>
+
+
 <h3>See Also</h3>
 
 <p>panel_loglik
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.16.0 <a href="00Index.html">Index</a>]</div>
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>ulls &lt;- matrix(c(1,1,10,10),nr=2)
+panel_logmeanexp(ulls,MARGIN=2,se=TRUE)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -36,7 +36,7 @@ logLik(object, repMargin, first = "aver", aver = "logmeanexp", se = FALSE)
 <table>
 <tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
-<p>Matrix with the same number of replicated estimates for each 
+<p>Matrix with the same number of replicated estimates for each
 panel unit loglikelihood.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>repMargin</code></td>
@@ -46,13 +46,13 @@ panel unit loglikelihood.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>first</code></td>
 <td>
-<p>Wether to <code>"aver"</code>(age replicates) or <code>"aggr"</code>(egate 
+<p>Wether to <code>"aver"</code>(age replicates) or <code>"aggr"</code>(egate
 units) before performing the other action.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>aver</code></td>
 <td>
-<p>How to average: <code>'logmeanexp'</code> to average on the likelihood 
-scale before taking logs or <code>'mean'</code> to average after taking logs (in 
+<p>How to average: <code>'logmeanexp'</code> to average on the likelihood
+scale before taking logs or <code>'mean'</code> to average after taking logs (in
 which case, which action is performed first does not change the result).</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>se</code></td>
@@ -64,8 +64,21 @@ which case, which action is performed first does not change the result).</p>
 
 <h3>Details</h3>
 
-<p>When <code>se = TRUE</code>, the jackknife se's from 
+<p>When <code>se = TRUE</code>, the jackknife se's from
 <code>pomp::logmeanexp</code> are squared, summed and the squared root is taken.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>numeric</code> vector with the average panel log likelihood and, when
+<code>se = TRUE</code>, the corresponding standard error.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Carles Bret&oacute;
 </p>
 
 
@@ -77,6 +90,16 @@ which case, which action is performed first does not change the result).</p>
 <code><a href="../../panelPomp/help/pfilter.html">pfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.16.0 <a href="00Index.html">Index</a>]</div>
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>ulls &lt;- matrix(c(1,1.1,10.1,10),nr=2)
+# when combining log likelihood estimates, the order in which aggregation and
+# averaging are done can make a difference: panel_logmeanexp() implements the best
+logLik(ulls,repMargin=1,first="aver",aver="logmeanexp")
+logLik(ulls,repMargin=1,first="aggr",aver="mean",se=TRUE)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

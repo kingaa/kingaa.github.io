@@ -1,10 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Minimization of a function by the subplex algorithm</title>
+<!DOCTYPE html><html><head><title>R: Minimization of a function by the subplex algorithm</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for subplex {subplex}"><tr><td>subplex {subplex}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>subplex {subplex}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
 <h2>Minimization of a function by the subplex algorithm</h2>
 
@@ -16,25 +26,24 @@
 
 <h3>Usage</h3>
 
-<pre>
-subplex(par, fn, control = list(), hessian = FALSE, ...)
-</pre>
+<pre><code class='language-R'>subplex(par, fn, control = list(), hessian = FALSE, ...)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>par</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>par</code></td>
 <td>
 <p>Initial guess of the parameters to be optimized over.</p>
 </td></tr>
-<tr valign="top"><td><code>fn</code></td>
+<tr style="vertical-align: top;"><td><code>fn</code></td>
 <td>
 <p>The function to be minimized.  Its first argument must be the
 vector of parameters to be optimized over.  It should return a scalar
 result.</p>
 </td></tr>
-<tr valign="top"><td><code>control</code></td>
+<tr style="vertical-align: top;"><td><code>control</code></td>
 <td>
 <p>A list of control parameters, consisting of some or all of
 the following: </p>
@@ -53,12 +62,12 @@ relative to <code>par</code>: if <code>par + parscale = par</code> in any compon
 <code>parscale</code> is too small.  The default value is <code>1</code>.  </p>
 </dd> </dl>
 </td></tr>
-<tr valign="top"><td><code>hessian</code></td>
+<tr style="vertical-align: top;"><td><code>hessian</code></td>
 <td>
 <p>If <code>hessian=TRUE</code>, the Hessian of the objective at the
 estimated optimum will be numerically computed.</p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
 <p>Additional arguments to be passed to the function <code>fn</code>.</p>
 </td></tr>
@@ -86,27 +95,27 @@ precision reached</p>
 
 <p><code>subplex</code> returns a list containing the following:
 </p>
-<table summary="R valueblock">
-<tr valign="top"><td><code>par</code></td>
+<table>
+<tr style="vertical-align: top;"><td><code>par</code></td>
 <td>
 <p>Estimated parameters that minimize the function.</p>
 </td></tr>
-<tr valign="top"><td><code>value</code></td>
+<tr style="vertical-align: top;"><td><code>value</code></td>
 <td>
 <p>Minimized value of the function.</p>
-</td></tr> <tr valign="top"><td><code>count</code></td>
+</td></tr> <tr style="vertical-align: top;"><td><code>count</code></td>
 <td>
 <p>Number of
 function evaluations required.</p>
-</td></tr> <tr valign="top"><td><code>convergence</code></td>
+</td></tr> <tr style="vertical-align: top;"><td><code>convergence</code></td>
 <td>
 <p>Convergence code (see
 Details).</p>
-</td></tr> <tr valign="top"><td><code>message</code></td>
+</td></tr> <tr style="vertical-align: top;"><td><code>message</code></td>
 <td>
 <p> A character string giving a diagnostic message
 from the optimizer, or 'NULL'.  </p>
-</td></tr> <tr valign="top"><td><code>hessian</code></td>
+</td></tr> <tr style="vertical-align: top;"><td><code>hessian</code></td>
 <td>
 <p>Hessian matrix.</p>
 </td></tr>
@@ -135,39 +144,35 @@ Texas at Austin, 1990.
 
 <h3>Examples</h3>
 
-<pre>
+<pre><code class='language-R'>ripple &lt;- function (x) {
+  r &lt;- sqrt(sum(x^2))
+  1-exp(-r^2)*cos(10*r)^2
+}
 
-rosen &lt;- function (x) {   ## Rosenbrock Banana function
+subplex(par=c(1),fn=ripple,hessian=TRUE)
+
+subplex(par=c(0.1,3),fn=ripple,hessian=TRUE)
+
+subplex(par=c(0.1,3,2),fn=ripple,hessian=TRUE)
+## Rosenbrock Banana function
+rosen &lt;- function (x) {
   x1 &lt;- x[1]
   x2 &lt;- x[2]
   100*(x2-x1*x1)^2+(1-x1)^2
 }
+
 subplex(par=c(11,-33),fn=rosen)
 
-rosen2 &lt;- function (x) {
-  X &lt;- matrix(x,ncol=2)
-  sum(apply(X,1,rosen))
-}
-subplex(par=c(-33,11,14,9,0,12),fn=rosen2,control=list(maxit=30000))
-## compare with optim:
-optim(par=c(-33,11,14,9,0,12),fn=rosen2,control=list(maxit=30000))
-
-ripple &lt;- function (x) {
-  r &lt;- sqrt(sum(x^2))
-  1-exp(-r^2)*cos(10*r)^2
-}
-subplex(par=c(1),fn=ripple,hessian=TRUE)
-subplex(par=c(0.1,3),fn=ripple,hessian=TRUE)
-subplex(par=c(0.1,3,2),fn=ripple,hessian=TRUE)
-
-rosen &lt;- function (x, g = 0, h = 0) {   ## Rosenbrock Banana function (using names)
+## Rosenbrock Banana function (using names)
+rosen &lt;- function (x, g = 0, h = 0) {
   x1 &lt;- x['a']
   x2 &lt;- x['b']-h
   100*(x2-x1*x1)^2+(1-x1)^2+g
 }
+
 subplex(par=c(b=11,a=-33),fn=rosen,h=22,control=list(abstol=1e-9,parscale=5),hessian=TRUE)
+</code></pre>
 
-</pre>
-
-<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.8 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.8.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -26,32 +26,59 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>fromVectorPparams(vec_pars)
+<pre><code class='language-R'>toVectorPparams(pParams)
+
+fromVectorPparams(vec_pars)
 
 toMatrixPparams(listPparams)
-
-toVectorPparams(pParams)
 </code></pre>
 
 
 <h3>Arguments</h3>
 
 <table>
+<tr style="vertical-align: top;"><td><code>pParams</code></td>
+<td>
+<p>A list with the format of the <code>pParams</code> slot of <code>panelPomp</code> objects.</p>
+</td></tr>
 <tr style="vertical-align: top;"><td><code>vec_pars</code></td>
 <td>
-<p>A one-row <code>data.frame</code> with format matching that of the 
+<p>A one-row <code>data.frame</code> with format matching that of the
 output of <a href="../../panelPomp/help/toVectorPparams.html">toVectorPparams</a>.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>listPparams</code></td>
 <td>
 <p>PanelPomp parameters in list format</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>pParams</code></td>
-<td>
-<p>A list with the format of the <code>pParams</code> slot of <code>panelPomp</code> objects.</p>
-</td></tr>
 </table>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.16.0 <a href="00Index.html">Index</a>]</div>
+
+<h3>Value</h3>
+
+<p><code>toVectorPparams()</code> returns an object of class <code>data.frame</code>.
+</p>
+<p><code>fromVectorPparams()</code> returns an object of class <code>list</code> with the
+model parameters in list form.
+</p>
+<p><code>toMatrixPparams()</code> returns an object of class <code>matrix</code> with the
+model parameters in matrix form.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Carles Bret&oacute;
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>prw &lt;- panelRandomWalk()
+toVectorPparams(pparams(prw))
+fromVectorPparams(toVectorPparams(pparams(prw)))
+toMatrixPparams(pparams(prw))
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

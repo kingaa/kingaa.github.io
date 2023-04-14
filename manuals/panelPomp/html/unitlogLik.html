@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: 'unitlogLik' generic.</title>
+<!DOCTYPE html><html><head><title>R: Extract log likelihood of units of panel models</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -16,11 +16,15 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>unitlogLik {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2><code>unitlogLik</code> generic.</h2>
+<h2>Extract log likelihood of units of panel models</h2>
 
 <h3>Description</h3>
 
-<p><code>unitlogLik</code> generic.
+<p><code>unitlogLik()</code> is a generic function that extracts the log
+likelihood for each unit of panel objects returned by panel modeling functions.
+While the <code>numeric</code> value with the log likelihood for the entire panel
+is useful and possible via S4 methods <code>logLik()</code>, the contributions to it
+by panel units can be implemented via <code>unitlogLik()</code>.
 </p>
 
 
@@ -35,11 +39,11 @@ function processMathHTML() {
 <table>
 <tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
-<p>object.</p>
+<p>an object for which log likelihood values for units can be extracted.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
-<p>Additional arguments.</p>
+<p>additional arguments.</p>
 </td></tr>
 </table>
 
@@ -49,6 +53,35 @@ function processMathHTML() {
 <p>This is a generic function: methods can be defined for it.
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 0.16.0 <a href="00Index.html">Index</a>]</div>
+
+<h3>Value</h3>
+
+<p>Log likelihood extracted for each unit of the panel model <code>object</code>.
+</p>
+<p>When given objects of class <code>pfilterd.ppomp</code>, <code>unitloglik()</code> returns a <code>numeric</code> vector.
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Carles Bret&oacute;
+</p>
+
+
+<h3>See Also</h3>
+
+<p><a href="../../panelPomp/help/pfilter.html">pfilter</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'># filter, which generates log likelihoods
+pfrw &lt;- pfilter(panelRandomWalk(),Np=10)
+# extract log likelihood for each panel unit
+unitlogLik(pfrw)
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

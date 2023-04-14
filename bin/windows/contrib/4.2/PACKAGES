@@ -20,12 +20,6 @@ Suggests: ape
 License: GPL-3
 Archs: x64
 
-Package: panelPomp
-Version: 0.16.0
-Depends: R(>= 4.1.0), pomp(>= 4.5.2)
-Imports: methods
-License: MIT + file LICENSE
-
 Package: phylopomp
 Version: 0.1.0.2
 Depends: R(>= 4.1)
@@ -52,6 +46,13 @@ Imports: foreach, dplyr, tidyr, stringr, abind, rlang, magrittr,
         ggplot2
 LinkingTo: pomp
 Suggests: testthat, doParallel (>= 1.0.11), parallel
+License: GPL-3
+Archs: x64
+
+Package: subplex
+Version: 1.8.1
+Depends: R(>= 2.5.1)
+Suggests: tinytest
 License: GPL-3
 Archs: x64
 

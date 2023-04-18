@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Parallel iterated filtering</title>
+<!DOCTYPE html><html><head><title>R: Particle Markov chain Monte Carlo in parallel</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -14,32 +14,32 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>mif2 {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>pmcmc {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Parallel iterated filtering</h2>
+<h2>Particle Markov chain Monte Carlo in parallel</h2>
 
 <h3>Description</h3>
 
-<p>Runs multiple instances of <code>mif2</code> using <code>foreach</code>.
+<p>Runs multiple instances of <code>pmcmc</code> using <code>foreach</code>.
 </p>
 
 
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'ANY,data.frame'
-mif2(data, starts, ...)
+pmcmc(data, starts, ...)
 
 ## S4 method for signature 'ANY,missing'
-mif2(data, starts, ...)
+pmcmc(data, starts, ...)
 
 ## S4 method for signature 'pompList,missing'
-mif2(data, starts, ...)
+pmcmc(data, starts, ...)
 
 ## S4 method for signature 'pfilterList,missing'
-mif2(data, starts, ...)
+pmcmc(data, starts, ...)
 
-## S4 method for signature 'mif2List,missing'
-mif2(data, starts, ...)
+## S4 method for signature 'pmcmcList,missing'
+pmcmc(data, starts, ...)
 </code></pre>
 
 
@@ -48,7 +48,7 @@ mif2(data, starts, ...)
 <table>
 <tr style="vertical-align: top;"><td><code>data</code></td>
 <td>
-<p>passed to <code><a href="../../pomp/help/mif2.html">pomp::mif2</a></code></p>
+<p>passed to <code><a href="../../pomp/help/pmcmc.html">pomp::pmcmc</a></code></p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>starts</code></td>
 <td>
@@ -56,14 +56,14 @@ mif2(data, starts, ...)
 </td></tr>
 <tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
-<p>all additional arguments are passed to <code><a href="../../pomp/help/mif2.html">pomp::mif2</a></code></p>
+<p>all additional arguments are passed to <code><a href="../../pomp/help/pmcmc.html">pomp::pmcmc</a></code></p>
 </td></tr>
 </table>
 
 
 <h3>See Also</h3>
 
-<p><code><a href="../../pomp/help/mif2.html">pomp::mif2</a></code>.
+<p><code><a href="../../pomp/help/pmcmc.html">pomp::pmcmc</a></code>.
 </p>
 
 <hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.8.0 <a href="00Index.html">Index</a>]</div>

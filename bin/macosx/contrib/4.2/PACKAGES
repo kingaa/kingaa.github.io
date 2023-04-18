@@ -7,12 +7,12 @@ License: GPL-3
 MD5sum: 7a08837a0fa03d926e1b811931788e6e
 
 Package: circumstance
-Version: 0.0.6.0
-Depends: R(>= 4.1.0), pomp(>= 4.6.4)
+Version: 0.0.8.0
+Depends: R(>= 4.1.0), pomp(>= 5.1)
 Imports: methods, foreach, grid, grDevices, graphics, utils
 Suggests: doFuture, doRNG, dplyr, tidyr, ggplot2
 License: GPL-3
-MD5sum: 4a7e6dac9789605f777735ec440712da
+MD5sum: 32e29c97f30b3f95af6ff29db5eb4c8a
 
 Package: ouch
 Version: 2.18-0

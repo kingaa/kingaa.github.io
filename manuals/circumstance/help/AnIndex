@@ -4,6 +4,7 @@ continue	continue
 continue,ANY-method	continue
 continue,mif2List-method	continue
 continue,missing-method	continue
+continue,pmcmcList-method	continue
 mif2	mif2
 mif2,ANY,data.frame-method	mif2
 mif2,ANY,missing-method	mif2
@@ -18,4 +19,10 @@ pfilter,pompList,numeric-method	pfilter
 plot_matrix	plot_matrix
 plot_matrix.data.frame	plot_matrix
 plot_matrix.list	plot_matrix
+pmcmc	pmcmc
+pmcmc,ANY,data.frame-method	pmcmc
+pmcmc,ANY,missing-method	pmcmc
+pmcmc,pfilterList,missing-method	pmcmc
+pmcmc,pmcmcList,missing-method	pmcmc
+pmcmc,pompList,missing-method	pmcmc
 print.plotmatrix	plot_matrix

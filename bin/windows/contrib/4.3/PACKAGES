@@ -1,0 +1,7 @@
+Package: hte
+Version: 0.0.7.0
+Depends: R(>= 4.2.0)
+Imports: methods, utils, dplyr, tibble, tidyr, progress, lubridate
+Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
+License: GPL-3
+Archs: x64

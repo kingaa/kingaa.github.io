@@ -27,9 +27,15 @@ proportional to the prevalence of infection in that unit.
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>trans_homog_objfun(params, data, est = character(0))
+<pre><code class='language-R'>trans_homog_objfun(params, data, est = character(0), tol = 1e-04, maxit = 10)
 
-trans_unit_spec_objfun(params, data, est = character(0))
+trans_unit_spec_objfun(
+  params,
+  data,
+  est = character(0),
+  tol = 1e-04,
+  maxit = 10
+)
 </code></pre>
 
 
@@ -47,6 +53,15 @@ trans_unit_spec_objfun(params, data, est = character(0))
 <tr style="vertical-align: top;"><td><code>est</code></td>
 <td>
 <p>names of parameters to estimate</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>tol</code></td>
+<td>
+<p>positive scalar; convergence tolerance (mean difference).</p>
+</td></tr>
+<tr style="vertical-align: top;"><td><code>maxit</code></td>
+<td>
+<p>scalar integer; maximum number of fixed-point iterations.
+If <code>tol</code> is not achieved in <code>maxit</code> or fewer iterations, an error is generated.</p>
 </td></tr>
 </table>
 
@@ -136,6 +151,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.6.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.7.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

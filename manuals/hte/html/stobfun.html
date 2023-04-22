@@ -33,7 +33,8 @@ function processMathHTML() {
   log = character(0),
   logit = character(0),
   objfun,
-  data
+  data,
+  ...
 )
 
 transf_fns(log = character(0), logit = character(0), est = character(0))
@@ -78,7 +79,9 @@ coef(object, ...)
 </td></tr>
 <tr style="vertical-align: top;"><td><code>...</code></td>
 <td>
-<p>ignored.</p>
+<p>When furnished to <code>stobfun</code>, additional arguments are passed to <code>objfun</code>.
+When furnished to <code>embedding</code>, arguments define th embedding.
+When furnished to <code><a href="../../hte/help/coef.stobfun.html">coef</a></code>, additional arguments are ignored.</p>
 </td></tr>
 <tr style="vertical-align: top;"><td><code>object</code></td>
 <td>
@@ -132,6 +135,6 @@ You can retrieve these parameters via a call to <code>coef</code>.
 <code><a href="../../hte/help/transmission.html">transmission</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.6.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.7.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

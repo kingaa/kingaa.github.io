@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>siir {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Two-strain SIR model.</h2>
+<h2 id='siir'>Two-strain SIR model.</h2>
 
 <h3>Description</h3>
 
@@ -61,51 +61,51 @@ continueSIIR(
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>time</code></td>
+<tr><td><code id="siir_:_time">time</code></td>
 <td>
 <p>final time</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>t0</code></td>
+<tr><td><code id="siir_:_t0">t0</code></td>
 <td>
 <p>initial time</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>Beta1, Beta2</code></td>
+<tr><td><code id="siir_:_Beta1">Beta1</code>, <code id="siir_:_Beta2">Beta2</code></td>
 <td>
 <p>transmission rates from each of the infectious classes.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>gamma</code></td>
+<tr><td><code id="siir_:_gamma">gamma</code></td>
 <td>
 <p>recovery rate.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>psi1, psi2</code></td>
+<tr><td><code id="siir_:_psi1">psi1</code>, <code id="siir_:_psi2">psi2</code></td>
 <td>
 <p>sampling rates.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>sigma12, sigma21</code></td>
+<tr><td><code id="siir_:_sigma12">sigma12</code>, <code id="siir_:_sigma21">sigma21</code></td>
 <td>
 <p>movement rates from deme 1 to 2 and 2 to 1, respectively</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>delta</code></td>
+<tr><td><code id="siir_:_delta">delta</code></td>
 <td>
 <p>rate of loss of immunity</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>S0</code></td>
+<tr><td><code id="siir_:_S0">S0</code></td>
 <td>
 <p>initial size of susceptible population.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>I1_0</code></td>
+<tr><td><code id="siir_:_I1_0">I1_0</code></td>
 <td>
 <p>initial size of I2 population.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>I2_0</code></td>
+<tr><td><code id="siir_:_I2_0">I2_0</code></td>
 <td>
 <p>initial size of I2 population.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>R0</code></td>
+<tr><td><code id="siir_:_R0">R0</code></td>
 <td>
 <p>initial size of recovered population.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>object</code></td>
+<tr><td><code id="siir_:_object">object</code></td>
 <td>
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
@@ -148,6 +148,6 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.3.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.3.0.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

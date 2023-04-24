@@ -5,3 +5,20 @@ Imports: methods, utils, dplyr, tibble, tidyr, progress, lubridate
 Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
 License: GPL-3
 MD5sum: 431f6a7dd53c0206f9738354641ff71d
+
+Package: phylopomp
+Version: 0.3.0.1
+Depends: R(>= 4.1)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp(>= 4.6), cowplot
+LinkingTo: pomp
+Suggests: tidyverse, doFuture, doRNG, broom
+License: GPL-3
+MD5sum: bd9b71340eb9b7111ad76805111a9723
+
+Package: tao
+Version: 1.1.1
+Depends: R(>= 3.0.0)
+Suggests: tinytest
+License: GPL-3
+MD5sum: 4ff8cc6000f1172fbb5d1ad1459eab46

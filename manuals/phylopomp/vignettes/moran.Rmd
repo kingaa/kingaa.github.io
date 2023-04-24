@@ -74,7 +74,7 @@ for (k in seq_len(length(times))) {
     filename=png_files[k],
     plot=plot(
       x, t0=0, time=max(times),
-      points=TRUE, prune=FALSE, obscure=TRUE,
+      points=TRUE, prune=FALSE, obscure=FALSE,
       palette=c("#ffcb05","#dddddd"),
       axis.line=element_line(color="white"),
       axis.ticks=element_line(color="white"),
@@ -122,7 +122,7 @@ for (k in seq_len(length(times))) {
     filename=png_files[k],
     plot=plot(
       x, t0=0, time=max(times),
-      points=TRUE, prune=FALSE, obscure=TRUE,
+      points=TRUE, prune=FALSE, obscure=FALSE,
       palette=c("#ffcb05","#dddddd"),
       axis.line=element_line(color="white"),
       axis.ticks=element_line(color="white"),

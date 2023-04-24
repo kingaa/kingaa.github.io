@@ -3,10 +3,12 @@ var hierarchy =
     [ "ball_compare", "structball__compare.html", null ],
     [ "ball_t", "classball__t.html", null ],
     [ "inventory_t< ndeme >", "classinventory__t.html", null ],
+    [ "inventory_t< ndeme >", "classinventory__t.html", null ],
     [ "lbdp_parameters_t", "structlbdp__parameters__t.html", null ],
     [ "lbdp_state_t", "structlbdp__state__t.html", null ],
-    [ "list", null, [
+    [ "std::list", null, [
       [ "nodeseq_t", "classnodeseq__t.html", [
+        [ "genealogy_t< ndeme >", "classgenealogy__t.html", null ],
         [ "genealogy_t< ndeme >", "classgenealogy__t.html", null ]
       ] ]
     ] ],
@@ -18,7 +20,7 @@ var hierarchy =
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT, NDEME >", "classpopul__proc__t.html", null ],
     [ "seir_parameters_t", "structseir__parameters__t.html", null ],
     [ "seir_state_t", "structseir__state__t.html", null ],
-    [ "set", null, [
+    [ "std::set", null, [
       [ "pocket_t", "classpocket__t.html", [
         [ "node_t", "classnode__t.html", null ]
       ] ]

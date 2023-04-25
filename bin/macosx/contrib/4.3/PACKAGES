@@ -24,6 +24,13 @@ Suggests: tidyverse, doFuture, doRNG, broom
 License: GPL-3
 MD5sum: bd9b71340eb9b7111ad76805111a9723
 
+Package: subplex
+Version: 1.8.2
+Depends: R(>= 2.5.1)
+Suggests: tinytest
+License: GPL-3
+MD5sum: 794dc53bd2c33901d172f17103890dbd
+
 Package: tao
 Version: 1.1.1
 Depends: R(>= 3.0.0)

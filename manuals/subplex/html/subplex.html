@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>subplex {subplex}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Minimization of a function by the subplex algorithm</h2>
+<h2 id='subplex'>Minimization of a function by the subplex algorithm</h2>
 
 <h3>Description</h3>
 
@@ -33,17 +33,17 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>par</code></td>
+<tr><td><code id="subplex_:_par">par</code></td>
 <td>
 <p>Initial guess of the parameters to be optimized over.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>fn</code></td>
+<tr><td><code id="subplex_:_fn">fn</code></td>
 <td>
 <p>The function to be minimized.  Its first argument must be the
 vector of parameters to be optimized over.  It should return a scalar
 result.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>control</code></td>
+<tr><td><code id="subplex_:_control">control</code></td>
 <td>
 <p>A list of control parameters, consisting of some or all of
 the following: </p>
@@ -62,12 +62,12 @@ relative to <code>par</code>: if <code>par + parscale = par</code> in any compon
 <code>parscale</code> is too small.  The default value is <code>1</code>.  </p>
 </dd> </dl>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>hessian</code></td>
+<tr><td><code id="subplex_:_hessian">hessian</code></td>
 <td>
 <p>If <code>hessian=TRUE</code>, the Hessian of the objective at the
 estimated optimum will be numerically computed.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="subplex_:_...">...</code></td>
 <td>
 <p>Additional arguments to be passed to the function <code>fn</code>.</p>
 </td></tr>
@@ -96,26 +96,26 @@ precision reached</p>
 <p><code>subplex</code> returns a list containing the following:
 </p>
 <table>
-<tr style="vertical-align: top;"><td><code>par</code></td>
+<tr><td><code>par</code></td>
 <td>
 <p>Estimated parameters that minimize the function.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>value</code></td>
+<tr><td><code>value</code></td>
 <td>
 <p>Minimized value of the function.</p>
-</td></tr> <tr style="vertical-align: top;"><td><code>count</code></td>
+</td></tr> <tr><td><code>count</code></td>
 <td>
 <p>Number of
 function evaluations required.</p>
-</td></tr> <tr style="vertical-align: top;"><td><code>convergence</code></td>
+</td></tr> <tr><td><code>convergence</code></td>
 <td>
 <p>Convergence code (see
 Details).</p>
-</td></tr> <tr style="vertical-align: top;"><td><code>message</code></td>
+</td></tr> <tr><td><code>message</code></td>
 <td>
 <p> A character string giving a diagnostic message
 from the optimizer, or 'NULL'.  </p>
-</td></tr> <tr style="vertical-align: top;"><td><code>hessian</code></td>
+</td></tr> <tr><td><code>hessian</code></td>
 <td>
 <p>Hessian matrix.</p>
 </td></tr>
@@ -173,6 +173,6 @@ rosen &lt;- function (x, g = 0, h = 0) {
 subplex(par=c(b=11,a=-33),fn=rosen,h=22,control=list(abstol=1e-9,parscale=5),hessian=TRUE)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.8.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.8.2 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

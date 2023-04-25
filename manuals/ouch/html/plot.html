@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>plot {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2><span class="pkg">ouch</span> plotting functions</h2>
+<h2 id='plot'><span class="pkg">ouch</span> plotting functions</h2>
 
 <h3>Description</h3>
 
@@ -50,40 +50,40 @@ plot(x, ..., regimes, legend = TRUE)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>x</code></td>
+<tr><td><code id="plot_:_x">x</code></td>
 <td>
 <p>object to plot.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="plot_:_...">...</code></td>
 <td>
 <p>additional arguments, passed to <code><a href="../../graphics/help/plot.default.html">plot</a></code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>regimes</code></td>
+<tr><td><code id="plot_:_regimes">regimes</code></td>
 <td>
 <p>factor or character; a vector of regime paintings.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>ladderize</code></td>
+<tr><td><code id="plot_:_ladderize">ladderize</code></td>
 <td>
 <p>logical; should the tree be ladderized?</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>node.names</code></td>
+<tr><td><code id="plot_:_node.names">node.names</code></td>
 <td>
 <p>logical; should node names be displayed?</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>legend</code></td>
+<tr><td><code id="plot_:_legend">legend</code></td>
 <td>
 <p>logical; display a legend?</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>labels</code></td>
+<tr><td><code id="plot_:_labels">labels</code></td>
 <td>
 <p>character; taxon labels.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>frame.plot</code></td>
+<tr><td><code id="plot_:_frame.plot">frame.plot</code></td>
 <td>
 <p>a logical indicating whether a box should be drawn
 around the plot.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>palette</code></td>
+<tr><td><code id="plot_:_palette">palette</code></td>
 <td>
 <p>function or character; specifies the colors to be used for the several regimes on the tree.
 Specified as a function, when given an integer, <code>n</code>, the function should create a vector of <code>n</code> colors.
@@ -91,7 +91,7 @@ See, for example <code><a href="../../grDevices/help/palettes.html">rainbow</a><
 One can also specify the <code>n</code> colors as a vector of color codes.
 There must be at least as many colors as levels in the <code>regimes</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>margin</code></td>
+<tr><td><code id="plot_:_margin">margin</code></td>
 <td>
 <p>numeric; width of the right margin (as a fraction of the plot width).
 Adjust this if labels are clipped (see Examples below).
@@ -99,11 +99,11 @@ One can also adjust the width of the left margin (for example to aid in the form
 To do this, furnish <code>margin=c(L, R)</code>, where <code>L</code> and <code>R</code> are the widths of the right and left margins, respectively, as fractions of the plot width.
 Obviously, in this case, we must have <code>L+R&lt;1</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>text_opts</code></td>
+<tr><td><code id="plot_:_text_opts">text_opts</code></td>
 <td>
 <p>options for the labels; passed to <code><a href="../../graphics/help/text.html">text</a></code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>legend_opts</code></td>
+<tr><td><code id="plot_:_legend_opts">legend_opts</code></td>
 <td>
 <p>options for the the legend; passed to <code><a href="../../graphics/help/legend.html">legend</a></code>.</p>
 </td></tr>
@@ -113,6 +113,7 @@ Obviously, in this case, we must have <code>L+R&lt;1</code>.</p>
 <h3>See Also</h3>
 
 <p>Other methods for ouch trees: 
+<code><a href="../../ouch/help/as_data_frame.html">as_data_frame</a></code>,
 <code><a href="../../ouch/help/bootstrap.html">bootstrap</a>()</code>,
 <code><a href="../../ouch/help/coef.html">coef</a>()</code>,
 <code><a href="../../ouch/help/logLik.html">logLik</a></code>,
@@ -150,6 +151,6 @@ plot(tree2,margin=0.35,text_opts=list(cex=0.7))
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

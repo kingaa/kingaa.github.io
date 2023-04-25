@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Print and show methods</title>
+<!DOCTYPE html><html><head><title>R: Coerce an 'ouch' object to a data frame</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -14,77 +14,53 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>print {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>as_data_frame {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='print'>Print and show methods</h2>
+<h2 id='as_data_frame'>Coerce an <span class="pkg">ouch</span> object to a data frame</h2>
 
 <h3>Description</h3>
 
-<p>Print and show methods
+<p>Coerce an <span class="pkg">ouch</span> object to a data frame
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>## S4 method for signature 'ouchtree'
-print(x, ...)
+<pre><code class='language-R'>## S3 method for class 'ouchtree'
+as.data.frame(x, ...)
 
-## S4 method for signature 'ouchtree'
-show(object)
+## S3 method for class 'browntree'
+as.data.frame(x, ...)
 
-## S4 method for signature 'hansentree'
-print(x, ...)
-
-## S4 method for signature 'hansentree'
-show(object)
-
-## S4 method for signature 'browntree'
-show(object)
-
-## S4 method for signature 'browntree'
-print(x, ...)
+## S3 method for class 'hansentree'
+as.data.frame(x, ...)
 </code></pre>
 
 
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="print_:_...">...</code></td>
+<tr><td><code id="as_data_frame_:_x">x</code></td>
 <td>
-<p>additional arguments, ignored.</p>
+<p>any <span class="rlang"><b>R</b></span> object.</p>
 </td></tr>
-<tr><td><code id="print_:_object">object</code>, <code id="print_:_x">x</code></td>
+<tr><td><code id="as_data_frame_:_...">...</code></td>
 <td>
-<p>object to display.</p>
+<p>additional arguments to be passed to or from methods.</p>
 </td></tr>
 </table>
-
-
-<h3>Details</h3>
-
-<p><code>print</code> displays the tree as a table, along with the coefficients of the fitted model and diagnostic information.
-<code>show</code> provides a similar display.
-</p>
-
-
-<h3>Value</h3>
-
-<p><code>print</code> returns <code>x</code>, invisibly.
-</p>
-<p><code>show</code> returns <code>NULL</code>, invisibly.
-</p>
 
 
 <h3>See Also</h3>
 
 <p>Other methods for ouch trees: 
-<code><a href="../../ouch/help/as_data_frame.html">as_data_frame</a></code>,
 <code><a href="../../ouch/help/bootstrap.html">bootstrap</a>()</code>,
 <code><a href="../../ouch/help/coef.html">coef</a>()</code>,
 <code><a href="../../ouch/help/logLik.html">logLik</a></code>,
 <code><a href="../../ouch/help/ouch-package.html">ouch-package</a></code>,
 <code><a href="../../ouch/help/paint.html">paint</a>()</code>,
 <code><a href="../../ouch/help/plot.html">plot</a>()</code>,
+<code><a href="../../ouch/help/print.html">print</a>()</code>,
 <code><a href="../../ouch/help/simulate.html">simulate</a>()</code>,
 <code><a href="../../ouch/help/summary.html">summary</a>()</code>,
 <code><a href="../../ouch/help/update.html">update</a>()</code>

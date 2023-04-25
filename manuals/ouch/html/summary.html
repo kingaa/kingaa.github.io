@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>summary {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2><span class="pkg">ouch</span> summary methods</h2>
+<h2 id='summary'><span class="pkg">ouch</span> summary methods</h2>
 
 <h3>Description</h3>
 
@@ -26,10 +26,10 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>## S4 method for signature 'browntree'
+<pre><code class='language-R'>## S4 method for signature 'hansentree'
 summary(object, ...)
 
-## S4 method for signature 'hansentree'
+## S4 method for signature 'browntree'
 summary(object, ...)
 </code></pre>
 
@@ -37,11 +37,11 @@ summary(object, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>object</code></td>
+<tr><td><code id="summary_:_object">object</code></td>
 <td>
 <p>fitted model object.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="summary_:_...">...</code></td>
 <td>
 <p>additional arguments, ignored.</p>
 </td></tr>
@@ -50,15 +50,16 @@ summary(object, ...)
 
 <h3>Value</h3>
 
-<p><code>summary</code> applied to a <code>browntree</code> object returns information about the fitted model, including parameter estimates and quantities describing the goodness of fit.
-</p>
 <p><code>summary</code> applied to a <code>hansentree</code> method displays the estimated <code class="reqn">\alpha</code> and <code class="reqn">\sigma^2</code> matrices as well as various quantities describing the goodness of model fit.
+</p>
+<p><code>summary</code> applied to a <code>browntree</code> object returns information about the fitted model, including parameter estimates and quantities describing the goodness of fit.
 </p>
 
 
 <h3>See Also</h3>
 
 <p>Other methods for ouch trees: 
+<code><a href="../../ouch/help/as_data_frame.html">as_data_frame</a></code>,
 <code><a href="../../ouch/help/bootstrap.html">bootstrap</a>()</code>,
 <code><a href="../../ouch/help/coef.html">coef</a>()</code>,
 <code><a href="../../ouch/help/logLik.html">logLik</a></code>,
@@ -70,6 +71,6 @@ summary(object, ...)
 <code><a href="../../ouch/help/update.html">update</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

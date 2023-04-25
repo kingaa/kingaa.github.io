@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>coef {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Model coefficients</h2>
+<h2 id='coef'>Model coefficients</h2>
 
 <h3>Description</h3>
 
@@ -26,10 +26,10 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>## S4 method for signature 'browntree'
+<pre><code class='language-R'>## S4 method for signature 'hansentree'
 coef(object, ...)
 
-## S4 method for signature 'hansentree'
+## S4 method for signature 'browntree'
 coef(object, ...)
 </code></pre>
 
@@ -37,11 +37,11 @@ coef(object, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>object</code></td>
+<tr><td><code id="coef_:_object">object</code></td>
 <td>
 <p>fitted model object.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="coef_:_...">...</code></td>
 <td>
 <p>additional arguments, ignored.</p>
 </td></tr>
@@ -50,6 +50,10 @@ coef(object, ...)
 
 <h3>Value</h3>
 
+<p><code>coef</code> applied to a <code>hansentree</code> object returns a named list containing the estimated <code class="reqn">\alpha</code> and <code class="reqn">\sigma^2</code> matrices(given as the <code>alpha.matrix</code> and <code>sigma.sq.matrix</code> elements, respectively) but also the MLE returned by the optimizer
+(as <code>sqrt.alpha</code> and <code>sigma</code>, respectively).
+<strong>The latter elements should not be interpreted, but can be used to restart the algorithm, etc.</strong>
+</p>
 <p><code>coef</code> applied to a <code>browntree</code> object extracts a list with three elements:
 </p>
 
@@ -62,15 +66,12 @@ coef(object, ...)
 </dd>
 </dl>
 
-<p><code>coef</code> applied to a <code>hansentree</code> object returns a named list containing the estimated <code class="reqn">\alpha</code> and <code class="reqn">\sigma^2</code> matrices(given as the <code>alpha.matrix</code> and <code>sigma.sq.matrix</code> elements, respectively) but also the MLE returned by the optimizer
-(as <code>sqrt.alpha</code> and <code>sigma</code>, respectively).
-<strong>The latter elements should not be interpreted, but can be used to restart the algorithm, etc.</strong>
-</p>
 
 
 <h3>See Also</h3>
 
 <p>Other methods for ouch trees: 
+<code><a href="../../ouch/help/as_data_frame.html">as_data_frame</a></code>,
 <code><a href="../../ouch/help/bootstrap.html">bootstrap</a>()</code>,
 <code><a href="../../ouch/help/logLik.html">logLik</a></code>,
 <code><a href="../../ouch/help/ouch-package.html">ouch-package</a></code>,
@@ -82,6 +83,6 @@ coef(object, ...)
 <code><a href="../../ouch/help/update.html">update</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

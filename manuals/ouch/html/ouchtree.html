@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>ouchtree {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Phylogenetic tree object in <span class="pkg">ouch</span> format</h2>
+<h2 id='ouchtree'>Phylogenetic tree object in <span class="pkg">ouch</span> format</h2>
 
 <h3>Description</h3>
 
@@ -38,12 +38,12 @@ ape2ouch(tree, scale = TRUE, branch.lengths = tree$edge.length)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>nodes</code></td>
+<tr><td><code id="ouchtree_:_nodes">nodes</code></td>
 <td>
 <p>A character vector giving the name of each node.
 These are used internally and must be unique.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>ancestors</code></td>
+<tr><td><code id="ouchtree_:_ancestors">ancestors</code></td>
 <td>
 <p>Specification of the topology of the phylogenetic tree.
 This is in the form of a character vector specifying the name
@@ -52,29 +52,29 @@ of the immediate ancestor of each node.
 In particular, the i-th name is that of the ancestor of the i-th node.
 The root node is distinguished by having no ancestor (i.e., <code>NA</code>).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>times</code></td>
+<tr><td><code id="ouchtree_:_times">times</code></td>
 <td>
 <p>A vector of nonnegative numbers, one per node in the tree,
 specifying the time at which each node is located.
 Time should be increasing from the root node to the terminal twigs.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>labels</code></td>
+<tr><td><code id="ouchtree_:_labels">labels</code></td>
 <td>
 <p>Optional vector of node labels.
 These will be used in plots to label nodes.
 It is not necessary that these be unique.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>tree</code></td>
+<tr><td><code id="ouchtree_:_tree">tree</code></td>
 <td>
 <p>a tree of class <a href="../../ape/help/read.tree.html">ape::phylo</a>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>scale</code></td>
+<tr><td><code id="ouchtree_:_scale">scale</code></td>
 <td>
 <p>optional.
 If <code>scale=TRUE</code>, the tree's depth will be scaled to 1.
 If <code>scale</code> is a number, then the branch lengths will be scaled by this number.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>branch.lengths</code></td>
+<tr><td><code id="ouchtree_:_branch.lengths">branch.lengths</code></td>
 <td>
 <p>optional vector of branch lengths.</p>
 </td></tr>
@@ -119,6 +119,6 @@ plot(tree, node.names=TRUE)    # display node names
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.18-0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

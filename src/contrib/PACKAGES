@@ -1,10 +1,10 @@
 Package: aakmisc
-Version: 0.32-1
+Version: 0.32-2
 Depends: R(>= 4.1.0)
 Imports: methods, grid, curl, DBI, RPostgreSQL, dplyr, ggplot2
 Suggests: scales
 License: GPL-3
-MD5sum: 75df38111da4ff07b36bd128732c9507
+MD5sum: 6351ba9fdfa095ca76ce6df619974c55
 NeedsCompilation: no
 
 Package: circumstance
@@ -24,14 +24,6 @@ Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
 License: GPL-3
 MD5sum: a97c30c390ca2c1f592ada4dd79565ce
 NeedsCompilation: yes
-
-Package: mpifarm
-Version: 1.20-1
-Depends: R(>= 3.0.0)
-Imports: Rmpi
-License: GPL (>= 2)
-MD5sum: 235e88b96c445a048e1c06e808fdb382
-NeedsCompilation: no
 
 Package: ouch
 Version: 2.19-0
@@ -69,17 +61,6 @@ Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
 Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
 License: GPL-3
 MD5sum: b910544f05c30c988cefbe0e4aa70008
-NeedsCompilation: yes
-
-Package: spatPomp
-Version: 0.29.0.1
-Depends: pomp (>= 4.1), R(>= 4.0.0), methods
-Imports: foreach, dplyr, tidyr, stringr, abind, rlang, magrittr,
-        ggplot2
-LinkingTo: pomp
-Suggests: testthat, doParallel (>= 1.0.11), parallel
-License: GPL-3
-MD5sum: 05bbfe97974dd026bc430561c05e6270
 NeedsCompilation: yes
 
 Package: subplex

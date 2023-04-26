@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>db {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Interface with databases</h2>
+<h2 id='db'>Interface with databases</h2>
 
 <h3>Description</h3>
 
@@ -106,54 +106,53 @@ catScript(
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>name, value</code></td>
+<tr><td><code id="db_:_name">name</code>, <code id="db_:_value">value</code></td>
 <td>
 <p>Name and contents of table to create.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>overwrite, append, row.names</code></td>
+<tr><td><code id="db_:_overwrite">overwrite</code>, <code id="db_:_append">append</code>, <code id="db_:_row.names">row.names</code></td>
 <td>
 <p>See <code><a href="../../DBI/help/dbWriteTable.html">dbWriteTable</a></code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>host</code></td>
+<tr><td><code id="db_:_host">host</code></td>
 <td>
 <p>Hostname on which to connect to the PostgreSQL server.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>dbname</code></td>
+<tr><td><code id="db_:_dbname">dbname</code></td>
 <td>
 <p>Name of PostgreSQL database.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>port</code></td>
+<tr><td><code id="db_:_port">port</code></td>
 <td>
 <p>Port on which to connect to PostgreSQL database.  If NULL, a
 random port number will be used.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>user</code></td>
+<tr><td><code id="db_:_user">user</code></td>
 <td>
 <p>Username to use in conneting to PostgreSQL database.  If NULL,
 Sys.getenv(&quot;USER&quot;) will be used.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="db_:_...">...</code></td>
 <td>
-<p>Additional arguments will be passed to
-<code><a href="../../DBI/help/dbConnect.html">dbConnect</a></code>.</p>
+<p>Additional arguments will be passed to <code><a href="../../DBI/help/dbConnect.html">dbConnect</a></code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>statement</code></td>
+<tr><td><code id="db_:_statement">statement</code></td>
 <td>
 <p>SQL statement passed to <code><a href="../../DBI/help/dbGetQuery.html">dbGetQuery</a></code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>mle</code></td>
+<tr><td><code id="db_:_mle">mle</code></td>
 <td>
 <p>A data-frame of MLEs to be recorded.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>files</code></td>
+<tr><td><code id="db_:_files">files</code></td>
 <td>
 <p>Files containing R scripts to be recorded.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>script</code></td>
+<tr><td><code id="db_:_script">script</code></td>
 <td>
 <p>Name of script.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>file</code></td>
+<tr><td><code id="db_:_file">file</code></td>
 <td>
 <p>File to which the script will be written.  See
 <code><a href="../../base/html/cat.html">cat</a></code>.</p>
@@ -177,6 +176,6 @@ stopTunnel()
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.32-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.32-2 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

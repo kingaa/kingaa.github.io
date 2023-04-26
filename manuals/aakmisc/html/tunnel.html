@@ -16,11 +16,11 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>tunnel {aakmisc}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>ssh tunneling</h2>
+<h2 id='tunnel'>ssh tunneling</h2>
 
 <h3>Description</h3>
 
-<p>Setting up ssh tunnels for database access.
+<p>Secure-shell (ssh) tunnels for database access.
 </p>
 
 
@@ -40,37 +40,36 @@ stopTunnel(..., pid = getOption("aakmisc.tunnelpid", NULL))
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>port</code></td>
+<tr><td><code id="tunnel_:_port">port</code></td>
 <td>
 <p>Port on which to connect to PostgreSQL database.  If NULL, a
 random port number will be used.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>remotehost</code></td>
+<tr><td><code id="tunnel_:_remotehost">remotehost</code></td>
 <td>
-<p>Hostname of PostgreSQL server.  An ssh tunnel to this host
-will be created.</p>
+<p>Hostname of PostgreSQL server.
+An ssh tunnel to this host will be created.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>user</code></td>
+<tr><td><code id="tunnel_:_user">user</code></td>
 <td>
 <p>Username to use in conneting to PostgreSQL database.  If NULL,
 Sys.getenv(&quot;USER&quot;) will be used.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>sleep</code></td>
+<tr><td><code id="tunnel_:_sleep">sleep</code></td>
 <td>
 <p>Time in seconds to sleep after initiating the ssh tunnel.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="tunnel_:_...">...</code></td>
 <td>
-<p>Additional arguments will be passed to
-<code><a href="../../DBI/help/dbConnect.html">dbConnect</a></code>.</p>
+<p>Additional arguments ignored.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>pid</code></td>
+<tr><td><code id="tunnel_:_pid">pid</code></td>
 <td>
-<p>ID of ssh tunnel process.  Set automatically by
-<code>startTunnel</code>.</p>
+<p>ID of ssh tunnel process.
+Set automatically by <code>startTunnel</code>.</p>
 </td></tr>
 </table>
 
-<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.32-1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>aakmisc</em> version 0.32-2 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>dprocess specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>The latent state process density</h2>
+<h2 id='dprocess+20specification'>The latent state process density</h2>
 
 <h3>Description</h3>
 
@@ -36,7 +36,7 @@ Then you can furnish
 <pre>
     dprocess = f
 </pre>
-<p>to <code>pomp</code>, where <code>f</code> is a C snippet or <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that implements your procedure.
+<p>to <code>pomp</code>, where <code>f</code> is a C snippet or <span class="rlang"><b>R</b></span> function that implements your procedure.
 Specifically, <code>f</code> should compute the <em>log</em> probability density.
 </p>
 <p>Using a C snippet is much preferred, due to its much greater computational efficiency.
@@ -46,7 +46,7 @@ In the context of such a C snippet, the parameters, and covariates will be defin
 The state variables at time <code>t_1</code> will have their usual name (see <code>statenames</code>) with a &ldquo;<code>_1</code>&rdquo; appended.
 Likewise, the state variables at time <code>t_2</code> will have a &ldquo;<code>_2</code>&rdquo; appended.
 </p>
-<p>If <code>f</code> is given as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, it should take as arguments any or all of the state variables, parameter, covariates, and time.
+<p>If <code>f</code> is given as an <span class="rlang"><b>R</b></span> function, it should take as arguments any or all of the state variables, parameter, covariates, and time.
 The state-variable and time arguments will have suffices &ldquo;<code>_1</code>&rdquo; and &ldquo;<code>_2</code>&rdquo; appended.
 Thus for example, if <code>var</code> is a state variable, when <code>f</code> is called, <code>var_1</code> will value of state variable <code>var</code> at time <code>t_1</code>, <code>var_2</code> will have the value of <code>var</code> at time <code>t_2</code>.
 <code>f</code> should return the <em>log</em> likelihood of a transition from <code>x1</code> at time <code>t1</code> to <code>x2</code> at time <code>t2</code>,
@@ -104,6 +104,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

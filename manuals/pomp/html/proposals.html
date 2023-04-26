@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>proposals {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>MCMC proposal distributions</h2>
+<h2 id='proposals'>MCMC proposal distributions</h2>
 
 <h3>Description</h3>
 
@@ -45,18 +45,18 @@ mvn_rw_adaptive(
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>rw.sd</code></td>
+<tr><td><code id="proposals_:_rw.sd">rw.sd</code></td>
 <td>
 <p>named numeric vector; random-walk SDs for a multivariate
 normal random-walk proposal with diagonal variance-covariance matrix.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>rw.var</code></td>
+<tr><td><code id="proposals_:_rw.var">rw.var</code></td>
 <td>
 <p>square numeric matrix with row- and column-names.  Specifies
 the variance-covariance matrix for a multivariate normal random-walk
 proposal distribution.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>scale.start, scale.cooling, shape.start, target, max.scaling</code></td>
+<tr><td><code id="proposals_:_scale.start">scale.start</code>, <code id="proposals_:_scale.cooling">scale.cooling</code>, <code id="proposals_:_shape.start">shape.start</code>, <code id="proposals_:_target">target</code>, <code id="proposals_:_max.scaling">max.scaling</code></td>
 <td>
 <p>parameters
 to control the proposal adaptation algorithm.  Beginning with MCMC
@@ -102,6 +102,6 @@ proposal distribution.
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

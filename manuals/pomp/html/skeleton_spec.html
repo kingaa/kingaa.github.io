@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>skeleton specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>The deterministic skeleton of a model</h2>
+<h2 id='skeleton+20specification'>The deterministic skeleton of a model</h2>
 
 <h3>Description</h3>
 
@@ -35,12 +35,12 @@ map(f, delta.t = 1)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>f</code></td>
+<tr><td><code id="skeleton+20specification_:_f">f</code></td>
 <td>
 <p>procedure for evaluating the deterministic skeleton
-This can be a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a native routine in a dynamically linked library.</p>
+This can be a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a native routine in a dynamically linked library.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>delta.t</code></td>
+<tr><td><code id="skeleton+20specification_:_delta.t">delta.t</code></td>
 <td>
 <p>positive numerical value; the size of the discrete time step corresponding to an application of the map</p>
 </td></tr>
@@ -65,7 +65,7 @@ To specify it, supply </p>
   skeleton = vectorfield(f)</pre>
 <p>to <code>pomp</code>, where <code>f</code> implements the vectorfield, i.e., the right-hand-size of the differential equations.
 </p>
-<p>In either case, <code>f</code> can be furnished either as a C snippet (the preferred choice), or an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function.
+<p>In either case, <code>f</code> can be furnished either as a C snippet (the preferred choice), or an <span class="rlang"><b>R</b></span> function.
 <a href="../../pomp/help/Csnippet.html">General rules for writing C snippets can be found here</a>.
 In writing a <code>skeleton</code> C snippet, be aware that:
 </p>
@@ -92,7 +92,7 @@ In this regard, C snippets for the skeleton and rprocess components differ.
 
 <p>The tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a> give some examples.
 </p>
-<p>If <code>f</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, its arguments should be taken from among the state variables, parameters, covariates, and time.
+<p>If <code>f</code> is an <span class="rlang"><b>R</b></span> function, its arguments should be taken from among the state variables, parameters, covariates, and time.
 It must also take the argument &lsquo;<code>...</code>&rsquo;.
 As with the other basic components, <code>f</code> may take additional arguments, provided these are passed along with it in the call to <code>pomp</code>.
 The function <code>f</code> must return a numeric vector of the same length as the number of state variables, which contains the value of the map or vectorfield at the required point and time.
@@ -216,6 +216,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

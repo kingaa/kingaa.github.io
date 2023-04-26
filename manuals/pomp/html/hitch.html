@@ -16,11 +16,11 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>hitch {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Hitching C snippets and R functions to pomp_fun objects</h2>
+<h2 id='hitch'>Hitching C snippets and R functions to pomp_fun objects</h2>
 
 <h3>Description</h3>
 
-<p>The algorithms in <span class="pkg">pomp</span> are formulated using <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions that access the <a href="../../pomp/help/basic+20components.html">basic model components</a>
+<p>The algorithms in <span class="pkg">pomp</span> are formulated using <span class="rlang"><b>R</b></span> functions that access the <a href="../../pomp/help/basic+20components.html">basic model components</a>
 (<code>rprocess</code>, <code>dprocess</code>, <code>rmeasure</code>, <code>dmeasure</code>, etc.).
 For short, we refer to these elementary functions as &ldquo;<a href="../../pomp/help/workhorses.html">workhorses</a>&rdquo;.
 In implementing a model, the user specifies basic model components
@@ -54,7 +54,7 @@ which conceptually &ldquo;hitches&rdquo; the workhorses to the user-defined proc
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="hitch_:_...">...</code></td>
 <td>
 <p>named arguments representing the user procedures to be hitched.
 These can be functions, character strings naming routines in external, dynamically-linked libraries, C snippets, or <code>NULL</code>.
@@ -62,19 +62,19 @@ The first three are converted by <code>hitch</code> to &lsquo;pomp_fun&rsquo; ob
 <code>NULL</code> arguments are translated to default &lsquo;pomp_fun&rsquo; objects.
 If any of these procedures are already &lsquo;pomp_fun&rsquo; objects, they are returned unchanged.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>templates</code></td>
+<tr><td><code id="hitch_:_templates">templates</code></td>
 <td>
 <p>named list of templates.
 Each workhorse must have a corresponding template.
 See <code>pomp:::workhorse_templates</code> for a list.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>obsnames, statenames, paramnames, covarnames</code></td>
+<tr><td><code id="hitch_:_obsnames">obsnames</code>, <code id="hitch_:_statenames">statenames</code>, <code id="hitch_:_paramnames">paramnames</code>, <code id="hitch_:_covarnames">covarnames</code></td>
 <td>
 <p>character vectors
 specifying the names of observable variables, latent state variables, parameters, and covariates, respectively.
 These are only needed if one or more of the horses are furnished as C snippets.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>PACKAGE</code></td>
+<tr><td><code id="hitch_:_PACKAGE">PACKAGE</code></td>
 <td>
 <p>optional character;
 the name (without extension) of the external, dynamically loaded library in which any native routines are to be found.
@@ -82,27 +82,27 @@ This is only useful if one or more of the model components has been specified us
 it is not used for any component specified using C snippets.
 <code>PACKAGE</code> can name at most one library.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>globals</code></td>
+<tr><td><code id="hitch_:_globals">globals</code></td>
 <td>
 <p>optional character;
 arbitrary C code that will be hard-coded into the shared-object library created when C snippets are provided.
 If no C snippets are used, <code>globals</code> has no effect.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>cfile</code></td>
+<tr><td><code id="hitch_:_cfile">cfile</code></td>
 <td>
 <p>optional character variable.
 <code>cfile</code> gives the name of the file (in directory <code>cdir</code>) into which C snippet codes will be written.
 By default, a random filename is used.
 If the chosen filename would result in over-writing an existing file, an error is generated.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>cdir</code></td>
+<tr><td><code id="hitch_:_cdir">cdir</code></td>
 <td>
 <p>optional character variable.
 <code>cdir</code> specifies the name of the directory within which C snippet code will be compiled.
-By default, this is in a temporary directory specific to the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session.
+By default, this is in a temporary directory specific to the <span class="rlang"><b>R</b></span> session.
 One can also set this directory using the <code>pomp_cdir</code> global option.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>shlib.args</code></td>
+<tr><td><code id="hitch_:_shlib.args">shlib.args</code></td>
 <td>
 <p>optional character variables.
 Command-line arguments to the <code>R CMD SHLIB</code> call that compiles the C snippets.
@@ -110,12 +110,12 @@ One can, for example, specify libraries against which the C snippets are to be l
 In doing so, take care to make sure the appropriate header files are available to the C snippets, e.g., using the <code>globals</code> argument.
 See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for more information.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>compile</code></td>
+<tr><td><code id="hitch_:_compile">compile</code></td>
 <td>
 <p>logical;
 if <code>FALSE</code>, compilation of the C snippets will be postponed until they are needed.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<tr><td><code id="hitch_:_verbose">verbose</code></td>
 <td>
 <p>logical.
 Setting <code>verbose=TRUE</code> will cause additional information to be displayed.</p>
@@ -158,6 +158,6 @@ character string with the full contents of the C snippet file.  </p>
 <p><code><a href="../../pomp/help/pomp.html">pomp</a></code>, <code><a href="../../pomp/help/spy.html">spy</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>dmeasure specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>The measurement model density</h2>
+<h2 id='dmeasure+20specification'>The measurement model density</h2>
 
 <h3>Description</h3>
 
@@ -34,7 +34,7 @@ Then you can furnish </p>
 <pre>
    dmeasure = f</pre>
 <p>to <span class="pkg">pomp</span> algorithms,
-where <code>f</code> is a C snippet or <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that implements your procedure.
+where <code>f</code> is a C snippet or <span class="rlang"><b>R</b></span> function that implements your procedure.
 </p>
 <p>Using a C snippet is much preferred, due to its much greater computational efficiency.
 See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for general rules on writing C snippets.
@@ -55,7 +55,7 @@ If <code>give_log == 1</code>, <code>lik</code> should be set to the log likelih
 </p>
 </li></ol>
 
-<p>If <code>dmeasure</code> is to be provided instead as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, this is accomplished by supplying </p>
+<p>If <code>dmeasure</code> is to be provided instead as an <span class="rlang"><b>R</b></span> function, this is accomplished by supplying </p>
 <pre>
   dmeasure = f</pre>
 <p>to <code>pomp</code>, where <code>f</code> is a function.
@@ -146,6 +146,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

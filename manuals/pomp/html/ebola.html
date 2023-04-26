@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>ebola {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Ebola outbreak, West Africa, 2014-2016</h2>
+<h2 id='ebola'>Ebola outbreak, West Africa, 2014-2016</h2>
 
 <h3>Description</h3>
 
@@ -45,44 +45,44 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>country</code></td>
+<tr><td><code id="ebola_:_country">country</code></td>
 <td>
 <p>ISO symbol for the country (GIN=Guinea, LBR=Liberia, SLE=Sierra Leone).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>data</code></td>
+<tr><td><code id="ebola_:_data">data</code></td>
 <td>
 <p>if NULL, the situation report data (WHO Ebola Response Team 2014) for the appropriate country or region will be used.
 Providing a dataset here will override this behavior.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>timestep</code></td>
+<tr><td><code id="ebola_:_timestep">timestep</code></td>
 <td>
 <p>duration (in days) of Euler timestep for the simulations.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>nstageE</code></td>
+<tr><td><code id="ebola_:_nstageE">nstageE</code></td>
 <td>
 <p>integer; number of incubation stages.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>R0</code></td>
+<tr><td><code id="ebola_:_R0">R0</code></td>
 <td>
 <p>basic reproduction ratio</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>rho</code></td>
+<tr><td><code id="ebola_:_rho">rho</code></td>
 <td>
 <p>case reporting efficiency</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>cfr</code></td>
+<tr><td><code id="ebola_:_cfr">cfr</code></td>
 <td>
 <p>case fatality rate</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>k</code></td>
+<tr><td><code id="ebola_:_k">k</code></td>
 <td>
 <p>dispersion parameter (negative binomial <code>size</code> parameter)</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>index_case</code></td>
+<tr><td><code id="ebola_:_index_case">index_case</code></td>
 <td>
 <p>number of cases on day 0 (2014-04-01)</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>incubation_period, infectious_period</code></td>
+<tr><td><code id="ebola_:_incubation_period">incubation_period</code>, <code id="ebola_:_infectious_period">infectious_period</code></td>
 <td>
 <p>mean duration (in days) of the incubation and infectious periods.</p>
 </td></tr>
@@ -167,6 +167,6 @@ The discrete-time formula is used to calculate the corresponding <code>alpha</co
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

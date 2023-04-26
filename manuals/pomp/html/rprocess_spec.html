@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>rprocess specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>The latent state process simulator</h2>
+<h2 id='rprocess+20specification'>The latent state process simulator</h2>
 
 <h3>Description</h3>
 
@@ -41,23 +41,23 @@ gillespie_hl(..., .pre = "", .post = "", hmax = Inf)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>step.fun</code></td>
+<tr><td><code id="rprocess+20specification_:_step.fun">step.fun</code></td>
 <td>
 <p>a C snippet, an R function, or
 the name of a native routine in a shared-object library.
 This gives a procedure by which one simulates a single step of the latent state process.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>delta.t</code></td>
+<tr><td><code id="rprocess+20specification_:_delta.t">delta.t</code></td>
 <td>
 <p>positive numerical value; for <code>euler</code> and <code>discrete_time</code>, the size of the step to take</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>rate.fun</code></td>
+<tr><td><code id="rprocess+20specification_:_rate.fun">rate.fun</code></td>
 <td>
 <p>a C snippet, an R function, or
 the name of a native routine in a shared-object library.
 This gives a procedure by which one computes the event-rate of the elementary events in the continuous-time latent Markov chain.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>v</code></td>
+<tr><td><code id="rprocess+20specification_:_v">v</code></td>
 <td>
 <p>integer matrix; giving the stoichiometry of the continuous-time latent Markov process.
 It should have dimensions <code>nvar</code> x <code>nevent</code>, where <code>nvar</code> is the number of state variables and <code>nevent</code> is the number of elementary events.
@@ -70,15 +70,15 @@ the names of the state variables returned by <code>rinit</code> will be matched
 to the rows of <code>v</code> to ensure a correct mapping.
 If any of the row names of <code>v</code> cannot be found among the state variables or if any row names of <code>v</code> are duplicated, an error will occur.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>hmax</code></td>
+<tr><td><code id="rprocess+20specification_:_hmax">hmax</code></td>
 <td>
 <p>maximum time step allowed (see below)</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="rprocess+20specification_:_...">...</code></td>
 <td>
 <p>individual C snippets corresponding to elementary events</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>.pre, .post</code></td>
+<tr><td><code id="rprocess+20specification_:_.pre">.pre</code>, <code id="rprocess+20specification_:_.post">.post</code></td>
 <td>
 <p>C snippets (see Details)</p>
 </td></tr>
@@ -93,7 +93,7 @@ Specifically, provide
 <pre>
     rprocess = discrete_time(step.fun = f, delta.t),
 </pre>
-<p>where <code>f</code> is a C snippet or <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that simulates one step of the state process.
+<p>where <code>f</code> is a C snippet or <span class="rlang"><b>R</b></span> function that simulates one step of the state process.
 The former is the preferred option, due to its much greater computational efficiency.
 The goal of such a C snippet is to replace the state variables with their new random values at the end of the time interval.
 Accordingly, each state variable should be over-written with its new value.
@@ -101,7 +101,7 @@ In addition to the states, parameters, covariates (if any), and observables, the
 See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for general rules on writing C snippets.
 Examples are to be found in the tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a>.
 </p>
-<p>If <code>f</code> is given as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, its arguments should come from the state variables, parameters, covariates, and time.
+<p>If <code>f</code> is given as an <span class="rlang"><b>R</b></span> function, its arguments should come from the state variables, parameters, covariates, and time.
 It may also take the argument &lsquo;<code>delta.t</code>&rsquo;;
 when called, the latter will be the timestep.
 It must also have the argument &lsquo;<code>...</code>&rsquo;.
@@ -118,7 +118,7 @@ Specify
     rprocess = euler(step.fun = f, delta.t)
 </pre>
 <p>in this case.
-As before, <code>f</code> can be provided either as a C snippet or as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, the former resulting in much quicker computations.
+As before, <code>f</code> can be provided either as a C snippet or as an <span class="rlang"><b>R</b></span> function, the former resulting in much quicker computations.
 The form of <code>f</code> will be the same as above (in the discrete-time case).
 </p>
 <p>If you have a procedure that allows you, given the value of the state process at any time,
@@ -128,7 +128,7 @@ To do so, specify
 <pre>
     rprocess = onestep(step.fun = f).
 </pre>
-<p>Again, <code>f</code> can be provided either as a C snippet or as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, the former resulting in much quicker computations.
+<p>Again, <code>f</code> can be provided either as a C snippet or as an <span class="rlang"><b>R</b></span> function, the former resulting in much quicker computations.
 The form of <code>f</code> should be as above (in the discrete-time or Euler cases).
 </p>
 
@@ -165,7 +165,7 @@ Thus, to go from <code>t1</code> to <code>t2</code>, <code>discrete_time</code> 
 
 <p>If you desire exact simulation of certain continuous-time Markov chains, an implementation of Gillespie's algorithm (Gillespie 1977) is available,
 via the <code>gillespie</code> and <code>gillespie_hl</code> plug-ins.
-The former allows for the rate function to be provided as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function or a single C snippet,
+The former allows for the rate function to be provided as an <span class="rlang"><b>R</b></span> function or a single C snippet,
 while the latter provides a means of specifying the elementary events via a list of C snippets.
 </p>
 <p>A high-level interface to the simulator is provided by <code>gillespie_hl</code>.
@@ -202,7 +202,7 @@ These hooks can be useful for avoiding duplication of code that performs calcula
     rprocess = gillespie(rate.fun = f, v, hmax = Inf)
 </pre>
 <p>to <code>pomp</code>, where <code>f</code> gives the rates of the elementary events.
-Here, <code>f</code> may be an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function of the form
+Here, <code>f</code> may be an <span class="rlang"><b>R</b></span> function of the form
 </p>
 <pre>
     f(j, x, t, params, ...)
@@ -272,6 +272,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

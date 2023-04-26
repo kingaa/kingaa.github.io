@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>Csnippet {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>C snippets</h2>
+<h2 id='Csnippet'>C snippets</h2>
 
 <h3>Description</h3>
 
@@ -33,7 +33,7 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>text</code></td>
+<tr><td><code id="Csnippet_:_text">text</code></td>
 <td>
 <p>character; text written in the C language</p>
 </td></tr>
@@ -43,15 +43,15 @@ function processMathHTML() {
 <h3>Details</h3>
 
 <p><span class="pkg">pomp</span> provides a facility whereby users can define their model's components using inline C code.
-C snippets are written to a C file, by default located in the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> session's temporary directory, which is then compiled (via <code><a href="../../utils/html/SHLIB.html">R CMD SHLIB</a></code>) into a dynamically loadable shared object file.
+C snippets are written to a C file, by default located in the <span class="rlang"><b>R</b></span> session's temporary directory, which is then compiled (via <code><a href="../../utils/html/SHLIB.html">R CMD SHLIB</a></code>) into a dynamically loadable shared object file.
 This is then loaded as needed.
 </p>
 
 
 <h3>Note to Windows and Mac users</h3>
 
-<p>By default, your <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> installation may not support <code><a href="../../utils/html/SHLIB.html">R CMD SHLIB</a></code>.
-The <a href="https://kingaa.github.io/pomp/install.html">package website contains installation instructions</a> that explain how to enable this powerful feature of <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>.
+<p>By default, your <span class="rlang"><b>R</b></span> installation may not support <code><a href="../../utils/html/SHLIB.html">R CMD SHLIB</a></code>.
+The <a href="https://kingaa.github.io/pomp/install.html">package website contains installation instructions</a> that explain how to enable this powerful feature of <span class="rlang"><b>R</b></span>.
 </p>
 
 
@@ -88,11 +88,11 @@ They must be referred to in measurement model C snippets (<code>rmeasure</code> 
 <li><p> If the &lsquo;pomp&rsquo; object contains a table of covariates (see above), then the variables in the covariate table will be available, by their names, in the context within which the C snippet is executed.
 </p>
 </li>
-<li><p> Because the dot &lsquo;.&rsquo; has syntactic meaning in C, <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> variables with names containing dots (&lsquo;.&rsquo;) are replaced in the C codes by variable names in which all dots have been replaced by underscores (&lsquo;_&rsquo;).
+<li><p> Because the dot &lsquo;.&rsquo; has syntactic meaning in C, <span class="rlang"><b>R</b></span> variables with names containing dots (&lsquo;.&rsquo;) are replaced in the C codes by variable names in which all dots have been replaced by underscores (&lsquo;_&rsquo;).
 </p>
 </li>
-<li><p> The headers &lsquo;<span class="file">R.h</span>&rsquo; and &lsquo;<span class="file">Rmath.h</span>&rsquo;, provided with <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>, will be included in the generated C file, making all of the <a href="https://CRAN.R-project.org/doc/manuals/r-release/R-exts.html#The-R-API"><span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> C API</a> available for use in the C snippet.
-This makes a great many useful functions available, including all of <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>'s <a href="https://CRAN.R-project.org/doc/manuals/r-release/R-exts.html#Distribution-functions">statistical distribution functions</a>.
+<li><p> The headers &lsquo;<span class="file">R.h</span>&rsquo; and &lsquo;<span class="file">Rmath.h</span>&rsquo;, provided with <span class="rlang"><b>R</b></span>, will be included in the generated C file, making all of the <a href="https://CRAN.R-project.org/doc/manuals/r-release/R-exts.html#The-R-API"><span class="rlang"><b>R</b></span> C API</a> available for use in the C snippet.
+This makes a great many useful functions available, including all of <span class="rlang"><b>R</b></span>'s <a href="https://CRAN.R-project.org/doc/manuals/r-release/R-exts.html#Distribution-functions">statistical distribution functions</a>.
 </p>
 </li>
 <li><p> The header <a href="https://github.com/kingaa/pomp/blob/master/inst/include/pomp.h">&lsquo;<span class="file">pomp.h</span>&rsquo;</a>, provided with <span class="pkg">pomp</span>, will also be included, making all of the <a href="https://kingaa.github.io/pomp/C_API.html"><span class="pkg">pomp</span> C API</a> available for use in every C snippet.
@@ -118,7 +118,7 @@ The <code>shlib.args</code> argument can then be used to specify additional argu
 <h3>C snippets are salted</h3>
 
 <p>To prevent collisions in parallel computations, a &lsquo;pomp&rsquo; object built using C snippets is &ldquo;salted&rdquo; with the current time and a random number.
-A result is that two &lsquo;pomp&rsquo; objects, built on identical codes and data, will <strong>not</strong> be identical as <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> objects, though they will be functionally identical in every respect.
+A result is that two &lsquo;pomp&rsquo; objects, built on identical codes and data, will <strong>not</strong> be identical as <span class="rlang"><b>R</b></span> objects, though they will be functionally identical in every respect.
 </p>
 
 
@@ -156,6 +156,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>kalmanFilter {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Kalman filter</h2>
+<h2 id='kalmanFilter'>Kalman filter</h2>
 
 <h3>Description</h3>
 
@@ -33,36 +33,36 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>object</code></td>
+<tr><td><code id="kalmanFilter_:_object">object</code></td>
 <td>
 <p>a pomp object containing data;</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>X0</code></td>
+<tr><td><code id="kalmanFilter_:_X0">X0</code></td>
 <td>
 <p>length-m vector containing initial state.
 This is assumed known without uncertainty.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>A</code></td>
+<tr><td><code id="kalmanFilter_:_A">A</code></td>
 <td>
 <p><code class="reqn">m\times m</code> latent state-process transition matrix.
 <code class="reqn">E[X_{t+1} | X_t] = A.X_t</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>Q</code></td>
+<tr><td><code id="kalmanFilter_:_Q">Q</code></td>
 <td>
 <p><code class="reqn">m\times m</code> latent state-process covariance matrix.
 <code class="reqn">Var[X_{t+1} | X_t] = Q</code></p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>C</code></td>
+<tr><td><code id="kalmanFilter_:_C">C</code></td>
 <td>
 <p><code class="reqn">n\times m</code> link matrix.
 <code class="reqn">E[Y_t | X_t] = C.X_t</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>R</code></td>
+<tr><td><code id="kalmanFilter_:_R">R</code></td>
 <td>
 <p><code class="reqn">n\times n</code> observation process covariance matrix.
 <code class="reqn">Var[Y_t | X_t] = R</code></p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>tol</code></td>
+<tr><td><code id="kalmanFilter_:_tol">tol</code></td>
 <td>
 <p>numeric;
 the tolerance to be used in computing matrix pseudoinverses via singular-value decomposition.
@@ -151,6 +151,6 @@ given <code class="reqn">A</code>, <code class="reqn">C</code>, <code class="req
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

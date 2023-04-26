@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>userdata {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Facilities for making additional information to basic components</h2>
+<h2 id='userdata'>Facilities for making additional information to basic components</h2>
 
 <h3>Description</h3>
 
@@ -43,7 +43,7 @@ Although it would be very easy (and indeed far preferable) to include <code>thet
 </p>
 
 <ol>
-<li><p> as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function,
+<li><p> as an <span class="rlang"><b>R</b></span> function,
 </p>
 </li>
 <li><p> as a C snippet, or
@@ -57,7 +57,7 @@ Although it would be very easy (and indeed far preferable) to include <code>thet
 </p>
 
 
-<h3>When the basic component is specified as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function</h3>
+<h3>When the basic component is specified as an <span class="rlang"><b>R</b></span> function</h3>
 
 <p>We can implement a simulator for the aforementioned measurement model so: </p>
 <pre>
@@ -109,7 +109,7 @@ In the present example, our call to simulate might look like
 
 <p>The rules are essentially the same as for C snippets.
 <code>typedef</code> declarations for the <code>get_userdata_double</code> and <code>get_userdata_int</code> are given in the &lsquo;<span class="file">pomp.h</span>&rsquo; header file and these two routines are registered so that they can be retrieved via a call to <code>R_GetCCallable</code>.
-See the <a href="https://cran.r-project.org/doc/manuals/R-exts.html">Writing <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> extensions manual</a> for more information.
+See the <a href="https://cran.r-project.org/doc/manuals/R-exts.html">Writing <span class="rlang"><b>R</b></span> extensions manual</a> for more information.
 </p>
 
 
@@ -214,6 +214,6 @@ See the example below.
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

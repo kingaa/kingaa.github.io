@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>parameter transformations {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Parameter transformations</h2>
+<h2 id='parameter+20transformations'>Parameter transformations</h2>
 
 <h3>Description</h3>
 
@@ -48,24 +48,24 @@ parameter_trans(toEst, fromEst, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>toEst, fromEst</code></td>
+<tr><td><code id="parameter+20transformations_:_toEst">toEst</code>, <code id="parameter+20transformations_:_fromEst">fromEst</code></td>
 <td>
 <p>procedures that perform transformation of model parameters to and from the estimation scale, respectively.
-These can be furnished using C snippets, <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions, or via procedures in an external, dynamically loaded library.</p>
+These can be furnished using C snippets, <span class="rlang"><b>R</b></span> functions, or via procedures in an external, dynamically loaded library.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="parameter+20transformations_:_...">...</code></td>
 <td>
 <p>ignored.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>log</code></td>
+<tr><td><code id="parameter+20transformations_:_log">log</code></td>
 <td>
 <p>names of parameters to be log transformed.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>logit</code></td>
+<tr><td><code id="parameter+20transformations_:_logit">logit</code></td>
 <td>
 <p>names of parameters to be logit transformed.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>barycentric</code></td>
+<tr><td><code id="parameter+20transformations_:_barycentric">barycentric</code></td>
 <td>
 <p>names of parameters to be collectively transformed according to the log barycentric transformation.
 <strong>Important note:</strong> variables to be log-barycentrically transformed <em>must be adjacent</em> in the parameter vector.</p>
@@ -95,8 +95,8 @@ Therefore, neither the time, nor any state variables, nor any of the covariates 
 </p>
 </li></ol>
 
-<p>These transformations can also be specified using <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions with arguments chosen from among the parameters.
-Such an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function must also have the argument &lsquo;<code>...</code>&rsquo;.
+<p>These transformations can also be specified using <span class="rlang"><b>R</b></span> functions with arguments chosen from among the parameters.
+Such an <span class="rlang"><b>R</b></span> function must also have the argument &lsquo;<code>...</code>&rsquo;.
 In this case, <code>toEst</code> should transform parameters from the scale that the basic components use internally to the scale used in estimation.
 <code>fromEst</code> should be the inverse of <code>toEst</code>.
 </p>
@@ -160,6 +160,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

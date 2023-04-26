@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>vmeasure specification {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>The variance of the measurement model</h2>
+<h2 id='vmeasure+20specification'>The variance of the measurement model</h2>
 
 <h3>Description</h3>
 
@@ -35,7 +35,7 @@ Then you can furnish </p>
 <pre>
   vmeasure = f</pre>
 <p>to <span class="pkg">pomp</span> algorithms,
-where <code>f</code> is a C snippet or <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that implements your procedure.
+where <code>f</code> is a C snippet or <span class="rlang"><b>R</b></span> function that implements your procedure.
 </p>
 <p>Using a C snippet is much preferred, due to its much greater computational efficiency.
 See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for general rules on writing C snippets.
@@ -54,11 +54,11 @@ Accordingly, there should be one assignment of <code>V_y_z</code> and one assign
 
 <p>The demos and the tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a> give examples.
 </p>
-<p>It is also possible, though less efficient, to specify <code>vmeasure</code> using an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function.
+<p>It is also possible, though less efficient, to specify <code>vmeasure</code> using an <span class="rlang"><b>R</b></span> function.
 In this case, specify it by furnishing </p>
 <pre>
   vmeasure = f</pre>
-<p>to <code>pomp</code>, where <code>f</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function.
+<p>to <code>pomp</code>, where <code>f</code> is an <span class="rlang"><b>R</b></span> function.
 The arguments of <code>f</code> should be chosen from among the state variables, parameters, covariates, and time.
 It must also have the argument <code>...</code>.
 <code>f</code> must return a square matrix of dimension equal to the number of observable variables.
@@ -108,6 +108,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/userdata.html">userdata</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

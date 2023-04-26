@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>flow {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Flow of a deterministic model</h2>
+<h2 id='flow'>Flow of a deterministic model</h2>
 
 <h3>Description</h3>
 
@@ -42,38 +42,38 @@ flow(
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>object</code></td>
+<tr><td><code id="flow_:_object">object</code></td>
 <td>
 <p>an object of class &lsquo;pomp&rsquo;, or of a class that extends &lsquo;pomp&rsquo;.
 This will typically be the output of <code>pomp</code>, <code>simulate</code>, or one of the <span class="pkg">pomp</span> inference algorithms.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>x0</code></td>
+<tr><td><code id="flow_:_x0">x0</code></td>
 <td>
 <p>an array with dimensions <code>nvar</code> x <code>nrep</code> giving the initial conditions of the trajectories to be computed.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>t0</code></td>
+<tr><td><code id="flow_:_t0">t0</code></td>
 <td>
 <p>the time at which the initial conditions are assumed to hold.
 By default, this is the zero-time (see <code><a href="../../pomp/help/timezero.html">timezero</a></code>).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>times</code></td>
+<tr><td><code id="flow_:_times">times</code></td>
 <td>
 <p>a numeric vector (length <code>ntimes</code>) containing times at which the itineraries are desired.
 These must be in non-decreasing order with <code>times[1]&gt;t0</code>.
 By default, this is the full set of observation times (see <code><a href="../../pomp/help/time.html">time</a></code>).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>params</code></td>
+<tr><td><code id="flow_:_params">params</code></td>
 <td>
 <p>a <code>npar</code> x <code>nrep</code> matrix of parameters.
 Each column is treated as an independent parameter set, in correspondence with the corresponding column of <code>x</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="flow_:_...">...</code></td>
 <td>
 <p>Additional arguments are passed to the ODE integrator (if the skeleton is a vectorfield) and are ignored if it is a map.
 See <code><a href="../../deSolve/help/ode.html">ode</a></code> for a description of the additional arguments accepted by the ODE integrator.
 By default, this is the parameter vector stored in <code>object</code> (see <code><a href="../help/coef.html">coef</a></code>).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<tr><td><code id="flow_:_verbose">verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -118,6 +118,6 @@ If <code>x</code> is the returned matrix, <code>x[i,j,k]</code> is the i-th comp
 <code><a href="../../pomp/help/trajectory.html">trajectory</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

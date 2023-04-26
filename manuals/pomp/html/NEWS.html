@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>NEWS</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>News for package &lsquo;pomp&rsquo;</h2>
+<h2 id='NEWS'>News for package &lsquo;pomp&rsquo;</h2>
 
 <h3>Changes in <span class="pkg">pomp</span> version 5.0.1</h3>
 
@@ -133,10 +133,10 @@ The <code>melt</code> function for converting arrays and nested lists into data 
 It has been replaced by a stricter version of <code>melt</code>.
 </p>
 </li>
-<li><p> The <span class="pkg">magrittr</span> pipe <code>%&gt;%</code> is no longer re-exported by <span class="pkg">pomp</span>: use the native <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> pipe <code>|&gt;</code> instead.
+<li><p> The <span class="pkg">magrittr</span> pipe <code>%&gt;%</code> is no longer re-exported by <span class="pkg">pomp</span>: use the native <span class="rlang"><b>R</b></span> pipe <code>|&gt;</code> instead.
 </p>
 </li>
-<li><p> The package now requires <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> version 4.1 at least.
+<li><p> The package now requires <span class="rlang"><b>R</b></span> version 4.1 at least.
 </p>
 </li></ul>
 
@@ -345,7 +345,7 @@ By default, this is the current working directory or the value of the global opt
 
 
 <ul>
-<li><p> The <code>rbetabinom</code> and <code>dbetabinom</code> functions, long present as part of the <a href="https://kingaa.github.io/pomp/vignettes/C_API.html">C API</a>, are now available as <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions.
+<li><p> The <code>rbetabinom</code> and <code>dbetabinom</code> functions, long present as part of the <a href="https://kingaa.github.io/pomp/vignettes/C_API.html">C API</a>, are now available as <span class="rlang"><b>R</b></span> functions.
 </p>
 </li></ul>
 
@@ -868,7 +868,7 @@ In a future release, these options will be removed entirely: the behavior will b
 
 
 <ul>
-<li><p> The source codes underlying specification of basic model components via <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions has been reworked to remove reliance on deep <code>PROTECT</code> stacks.
+<li><p> The source codes underlying specification of basic model components via <span class="rlang"><b>R</b></span> functions has been reworked to remove reliance on deep <code>PROTECT</code> stacks.
 Thanks to Thomas Kalibera for showing the way!
 </p>
 </li>
@@ -1103,7 +1103,7 @@ Previously, <span class="pkg">pomp</span> insisted on strictly increasing time s
 
 
 <ul>
-<li> <p><span class="pkg">pomp</span> now requires at least <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> version 3.5.
+<li> <p><span class="pkg">pomp</span> now requires at least <span class="rlang"><b>R</b></span> version 3.5.
 </p>
 </li></ul>
 
@@ -1152,7 +1152,7 @@ Specifically, the arguments to <code>covariate_table</code> are now evaluated se
 Once evaluated, the covariates are bound column-wise into a single data frame.
 </p>
 </li>
-<li><p> The manner in which one writes <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions to specify basic model components has been totally changed.
+<li><p> The manner in which one writes <span class="rlang"><b>R</b></span> functions to specify basic model components has been totally changed.
 Before, one wrote functions that took specific arguments such as 'x', 'params', and 'covars'.
 Now, one writes such functions with any or all state variables, observables, covariates, and/or time as arguments.
 </p>
@@ -1344,7 +1344,7 @@ Of course, this is pertinent only if the model skeleton is a vectorfield.
 
 
 <ul>
-<li><p> New <code>hitch</code> function facilitates construction of <code>pomp.fun</code> objects from <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions, C snippets, and links to external libraries.
+<li><p> New <code>hitch</code> function facilitates construction of <code>pomp.fun</code> objects from <span class="rlang"><b>R</b></span> functions, C snippets, and links to external libraries.
 </p>
 </li>
 <li><p> Native routines needed to access <code>pomp.fun</code> objects in C are now registered for use by other packages.
@@ -1366,18 +1366,18 @@ Of course, this is pertinent only if the model skeleton is a vectorfield.
 <li><p> A new &lsquo;<span class="file">pomp_defines.h</span>&rsquo; header is provided for developers of packages that depend on <span class="pkg">pomp</span>.
 </p>
 </li>
-<li><p> Internally, <code>rprocess</code> is no longer stored as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function.
+<li><p> Internally, <code>rprocess</code> is no longer stored as an <span class="rlang"><b>R</b></span> function.
 The use of plugins is now required for the implementation of the <code>rprocess</code> component.
 Currently, there are five plugins available:
 <code>onestep.sim</code>, <code>discrete.time.sim</code>, <code>euler.sim</code>, <code>gillespie.sim</code>, and <code>gillespie.hl.sim</code>.
 </p>
 </li>
-<li><p> The new <code>hitch</code> function automates the building and linking of C snippets and <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> functions into <code>pomp.fun</code>s.
+<li><p> The new <code>hitch</code> function automates the building and linking of C snippets and <span class="rlang"><b>R</b></span> functions into <code>pomp.fun</code>s.
 </p>
 </li>
 <li><p> The handling of <code>dprocess</code> has changed.
 The <code>onestep.dens</code> plugin is now deprecated and will soon be removed.
-<code>dprocess</code> is now specified directly using either a C snippet or an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, in much the same way that, for example, <code>dmeasure</code> is specified.
+<code>dprocess</code> is now specified directly using either a C snippet or an <span class="rlang"><b>R</b></span> function, in much the same way that, for example, <code>dmeasure</code> is specified.
 </p>
 </li>
 <li><p> The old &lsquo;forward&rsquo; and &lsquo;inverse&rsquo; options for the <code>dir</code> argument of <code>partrans</code> have been dispensed with.
@@ -1597,7 +1597,7 @@ This provides the probability distribution function for the multinomial distribu
 <li><p> Improved tests.
 </p>
 </li>
-<li><p> Fixed bugs emerging in R-devel due to refactoring of underlying <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> source code.
+<li><p> Fixed bugs emerging in R-devel due to refactoring of underlying <span class="rlang"><b>R</b></span> source code.
 </p>
 </li></ul>
 
@@ -1856,7 +1856,7 @@ The error message now gives the parameters on the natural (model) scale.
 
 
 <ul>
-<li> <p>C codes have been modified to take advantage of changes to the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> API (R SVN REVISION 71180).
+<li> <p>C codes have been modified to take advantage of changes to the <span class="rlang"><b>R</b></span> API (R SVN REVISION 71180).
 </p>
 </li></ul>
 
@@ -2248,7 +2248,7 @@ Specifically, the discussion of filtering failures is better.
 <li><p> The new argument <code>show</code> of <code>pompExamples</code> allows one to display the example code instead of executing it.
 </p>
 </li>
-<li><p> The minimum version of <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> supported is now 3.1.2.
+<li><p> The minimum version of <span class="rlang"><b>R</b></span> supported is now 3.1.2.
 </p>
 </li></ul>
 
@@ -2347,7 +2347,7 @@ This is accomplished via the new <code>cdir</code> and <code>cfile</code> argume
 
 
 <ul>
-<li><p> When several concurrent <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> processes attempt to simultaneously compile <code>Csnipet</code> code from copies of a <code>pomp</code> object on the same machine, a race condition exists.
+<li><p> When several concurrent <span class="rlang"><b>R</b></span> processes attempt to simultaneously compile <code>Csnipet</code> code from copies of a <code>pomp</code> object on the same machine, a race condition exists.
 This release fixes this by ensuring that <code>Csnippet</code> codes are written and compiled in a process-specific directory.
 </p>
 </li></ul>

@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>bsmc2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>The Liu and West Bayesian particle filter</h2>
+<h2 id='bsmc2'>The Liu and West Bayesian particle filter</h2>
 
 <h3>Description</h3>
 
@@ -49,14 +49,14 @@ bsmc2(data, Np, smooth = 0.1, ..., verbose = getOption("verbose", FALSE))
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>data</code></td>
+<tr><td><code id="bsmc2_:_data">data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>Np</code></td>
+<tr><td><code id="bsmc2_:_Np">Np</code></td>
 <td>
 <p>the number of particles to use.
 This may be specified as a single positive integer, in which case the same number of particles will be used at each timestep.
@@ -68,44 +68,44 @@ In the latter case, <code>Np(k)</code> must be a single positive integer, repres
 and so on,
 while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number of particles to sample at the end of the time-series.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>smooth</code></td>
+<tr><td><code id="bsmc2_:_smooth">smooth</code></td>
 <td>
 <p>Kernel density smoothing parameter.
 The compensating shrinkage factor will be <code>sqrt(1-smooth^2)</code>.
 Thus, <code>smooth=0</code> means that no noise will be added to parameters.
 The general recommendation is that the value of <code>smooth</code> should be chosen close to 0 (e.g., <code>shrink</code> ~ 0.1).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>params</code></td>
+<tr><td><code id="bsmc2_:_params">params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>rprior</code></td>
+<tr><td><code id="bsmc2_:_rprior">rprior</code></td>
 <td>
-<p>optional; prior distribution sampler, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+<p>optional; prior distribution sampler, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
 Setting <code>rprior=NULL</code> removes the prior distribution sampler.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>rinit</code></td>
+<tr><td><code id="bsmc2_:_rinit">rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
-This can be furnished either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>rprocess</code></td>
+<tr><td><code id="bsmc2_:_rprocess">rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>dmeasure</code></td>
+<tr><td><code id="bsmc2_:_dmeasure">dmeasure</code></td>
 <td>
-<p>evaluator of the measurement model density, specified either as a C snippet, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+<p>evaluator of the measurement model density, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
 For more information, see <a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>partrans</code></td>
+<tr><td><code id="bsmc2_:_partrans">partrans</code></td>
 <td>
 <p>optional parameter transformations, constructed using <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
 </p>
@@ -115,7 +115,7 @@ One should supply the <code>partrans</code> argument via a call to <code><a href
 For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="bsmc2_:_...">...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -124,7 +124,7 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>verbose</code></td>
+<tr><td><code id="bsmc2_:_verbose">verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -221,6 +221,6 @@ Springer, New York, 2001.
 <code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

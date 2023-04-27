@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Plot, Image and Histogram Method for deSolve Objects</title>
+<!DOCTYPE html><html><head><title>R: Plot, Image and Histogram Method for deSolve Objects</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for plot.deSolve {deSolve}"><tr><td>plot.deSolve {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>plot.deSolve {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>
+<h2 id='plot.deSolve'>
 Plot, Image and Histogram Method for deSolve Objects
 </h2>
 
@@ -18,8 +28,7 @@ Plot, Image and Histogram Method for deSolve Objects
 
 <h3>Usage</h3>
 
-<pre>
-## S3 method for class 'deSolve'
+<pre><code class='language-R'>## S3 method for class 'deSolve'
 plot(x, ..., select = NULL, which = select, ask = NULL,
               obs = NULL, obspar = list(), subset = NULL)
 
@@ -48,13 +57,13 @@ matplot.0D(x, ..., select = NULL, which = select,
 matplot.1D(x, select = NULL, which = select, ask = NULL,
          obs = NULL, obspar = list(), grid = NULL,
          xyswap = FALSE, vertical = FALSE, subset = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>x </code></td>
+<table>
+<tr><td><code id="plot.deSolve_:_x">x</code></td>
 <td>
 <p>an object of class <code>deSolve</code>, as returned by the
 integrators, and to be plotted.
@@ -63,7 +72,7 @@ integrators, and to be plotted.
 <code>deSolve</code> after <code>x</code> (unnamed) - see second example.
 </p>
 </td></tr>
-<tr valign="top"><td><code>which </code></td>
+<tr><td><code id="plot.deSolve_:_which">which</code></td>
 <td>
 <p>the name(s) or the index to the variables that should be
 plotted or selected.  Default = all variables, except <code>time</code>.
@@ -71,20 +80,20 @@ For use with <code>matplot.0D</code> and <code>matplot.1D</code>, <code>which</c
 with vectors, each referring to a separate y-axis.
 </p>
 </td></tr>
-<tr valign="top"><td><code>select </code></td>
+<tr><td><code id="plot.deSolve_:_select">select</code></td>
 <td>
 <p>which variable/columns to be selected.  This is added for
 consistency with the R-function <code>subset</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>subset </code></td>
+<tr><td><code id="plot.deSolve_:_subset">subset</code></td>
 <td>
 <p>either a logical expression indicating elements or rows to keep in
 <code>select</code>, or a vector of integers denoting the indices of the elements
 over which to loop. Missing  values are taken as <code>FALSE</code>
 </p>
 </td></tr>
-<tr valign="top"><td><code>ask </code></td>
+<tr><td><code id="plot.deSolve_:_ask">ask</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, the user is <em>ask</em>ed before
 each plot, if <code>NULL</code> the user is only asked if more than one
@@ -92,40 +101,40 @@ page of plots is necessary and the current graphics device is set
 interactive, see <code><a href="../../graphics/html/par.html">par</a>(ask)</code> and
 <code><a href="../../grDevices/html/dev.interactive.html">dev.interactive</a></code>.</p>
 </td></tr>
-<tr valign="top"><td><code>add.contour </code></td>
+<tr><td><code id="plot.deSolve_:_add.contour">add.contour</code></td>
 <td>
 <p>if <code>TRUE</code>, will add contours to the image plot.</p>
 </td></tr>
-<tr valign="top"><td><code>method </code></td>
+<tr><td><code id="plot.deSolve_:_method">method</code></td>
 <td>
 <p>the name of the plotting method to use, one of &quot;image&quot;,
 &quot;filled.contour&quot;, &quot;persp&quot;, &quot;contour&quot;.</p>
 </td></tr>
-<tr valign="top"><td><code>grid </code></td>
+<tr><td><code id="plot.deSolve_:_grid">grid</code></td>
 <td>
 <p>only for <code>image</code> plots and for <code>plot.1D</code>:
 the 1-D grid as a vector (for output generated with <code>ode.1D</code>),
 or the x- and y-grid, as a <code>list</code> (for output generated with
 <code>ode.2D</code>).</p>
 </td></tr>
-<tr valign="top"><td><code>xyswap </code></td>
+<tr><td><code id="plot.deSolve_:_xyswap">xyswap</code></td>
 <td>
 <p>if <code>TRUE</code>, then x-and y-values are swapped and the
 y-axis is from top to bottom. Useful for drawing vertical profiles.</p>
 </td></tr>
-<tr valign="top"><td><code>vertical </code></td>
+<tr><td><code id="plot.deSolve_:_vertical">vertical</code></td>
 <td>
 <p>if <code>TRUE</code>, then 1. x-and y-values are swapped, the
 y-axis is from top to bottom, the x-axis is on top, margin 3 and the
 main title gets the value of the x-axis.
 Useful for drawing vertical profiles; see example 2.</p>
 </td></tr>
-<tr valign="top"><td><code>delay </code></td>
+<tr><td><code id="plot.deSolve_:_delay">delay</code></td>
 <td>
 <p>adds a delay (in milliseconds) between consecutive plots
 of <code>plot.1D</code> to enable animations.</p>
 </td></tr>
-<tr valign="top"><td><code>obs </code></td>
+<tr><td><code id="plot.deSolve_:_obs">obs</code></td>
 <td>
 <p>a <code>data.frame</code> or <code>matrix</code> with &quot;observed data&quot; that
 will be added as <code>points</code> to the plots. <code>obs</code> can also be a
@@ -144,7 +153,7 @@ where the first three columns contain (name, time, value).
 then the variables, common to both <code>obs</code> and <code>x</code> will be plotted.
 </p>
 </td></tr>
-<tr valign="top"><td><code>obspar </code></td>
+<tr><td><code id="plot.deSolve_:_obspar">obspar</code></td>
 <td>
 <p>additional graphics arguments passed to <code>points</code>, for
 plotting the observed data. If <code>obs</code> is a <code>list</code> containing multiple
@@ -153,7 +162,7 @@ or a list (e.g. for <code>xlim</code>, <code>ylim</code>), specifying each data 
 separately.
 </p>
 </td></tr>
-<tr valign="top"><td><code>legend </code></td>
+<tr><td><code id="plot.deSolve_:_legend">legend</code></td>
 <td>
 <p>if <code>TRUE</code>, a color legend will be drawn on the right
 of each image.
@@ -161,7 +170,7 @@ For use with <code>matplot.0D</code> and <code>matplot.1D</code>:
 a <code>list</code> with arguments passed to R-function <a href="../../graphics/html/legend.html">legend</a>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>arr </code></td>
+<tr><td><code id="plot.deSolve_:_arr">arr</code></td>
 <td>
 <p>if <code>TRUE</code>, and the output is from a 2-D or 3-D model,
 an array will be returned with dimension =
@@ -170,7 +179,7 @@ When <code>arr=TRUE</code> then only one variable can be selected.
 When the output is from a 0-D or 1-D model, then this argument is ignored.
 </p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr><td><code id="plot.deSolve_:_...">...</code></td>
 <td>
 <p>additional arguments.
 </p>
@@ -267,8 +276,7 @@ for the underlying functions from package <span class="pkg">graphics</span>,
 
 <h3>Examples</h3>
 
-<pre>
-## =======================================================================
+<pre><code class='language-R'>## =======================================================================
 ## Example 1. A Predator-Prey model with 4 species in matrix formulation
 ## =======================================================================
 
@@ -447,7 +455,8 @@ matplot.1D(out, type = "l", lwd = 2, xyswap = TRUE, lty = 1,
 ## End(Not run)
 
 ## see help file for ode.2D for images of 2D variables
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

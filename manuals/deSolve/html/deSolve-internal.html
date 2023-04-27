@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Internal deSolve Functions</title>
+<!DOCTYPE html><html><head><title>R: Internal deSolve Functions</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for deSolve-internal {deSolve}"><tr><td>deSolve-internal {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>deSolve-internal {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Internal deSolve Functions</h2>
+<h2 id='deSolve-internal'>Internal deSolve Functions</h2>
 
 <h3>Description</h3>
 
@@ -16,15 +26,14 @@
 
 <h3>Usage</h3>
 
-<pre>
-timestep(prev = TRUE)
-</pre>
+<pre><code class='language-R'>timestep(prev = TRUE)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>prev </code></td>
+<table>
+<tr><td><code id="deSolve-internal_:_prev">prev</code></td>
 <td>
 <p>if <code>TRUE</code> will return the timestep previously used;
 when <code>FALSE</code> will return the time step to be currently tried by 
@@ -41,7 +50,7 @@ timestep of the integration.  It works only under specific
 circumstances and should not be used by the end user.
 </p>
 <p>Instead of this, please see the example below for a pure
-<span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> solution.  
+<span class="rlang"><b>R</b></span> solution.  
 </p>
 
 
@@ -54,8 +63,7 @@ circumstances and should not be used by the end user.
 
 <h3>Examples</h3>
 
-<pre>
-###################################################
+<pre><code class='language-R'>###################################################
 ### This example shows how to retrieve information 
 ### about the used time steps.
 ###################################################
@@ -85,7 +93,8 @@ out &lt;- ode(y = y, func = model, times = c(0, 2),
  parms = parms, method = "lsoda")
 
 ls() # prove that t.old and t.new are local within 'model' 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

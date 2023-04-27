@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver For Multicomponent 1-D Ordinary Differential Equations</title>
+<!DOCTYPE html><html><head><title>R: Solver For Multicomponent 1-D Ordinary Differential Equations</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for ode.1D {deSolve}"><tr><td>ode.1D {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>ode.1D {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Solver For Multicomponent 1-D Ordinary Differential Equations</h2>
+<h2 id='ode.1D'>Solver For Multicomponent 1-D Ordinary Differential Equations</h2>
 
 <h3>Description</h3>
 
@@ -18,38 +28,38 @@ that have been converted to ODEs by numerical differencing.
 
 <h3>Usage</h3>
 
-<pre>ode.1D(y, times, func, parms, nspec = NULL, dimens = NULL, 
+<pre><code class='language-R'>ode.1D(y, times, func, parms, nspec = NULL, dimens = NULL, 
    method= c("lsoda", "lsode", "lsodes", "lsodar", "vode", "daspk",
    "euler", "rk4", "ode23", "ode45", "radau", "bdf", "adams", "impAdams",
    "iteration"),
    names = NULL, bandwidth = 1, restructure = FALSE, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="ode.1D_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the ODE system, a vector. If
 <code>y</code> has a name attribute, the names will be used to label the
 output matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="ode.1D_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first
 value of <code>times</code> must be the initial time.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="ode.1D_:_func">func</code></td>
 <td>
-<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+<p>either an <span class="rlang"><b>R</b></span>-function that computes the values of the
 derivatives in the ODE system (the model definition) at time
 <code>t</code>, or a character string giving the name of a compiled
 function in a dynamically loaded shared library.
 </p>
-<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<p>If <code>func</code> is an <span class="rlang"><b>R</b></span>-function, it must be defined as:
 <code>func &lt;- function(t, y, parms, ...)</code>.  <code>t</code> is the current time
 point in the integration, <code>y</code> is the current estimate of the
 variables in the ODE system.  If the initial values <code>y</code> has a
@@ -67,23 +77,23 @@ must be specified in the <b>same order</b> as the state variables <code>y</code>
 will be used. See details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="ode.1D_:_parms">parms</code></td>
 <td>
 <p>parameters passed to <code>func</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>nspec </code></td>
+<tr><td><code id="ode.1D_:_nspec">nspec</code></td>
 <td>
 <p>the number of <b>species</b> (components) in the model. If
 <code>NULL</code>, then <code>dimens</code> should be specified.
 </p>
 </td></tr>
-<tr valign="top"><td><code>dimens</code></td>
+<tr><td><code id="ode.1D_:_dimens">dimens</code></td>
 <td>
 <p>the number of <b>boxes</b> in the model. If <code>NULL</code>, then
 <code>nspec</code> should be specified.
 </p>
 </td></tr>
-<tr valign="top"><td><code>method </code></td>
+<tr><td><code id="ode.1D_:_method">method</code></td>
 <td>
 <p>the integrator. Use <code>"vode", "lsode", "lsoda", 
      "lsodar", "daspk"</code>, or <code>"lsodes"</code> if the model is very stiff;
@@ -100,12 +110,12 @@ This can be used for individual based models, for difference equations,
 or in those cases where the integration is performed within <code>func</code>)
 </p>
 </td></tr>
-<tr valign="top"><td><code>names </code></td>
+<tr><td><code id="ode.1D_:_names">names</code></td>
 <td>
 <p>the names of the components; used for plotting.
 </p>
 </td></tr>
-<tr valign="top"><td><code>bandwidth </code></td>
+<tr><td><code id="ode.1D_:_bandwidth">bandwidth</code></td>
 <td>
 <p>the number of adjacent boxes over which transport occurs.
 Normally equal to 1 (box i only interacts with box i-1, and i+1). 
@@ -113,14 +123,14 @@ Values larger than 1 will not work with <code>method = "lsodes"</code>.
 Ignored if the method is explicit.
 </p>
 </td></tr>
-<tr valign="top"><td><code>restructure </code></td>
+<tr><td><code id="ode.1D_:_restructure">restructure</code></td>
 <td>
 <p>whether or not the Jacobian should be restructured.
 Only used if the <code>method</code> is an integrator function. Should be
 <code>TRUE</code> if the method is implicit, <code>FALSE</code> if explicit.
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="ode.1D_:_...">...</code></td>
 <td>
 <p>additional arguments passed to the integrator.</p>
 </td></tr>
@@ -244,8 +254,7 @@ whether the input makes sense (i.e. if <code>nspec * dimens ==
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 ## =======================================================================
 ## example 1
 ## a predator and its prey diffusing on a flat surface
@@ -413,7 +422,8 @@ filled.contour(x = times, y = x, O2, color = color, nlevels = 50,
                
 ## or quicker plotting:
 image(out, grid = x,  xlab = "time, days", ylab = "Distance from river, m")               
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

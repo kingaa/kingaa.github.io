@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Passing Forcing Functions to Models Written in R or Compiled...</title>
+<!DOCTYPE html><html><head><title>R: Passing Forcing Functions to Models Written in R or Compiled...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for forcings {deSolve}"><tr><td>forcings {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>forcings {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>
+<h2 id='forcings'>
 Passing Forcing Functions to Models Written in R or Compiled Code.
 </h2>
 
@@ -29,7 +39,7 @@ the values of the forcings at specified times.
 <p>If the model is defined in <em>R code</em>, it is most efficient to:
 </p>
 <p>1. define  a function that performs the linear interpolation,
-using <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>'s <code><a href="../../stats/html/approxfun.html">approxfun</a></code>. It is generally recommended to use 
+using <span class="rlang"><b>R</b></span>'s <code><a href="../../stats/html/approxfun.html">approxfun</a></code>. It is generally recommended to use 
 <code>rule = 2</code>, such as to allow extrapolation outside of the time interval,
 especially when using the Livermore solvers, as these may exceed the last
 time point.
@@ -126,7 +136,7 @@ vignette (&quot;compiledCode&quot;).
 
 <h3>See Also</h3>
 
-<p><code><a href="../../stats/html/approxfun.html">approx</a></code> or <code><a href="../../stats/html/approxfun.html">approxfun</a></code>, the <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function,
+<p><code><a href="../../stats/html/approxfun.html">approx</a></code> or <code><a href="../../stats/html/approxfun.html">approxfun</a></code>, the <span class="rlang"><b>R</b></span> function,
 </p>
 <p><code><a href="../../deSolve/help/events.html">events</a></code> for how to implement events.
 </p>
@@ -134,8 +144,7 @@ vignette (&quot;compiledCode&quot;).
 
 <h3>Examples</h3>
 
-<pre>
-## =============================================================================
+<pre><code class='language-R'>## =============================================================================
 ## FORCING FUNCTION: The sediment oxygen consumption example - R-code:
 ## =============================================================================
 
@@ -208,7 +217,8 @@ browseURL(paste(system.file(package = "deSolve"), "/doc", sep = ""))
 
 ## End(Not run)
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

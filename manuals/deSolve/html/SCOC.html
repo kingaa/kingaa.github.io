@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: A Sediment Model of Oxygen Consumption</title>
+<!DOCTYPE html><html><head><title>R: A Sediment Model of Oxygen Consumption</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for SCOC {deSolve}"><tr><td>SCOC {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>SCOC {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>A Sediment Model of Oxygen Consumption</h2>
+<h2 id='SCOC'>A Sediment Model of Oxygen Consumption</h2>
 
 <h3>Description</h3>
 
@@ -25,7 +35,8 @@ and decays at a constant rate.
 </p>
 <p>The equation is simple:
 </p>
-<p style="text-align: center;"><i>\frac{dC}{dt} = Flux - k C</i></p>
+<p style="text-align: center;"><code class="reqn">\frac{dC}{dt} = Flux - k C</code>
+</p>
 
 <p>This model is written in <code>FORTRAN</code>.
 </p>
@@ -33,31 +44,31 @@ and decays at a constant rate.
 
 <h3>Usage</h3>
 
-<pre>SCOC(times, y = NULL, parms, Flux, ...)</pre>
+<pre><code class='language-R'>SCOC(times, y = NULL, parms, Flux, ...)</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>times</code></td>
+<table>
+<tr><td><code id="SCOC_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first value
 of times must be the initial time,</p>
 </td></tr>
-<tr valign="top"><td><code>y</code></td>
+<tr><td><code id="SCOC_:_y">y</code></td>
 <td>
 <p>the initial value of the state variable; if <code>NULL</code> it
 will be estimated based on <code>Flux</code> and <code>parms</code>,</p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="SCOC_:_parms">parms</code></td>
 <td>
 <p>the model parameter, <code>k</code>,</p>
 </td></tr>
-<tr valign="top"><td><code>Flux </code></td>
+<tr><td><code id="SCOC_:_Flux">Flux</code></td>
 <td>
 <p>a data set with the organic carbon deposition rates, </p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr><td><code id="SCOC_:_...">...</code></td>
 <td>
 <p>any other parameters passed to the integrator <code>ode</code>
 (which solves the model).</p>
@@ -68,7 +79,7 @@ will be estimated based on <code>Flux</code> and <code>parms</code>,</p>
 <h3>Details</h3>
 
 <p>The model is implemented primarily to demonstrate the linking of
-FORTRAN with <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-code.
+FORTRAN with <span class="rlang"><b>R</b></span>-code.
 </p>
 <p>The source can be found in the &lsquo;<span class="file">doc/examples/dynload</span>&rsquo;
 subdirectory of the package.
@@ -83,7 +94,7 @@ subdirectory of the package.
 <h3>References</h3>
 
 <p>Soetaert, K. and P.M.J. Herman, 2009. A Practical Guide to Ecological
-Modelling. Using <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> as a Simulation Platform.  Springer, 372 pp.
+Modelling. Using <span class="rlang"><b>R</b></span> as a Simulation Platform.  Springer, 372 pp.
 </p>
 
 
@@ -97,8 +108,7 @@ Modelling. Using <span style="font-family: Courier New, Courier; color: #666666;
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 ## Forcing function data
 Flux &lt;- matrix(ncol = 2, byrow = TRUE, data = c(
   1, 0.654, 11, 0.167,   21, 0.060, 41, 0.070, 73,0.277, 83,0.186,
@@ -123,7 +133,8 @@ out2 &lt;- SCOC(times, parms = parms, Flux = Flux, fcontrol = fcontrol)
 
 plot(out2[,"time"], out2[,"Depo"], type = "l",col = "red")
 lines(out2[,"time"], out2[,"Mineralisation"], col = "blue")
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

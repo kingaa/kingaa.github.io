@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Implementing Events and Roots in Differential Equation...</title>
+<!DOCTYPE html><html><head><title>R: Implementing Events and Roots in Differential Equation...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for events {deSolve}"><tr><td>events {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>events {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>
+<h2 id='events'>
 Implementing Events and Roots in Differential Equation Models.
 </h2>
 
@@ -85,7 +95,7 @@ some computational time.
 </p>
 </li></ol>
 
-<p>In case the events are specified by means of an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> <b>function</b>
+<p>In case the events are specified by means of an <span class="rlang"><b>R</b></span> <b>function</b>
 (argument <code>events$func</code>),
 it must be defined as: <code>function(t, y, parms, ...)</code>.
 <code>t</code> is the current time point in the integration,
@@ -102,7 +112,7 @@ specified by a <code>function</code> in compiled code. This function has as
 arguments, the number of state variables, the time, and the state
 variable vector. See package vignette &quot;compiledCode&quot; for more details.
 </p>
-<p>In case events are specified by an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function,
+<p>In case events are specified by an <span class="rlang"><b>R</b></span>-function,
 this requires either: input of the <em>time</em> of the events, a vector as
 defined in <code>events$time</code>
 OR the specification of a <em>root</em> function.  In the
@@ -184,8 +194,7 @@ There will be at most <code>events$maxroot</code> such values. The default is 10
 
 <h3>Examples</h3>
 
-<pre>
-## =============================================================================
+<pre><code class='language-R'>## =============================================================================
 ## 1. EVENTS in a data.frame
 ## =============================================================================
 
@@ -368,7 +377,8 @@ out2 &lt;- ode(y = c(C = 1), times, func = "scocder", parms = c(k=0.01),
 plot(out, out2)
 
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

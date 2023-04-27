@@ -1,23 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver for Ordinary Differential Equations (ODE) for COMPLEX...</title>
+<!DOCTYPE html><html><head><title>R: Solver for Ordinary Differential Equations (ODE) for COMPLEX...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for zvode {deSolve}"><tr><td>zvode {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>zvode {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Solver for Ordinary Differential Equations (ODE) for COMPLEX variables</h2>
+<h2 id='zvode'>Solver for Ordinary Differential Equations (ODE) for COMPLEX variables</h2>
 
 <h3>Description</h3>
 
 <p>Solves the initial value problem for stiff or nonstiff systems of 
 ordinary differential equations (ODE) in the form:
 </p>
-<p style="text-align: center;"><i>dy/dt = f(t,y)</i></p>
-
-<p>where <i>dy</i> and <i>y</i> are complex variables. 
+<p style="text-align: center;"><code class="reqn">dy/dt = f(t,y)</code>
 </p>
-<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function <code>zvode</code> provides an interface to the FORTRAN ODE
+
+<p>where <code class="reqn">dy</code> and <code class="reqn">y</code> are complex variables. 
+</p>
+<p>The <span class="rlang"><b>R</b></span> function <code>zvode</code> provides an interface to the FORTRAN ODE
 solver of the same name, written by Peter N. Brown, Alan C. Hindmarsh
 and George D. Byrne.
 </p>
@@ -25,41 +36,41 @@ and George D. Byrne.
 
 <h3>Usage</h3>
 
-<pre>zvode(y, times, func, parms, rtol = 1e-6, atol = 1e-6,  
+<pre><code class='language-R'>zvode(y, times, func, parms, rtol = 1e-6, atol = 1e-6,  
   jacfunc = NULL, jactype = "fullint", mf = NULL, verbose = FALSE,   
   tcrit = NULL, hmin = 0, hmax = NULL, hini = 0, ynames = TRUE,
   maxord = NULL, bandup = NULL, banddown = NULL, maxsteps = 5000,
   dllname = NULL, initfunc = dllname, initpar = parms, rpar = NULL,
   ipar = NULL, nout = 0, outnames = NULL, forcings = NULL,
   initforc = NULL, fcontrol = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="zvode_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the ODE system. If <code>y</code>
 has a name attribute, the names will be used to label the output
 matrix. <em>y has to be complex</em>
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="zvode_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first
 value of <code>times</code> must be the initial time; if only one step is
 to be taken; set <code>times = NULL</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="zvode_:_func">func</code></td>
 <td>
-<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+<p>either an <span class="rlang"><b>R</b></span>-function that computes the values of the
 derivatives in the ODE system (the <em>model definition</em>) at time
 <code>t</code>, or a character string giving the name of a compiled function in a
 dynamically loaded shared library.
 </p>
-<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<p>If <code>func</code> is an <span class="rlang"><b>R</b></span>-function, it must be defined as:
 <code>func &lt;- function(t, y, parms, ...)</code>.  <code>t</code> is the current time
 point in the integration, <code>y</code> is the current estimate of the
 variables in the ODE system.  If the initial values <code>y</code> has a
@@ -81,42 +92,42 @@ library (without extension) which must be loaded before
 for more details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="zvode_:_parms">parms</code></td>
 <td>
 <p>vector or list of parameters used in <code>func</code> or
 <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>rtol </code></td>
+<tr><td><code id="zvode_:_rtol">rtol</code></td>
 <td>
 <p>relative error tolerance, either a scalar or an array as
 long as <code>y</code>.  See details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>atol </code></td>
+<tr><td><code id="zvode_:_atol">atol</code></td>
 <td>
 <p>absolute error tolerance, either a scalar or an array as
 long as <code>y</code>.  See details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>jacfunc </code></td>
+<tr><td><code id="zvode_:_jacfunc">jacfunc</code></td>
 <td>
-<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that computes the
+<p>if not <code>NULL</code>, an <span class="rlang"><b>R</b></span> function that computes the
 Jacobian of the system of differential equations
-<i>dydot(i)/dy(j)</i>, or
+<code class="reqn">\partial\dot{y}_i/\partial y_j</code>, or
 a string giving the name of a function or subroutine in
 &lsquo;<span class="file">dllname</span>&rsquo; that computes the Jacobian (see vignette
 <code>"compiledCode"</code> for more about this option).
 </p>
 <p>In some circumstances, supplying
 <code>jacfunc</code> can speed up the computations, if the system is
-stiff.  The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> calling sequence for <code>jacfunc</code> is identical to
+stiff.  The <span class="rlang"><b>R</b></span> calling sequence for <code>jacfunc</code> is identical to
 that of <code>func</code>.
 </p>
 <p>If the Jacobian is a full matrix, <code>jacfunc</code> should return a
-matrix <i>dydot/dy</i>, where the ith row contains the derivative of
-<i>dy_i/dt</i> with respect to <i>y_j</i>, or a vector containing the
-matrix elements by columns (the way <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> and FORTRAN store matrices).
+matrix <code class="reqn">\dot{dy}/dy</code>, where the ith row contains the derivative of
+<code class="reqn">dy_i/dt</code> with respect to <code class="reqn">y_j</code>, or a vector containing the
+matrix elements by columns (the way <span class="rlang"><b>R</b></span> and FORTRAN store matrices).
 Its elements should be <em>complex numbers</em>.
 </p>
 <p>If the Jacobian is banded, <code>jacfunc</code> should return a matrix
@@ -124,7 +135,7 @@ containing only the nonzero bands of the Jacobian, rotated
 row-wise. See first example of <code>lsode</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>jactype </code></td>
+<tr><td><code id="zvode_:_jactype">jactype</code></td>
 <td>
 <p>the structure of the Jacobian, one of
 <code>"fullint"</code>, <code>"fullusr"</code>, <code>"bandusr"</code> or
@@ -132,20 +143,20 @@ row-wise. See first example of <code>lsode</code>.
 by user; overruled if <code>mf</code> is not <code>NULL</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>mf </code></td>
+<tr><td><code id="zvode_:_mf">mf</code></td>
 <td>
 <p>the &quot;method flag&quot; passed to function <code>zvode</code> - overrules
 <code>jactype</code> - provides more options than <code>jactype</code> - see
 details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>verbose </code></td>
+<tr><td><code id="zvode_:_verbose">verbose</code></td>
 <td>
 <p>if TRUE: full output to the screen, e.g. will
 print the <code>diagnostiscs</code> of the integration - see details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>tcrit </code></td>
+<tr><td><code id="zvode_:_tcrit">tcrit</code></td>
 <td>
 <p>if not <code>NULL</code>, then <code>zvode</code> cannot integrate
 past <code>tcrit</code>. The FORTRAN routine <code>dvode</code> overshoots its
@@ -155,14 +166,14 @@ integration should not proceed (perhaps because of a singularity),
 that should be provided in <code>tcrit</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>hmin </code></td>
+<tr><td><code id="zvode_:_hmin">hmin</code></td>
 <td>
 <p>an optional minimum value of the integration stepsize. In
 special situations this parameter may speed up computations with the
 cost of precision. Don't use hmin if you don't know why!
 </p>
 </td></tr>
-<tr valign="top"><td><code>hmax </code></td>
+<tr><td><code id="zvode_:_hmax">hmax</code></td>
 <td>
 <p>an optional maximum value of the integration stepsize. If
 not specified, hmax is set to the largest difference in
@@ -170,45 +181,45 @@ not specified, hmax is set to the largest difference in
 short-term events. If 0, no maximal size is specified.
 </p>
 </td></tr>
-<tr valign="top"><td><code>hini </code></td>
+<tr><td><code id="zvode_:_hini">hini</code></td>
 <td>
 <p>initial step size to be attempted; if 0, the initial step
 size is determined by the solver.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ynames </code></td>
+<tr><td><code id="zvode_:_ynames">ynames</code></td>
 <td>
 <p>logical; if <code>FALSE</code>: names of state variables are not
 passed to function <code>func</code> ; this may speed up the simulation
 especially for multi-D models.
 </p>
 </td></tr>
-<tr valign="top"><td><code>maxord </code></td>
+<tr><td><code id="zvode_:_maxord">maxord</code></td>
 <td>
 <p>the maximum order to be allowed. <code>NULL</code> uses the default,
 i.e. order 12 if implicit Adams method (<code>meth = 1</code>), order 5 if BDF
 method (<code>meth = 2</code>). Reduce maxord to save storage space.
 </p>
 </td></tr>
-<tr valign="top"><td><code>bandup </code></td>
+<tr><td><code id="zvode_:_bandup">bandup</code></td>
 <td>
 <p>number of non-zero bands above the diagonal, in case
 the Jacobian is banded.
 </p>
 </td></tr>
-<tr valign="top"><td><code>banddown </code></td>
+<tr><td><code id="zvode_:_banddown">banddown</code></td>
 <td>
 <p>number of non-zero bands below the diagonal, in case
 the Jacobian is banded.
 </p>
 </td></tr>
-<tr valign="top"><td><code>maxsteps </code></td>
+<tr><td><code id="zvode_:_maxsteps">maxsteps</code></td>
 <td>
 <p>maximal number of steps per output interval taken by the
 solver.
 </p>
 </td></tr>
-<tr valign="top"><td><code>dllname </code></td>
+<tr><td><code id="zvode_:_dllname">dllname</code></td>
 <td>
 <p>a string giving the name of the shared library
 (without extension) that contains all the compiled function or
@@ -216,14 +227,14 @@ subroutine definitions refered to in <code>func</code> and <code>jacfunc</code>.
 See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initfunc </code></td>
+<tr><td><code id="zvode_:_initfunc">initfunc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the initialisation function
 (which initialises values of parameters), as provided in
 &lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initpar </code></td>
+<tr><td><code id="zvode_:_initpar">initpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
 initialisation function <code>initfunc</code> is in the dll: the
@@ -231,21 +242,21 @@ parameters passed to the initialiser, to initialise the common
 blocks (FORTRAN) or global variables (C, C++).
 </p>
 </td></tr>
-<tr valign="top"><td><code>rpar </code></td>
+<tr><td><code id="zvode_:_rpar">rpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 double precision values passed to the DLL-functions whose names are
 specified by <code>func</code> and <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ipar </code></td>
+<tr><td><code id="zvode_:_ipar">ipar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 integer values passed to the dll-functions whose names are specified
 by <code>func</code> and <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>nout </code></td>
+<tr><td><code id="zvode_:_nout">nout</code></td>
 <td>
 <p>only used if <code>dllname</code> is specified and the model is
 defined in compiled code: the number of output variables calculated
@@ -255,7 +266,7 @@ indeed the number of output variables calculated in the DLL - you have
 to perform this check in the code - See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>outnames </code></td>
+<tr><td><code id="zvode_:_outnames">outnames</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
 <code>nout</code> &gt; 0: the names of output variables calculated in the
@@ -263,7 +274,7 @@ compiled function <code>func</code>, present in the shared library.
 These names will be used to label the output matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>forcings </code></td>
+<tr><td><code id="zvode_:_forcings">forcings</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
 the forcing function data sets, each present as a two-columned matrix,
@@ -274,7 +285,7 @@ the closest data extreme.
 <p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initforc </code></td>
+<tr><td><code id="zvode_:_initforc">initforc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the forcing function
 initialisation function, as provided in
@@ -283,13 +294,13 @@ value.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>fcontrol </code></td>
+<tr><td><code id="zvode_:_fcontrol">fcontrol</code></td>
 <td>
 <p>A list of control parameters for the forcing functions.
 <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="zvode_:_...">...</code></td>
 <td>
 <p>additional arguments passed to <code>func</code> and
 <code>jacfunc</code> allowing this to be a generic function.
@@ -346,12 +357,12 @@ equivalent real system (in the real and imaginary parts of y).
 <p>P. N. Brown, G. D. Byrne, and A. C. Hindmarsh, 1989.  VODE: A Variable
 Coefficient ODE Solver, SIAM J. Sci. Stat. Comput., 10, pp. 1038-1051.
 <br /> Also, LLNL Report UCRL-98412, June 1988.
-doi: <a href="https://doi.org/10.1137/0910062">10.1137/0910062</a>
+<a href="https://doi.org/10.1137/0910062">doi:10.1137/0910062</a>
 </p>
 <p>G. D. Byrne and A. C. Hindmarsh, 1975. A Polyalgorithm for the
 Numerical Solution of Ordinary Differential Equations.  ACM
 Trans. Math. Software, 1, pp. 71-96.
-doi: <a href="https://doi.org/10.1145/355626.355636">10.1145/355626.355636</a>
+<a href="https://doi.org/10.1145/355626.355636">doi:10.1145/355626.355636</a>
 </p>
 <p>A. C. Hindmarsh and G. D. Byrne, 1977. EPISODE: An Effective Package
 for the Integration of Systems of Ordinary Differential
@@ -368,9 +379,9 @@ North-Holland, Amsterdam, pp. 55-64.
 <p>K. R. Jackson and R. Sacks-Davis, 1980. An Alternative Implementation
 of Variable Step-Size Multistep Formulas for Stiff ODEs.  ACM
 Trans. Math. Software, 6, pp. 295-318.
-doi: <a href="https://doi.org/10.1145/355900.355903">10.1145/355900.355903</a>
+<a href="https://doi.org/10.1145/355900.355903">doi:10.1145/355900.355903</a>
 </p>
-<p>Netlib: <a href="https://www.netlib.org">https://www.netlib.org</a>
+<p>Netlib: <a href="https://netlib.org">https://netlib.org</a>
 </p>
 
 
@@ -382,8 +393,7 @@ doi: <a href="https://doi.org/10.1145/355900.355903">10.1145/355900.355903</a>
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 ## =======================================================================
 ## Example 1 - very simple example 
 ## df/dt = 1i*f, where 1i is the imaginary unit
@@ -444,7 +454,8 @@ analytical &lt;- cbind(f = exp(1i * times), g = 1/(exp(1i * times) + 1.1))
 ## compare numerical solution and the two analytical ones:
 tail(cbind(out[,2], analytical[,1]))
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

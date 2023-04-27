@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Collection of Parameter Sets (Butcher Arrays) for the...</title>
+<!DOCTYPE html><html><head><title>R: Collection of Parameter Sets (Butcher Arrays) for the...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for rkMethod {deSolve}"><tr><td>rkMethod {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>rkMethod {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Collection of Parameter Sets (Butcher Arrays) for
+<h2 id='rkMethod'>Collection of Parameter Sets (Butcher Arrays) for
 the Runge-Kutta Family of ODE Solvers
 </h2>
 
@@ -19,15 +29,14 @@ ODE solver methods from the Runge-Kutta family.
 
 <h3>Usage</h3>
 
-<pre>
-rkMethod(method = NULL, ...)
-</pre>
+<pre><code class='language-R'>rkMethod(method = NULL, ...)
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>method </code></td>
+<table>
+<tr><td><code id="rkMethod_:_method">method</code></td>
 <td>
 <p>a string constant naming one of the pre-defined methods
 of the Runge-Kutta family of solvers.  The most common methods are
@@ -36,7 +45,7 @@ the variable step methods <code>"rk23bs"</code> (alias <code>"ode23"</code>),
 <code>"rk45dp7"</code> (alias <code>"ode45"</code>) or <code>"rk78f"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="rkMethod_:_...">...</code></td>
 <td>
 <p>specification of a user-defined solver, see <em>Value</em>
 and example below.
@@ -55,7 +64,7 @@ currently implemented solvers of the Runge-Kutta family are returned.
 are related to similar algorithms of other simulation languages:
 </p>
 
-<table summary="Rd table">
+<table>
 <tr>
  <td style="text-align: left;">
     <b>rkMethod</b>    </td><td style="text-align: left;"> | </td><td style="text-align: left;"> <b>Description</b> </td>
@@ -145,25 +154,25 @@ this can introduce considerable local error; it is disabled by default
 
 <p>A list with the following elements:
 </p>
-<table summary="R valueblock">
-<tr valign="top"><td><code>ID</code></td>
+<table>
+<tr><td><code>ID</code></td>
 <td>
 <p>name of the method (character)</p>
 </td></tr>
-<tr valign="top"><td><code>varstep</code></td>
+<tr><td><code>varstep</code></td>
 <td>
 <p>boolean value specifying if the method allows for
 variable time step (<code>TRUE</code>) or not (<code>FALSE</code>).
 </p>
 </td></tr>
-<tr valign="top"><td><code>FSAL</code></td>
+<tr><td><code>FSAL</code></td>
 <td>
 <p>(first same as last) optional boolean value specifying if
 the method allows re-use of the last function evaluation
 (<code>TRUE</code>) or not (<code>FALSE</code> or <code>NULL</code>).
 </p>
 </td></tr>
-<tr valign="top"><td><code>A</code></td>
+<tr><td><code>A</code></td>
 <td>
 <p>coefficient matrix of the method. As <code>link{rk}</code> supports
 only explicit methods, this matrix must be lower triangular.
@@ -171,29 +180,29 @@ only explicit methods, this matrix must be lower triangular.
 subdiagonal values are different from zero.
 </p>
 </td></tr>
-<tr valign="top"><td><code>b1</code></td>
+<tr><td><code>b1</code></td>
 <td>
 <p>coefficients of the lower order Runge-Kutta pair.
 </p>
 </td></tr>
-<tr valign="top"><td><code>b2</code></td>
+<tr><td><code>b2</code></td>
 <td>
 <p>coefficients of the higher order Runge-Kutta pair
 (optional, for embedded methods that allow variable time step).
 </p>
 </td></tr>
-<tr valign="top"><td><code>c</code></td>
+<tr><td><code>c</code></td>
 <td>
 <p>coefficients for calculating the intermediate time steps.</p>
 </td></tr>
-<tr valign="top"><td><code>d</code></td>
+<tr><td><code>d</code></td>
 <td>
 <p>optional coefficients for built-in polynomial interpolation
 of the outputs from internal steps (dense output), currently only
 available for method <code>rk45dp7</code> (Dormand-Prince).
 </p>
 </td></tr>
-<tr valign="top"><td><code>densetype</code></td>
+<tr><td><code>densetype</code></td>
 <td>
 <p>optional integer value specifying the dense output formula;
 currently only <code>densetype = 1</code> for <code>rk45dp7</code> (Dormand-Prince)
@@ -201,19 +210,19 @@ and <code>densetype = 2</code> for <code>rk45ck</code> (Cash-Karp) are supported
 Undefined values (e.g., <code>densetype = NULL</code>) disable dense output.
 </p>
 </td></tr>
-<tr valign="top"><td><code>stage</code></td>
+<tr><td><code>stage</code></td>
 <td>
 <p>number of function evaluations needed (corresponds to
 number of rows in A).
 </p>
 </td></tr>
-<tr valign="top"><td><code>Qerr</code></td>
+<tr><td><code>Qerr</code></td>
 <td>
 <p>global error order of the method, important for automatic
 time-step adjustment.
 </p>
 </td></tr>
-<tr valign="top"><td><code>nknots</code></td>
+<tr><td><code>nknots</code></td>
 <td>
 <p>integer value specifying the order of interpolation
 polynomials for methods without dense output.  If <code>nknots</code> &lt; 2
@@ -227,17 +236,17 @@ errors higher than the tolerance, especially if external and
 internal time steps are very different.
 </p>
 </td></tr>
-<tr valign="top"><td><code>alpha</code></td>
+<tr><td><code>alpha</code></td>
 <td>
 <p>optional tuning parameter for stepsize
 adjustment. If <code>alpha</code> is omitted, it is set to
-<i>1/Qerr - 0.75 beta</i>. The default value is
-<i>1/Qerr</i> (for <code>beta</code> = 0).</p>
+<code class="reqn">1/Qerr - 0.75 beta</code>. The default value is
+<code class="reqn">1/Qerr</code> (for <code>beta</code> = 0).</p>
 </td></tr>
-<tr valign="top"><td><code>beta</code></td>
+<tr><td><code>beta</code></td>
 <td>
 <p>optional tuning parameter for stepsize adjustment. Typical
-values are <i>0</i> (default) or <i>0.4/Qerr</i>.
+values are <code class="reqn">0</code> (default) or <code class="reqn">0.4/Qerr</code>.
 </p>
 </td></tr>
 </table>
@@ -307,7 +316,7 @@ and New York.
 <p>Cash, J. R. and Karp A. H., 1990. A variable order Runge-Kutta method
 for initial value problems with rapidly varying right-hand sides,
 ACM Transactions on Mathematical Software <b>16</b>, 201&ndash;222.
-doi: <a href="https://doi.org/10.1145/79505.79507">10.1145/79505.79507</a>
+<a href="https://doi.org/10.1145/79505.79507">doi:10.1145/79505.79507</a>
 </p>
 <p>Dormand, J. R. and Prince, P. J. (1980) A family of embedded
 Runge-Kutta formulae, J. Comput. Appl. Math. <b>6</b>(1), 19&ndash;26.
@@ -327,7 +336,7 @@ Differentialgleichungen, Z. Math. Phys. <b>46</b>, 435&ndash;453.
 </p>
 <p>Prince, P. J.  and Dormand, J. R. (1981) High order embedded
 Runge-Kutta formulae, J. Comput. Appl. Math. <b>7</b>(1), 67&ndash;75.
-doi: <a href="https://doi.org/10.1016/0771-050X(81)90010-3">10.1016/0771-050X(81)90010-3</a>
+<a href="https://doi.org/10.1016/0771-050X%2881%2990010-3">doi:10.1016/0771-050X(81)90010-3</a>
 </p>
 <p>Runge, C. (1895) Ueber die numerische Aufloesung von
 Differentialgleichungen, Math. Ann. <b>46</b>, 167&ndash;178.
@@ -343,8 +352,7 @@ Inc. <a href="https://www.mathworks.com/">https://www.mathworks.com/</a> </p>
 
 <h3>Examples</h3>
 
-<pre>
-rkMethod()          # returns the names of all available methods
+<pre><code class='language-R'>rkMethod()          # returns the names of all available methods
 rkMethod("rk45dp7") # parameters of the Dormand-Prince 5(4) method
 rkMethod("ode45")   # an alias for the same method
 
@@ -426,7 +434,8 @@ o2 &lt;- ode(x, times, func, parms, method = rkMethod("rk78dp"))
 diagnostics(o1)
 diagnostics(o2)
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

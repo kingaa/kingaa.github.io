@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: General Solver for Ordinary Differential Equations</title>
+<!DOCTYPE html><html><head><title>R: General Solver for Ordinary Differential Equations</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for ode {deSolve}"><tr><td>ode {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>ode {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>General Solver for Ordinary Differential Equations</h2>
+<h2 id='ode'>General Solver for Ordinary Differential Equations</h2>
 
 <h3>Description</h3>
 
@@ -16,7 +26,7 @@ around the implemented ODE solvers</p>
 
 <h3>Usage</h3>
 
-<pre>ode(y, times, func, parms, 
+<pre><code class='language-R'>ode(y, times, func, parms, 
 method = c("lsoda", "lsode", "lsodes", "lsodar", "vode", "daspk",
            "euler", "rk4", "ode23", "ode45", "radau", 
            "bdf", "bdf_d", "adams", "impAdams", "impAdams_d", "iteration"), ...)
@@ -26,33 +36,33 @@ print(x, ...)
 ## S3 method for class 'deSolve'
 summary(object, select = NULL, which = select, 
                  subset = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="ode_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the ODE system, a vector. If
 <code>y</code> has a name attribute, the names will be used to label the
 output matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="ode_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first
 value of <code>times</code> must be the initial time.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="ode_:_func">func</code></td>
 <td>
-<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+<p>either an <span class="rlang"><b>R</b></span>-function that computes the values of the
 derivatives in the ODE system (the model definition) at time t, or a
 character string giving the name of a compiled function in a
 dynamically loaded shared library.
 </p>
-<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<p>If <code>func</code> is an <span class="rlang"><b>R</b></span>-function, it must be defined as:
 <code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current time
 point in the integration, <code>y</code> is the current estimate of the
 variables in the ODE system.  If the initial values <code>y</code> has a
@@ -72,11 +82,11 @@ before <code>ode</code> is called. See package vignette
 <code>"compiledCode"</code> for more details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="ode_:_parms">parms</code></td>
 <td>
 <p>parameters passed to <code>func</code>.</p>
 </td></tr>
-<tr valign="top"><td><code>method </code></td>
+<tr><td><code id="ode_:_method">method</code></td>
 <td>
 <p>the integrator to use, either a <b>function</b> that performs 
 integration, or a <b>list</b> of class <code><a href="../../deSolve/help/rkMethod.html">rkMethod</a></code>, or a <b>string</b> 
@@ -98,36 +108,36 @@ or in those cases where the integration is performed within <code>func</code>).
 See last example.
 </p>
 </td></tr>
-<tr valign="top"><td><code>x </code></td>
+<tr><td><code id="ode_:_x">x</code></td>
 <td>
 <p>an object of class <code>deSolve</code>, as returned by the
 integrators, and to be printed or to be subsetted.
 </p>
 </td></tr>
-<tr valign="top"><td><code>object </code></td>
+<tr><td><code id="ode_:_object">object</code></td>
 <td>
 <p>an object of class <code>deSolve</code>, as returned by the
 integrators, and whose summary is to be calculated. In contrast to R's default,
 this returns a data.frame. It returns one summary column for a multi-dimensional variable.
 </p>
 </td></tr>
-<tr valign="top"><td><code>which </code></td>
+<tr><td><code id="ode_:_which">which</code></td>
 <td>
 <p>the name(s) or the index to the variables whose summary should be
 estimated.  Default = all variables. </p>
 </td></tr>
-<tr valign="top"><td><code>select </code></td>
+<tr><td><code id="ode_:_select">select</code></td>
 <td>
 <p>which variable/columns to be selected.
 </p>
 </td></tr>
-<tr valign="top"><td><code>subset </code></td>
+<tr><td><code id="ode_:_subset">subset</code></td>
 <td>
 <p>logical expression indicating elements or rows to keep when 
 calculating a <code>summary</code>: missing values are taken as <code>FALSE</code>
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="ode_:_...">...</code></td>
 <td>
 <p>additional arguments passed to the integrator or to the
 methods.</p>
@@ -240,8 +250,7 @@ Runge-Kutta methods,
 
 <h3>Examples</h3>
 
-<pre>
-
+<pre><code class='language-R'>
 ## =======================================================================
 ## Example1: Predator-Prey Lotka-Volterra model (with logistic prey)
 ## =======================================================================
@@ -413,7 +422,8 @@ print(system.time(
 ## The larger the value of N, the larger the time gain...
 
 ## End(Not run)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

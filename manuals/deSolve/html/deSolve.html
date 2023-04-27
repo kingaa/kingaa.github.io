@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: General Solvers for Initial Value Problems of Ordinary...</title>
+<!DOCTYPE html><html><head><title>R: General Solvers for Initial Value Problems of Ordinary...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for deSolve-package {deSolve}"><tr><td>deSolve-package {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>deSolve-package {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>
+<h2 id='deSolve-package'>
 General Solvers for Initial Value Problems of Ordinary Differential Equations
 (ODE), Partial Differential Equations (PDE), Differential Algebraic
 Equations (DAE) and delay differential equations (DDE).
@@ -21,7 +31,7 @@ and delay differential equations.
 </p>
 <p>The functions provide an interface to the FORTRAN functions lsoda,
 lsodar, lsode, lsodes of the ODEPACK collection,
-to the FORTRAN functions dvode, zvode and daspk and a C-implementation of
+to the FORTRAN functions dvode, zvode and daspk, and a C-implementation of
 solvers of the Runge-Kutta family with fixed or variable time steps.
 </p>
 <p>The package contains routines designed for solving ODEs
@@ -30,12 +40,12 @@ that have been converted to ODEs by numerical differencing.
 It includes root-finding (or event location) and provides access to lagged
 variables and derivatives.
 </p>
-<p>The system of differential equations is written as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function or
+<p>The system of differential equations is written as an <span class="rlang"><b>R</b></span> function or
 defined in compiled code that has been dynamically loaded, see
 package vignette <a href="../doc/compiledCode.pdf">compiledCode</a> for details. The
 solvers may be used as part of a modeling package for differential
 equations, or for parameter estimation using any appropriate
-modeling tool for non-linear models in <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> such as
+modeling tool for non-linear models in <span class="rlang"><b>R</b></span> such as
 <code><a href="../../stats/html/optim.html">optim</a></code>, <code><a href="../../stats/html/nls.html">nls</a></code>, <code><a href="../../stats/html/nlm.html">nlm</a></code> or
 <code><a href="../../nlme/help/nlme.html">nlme</a></code>, or <code><a href="../../FME/help/FME.html">FME</a></code>.
 </p>
@@ -51,7 +61,7 @@ modeling tool for non-linear models in <span style="font-family: Courier New, Co
 (<a href="../doc/compiledCode.pdf">pdf</a>, <a href="../doc/compiledCode.R">R code</a>)
 </p>
 </li>
-<li><p> Examples in R (<a href="../doc/examples">../doc/examples</a>), and in Fortran or C (<a href="../doc/dynload">../doc/dynload</a>, <a href="../doc/dynload-dede">../doc/dynload-dede</a>)
+<li><p> Examples in R (<a href="../doc/examples">code</a>), and in Fortran or C (<a href="../doc/dynload">doc/dynload</a>, <a href="../doc/dynload-dede">doc/dynload-dede</a>)
 </p>
 </li>
 <li><p> deSolve homepage: <a href="https://desolve.r-forge.r-project.org">https://desolve.r-forge.r-project.org</a> (Papers, Books, PDFs)
@@ -73,11 +83,11 @@ modeling tool for non-linear models in <span style="font-family: Courier New, Co
 
 <p>Karline Soetaert, Thomas Petzoldt, R. Woodrow Setzer (2010):  Solving
 Differential Equations in R: Package deSolve Journal of Statistical
-Software, 33(9), 1&ndash;25.  doi: <a href="https://doi.org/10.18637/jss.v033.i09">10.18637/jss.v033.i09</a>
+Software, 33(9), 1&ndash;25.  <a href="https://doi.org/10.18637/jss.v033.i09">doi:10.18637/jss.v033.i09</a>
 </p>
 <p>Karline Soetaert, Thomas Petzoldt, R. Woodrow Setzer (2010): Solving
 differential equations in R. The R Journal 2(2), 5-15.
-doi: <a href="https://doi.org/10.32614/RJ-2010-013">10.32614/RJ-2010-013</a>
+<a href="https://doi.org/10.32614/RJ-2010-013">doi:10.32614/RJ-2010-013</a>
 </p>
 <p>Karline Soetaert, Thomas Petzoldt (2011): Solving ODEs, DAEs, DDEs and
 PDEs in R. Journal of Numerical Analysis, Industrial and Applied
@@ -97,7 +107,7 @@ North-Holland, Amsterdam, pp. 65-68.
 </p>
 <p>P. N. Brown, G. D. Byrne, A. C. Hindmarsh (1989):  VODE: A Variable
 Coefficient ODE Solver, SIAM J. Sci. Stat. Comput., 10, pp. 1038-1051.
-doi: <a href="https://doi.org/10.1137/0910062">10.1137/0910062</a>
+<a href="https://doi.org/10.1137/0910062">doi:10.1137/0910062</a>
 </p>
 <p>See also the references given on the specific help pages of the
 different methods.
@@ -141,8 +151,7 @@ lagged values of state variables and derivatives.
 
 <h3>Examples</h3>
 
-<pre>
-library(deSolve)
+<pre><code class='language-R'>library(deSolve)
 
 ## Chaos in the atmosphere
 Lorenz &lt;- function(t, state, parameters) {
@@ -166,7 +175,8 @@ plot(out)
 if (require(scatterplot3d))
   scatterplot3d(out[,-1], type = "l")
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

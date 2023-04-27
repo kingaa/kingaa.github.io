@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Evaluates a Derivative Function Represented in a DLL</title>
+<!DOCTYPE html><html><head><title>R: Evaluates a Derivative Function Represented in a DLL</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for DLLfunc {deSolve}"><tr><td>DLLfunc {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>DLLfunc {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Evaluates a Derivative Function Represented in a DLL</h2>
+<h2 id='DLLfunc'>Evaluates a Derivative Function Represented in a DLL</h2>
 
 <h3>Description</h3>
 
@@ -15,81 +25,81 @@
 
 <h3>Usage</h3>
 
-<pre>DLLfunc(func, times, y, parms, dllname,
+<pre><code class='language-R'>DLLfunc(func, times, y, parms, dllname,
   initfunc = dllname, rpar = NULL, ipar = NULL, nout = 0,
   outnames = NULL, forcings = NULL, initforc = NULL,
   fcontrol = NULL)
 
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>func </code></td>
+<table>
+<tr><td><code id="DLLfunc_:_func">func</code></td>
 <td>
 <p>the name of the function in the dynamically loaded
 shared library,
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="DLLfunc_:_times">times</code></td>
 <td>
 <p>first value = the time at which the function needs to be
 evaluated,
 </p>
 </td></tr>
-<tr valign="top"><td><code>y </code></td>
+<tr><td><code id="DLLfunc_:_y">y</code></td>
 <td>
 <p>the values of the dependent variables for which the function
 needs to be evaluated,
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="DLLfunc_:_parms">parms</code></td>
 <td>
 <p>the parameters that are passed to the initialiser function,
 </p>
 </td></tr>
-<tr valign="top"><td><code>dllname </code></td>
+<tr><td><code id="DLLfunc_:_dllname">dllname</code></td>
 <td>
 <p>a string giving the name of the shared library (without
 extension) that contains the compiled function or subroutine definitions
 referred to in <code>func</code>,
 </p>
 </td></tr>
-<tr valign="top"><td><code>initfunc </code></td>
+<tr><td><code id="DLLfunc_:_initfunc">initfunc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the initialisation function
 (which initialises values of parameters), as provided in &lsquo;<span class="file">dllname</span>&rsquo;.
 See details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>rpar </code></td>
+<tr><td><code id="DLLfunc_:_rpar">rpar</code></td>
 <td>
 <p>a vector with double precision values passed to the
 DLL-function <code>func</code> and <code>jacfunc</code> present in the DLL, via
 argument rpar,
 </p>
 </td></tr>
-<tr valign="top"><td><code>ipar </code></td>
+<tr><td><code id="DLLfunc_:_ipar">ipar</code></td>
 <td>
 <p>a vector with integer values passed to the dll-function
 <code>func</code> and <code>jacfunc</code> present in the DLL, via function argument
 ipar,
 </p>
 </td></tr>
-<tr valign="top"><td><code>nout </code></td>
+<tr><td><code id="DLLfunc_:_nout">nout</code></td>
 <td>
 <p>the number of output variables.
 </p>
 </td></tr>
-<tr valign="top"><td><code>outnames </code></td>
+<tr><td><code id="DLLfunc_:_outnames">outnames</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
 <code>nout</code> &gt; 0: the names of output variables calculated in the
 compiled function <code>func</code>, present in the shared library.
 </p>
 </td></tr>
-<tr valign="top"><td><code>forcings </code></td>
+<tr><td><code id="DLLfunc_:_forcings">forcings</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
 the forcing function data sets, each present as a two-columned matrix,
@@ -100,7 +110,7 @@ the closest data extreme.
 <p>See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initforc </code></td>
+<tr><td><code id="DLLfunc_:_initforc">initforc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the forcing function
 initialisation function, as provided in
@@ -109,7 +119,7 @@ value.
 See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>fcontrol </code></td>
+<tr><td><code id="DLLfunc_:_fcontrol">fcontrol</code></td>
 <td>
 <p>A list of control parameters for the forcing functions.
 See package vignette <code>"compiledCode"</code>.
@@ -130,13 +140,13 @@ to be used to solve ordinary differential equations (ODE) in packages
 
 <p>a list containing:
 </p>
-<table summary="R valueblock">
-<tr valign="top"><td><code>dy </code></td>
+<table>
+<tr><td><code>dy</code></td>
 <td>
 <p>the rate of change estimated by the function,
 </p>
 </td></tr>
-<tr valign="top"><td><code>var </code></td>
+<tr><td><code>var</code></td>
 <td>
 <p>the ordinary output variables of the function.
 </p>
@@ -157,8 +167,7 @@ to be used to solve ordinary differential equations (ODE) in packages
 
 <h3>Examples</h3>
 
-<pre>
-## ==========================================================================
+<pre><code class='language-R'>## ==========================================================================
 ## ex. 1
 ## ccl4model
 ## ==========================================================================
@@ -198,7 +207,8 @@ DLLfunc(y = Yini, times = 2, func = "scocder",
     initforc = "scocforc",  forcings = Flux,
     initfunc = "scocpar", nout = 2,
     outnames = c("Mineralisation", "Depo"))
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

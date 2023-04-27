@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: A Physiological Model of Unbalanced Algal Growth</title>
+<!DOCTYPE html><html><head><title>R: A Physiological Model of Unbalanced Algal Growth</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for aquaphy {deSolve}"><tr><td>aquaphy {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>aquaphy {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>A Physiological Model of Unbalanced Algal Growth</h2>
+<h2 id='aquaphy'>A Physiological Model of Unbalanced Algal Growth</h2>
 
 <h3>Description</h3>
 
@@ -30,14 +40,14 @@ photosynthesis,
 </li></ul>
 
 <p>All algal state variables are expressed in
-<i>mmol C / m^3</i>.
+<code class="reqn">\rm mmol\, C\, m^{-3}</code>.
 Only proteins contain nitrogen and
 chlorophyll, with a fixed stoichiometric ratio.  As the relative
 amount of proteins changes in the algae, so does the N:C and the Chl:C
 ratio.
 </p>
 <p>An additional state variable, dissolved inorganic nitrogen (DIN) has
-units of <i>mmol N / m^3</i>.
+units of <code class="reqn">\rm mmol\, N\, m^{-3}</code>.
 </p>
 <p>The algae grow in a dilution culture (chemostat): there is constant
 inflow of DIN and outflow of culture water, including DIN and algae,
@@ -63,33 +73,33 @@ set.
 
 <h3>Usage</h3>
 
-<pre>aquaphy(times, y, parms, PAR = NULL, ...)</pre>
+<pre><code class='language-R'>aquaphy(times, y, parms, PAR = NULL, ...)</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>times</code></td>
+<table>
+<tr><td><code id="aquaphy_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first value
 of times must be the initial time,</p>
 </td></tr>
-<tr valign="top"><td><code>y</code></td>
+<tr><td><code id="aquaphy_:_y">y</code></td>
 <td>
 <p>the initial (state) values (&quot;DIN&quot;, &quot;PROTEIN&quot;, &quot;RESERVE&quot;,
 &quot;LMW&quot;), in that order,</p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="aquaphy_:_parms">parms</code></td>
 <td>
 <p>vector or list with the aquaphy model parameters; see
 the example for the order in which these have to be defined.</p>
 </td></tr>
-<tr valign="top"><td><code>PAR </code></td>
+<tr><td><code id="aquaphy_:_PAR">PAR</code></td>
 <td>
 <p>a data set of the photosynthetically active radiation
 (light intensity), if <code>NULL</code>, on-off PAR is used, </p>
 </td></tr>
-<tr valign="top"><td><code>...</code></td>
+<tr><td><code id="aquaphy_:_...">...</code></td>
 <td>
 <p>any other parameters passed to the integrator <code>ode</code>
 (which solves the model).</p>
@@ -100,7 +110,7 @@ the example for the order in which these have to be defined.</p>
 <h3>Details</h3>
 
 <p>The model is implemented primarily to demonstrate the linking of
-FORTRAN with <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-code.
+FORTRAN with <span class="rlang"><b>R</b></span>-code.
 </p>
 <p>The source can be found in the &lsquo;<span class="file">doc/examples/dynload</span>&rsquo; subdirectory of the package.
 </p>
@@ -130,8 +140,7 @@ modelling.  Using R as a simulation platform. Springer.
 
 <h3>Examples</h3>
 
-<pre>
-## ======================================================
+<pre><code class='language-R'>## ======================================================
 ##
 ## Example 1. PAR an on-off function
 ##
@@ -255,7 +264,8 @@ plot(out, which = 1:9, type = "l")
 
 par(mfrow = c(1, 1))
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

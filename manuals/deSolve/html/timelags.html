@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Time Lagged Values of State Variables and Derivatives.</title>
+<!DOCTYPE html><html><head><title>R: Time Lagged Values of State Variables and Derivatives.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for timelags {deSolve}"><tr><td>timelags {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>timelags {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>
+<h2 id='timelags'>
 Time Lagged Values of State Variables and Derivatives.
 </h2>
 
@@ -22,23 +32,22 @@ equations.
 
 <h3>Usage</h3>
 
-<pre>
-lagvalue(t, nr)
+<pre><code class='language-R'>lagvalue(t, nr)
 lagderiv(t, nr)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>t </code></td>
+<table>
+<tr><td><code id="timelags_:_t">t</code></td>
 <td>
 <p>the time for which the lagged value is wanted; this should
 be no larger than the current simulation time and no smaller than the 
 initial simulation time.  
 </p>
 </td></tr>
-<tr valign="top"><td><code>nr </code></td>
+<tr><td><code id="timelags_:_nr">nr</code></td>
 <td>
 <p>the number of the lagged value; if <code>NULL</code> then all state
 variables or derivatives are returned.
@@ -78,8 +87,7 @@ at the requested lagged time.
 
 <h3>Examples</h3>
 
-<pre>
-## =============================================================================
+<pre><code class='language-R'>## =============================================================================
 ## exercise 6 from Shampine and Thompson, 2000
 ## solving delay differential equations with dde23
 ##
@@ -222,7 +230,8 @@ yout &lt;- dede(y = yinit, times = times, func = derivs, parms = NULL)
 ##-----------------------------
 
 plot(yout, type = "l", lwd = 2)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

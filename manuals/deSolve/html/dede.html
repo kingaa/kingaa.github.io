@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: General Solver for Delay Differential Equations.</title>
+<!DOCTYPE html><html><head><title>R: General Solver for Delay Differential Equations.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for dede {deSolve}"><tr><td>dede {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>dede {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>
+<h2 id='dede'>
 General Solver for Delay Differential Equations.
 </h2>
 
@@ -20,33 +30,32 @@ or their derivatives.
 
 <h3>Usage</h3>
 
-<pre>
-dede(y, times, func=NULL, parms,
+<pre><code class='language-R'>dede(y, times, func=NULL, parms,
     method = c( "lsoda", "lsode", "lsodes", "lsodar", "vode",
        "daspk", "bdf", "adams", "impAdams", "radau"), control = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="dede_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the DE system, a vector. If
 <code>y</code> has a name attribute, the names will be used to label the
 output matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="dede_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first
 value of <code>times</code> must be the initial time.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="dede_:_func">func</code></td>
 <td>
-<p>an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
-derivatives in the ODE system (the model definition) at time <i>t</i>.
+<p>an <span class="rlang"><b>R</b></span>-function that computes the values of the
+derivatives in the ODE system (the model definition) at time <code class="reqn">t</code>.
 </p>
 <p><code>func</code> must be defined as:
 <code>func &lt;- function(t, y, parms, ...)</code>.  <code>t</code> is the current time
@@ -66,12 +75,12 @@ must be specified in the <b>same order</b> as the state variables <code>y</code>
 case <code>res</code> should be used.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="dede_:_parms">parms</code></td>
 <td>
 <p>parameters passed to <code>func</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>method </code></td>
+<tr><td><code id="dede_:_method">method</code></td>
 <td>
 <p>the integrator to use, either a string (<code>"lsoda"</code>,
 <code>"lsode"</code>, <code>"lsodes"</code>, <code>"lsodar"</code>, <code>"vode"</code>,
@@ -80,7 +89,7 @@ or a function that performs the integration.
 The default integrator used is <a href="../../deSolve/help/lsoda.html">lsoda</a>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>control </code></td>
+<tr><td><code id="dede_:_control">control</code></td>
 <td>
 <p>a list that can supply (1) the size of the history array, as
 <code>control$mxhist</code>; the default is 1e4 and (2) how to interpolate, as
@@ -89,7 +98,7 @@ The default integrator used is <a href="../../deSolve/help/lsoda.html">lsoda</a>
 Only for the two Adams methods is the second option recommended.
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="dede_:_...">...</code></td>
 <td>
 <p>additional arguments passed to the integrator.
 </p>
@@ -151,8 +160,7 @@ derivatives.
 
 <h3>Examples</h3>
 
-<pre>
-## =============================================================================
+<pre><code class='language-R'>## =============================================================================
 ## A simple delay differential equation
 ## dy(t) = -y(t-1) ; y(t&lt;0)=1
 ## =============================================================================
@@ -278,7 +286,8 @@ yout &lt;- dede(y = yinit, times = times, func = derivs, parms = NULL,
 plot(yout, which = 1, type = "l", lwd = 2, main = "suitcase model", mfrow = c(1,2))
 plot(yout[,2], yout[,3], xlab = "y", ylab = "dy", type = "l", lwd = 2)
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

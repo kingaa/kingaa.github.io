@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Explicit One-Step Solvers for Ordinary Differential Equations...</title>
+<!DOCTYPE html><html><head><title>R: Explicit One-Step Solvers for Ordinary Differential Equations...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for rk {deSolve}"><tr><td>rk {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>rk {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Explicit One-Step Solvers for Ordinary Differential Equations
+<h2 id='rk'>Explicit One-Step Solvers for Ordinary Differential Equations
 (ODE)</h2>
 
 <h3>Description</h3>
@@ -14,17 +24,17 @@
 <p>Solving initial value problems for non-stiff systems of
 first-order ordinary differential equations (ODEs).
 </p>
-<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function <code>rk</code> is a top-level function that provides
+<p>The <span class="rlang"><b>R</b></span> function <code>rk</code> is a top-level function that provides
 interfaces to a collection of common explicit one-step solvers of the
 Runge-Kutta family with fixed or variable time steps.
 </p>
-<p>The system of ODE's is written as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function (which may, of
+<p>The system of ODE's is written as an <span class="rlang"><b>R</b></span> function (which may, of
 course, use <code><a href="../../base/html/Foreign.html">.C</a></code>, <code><a href="../../base/html/Foreign.html">.Fortran</a></code>,
 <code><a href="../../base/html/CallExternal.html">.Call</a></code>, etc., to call foreign code) or be defined in
 compiled code that has been dynamically loaded.  A vector of
 parameters is passed to the ODEs, so the solver may be used as part of
 a modeling package for ODEs, or for parameter estimation using any
-appropriate modeling tool for non-linear models in <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> such as
+appropriate modeling tool for non-linear models in <span class="rlang"><b>R</b></span> such as
 <code><a href="../../stats/html/optim.html">optim</a></code>, <code><a href="../../stats/html/nls.html">nls</a></code>, <code><a href="../../stats/html/nlm.html">nlm</a></code> or
 <code><a href="../../nlme/help/nlme.html">nlme</a></code>
 </p>
@@ -32,41 +42,40 @@ appropriate modeling tool for non-linear models in <span style="font-family: Cou
 
 <h3>Usage</h3>
 
-<pre>
-rk(y, times, func, parms, rtol = 1e-6, atol = 1e-6,
+<pre><code class='language-R'>rk(y, times, func, parms, rtol = 1e-6, atol = 1e-6,
   verbose = FALSE, tcrit = NULL, hmin = 0, hmax = NULL,
   hini = hmax, ynames = TRUE, method = rkMethod("rk45dp7", ... ),
   maxsteps = 5000, dllname = NULL, initfunc = dllname,
   initpar = parms, rpar = NULL, ipar = NULL,
   nout = 0, outnames = NULL, forcings = NULL,
   initforc = NULL, fcontrol = NULL, events = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="rk_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the ODE system. If <code>y</code>
 has a name attribute, the names will be used to label the output
 matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="rk_:_times">times</code></td>
 <td>
 <p>times at which explicit estimates for <code>y</code> are
 desired.  The first value in <code>times</code> must be the initial time.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="rk_:_func">func</code></td>
 <td>
-<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+<p>either an <span class="rlang"><b>R</b></span>-function that computes the values of the
 derivatives in the ODE system (the <em>model definition</em>) at time
 t, or a character string giving the name of a compiled function in a
 dynamically loaded shared library.
 </p>
-<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<p>If <code>func</code> is an <span class="rlang"><b>R</b></span>-function, it must be defined as:
 <code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current
 time point in the integration, <code>y</code> is the current estimate of
 the variables in the ODE system.  If the initial values <code>y</code> has
@@ -87,45 +96,45 @@ library (without extension) which must be loaded before
 for more details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="rk_:_parms">parms</code></td>
 <td>
 <p>vector or list of parameters used in <code>func</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>rtol </code></td>
+<tr><td><code id="rk_:_rtol">rtol</code></td>
 <td>
 <p>relative error tolerance, either a scalar or an array as
 long as <code>y</code>. Only applicable to methods with variable time
 step, see details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>atol </code></td>
+<tr><td><code id="rk_:_atol">atol</code></td>
 <td>
 <p>absolute error tolerance, either a scalar or an array as
 long as <code>y</code>. Only applicable to methods with variable time
 step, see details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>tcrit </code></td>
+<tr><td><code id="rk_:_tcrit">tcrit</code></td>
 <td>
 <p>if not <code>NULL</code>, then <code>rk</code> cannot integrate past
 <code>tcrit</code>. This parameter is for compatibility with other solvers.
 </p>
 </td></tr>
-<tr valign="top"><td><code>verbose </code></td>
+<tr><td><code id="rk_:_verbose">verbose</code></td>
 <td>
 <p>a logical value that, when TRUE, triggers more
 verbose output from the ODE solver.
 </p>
 </td></tr>
-<tr valign="top"><td><code>hmin </code></td>
+<tr><td><code id="rk_:_hmin">hmin</code></td>
 <td>
 <p>an optional minimum value of the integration stepsize. In
 special situations this parameter may speed up computations with the
 cost of precision. Don't use <code>hmin</code> if you don't know why!
 </p>
 </td></tr>
-<tr valign="top"><td><code>hmax </code></td>
+<tr><td><code id="rk_:_hmax">hmax</code></td>
 <td>
 <p>an optional maximum value of the integration stepsize. If
 not specified, <code>hmax</code> is set to the maximum of <code>hini</code> and
@@ -135,7 +144,7 @@ specified. Note that <code>hmin</code> and <code>hmax</code> are ignored by
 fixed step methods like <code>"rk4"</code> or <code>"euler"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>hini </code></td>
+<tr><td><code id="rk_:_hini">hini</code></td>
 <td>
 <p>initial step size to be attempted; if 0, the initial step
 size is determined automatically by solvers with flexible time step.
@@ -145,14 +154,14 @@ internal time steps identically to external time steps provided by
 solvers cannot be bigger than external time steps specified in <code>times</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ynames </code></td>
+<tr><td><code id="rk_:_ynames">ynames</code></td>
 <td>
 <p>if <code>FALSE</code>: names of state variables are not passed
 to function <code>func</code> ; this may speed up the simulation especially
 for large models.
 </p>
 </td></tr>
-<tr valign="top"><td><code>method </code></td>
+<tr><td><code id="rk_:_method">method</code></td>
 <td>
 <p>the integrator to use. This can either be a string
 constant naming one of the pre-defined methods or a call to function
@@ -168,7 +177,7 @@ simple problems and <code>"rk45dp7"</code> (alias <code>"ode45"</code>) for
 rough problems.
 </p>
 </td></tr>
-<tr valign="top"><td><code>maxsteps </code></td>
+<tr><td><code id="rk_:_maxsteps">maxsteps</code></td>
 <td>
 <p>average maximal number of steps per output interval
 taken by the solver. This argument is defined such as to ensure
@@ -177,7 +186,7 @@ number of steps for the entire integration. It is calculated
 as <code>max(length(times) * maxsteps, max(diff(times)/hini + 1)</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>dllname </code></td>
+<tr><td><code id="rk_:_dllname">dllname</code></td>
 <td>
 <p>a string giving the name of the shared library
 (without extension) that contains all the compiled function or
@@ -185,14 +194,14 @@ subroutine definitions refered to in <code>func</code> and
 <code>jacfunc</code>. See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initfunc </code></td>
+<tr><td><code id="rk_:_initfunc">initfunc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the initialisation function
 (which initialises values of parameters), as provided in
 &lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initpar </code></td>
+<tr><td><code id="rk_:_initpar">initpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
 initialisation function <code>initfunc</code> is in the dll: the
@@ -200,21 +209,21 @@ parameters passed to the initialiser, to initialise the common
 blocks (FORTRAN) or global variables (C, C++).
 </p>
 </td></tr>
-<tr valign="top"><td><code>rpar </code></td>
+<tr><td><code id="rk_:_rpar">rpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 double precision values passed to the dll-functions whose names are
 specified by <code>func</code> and <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ipar </code></td>
+<tr><td><code id="rk_:_ipar">ipar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 integer values passed to the dll-functions whose names are specified
 by <code>func</code> and <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>nout </code></td>
+<tr><td><code id="rk_:_nout">nout</code></td>
 <td>
 <p>only used if <code>dllname</code> is specified and the model is
 defined in compiled code: the number of output variables calculated
@@ -225,14 +234,14 @@ to perform this check in the code. See package vignette
 <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>outnames </code></td>
+<tr><td><code id="rk_:_outnames">outnames</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
 <code>nout</code> &gt; 0: the names of output variables calculated in the
 compiled function <code>func</code>, present in the shared library.
 </p>
 </td></tr>
-<tr valign="top"><td><code>forcings </code></td>
+<tr><td><code id="rk_:_forcings">forcings</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
 the forcing function data sets, each present as a two-columned matrix,
@@ -243,7 +252,7 @@ the closest data extreme.
 <p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initforc </code></td>
+<tr><td><code id="rk_:_initforc">initforc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the forcing function
 initialisation function, as provided in
@@ -252,13 +261,13 @@ value.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>fcontrol </code></td>
+<tr><td><code id="rk_:_fcontrol">fcontrol</code></td>
 <td>
 <p>A list of control parameters for the forcing functions.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or vignette <code>compiledCode</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>events </code></td>
+<tr><td><code id="rk_:_events">events</code></td>
 <td>
 <p>A matrix or data frame that specifies events, i.e. when the value of a 
 state variable is suddenly changed. See <a href="../../deSolve/help/events.html">events</a> for more information.
@@ -268,7 +277,7 @@ to the next, with an internal step size less than or equal the difference
 of two adjacent points of <code>times</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="rk_:_...">...</code></td>
 <td>
 <p>additional arguments passed to <code>func</code> allowing this
 to be a generic function.
@@ -288,16 +297,18 @@ Butcher tables.
 <p>The input parameters <code>rtol</code>, and <code>atol</code> determine the error
 control performed by the solver.  The solver will control the vector
 of estimated local errors in <b>y</b>, according to an inequality of
-the form max-norm of ( <b>e</b>/<b>ewt</b> ) <i> &lt;= </i> 1, where
+the form max-norm of ( <b>e</b>/<b>ewt</b> ) <code class="reqn">\leq</code> 1, where
 <b>ewt</b> is a vector of positive error weights.  The values of
 <code>rtol</code> and <code>atol</code> should all be non-negative.  The form of
 <b>ewt</b> is:
 </p>
-<p style="text-align: center;"><i>\bold{rtol} * abs(\bold{y}) + \bold{atol}</i></p>
+<p style="text-align: center;"><code class="reqn">\mathbf{rtol} \times \mathrm{abs}(\mathbf{y}) +
+  \mathbf{atol}</code>
+</p>
 
 <p>where multiplication of two vectors is element-by-element.
 </p>
-<p><b>Models</b> can be defined in <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> as a user-supplied
+<p><b>Models</b> can be defined in <span class="rlang"><b>R</b></span> as a user-supplied
 <b>R-function</b>, that must be called as: <code>yprime = func(t, y,
   parms)</code>.  <code>t</code> is the current time point in the integration,
 <code>y</code> is the current estimate of the variables in the ODE system.
@@ -406,8 +417,7 @@ Jacobian,
 
 <h3>Examples</h3>
 
-<pre>
-## =======================================================================
+<pre><code class='language-R'>## =======================================================================
 ## Example: Resource-producer-consumer Lotka-Volterra model
 ## =======================================================================
 
@@ -472,7 +482,8 @@ legend("center", legend = c("euler", "rk4", "rk45dp7"),
   lty = c(1, 3, 3), lwd = c(1, 2, 1),
   col = c("black", "red", "green"))
 par(mfrow = mf)
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

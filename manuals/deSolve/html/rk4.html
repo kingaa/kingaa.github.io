@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solve System of ODE (Ordinary Differential Equation)s by...</title>
+<!DOCTYPE html><html><head><title>R: Solve System of ODE (Ordinary Differential Equation)s by...</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for rk4 {deSolve}"><tr><td>rk4 {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>rk4 {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Solve System of ODE (Ordinary Differential Equation)s by
+<h2 id='rk4'>Solve System of ODE (Ordinary Differential Equation)s by
 Euler's Method or Classical Runge-Kutta 4th Order Integration.
 </h2>
 
@@ -20,8 +30,7 @@ classical Runge-Kutta 4th order integration.
 
 <h3>Usage</h3>
 
-<pre>
-euler(y, times, func, parms, verbose = FALSE, ynames = TRUE,
+<pre><code class='language-R'>euler(y, times, func, parms, verbose = FALSE, ynames = TRUE,
   dllname = NULL, initfunc = dllname, initpar = parms,
   rpar = NULL, ipar = NULL, nout = 0, outnames = NULL,
   forcings = NULL, initforc = NULL, fcontrol = NULL, ...)
@@ -36,33 +45,33 @@ euler.1D(y, times, func, parms, nspec = NULL, dimens = NULL,
   dllname = NULL, initfunc = dllname, initpar = parms,
   rpar = NULL,  ipar = NULL, nout = 0, outnames = NULL,
   forcings = NULL, initforc = NULL, fcontrol = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="rk4_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the ODE system. If <code>y</code>
 has a name attribute, the names will be used to label the output
 matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="rk4_:_times">times</code></td>
 <td>
 <p>times at which explicit estimates for <code>y</code> are
 desired.  The first value in <code>times</code> must be the initial time.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="rk4_:_func">func</code></td>
 <td>
-<p>either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the values of the
+<p>either an <span class="rlang"><b>R</b></span>-function that computes the values of the
 derivatives in the ODE system (the <em>model definition</em>) at time
 t, or a character string giving the name of a compiled function in a
 dynamically loaded shared library.
 </p>
-<p>If <code>func</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<p>If <code>func</code> is an <span class="rlang"><b>R</b></span>-function, it must be defined as:
 <code>func &lt;- function(t, y, parms,...)</code>.  <code>t</code> is the current
 time point in the integration, <code>y</code> is the current estimate of
 the variables in the ODE system.  If the initial values <code>y</code> has
@@ -82,43 +91,43 @@ before <code>rk4</code> is called. See package vignette
 <code>"compiledCode"</code> for more details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="rk4_:_parms">parms</code></td>
 <td>
 <p>vector or list of parameters used in <code>func</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>nspec </code></td>
+<tr><td><code id="rk4_:_nspec">nspec</code></td>
 <td>
 <p>for 1D models only: the number of <b>species</b> (components)
 in the model. If <code>NULL</code>, then <code>dimens</code> should be specified.
 </p>
 </td></tr>
-<tr valign="top"><td><code>dimens</code></td>
+<tr><td><code id="rk4_:_dimens">dimens</code></td>
 <td>
 <p>for 1D models only: the number of <b>boxes</b> in the
 model. If <code>NULL</code>, then <code>nspec</code> should be specified.
 </p>
 </td></tr>
-<tr valign="top"><td><code>names </code></td>
+<tr><td><code id="rk4_:_names">names</code></td>
 <td>
 <p>for 1D models only: the names of the components; used
 for plotting.
 </p>
 </td></tr>
-<tr valign="top"><td><code>verbose </code></td>
+<tr><td><code id="rk4_:_verbose">verbose</code></td>
 <td>
 <p>a logical value that, when <code>TRUE</code>, triggers more
 verbose output from the ODE solver.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ynames </code></td>
+<tr><td><code id="rk4_:_ynames">ynames</code></td>
 <td>
 <p>if <code>FALSE</code>: names of state variables are not passed
 to function <code>func</code> ; this may speed up the simulation especially
 for large models.
 </p>
 </td></tr>
-<tr valign="top"><td><code>dllname </code></td>
+<tr><td><code id="rk4_:_dllname">dllname</code></td>
 <td>
 <p>a string giving the name of the shared library
 (without extension) that contains all the compiled function or
@@ -126,14 +135,14 @@ subroutine definitions refered to in <code>func</code>.
 See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initfunc </code></td>
+<tr><td><code id="rk4_:_initfunc">initfunc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the initialisation function
 (which initialises values of parameters), as provided in
 &lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>,
 </p>
 </td></tr>
-<tr valign="top"><td><code>initpar </code></td>
+<tr><td><code id="rk4_:_initpar">initpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
 initialisation function <code>initfunc</code> is in the DLL: the
@@ -141,21 +150,21 @@ parameters passed to the initialiser, to initialise the common
 blocks (FORTRAN) or global variables (C, C++).
 </p>
 </td></tr>
-<tr valign="top"><td><code>rpar </code></td>
+<tr><td><code id="rk4_:_rpar">rpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 double precision values passed to the DLL-functions whose names are
 specified by <code>func</code> and <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ipar </code></td>
+<tr><td><code id="rk4_:_ipar">ipar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 integer values passed to the dll-functions whose names are specified
 by <code>func</code> and <code>jacfunc</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>nout </code></td>
+<tr><td><code id="rk4_:_nout">nout</code></td>
 <td>
 <p>only used if <code>dllname</code> is specified and the model is
 defined in compiled code: the number of output variables calculated
@@ -166,14 +175,14 @@ to perform this check in the code. See package vignette
 <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>outnames </code></td>
+<tr><td><code id="rk4_:_outnames">outnames</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
 <code>nout</code> &gt; 0: the names of output variables calculated in the
 compiled function <code>func</code>, present in the shared library.
 </p>
 </td></tr>
-<tr valign="top"><td><code>forcings </code></td>
+<tr><td><code id="rk4_:_forcings">forcings</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
 the forcing function data sets, each present as a two-columned matrix,
@@ -184,7 +193,7 @@ the closest data extreme.
 <p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initforc </code></td>
+<tr><td><code id="rk4_:_initforc">initforc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the forcing function
 initialisation function, as provided in
@@ -193,13 +202,13 @@ value.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>fcontrol </code></td>
+<tr><td><code id="rk4_:_fcontrol">fcontrol</code></td>
 <td>
 <p>A list of control parameters for the forcing functions.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or vignette <code>compiledCode</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="rk4_:_...">...</code></td>
 <td>
 <p>additional arguments passed to <code>func</code> allowing this
 to be a generic function.
@@ -298,8 +307,7 @@ differential equations,
 
 <h3>Examples</h3>
 
-<pre>
-## =======================================================================
+<pre><code class='language-R'>## =======================================================================
 ## Example: Analytical and numerical solutions of logistic growth
 ## =======================================================================
 
@@ -345,7 +353,8 @@ legend("bottomright",
   lty = c(1, NA, NA, NA, NA), lwd = c(2, 1, 1, 1, 1),
   pch = c(NA, 16, 1, 8, 1),
   col = c("red", "blue", "black", "black", "green"))
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

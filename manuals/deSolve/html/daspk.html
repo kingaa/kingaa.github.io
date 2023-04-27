@@ -1,12 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Solver for Differential Algebraic Equations (DAE)</title>
+<!DOCTYPE html><html><head><title>R: Solver for Differential Algebraic Equations (DAE)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table width="100%" summary="page for daspk {deSolve}"><tr><td>daspk {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>daspk {deSolve}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Solver for Differential Algebraic Equations (DAE)</h2>
+<h2 id='daspk'>Solver for Differential Algebraic Equations (DAE)</h2>
 
 <h3>Description</h3>
 
@@ -16,30 +26,33 @@
 <ul>
 <li><p> a system of ordinary differential equations (ODE) of the form
 </p>
-<p style="text-align: center;"><i>y' = f(t, y, ...)</i></p>
+<p style="text-align: center;"><code class="reqn">y' = f(t, y, ...)</code>
+</p>
 <p> or
 </p>
 </li>
 <li><p> a system of differential algebraic equations (DAE) of the form
 </p>
-<p style="text-align: center;"><i>F(t,y,y') = 0</i></p>
+<p style="text-align: center;"><code class="reqn">F(t,y,y') = 0</code>
+</p>
 <p> or
 </p>
 </li>
 <li><p> a system of linearly implicit DAES in the 
 form </p>
-<p style="text-align: center;"><i>M y' = f(t, y)</i></p>
+<p style="text-align: center;"><code class="reqn">M y' = f(t, y)</code>
+</p>
     
 </li></ul>
 
 <p>using a combination of backward differentiation formula (BDF) and a
 direct linear system solution method (dense or banded).
 </p>
-<p>The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function <code>daspk</code> provides an interface to the FORTRAN DAE
+<p>The <span class="rlang"><b>R</b></span> function <code>daspk</code> provides an interface to the FORTRAN DAE
 solver of the same name, written by Linda R. Petzold, Peter N. Brown,
 Alan C. Hindmarsh and Clement W. Ulrich.
 </p>
-<p>The system of DE's is written as an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function (which may, of course,
+<p>The system of DE's is written as an <span class="rlang"><b>R</b></span> function (which may, of course,
 use <code><a href="../../base/html/Foreign.html">.C</a></code>, <code>.Fortran</code>, <code><a href="../../base/html/CallExternal.html">.Call</a></code>, etc., to
 call foreign code) or be defined in compiled code that has been
 dynamically loaded.
@@ -48,8 +61,7 @@ dynamically loaded.
 
 <h3>Usage</h3>
 
-<pre>
-daspk(y, times, func = NULL, parms, nind = c(length(y), 0, 0), 
+<pre><code class='language-R'>daspk(y, times, func = NULL, parms, nind = c(length(y), 0, 0), 
   dy = NULL, res = NULL, nalg = 0, 
   rtol = 1e-6, atol = 1e-6, jacfunc = NULL,
   jacres = NULL, jactype = "fullint", mass = NULL, estini = NULL,
@@ -60,31 +72,31 @@ daspk(y, times, func = NULL, parms, nind = c(length(y), 0, 0),
   ipar = NULL, nout = 0, outnames = NULL,
   forcings=NULL, initforc = NULL, fcontrol=NULL,
   events = NULL, lags = NULL, ...)
-</pre>
+</code></pre>
 
 
 <h3>Arguments</h3>
 
-<table summary="R argblock">
-<tr valign="top"><td><code>y </code></td>
+<table>
+<tr><td><code id="daspk_:_y">y</code></td>
 <td>
 <p>the initial (state) values for the DE system. If <code>y</code>
 has a name attribute, the names will be used to label the output
 matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>times </code></td>
+<tr><td><code id="daspk_:_times">times</code></td>
 <td>
 <p>time sequence for which output is wanted; the first
 value of <code>times</code> must be the initial time; if only one step is
 to be taken; set <code>times</code> = <code>NULL</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>func </code></td>
+<tr><td><code id="daspk_:_func">func</code></td>
 <td>
 <p>to be used if the model is an ODE, or a DAE written in linearly
 implicit form (M y' = f(t, y)). 
-<code>func</code> should be an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the
+<code>func</code> should be an <span class="rlang"><b>R</b></span>-function that computes the
 values of the derivatives in the ODE system (the <em>model
 definition</em>) at time t.
 </p>
@@ -109,13 +121,13 @@ function in a dynamically loaded shared library. Use <code>res</code>
 instead.
 </p>
 </td></tr>
-<tr valign="top"><td><code>parms </code></td>
+<tr><td><code id="daspk_:_parms">parms</code></td>
 <td>
 <p>vector or list of parameters used in <code>func</code>,
 <code>jacfunc</code>, or <code>res</code>
 </p>
 </td></tr>
-<tr valign="top"><td><code>nind </code></td>
+<tr><td><code id="daspk_:_nind">nind</code></td>
 <td>
 <p>if a DAE system: a three-valued vector with the number of
 variables of index 1, 2, 3 respectively.
@@ -130,20 +142,20 @@ index 3 variables are scaled with 1/h^2. In some cases this allows
 daspk to solve index 2 or index 3 problems.
 </p>
 </td></tr>
-<tr valign="top"><td><code>dy </code></td>
+<tr><td><code id="daspk_:_dy">dy</code></td>
 <td>
 <p>the initial derivatives of the state variables of the DE
 system.  Ignored if an ODE.
 </p>
 </td></tr>
-<tr valign="top"><td><code>res </code></td>
+<tr><td><code id="daspk_:_res">res</code></td>
 <td>
-<p>if a DAE system: either an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function that computes the
-residual function <i>F(t,y,y')</i> of the DAE system (the model
+<p>if a DAE system: either an <span class="rlang"><b>R</b></span>-function that computes the
+residual function <code class="reqn">F(t,y,y')</code> of the DAE system (the model
 defininition) at time <code>t</code>, or a character string giving the
 name of a compiled function in a dynamically loaded shared library.
 </p>
-<p>If <code>res</code> is a user-supplied <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, it must be defined as:
+<p>If <code>res</code> is a user-supplied <span class="rlang"><b>R</b></span>-function, it must be defined as:
 <code>res &lt;- function(t, y, dy, parms, ...)</code>.
 </p>
 <p>Here <code>t</code> is the current time point in the integration, <code>y</code>
@@ -155,7 +167,7 @@ available inside <code>res</code>, unless <code>ynames</code> is <code>FALSE</co
 </p>
 <p>The return value of <code>res</code> should be a list, whose first element
 is a vector containing the residuals of the DAE system,
-i.e. <i>delta = F(t,y,y')</i>, and whose next elements contain output
+i.e. <code class="reqn">\delta = F(t,y,y')</code>, and whose next elements contain output
 variables that are required at each point in <code>times</code>.
 </p>
 <p>If <code>res</code> is a string, then <code>dllname</code> must give the name of
@@ -164,7 +176,7 @@ the shared library (without extension) which must be loaded before
 for more information).
 </p>
 </td></tr>
-<tr valign="top"><td><code>nalg </code></td>
+<tr><td><code id="daspk_:_nalg">nalg</code></td>
 <td>
 <p>if a DAE system: the number of algebraic equations
 (equations not involving derivatives). Algebraic equations should
@@ -173,48 +185,48 @@ always be the last, i.e.  preceeded by the differential equations.
 <p>Only used if <code>estini</code> = 1.
 </p>
 </td></tr>
-<tr valign="top"><td><code>rtol </code></td>
+<tr><td><code id="daspk_:_rtol">rtol</code></td>
 <td>
 <p>relative error tolerance, either a scalar or a vector,
 one value for each y,
 </p>
 </td></tr>
-<tr valign="top"><td><code>atol </code></td>
+<tr><td><code id="daspk_:_atol">atol</code></td>
 <td>
 <p>absolute error tolerance, either a scalar or a vector,
 one value for each y.
 </p>
 </td></tr>
-<tr valign="top"><td><code>jacfunc </code></td>
+<tr><td><code id="daspk_:_jacfunc">jacfunc</code></td>
 <td>
-<p>if not <code>NULL</code>, an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> function that computes the
+<p>if not <code>NULL</code>, an <span class="rlang"><b>R</b></span> function that computes the
 Jacobian of the system of differential equations. Only used in case
-the system is an ODE (<i>y' = f(t, y)</i>), specified by <code>func</code>. The <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>
+the system is an ODE (<code class="reqn">y' = f(t, y)</code>), specified by <code>func</code>. The <span class="rlang"><b>R</b></span>
 calling sequence for <code>jacfunc</code> is identical to that of
 <code>func</code>.
 </p>
 <p>If the Jacobian is a full matrix, <code>jacfunc</code> should return a
-matrix <i>dydot/dy</i>, where the ith row contains the derivative of
-<i>dy_i/dt</i> with respect to <i>y_j</i>, or a vector containing the
-matrix elements by columns (the way <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> and FORTRAN store matrices).
+matrix <code class="reqn">\partial\dot{y}/\partial y</code>, where the ith row contains the derivative of
+<code class="reqn">dy_i/dt</code> with respect to <code class="reqn">y_j</code>, or a vector containing the
+matrix elements by columns (the way <span class="rlang"><b>R</b></span> and FORTRAN store matrices).
 </p>
 <p>If the Jacobian is banded, <code>jacfunc</code> should return a matrix
 containing only the nonzero bands of the Jacobian, rotated
 row-wise. See first example of lsode.
 </p>
 </td></tr>
-<tr valign="top"><td><code>jacres </code></td>
+<tr><td><code id="daspk_:_jacres">jacres</code></td>
 <td>
  <p><code>jacres</code> and not <code>jacfunc</code> should be used if
-the system is specified by the residual function <i>F(t, y, y')</i>,
+the system is specified by the residual function <code class="reqn">F(t, y, y')</code>,
 i.e. <code>jacres</code> is used in conjunction with <code>res</code>.
 </p>
-<p>If <code>jacres</code> is an <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span>-function, the calling sequence for
+<p>If <code>jacres</code> is an <span class="rlang"><b>R</b></span>-function, the calling sequence for
 <code>jacres</code> is identical to that of <code>res</code>, but with extra
 parameter <code>cj</code>.  Thus it should be called as: <code>jacres = 
     func(t, y, dy, parms, cj, ...)</code>.  Here <code>t</code> is the current time
 point in the integration, <code>y</code> is the current estimate of the
-variables in the ODE system, <i>y'</i> are the corresponding derivatives
+variables in the ODE system, <code class="reqn">y'</code> are the corresponding derivatives
 and <code>cj</code> is a scalar, which is normally proportional to
 the inverse of the stepsize. If the initial <code>y</code> or <code>dy</code>
 have a <code>names</code> attribute, the names will be available inside
@@ -223,16 +235,16 @@ have a <code>names</code> attribute, the names will be available inside
 parameters (which may have a names attribute).
 </p>
 <p>If the Jacobian is a full matrix, <code>jacres</code> should return the
-matrix <i>dG/d y + cj*dG/d y'</i>, where the <i>i</i>th row is the sum of the
-derivatives of <i>G_i</i> with respect to <i>y_j</i> and the scaled
-derivatives of <i>G_i</i> with respect to <i>y'_j</i>.
+matrix <code class="reqn">dG/dy + c_j\cdot dG/dy'</code>, where the <code class="reqn">i</code>th row is the sum of the
+derivatives of <code class="reqn">G_i</code> with respect to <code class="reqn">y_j</code> and the scaled
+derivatives of <code class="reqn">G_i</code> with respect to <code class="reqn">y'_j</code>.
 </p>
 <p>If the Jacobian is banded, <code>jacres</code> should return only the
 nonzero bands of the Jacobian, rotated rowwise. See details for the
 calling sequence when <code>jacres</code> is a string.
 </p>
 </td></tr>
-<tr valign="top"><td><code>jactype </code></td>
+<tr><td><code id="daspk_:_jactype">jactype</code></td>
 <td>
 <p>the structure of the Jacobian, one of
 <code>"fullint"</code>, <code>"fullusr"</code>, <code>"bandusr"</code> or
@@ -240,36 +252,35 @@ calling sequence when <code>jacres</code> is a string.
 by the user.
 </p>
 </td></tr>
-<tr valign="top"><td><code>mass </code></td>
+<tr><td><code id="daspk_:_mass">mass</code></td>
 <td>
 <p>the mass matrix. 
 If not <code>NULL</code>, the problem is a linearly
-implicit DAE and defined as <i>M dy/dt = f(t,y)</i>. The mass-matrix <i>M</i>
-should be of dimension <i>n*n</i> where <i>n</i> is the 
-number of <i>y</i>-values.
+implicit DAE and defined as <code class="reqn">M\, dy/dt = f(t,y)</code>. The mass-matrix <code class="reqn">M</code>
+should be of dimension <code class="reqn">n*n</code> where <code class="reqn">n</code> is the 
+number of <code class="reqn">y</code>-values.
 </p>
 <p>If <code>mass=NULL</code> then the model is either an ODE or a DAE, specified with
 <code>res</code>
 </p>
 </td></tr>
-<tr valign="top"><td><code>estini </code></td>
+<tr><td><code id="daspk_:_estini">estini</code></td>
 <td>
 <p>only if a DAE system, and if initial values of <code>y</code>
-and <code>dy</code> are not consistent (i.e. <i>F(t,
-     y, dy) != 0</i>), setting
+and <code>dy</code> are not consistent (i.e. <code class="reqn">F(t,y,dy) \neq 0</code>), setting
 <code>estini</code> = 1 or 2, will solve for them.  If <code>estini</code> = 1: dy
 and the algebraic variables are estimated from <code>y</code>; in this
 case, the number of algebraic equations must be given (<code>nalg</code>).
 If <code>estini</code> = 2: <code>y</code> will be estimated from <code>dy</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>verbose </code></td>
+<tr><td><code id="daspk_:_verbose">verbose</code></td>
 <td>
 <p>if TRUE: full output to the screen, e.g. will
 print the <code>diagnostiscs</code> of the integration - see details.
 </p>
 </td></tr>
-<tr valign="top"><td><code>tcrit </code></td>
+<tr><td><code id="daspk_:_tcrit">tcrit</code></td>
 <td>
 <p>the FORTRAN routine <code>daspk</code> overshoots its targets
 (times points in the vector <code>times</code>), and interpolates values
@@ -278,14 +289,14 @@ integration should not proceed (perhaps because of a singularity),
 that should be provided in <code>tcrit</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>hmin </code></td>
+<tr><td><code id="daspk_:_hmin">hmin</code></td>
 <td>
 <p>an optional minimum value of the integration stepsize. In
 special situations this parameter may speed up computations with the
 cost of precision. Don't use <code>hmin</code> if you don't know why!
 </p>
 </td></tr>
-<tr valign="top"><td><code>hmax </code></td>
+<tr><td><code id="daspk_:_hmax">hmax</code></td>
 <td>
 <p>an optional maximum value of the integration stepsize. If
 not specified, <code>hmax</code> is set to the largest difference in
@@ -293,40 +304,40 @@ not specified, <code>hmax</code> is set to the largest difference in
 short-term events. If 0, no maximal size is specified.
 </p>
 </td></tr>
-<tr valign="top"><td><code>hini </code></td>
+<tr><td><code id="daspk_:_hini">hini</code></td>
 <td>
 <p>initial step size to be attempted; if 0, the initial step
 size is determined by the solver
 </p>
 </td></tr>
-<tr valign="top"><td><code>ynames </code></td>
+<tr><td><code id="daspk_:_ynames">ynames</code></td>
 <td>
 <p>logical, if <code>FALSE</code>, names of state variables are not
 passed to function <code>func</code>; this may speed up the simulation especially
 for large models.
 </p>
 </td></tr>
-<tr valign="top"><td><code>maxord </code></td>
+<tr><td><code id="daspk_:_maxord">maxord</code></td>
 <td>
 <p>the maximum order to be allowed. Reduce <code>maxord</code>
 to save storage space ( &lt;= 5)
 </p>
 </td></tr>
-<tr valign="top"><td><code>bandup </code></td>
+<tr><td><code id="daspk_:_bandup">bandup</code></td>
 <td>
 <p>number of non-zero bands above the diagonal, in case
 the Jacobian is banded (and <code>jactype</code> one of
 &quot;bandint&quot;, &quot;bandusr&quot;)
 </p>
 </td></tr>
-<tr valign="top"><td><code>banddown </code></td>
+<tr><td><code id="daspk_:_banddown">banddown</code></td>
 <td>
 <p>number of non-zero bands below the diagonal, in case
 the Jacobian is banded (and <code>jactype</code> one of
 &quot;bandint&quot;, &quot;bandusr&quot;)
 </p>
 </td></tr>
-<tr valign="top"><td><code>maxsteps </code></td>
+<tr><td><code id="daspk_:_maxsteps">maxsteps</code></td>
 <td>
 <p>maximal number of steps per output interval taken by the
 solver; will be recalculated to be at least 500 and a multiple of
@@ -336,7 +347,7 @@ taken, but it will continue till <code>maxsteps</code> steps.
 (Note this warning was always given in deSolve versions &lt; 1.10.3).
 </p>
 </td></tr>
-<tr valign="top"><td><code>dllname </code></td>
+<tr><td><code id="daspk_:_dllname">dllname</code></td>
 <td>
 <p>a string giving the name of the shared library
 (without extension) that contains all the compiled function or
@@ -344,14 +355,14 @@ subroutine definitions referred to in <code>res</code> and
 <code>jacres</code>.  See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initfunc </code></td>
+<tr><td><code id="daspk_:_initfunc">initfunc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the initialisation function
 (which initialises values of parameters), as provided in
 &lsquo;<span class="file">dllname</span>&rsquo;. See package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initpar </code></td>
+<tr><td><code id="daspk_:_initpar">initpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified and an
 initialisation function <code>initfunc</code> is in the dll: the
@@ -359,21 +370,21 @@ parameters passed to the initialiser, to initialise the common
 blocks (FORTRAN) or global variables (C, C++).
 </p>
 </td></tr>
-<tr valign="top"><td><code>rpar </code></td>
+<tr><td><code id="daspk_:_rpar">rpar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 double precision values passed to the dll-functions whose names are
 specified by <code>res</code> and <code>jacres</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>ipar </code></td>
+<tr><td><code id="daspk_:_ipar">ipar</code></td>
 <td>
 <p>only when &lsquo;<span class="file">dllname</span>&rsquo; is specified: a vector with
 integer values passed to the dll-functions whose names are specified
 by <code>res</code> and <code>jacres</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>nout </code></td>
+<tr><td><code id="daspk_:_nout">nout</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and the model is
 defined in compiled code: the number of output variables calculated
@@ -384,7 +395,7 @@ to perform this check in the code - See package vignette
 <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>outnames </code></td>
+<tr><td><code id="daspk_:_outnames">outnames</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified and
 <code>nout</code> &gt; 0: the names of output variables calculated in the
@@ -392,7 +403,7 @@ compiled function <code>res</code>, present in the shared library.
 These names will be used to label the output matrix.
 </p>
 </td></tr>
-<tr valign="top"><td><code>forcings </code></td>
+<tr><td><code id="daspk_:_forcings">forcings</code></td>
 <td>
 <p>only used if &lsquo;<span class="file">dllname</span>&rsquo; is specified: a list with
 the forcing function data sets, each present as a two-columned matrix,
@@ -403,7 +414,7 @@ the closest data extreme.
 <p>See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>initforc </code></td>
+<tr><td><code id="daspk_:_initforc">initforc</code></td>
 <td>
 <p>if not <code>NULL</code>, the name of the forcing function
 initialisation function, as provided in
@@ -412,26 +423,26 @@ value.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or package vignette <code>"compiledCode"</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>fcontrol </code></td>
+<tr><td><code id="daspk_:_fcontrol">fcontrol</code></td>
 <td>
 <p>A list of control parameters for the forcing functions.
 See <a href="../../deSolve/help/forcings.html">forcings</a> or vignette <code>compiledCode</code>.
 </p>
 </td></tr>
-<tr valign="top"><td><code>events </code></td>
+<tr><td><code id="daspk_:_events">events</code></td>
 <td>
 <p>A matrix or data frame that specifies events, i.e. when the value of a
 state variable is suddenly changed. See <a href="../../deSolve/help/events.html">events</a> for more information.
 </p>
 </td></tr>
-<tr valign="top"><td><code>lags </code></td>
+<tr><td><code id="daspk_:_lags">lags</code></td>
 <td>
 <p>A list that specifies timelags, i.e. the number of steps
 that has to be kept. To be used for delay differential equations. 
 See <a href="../../deSolve/help/timelags.html">timelags</a>, <a href="../../deSolve/help/dede.html">dede</a> for more information.
 </p>
 </td></tr>
-<tr valign="top"><td><code>... </code></td>
+<tr><td><code id="daspk_:_...">...</code></td>
 <td>
 <p>additional arguments passed to <code>func</code>,
 <code>jacfunc</code>, <code>res</code> and <code>jacres</code>, allowing this to be a
@@ -449,19 +460,22 @@ one through five (specified with <code>maxord</code>) to solve either:
 
 <ul>
 <li><p> an ODE system of the form </p>
-<p style="text-align: center;"><i>y' = f(t,y,...)</i></p>
+<p style="text-align: center;"><code class="reqn">y' = f(t,y,...)</code>
+</p>
   
 <p>or
 </p>
 </li>
 <li><p> a DAE system of the form </p>
-<p style="text-align: center;"><i>y' = M f(t,y,...)</i></p>
+<p style="text-align: center;"><code class="reqn">y' = M f(t,y,...)</code>
+</p>
  
 <p>or
 </p>
 </li>
 <li><p> a DAE system of the form </p>
-<p style="text-align: center;"><i>F(t,y,y') = 0</i></p>
+<p style="text-align: center;"><code class="reqn">F(t,y,y') = 0</code>
+</p>
 <p>. 
 The index of the DAE should be preferable &lt;= 1.
 </p>
@@ -605,19 +619,19 @@ Equations, Elsevier, New York, 1989.
 <p>P. N. Brown and A. C. Hindmarsh, Reduced Storage Matrix Methods
 in Stiff ODE Systems, J. Applied Mathematics and Computation,
 31 (1989), pp. 40-91.
-doi: <a href="https://doi.org/10.1016/0096-3003(89)90110-0">10.1016/0096-3003(89)90110-0</a>
+<a href="https://doi.org/10.1016/0096-3003%2889%2990110-0">doi:10.1016/0096-3003(89)90110-0</a>
 </p>
 <p>P. N. Brown, A. C. Hindmarsh, and L. R. Petzold, Using Krylov
 Methods in the Solution of Large-Scale Differential-Algebraic
 Systems, SIAM J. Sci. Comp., 15 (1994), pp. 1467-1488.
-doi: <a href="https://doi.org/10.1137/0915088">10.1137/0915088</a>
+<a href="https://doi.org/10.1137/0915088">doi:10.1137/0915088</a>
 </p>
 <p>P. N. Brown, A. C. Hindmarsh, and L. R. Petzold, Consistent
 Initial Condition Calculation for Differential-Algebraic
 Systems, LLNL Report UCRL-JC-122175, August 1995; submitted to
 SIAM J. Sci. Comp.
 </p>
-<p>Netlib: <a href="https://www.netlib.org">https://www.netlib.org</a>
+<p>Netlib: <a href="https://netlib.org">https://netlib.org</a>
 </p>
 
 
@@ -662,8 +676,7 @@ Jacobian,
 
 <h3>Examples</h3>
 
-<pre>
-## =======================================================================
+<pre><code class='language-R'>## =======================================================================
 ## Coupled chemical reactions including an equilibrium
 ## modeled as (1) an ODE and (2) as a DAE
 ##
@@ -837,7 +850,8 @@ ODE_dll &lt;- daspk(y = y, dy = dy, times = times, res = "chemres",
 plot(ODE_dll, which = c("Prod", "D"), xlab = "time",
      ylab = c("/day", "conc"), main = c("production rate","D"))
 
-</pre>
+</code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.30 <a href="00Index.html">Index</a>]</div>
-</div></body></html>
+<hr /><div style="text-align: center;">[Package <em>deSolve</em> version 1.35 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a> = dim[0]; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a> = dim[1];</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  PROTECT(Xnames = GET_ROWNAMES(GET_DIMNAMES(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>)));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  PROTECT(Params = as_matrix(Params));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  PROTECT(Params = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(Params));</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  PROTECT(dimP = GET_DIM(Params));</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  dim = INTEGER(dimP);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">//  npars = dim[0];</span></div>
@@ -164,8 +164,8 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  dim = INTEGER(newdim);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  dim[0] = <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>; dim[1] = <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  SET_DIM(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,newdim);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  setrownames(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,Xnames,2);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  fixdimnames(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,dimnm,2);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,Xnames,2);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,dimnm,2);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  SET_STRING_ELT(retvalnames,0,mkChar(<span class="stringliteral">&quot;states&quot;</span>));</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  SET_STRING_ELT(retvalnames,1,mkChar(<span class="stringliteral">&quot;params&quot;</span>));</div>
@@ -215,9 +215,9 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">double</span> *ss = 0, *st = 0;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordtype">int</span> xdim[] = {<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, np};</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      PROTECT(newstates = makearray(2,xdim)); nprotect++;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      setrownames(newstates,Xnames,2);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      fixdimnames(newstates,dimnm,2);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      PROTECT(newstates = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim)); nprotect++;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(newstates,Xnames,2);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <a class="code" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a>(newstates,dimnm,2);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      ss = REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      st = REAL(newstates);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
@@ -284,6 +284,10 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_a37f1a2acca063e96f0efa73705ec87b2"><div class="ttname"><a href="pomp__decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a></div><div class="ttdeci">void nosort_resamp(int nw, double *w, int np, int *p, int offset)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00025">resample.c:25</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a263b864ea80d9008e4c96ffe013f1dff"><div class="ttname"><a href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a></div><div class="ttdeci">static R_INLINE void fixdimnames(SEXP x, const char **names, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00108">pomp_defines.h:108</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00089">pomp_defines.h:89</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_ad396407a99088c710b270a9c1dc3aa9d"><div class="ttname"><a href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a></div><div class="ttdeci">static R_INLINE SEXP as_matrix(SEXP x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00124">pomp_defines.h:124</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html"><div class="ttname"><a href="pomp__internal_8h.html">pomp_internal.h</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a72f66d373d52ab42fd8af134bd7f9cda"><div class="ttname"><a href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a></div><div class="ttdeci">int nreps</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00137">trajectory.c:137</a></div></div>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['r_5ffun_401',['R_fun',['../trajectory_8c.html#aaa3e3447b1ba67b9eb74858967305df1',1,'trajectory.c']]]
+  ['params_539',['params',['../trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525',1,'trajectory.c']]],
+  ['pindex_540',['pindex',['../trajectory_8c.html#ab8af0f07388320ad03576d4d4c0c1bc1',1,'trajectory.c']]]
 ];

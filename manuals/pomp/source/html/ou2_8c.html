@@ -150,6 +150,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a202fca38e8cd5e9f0a9e0c33921b01cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ou2_8c.html#a202fca38e8cd5e9f0a9e0c33921b01cd">sim_ou2</a> (double *x1, double *x2, double alpha1, double alpha2, double alpha3, double alpha4, double sigma1, double sigma2, double sigma3)</td></tr>
+<tr class="separator:a202fca38e8cd5e9f0a9e0c33921b01cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c409ae997e2b81c3b15dd2f40f78a8a"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a">dens_ou2</a> (double x1, double x2, double z1, double z2, double alpha1, double alpha2, double alpha3, double alpha4, double sigma1, double sigma2, double sigma3, int give_log)</td></tr>
+<tr class="separator:a8c409ae997e2b81c3b15dd2f40f78a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a169ee0dc87d392a574e8815b934d19f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ou2_8c.html#a169ee0dc87d392a574e8815b934d19f1">_ou2_step</a> (double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t, double deltat)</td></tr>
 <tr class="separator:a169ee0dc87d392a574e8815b934d19f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c5b49ac4fe519757a8f7598d509306"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ou2_8c.html#ad1c5b49ac4fe519757a8f7598d509306">_ou2_pdf</a> (double *f, double *x, double *z, double t1, double t2, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</td></tr>
@@ -673,18 +677,28 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">if</span> (t2-t1 != 1)</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;ou2_pdf error: transitions must be consecutive&quot;</span>);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  f[0] = dens_ou2(x[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],x[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],z[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],z[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],<a class="code" href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a>,<a class="code" href="ou2_8c.html#a6e6cd685f94be3c0552ee4cb3e0881ff">ALPHA2</a>,<a class="code" href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a>,<a class="code" href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  f[0] = <a class="code" href="ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a">dens_ou2</a>(x[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],x[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],z[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],z[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],<a class="code" href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a>,<a class="code" href="ou2_8c.html#a6e6cd685f94be3c0552ee4cb3e0881ff">ALPHA2</a>,<a class="code" href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a>,<a class="code" href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a>,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="ou2_8c.html#ab2ee134520af69f566c53e1653198f29">SIGMA1</a>,<a class="code" href="ou2_8c.html#ae5afe6a4069844a8988fffedaa523856">SIGMA2</a>,<a class="code" href="ou2_8c.html#a3f470cf546586fe861be7be3c24557bc">SIGMA3</a>,1);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 <div class="ttc" id="aou2_8c_html_a3f470cf546586fe861be7be3c24557bc"><div class="ttname"><a href="ou2_8c.html#a3f470cf546586fe861be7be3c24557bc">SIGMA3</a></div><div class="ttdeci">#define SIGMA3</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00052">ou2.c:52</a></div></div>
 <div class="ttc" id="aou2_8c_html_a6e6cd685f94be3c0552ee4cb3e0881ff"><div class="ttname"><a href="ou2_8c.html#a6e6cd685f94be3c0552ee4cb3e0881ff">ALPHA2</a></div><div class="ttdeci">#define ALPHA2</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00047">ou2.c:47</a></div></div>
+<div class="ttc" id="aou2_8c_html_a8c409ae997e2b81c3b15dd2f40f78a8a"><div class="ttname"><a href="ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a">dens_ou2</a></div><div class="ttdeci">static double dens_ou2(double x1, double x2, double z1, double z2, double alpha1, double alpha2, double alpha3, double alpha4, double sigma1, double sigma2, double sigma3, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00027">ou2.c:27</a></div></div>
 <div class="ttc" id="aou2_8c_html_ab2ee134520af69f566c53e1653198f29"><div class="ttname"><a href="ou2_8c.html#ab2ee134520af69f566c53e1653198f29">SIGMA1</a></div><div class="ttdeci">#define SIGMA1</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00050">ou2.c:50</a></div></div>
 <div class="ttc" id="aou2_8c_html_ae5afe6a4069844a8988fffedaa523856"><div class="ttname"><a href="ou2_8c.html#ae5afe6a4069844a8988fffedaa523856">SIGMA2</a></div><div class="ttdeci">#define SIGMA2</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00051">ou2.c:51</a></div></div>
 <div class="ttc" id="aou2_8c_html_aef2261269821a4680fe2d8389edb6af1"><div class="ttname"><a href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a></div><div class="ttdeci">#define ALPHA3</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00048">ou2.c:48</a></div></div>
 <div class="ttc" id="aou2_8c_html_af8e4e3fc5b56a3cf8340fd6534c71e00"><div class="ttname"><a href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a></div><div class="ttdeci">#define ALPHA4</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00049">ou2.c:49</a></div></div>
 <div class="ttc" id="aou2_8c_html_afec7121cee3ac42de7f64aefd50c66cf"><div class="ttname"><a href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a></div><div class="ttdeci">#define ALPHA1</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00046">ou2.c:46</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ou2_8c_ad1c5b49ac4fe519757a8f7598d509306_cgraph.png" border="0" usemap="#aou2_8c_ad1c5b49ac4fe519757a8f7598d509306_cgraph" alt=""/></div>
+<map name="aou2_8c_ad1c5b49ac4fe519757a8f7598d509306_cgraph" id="aou2_8c_ad1c5b49ac4fe519757a8f7598d509306_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" href="ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a" title=" " alt="" coords="135,5,219,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a78c2ea1338c663656b2a023cf559c741"></a>
@@ -898,9 +912,19 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ou2_8c_source.html#l00067">67</a> of file <a class="el" href="ou2_8c_source.html">ou2.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  sim_ou2(&amp;x[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],&amp;x[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],<a class="code" href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a>,<a class="code" href="ou2_8c.html#a6e6cd685f94be3c0552ee4cb3e0881ff">ALPHA2</a>,<a class="code" href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a>,<a class="code" href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a>,<a class="code" href="ou2_8c.html#ab2ee134520af69f566c53e1653198f29">SIGMA1</a>,<a class="code" href="ou2_8c.html#ae5afe6a4069844a8988fffedaa523856">SIGMA2</a>,<a class="code" href="ou2_8c.html#a3f470cf546586fe861be7be3c24557bc">SIGMA3</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="ou2_8c.html#a202fca38e8cd5e9f0a9e0c33921b01cd">sim_ou2</a>(&amp;x[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],&amp;x[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],<a class="code" href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a>,<a class="code" href="ou2_8c.html#a6e6cd685f94be3c0552ee4cb3e0881ff">ALPHA2</a>,<a class="code" href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a>,<a class="code" href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a>,<a class="code" href="ou2_8c.html#ab2ee134520af69f566c53e1653198f29">SIGMA1</a>,<a class="code" href="ou2_8c.html#ae5afe6a4069844a8988fffedaa523856">SIGMA2</a>,<a class="code" href="ou2_8c.html#a3f470cf546586fe861be7be3c24557bc">SIGMA3</a>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-</div><!-- fragment -->
+<div class="ttc" id="aou2_8c_html_a202fca38e8cd5e9f0a9e0c33921b01cd"><div class="ttname"><a href="ou2_8c.html#a202fca38e8cd5e9f0a9e0c33921b01cd">sim_ou2</a></div><div class="ttdeci">static void sim_ou2(double *x1, double *x2, double alpha1, double alpha2, double alpha3, double alpha4, double sigma1, double sigma2, double sigma3)</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00009">ou2.c:9</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ou2_8c_a169ee0dc87d392a574e8815b934d19f1_cgraph.png" border="0" usemap="#aou2_8c_a169ee0dc87d392a574e8815b934d19f1_cgraph" alt=""/></div>
+<map name="aou2_8c_a169ee0dc87d392a574e8815b934d19f1_cgraph" id="aou2_8c_a169ee0dc87d392a574e8815b934d19f1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,93,32"/>
+<area shape="rect" href="ou2_8c.html#a202fca38e8cd5e9f0a9e0c33921b01cd" title=" " alt="" coords="141,5,219,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a39104e744ca71e0cd070ff508eb64a9a"></a>
@@ -982,6 +1006,229 @@ Functions</h2></td></tr>
 <div class="ttc" id="aou2_8c_html_a767d301ad391daed2e4bab0288565f7d"><div class="ttname"><a href="ou2_8c.html#a767d301ad391daed2e4bab0288565f7d">V22</a></div><div class="ttdeci">#define V22</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00064">ou2.c:64</a></div></div>
 <div class="ttc" id="aou2_8c_html_a87942002cab74af29b13ec07a3b27edf"><div class="ttname"><a href="ou2_8c.html#a87942002cab74af29b13ec07a3b27edf">V11</a></div><div class="ttdeci">#define V11</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00061">ou2.c:61</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a8c409ae997e2b81c3b15dd2f40f78a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c409ae997e2b81c3b15dd2f40f78a8a">&#9670;&nbsp;</a></span>dens_ou2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double dens_ou2 </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>z2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>give_log</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ou2_8c_source.html#l00027">27</a> of file <a class="el" href="ou2_8c_source.html">ou2.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">double</span> eps[2], val;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// compute residuals</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  eps[0] = z1-alpha1*x1-alpha3*x2;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  eps[1] = z2-alpha2*x1-alpha4*x2;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// backsolve</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  eps[0] /= sigma1;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  eps[1] -= sigma2*eps[0];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  eps[1] /= sigma3;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  val = dnorm(eps[0],0.0,1.0,1)+dnorm(eps[1],0.0,1.0,1)-log(sigma1)-log(sigma3);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> ((give_log) ? val : exp(val));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph.png" border="0" usemap="#aou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph" alt=""/></div>
+<map name="aou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph" id="aou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph">
+<area shape="rect" title=" " alt="" coords="135,5,219,32"/>
+<area shape="rect" href="ou2_8c.html#ad1c5b49ac4fe519757a8f7598d509306" title=" " alt="" coords="5,5,87,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a202fca38e8cd5e9f0a9e0c33921b01cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a202fca38e8cd5e9f0a9e0c33921b01cd">&#9670;&nbsp;</a></span>sim_ou2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void sim_ou2 </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>alpha4</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sigma3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ou2_8c_source.html#l00009">9</a> of file <a class="el" href="ou2_8c_source.html">ou2.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">double</span> eps[2], xnew[2];</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  eps[0] = rnorm(0,1);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  eps[1] = rnorm(0,1);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  xnew[0] = alpha1*(*x1)+alpha3*(*x2)+sigma1*eps[0];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  xnew[1] = alpha2*(*x1)+alpha4*(*x2)+sigma2*eps[0]+sigma3*eps[1];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  *x1 = xnew[0];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  *x2 = xnew[1];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="ou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph.png" border="0" usemap="#aou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph" alt=""/></div>
+<map name="aou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph" id="aou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph">
+<area shape="rect" title=" " alt="" coords="141,5,219,32"/>
+<area shape="rect" href="ou2_8c.html#a169ee0dc87d392a574e8815b934d19f1" title=" " alt="" coords="5,5,93,32"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

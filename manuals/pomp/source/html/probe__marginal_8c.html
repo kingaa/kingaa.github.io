@@ -117,12 +117,267 @@ Include dependency graph for probe_marginal.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab7ed44d923122eec45887a267060c3e1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="probe__marginal_8c.html#ab7ed44d923122eec45887a267060c3e1">order_reg_solve</a> (double *beta, double *x, double *mm, double *<a class="el" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>, int *pivot, int n, int np, int diff)</td></tr>
+<tr class="separator:ab7ed44d923122eec45887a267060c3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9accae76d6ed9147d0db36478294f156"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="probe__marginal_8c.html#a9accae76d6ed9147d0db36478294f156">order_reg_model_matrix</a> (double *z, double *<a class="el" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, double *<a class="el" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>, int *pivot, int n, int np, int diff)</td></tr>
+<tr class="separator:a9accae76d6ed9147d0db36478294f156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33683f39715bc5813eab0d124dbc9899"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="probe__marginal_8c.html#a33683f39715bc5813eab0d124dbc9899">probe_marginal_setup</a> (SEXP ref, SEXP order, SEXP diff)</td></tr>
 <tr class="separator:a33683f39715bc5813eab0d124dbc9899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1a19b1194b1b0380d189ff12188a4b"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="probe__marginal_8c.html#a3a1a19b1194b1b0380d189ff12188a4b">probe_marginal_solve</a> (SEXP x, SEXP setup, SEXP diff)</td></tr>
 <tr class="separator:a3a1a19b1194b1b0380d189ff12188a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a9accae76d6ed9147d0db36478294f156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9accae76d6ed9147d0db36478294f156">&#9670;&nbsp;</a></span>order_reg_model_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void order_reg_model_matrix </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>tau</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pivot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>diff</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="probe__marginal_8c_source.html#l00078">78</a> of file <a class="el" href="probe__marginal_8c_source.html">probe_marginal.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                                                                                            {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">//   z is an n vector, containing no NAs</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">//   X is an (n-diff) by np double matrix</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">//   pivot is an (n-diff) integer vector</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">//   tau is an (n-diff) double vector</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">//   This routine first differences z &#39;diff&#39; times.</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">//   z is centred and sorted</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">//   then the model matrix is set up and QR decomposed</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">int</span> nx;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">double</span> *<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>, *<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>, xx;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">for</span> (i = 0, nx = n; i &lt; diff; i++) { <span class="comment">// differencing loop</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    nx--;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) z[j] = z[j+1] - z[j];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// nx = number of rows in model matrix</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// z is now an nx-vector</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// center z</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">for</span> (j = 0, xx = 0.0; j &lt; nx; j++) xx += z[j]; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  xx /= nx; <span class="comment">// xx = mean(z)</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) z[j] -= xx;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// now sort</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  R_qsort(z,1,nx);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// Now create the model matrix, using contents of z </span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">if</span> (np &lt; 1) np = 1;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>[j] = z[j]; <span class="comment">// first column</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">for</span> (i = 1, <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a> = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a> = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>+nx; i &lt; np; i++, <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a> += nx, <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a> += nx) </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>[j] = <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>[j]*z[j];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// QR decompose the model matrix </span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6">pomp_qr</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,nx,np,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
+<div class="ttc" id="agompertz_8c_html_aa7082577997805000f8e8b56846642cd"><div class="ttname"><a href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a></div><div class="ttdeci">#define tau</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00081">gompertz.c:81</a></div></div>
+<div class="ttc" id="aou2_8c_html_a1964818ccd90a6173ea48cecb652feeb"><div class="ttname"><a href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a></div><div class="ttdeci">#define X1</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00055">ou2.c:55</a></div></div>
+<div class="ttc" id="aou2_8c_html_a79ae03a0214cb30e57b9e8835f2a0019"><div class="ttname"><a href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a></div><div class="ttdeci">#define X2</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00056">ou2.c:56</a></div></div>
+<div class="ttc" id="apomp__mat_8h_html_a305b5b8bb23bc880b442f68dc1219ed6"><div class="ttname"><a href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6">pomp_qr</a></div><div class="ttdeci">static R_INLINE void pomp_qr(double *a, int m, int n, int *pivot, double *tau)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00024">pomp_mat.h:24</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__marginal_8c_a9accae76d6ed9147d0db36478294f156_cgraph.png" border="0" usemap="#aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_cgraph" alt=""/></div>
+<map name="aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_cgraph" id="aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,188,32"/>
+<area shape="rect" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6" title=" " alt="" coords="236,5,315,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph.png" border="0" usemap="#aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph" alt=""/></div>
+<map name="aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph" id="aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph">
+<area shape="rect" title=" " alt="" coords="220,5,403,32"/>
+<area shape="rect" href="pomp__decls_8h.html#a33683f39715bc5813eab0d124dbc9899" title=" " alt="" coords="5,5,172,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7ed44d923122eec45887a267060c3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ed44d923122eec45887a267060c3e1">&#9670;&nbsp;</a></span>order_reg_solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void order_reg_solve </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>mm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>tau</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pivot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>diff</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="probe__marginal_8c_source.html#l00117">117</a> of file <a class="el" href="probe__marginal_8c_source.html">probe_marginal.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                                                                                    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">int</span> nx;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">double</span> xx;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">for</span> (i = 0, nx = n; i &lt; diff; i++) { <span class="comment">// differencing loop</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    nx--;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) x[j] = x[j+1] - x[j];</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="comment">// nx = number of rows in model matrix</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// x is now an nx-vector</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// center x</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">for</span> (j = 0, xx = 0.0; j &lt; nx; j++) xx += x[j]; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  xx /= nx; <span class="comment">// xx = mean(x)</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) x[j] -= xx;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="comment">// now sort</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  R_qsort(x,1,nx);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">// solve R b = Q&#39;x for b</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <a class="code" href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2">pomp_qrqy</a>(x,mm,nx,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,nx,1,np,<span class="stringliteral">&quot;left&quot;</span>,<span class="stringliteral">&quot;transpose&quot;</span>); <span class="comment">// y &lt;- Q&#39;y</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a>(mm,nx,np,x,1,<span class="stringliteral">&quot;Upper&quot;</span>,<span class="stringliteral">&quot;No transpose&quot;</span>,<span class="stringliteral">&quot;Non-unit&quot;</span>);   <span class="comment">// y &lt;- R^{-1} y</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// unpivot and store the coefficients in beta</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; np; i++) beta[pivot[i]] = x[i];</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="ttc" id="apomp__mat_8h_html_a595e9be65aee622370178eb5a49f85c2"><div class="ttname"><a href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2">pomp_qrqy</a></div><div class="ttdeci">static R_INLINE void pomp_qrqy(double *c, double *a, int lda, double *tau, int m, int n, int k, char *side, char *transpose)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00039">pomp_mat.h:39</a></div></div>
+<div class="ttc" id="apomp__mat_8h_html_a614853020d1cfbd754ac82a5895b5547"><div class="ttname"><a href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a></div><div class="ttdeci">static R_INLINE void pomp_backsolve(double *a, int lda, int n, double *x, int incx, char *uplo, char *transpose, char *unit)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00011">pomp_mat.h:11</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_cgraph.png" border="0" usemap="#aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_cgraph" alt=""/></div>
+<map name="aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_cgraph" id="aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,132,57"/>
+<area shape="rect" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547" title=" " alt="" coords="180,5,312,32"/>
+<area shape="rect" href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2" title=" " alt="" coords="199,56,293,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph.png" border="0" usemap="#aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph" alt=""/></div>
+<map name="aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph" id="aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph">
+<area shape="rect" title=" " alt="" coords="220,5,347,32"/>
+<area shape="rect" href="pomp__decls_8h.html#a3a1a19b1194b1b0380d189ff12188a4b" title=" " alt="" coords="5,5,172,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a33683f39715bc5813eab0d124dbc9899"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33683f39715bc5813eab0d124dbc9899">&#9670;&nbsp;</a></span>probe_marginal_setup()</h2>
 
@@ -169,7 +424,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (nx &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have diff &lt; number of observations&quot;</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  PROTECT(z = duplicate(AS_NUMERIC(ref)));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  PROTECT(mm = makearray(2,dim));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  PROTECT(mm = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,dim));</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a> = NEW_NUMERIC(np));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  PROTECT(pivot = NEW_INTEGER(np));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
@@ -183,14 +438,26 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  SET_ELEMENT(retval,2,pivot);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  SET_NAMES(retval,retvalnames);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  order_reg_model_matrix(REAL(z),REAL(mm),REAL(<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>),INTEGER(pivot),n,np,df);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="probe__marginal_8c.html#a9accae76d6ed9147d0db36478294f156">order_reg_model_matrix</a>(REAL(z),REAL(mm),REAL(<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>),INTEGER(pivot),n,np,df);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  UNPROTECT(6);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span>(retval);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="ttc" id="agompertz_8c_html_aa7082577997805000f8e8b56846642cd"><div class="ttname"><a href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a></div><div class="ttdeci">#define tau</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00081">gompertz.c:81</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
-</div><!-- fragment -->
+<div class="ttc" id="aprobe__marginal_8c_html_a9accae76d6ed9147d0db36478294f156"><div class="ttname"><a href="probe__marginal_8c.html#a9accae76d6ed9147d0db36478294f156">order_reg_model_matrix</a></div><div class="ttdeci">static void order_reg_model_matrix(double *z, double *X, double *tau, int *pivot, int n, int np, int diff)</div><div class="ttdef"><b>Definition:</b> <a href="probe__marginal_8c_source.html#l00078">probe_marginal.c:78</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__marginal_8c_a33683f39715bc5813eab0d124dbc9899_cgraph.png" border="0" usemap="#aprobe__marginal_8c_a33683f39715bc5813eab0d124dbc9899_cgraph" alt=""/></div>
+<map name="aprobe__marginal_8c_a33683f39715bc5813eab0d124dbc9899_cgraph" id="aprobe__marginal_8c_a33683f39715bc5813eab0d124dbc9899_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,172,57"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="265,5,357,32"/>
+<area shape="rect" href="probe__marginal_8c.html#a9accae76d6ed9147d0db36478294f156" title=" " alt="" coords="220,56,403,83"/>
+<area shape="rect" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6" title=" " alt="" coords="451,56,529,83"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a3a1a19b1194b1b0380d189ff12188a4b"></a>
@@ -254,13 +521,24 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  SET_NAMES(beta,beta_names);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  order_reg_solve(REAL(beta),REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>),REAL(mm),REAL(<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>),INTEGER(pivot),n,np,df);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="probe__marginal_8c.html#ab7ed44d923122eec45887a267060c3e1">order_reg_solve</a>(REAL(beta),REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>),REAL(mm),REAL(<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>),INTEGER(pivot),n,np,df);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  UNPROTECT(6);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span>(beta);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
-</div><!-- fragment -->
+<div class="ttc" id="aprobe__marginal_8c_html_ab7ed44d923122eec45887a267060c3e1"><div class="ttname"><a href="probe__marginal_8c.html#ab7ed44d923122eec45887a267060c3e1">order_reg_solve</a></div><div class="ttdeci">static void order_reg_solve(double *beta, double *x, double *mm, double *tau, int *pivot, int n, int np, int diff)</div><div class="ttdef"><b>Definition:</b> <a href="probe__marginal_8c_source.html#l00117">probe_marginal.c:117</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__marginal_8c_a3a1a19b1194b1b0380d189ff12188a4b_cgraph.png" border="0" usemap="#aprobe__marginal_8c_a3a1a19b1194b1b0380d189ff12188a4b_cgraph" alt=""/></div>
+<map name="aprobe__marginal_8c_a3a1a19b1194b1b0380d189ff12188a4b_cgraph" id="aprobe__marginal_8c_a3a1a19b1194b1b0380d189ff12188a4b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,172,57"/>
+<area shape="rect" href="probe__marginal_8c.html#ab7ed44d923122eec45887a267060c3e1" title=" " alt="" coords="220,31,347,57"/>
+<area shape="rect" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547" title=" " alt="" coords="395,5,527,32"/>
+<area shape="rect" href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2" title=" " alt="" coords="413,56,508,83"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

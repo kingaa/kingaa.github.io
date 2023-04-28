@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('trajectory_8c.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">trajectory.c File Reference</div>  </div>
 </div><!--header-->
@@ -126,6 +127,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2109a7d0e874cf7da59ecdde93f802b7"><td class="memItemLeft" align="right" valign="top">static R_INLINE SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7">ret_array</a> (int <a class="el" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, int <a class="el" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>, int ntimes, SEXP <a class="el" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>, SEXP repnames)</td></tr>
+<tr class="separator:a2109a7d0e874cf7da59ecdde93f802b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee9c5f69ec3b1b090448cb76634602d"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trajectory_8c.html#a3ee9c5f69ec3b1b090448cb76634602d">iterate_map</a> (SEXP <a class="el" href="trajectory_8c.html#ac8d8b2659244f8b65022c653e1604b05">object</a>, SEXP times, SEXP t0, SEXP x0, SEXP <a class="el" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>, SEXP gnsi)</td></tr>
 <tr class="separator:a3ee9c5f69ec3b1b090448cb76634602d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650670c909a5329eb24d77c821cd5e21"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trajectory_8c.html#a650670c909a5329eb24d77c821cd5e21">pomp_desolve_setup</a> (SEXP <a class="el" href="trajectory_8c.html#ac8d8b2659244f8b65022c653e1604b05">object</a>, SEXP x0, SEXP <a class="el" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>, SEXP gnsi)</td></tr>
@@ -134,6 +137,58 @@ Functions</h2></td></tr>
 <tr class="separator:a388d1f049a9d7284d0e7ba26591e6099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a37b08d4f29e8bdd81eb910cf4bff6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trajectory_8c.html#a7a37b08d4f29e8bdd81eb910cf4bff6d">pomp_desolve_takedown</a> (void)</td></tr>
 <tr class="separator:a7a37b08d4f29e8bdd81eb910cf4bff6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a452b8e5e82f9727dec344956611fbc26"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a7cc0221dd82834364fc2650e646cec14"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:aba825a2fa12f8f2ac34a33726286814c"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0">pompfunmode</a>&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a></td></tr>
+<tr class="separator:aba825a2fa12f8f2ac34a33726286814c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741c317a1b99be556f75947604b0de37"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#ac8d8b2659244f8b65022c653e1604b05">object</a></td></tr>
+<tr class="separator:a741c317a1b99be556f75947604b0de37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0cef89f58a23cbc5e59ea302fdc970"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a></td></tr>
+<tr class="separator:a9f0cef89f58a23cbc5e59ea302fdc970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e1b026f1cccaf43c00a15492927f3e"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a></td></tr>
+<tr class="separator:a09e1b026f1cccaf43c00a15492927f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e5837a3b76f02388b4f9686a6b8aeb"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="structlookup__table__t.html">lookup_table_t</a>&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a6d8415c759496fb5460bce9a56445919">covar_table</a></td></tr>
+<tr class="separator:af8e5837a3b76f02388b4f9686a6b8aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461fe5f1e7f9c96146115fe8a86baec7"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a></td></tr>
+<tr class="separator:a461fe5f1e7f9c96146115fe8a86baec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90209e5bc47152da0e2408023ca1d33f"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a></td></tr>
+<tr class="separator:a90209e5bc47152da0e2408023ca1d33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522211a40923eb695f14ecc29f2a0ebe"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a></td></tr>
+<tr class="separator:a522211a40923eb695f14ecc29f2a0ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ba2de8db04db5f8e1507e7f9e85f8a"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a></td></tr>
+<tr class="separator:af5ba2de8db04db5f8e1507e7f9e85f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc0221dd82834364fc2650e646cec14"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a0994abe3db9a881202eb3946fe82bcb8">common</a></td></tr>
+<tr class="separator:a7cc0221dd82834364fc2650e646cec14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f50b68ae974dc6973fd1698235d898"><td class="memItemLeft" >&#160;&#160;&#160;union {</td></tr>
+<tr class="memitem:a6b8fd6efab10aba5e2175cedba1f6a57"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a5b380a2ac68b910169685c064a96ab4f"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a></td></tr>
+<tr class="separator:a5b380a2ac68b910169685c064a96ab4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d610dab4fd349d61e9021cac82a4503"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a></td></tr>
+<tr class="separator:a4d610dab4fd349d61e9021cac82a4503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953c11391a52d920194100ab2202ceec"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a></td></tr>
+<tr class="separator:a953c11391a52d920194100ab2202ceec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8fd6efab10aba5e2175cedba1f6a57"><td class="memItemLeft" valign="top">&#160;&#160;&#160;&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#aaa3e3447b1ba67b9eb74858967305df1">R_fun</a></td></tr>
+<tr class="separator:a6b8fd6efab10aba5e2175cedba1f6a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131bd61ad1cbf081d07ba9abb51e3ffa"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a36b6e65d5e0bf8ad87d10001a818e3c6"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a></td></tr>
+<tr class="separator:a36b6e65d5e0bf8ad87d10001a818e3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af457f591ec65326d1a88fe9e03e54a81"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#ab488f90e51bbc91068510577c6d742db">sindex</a></td></tr>
+<tr class="separator:af457f591ec65326d1a88fe9e03e54a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e066e83f676f2c31ee8b74e9a8a448"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#ab8af0f07388320ad03576d4d4c0c1bc1">pindex</a></td></tr>
+<tr class="separator:aa9e066e83f676f2c31ee8b74e9a8a448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c3a74f5bd5307a955b8877ffcf9b13"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SEXP&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a8ad5c5cfa2eab8626017e1b9ed0a3f7c">cindex</a></td></tr>
+<tr class="separator:a90c3a74f5bd5307a955b8877ffcf9b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2bf4abddbeaff356e44e9a535e2bfc"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4">pomp_skeleton</a> *&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a980f881d230271d4e5084135e85a521b">fun</a></td></tr>
+<tr class="separator:a2f2bf4abddbeaff356e44e9a535e2bfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131bd61ad1cbf081d07ba9abb51e3ffa"><td class="memItemLeft" valign="top">&#160;&#160;&#160;&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#a157b7427ff47f228cf1ae956a9fe0fa6">native_code</a></td></tr>
+<tr class="separator:a131bd61ad1cbf081d07ba9abb51e3ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8f50b68ae974dc6973fd1698235d898"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="trajectory_8c.html#afa613e33cb70083118c03212cd4317e6">shared</a></td></tr>
+<tr class="separator:ab8f50b68ae974dc6973fd1698235d898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452b8e5e82f9727dec344956611fbc26"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trajectory_8c.html#a452b8e5e82f9727dec344956611fbc26">_pomp_vf_eval_block</a></td></tr>
+<tr class="separator:a452b8e5e82f9727dec344956611fbc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a852c03f3cb2e07fb73c219e4f9a7bf9f"></a>
@@ -268,11 +323,11 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  t = *(REAL(AS_NUMERIC(t0)));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  PROTECT(x0 = duplicate(x0));</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  PROTECT(x0 = as_matrix(x0));</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  PROTECT(x0 = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(x0));</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  dim = INTEGER(GET_DIM(x0));</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a> = dim[0]; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a> = dim[1];</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = as_matrix(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  dim = INTEGER(GET_DIM(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a> = dim[0]; nrepp = dim[1];</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  PROTECT(repnames = GET_COLNAMES(GET_DIMNAMES(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>)));</div>
@@ -296,7 +351,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = VectorToPairList(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>))));</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// create array to store results</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = ret_array(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,ntimes,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,repnames));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7">ret_array</a>(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,ntimes,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,repnames));</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// get names and indices of accumulator variables</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  PROTECT(accumvars = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;accumvars&quot;</span>)));</div>
@@ -305,7 +360,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">int</span> nprotect = 15;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (nzeros &gt; 0) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    zidx = INTEGER(PROTECT(matchnames(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,accumvars,<span class="stringliteral">&quot;state variables&quot;</span>))); nprotect++;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    zidx = INTEGER(PROTECT(<a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,accumvars,<span class="stringliteral">&quot;state variables&quot;</span>))); nprotect++;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// set up the computations</span></div>
@@ -359,13 +414,16 @@ Functions</h2></td></tr>
 <div class="ttc" id="apomp__decls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00032">pomp_fun.c:32</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_ab2d2bf78c9a2e064a57e6c9bf3d52bc2"><div class="ttname"><a href="pomp__decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2">iterate_skeleton_R</a></div><div class="ttdeci">void iterate_skeleton_R(double *X, double t, double deltat, double *time, double *x, double *p, SEXP fn, SEXP args, SEXP Snames, int nvars, int npars, int ncovars, int ntimes, int nrepp, int nreps, int nzeros, lookup_table_t *covar_table, int *zeroindex, double *cov)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00169">skeleton.c:169</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_aca7782b5824af2ba096aa0d7f1c4834b"><div class="ttname"><a href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b">iterate_skeleton_native</a></div><div class="ttdeci">void iterate_skeleton_native(double *X, double t, double deltat, double *time, double *x, double *p, int nvars, int npars, int ncovars, int ntimes, int nrepp, int nreps, int nzeros, int *sidx, int *pidx, int *cidx, lookup_table_t *covar_table, int *zeroindex, pomp_skeleton *fun, SEXP args, double *cov)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00286">skeleton.c:286</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a76a484fb785e5a4b35f15e41a1b8fc1b"><div class="ttname"><a href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a></div><div class="ttdeci">static R_INLINE SEXP matchnames(SEXP provided, SEXP needed, const char *where)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00064">pomp_defines.h:64</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0">pompfunmode</a></div><div class="ttdeci">pompfunmode</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0a010cbf4e4887691452cc62528b4485ad"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a010cbf4e4887691452cc62528b4485ad">Rfun</a></div><div class="ttdeci">@ Rfun</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a></div><div class="ttdeci">@ native</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4">undef</a></div><div class="ttdeci">@ undef</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a></div><div class="ttdeci">@ regNative</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_ad396407a99088c710b270a9c1dc3aa9d"><div class="ttname"><a href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a></div><div class="ttdeci">static R_INLINE SEXP as_matrix(SEXP x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00124">pomp_defines.h:124</a></div></div>
 <div class="ttc" id="astructlookup__table__t_html"><div class="ttname"><a href="structlookup__table__t.html">lookup_table_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00020">pomp_defines.h:20</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a14099a72d03b2c4a17df78083aaefedb"><div class="ttname"><a href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a></div><div class="ttdeci">int npars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00135">trajectory.c:135</a></div></div>
+<div class="ttc" id="atrajectory_8c_html_a2109a7d0e874cf7da59ecdde93f802b7"><div class="ttname"><a href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int nvars, int nreps, int ntimes, SEXP Snames, SEXP repnames)</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00009">trajectory.c:9</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a2e65cd991bb60dd57098ab40b91ac722"><div class="ttname"><a href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a></div><div class="ttdeci">SEXP Snames</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00143">trajectory.c:143</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a4edeebb04b42d65deaf721d0abbc091e"><div class="ttname"><a href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a></div><div class="ttdeci">int ncovars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00136">trajectory.c:136</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a58d967e1449ba00d87d2f6d70b50d525"><div class="ttname"><a href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a></div><div class="ttdeci">SEXP params</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00131">trajectory.c:131</a></div></div>
@@ -375,7 +433,36 @@ Functions</h2></td></tr>
 <div class="ttc" id="atrajectory_8c_html_ac0e9686ed371713a6e6717115c66f602"><div class="ttname"><a href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a></div><div class="ttdeci">SEXP cov</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00132">trajectory.c:132</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_ae1150d665d648766c28508b57a8cb644"><div class="ttname"><a href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a></div><div class="ttdeci">SEXP fn</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00141">trajectory.c:141</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_ae8f6d2fd6490d3153cb4133bf183a404"><div class="ttname"><a href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a></div><div class="ttdeci">int nvars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00134">trajectory.c:134</a></div></div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="trajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph.png" border="0" usemap="#atrajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph" alt=""/></div>
+<map name="atrajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph" id="atrajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,208,107,235"/>
+<area shape="rect" href="pomp__decls_8h.html#a82ea4779fc1cc65f27c3546cbb6669c8" title=" " alt="" coords="185,5,299,32"/>
+<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="199,56,285,83"/>
+<area shape="rect" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="161,157,323,184"/>
+<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="155,537,329,564"/>
+<area shape="rect" href="pomp__decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="171,436,313,463"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="592,309,699,336"/>
+<area shape="rect" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="159,588,325,615"/>
+<area shape="rect" href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="171,259,313,285"/>
+<area shape="rect" href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7" title=" " alt="" coords="201,107,283,133"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="405,5,516,32"/>
+<area shape="rect" href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="396,563,525,589"/>
+<area shape="rect" href="pomp__decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="385,613,536,640"/>
+<area shape="rect" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="407,512,514,539"/>
+<area shape="rect" href="pomp__decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="377,664,544,691"/>
+<area shape="rect" href="skeleton_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="421,411,501,437"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="747,411,864,437"/>
+<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="401,309,521,336"/>
+<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="409,259,512,285"/>
+<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="407,56,515,83"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="415,107,507,133"/>
+<area shape="rect" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b" title=" " alt="" coords="408,157,513,184"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a650670c909a5329eb24d77c821cd5e21"></a>
@@ -540,6 +627,10 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="215,56,378,83"/>
 <area shape="rect" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="213,107,380,133"/>
 <area shape="rect" href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="225,157,368,184"/>
+<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="428,132,548,159"/>
+<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="437,183,539,209"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="596,183,703,209"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="751,183,868,209"/>
 </map>
 </div>
 
@@ -707,18 +798,127 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="trajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph.png" border="0" usemap="#atrajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph" alt=""/></div>
 <map name="atrajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph" id="atrajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph">
-<area shape="rect" title=" " alt="" coords="5,81,120,108"/>
-<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="168,56,328,83"/>
-<area shape="rect" href="pomp__decls_8h.html#ab5870e93076f917246e64740c1416a05" title=" " alt="" coords="184,107,312,133"/>
+<area shape="rect" title=" " alt="" coords="5,132,120,159"/>
+<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="168,81,328,108"/>
+<area shape="rect" href="pomp__decls_8h.html#ab5870e93076f917246e64740c1416a05" title=" " alt="" coords="184,157,312,184"/>
 <area shape="rect" href="pomp__decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="384,5,535,32"/>
 <area shape="rect" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="406,107,513,133"/>
 <area shape="rect" href="pomp__decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="376,56,543,83"/>
+<area shape="rect" href="skeleton_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="419,157,499,184"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="591,233,708,260"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="406,259,513,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2109a7d0e874cf7da59ecdde93f802b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2109a7d0e874cf7da59ecdde93f802b7">&#9670;&nbsp;</a></span>ret_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static R_INLINE SEXP ret_array </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nvars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nreps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ntimes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SEXP&#160;</td>
+          <td class="paramname"><em>Snames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SEXP&#160;</td>
+          <td class="paramname"><em>repnames</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="trajectory_8c_source.html#l00009">9</a> of file <a class="el" href="trajectory_8c_source.html">trajectory.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">int</span> dim[3] = {<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>, ntimes};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *dimnms[3] = {<span class="stringliteral">&quot;name&quot;</span>,<span class="stringliteral">&quot;.id&quot;</span>,<span class="stringliteral">&quot;time&quot;</span>};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(3,dim));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,3);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b">setcolnames</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,repnames);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,dimnms,3);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  UNPROTECT(1);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="apomp__defines_8h_html_a263b864ea80d9008e4c96ffe013f1dff"><div class="ttname"><a href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a></div><div class="ttdeci">static R_INLINE void fixdimnames(SEXP x, const char **names, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00108">pomp_defines.h:108</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00089">pomp_defines.h:89</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a796a0cd2011dadc57c790c46532ef00b"><div class="ttname"><a href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b">setcolnames</a></div><div class="ttdeci">static R_INLINE void setcolnames(SEXP x, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00100">pomp_defines.h:100</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="trajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_cgraph.png" border="0" usemap="#atrajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_cgraph" alt=""/></div>
+<map name="atrajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_cgraph" id="atrajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,87,108"/>
+<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="136,5,244,32"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="144,56,236,83"/>
+<area shape="rect" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b" title=" " alt="" coords="137,107,243,133"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="135,157,245,184"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="trajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_icgraph.png" border="0" usemap="#atrajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_icgraph" alt=""/></div>
+<map name="atrajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_icgraph" id="atrajectory_8c_a2109a7d0e874cf7da59ecdde93f802b7_icgraph">
+<area shape="rect" title=" " alt="" coords="155,5,236,32"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="5,5,107,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a452b8e5e82f9727dec344956611fbc26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452b8e5e82f9727dec344956611fbc26">&#9670;&nbsp;</a></span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }  _pomp_vf_eval_block</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a94fe754831aa7e8eeb4053fa11b537cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94fe754831aa7e8eeb4053fa11b537cd">&#9670;&nbsp;</a></span>args</h2>
 

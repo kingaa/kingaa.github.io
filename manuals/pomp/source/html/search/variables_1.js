@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_379',['b',['../structnlopt__soboldata__s.html#a599e89ed7cc5d5607717a0dc78483236',1,'nlopt_soboldata_s']]]
+  ['args_517',['args',['../trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd',1,'trajectory.c']]]
 ];

@@ -177,12 +177,22 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a> = AS_NUMERIC(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = NEW_NUMERIC(LENGTH(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>)));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  from_log_barycentric(REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>),REAL(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>),LENGTH(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a>(REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>),REAL(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>),LENGTH(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>));</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  UNPROTECT(2);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00013">gompertz.c:13</a></div></div>
-</div><!-- fragment -->
+<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00162">pomp.h:162</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="transformations_8c_a7be026ee05148f7fcf4af0d35983a405_cgraph.png" border="0" usemap="#atransformations_8c_a7be026ee05148f7fcf4af0d35983a405_cgraph" alt=""/></div>
+<map name="atransformations_8c_a7be026ee05148f7fcf4af0d35983a405_cgraph" id="atransformations_8c_a7be026ee05148f7fcf4af0d35983a405_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,239,32"/>
+<area shape="rect" href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102" title=" " alt="" coords="287,5,447,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a5e8b0b73f135519781c3b75e10172203"></a>
@@ -206,11 +216,21 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = AS_NUMERIC(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a> = NEW_NUMERIC(LENGTH(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>)));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  to_log_barycentric(REAL(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>),REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>),LENGTH(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a>(REAL(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>),REAL(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>),LENGTH(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>));</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  UNPROTECT(2);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-</div><!-- fragment -->
+<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00155">pomp.h:155</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="transformations_8c_a5e8b0b73f135519781c3b75e10172203_cgraph.png" border="0" usemap="#atransformations_8c_a5e8b0b73f135519781c3b75e10172203_cgraph" alt=""/></div>
+<map name="atransformations_8c_a5e8b0b73f135519781c3b75e10172203_cgraph" id="atransformations_8c_a5e8b0b73f135519781c3b75e10172203_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,191,32"/>
+<area shape="rect" href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92" title=" " alt="" coords="239,5,381,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a5d549367377037bf0c52dbf9ebfa0ccc"></a>
@@ -237,11 +257,21 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  p = REAL(P);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  n = LENGTH(P);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; n; k++, p++)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    *p = logit(*p);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    *p = <a class="code" href="pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618">logit</a>(*p);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  UNPROTECT(1);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> P;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-</div><!-- fragment -->
+<div class="ttc" id="apomp_8h_html_a4b9004ae67cdf750e5354cf295e91618"><div class="ttname"><a href="pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618">logit</a></div><div class="ttdeci">static R_INLINE double logit(double p)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00035">pomp.h:35</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="transformations_8c_a5d549367377037bf0c52dbf9ebfa0ccc_cgraph.png" border="0" usemap="#atransformations_8c_a5d549367377037bf0c52dbf9ebfa0ccc_cgraph" alt=""/></div>
+<map name="atransformations_8c_a5d549367377037bf0c52dbf9ebfa0ccc_cgraph" id="atransformations_8c_a5d549367377037bf0c52dbf9ebfa0ccc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,125,32"/>
+<area shape="rect" href="pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618" title=" " alt="" coords="173,5,224,32"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

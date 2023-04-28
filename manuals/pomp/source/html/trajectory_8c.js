@@ -7,6 +7,8 @@ var trajectory_8c =
     [ "pomp_desolve_setup", "trajectory_8c.html#a650670c909a5329eb24d77c821cd5e21", null ],
     [ "pomp_desolve_takedown", "trajectory_8c.html#a7a37b08d4f29e8bdd81eb910cf4bff6d", null ],
     [ "pomp_vf_eval", "trajectory_8c.html#a388d1f049a9d7284d0e7ba26591e6099", null ],
+    [ "ret_array", "trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7", null ],
+    [ "_pomp_vf_eval_block", "trajectory_8c.html#a452b8e5e82f9727dec344956611fbc26", null ],
     [ "args", "trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd", null ],
     [ "cindex", "trajectory_8c.html#a8ad5c5cfa2eab8626017e1b9ed0a3f7c", null ],
     [ "common", "trajectory_8c.html#a0994abe3db9a881202eb3946fe82bcb8", null ],

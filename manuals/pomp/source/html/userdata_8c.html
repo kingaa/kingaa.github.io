@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('userdata_8c.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">userdata.c File Reference</div>  </div>
 </div><!--header-->
@@ -112,7 +113,7 @@ Include dependency graph for userdata.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1157d519a72b891b41cef2d20a90bebb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>&#160;&#160;&#160;(__pomp_ptr_userdata)</td></tr>
+<tr class="memitem:a1157d519a72b891b41cef2d20a90bebb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>&#160;&#160;&#160;(<a class="el" href="userdata_8c.html#a7d005a830d01b6c954eccdb1ca82a2ce">__pomp_ptr_userdata</a>)</td></tr>
 <tr class="separator:a1157d519a72b891b41cef2d20a90bebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -127,6 +128,11 @@ Functions</h2></td></tr>
 <tr class="separator:a5703410301afea05b3a3d521ad65597f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ddde1fa5bcf8c3949fd4865a7ab474c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userdata_8c.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a> (void)</td></tr>
 <tr class="separator:a5ddde1fa5bcf8c3949fd4865a7ab474c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7d005a830d01b6c954eccdb1ca82a2ce"><td class="memItemLeft" align="right" valign="top">static SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="userdata_8c.html#a7d005a830d01b6c954eccdb1ca82a2ce">__pomp_ptr_userdata</a></td></tr>
+<tr class="separator:a7d005a830d01b6c954eccdb1ca82a2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1157d519a72b891b41cef2d20a90bebb"></a>
@@ -136,7 +142,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define USERDATA&#160;&#160;&#160;(__pomp_ptr_userdata)</td>
+          <td class="memname">#define USERDATA&#160;&#160;&#160;(<a class="el" href="userdata_8c.html#a7d005a830d01b6c954eccdb1ca82a2ce">__pomp_ptr_userdata</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -164,13 +170,23 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="userdata_8c_source.html#l00012">12</a> of file <a class="el" href="userdata_8c_source.html">userdata.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                           {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  SEXP elt = getPairListElement(<a class="code" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>,name);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  SEXP elt = <a class="code" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513">getPairListElement</a>(<a class="code" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>,name);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">if</span> (isNull(elt)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;no user-data element &#39;%s&#39; is found.&quot;</span>,name);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">return</span> elt;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="ttc" id="apomp__defines_8h_html_ae6384e27fab4a5bb90ecf28da5f66513"><div class="ttname"><a href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513">getPairListElement</a></div><div class="ttdeci">static R_INLINE SEXP getPairListElement(SEXP list, const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00225">pomp_defines.h:225</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="auserdata_8c_html_a1157d519a72b891b41cef2d20a90bebb"><div class="ttname"><a href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a></div><div class="ttdeci">#define USERDATA</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00006">userdata.c:6</a></div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="userdata_8c_a44f810b1f9d483bd150f3e71102b9534_cgraph.png" border="0" usemap="#auserdata_8c_a44f810b1f9d483bd150f3e71102b9534_cgraph" alt=""/></div>
+<map name="auserdata_8c_a44f810b1f9d483bd150f3e71102b9534_cgraph" id="auserdata_8c_a44f810b1f9d483bd150f3e71102b9534_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513" title=" " alt="" coords="160,5,305,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="userdata_8c_a44f810b1f9d483bd150f3e71102b9534_icgraph.png" border="0" usemap="#auserdata_8c_a44f810b1f9d483bd150f3e71102b9534_icgraph" alt=""/></div>
@@ -200,12 +216,21 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="userdata_8c_source.html#l00025">25</a> of file <a class="el" href="userdata_8c_source.html">userdata.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                                     {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  SEXP elt = getPairListElement(<a class="code" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>,name);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  SEXP elt = <a class="code" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513">getPairListElement</a>(<a class="code" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>,name);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (isNull(elt)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;no user-data element &#39;%s&#39; is found.&quot;</span>,name);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span> (!isReal(elt)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;user-data element &#39;%s&#39; is not a numeric vector.&quot;</span>,name);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">return</span> REAL(elt);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="userdata_8c_a5703410301afea05b3a3d521ad65597f_cgraph.png" border="0" usemap="#auserdata_8c_a5703410301afea05b3a3d521ad65597f_cgraph" alt=""/></div>
+<map name="auserdata_8c_a5703410301afea05b3a3d521ad65597f_cgraph" id="auserdata_8c_a5703410301afea05b3a3d521ad65597f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513" title=" " alt="" coords="212,5,357,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="userdata_8c_a5703410301afea05b3a3d521ad65597f_icgraph.png" border="0" usemap="#auserdata_8c_a5703410301afea05b3a3d521ad65597f_icgraph" alt=""/></div>
@@ -235,12 +260,21 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="userdata_8c_source.html#l00018">18</a> of file <a class="el" href="userdata_8c_source.html">userdata.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                               {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  SEXP elt = getPairListElement(<a class="code" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>,name);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  SEXP elt = <a class="code" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513">getPairListElement</a>(<a class="code" href="userdata_8c.html#a1157d519a72b891b41cef2d20a90bebb">USERDATA</a>,name);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (isNull(elt)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;no user-data element &#39;%s&#39; is found.&quot;</span>,name);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">if</span> (!isInteger(elt)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;user-data element &#39;%s&#39; is not an integer.&quot;</span>,name);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">return</span> INTEGER(elt);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="userdata_8c_ab81184a02668adfde937ace9d4cd3c89_cgraph.png" border="0" usemap="#auserdata_8c_ab81184a02668adfde937ace9d4cd3c89_cgraph" alt=""/></div>
+<map name="auserdata_8c_ab81184a02668adfde937ace9d4cd3c89_cgraph" id="auserdata_8c_ab81184a02668adfde937ace9d4cd3c89_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513" title=" " alt="" coords="184,5,329,32"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="userdata_8c_ab81184a02668adfde937ace9d4cd3c89_icgraph.png" border="0" usemap="#auserdata_8c_ab81184a02668adfde937ace9d4cd3c89_icgraph" alt=""/></div>
@@ -277,12 +311,28 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="userdata_8c_aa019045daea9be339fd1e70e3441d252_icgraph.png" border="0" usemap="#auserdata_8c_aa019045daea9be339fd1e70e3441d252_icgraph" alt=""/></div>
 <map name="auserdata_8c_aa019045daea9be339fd1e70e3441d252_icgraph" id="auserdata_8c_aa019045daea9be339fd1e70e3441d252_icgraph">
-<area shape="rect" title=" " alt="" coords="391,81,541,108"/>
-<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="175,5,335,32"/>
-<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="168,56,343,83"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="204,107,307,133"/>
-<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="197,157,314,184"/>
-<area shape="rect" href="pomp__decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099" title=" " alt="" coords="5,5,120,32"/>
+<area shape="rect" title=" " alt="" coords="873,335,1024,361"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="683,5,793,32"/>
+<area shape="rect" href="dprior_8c.html#aa41223e2376a1ecca8a599619048da63" title=" " alt="" coords="697,56,779,83"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="683,107,793,133"/>
+<area shape="rect" href="partrans_8c.html#ac51832cdc1f6e9a2f22df3a0f385cb86" title=" " alt="" coords="689,157,787,184"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="510,309,581,336"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,245,108,272"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="492,259,599,285"/>
+<area shape="rect" href="pomp__decls_8h.html#aff3b8f1d525f9c301d07b63276b76b43" title=" " alt="" coords="698,360,778,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="683,411,793,437"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="652,461,824,488"/>
+<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="658,563,818,589"/>
+<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="651,613,825,640"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="673,664,803,691"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="679,512,797,539"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,284,440,311"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,271,289,297"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="495,461,595,488"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="495,512,595,539"/>
+<area shape="rect" href="pomp__decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099" title=" " alt="" coords="488,563,603,589"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="495,613,596,640"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="494,664,597,691"/>
 </map>
 </div>
 
@@ -313,13 +363,55 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="userdata_8c_a5ddde1fa5bcf8c3949fd4865a7ab474c_icgraph.png" border="0" usemap="#auserdata_8c_a5ddde1fa5bcf8c3949fd4865a7ab474c_icgraph" alt=""/></div>
 <map name="auserdata_8c_a5ddde1fa5bcf8c3949fd4865a7ab474c_icgraph" id="auserdata_8c_a5ddde1fa5bcf8c3949fd4865a7ab474c_icgraph">
-<area shape="rect" title=" " alt="" coords="391,56,557,83"/>
-<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="175,5,335,32"/>
-<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="168,56,343,83"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="204,107,307,133"/>
-<area shape="rect" href="pomp__decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099" title=" " alt="" coords="5,5,120,32"/>
+<area shape="rect" title=" " alt="" coords="873,335,1040,361"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="683,5,793,32"/>
+<area shape="rect" href="dprior_8c.html#aa41223e2376a1ecca8a599619048da63" title=" " alt="" coords="697,56,779,83"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="683,107,793,133"/>
+<area shape="rect" href="partrans_8c.html#ac51832cdc1f6e9a2f22df3a0f385cb86" title=" " alt="" coords="689,157,787,184"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="510,309,581,336"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,245,108,272"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="492,259,599,285"/>
+<area shape="rect" href="pomp__decls_8h.html#aff3b8f1d525f9c301d07b63276b76b43" title=" " alt="" coords="698,360,778,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="683,411,793,437"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="652,461,824,488"/>
+<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="658,563,818,589"/>
+<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="651,613,825,640"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="673,664,803,691"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="679,512,797,539"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,284,440,311"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,271,289,297"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="495,461,595,488"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="495,512,595,539"/>
+<area shape="rect" href="pomp__decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099" title=" " alt="" coords="488,563,603,589"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="495,613,596,640"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="494,664,597,691"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7d005a830d01b6c954eccdb1ca82a2ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d005a830d01b6c954eccdb1ca82a2ce">&#9670;&nbsp;</a></span>__pomp_ptr_userdata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SEXP __pomp_ptr_userdata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="userdata_8c_source.html#l00005">5</a> of file <a class="el" href="userdata_8c_source.html">userdata.c</a>.</p>
 
 </div>
 </div>

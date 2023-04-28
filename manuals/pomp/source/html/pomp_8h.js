@@ -17,5 +17,19 @@ var pomp_8h =
     [ "pomp_rprior", "pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3", null ],
     [ "pomp_skeleton", "pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4", null ],
     [ "pomp_ssa_rate_fn", "pomp_8h.html#a7cbbce02475d974d83e25dc46c4b6f1d", null ],
-    [ "pomp_transform_fn", "pomp_8h.html#a36db4c064e42345dc674fab1e0a1b83c", null ]
+    [ "pomp_transform_fn", "pomp_8h.html#a36db4c064e42345dc674fab1e0a1b83c", null ],
+    [ "dbetabinom", "pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d", null ],
+    [ "dbetanbinom", "pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152", null ],
+    [ "deulermultinom", "pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c", null ],
+    [ "dmultinom", "pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e", null ],
+    [ "dot_product", "pomp_8h.html#a1173f77c43279c4e160634cc5649e4d8", null ],
+    [ "exp2geom_rate_correction", "pomp_8h.html#a5023cae249633906ec84ddda4bd45a36", null ],
+    [ "expit", "pomp_8h.html#a590b27418ed53fa7b17d428c7ca96512", null ],
+    [ "from_log_barycentric", "pomp_8h.html#a3e9f93a24377bb00084d9400134fd102", null ],
+    [ "logit", "pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618", null ],
+    [ "rbetabinom", "pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5", null ],
+    [ "rbetanbinom", "pomp_8h.html#a586276e45f0216dc002a76ff2ff91809", null ],
+    [ "reulermultinom", "pomp_8h.html#af728af2cd3b4be45164906d02a3206a9", null ],
+    [ "rgammawn", "pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e", null ],
+    [ "to_log_barycentric", "pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92", null ]
 ];

@@ -26,5 +26,17 @@ var pomp__defines_8h =
       [ "discrete", "pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a32811eb9eed4b85ef0847fcde95b69ad", null ],
       [ "euler", "pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94aadb417b559f09f8023df24ecf53eec0e", null ],
       [ "gill", "pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a0e24e0126aae5a1f0e94feb82e032d23", null ]
-    ] ]
+    ] ],
+    [ "as_matrix", "pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d", null ],
+    [ "as_state_array", "pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1", null ],
+    [ "fixdimnames", "pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff", null ],
+    [ "getListElement", "pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f", null ],
+    [ "getPairListElement", "pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513", null ],
+    [ "invalid_names", "pomp__defines_8h.html#ac56010c8d35a155162376d066856f663", null ],
+    [ "makearray", "pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49", null ],
+    [ "matchnames", "pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b", null ],
+    [ "paste", "pomp__defines_8h.html#a2d76325a3950678cb407b4af2959c8bf", null ],
+    [ "paste0", "pomp__defines_8h.html#a7113f106ccbbafb6a71989d6f6e9811d", null ],
+    [ "setcolnames", "pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b", null ],
+    [ "setrownames", "pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4", null ]
 ];

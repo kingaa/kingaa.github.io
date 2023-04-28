@@ -119,6 +119,8 @@ Include dependency graph for pomp_fun.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ad3048ea27b0cd1af35870f0b0db5228e"><td class="memItemLeft" align="right" valign="top">static R_INLINE SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e">name_index</a> (SEXP provided, SEXP <a class="el" href="trajectory_8c.html#ac8d8b2659244f8b65022c653e1604b05">object</a>, const char *slot, const char *humanreadable)</td></tr>
+<tr class="separator:ad3048ea27b0cd1af35870f0b0db5228e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94db08f2d9f751e7832aaadb5ae6920e"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp__fun_8c.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a> (SEXP pfun, SEXP gnsi, <a class="el" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0">pompfunmode</a> *<a class="el" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>, SEXP S, SEXP P, SEXP O, SEXP C)</td></tr>
 <tr class="separator:a94db08f2d9f751e7832aaadb5ae6920e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ae1bdf9e79d36d8fc709cbc509d4c8c"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp__fun_8c.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">load_stack_incr</a> (SEXP pack)</td></tr>
@@ -201,6 +203,106 @@ Here is the caller graph for this function:</div>
 <map name="apomp__fun_8c_a5ae1bdf9e79d36d8fc709cbc509d4c8c_icgraph" id="apomp__fun_8c_a5ae1bdf9e79d36d8fc709cbc509d4c8c_icgraph">
 <area shape="rect" title=" " alt="" coords="156,5,279,32"/>
 <area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad3048ea27b0cd1af35870f0b0db5228e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3048ea27b0cd1af35870f0b0db5228e">&#9670;&nbsp;</a></span>name_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static R_INLINE SEXP name_index </td>
+          <td>(</td>
+          <td class="paramtype">SEXP&#160;</td>
+          <td class="paramname"><em>provided</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SEXP&#160;</td>
+          <td class="paramname"><em>object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>slot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>humanreadable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pomp__fun_8c_source.html#l00012">12</a> of file <a class="el" href="pomp__fun_8c_source.html">pomp_fun.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                                                          {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  SEXP slotnames, index;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  PROTECT(slotnames = GET_SLOT(<span class="keywordtype">object</span>,install(slot)));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keywordflow">if</span> (LENGTH(slotnames) &gt; 0) {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    PROTECT(index = <a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(provided,slotnames,humanreadable));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    PROTECT(index = NEW_INTEGER(0));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  UNPROTECT(2);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> index;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="apomp__defines_8h_html_a76a484fb785e5a4b35f15e41a1b8fc1b"><div class="ttname"><a href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a></div><div class="ttdeci">static R_INLINE SEXP matchnames(SEXP provided, SEXP needed, const char *where)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00064">pomp_defines.h:64</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="pomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_cgraph.png" border="0" usemap="#apomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_cgraph" alt=""/></div>
+<map name="apomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_cgraph" id="apomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="156,5,263,32"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="311,5,428,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="pomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_icgraph.png" border="0" usemap="#apomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_icgraph" alt=""/></div>
+<map name="apomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_icgraph" id="apomp__fun_8c_ad3048ea27b0cd1af35870f0b0db5228e_icgraph">
+<area shape="rect" title=" " alt="" coords="1053,360,1156,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="863,360,1005,387"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="673,5,784,32"/>
+<area shape="rect" href="dprior_8c.html#aa41223e2376a1ecca8a599619048da63" title=" " alt="" coords="687,56,770,83"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="673,107,784,133"/>
+<area shape="rect" href="partrans_8c.html#ac51832cdc1f6e9a2f22df3a0f385cb86" title=" " alt="" coords="679,157,778,184"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="506,309,577,336"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,245,108,272"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="488,259,595,285"/>
+<area shape="rect" href="pomp__decls_8h.html#aff3b8f1d525f9c301d07b63276b76b43" title=" " alt="" coords="689,360,769,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="679,411,779,437"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="673,461,784,488"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="643,613,815,640"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="678,563,779,589"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="664,512,793,539"/>
+<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="649,664,809,691"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="670,715,787,741"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,284,440,311"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,271,289,297"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="491,613,591,640"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="490,512,593,539"/>
 </map>
 </div>
 
@@ -295,7 +397,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        SEXP nsi;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        PROTECT(nsi = eval(PROTECT(lang3(install(<span class="stringliteral">&quot;getNativeSymbolInfo&quot;</span>),nf,pack)),R_BaseEnv));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        PROTECT(f = getListElement(nsi,<span class="stringliteral">&quot;address&quot;</span>));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        PROTECT(f = <a class="code" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f">getListElement</a>(nsi,<span class="stringliteral">&quot;address&quot;</span>));</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    nprotect += 3;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a> == <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a>) {</div>
@@ -312,22 +414,22 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      SET_SLOT(pfun,install(<span class="stringliteral">&quot;address&quot;</span>),f);</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">if</span> (S != NA_STRING) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        PROTECT(sidx = name_index(S,pfun,<span class="stringliteral">&quot;statenames&quot;</span>,<span class="stringliteral">&quot;state variables&quot;</span>)); nprotect++;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        PROTECT(sidx = <a class="code" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e">name_index</a>(S,pfun,<span class="stringliteral">&quot;statenames&quot;</span>,<span class="stringliteral">&quot;state variables&quot;</span>)); nprotect++;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        SET_SLOT(pfun,install(<span class="stringliteral">&quot;stateindex&quot;</span>),sidx);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">if</span> (P != NA_STRING) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        PROTECT(pidx = name_index(P,pfun,<span class="stringliteral">&quot;paramnames&quot;</span>,<span class="stringliteral">&quot;parameters&quot;</span>)); nprotect++;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        PROTECT(pidx = <a class="code" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e">name_index</a>(P,pfun,<span class="stringliteral">&quot;paramnames&quot;</span>,<span class="stringliteral">&quot;parameters&quot;</span>)); nprotect++;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        SET_SLOT(pfun,install(<span class="stringliteral">&quot;paramindex&quot;</span>),pidx);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">if</span> (O != NA_STRING) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        PROTECT(oidx = name_index(O,pfun,<span class="stringliteral">&quot;obsnames&quot;</span>,<span class="stringliteral">&quot;observables&quot;</span>)); nprotect++;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        PROTECT(oidx = <a class="code" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e">name_index</a>(O,pfun,<span class="stringliteral">&quot;obsnames&quot;</span>,<span class="stringliteral">&quot;observables&quot;</span>)); nprotect++;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        SET_SLOT(pfun,install(<span class="stringliteral">&quot;obsindex&quot;</span>),oidx);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">if</span> (C != NA_STRING) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        PROTECT(cidx = name_index(C,pfun,<span class="stringliteral">&quot;covarnames&quot;</span>,<span class="stringliteral">&quot;covariates&quot;</span>)); nprotect++;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        PROTECT(cidx = <a class="code" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e">name_index</a>(C,pfun,<span class="stringliteral">&quot;covarnames&quot;</span>,<span class="stringliteral">&quot;covariates&quot;</span>)); nprotect++;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        SET_SLOT(pfun,install(<span class="stringliteral">&quot;covarindex&quot;</span>),cidx);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
@@ -355,17 +457,47 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a></div><div class="ttdeci">@ native</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4">undef</a></div><div class="ttdeci">@ undef</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a></div><div class="ttdeci">@ regNative</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_ab39b1553739e35037c2a8846ba65594f"><div class="ttname"><a href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f">getListElement</a></div><div class="ttdeci">static R_INLINE SEXP getListElement(SEXP list, const char *str)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00213">pomp_defines.h:213</a></div></div>
+<div class="ttc" id="apomp__fun_8c_html_ad3048ea27b0cd1af35870f0b0db5228e"><div class="ttname"><a href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e">name_index</a></div><div class="ttdeci">static R_INLINE SEXP name_index(SEXP provided, SEXP object, const char *slot, const char *humanreadable)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00012">pomp_fun.c:12</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a6c1c1c275092d79f830aa36620cfd33d"><div class="ttname"><a href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a></div><div class="ttdeci">pompfunmode mode</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00129">trajectory.c:129</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_ae1150d665d648766c28508b57a8cb644"><div class="ttname"><a href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a></div><div class="ttdeci">SEXP fn</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00141">trajectory.c:141</a></div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="pomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_cgraph.png" border="0" usemap="#apomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_cgraph" alt=""/></div>
+<map name="apomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_cgraph" id="apomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,148,57"/>
+<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="196,5,316,32"/>
+<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="205,56,307,83"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="364,56,471,83"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="519,56,636,83"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="pomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_icgraph.png" border="0" usemap="#apomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_icgraph" alt=""/></div>
 <map name="apomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_icgraph" id="apomp__fun_8c_a94db08f2d9f751e7832aaadb5ae6920e_icgraph">
-<area shape="rect" title=" " alt="" coords="213,56,356,83"/>
-<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="5,5,165,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="34,56,137,83"/>
-<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="27,107,144,133"/>
+<area shape="rect" title=" " alt="" coords="863,360,1005,387"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="673,5,784,32"/>
+<area shape="rect" href="dprior_8c.html#aa41223e2376a1ecca8a599619048da63" title=" " alt="" coords="687,56,770,83"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="673,107,784,133"/>
+<area shape="rect" href="partrans_8c.html#ac51832cdc1f6e9a2f22df3a0f385cb86" title=" " alt="" coords="679,157,778,184"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="506,309,577,336"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,245,108,272"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="488,259,595,285"/>
+<area shape="rect" href="pomp__decls_8h.html#aff3b8f1d525f9c301d07b63276b76b43" title=" " alt="" coords="689,360,769,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="679,411,779,437"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="673,461,784,488"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="643,613,815,640"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="678,563,779,589"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="664,512,793,539"/>
+<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="649,664,809,691"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="670,715,787,741"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,284,440,311"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,271,289,297"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="491,613,591,640"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="490,512,593,539"/>
 </map>
 </div>
 

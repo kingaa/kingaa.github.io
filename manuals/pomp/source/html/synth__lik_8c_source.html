@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('synth__lik_8c_source.html',''); initRe
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// with additional pre-conditioning for numerical stability</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// translated into C from R code by Simon N. Wood</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> robust_synth_loglik (<span class="keywordtype">double</span> *y, <span class="keywordtype">int</span> *dim, <span class="keywordtype">double</span> *ydat, <span class="keywordtype">double</span> *loglik) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="synth__lik_8c.html#a357cf49307356489922f2cb22efac4fd">   13</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="synth__lik_8c.html#a357cf49307356489922f2cb22efac4fd">robust_synth_loglik</a> (<span class="keywordtype">double</span> *y, <span class="keywordtype">int</span> *dim, <span class="keywordtype">double</span> *ydat, <span class="keywordtype">double</span> *loglik) {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">// &#39;ydat&#39; is destroyed</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// &#39;y&#39; is preserved</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keywordtype">int</span> nrow = dim[0];</div>
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('synth__lik_8c_source.html',''); initRe
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// do second QR decomposition &amp; backsolve</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// LAPACK QR decomposition without pivoting DGEQR2(M,N,A,LDA,TAU,WORK,INFO)</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  F77_CALL(dgeqr2)(&amp;nrow,&amp;ncol,y1,&amp;nrow,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,work,&amp;info);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  pomp_backsolve(y1,nrow,ncol,ydat,1,<span class="stringliteral">&quot;upper&quot;</span>,<span class="stringliteral">&quot;transpose&quot;</span>,<span class="stringliteral">&quot;non-unit&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a>(y1,nrow,ncol,ydat,1,<span class="stringliteral">&quot;upper&quot;</span>,<span class="stringliteral">&quot;transpose&quot;</span>,<span class="stringliteral">&quot;non-unit&quot;</span>);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// compute residual sum of squares and add up logs of diag(R)</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">for</span> (yp = y1, rss = 0, i = nrow+1, j = 0; j &lt; ncol; j++, yp += i) { <span class="comment">// yp marches along the diagonal of R</span></div>
@@ -199,7 +199,7 @@ $(document).ready(function(){initNavTree('synth__lik_8c_source.html',''); initRe
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  PROTECT(ysim = AS_NUMERIC(ysim));</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  PROTECT(loglik = NEW_NUMERIC(1));</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  robust_synth_loglik(REAL(ysim),INTEGER(dim),REAL(y),REAL(loglik));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="synth__lik_8c.html#a357cf49307356489922f2cb22efac4fd">robust_synth_loglik</a>(REAL(ysim),INTEGER(dim),REAL(y),REAL(loglik));</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  UNPROTECT(4);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">return</span> loglik;</div>
@@ -209,6 +209,8 @@ $(document).ready(function(){initNavTree('synth__lik_8c_source.html',''); initRe
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html"><div class="ttname"><a href="pomp__mat_8h.html">pomp_mat.h</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html_a24159b4842915664a9cd3d4cce56b529"><div class="ttname"><a href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a></div><div class="ttdeci">#define FCONE</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00007">pomp_mat.h:7</a></div></div>
+<div class="ttc" id="apomp__mat_8h_html_a614853020d1cfbd754ac82a5895b5547"><div class="ttname"><a href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a></div><div class="ttdeci">static R_INLINE void pomp_backsolve(double *a, int lda, int n, double *x, int incx, char *uplo, char *transpose, char *unit)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00011">pomp_mat.h:11</a></div></div>
+<div class="ttc" id="asynth__lik_8c_html_a357cf49307356489922f2cb22efac4fd"><div class="ttname"><a href="synth__lik_8c.html#a357cf49307356489922f2cb22efac4fd">robust_synth_loglik</a></div><div class="ttdeci">static void robust_synth_loglik(double *y, int *dim, double *ydat, double *loglik)</div><div class="ttdef"><b>Definition:</b> <a href="synth__lik_8c_source.html#l00013">synth_lik.c:13</a></div></div>
 <div class="ttc" id="asynth__lik_8c_html_aba3bb9e9bce5419b23032d95b1bba531"><div class="ttname"><a href="synth__lik_8c.html#aba3bb9e9bce5419b23032d95b1bba531">synth_loglik</a></div><div class="ttdeci">SEXP synth_loglik(SEXP ysim, SEXP ydat)</div><div class="ttdef"><b>Definition:</b> <a href="synth__lik_8c_source.html#l00106">synth_lik.c:106</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

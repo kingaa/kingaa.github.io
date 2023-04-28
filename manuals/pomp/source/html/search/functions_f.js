@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wpfilter_377',['wpfilter',['../pomp__decls_8h.html#ac643fb3aad609b1078e9abb994ec6cf2',1,'wpfilter(SEXP X, SEXP Params, SEXP Weights, SEXP W, SEXP Trigger, SEXP Target, SEXP Np):&#160;wpfilter.c'],['../wpfilter_8c.html#ac643fb3aad609b1078e9abb994ec6cf2',1,'wpfilter(SEXP X, SEXP Params, SEXP Weights, SEXP W, SEXP Trigger, SEXP Target, SEXP Np):&#160;wpfilter.c']]]
+  ['table_5flookup_504',['table_lookup',['../lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0',1,'table_lookup(lookup_table_t *tab, double x, double *y):&#160;lookup_table.c'],['../pomp__decls_8h.html#a036b9fb7cfc62e3984889f95024971a0',1,'table_lookup(lookup_table_t *tab, double x, double *y):&#160;lookup_table.c']]],
+  ['to_5flog_5fbarycentric_505',['to_log_barycentric',['../pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92',1,'pomp.h']]]
 ];

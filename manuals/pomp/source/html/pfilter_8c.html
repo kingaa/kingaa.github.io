@@ -112,10 +112,108 @@ Include dependency graph for pfilter.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a753cef4b66fbcd5c1df4a4cb94e04edc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pfilter_8c.html#a753cef4b66fbcd5c1df4a4cb94e04edc">pred_mean_var</a> (int, int, int, const double *, double *, double *)</td></tr>
+<tr class="separator:a753cef4b66fbcd5c1df4a4cb94e04edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2b1c00965b1b0dc8e1c931ceede8d6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pfilter_8c.html#a5a2b1c00965b1b0dc8e1c931ceede8d6">filt_mean</a> (int, int, int, long double, const double *, const double *, double *)</td></tr>
+<tr class="separator:a5a2b1c00965b1b0dc8e1c931ceede8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfcb3a7b41bc3b2b9315163717854242"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pfilter_8c.html#acfcb3a7b41bc3b2b9315163717854242">pfilter</a> (SEXP x, SEXP <a class="el" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>, SEXP Np, SEXP predmean, SEXP predvar, SEXP filtmean, SEXP trackancestry, SEXP doparRS, SEXP weights, SEXP wave)</td></tr>
 <tr class="separator:acfcb3a7b41bc3b2b9315163717854242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a5a2b1c00965b1b0dc8e1c931ceede8d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2b1c00965b1b0dc8e1c931ceede8d6">&#9670;&nbsp;</a></span>filt_mean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void filt_mean </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nvars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nreps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>all_fail</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>wsum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>fm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pfilter_8c_source.html#l00294">294</a> of file <a class="el" href="pfilter_8c_source.html">pfilter.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> *xx;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>; j++, fm++) {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    xx = x+j;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> (all_fail) {           <span class="comment">// unweighted average</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      <span class="keywordflow">for</span> (k = 0, sum = 0; k &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; k++, xx += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>) sum += *xx;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      *fm = sum/((<span class="keywordtype">long</span> double) <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    } <span class="keywordflow">else</span> {                  <span class="comment">// weighted average</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      <span class="keywordflow">for</span> (k = 0, sum = 0; k &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; k++, xx += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>) sum += w[k]*(*xx);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      *fm = sum/wsum;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="ttc" id="atrajectory_8c_html_a72f66d373d52ab42fd8af134bd7f9cda"><div class="ttname"><a href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a></div><div class="ttdeci">int nreps</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00137">trajectory.c:137</a></div></div>
+<div class="ttc" id="atrajectory_8c_html_ae8f6d2fd6490d3153cb4133bf183a404"><div class="ttname"><a href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a></div><div class="ttdeci">int nvars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00134">trajectory.c:134</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="pfilter_8c_a5a2b1c00965b1b0dc8e1c931ceede8d6_icgraph.png" border="0" usemap="#apfilter_8c_a5a2b1c00965b1b0dc8e1c931ceede8d6_icgraph" alt=""/></div>
+<map name="apfilter_8c_a5a2b1c00965b1b0dc8e1c931ceede8d6_icgraph" id="apfilter_8c_a5a2b1c00965b1b0dc8e1c931ceede8d6_icgraph">
+<area shape="rect" title=" " alt="" coords="115,5,199,32"/>
+<area shape="rect" href="pfilter_8c.html#acfcb3a7b41bc3b2b9315163717854242" title=" " alt="" coords="5,5,67,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acfcb3a7b41bc3b2b9315163717854242"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfcb3a7b41bc3b2b9315163717854242">&#9670;&nbsp;</a></span>pfilter()</h2>
 
@@ -213,7 +311,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a> = dim[0]; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a> = dim[1];</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  PROTECT(Xnames = GET_ROWNAMES(GET_DIMNAMES(x)));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = as_matrix(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  PROTECT(dimP = GET_DIM(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  dim = INTEGER(dimP);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a> = dim[0];</div>
@@ -306,12 +404,12 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (do_pm || do_pv) {</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">double</span> *tmp = (do_pv) ? REAL(pv) : 0;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    pred_mean_var(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,do_pv,REAL(x),REAL(pm),tmp);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="pfilter_8c.html#a753cef4b66fbcd5c1df4a4cb94e04edc">pred_mean_var</a>(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,do_pv,REAL(x),REAL(pm),tmp);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="comment">//  compute filter mean</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordflow">if</span> (do_fm) {</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    filt_mean(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,all_fail,w,xw,REAL(x),REAL(fm));</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="pfilter_8c.html#a5a2b1c00965b1b0dc8e1c931ceede8d6">filt_mean</a>(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,all_fail,w,xw,REAL(x),REAL(fm));</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  }</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="comment">// compute weighted average of parameters</span></div>
@@ -343,18 +441,18 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// create storage for new states</span></div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    xdim[0] = <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>; xdim[1] = np;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    PROTECT(newstates = makearray(2,xdim)); nprotect++;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    setrownames(newstates,Xnames,2);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    fixdimnames(newstates,dimnm,2);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    PROTECT(newstates = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim)); nprotect++;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(newstates,Xnames,2);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a>(newstates,dimnm,2);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ss = REAL(x);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    st = REAL(newstates);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">// create storage for new parameters</span></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (do_pr) {</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      xdim[0] = <a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>; xdim[1] = np;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      PROTECT(newparams = makearray(2,xdim)); nprotect++;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      setrownames(newparams,Pnames,2);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      fixdimnames(newparams,dimnm,2);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      PROTECT(newparams = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim)); nprotect++;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(newparams,Pnames,2);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <a class="code" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a>(newparams,dimnm,2);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      ps = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      pt = REAL(newparams);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
@@ -379,8 +477,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    dim = INTEGER(newdim);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    dim[0] = <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>; dim[1] = <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    SET_DIM(x,newdim);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    setrownames(x,Xnames,2);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    fixdimnames(x,dimnm,2);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(x,Xnames,2);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a>(x,dimnm,2);</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">if</span> (do_ta)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keywordflow">for</span> (k = 0; k &lt; np; k++) xanc[k] = k+1;</div>
@@ -436,14 +534,128 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">return</span>(retval);</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="ttc" id="apfilter_8c_html_a5a2b1c00965b1b0dc8e1c931ceede8d6"><div class="ttname"><a href="pfilter_8c.html#a5a2b1c00965b1b0dc8e1c931ceede8d6">filt_mean</a></div><div class="ttdeci">static void filt_mean(int, int, int, long double, const double *, const double *, double *)</div><div class="ttdef"><b>Definition:</b> <a href="pfilter_8c_source.html#l00294">pfilter.c:294</a></div></div>
+<div class="ttc" id="apfilter_8c_html_a753cef4b66fbcd5c1df4a4cb94e04edc"><div class="ttname"><a href="pfilter_8c.html#a753cef4b66fbcd5c1df4a4cb94e04edc">pred_mean_var</a></div><div class="ttdeci">static void pred_mean_var(int, int, int, const double *, double *, double *)</div><div class="ttdef"><b>Definition:</b> <a href="pfilter_8c_source.html#l00266">pfilter.c:266</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_a37f1a2acca063e96f0efa73705ec87b2"><div class="ttname"><a href="pomp__decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a></div><div class="ttdeci">void nosort_resamp(int nw, double *w, int np, int *p, int offset)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00025">resample.c:25</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a263b864ea80d9008e4c96ffe013f1dff"><div class="ttname"><a href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a></div><div class="ttdeci">static R_INLINE void fixdimnames(SEXP x, const char **names, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00108">pomp_defines.h:108</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00089">pomp_defines.h:89</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_ad396407a99088c710b270a9c1dc3aa9d"><div class="ttname"><a href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a></div><div class="ttdeci">static R_INLINE SEXP as_matrix(SEXP x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00124">pomp_defines.h:124</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_a8224a361dddd2ad59b411982e5ea746f"><div class="ttname"><a href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a></div><div class="ttdeci">#define warn(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00015">pomp_internal.h:15</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a14099a72d03b2c4a17df78083aaefedb"><div class="ttname"><a href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a></div><div class="ttdeci">int npars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00135">trajectory.c:135</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a58d967e1449ba00d87d2f6d70b50d525"><div class="ttname"><a href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a></div><div class="ttdeci">SEXP params</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00131">trajectory.c:131</a></div></div>
-<div class="ttc" id="atrajectory_8c_html_a72f66d373d52ab42fd8af134bd7f9cda"><div class="ttname"><a href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a></div><div class="ttdeci">int nreps</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00137">trajectory.c:137</a></div></div>
-<div class="ttc" id="atrajectory_8c_html_ae8f6d2fd6490d3153cb4133bf183a404"><div class="ttname"><a href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a></div><div class="ttdeci">int nvars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00134">trajectory.c:134</a></div></div>
-</div><!-- fragment -->
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="pfilter_8c_acfcb3a7b41bc3b2b9315163717854242_cgraph.png" border="0" usemap="#apfilter_8c_acfcb3a7b41bc3b2b9315163717854242_cgraph" alt=""/></div>
+<map name="apfilter_8c_acfcb3a7b41bc3b2b9315163717854242_cgraph" id="apfilter_8c_acfcb3a7b41bc3b2b9315163717854242_cgraph">
+<area shape="rect" title=" " alt="" coords="5,157,67,184"/>
+<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="133,5,219,32"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="285,31,396,57"/>
+<area shape="rect" href="pfilter_8c.html#a5a2b1c00965b1b0dc8e1c931ceede8d6" title=" " alt="" coords="134,107,218,133"/>
+<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="122,157,230,184"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="130,208,222,235"/>
+<area shape="rect" href="pomp__decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2" title=" " alt="" coords="117,259,235,285"/>
+<area shape="rect" href="pfilter_8c.html#a753cef4b66fbcd5c1df4a4cb94e04edc" title=" " alt="" coords="115,309,237,336"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a753cef4b66fbcd5c1df4a4cb94e04edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753cef4b66fbcd5c1df4a4cb94e04edc">&#9670;&nbsp;</a></span>pred_mean_var()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void pred_mean_var </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nvars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nreps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>do_pv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>pm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>pv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pfilter_8c_source.html#l00266">266</a> of file <a class="el" href="pfilter_8c_source.html">pfilter.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum, sumsq, vsq;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">double</span> *xx;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>; j++, pm++, pv++) {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    xx = x+j;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">// compute prediction mean</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">for</span> (k = 0, sum = 0; k &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; k++, xx += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>) sum += *xx;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    *pm = sum/((<span class="keywordtype">long</span> double) <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">// compute prediction variance</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">if</span> (do_pv) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      xx = x+j;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordflow">for</span> (k = 0, sumsq = 0; k &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; k++, xx += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>) {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    vsq = *xx - sum;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    sumsq += vsq*vsq;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      *pv = sumsq/((<span class="keywordtype">long</span> double) (<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a> - 1));</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="pfilter_8c_a753cef4b66fbcd5c1df4a4cb94e04edc_icgraph.png" border="0" usemap="#apfilter_8c_a753cef4b66fbcd5c1df4a4cb94e04edc_icgraph" alt=""/></div>
+<map name="apfilter_8c_a753cef4b66fbcd5c1df4a4cb94e04edc_icgraph" id="apfilter_8c_a753cef4b66fbcd5c1df4a4cb94e04edc_icgraph">
+<area shape="rect" title=" " alt="" coords="115,5,237,32"/>
+<area shape="rect" href="pfilter_8c.html#acfcb3a7b41bc3b2b9315163717854242" title=" " alt="" coords="5,5,67,32"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

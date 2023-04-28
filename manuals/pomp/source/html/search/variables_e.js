@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_408',['y',['../structlookup__table__t.html#afc0a89e59da489c4fd7fd4aca70c298d',1,'lookup_table_t']]]
+  ['x_549',['x',['../structlookup__table__t.html#aa071aabe5391f11c0d915907ad16dd28',1,'lookup_table_t::x()'],['../structnlopt__soboldata__s.html#aa5637e5efd8357dfee1f4feb92b544af',1,'nlopt_soboldata_s::x()']]]
 ];

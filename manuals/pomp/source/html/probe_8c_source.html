@@ -145,12 +145,12 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  ntimes = INTEGER(GET_DIM(y))[2];</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// set up temporary storage</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  xdim[0] = nobs; xdim[1] = ntimes;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  PROTECT(x = makearray(2,xdim));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  setrownames(x,GET_ROWNAMES(GET_DIMNAMES(y)),2);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(x,GET_ROWNAMES(GET_DIMNAMES(y)),2);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// set up matrix to hold results</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  xdim[0] = nsims; xdim[1] = nvals;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(retval = makearray(2,xdim));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(retval = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  PROTECT(valnames = NEW_LIST(2));</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  SET_ELEMENT(valnames,1,names);    <span class="comment">// set column names</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  SET_DIMNAMES(retval,valnames);</div>
@@ -198,6 +198,8 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> retval;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 <div class="ttc" id="apomp__decls_8h_html_adbe89f4789c66d534f2521bc3c4c98e7"><div class="ttname"><a href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7">do_simulate</a></div><div class="ttdeci">SEXP do_simulate(SEXP object, SEXP params, SEXP nsim, SEXP rettype, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="simulate_8c_source.html#l00007">simulate.c:7</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00089">pomp_defines.h:89</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html"><div class="ttname"><a href="pomp__internal_8h.html">pomp_internal.h</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="aprobe_8c_html_ad2595c6a453ae9fad2f232595ced5ccc"><div class="ttname"><a href="probe_8c.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a></div><div class="ttdeci">SEXP apply_probe_sim(SEXP object, SEXP nsim, SEXP params, SEXP probes, SEXP datval, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="probe_8c_source.html#l00029">probe.c:29</a></div></div>

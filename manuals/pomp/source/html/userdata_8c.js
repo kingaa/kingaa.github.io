@@ -5,5 +5,6 @@ var userdata_8c =
     [ "get_userdata_double", "userdata_8c.html#a5703410301afea05b3a3d521ad65597f", null ],
     [ "get_userdata_int", "userdata_8c.html#ab81184a02668adfde937ace9d4cd3c89", null ],
     [ "set_pomp_userdata", "userdata_8c.html#aa019045daea9be339fd1e70e3441d252", null ],
-    [ "unset_pomp_userdata", "userdata_8c.html#a5ddde1fa5bcf8c3949fd4865a7ab474c", null ]
+    [ "unset_pomp_userdata", "userdata_8c.html#a5ddde1fa5bcf8c3949fd4865a7ab474c", null ],
+    [ "__pomp_ptr_userdata", "userdata_8c.html#a7d005a830d01b6c954eccdb1ca82a2ce", null ]
 ];

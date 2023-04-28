@@ -22,5 +22,7 @@ var ou2_8c =
     [ "_ou2_rmeasure", "ou2_8c.html#a78c2ea1338c663656b2a023cf559c741", null ],
     [ "_ou2_skel", "ou2_8c.html#aac9eb3292d0599698a9cb747241ad32c", null ],
     [ "_ou2_step", "ou2_8c.html#a169ee0dc87d392a574e8815b934d19f1", null ],
-    [ "_ou2_vmeasure", "ou2_8c.html#a39104e744ca71e0cd070ff508eb64a9a", null ]
+    [ "_ou2_vmeasure", "ou2_8c.html#a39104e744ca71e0cd070ff508eb64a9a", null ],
+    [ "dens_ou2", "ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a", null ],
+    [ "sim_ou2", "ou2_8c.html#a202fca38e8cd5e9f0a9e0c33921b01cd", null ]
 ];

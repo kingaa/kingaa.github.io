@@ -149,12 +149,24 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lookup__table_8c_aa7a80c78f9ef26859eea09b5299e702b_icgraph.png" border="0" usemap="#alookup__table_8c_aa7a80c78f9ef26859eea09b5299e702b_icgraph" alt=""/></div>
 <map name="alookup__table_8c_aa7a80c78f9ef26859eea09b5299e702b_icgraph" id="alookup__table_8c_aa7a80c78f9ef26859eea09b5299e702b_icgraph">
-<area shape="rect" title=" " alt="" coords="376,107,539,133"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="156,5,328,32"/>
-<area shape="rect" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="179,56,305,83"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,81,108,108"/>
-<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="162,157,322,184"/>
-<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="183,208,301,235"/>
+<area shape="rect" title=" " alt="" coords="885,309,1048,336"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="696,5,807,32"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="696,56,807,83"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="529,436,599,463"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,360,108,387"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="511,360,617,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="701,259,801,285"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="696,309,807,336"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="665,208,837,235"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="701,411,802,437"/>
+<area shape="rect" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="337,461,463,488"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="687,613,816,640"/>
+<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="671,563,831,589"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="693,157,810,184"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="349,360,451,387"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,360,289,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="514,208,614,235"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="513,613,615,640"/>
 </map>
 </div>
 
@@ -201,8 +213,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">if</span> (nt &gt; 1) {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    xdim[0] = nvar; xdim[1] = nt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = makearray(2,xdim));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    setrownames(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,Cnames,2);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,Cnames,2);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = NEW_NUMERIC(nvar));</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    SET_NAMES(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,Cnames);</div>
@@ -218,15 +230,20 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="alookup__table_8c_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
 <div class="ttc" id="alookup__table_8c_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
 <div class="ttc" id="alookup__table_8c_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00089">pomp_defines.h:89</a></div></div>
+<div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
 <div class="ttc" id="astructlookup__table__t_html"><div class="ttname"><a href="structlookup__table__t.html">lookup_table_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00020">pomp_defines.h:20</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lookup__table_8c_aaf5964c67b353b466461b1eb1269e129_cgraph.png" border="0" usemap="#alookup__table_8c_aaf5964c67b353b466461b1eb1269e129_cgraph" alt=""/></div>
 <map name="alookup__table_8c_aaf5964c67b353b466461b1eb1269e129_cgraph" id="alookup__table_8c_aaf5964c67b353b466461b1eb1269e129_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,131,57"/>
+<area shape="rect" title=" " alt="" coords="5,107,131,133"/>
 <area shape="rect" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="181,5,343,32"/>
 <area shape="rect" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="179,56,345,83"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="216,107,308,133"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="207,157,317,184"/>
+<area shape="rect" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="209,208,315,235"/>
 </map>
 </div>
 <div class="dynheader">
@@ -291,12 +308,24 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lookup__table_8c_a1e57a24640cb0d9f6f8d55e02c3d553f_icgraph.png" border="0" usemap="#alookup__table_8c_a1e57a24640cb0d9f6f8d55e02c3d553f_icgraph" alt=""/></div>
 <map name="alookup__table_8c_a1e57a24640cb0d9f6f8d55e02c3d553f_icgraph" id="alookup__table_8c_a1e57a24640cb0d9f6f8d55e02c3d553f_icgraph">
-<area shape="rect" title=" " alt="" coords="376,107,543,133"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="156,5,328,32"/>
-<area shape="rect" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="179,56,305,83"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,81,108,108"/>
-<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="162,157,322,184"/>
-<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="183,208,301,235"/>
+<area shape="rect" title=" " alt="" coords="885,309,1052,336"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="696,5,807,32"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="696,56,807,83"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="529,436,599,463"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,360,108,387"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="511,360,617,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="701,259,801,285"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="696,309,807,336"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="665,208,837,235"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="701,411,802,437"/>
+<area shape="rect" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="337,461,463,488"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="687,613,816,640"/>
+<area shape="rect" href="pomp__decls_8h.html#a650670c909a5329eb24d77c821cd5e21" title=" " alt="" coords="671,563,831,589"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="693,157,810,184"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="349,360,451,387"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,360,289,387"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="514,208,614,235"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="513,613,615,640"/>
 </map>
 </div>
 
@@ -366,13 +395,29 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lookup__table_8c_a036b9fb7cfc62e3984889f95024971a0_icgraph.png" border="0" usemap="#alookup__table_8c_a036b9fb7cfc62e3984889f95024971a0_icgraph" alt=""/></div>
 <map name="alookup__table_8c_a036b9fb7cfc62e3984889f95024971a0_icgraph" id="alookup__table_8c_a036b9fb7cfc62e3984889f95024971a0_icgraph">
-<area shape="rect" title=" " alt="" coords="391,107,497,133"/>
-<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="175,5,335,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ab5870e93076f917246e64740c1416a05" title=" " alt="" coords="191,56,319,83"/>
-<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="168,107,343,133"/>
-<area shape="rect" href="pomp__decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="184,157,327,184"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="204,208,307,235"/>
-<area shape="rect" href="pomp__decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099" title=" " alt="" coords="5,31,120,57"/>
+<area shape="rect" title=" " alt="" coords="1108,335,1215,361"/>
+<area shape="rect" href="dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="917,5,1028,32"/>
+<area shape="rect" href="emeasure_8c.html#ab362c459382493c6f7f4721dc5bf6457" title=" " alt="" coords="917,56,1028,83"/>
+<area shape="rect" href="pomp__decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="529,157,599,184"/>
+<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,208,108,235"/>
+<area shape="rect" href="pomp__decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="511,208,617,235"/>
+<area shape="rect" href="pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082" title=" " alt="" coords="917,411,1028,437"/>
+<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="665,259,837,285"/>
+<area shape="rect" href="pomp__decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="893,461,1053,488"/>
+<area shape="rect" href="pomp__decls_8h.html#ab5870e93076f917246e64740c1416a05" title=" " alt="" coords="909,512,1037,539"/>
+<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="885,563,1060,589"/>
+<area shape="rect" href="pomp__decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="901,613,1044,640"/>
+<area shape="rect" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="337,335,463,361"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="908,664,1037,691"/>
+<area shape="rect" href="ssa_8c.html#a08a1d63aa145b71449d68985c31ab32c" title=" " alt="" coords="949,309,997,336"/>
+<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="349,208,451,235"/>
+<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,208,289,235"/>
+<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="514,259,614,285"/>
+<area shape="rect" href="pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c" title=" " alt="" coords="701,461,801,488"/>
+<area shape="rect" href="pomp__decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099" title=" " alt="" coords="694,512,809,539"/>
+<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="701,588,802,615"/>
+<area shape="rect" href="dprocess_8c.html#a2a6438a8b3220ecd24e531d5b3dd4534" title=" " alt="" coords="700,664,803,691"/>
+<area shape="rect" href="pomp__decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="693,309,810,336"/>
 </map>
 </div>
 

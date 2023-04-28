@@ -117,10 +117,198 @@ Include dependency graph for probe_nlar.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:afd315040fac0de8def98fd667a0e440c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="probe__nlar_8c.html#afd315040fac0de8def98fd667a0e440c">poly_nlar_fit</a> (double *beta, double *y, int n, int nterms, int *lag, int *power, double *<a class="el" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>)</td></tr>
+<tr class="separator:afd315040fac0de8def98fd667a0e440c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f90ddaaa65be036697557e76d8e0d0c"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="probe__nlar_8c.html#a9f90ddaaa65be036697557e76d8e0d0c">probe_nlar</a> (SEXP x, SEXP lags, SEXP powers)</td></tr>
 <tr class="separator:a9f90ddaaa65be036697557e76d8e0d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="afd315040fac0de8def98fd667a0e440c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd315040fac0de8def98fd667a0e440c">&#9670;&nbsp;</a></span>poly_nlar_fit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void poly_nlar_fit </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nterms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>lag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>power</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>X</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="probe__nlar_8c_source.html#l00039">39</a> of file <a class="el" href="probe__nlar_8c_source.html">probe_nlar.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                                            {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// &#39;x&#39; is an n vector of data.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// &#39;nterms&#39; gives the number of terms on the rhs of the autoregression.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// &#39;lag[i]&#39; gives the lag of the ith term on the rhs.</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// &#39;power[i]&#39; gives the power to which the ith rhs term should be raised.</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// &#39;beta&#39; contains the ar coefficients</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> maxlag, nx, ny, ok, ct;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> i, j, k;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">double</span> xx, *yp;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">double</span> obs1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// find maxlag</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">for</span> (maxlag = 0, i = 0; i &lt; nterms; i++) </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    maxlag = (lag[i] &gt; maxlag) ? lag[i] : maxlag;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  ny = n - maxlag;      <span class="comment">// maximum response vector length</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// compute the series mean</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">for</span> (j = 0, ct = 0, xx = 0.0; j &lt; n; j++) </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (R_FINITE(y[j])) { </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      xx += y[j];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      ct++;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  xx /= ct; <span class="comment">// series mean</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// center the whole series</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// also check to see if there is any variability in the predictors</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  ok = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  obs1 = R_NaReal;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; n; j++) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (R_FINITE(y[j])) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">if</span> (!ok &amp;&amp; (j &lt; ny)) {    <span class="comment">// j &lt; ny means x[j] is a predictor</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">if</span> (!R_FINITE(obs1)) obs1 = y[j]; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (y[j] != obs1) ok = 1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      } </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      y[j] -= xx;       <span class="comment">// subtracting series mean</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    } </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (!ok) {            <span class="comment">// data had no variability</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; nterms; i++) beta[i] = 0.0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  } <span class="keywordflow">else</span> {          <span class="comment">// data not all the same</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">double</span> *Xp;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">int</span> finite[ny];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// test for NA rows in model matrix and response vector</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">for</span> (nx = 0, yp = y+maxlag, j = 0; j &lt; ny; j++) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      finite[j] = (R_FINITE(yp[j])) ? 1 : 0; <span class="comment">// finite response?</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; nterms; i++)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    finite[j] = (R_FINITE(yp[j-lag[i]])) ? finite[j] : 0; <span class="comment">// finite in model matrix row j, column i</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">if</span> (finite[j]) nx++;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// nx is now the number of non-NA rows in the model matrix</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// build the model matrix, omitting NA rows</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> (Xp = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, i = 0; i &lt; nterms; i++) { <span class="comment">// work through the terms</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; ny; j++) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (finite[j]) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      xx = yp[j-lag[i]];    <span class="comment">// current predictor</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      *Xp = xx;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordflow">for</span> (k = 1; k &lt; power[i]; k++) *Xp *= xx; <span class="comment">// raise to the appropriate power</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      Xp++;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// X is now the nx by nterms model matrix</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// drop the NA rows from the response data</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (i = 0, j = 0; j &lt; ny; j++)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keywordflow">if</span> (finite[j]) yp[i++] = yp[j]; <span class="comment">// keep this row</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// response vector is now length nx</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>[nterms];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordtype">int</span> pivot[nterms];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="comment">// first QR decompose the model matrix</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <a class="code" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6">pomp_qr</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,nx,nterms,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="comment">// then solve R b = Q&#39;y for b</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <a class="code" href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2">pomp_qrqy</a>(yp,<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,nx,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,nx,1,nterms,<span class="stringliteral">&quot;left&quot;</span>,<span class="stringliteral">&quot;transpose&quot;</span>); <span class="comment">// y &lt;- Q&#39;y </span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <a class="code" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,nx,nterms,yp,1,<span class="stringliteral">&quot;Upper&quot;</span>,<span class="stringliteral">&quot;No transpose&quot;</span>,<span class="stringliteral">&quot;Non-unit&quot;</span>);   <span class="comment">// y &lt;- R^{-1} y</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="comment">// unpivot and store coefficients in beta</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; nterms; i++) beta[pivot[i]] = yp[i];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
+<div class="ttc" id="agompertz_8c_html_aa7082577997805000f8e8b56846642cd"><div class="ttname"><a href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a></div><div class="ttdeci">#define tau</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00081">gompertz.c:81</a></div></div>
+<div class="ttc" id="apomp__mat_8h_html_a305b5b8bb23bc880b442f68dc1219ed6"><div class="ttname"><a href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6">pomp_qr</a></div><div class="ttdeci">static R_INLINE void pomp_qr(double *a, int m, int n, int *pivot, double *tau)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00024">pomp_mat.h:24</a></div></div>
+<div class="ttc" id="apomp__mat_8h_html_a595e9be65aee622370178eb5a49f85c2"><div class="ttname"><a href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2">pomp_qrqy</a></div><div class="ttdeci">static R_INLINE void pomp_qrqy(double *c, double *a, int lda, double *tau, int m, int n, int k, char *side, char *transpose)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00039">pomp_mat.h:39</a></div></div>
+<div class="ttc" id="apomp__mat_8h_html_a614853020d1cfbd754ac82a5895b5547"><div class="ttname"><a href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a></div><div class="ttdeci">static R_INLINE void pomp_backsolve(double *a, int lda, int n, double *x, int incx, char *uplo, char *transpose, char *unit)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00011">pomp_mat.h:11</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__nlar_8c_afd315040fac0de8def98fd667a0e440c_cgraph.png" border="0" usemap="#aprobe__nlar_8c_afd315040fac0de8def98fd667a0e440c_cgraph" alt=""/></div>
+<map name="aprobe__nlar_8c_afd315040fac0de8def98fd667a0e440c_cgraph" id="aprobe__nlar_8c_afd315040fac0de8def98fd667a0e440c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,108,83"/>
+<area shape="rect" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547" title=" " alt="" coords="156,5,288,32"/>
+<area shape="rect" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6" title=" " alt="" coords="183,56,261,83"/>
+<area shape="rect" href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2" title=" " alt="" coords="175,107,269,133"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__nlar_8c_afd315040fac0de8def98fd667a0e440c_icgraph.png" border="0" usemap="#aprobe__nlar_8c_afd315040fac0de8def98fd667a0e440c_icgraph" alt=""/></div>
+<map name="aprobe__nlar_8c_afd315040fac0de8def98fd667a0e440c_icgraph" id="aprobe__nlar_8c_afd315040fac0de8def98fd667a0e440c_icgraph">
+<area shape="rect" title=" " alt="" coords="144,5,247,32"/>
+<area shape="rect" href="pomp__decls_8h.html#a9f90ddaaa65be036697557e76d8e0d0c" title=" " alt="" coords="5,5,96,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9f90ddaaa65be036697557e76d8e0d0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f90ddaaa65be036697557e76d8e0d0c">&#9670;&nbsp;</a></span>probe_nlar()</h2>
 
@@ -168,7 +356,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  PROTECT(beta = NEW_NUMERIC(nterms));</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  mm = (<span class="keywordtype">double</span> *) R_alloc(n*nterms,<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>)); <span class="comment">// storage for the model matrix</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  poly_nlar_fit(REAL(beta),REAL(y),n,nterms,INTEGER(lags),INTEGER(powers),mm);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="probe__nlar_8c.html#afd315040fac0de8def98fd667a0e440c">poly_nlar_fit</a>(REAL(beta),REAL(y),n,nterms,INTEGER(lags),INTEGER(powers),mm);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  PROTECT(beta_names = NEW_STRING(nterms));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nterms; k++) {</div>
@@ -180,7 +368,20 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  UNPROTECT(3);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> beta;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-</div><!-- fragment -->
+<div class="ttc" id="aprobe__nlar_8c_html_afd315040fac0de8def98fd667a0e440c"><div class="ttname"><a href="probe__nlar_8c.html#afd315040fac0de8def98fd667a0e440c">poly_nlar_fit</a></div><div class="ttdeci">static void poly_nlar_fit(double *beta, double *y, int n, int nterms, int *lag, int *power, double *X)</div><div class="ttdef"><b>Definition:</b> <a href="probe__nlar_8c_source.html#l00039">probe_nlar.c:39</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="probe__nlar_8c_a9f90ddaaa65be036697557e76d8e0d0c_cgraph.png" border="0" usemap="#aprobe__nlar_8c_a9f90ddaaa65be036697557e76d8e0d0c_cgraph" alt=""/></div>
+<map name="aprobe__nlar_8c_a9f90ddaaa65be036697557e76d8e0d0c_cgraph" id="aprobe__nlar_8c_a9f90ddaaa65be036697557e76d8e0d0c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,96,83"/>
+<area shape="rect" href="probe__nlar_8c.html#afd315040fac0de8def98fd667a0e440c" title=" " alt="" coords="144,56,247,83"/>
+<area shape="rect" href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547" title=" " alt="" coords="295,5,427,32"/>
+<area shape="rect" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6" title=" " alt="" coords="321,56,400,83"/>
+<area shape="rect" href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2" title=" " alt="" coords="313,107,408,133"/>
+</map>
+</div>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add_9',['add',['../classgenealogy__t.html#a140358dfddf568a26cff1d5933bf2627',1,'genealogy_t']]]
+  ['add_9',['add',['../classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a',1,'nodeseq_t']]]
 ];

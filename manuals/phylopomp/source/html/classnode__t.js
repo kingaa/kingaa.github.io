@@ -7,6 +7,7 @@ var classnode__t =
     [ "bytesize", "classnode__t.html#a33991dff8295aa9f2f93393d934ec517", null ],
     [ "clean", "classnode__t.html#a1bd4e9ea8c49441bb786bdc866283601", null ],
     [ "compact_newick", "classnode__t.html#a00bafc21cee2554589034441366a589e", null ],
+    [ "dead_root", "classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746", null ],
     [ "describe", "classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae", null ],
     [ "green_ball", "classnode__t.html#add99dd3797437bbc7eafb0f181c78b19", null ],
     [ "green_ball", "classnode__t.html#ab10430fd8addd5852699c30a23729880", null ],

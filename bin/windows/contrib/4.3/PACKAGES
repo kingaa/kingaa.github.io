@@ -15,10 +15,10 @@ License: GPL-3
 Archs: x64
 
 Package: phylopomp
-Version: 0.3.0.1
+Version: 0.4.0.0
 Depends: R(>= 4.1)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
-        foreach, tidyr, pomp(>= 4.6), cowplot
+        foreach, tidyr, pomp(>= 5.1), cowplot
 LinkingTo: pomp
 Suggests: tidyverse, doFuture, doRNG, broom
 License: GPL-3

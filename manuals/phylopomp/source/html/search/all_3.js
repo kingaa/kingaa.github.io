@@ -9,7 +9,8 @@ var searchData=
   ['color_5fsymbol_28',['color_symbol',['../classball__t.html#a3545dd485a4dfd8364552bf3d360555e',1,'ball_t']]],
   ['color_5ft_29',['color_t',['../ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1',1,'ball.h']]],
   ['colored_30',['colored',['../classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f',1,'nodeseq_t']]],
-  ['compact_5fnewick_31',['compact_newick',['../classnode__t.html#a00bafc21cee2554589034441366a589e',1,'node_t']]],
-  ['compare_32',['compare',['../classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef',1,'ball_t']]],
-  ['current_33',['current',['../classpopul__proc__t.html#a491ddc88dbcd6fd3dc97a3f9ec8a6ef7',1,'popul_proc_t']]]
+  ['comb_31',['comb',['../classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb',1,'nodeseq_t']]],
+  ['compact_5fnewick_32',['compact_newick',['../classnode__t.html#a00bafc21cee2554589034441366a589e',1,'node_t']]],
+  ['compare_33',['compare',['../classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef',1,'ball_t']]],
+  ['current_34',['current',['../classpopul__proc__t.html#a491ddc88dbcd6fd3dc97a3f9ec8a6ef7',1,'popul_proc_t']]]
 ];

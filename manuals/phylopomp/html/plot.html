@@ -27,7 +27,16 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S3 method for class 'gpsim'
-plot(x, ..., time, t0, prune = TRUE, obscure = TRUE, compact = TRUE)
+plot(
+  x,
+  ...,
+  time,
+  t0,
+  prune = TRUE,
+  obscure = TRUE,
+  compact = TRUE,
+  palette = scales::hue_pal(l = 30, h = c(220, 580))
+)
 
 treeplot(
   tree,
@@ -72,6 +81,13 @@ treeplot(
 <td>
 <p>logical; return the tree in compact representation?</p>
 </td></tr>
+<tr><td><code id="plot_:_palette">palette</code></td>
+<td>
+<p>color palette for branches.
+This can be furnished either as a function or a vector of colors.
+If this is a function, it should take a single integer argument, the number of colors required.
+If it is a vector, ....</p>
+</td></tr>
 <tr><td><code id="plot_:_tree">tree</code></td>
 <td>
 <p>character; tree representation in Newick format.</p>
@@ -83,13 +99,6 @@ treeplot(
 <tr><td><code id="plot_:_points">points</code></td>
 <td>
 <p>Show nodes and tips?</p>
-</td></tr>
-<tr><td><code id="plot_:_palette">palette</code></td>
-<td>
-<p>color palette for branches.
-This can be furnished either as a function or a vector of colors.
-If this is a function, it should take a single integer argument, the number of colors required.
-If it is a vector, ....</p>
 </td></tr>
 </table>
 
@@ -143,6 +152,6 @@ If it is a vector, ....</p>
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.3.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.4.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

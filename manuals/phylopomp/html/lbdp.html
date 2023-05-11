@@ -33,16 +33,7 @@ continueLBDP(object, time, lambda = NA, mu = NA, psi = NA)
 
 lbdp_exact(data, lambda, mu, psi, n0 = 1)
 
-lbdp_pomp(
-  data,
-  lambda,
-  mu,
-  psi,
-  n0 = 1,
-  t0 = 0,
-  method = c("gillespie", "euler"),
-  delta.t = NULL
-)
+lbdp_pomp(data, lambda, mu, psi, n0 = 1, t0 = 0)
 </code></pre>
 
 
@@ -81,14 +72,6 @@ lbdp_pomp(
 <tr><td><code id="lbdp_:_data">data</code></td>
 <td>
 <p>data frame containing the genealogy event times and event codes.</p>
-</td></tr>
-<tr><td><code id="lbdp_:_method">method</code></td>
-<td>
-<p>integration method</p>
-</td></tr>
-<tr><td><code id="lbdp_:_delta.t">delta.t</code></td>
-<td>
-<p>Euler step-size when <code>method="euler"</code> is chosen</p>
 </td></tr>
 </table>
 
@@ -147,6 +130,6 @@ simulate("LBDP",time=4) |&gt;
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.3.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.4.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

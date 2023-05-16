@@ -71,21 +71,17 @@ lbdp_pomp(data, lambda, mu, psi, n0 = 1, t0 = 0)
 </td></tr>
 <tr><td><code id="lbdp_:_data">data</code></td>
 <td>
-<p>data frame containing the genealogy event times and event codes.</p>
+<p>data frame containing the genealogy event times.</p>
 </td></tr>
 </table>
 
 
 <h3>Details</h3>
 
-<p><code>lbdp_exact</code> gives the exact likelihood of a linear birth-death process, conditioned on <code class="reqn">n_0 = 0</code> (Stadler, 2010, Thm 3.5).
+<p><code>lbdp_exact</code> gives the exact log likelihood of a linear birth-death process, conditioned on <code class="reqn">n_0 = 0</code> (Stadler, 2010, Thm 3.5).
 The derivation is also given in comments in the code.
 </p>
-<p>The <code>data</code> argument should in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.
-</p>
 <p><code>lbdp_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and a linear birth-death-sampling process.
-</p>
-<p>It is assumed that <code>data</code> is in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.
 </p>
 
 
@@ -130,6 +126,6 @@ simulate("LBDP",time=4) |&gt;
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.4.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.5.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

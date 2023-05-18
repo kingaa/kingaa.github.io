@@ -27,7 +27,11 @@ proportional to the prevalence of infection in that unit.
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>trans_homog_objfun(params, data, est = character(0), tol = 1e-04, maxit = 10)
+<pre><code class='language-R'>trans_homog_filter(params, data, tol = 1e-04, maxit = 10)
+
+trans_homog_objfun(params, data, est = character(0), tol = 1e-04, maxit = 10)
+
+trans_unit_spec_filter(params, data, tol = 1e-04, maxit = 10)
 
 trans_unit_spec_objfun(
   params,
@@ -50,10 +54,6 @@ trans_unit_spec_objfun(
 <td>
 <p>patient movement, isolation, and testing data</p>
 </td></tr>
-<tr><td><code id="transmission_:_est">est</code></td>
-<td>
-<p>names of parameters to estimate</p>
-</td></tr>
 <tr><td><code id="transmission_:_tol">tol</code></td>
 <td>
 <p>positive scalar; convergence tolerance (mean difference).</p>
@@ -62,6 +62,10 @@ trans_unit_spec_objfun(
 <td>
 <p>scalar integer; maximum number of fixed-point iterations.
 If <code>tol</code> is not achieved in <code>maxit</code> or fewer iterations, an error is generated.</p>
+</td></tr>
+<tr><td><code id="transmission_:_est">est</code></td>
+<td>
+<p>names of parameters to estimate</p>
 </td></tr>
 </table>
 
@@ -79,8 +83,14 @@ and isolated patients, respectively.
 On an isolated patient, this force of infection is reduced by the factor
 <code>isol_factor</code>.
 </p>
+<p><code>trans_homog_filter</code> runs a fixed-point Bernoulli filter
+for the transmission model with global b and gamma.
+</p>
 <p><code>trans_homog_objfun</code> is a stateful objective
-function for the transmission model with global a, b, and gamma.
+function for the transmission model with global b and gamma.
+</p>
+<p><code>trans_unit_spec_filter</code> runs a fixed-point Bernoulli filter
+for the transmission model with unit-specific b.
 </p>
 <p><code>trans_unit_spec_objfun</code> is a stateful objective function
 for the transmission model with unit-specific transmission rates,
@@ -151,6 +161,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.9.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.10.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

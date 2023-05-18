@@ -27,7 +27,11 @@ independent, conditional on the force of infection.
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>indep_homog_objfun(params, data, est = character(0))
+<pre><code class='language-R'>indep_homog_filter(params, data)
+
+indep_homog_objfun(params, data, est = character(0))
+
+indep_unit_spec_filter(params, data)
 
 indep_unit_spec_objfun(params, data, est = character(0))
 </code></pre>
@@ -53,8 +57,16 @@ indep_unit_spec_objfun(params, data, est = character(0))
 
 <h3>Details</h3>
 
+<p><code>indep_homog_filter</code> runs a Bernoulli filter for the
+independent model with a global lambda and gamma.
+</p>
 <p><code>indep_homog_objfun</code> is a stateful objective
 function for the independent model with a global lambda and gamma.
+</p>
+<p><code>indep_unit_spec_filter</code> runs a Bernoulli filter
+for the independent model with a unit specific lambda,
+one gamma for inside the hospital, and one gamma outside the
+hospital.
 </p>
 <p><code>indep_unit_spec_objfun</code> is a stateful objective
 function for the independent model with unit specific lambda, one
@@ -147,6 +159,6 @@ coef(h)
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.9.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.10.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

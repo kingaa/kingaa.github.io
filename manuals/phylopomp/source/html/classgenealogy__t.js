@@ -18,7 +18,7 @@ var classgenealogy__t =
     [ "lineage_count", "classgenealogy__t.html#a03edaddf1e13c57619ba8d11648eede3", null ],
     [ "make_node", "classgenealogy__t.html#a29db3270bcc329ea024d1dd5bdf2251d", null ],
     [ "migrate", "classgenealogy__t.html#ac72fa260845cb9f95ddf6814e978e122", null ],
-    [ "newick", "classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff", null ],
+    [ "newick", "classgenealogy__t.html#a96bbaef953baa818634c309091317100", null ],
     [ "obscure", "classgenealogy__t.html#ad35cd81e778d84727b0fcfa8839b28cb", null ],
     [ "obscured", "classgenealogy__t.html#a8bef0e1e070025c10f79d3e78f4e0bfa", null ],
     [ "operator=", "classgenealogy__t.html#a507c6d6c58933a9b4b69366e0fe42f6a", null ],

@@ -167,9 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a00933a9fa6af988b377c1c3d3c5d8cac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#a00933a9fa6af988b377c1c3d3c5d8cac">yaml</a> (std::string tab=&quot;&quot;) const</td></tr>
 <tr class="memdesc:a00933a9fa6af988b377c1c3d3c5d8cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">machine/human readable info  <a href="classmaster__t.html#a00933a9fa6af988b377c1c3d3c5d8cac">More...</a><br /></td></tr>
 <tr class="separator:a00933a9fa6af988b377c1c3d3c5d8cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76e84d14ef2bb374608e9fce7c2d4224"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#a76e84d14ef2bb374608e9fce7c2d4224">newick</a> (bool compact=true) const</td></tr>
-<tr class="memdesc:a76e84d14ef2bb374608e9fce7c2d4224"><td class="mdescLeft">&#160;</td><td class="mdescRight">tree in Newick format  <a href="classmaster__t.html#a76e84d14ef2bb374608e9fce7c2d4224">More...</a><br /></td></tr>
-<tr class="separator:a76e84d14ef2bb374608e9fce7c2d4224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707d46baa0a3f95f290d1dd624376438"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#a707d46baa0a3f95f290d1dd624376438">newick</a> (void) const</td></tr>
+<tr class="memdesc:a707d46baa0a3f95f290d1dd624376438"><td class="mdescLeft">&#160;</td><td class="mdescRight">tree in Newick format  <a href="classmaster__t.html#a707d46baa0a3f95f290d1dd624376438">More...</a><br /></td></tr>
+<tr class="separator:a707d46baa0a3f95f290d1dd624376438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae105dd3437fc9a3c61478bee2e042e"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#acae105dd3437fc9a3c61478bee2e042e">lineage_count</a> (void) const</td></tr>
 <tr class="memdesc:acae105dd3437fc9a3c61478bee2e042e"><td class="mdescLeft">&#160;</td><td class="mdescRight">lineage count table  <a href="classmaster__t.html#acae105dd3437fc9a3c61478bee2e042e">More...</a><br /></td></tr>
 <tr class="separator:acae105dd3437fc9a3c61478bee2e042e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1068,8 +1068,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a76e84d14ef2bb374608e9fce7c2d4224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76e84d14ef2bb374608e9fce7c2d4224">&#9670;&nbsp;</a></span>newick()</h2>
+<a id="a707d46baa0a3f95f290d1dd624376438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707d46baa0a3f95f290d1dd624376438">&#9670;&nbsp;</a></span>newick()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1082,8 +1082,8 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
         <tr>
           <td class="memname">std::string <a class="el" href="classmaster__t.html">master_t</a>&lt; POPN, NDEME &gt;::newick </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>compact</em> = <code>true</code></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1097,18 +1097,18 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <p>tree in Newick format </p>
 
 <p class="definition">Definition at line <a class="el" href="master_8h_source.html#l00117">117</a> of file <a class="el" href="master_8h_source.html">master.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                               {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a7ae6e41dbfeac513e9d70220dda54060">geneal</a>.<a class="code" href="classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff">newick</a>(compact);</div>
+<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a7ae6e41dbfeac513e9d70220dda54060">geneal</a>.<a class="code" href="classgenealogy__t.html#a96bbaef953baa818634c309091317100">newick</a>();</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_ac019ff6efe3904594ecf238eaf7ef7ff"><div class="ttname"><a href="classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff">genealogy_t::newick</a></div><div class="ttdeci">std::string newick(bool compact=true) const</div><div class="ttdoc">put genealogy at current time into Newick format.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00214">genealogy.h:214</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a96bbaef953baa818634c309091317100"><div class="ttname"><a href="classgenealogy__t.html#a96bbaef953baa818634c309091317100">genealogy_t::newick</a></div><div class="ttdeci">std::string newick(void) const</div><div class="ttdoc">put genealogy at current time into Newick format.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00214">genealogy.h:214</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmaster__t_a76e84d14ef2bb374608e9fce7c2d4224_cgraph.png" border="0" usemap="#aclassmaster__t_a76e84d14ef2bb374608e9fce7c2d4224_cgraph" alt=""/></div>
-<map name="aclassmaster__t_a76e84d14ef2bb374608e9fce7c2d4224_cgraph" id="aclassmaster__t_a76e84d14ef2bb374608e9fce7c2d4224_cgraph">
+<div class="center"><img src="classmaster__t_a707d46baa0a3f95f290d1dd624376438_cgraph.png" border="0" usemap="#aclassmaster__t_a707d46baa0a3f95f290d1dd624376438_cgraph" alt=""/></div>
+<map name="aclassmaster__t_a707d46baa0a3f95f290d1dd624376438_cgraph" id="aclassmaster__t_a707d46baa0a3f95f290d1dd624376438_cgraph">
 <area shape="rect" title="tree in Newick format" alt="" coords="5,31,140,57"/>
-<area shape="rect" href="classgenealogy__t.html#ac019ff6efe3904594ecf238eaf7ef7ff" title="put genealogy at current time into Newick format." alt="" coords="188,31,344,57"/>
-<area shape="rect" href="classnodeseq__t.html#a0f763f9a3a5279dfddd40addcfb76875" title="put genealogy at time t into Newick format." alt="" coords="392,5,535,32"/>
+<area shape="rect" href="classgenealogy__t.html#a96bbaef953baa818634c309091317100" title="put genealogy at current time into Newick format." alt="" coords="188,31,344,57"/>
+<area shape="rect" href="classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da" title="put genealogy at time t into Newick format." alt="" coords="392,5,535,32"/>
 <area shape="rect" href="classgenealogy__t.html#a4e52880b04a66502530ccf7c9b3cd634" title="view/set current time." alt="" coords="393,56,533,83"/>
 <area shape="rect" href="classnodeseq__t.html#a103886080efad3f60cbbd4bc36fb82d8" title="Earliest time in the sequence." alt="" coords="583,5,715,32"/>
 </map>

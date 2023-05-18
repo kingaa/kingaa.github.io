@@ -15,8 +15,8 @@ License: GPL-3
 Archs: x64
 
 Package: phylopomp
-Version: 0.5.0.0
-Depends: R(>= 4.1)
+Version: 0.6.0.0
+Depends: R(>= 4.2)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
         foreach, tidyr, pomp(>= 5.1), cowplot
 LinkingTo: pomp

@@ -18,6 +18,26 @@ function processMathHTML() {
 
 <h2 id='NEWS'>News for package &lsquo;phylopomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">phylopomp</span> version 0.6.0</h3>
+
+
+<ul>
+<li><p> The option to generate &ldquo;non-compact&rdquo; Newick-format tree representations has been removed:
+all Newick representations are now in the &ldquo;compact&rdquo; format.
+In this format, each node has a color indicated by a letter immediately following its closing parenthesis:
+this is &lsquo;b&rsquo; if the node holds a blue ball (i.e., it represents a sample) and &lsquo;g&rsquo; otherwise.
+Information about the node's deme and its name are provided as well.
+</p>
+</li>
+<li><p> Previously, the Newick formatter employed &ldquo;invisible&rdquo; nodes to assist in the formatting of plots.
+As of this release, they no longer contain such nodes:
+the generated Newick strings now accurately represent the forest of trees corresponding to the genealogy process.
+The proper formatting for plots is accomplished within the plotting routines themselves.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">phylopomp</span> version 0.5.0</h3>
 
 

@@ -1,4 +1,4 @@
-phylopomp-package	phylopomp-package
+phylopomp-package	phylopomp
 %dopar%	reexports
 as.data.frame	as_data_frame
 as.data.frame.gplin	as_data_frame
@@ -29,9 +29,9 @@ moran	moran
 moran_exact	moran
 newick2df	newick2df
 nodeGrob	internals
-plot	plot
+phylopomp	phylopomp
 plot.gplin	lineages
-plot.gpsim	plot
+plot.gpsim	treeplot
 plot_grid	reexports
 pocketGrob	internals
 postDrawDetails.ballGrob	internals
@@ -64,6 +64,6 @@ SIR	sir
 sir	sir
 sir_pomp	sir
 stew	reexports
-treeplot	plot
+treeplot	treeplot
 viewport	reexports
 yaml	yaml

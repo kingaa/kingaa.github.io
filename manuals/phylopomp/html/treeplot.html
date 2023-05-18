@@ -14,9 +14,9 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>plot {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>treeplot {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='plot'>Fancy tree plotter</h2>
+<h2 id='treeplot'>Fancy tree plotter</h2>
 
 <h3>Description</h3>
 
@@ -27,16 +27,7 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S3 method for class 'gpsim'
-plot(
-  x,
-  ...,
-  time,
-  t0,
-  prune = TRUE,
-  obscure = TRUE,
-  compact = TRUE,
-  palette = scales::hue_pal(l = 30, h = c(220, 580))
-)
+plot(x, ..., time, t0, prune = TRUE, obscure = TRUE)
 
 treeplot(
   tree,
@@ -53,52 +44,49 @@ treeplot(
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="plot_:_x">x</code></td>
+<tr><td><code id="treeplot_:_x">x</code></td>
 <td>
 <p>object of class &lsquo;gpsim&rsquo;</p>
 </td></tr>
-<tr><td><code id="plot_:_...">...</code></td>
+<tr><td><code id="treeplot_:_...">...</code></td>
 <td>
-<p>passed to <code><a href="../../phylopomp/help/treeplot.html">treeplot</a></code></p>
+<p><code>plot</code> passes extra arguments to <code><a href="../../phylopomp/help/treeplot.html">treeplot</a></code>.
+<code>treeplot</code> passes extra arguments to <code><a href="../../ggplot2/help/theme.html">theme</a></code>.</p>
 </td></tr>
-<tr><td><code id="plot_:_time">time</code></td>
+<tr><td><code id="treeplot_:_time">time</code></td>
 <td>
 <p>numeric; time of the genealogy.</p>
 </td></tr>
-<tr><td><code id="plot_:_t0">t0</code></td>
+<tr><td><code id="treeplot_:_t0">t0</code></td>
 <td>
 <p>numeric; time of the root.</p>
 </td></tr>
-<tr><td><code id="plot_:_prune">prune</code></td>
+<tr><td><code id="treeplot_:_prune">prune</code></td>
 <td>
 <p>logical; prune the genealogy?</p>
 </td></tr>
-<tr><td><code id="plot_:_obscure">obscure</code></td>
+<tr><td><code id="treeplot_:_obscure">obscure</code></td>
 <td>
 <p>logical; obscure the demes?</p>
 </td></tr>
-<tr><td><code id="plot_:_compact">compact</code></td>
+<tr><td><code id="treeplot_:_tree">tree</code></td>
 <td>
-<p>logical; return the tree in compact representation?</p>
+<p>character; tree representation in Newick format.</p>
 </td></tr>
-<tr><td><code id="plot_:_palette">palette</code></td>
+<tr><td><code id="treeplot_:_ladderize">ladderize</code></td>
+<td>
+<p>Ladderize?</p>
+</td></tr>
+<tr><td><code id="treeplot_:_points">points</code></td>
+<td>
+<p>Show nodes and tips?</p>
+</td></tr>
+<tr><td><code id="treeplot_:_palette">palette</code></td>
 <td>
 <p>color palette for branches.
 This can be furnished either as a function or a vector of colors.
 If this is a function, it should take a single integer argument, the number of colors required.
 If it is a vector, ....</p>
-</td></tr>
-<tr><td><code id="plot_:_tree">tree</code></td>
-<td>
-<p>character; tree representation in Newick format.</p>
-</td></tr>
-<tr><td><code id="plot_:_ladderize">ladderize</code></td>
-<td>
-<p>Ladderize?</p>
-</td></tr>
-<tr><td><code id="plot_:_points">points</code></td>
-<td>
-<p>Show nodes and tips?</p>
 </td></tr>
 </table>
 
@@ -152,6 +140,6 @@ If it is a vector, ....</p>
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.5.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.6.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

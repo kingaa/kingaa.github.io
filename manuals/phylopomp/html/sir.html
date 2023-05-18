@@ -90,7 +90,7 @@ sir_pomp(data, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
 </td></tr>
 <tr><td><code id="sir_:_data">data</code></td>
 <td>
-<p>data frame containing the genealogy in the format returned by <code><a href="../../phylopomp/help/newick2df.html">newick2df</a></code>.</p>
+<p>data frame containing the lineage count function</p>
 </td></tr>
 </table>
 
@@ -103,7 +103,7 @@ sir_pomp(data, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
 
 <h3>Value</h3>
 
-<p>An object of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;SIR&rdquo;.
+<p><code>runSIR</code> and <code>continueSIR</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;SIR&rdquo;.
 </p>
 
 
@@ -136,6 +136,6 @@ simulate("SIR",delta=1,time=20,I0=4) |&gt; plot()
 simulate("SIR",delta=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.5.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.6.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

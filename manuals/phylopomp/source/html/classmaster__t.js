@@ -16,7 +16,7 @@ var classmaster__t =
     [ "jump", "classmaster__t.html#af0e3048867ca697ed1274dd09d92d60c", null ],
     [ "lineage_count", "classmaster__t.html#acae105dd3437fc9a3c61478bee2e042e", null ],
     [ "migrate", "classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4", null ],
-    [ "newick", "classmaster__t.html#a76e84d14ef2bb374608e9fce7c2d4224", null ],
+    [ "newick", "classmaster__t.html#a707d46baa0a3f95f290d1dd624376438", null ],
     [ "operator=", "classmaster__t.html#a21a253d95e42e9a4ded196eb1e538231", null ],
     [ "operator=", "classmaster__t.html#a5add874dc957945b1a27198e1d208f80", null ],
     [ "play", "classmaster__t.html#a192af9a2412fb7fe97fade765da8393a", null ],

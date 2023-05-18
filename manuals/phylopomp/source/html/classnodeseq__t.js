@@ -12,7 +12,7 @@ var classnodeseq__t =
     [ "destroy_node", "classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276", null ],
     [ "drop", "classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390", null ],
     [ "dusk", "classnodeseq__t.html#a7f3cefd2fdb27430074efc904d852ea9", null ],
-    [ "newick", "classnodeseq__t.html#a0f763f9a3a5279dfddd40addcfb76875", null ],
+    [ "newick", "classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da", null ],
     [ "ntime", "classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3", null ],
     [ "repair_owners", "classnodeseq__t.html#a5f978d0d983fff4ffd5fc2ecfab3c289", null ],
     [ "structure", "classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253", null ],

@@ -8,8 +8,7 @@ var hierarchy =
     [ "lbdp_state_t", "structlbdp__state__t.html", null ],
     [ "std::list", null, [
       [ "nodeseq_t", "classnodeseq__t.html", [
-        [ "genealogy_t< ndeme >", "classgenealogy__t.html", null ],
-        [ "genealogy_t< ndeme >", "classgenealogy__t.html", null ]
+        [ "genealogy_t", "classgenealogy__t.html", null ]
       ] ]
     ] ],
     [ "moran_parameters_t", "structmoran__parameters__t.html", null ],

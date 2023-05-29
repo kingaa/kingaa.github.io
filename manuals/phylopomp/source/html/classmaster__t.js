@@ -27,6 +27,6 @@ var classmaster__t =
     [ "yaml", "classmaster__t.html#a00933a9fa6af988b377c1c3d3c5d8cac", null ],
     [ "operator>>", "classmaster__t.html#a2b2ef934a517ce39b6084504e8ba0088", null ],
     [ "operator>>", "classmaster__t.html#a53db11d44e287acce76a125253f3832e", null ],
-    [ "geneal", "classmaster__t.html#a7ae6e41dbfeac513e9d70220dda54060", null ],
+    [ "geneal", "classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632", null ],
     [ "inventory", "classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc", null ]
 ];

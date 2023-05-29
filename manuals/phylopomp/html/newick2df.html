@@ -26,7 +26,7 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>newick2df(tree, time = NA, root_time = 0)
+<pre><code class='language-R'>newick2df(tree, time = NA, t0 = 0)
 </code></pre>
 
 
@@ -41,7 +41,7 @@ function processMathHTML() {
 <td>
 <p>time of the genealogy.</p>
 </td></tr>
-<tr><td><code id="newick2df_:_root_time">root_time</code></td>
+<tr><td><code id="newick2df_:_t0">t0</code></td>
 <td>
 <p>time of the root.</p>
 </td></tr>
@@ -51,8 +51,6 @@ function processMathHTML() {
 <h3>Details</h3>
 
 <p>If <code>time</code> is furnished, it is assumed that the absence of samples between the latest leaf and <code>time</code> is informative.
-</p>
-<p>Invisible nodes (labeled 'X_' for any X) are dropped.
 </p>
 
 
@@ -81,13 +79,12 @@ Note that this function is right-continuous with left limits, and constant on th
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>runSIR(Beta=2,gamma=1,psi=2,S0=100,I0=2,R0=0,time=5,t0=0) |&gt;
+<pre><code class='language-R'>runSIR(Beta=2,gamma=1,psi=2,S0=100,I0=2,R0=0,time=10,t0=0) |&gt;
   getInfo(tree=TRUE) |&gt;
   getElement("tree") |&gt;
-  newick2df()
-  
+  newick2df(time=5)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.6.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.6.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

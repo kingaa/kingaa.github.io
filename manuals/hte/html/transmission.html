@@ -134,8 +134,6 @@ trans_homog_objfun(
 f(log(c(0.05,0.4)))
 coef(f)
 
-## Not run: 
-
 optim(
   par=log(c(0.5,0.4)),
   fn=f,
@@ -144,8 +142,8 @@ optim(
 f(out$par)
 coef(f)
 
-
-## End(Not run)
+trans_homog_filter(params=coef(f),data=dat) -&gt; ff
+ff |&gt; filter(logLik!=0)
 
 trans_unit_spec_objfun(
   params=c(
@@ -161,6 +159,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.10.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.11.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

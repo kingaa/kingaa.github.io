@@ -178,14 +178,14 @@ Typedefs</h2></td></tr>
 <tr class="separator:ab2efdcc872e7c72dad993534fd341259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c79f52f1a622f5a59fea40ad9dfe1f4"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4">pomp_skeleton</a>(double *f, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
 <tr class="separator:a1c79f52f1a622f5a59fea40ad9dfe1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a053e7c8f511ee3fee0bf92f05fb1684e"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#a053e7c8f511ee3fee0bf92f05fb1684e">pomp_measure_model_simulator</a>(double *y, double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
-<tr class="separator:a053e7c8f511ee3fee0bf92f05fb1684e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34eca0414089b1c39633d0f792224039"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#a34eca0414089b1c39633d0f792224039">pomp_measure_model_simulator</a>(double *y, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
+<tr class="separator:a34eca0414089b1c39633d0f792224039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9bb1378a2799a6928d1225c2da63d81"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#ae9bb1378a2799a6928d1225c2da63d81">pomp_measure_model_expectation</a>(double *f, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
 <tr class="separator:ae9bb1378a2799a6928d1225c2da63d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abde17f5a684e4a1a6c276a2ce3da3715"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#abde17f5a684e4a1a6c276a2ce3da3715">pomp_measure_model_covariance</a>(double *f, const double *x, const double *p, const int *vmatindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
 <tr class="separator:abde17f5a684e4a1a6c276a2ce3da3715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cce583e534ea0296d9b8cc814e125fc"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#a3cce583e534ea0296d9b8cc814e125fc">pomp_measure_model_density</a>(double *lik, const double *y, double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
-<tr class="separator:a3cce583e534ea0296d9b8cc814e125fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addcd0794ab9edf0788164f18b0080590"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#addcd0794ab9edf0788164f18b0080590">pomp_measure_model_density</a>(double *lik, const double *y, const double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td></tr>
+<tr class="separator:addcd0794ab9edf0788164f18b0080590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a910c57a1b150c29312792eba4a5fb2d3"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3">pomp_rprior</a>(double *p, const int *parindex)</td></tr>
 <tr class="separator:a910c57a1b150c29312792eba4a5fb2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3faa3c7fe8f69a8f03b0cf34bb6d66b6"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pomp_8h.html#a3faa3c7fe8f69a8f03b0cf34bb6d66b6">pomp_dprior</a>(double *lik, const double *p, int give_log, const int *parindex)</td></tr>
@@ -353,14 +353,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3cce583e534ea0296d9b8cc814e125fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cce583e534ea0296d9b8cc814e125fc">&#9670;&nbsp;</a></span>pomp_measure_model_density</h2>
+<a id="addcd0794ab9edf0788164f18b0080590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcd0794ab9edf0788164f18b0080590">&#9670;&nbsp;</a></span>pomp_measure_model_density</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void pomp_measure_model_density(double *lik, const double *y, double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td>
+          <td class="memname">typedef void pomp_measure_model_density(double *lik, const double *y, const double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -385,14 +385,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a053e7c8f511ee3fee0bf92f05fb1684e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a053e7c8f511ee3fee0bf92f05fb1684e">&#9670;&nbsp;</a></span>pomp_measure_model_simulator</h2>
+<a id="a34eca0414089b1c39633d0f792224039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34eca0414089b1c39633d0f792224039">&#9670;&nbsp;</a></span>pomp_measure_model_simulator</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void pomp_measure_model_simulator(double *y, double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td>
+          <td class="memname">typedef void pomp_measure_model_simulator(double *y, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</td>
         </tr>
       </table>
 </div><div class="memdoc">

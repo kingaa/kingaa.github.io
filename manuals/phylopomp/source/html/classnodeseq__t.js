@@ -14,6 +14,7 @@ var classnodeseq__t =
     [ "dusk", "classnodeseq__t.html#a7f3cefd2fdb27430074efc904d852ea9", null ],
     [ "newick", "classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da", null ],
     [ "ntime", "classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3", null ],
+    [ "operator+=", "classnodeseq__t.html#a3be4cfd8d7eb4e47f03b64aeedcfe0e4", null ],
     [ "repair_owners", "classnodeseq__t.html#a5f978d0d983fff4ffd5fc2ecfab3c289", null ],
     [ "structure", "classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253", null ],
     [ "swap", "classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624", null ],

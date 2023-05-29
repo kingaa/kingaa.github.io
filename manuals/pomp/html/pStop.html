@@ -20,21 +20,21 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>Custom error function
+<p>Custom error, warning, and message functions.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>pStop(fn, ...)
+<pre><code class='language-R'>pStop(..., who = -1L)
 
 pStop_(...)
 
-pWarn(fn, ...)
+pWarn(..., who = -1L)
 
 pWarn_(...)
 
-pMess(fn, ...)
+pMess(..., who = -1L)
 
 pMess_(...)
 </code></pre>
@@ -43,16 +43,19 @@ pMess_(...)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="pStop_:_fn">fn</code></td>
-<td>
-<p>name of function (will be enclosed in single quotes)</p>
-</td></tr>
 <tr><td><code id="pStop_:_...">...</code></td>
 <td>
 <p>message</p>
 </td></tr>
+<tr><td><code id="pStop_:_who">who</code></td>
+<td>
+<p>integer or character.
+If <code>who</code> is an integer, it is passed to <code><a href="../../base/html/sys.parent.html">sys.call</a></code> to retrieve the name of the calling function.
+One can also pass the name of the calling function in <code>who</code>.
+In either case, the name of the calling function is included in the message.</p>
+</td></tr>
 </table>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.1.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.1.2.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -19,6 +19,7 @@ var classnode__t =
     [ "operator=", "classnode__t.html#aa1934f35f50d764584a764a8b36745a3", null ],
     [ "structure", "classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52", null ],
     [ "yaml", "classnode__t.html#abbf74b4aabeff165285a4f784e7737ba", null ],
+    [ "compare", "classnode__t.html#a7ac78e0e04a9895d3dda8c4f75a45dea", null ],
     [ "operator>>", "classnode__t.html#a1f0906c7111fc3c278a8a95326f50235", null ],
     [ "operator>>", "classnode__t.html#a733973a96a0bc613baf7cdd5d7cba6ec", null ],
     [ "_green_ball", "classnode__t.html#a6da5bdf987dcd66fb927724b56d14738", null ],

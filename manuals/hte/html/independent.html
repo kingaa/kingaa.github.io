@@ -94,14 +94,15 @@ library(hte)
 
 set.seed(626292345)
 
+## Select some data:
 fake_data |&gt;
-  ## filter out tests prior to day 250
   filter(
     event!="test" | time &lt; 250,
     time &lt; 1000
   ) |&gt;
   arrange(patient,time) -&gt; dat
 
+## Create an objective function:
 indep_homog_objfun(
   params=c(
     lambda=0.1,gamma=0.01,p0=0.1,
@@ -111,6 +112,7 @@ indep_homog_objfun(
   data=dat
 ) -&gt; f
 
+## Fit the model:
 optim(
   par=log(c(0.1,0.01)),
   fn=f,
@@ -119,6 +121,11 @@ optim(
 f(out$par)
 coef(f)
 
+## Examine the filter results:
+indep_homog_filter(params=coef(f),data=dat) -&gt; ff
+ff |&gt; filter(logLik!=0)
+
+## Construct a slice:
 indep_homog_objfun(
   params=coef(f),
   est=c("lambda"),
@@ -128,6 +135,7 @@ indep_homog_objfun(
 log.lambda &lt;- seq(log(0.001),to=log(1),length=10)
 plot(exp(log.lambda),sapply(log.lambda,g),log='x')
 
+## Construct an objective function for the unit-specific model:
 theta &lt;- coef(f)
 indep_unit_spec_objfun(
   params=c(
@@ -142,8 +150,7 @@ indep_unit_spec_objfun(
   data=dat
 ) -&gt; h
 
-## Not run: 
-
+## Fit the model:
 optim(
   par=log(coef(h)[
     c("lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out",
@@ -154,11 +161,8 @@ optim(
 ) -&gt; out
 h(out$par)
 coef(h)
-
-
-## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.10.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.11.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

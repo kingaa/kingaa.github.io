@@ -140,12 +140,10 @@ theta &lt;- coef(f)
 indep_unit_spec_objfun(
   params=c(
     lambda=setNames(rep.int(theta["lambda"],6),unique(dat$unit)),
-    gamma.out=unname(theta["gamma"]),
     theta[c("p0","gamma","alpha","beta","isol_factor")]
   ),
   est=c(
-    "lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out",
-    "gamma","gamma.out"
+    "lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out","gamma"
   ),
   data=dat
 ) -&gt; h
@@ -153,8 +151,7 @@ indep_unit_spec_objfun(
 ## Fit the model:
 optim(
   par=log(coef(h)[
-    c("lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out",
-      "gamma","gamma.out")
+    c("lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out","gamma")
   ]),
   fn=h,
   control=list(reltol=1e-3)
@@ -163,6 +160,6 @@ h(out$par)
 coef(h)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.11.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.12.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

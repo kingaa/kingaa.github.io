@@ -14,7 +14,7 @@ var classgenealogy__t =
     [ "describe", "classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069", null ],
     [ "extant", "classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c", null ],
     [ "graft", "classgenealogy__t.html#ad63b8945aa230b1ae09516cd5bae1a10", null ],
-    [ "lineage_count", "classgenealogy__t.html#a3d5ad61061ecfbe284b33bf1dbdfadc7", null ],
+    [ "lineage_count", "classgenealogy__t.html#a26bd7a1f1d13c5cc9eca955d07411965", null ],
     [ "lineage_count", "classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed", null ],
     [ "make_node", "classgenealogy__t.html#ab0b641b65b1e24008e5f2f2b53b3b345", null ],
     [ "migrate", "classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6", null ],

@@ -12,7 +12,7 @@ var classnode__t =
     [ "green_ball", "classnode__t.html#ab10430fd8addd5852699c30a23729880", null ],
     [ "holds_own", "classnode__t.html#af2f3244314d00462007ba1853d60f3c6", null ],
     [ "is_root", "classnode__t.html#a7b42edef9d30827acaef62beff27582f", null ],
-    [ "lineage_incr", "classnode__t.html#a4669a8b07bd17f1cdf298420327fa8af", null ],
+    [ "lineage_incr", "classnode__t.html#a558edec2c6bd778a7740763b6822e3e1", null ],
     [ "nchildren", "classnode__t.html#af3d818f04a9a0db70752922a54e984be", null ],
     [ "newick", "classnode__t.html#a8fbcbc87b57e6d224e709777caf89609", null ],
     [ "operator=", "classnode__t.html#a12251095cc0869eb9c17ea41f96fde85", null ],

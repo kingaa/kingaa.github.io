@@ -11,6 +11,7 @@ continueSEIR	seir
 continueSI2R	si2r
 continueSIIR	siir
 continueSIR	sir
+continueSIRS	sir
 diagram	diagram
 drawDetails.ballGrob	internals
 drawDetails.resizingTextGrob	internals
@@ -51,6 +52,7 @@ runSEIR	seir
 runSI2R	si2r
 runSIIR	siir
 runSIR	sir
+runSIRS	sir
 SEIR	seir
 seir	seir
 SI2R	si2r
@@ -63,6 +65,8 @@ simulate.default	simulate
 simulate.gpsim	simulate
 SIR	sir
 sir	sir
+SIRS	sir
+sirs_pomp	sir
 sir_pomp	sir
 stew	reexports
 treeplot	treeplot

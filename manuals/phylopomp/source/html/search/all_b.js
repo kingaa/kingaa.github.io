@@ -10,9 +10,6 @@ var searchData=
   ['lbdp_5fproc_5ft_91',['lbdp_proc_t',['../lbdp_8cc.html#a1df9fd27f164945abc59c22c10797f33',1,'lbdp.cc']]],
   ['lbdp_5frinit_92',['lbdp_rinit',['../decls_8h.html#a1f97159e9f335dd851ac8220d276e87d',1,'decls.h']]],
   ['lbdp_5fstate_5ft_93',['lbdp_state_t',['../structlbdp__state__t.html',1,'']]],
-  ['leventhal_5fdmeas_94',['leventhal_dmeas',['../decls_8h.html#a7886c7ac55675a95cf5637bd819f264d',1,'decls.h']]],
-  ['leventhal_5frinit_95',['leventhal_rinit',['../decls_8h.html#aeb03b63bbbd65360245f9331c23c381e',1,'decls.h']]],
-  ['leventhal_5fstepfn_96',['leventhal_stepfn',['../decls_8h.html#ae5ba58877733d878d51777f90edecc1e',1,'decls.h']]],
-  ['lineage_5fcount_97',['lineage_count',['../classmaster__t.html#acae105dd3437fc9a3c61478bee2e042e',1,'master_t::lineage_count()'],['../classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed',1,'genealogy_t::lineage_count(void) const'],['../classgenealogy__t.html#a26bd7a1f1d13c5cc9eca955d07411965',1,'genealogy_t::lineage_count(double *t, int *deme, int *ell, int *sat) const'],['../generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a',1,'lineage_count():&#160;generics.h']]],
-  ['lineage_5fincr_98',['lineage_incr',['../classnode__t.html#a558edec2c6bd778a7740763b6822e3e1',1,'node_t']]]
+  ['lineage_5fcount_94',['lineage_count',['../classgenealogy__t.html#a5c635393030969a6d5b252713c45c662',1,'genealogy_t::lineage_count(double *t, int *deme, int *ell, int *sat, int *etype) const'],['../classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed',1,'genealogy_t::lineage_count(void) const'],['../classmaster__t.html#acae105dd3437fc9a3c61478bee2e042e',1,'master_t::lineage_count()'],['../generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a',1,'lineage_count():&#160;generics.h']]],
+  ['lineage_5fincr_95',['lineage_incr',['../classnode__t.html#aeff498179c62b4187fe325d0a972f4f4',1,'node_t']]]
 ];

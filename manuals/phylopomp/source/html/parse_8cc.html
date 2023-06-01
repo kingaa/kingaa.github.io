@@ -95,24 +95,25 @@ Include dependency graph for parse.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse_8cc__incl.png" border="0" usemap="#asrc_2parse_8cc" alt=""/></div>
 <map name="asrc_2parse_8cc" id="asrc_2parse_8cc">
-<area shape="rect" title=" " alt="" coords="888,5,987,32"/>
-<area shape="rect" href="genealogy_8h.html" title=" " alt="" coords="769,80,869,107"/>
-<area shape="rect" href="generics_8h.html" title=" " alt="" coords="1035,304,1125,331"/>
-<area shape="rect" title=" " alt="" coords="128,453,187,480"/>
-<area shape="rect" title=" " alt="" coords="375,453,441,480"/>
-<area shape="rect" title=" " alt="" coords="899,229,959,256"/>
+<area shape="rect" title=" " alt="" coords="701,5,800,32"/>
+<area shape="rect" href="genealogy_8h.html" title=" " alt="" coords="599,80,699,107"/>
+<area shape="rect" href="generics_8h.html" title=" " alt="" coords="963,304,1053,331"/>
+<area shape="rect" title=" " alt="" coords="429,453,488,480"/>
+<area shape="rect" title=" " alt="" coords="175,453,241,480"/>
+<area shape="rect" title=" " alt="" coords="827,229,887,256"/>
+<area shape="rect" title=" " alt="" coords="549,155,635,181"/>
 <area shape="rect" href="internal_8h.html" title=" " alt="" coords="769,453,853,480"/>
-<area shape="rect" href="nodeseq_8h.html" title=" " alt="" coords="230,155,319,181"/>
-<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="771,155,866,181"/>
-<area shape="rect" title=" " alt="" coords="652,528,695,555"/>
-<area shape="rect" title=" " alt="" coords="719,528,796,555"/>
-<area shape="rect" title=" " alt="" coords="820,528,911,555"/>
-<area shape="rect" title=" " alt="" coords="935,528,1035,555"/>
-<area shape="rect" title=" " alt="" coords="93,229,136,256"/>
+<area shape="rect" href="nodeseq_8h.html" title=" " alt="" coords="314,155,403,181"/>
+<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="659,155,754,181"/>
+<area shape="rect" title=" " alt="" coords="651,528,693,555"/>
+<area shape="rect" title=" " alt="" coords="717,528,795,555"/>
+<area shape="rect" title=" " alt="" coords="819,528,909,555"/>
+<area shape="rect" title=" " alt="" coords="934,528,1034,555"/>
+<area shape="rect" title=" " alt="" coords="279,229,321,256"/>
 <area shape="rect" title=" " alt="" coords="246,379,370,405"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="505,229,572,256"/>
-<area shape="rect" href="ball_8h.html" title=" " alt="" coords="664,379,723,405"/>
-<area shape="rect" href="pocket_8h.html" title=" " alt="" coords="500,304,577,331"/>
+<area shape="rect" href="node_8h.html" title=" " alt="" coords="517,229,584,256"/>
+<area shape="rect" href="ball_8h.html" title=" " alt="" coords="613,379,672,405"/>
+<area shape="rect" href="pocket_8h.html" title=" " alt="" coords="512,304,589,331"/>
 <area shape="rect" title=" " alt="" coords="547,379,589,405"/>
 </map>
 </div>
@@ -210,7 +211,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::string x = (<span class="keyword">const</span> <span class="keywordtype">char</span> *) CHAR(STRING_ELT(X,0));</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> G;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    G.<a class="code" href="classgenealogy__t.html#a09e5a5efcca1f83b653036aeb60dae0d">parse</a>(x,*REAL(T0));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    G.<a class="code" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459">parse</a>(x,*REAL(T0));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// prune and/or obscure if requested</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> do_prune = *LOGICAL(AS_LOGICAL(Prune));</div>
@@ -266,10 +267,10 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    UNPROTECT(4);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> out;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
-<div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00021">genealogy.h:21</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a09e5a5efcca1f83b653036aeb60dae0d"><div class="ttname"><a href="classgenealogy__t.html#a09e5a5efcca1f83b653036aeb60dae0d">genealogy_t::parse</a></div><div class="ttdeci">genealogy_t &amp; parse(std::string &amp;s, slate_t t0, node_t *p=0)</div><div class="ttdoc">Parse a Newick string and create the indicated genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00493">genealogy.h:493</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a46e674c719812e57f14bc7e50cc0c380"><div class="ttname"><a href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380">genealogy_t::prune</a></div><div class="ttdeci">genealogy_t &amp; prune(void)</div><div class="ttdoc">prune the tree (drop all black balls)</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00323">genealogy.h:323</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_ab9e3fa3675e983dcf930d44b73f75dd8"><div class="ttname"><a href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8">genealogy_t::obscure</a></div><div class="ttdeci">genealogy_t &amp; obscure(void)</div><div class="ttdoc">erase all deme information</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00335">genealogy.h:335</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00022">genealogy.h:22</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a46e674c719812e57f14bc7e50cc0c380"><div class="ttname"><a href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380">genealogy_t::prune</a></div><div class="ttdeci">genealogy_t &amp; prune(void)</div><div class="ttdoc">prune the tree (drop all black balls)</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00340">genealogy.h:340</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a4982bfdaad4e696569cca349f3bc0459"><div class="ttname"><a href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459">genealogy_t::parse</a></div><div class="ttdeci">genealogy_t &amp; parse(const std::string &amp;s, slate_t t0, node_t *p=0)</div><div class="ttdoc">Parse a Newick string and create the indicated genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00541">genealogy.h:541</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_ab9e3fa3675e983dcf930d44b73f75dd8"><div class="ttname"><a href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8">genealogy_t::obscure</a></div><div class="ttdeci">genealogy_t &amp; obscure(void)</div><div class="ttdoc">erase all deme information</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00352">genealogy.h:352</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a107fe8ca7a39b3825503e3e6198591ac"><div class="ttname"><a href="generics_8h.html#a107fe8ca7a39b3825503e3e6198591ac">structure</a></div><div class="ttdeci">SEXP structure(const TYPE &amp;G)</div><div class="ttdoc">structure in R list format</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00052">generics.h:52</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a36efa45617897629bf9b3ebbd4a4262c"><div class="ttname"><a href="generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c">describe</a></div><div class="ttdeci">SEXP describe(const TYPE &amp;X)</div><div class="ttdoc">human readable output</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00042">generics.h:42</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a76ff6404ca2416a8d7fb42faa09da53b"><div class="ttname"><a href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b">time</a></div><div class="ttdeci">SEXP time(TYPE &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00014">generics.h:14</a></div></div>
@@ -287,29 +288,29 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a" title="number of lineages through time" alt="" coords="188,56,301,83"/>
 <area shape="rect" href="generics_8h.html#a80e792583cf9de00235b5935bd3e6a94" title="tree in newick format" alt="" coords="211,107,279,133"/>
 <area shape="rect" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8" title="erase all deme information" alt="" coords="164,208,325,235"/>
-<area shape="rect" href="classgenealogy__t.html#a09e5a5efcca1f83b653036aeb60dae0d" title="Parse a Newick string and create the indicated genealogy." alt="" coords="171,271,318,297"/>
+<area shape="rect" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459" title="Parse a Newick string and create the indicated genealogy." alt="" coords="171,271,318,297"/>
 <area shape="rect" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380" title="prune the tree (drop all black balls)" alt="" coords="171,157,318,184"/>
 <area shape="rect" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c" title=" " alt="" coords="190,321,299,348"/>
 <area shape="rect" href="generics_8h.html#a107fe8ca7a39b3825503e3e6198591ac" title="structure in R list format" alt="" coords="205,372,285,399"/>
 <area shape="rect" href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b" title=" " alt="" coords="219,423,271,449"/>
 <area shape="rect" href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693" title="human/machine readable output" alt="" coords="217,473,272,500"/>
-<area shape="rect" href="classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f" title="Get all balls of a color." alt="" coords="378,93,523,120"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="384,195,517,221"/>
-<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="399,144,502,171"/>
-<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="576,144,761,171"/>
-<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="1042,195,1173,221"/>
-<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="829,144,968,171"/>
-<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1036,144,1179,171"/>
-<area shape="rect" href="classball__t.html#a84b2949440ac7d1fcd8127076e082928" title="in whose pocket do I lie?" alt="" coords="1227,195,1333,221"/>
-<area shape="rect" href="classnode__t.html#ab10430fd8addd5852699c30a23729880" title="pointer to my green ball" alt="" coords="827,321,970,348"/>
-<area shape="rect" href="classgenealogy__t.html#a77e4b3fcd89011473b6d1b67533791f1" title=" " alt="" coords="373,397,528,424"/>
-<area shape="rect" href="classgenealogy__t.html#a72d67f0b5874df1cdcb28cc4c9005b09" title="Scan the Newick string and create the indicated node." alt="" coords="579,397,758,424"/>
-<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="821,448,976,475"/>
-<area shape="rect" href="classgenealogy__t.html#a9d85ce413a2c6b79c96b5ad7992b68f9" title=" " alt="" coords="583,448,754,475"/>
-<area shape="rect" href="classgenealogy__t.html#a7b172172c21ca9e863da834902d1c040" title=" " alt="" coords="809,397,988,424"/>
-<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="1037,397,1177,424"/>
-<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="387,43,514,69"/>
-<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title=" " alt="" coords="630,43,707,69"/>
+<area shape="rect" href="classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f" title="Get all balls of a color." alt="" coords="387,93,533,120"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="393,195,527,221"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="409,144,511,171"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="595,144,780,171"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="1061,195,1191,221"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="848,144,987,171"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1055,144,1197,171"/>
+<area shape="rect" href="classball__t.html#a84b2949440ac7d1fcd8127076e082928" title="in whose pocket do I lie?" alt="" coords="1245,195,1352,221"/>
+<area shape="rect" href="classnode__t.html#ab10430fd8addd5852699c30a23729880" title="pointer to my green ball" alt="" coords="846,321,989,348"/>
+<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="602,448,773,475"/>
+<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="840,448,995,475"/>
+<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="598,397,777,424"/>
+<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="373,397,547,424"/>
+<area shape="rect" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b" title=" " alt="" coords="828,397,1007,424"/>
+<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="1056,397,1196,424"/>
+<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="397,43,523,69"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title=" " alt="" coords="649,43,726,69"/>
 </map>
 </div>
 

@@ -20,7 +20,7 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>The number of lineages through time
+<p>Lineage-counts, saturations, and event-codes.
 </p>
 
 
@@ -66,15 +66,46 @@ If it is a vector, ....</p>
 </table>
 
 
+<h3>Details</h3>
+
+<p>This function extracts from the specified genealogy several important time-varying quantities.
+These include: </p>
+
+<dl>
+<dt>lineages</dt><dd><p>number of lineages through time</p>
+</dd>
+<dt>saturation</dt><dd><p>the number of lineages emerging from the event</p>
+</dd>
+<dt>event_type</dt><dd><p>an integer coding the type of event</p>
+</dd>
+</dl>
+
+<p>If the genealogy has been obscured (the default), the number in the <code>lineages</code> returned is the total number of lineages present at the specified time and the saturation is the total saturation.
+If the genealogy has not been obscured (<code>obscure = FALSE</code>), the deme-specific data are returned.
+In this case, the <code>deme</code> column specifies the pertinent deme.
+</p>
+<p>The event types are: </p>
+
+<dl>
+<dt>0</dt><dd><p>no event,</p>
+</dd>
+<dt>-1</dt><dd><p>a root,</p>
+</dd>
+<dt>1</dt><dd><p>a sample event,</p>
+</dd>
+<dt>2</dt><dd><p>a non-sample event,</p>
+</dd>
+<dt>3</dt><dd><p>the end of the time interval, which may or may not coincide with the latest tip of the genealogy.</p>
+</dd>
+</dl>
+
+
+
 <h3>Value</h3>
 
-<p>A <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function.
-If the genealogy has been obscured (the default), the number in the <code>lineages</code>
-column is the total number of lineages present at the times in the <code>time</code> column.
-If the genealogy has not been obscured (<code>obscure = FALSE</code>), the deme-specific
-lineage counts are returned.
-</p>
-<p>The <code><a href="../../tibble/help/tibble.html">tibble</a></code> returned by <code>lineages</code> has a <code><a href="../../phylopomp/help/plot.gplin.html">plot</a></code> method.
+<p>A <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing information about the genealogy.
+See Details for specifics.
+The <code><a href="../../tibble/help/tibble.html">tibble</a></code> returned by <code>lineages</code> has a <code><a href="../../phylopomp/help/plot.gplin.html">plot</a></code> method.
 </p>
 
 
@@ -96,6 +127,6 @@ plot_grid(
 )
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.0.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

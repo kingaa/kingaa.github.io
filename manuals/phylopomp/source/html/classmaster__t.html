@@ -542,7 +542,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  };</div>
 <div class="ttc" id="aclassball__t_html"><div class="ttname"><a href="classball__t.html">ball_t</a></div><div class="ttdoc">Balls function as pointers.</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00027">ball.h:27</a></div></div>
 <div class="ttc" id="aclassball__t_html_a84b2949440ac7d1fcd8127076e082928"><div class="ttname"><a href="classball__t.html#a84b2949440ac7d1fcd8127076e082928">ball_t::holder</a></div><div class="ttdeci">node_t *&amp; holder(void)</div><div class="ttdoc">in whose pocket do I lie?</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00097">ball.h:97</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a0397d188e3ec289972135bdc1af616ce"><div class="ttname"><a href="classgenealogy__t.html#a0397d188e3ec289972135bdc1af616ce">genealogy_t::birth</a></div><div class="ttdeci">ball_t * birth(ball_t *a, slate_t t, name_t d=0)</div><div class="ttdoc">birth into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00267">genealogy.h:267</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a0397d188e3ec289972135bdc1af616ce"><div class="ttname"><a href="classgenealogy__t.html#a0397d188e3ec289972135bdc1af616ce">genealogy_t::birth</a></div><div class="ttdeci">ball_t * birth(ball_t *a, slate_t t, name_t d=0)</div><div class="ttdoc">birth into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00284">genealogy.h:284</a></div></div>
 <div class="ttc" id="aclassinventory__t_html_a30a1374922f8892fac5eaa75a0db3cb1"><div class="ttname"><a href="classinventory__t.html#a30a1374922f8892fac5eaa75a0db3cb1">inventory_t::insert</a></div><div class="ttdeci">void insert(ball_t *b)</div><div class="ttdef"><b>Definition:</b> <a href="inventory_8h_source.html#l00133">inventory.h:133</a></div></div>
 <div class="ttc" id="aclassinventory__t_html_ad612a62fbabb6751710d13f45748683f"><div class="ttname"><a href="classinventory__t.html#ad612a62fbabb6751710d13f45748683f">inventory_t::random_ball</a></div><div class="ttdeci">ball_t * random_ball(name_t i=0) const</div><div class="ttdoc">choose a random ball from deme i</div><div class="ttdef"><b>Definition:</b> <a href="inventory_8h_source.html#l00090">inventory.h:90</a></div></div>
 <div class="ttc" id="aclassmaster__t_html_a08340c5fd9867843fcf1d523c88ea592"><div class="ttname"><a href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592">master_t::time</a></div><div class="ttdeci">slate_t time(void) const</div><div class="ttdoc">current time</div><div class="ttdef"><b>Definition:</b> <a href="master_8h_source.html#l00102">master.h:102</a></div></div>
@@ -615,7 +615,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                               {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> popul_t::bytesize() + <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a459ba2f0b835cf5e1f093267ae232f20">bytesize</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a459ba2f0b835cf5e1f093267ae232f20"><div class="ttname"><a href="classgenealogy__t.html#a459ba2f0b835cf5e1f093267ae232f20">genealogy_t::bytesize</a></div><div class="ttdeci">size_t bytesize(void) const</div><div class="ttdoc">size of serialized binary form</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00065">genealogy.h:65</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a459ba2f0b835cf5e1f093267ae232f20"><div class="ttname"><a href="classgenealogy__t.html#a459ba2f0b835cf5e1f093267ae232f20">genealogy_t::bytesize</a></div><div class="ttdeci">size_t bytesize(void) const</div><div class="ttdoc">size of serialized binary form</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00066">genealogy.h:66</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -714,7 +714,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a29124069de8f231217845de929ae5bb1">erase</a>(a);</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9">death</a>(a,<a class="code" href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592">time</a>());</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a3bf64c56b1178233f0fcc81b7f9b72d9"><div class="ttname"><a href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9">genealogy_t::death</a></div><div class="ttdeci">void death(ball_t *a, slate_t t)</div><div class="ttdoc">death</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00283">genealogy.h:283</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a3bf64c56b1178233f0fcc81b7f9b72d9"><div class="ttname"><a href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9">genealogy_t::death</a></div><div class="ttdeci">void death(ball_t *a, slate_t t)</div><div class="ttdoc">death</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00300">genealogy.h:300</a></div></div>
 <div class="ttc" id="aclassinventory__t_html_a29124069de8f231217845de929ae5bb1"><div class="ttname"><a href="classinventory__t.html#a29124069de8f231217845de929ae5bb1">inventory_t::erase</a></div><div class="ttdeci">void erase(ball_t *b)</div><div class="ttdef"><b>Definition:</b> <a href="inventory_8h_source.html#l00141">inventory.h:141</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -778,7 +778,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                  {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069">describe</a>();</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a4de4b5d5a737f8fcce67928384f2a069"><div class="ttname"><a href="classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069">genealogy_t::describe</a></div><div class="ttdeci">std::string describe(void) const</div><div class="ttdoc">human-readable info</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00211">genealogy.h:211</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a4de4b5d5a737f8fcce67928384f2a069"><div class="ttname"><a href="classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069">genealogy_t::describe</a></div><div class="ttdeci">std::string describe(void) const</div><div class="ttdoc">human-readable info</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00228">genealogy.h:228</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -839,7 +839,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a30a1374922f8892fac5eaa75a0db3cb1">insert</a>(a);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_ad63b8945aa230b1ae09516cd5bae1a10"><div class="ttname"><a href="classgenealogy__t.html#ad63b8945aa230b1ae09516cd5bae1a10">genealogy_t::graft</a></div><div class="ttdeci">ball_t * graft(slate_t t, name_t d=0)</div><div class="ttdoc">graft a new lineage into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00288">genealogy.h:288</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_ad63b8945aa230b1ae09516cd5bae1a10"><div class="ttname"><a href="classgenealogy__t.html#ad63b8945aa230b1ae09516cd5bae1a10">genealogy_t::graft</a></div><div class="ttdeci">ball_t * graft(slate_t t, name_t d=0)</div><div class="ttdoc">graft a new lineage into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00305">genealogy.h:305</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -975,18 +975,24 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="master_8h_source.html#l00121">121</a> of file <a class="el" href="master_8h_source.html">master.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                  {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a26bd7a1f1d13c5cc9eca955d07411965">lineage_count</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a5c635393030969a6d5b252713c45c662">lineage_count</a>();</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a26bd7a1f1d13c5cc9eca955d07411965"><div class="ttname"><a href="classgenealogy__t.html#a26bd7a1f1d13c5cc9eca955d07411965">genealogy_t::lineage_count</a></div><div class="ttdeci">void lineage_count(double *t, int *deme, int *ell, int *sat) const</div><div class="ttdoc">lineage count and saturation</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00142">genealogy.h:142</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a5c635393030969a6d5b252713c45c662"><div class="ttname"><a href="classgenealogy__t.html#a5c635393030969a6d5b252713c45c662">genealogy_t::lineage_count</a></div><div class="ttdeci">void lineage_count(double *t, int *deme, int *ell, int *sat, int *etype) const</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00149">genealogy.h:149</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmaster__t_acae105dd3437fc9a3c61478bee2e042e_cgraph.png" border="0" usemap="#aclassmaster__t_acae105dd3437fc9a3c61478bee2e042e_cgraph" alt=""/></div>
 <map name="aclassmaster__t_acae105dd3437fc9a3c61478bee2e042e_cgraph" id="aclassmaster__t_acae105dd3437fc9a3c61478bee2e042e_cgraph">
-<area shape="rect" title="lineage count table" alt="" coords="5,31,184,57"/>
-<area shape="rect" href="classgenealogy__t.html#a26bd7a1f1d13c5cc9eca955d07411965" title="lineage count and saturation" alt="" coords="232,23,391,65"/>
-<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="453,5,593,32"/>
-<area shape="rect" href="classgenealogy__t.html#a63bf3e42ee63bdf17f77fc17eb313453" title="get zero time." alt="" coords="439,56,607,83"/>
+<area shape="rect" title="lineage count table" alt="" coords="5,132,184,159"/>
+<area shape="rect" href="classgenealogy__t.html#a5c635393030969a6d5b252713c45c662" title=" " alt="" coords="232,125,391,166"/>
+<area shape="rect" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4" title=" " alt="" coords="446,81,599,108"/>
+<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="453,132,593,159"/>
+<area shape="rect" href="classgenealogy__t.html#a63bf3e42ee63bdf17f77fc17eb313453" title="get zero time." alt="" coords="439,183,607,209"/>
+<area shape="rect" href="classball__t.html#a0e67e91ddd3b02df15175ff2151ab398" title=" " alt="" coords="677,5,775,32"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="675,56,777,83"/>
+<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="666,107,786,133"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="655,157,797,184"/>
+<area shape="rect" href="classball__t.html#a84b2949440ac7d1fcd8127076e082928" title="in whose pocket do I lie?" alt="" coords="845,157,952,184"/>
 </map>
 </div>
 
@@ -1039,7 +1045,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a30a1374922f8892fac5eaa75a0db3cb1">insert</a>(a);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  };</div>
 <div class="ttc" id="aclassball__t_html_a29e8d8205e8f323bf69767ab5bc9809d"><div class="ttname"><a href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">ball_t::deme</a></div><div class="ttdeci">name_t deme(void) const</div><div class="ttdoc">view deme</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00073">ball.h:73</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a98f2a41cf3c11d347d550faded2098f6"><div class="ttname"><a href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6">genealogy_t::migrate</a></div><div class="ttdeci">ball_t * migrate(ball_t *a, slate_t t, name_t d=0)</div><div class="ttdoc">movement into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00307">genealogy.h:307</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a98f2a41cf3c11d347d550faded2098f6"><div class="ttname"><a href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6">genealogy_t::migrate</a></div><div class="ttdeci">ball_t * migrate(ball_t *a, slate_t t, name_t d=0)</div><div class="ttdoc">movement into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00324">genealogy.h:324</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1100,7 +1106,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252">newick</a>();</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a187eb5eb32d745fe88e740b621cee252"><div class="ttname"><a href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252">genealogy_t::newick</a></div><div class="ttdeci">std::string newick(void) const</div><div class="ttdoc">put genealogy at current time into Newick format.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00233">genealogy.h:233</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a187eb5eb32d745fe88e740b621cee252"><div class="ttname"><a href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252">genealogy_t::newick</a></div><div class="ttdeci">std::string newick(void) const</div><div class="ttdoc">put genealogy at current time into Newick format.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00250">genealogy.h:250</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1231,7 +1237,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45">time</a>() = tfin;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> count;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a74cf08072d7a483c2e9551b2046d6a45"><div class="ttname"><a href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45">genealogy_t::time</a></div><div class="ttdeci">slate_t &amp; time(void)</div><div class="ttdoc">view/set current time.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00127">genealogy.h:127</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a74cf08072d7a483c2e9551b2046d6a45"><div class="ttname"><a href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45">genealogy_t::time</a></div><div class="ttdeci">slate_t &amp; time(void)</div><div class="ttdoc">view/set current time.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00128">genealogy.h:128</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1325,7 +1331,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classball__t.html">ball_t</a> *a = <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#ad612a62fbabb6751710d13f45748683f">random_ball</a>(i);</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b">sample</a>(a,<a class="code" href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592">time</a>());</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_ad4fdb13d22bd0ba91153466eb8fe371b"><div class="ttname"><a href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b">genealogy_t::sample</a></div><div class="ttdeci">void sample(ball_t *a, slate_t t)</div><div class="ttdoc">insert a sample node</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00298">genealogy.h:298</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_ad4fdb13d22bd0ba91153466eb8fe371b"><div class="ttname"><a href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b">genealogy_t::sample</a></div><div class="ttdeci">void sample(ball_t *a, slate_t t)</div><div class="ttdoc">insert a sample node</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00315">genealogy.h:315</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1392,7 +1398,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                              {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59">structure</a>();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a149f0045d94d692dc7c7c874a354bc59"><div class="ttname"><a href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59">genealogy_t::structure</a></div><div class="ttdeci">SEXP structure(void) const</div><div class="ttdoc">R list description.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00191">genealogy.h:191</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a149f0045d94d692dc7c7c874a354bc59"><div class="ttname"><a href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59">genealogy_t::structure</a></div><div class="ttdeci">SEXP structure(void) const</div><div class="ttdoc">R list description.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00208">genealogy.h:208</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1504,7 +1510,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      + <span class="stringliteral">&quot;genealogy:\n&quot;</span> + <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">yaml</a>(t);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> s;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_a199104f51028c884cf9751fcbfa7ff45"><div class="ttname"><a href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">genealogy_t::yaml</a></div><div class="ttdeci">virtual std::string yaml(std::string tab=&quot;&quot;) const</div><div class="ttdoc">machine-readable info</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00221">genealogy.h:221</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a199104f51028c884cf9751fcbfa7ff45"><div class="ttname"><a href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">genealogy_t::yaml</a></div><div class="ttdeci">virtual std::string yaml(std::string tab=&quot;&quot;) const</div><div class="ttdoc">machine-readable info</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00238">genealogy.h:238</a></div></div>
 <div class="ttc" id="agenerics_8h_html_aa0dc1a38b4f1568720c53ba3fb48f693"><div class="ttname"><a href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a></div><div class="ttdeci">SEXP yaml(const TYPE &amp;X)</div><div class="ttdoc">human/machine readable output</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00032">generics.h:32</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1614,7 +1620,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    A.<a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a> = A.<a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c">extant</a>();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> o;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="ttc" id="aclassgenealogy__t_html_a509845ed2d4596d7b2e7206cc3108d0c"><div class="ttname"><a href="classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c">genealogy_t::extant</a></div><div class="ttdeci">std::pair&lt; node_it, node_it &gt; extant(void) const</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00318">genealogy.h:318</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a509845ed2d4596d7b2e7206cc3108d0c"><div class="ttname"><a href="classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c">genealogy_t::extant</a></div><div class="ttdeci">std::pair&lt; node_it, node_it &gt; extant(void) const</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00335">genealogy.h:335</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

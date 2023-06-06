@@ -69,12 +69,13 @@ Note that this function is right-continuous with left limits, and constant on th
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>runSIR(Beta=2,gamma=1,psi=2,S0=100,I0=2,R0=0,time=10,t0=0) |&gt;
-  getInfo(tree=TRUE) |&gt;
-  getElement("tree") |&gt;
-  newick2df()
+<pre><code class='language-R'>runSIR(Beta=2,gamma=1,psi=2,S0=100,I0=2,R0=0,time=10,t0=0) -&gt; x
+
+x |&gt; lineages()
+
+x |&gt; newick() |&gt; newick2df()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.2.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

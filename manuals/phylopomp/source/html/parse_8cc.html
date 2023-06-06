@@ -209,15 +209,15 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::string x = (<span class="keyword">const</span> <span class="keywordtype">char</span> *) CHAR(STRING_ELT(X,0));</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> G;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> G(*REAL(T0));</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    G.<a class="code" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459">parse</a>(x,*REAL(T0));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    G.parse(x,*REAL(T0));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// prune and/or obscure if requested</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> do_prune = *LOGICAL(AS_LOGICAL(Prune));</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> do_obscure = *LOGICAL(AS_LOGICAL(Obscure));</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (do_prune) G.<a class="code" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380">prune</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (do_obscure) G.<a class="code" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8">obscure</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (do_prune) G.prune();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (do_obscure) G.obscure();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">size_t</span> nout = 0;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
@@ -268,9 +268,6 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> out;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
 <div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00022">genealogy.h:22</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a46e674c719812e57f14bc7e50cc0c380"><div class="ttname"><a href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380">genealogy_t::prune</a></div><div class="ttdeci">genealogy_t &amp; prune(void)</div><div class="ttdoc">prune the tree (drop all black balls)</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00340">genealogy.h:340</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a4982bfdaad4e696569cca349f3bc0459"><div class="ttname"><a href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459">genealogy_t::parse</a></div><div class="ttdeci">genealogy_t &amp; parse(const std::string &amp;s, slate_t t0, node_t *p=0)</div><div class="ttdoc">Parse a Newick string and create the indicated genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00541">genealogy.h:541</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_ab9e3fa3675e983dcf930d44b73f75dd8"><div class="ttname"><a href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8">genealogy_t::obscure</a></div><div class="ttdeci">genealogy_t &amp; obscure(void)</div><div class="ttdoc">erase all deme information</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00352">genealogy.h:352</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a107fe8ca7a39b3825503e3e6198591ac"><div class="ttname"><a href="generics_8h.html#a107fe8ca7a39b3825503e3e6198591ac">structure</a></div><div class="ttdeci">SEXP structure(const TYPE &amp;G)</div><div class="ttdoc">structure in R list format</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00052">generics.h:52</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a36efa45617897629bf9b3ebbd4a4262c"><div class="ttname"><a href="generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c">describe</a></div><div class="ttdeci">SEXP describe(const TYPE &amp;X)</div><div class="ttdoc">human readable output</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00042">generics.h:42</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a76ff6404ca2416a8d7fb42faa09da53b"><div class="ttname"><a href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b">time</a></div><div class="ttdeci">SEXP time(TYPE &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00014">generics.h:14</a></div></div>

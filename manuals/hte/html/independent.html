@@ -57,6 +57,24 @@ indep_unit_spec_objfun(params, data, est = character(0))
 
 <h3>Details</h3>
 
+<p>Parameters in the model include:
+</p>
+
+<dl>
+<dt>lambda</dt><dd><p>force of infection. In the homogeneous model, this is constant across units in the hospital; in the unit-specific model, there is one value of lambda for each unit.</p>
+</dd>
+<dt>lambda.out</dt><dd><p>force of infection outside the hospital</p>
+</dd>
+<dt>gamma</dt><dd><p>recovery rate</p>
+</dd>
+<dt>alpha,beta</dt><dd><p>false positive and negative probabilities</p>
+</dd>
+<dt>p0</dt><dd><p>probability of infection on admission</p>
+</dd>
+<dt>isol_factor</dt><dd><p>multiplicative effect of contact isolation on susceptibility</p>
+</dd>
+</dl>
+
 <p><code>indep_homog_filter</code> runs a Bernoulli filter for the
 independent model with a global lambda and gamma.
 </p>
@@ -64,13 +82,10 @@ independent model with a global lambda and gamma.
 function for the independent model with a global lambda and gamma.
 </p>
 <p><code>indep_unit_spec_filter</code> runs a Bernoulli filter
-for the independent model with a unit specific lambda,
-one gamma for inside the hospital, and one gamma outside the
-hospital.
+for the independent model with a unit-specific lambda.
 </p>
 <p><code>indep_unit_spec_objfun</code> is a stateful objective
-function for the independent model with unit specific lambda, one
-gamma for inside the hospital, and one gamma outside the hospital.
+function for the independent model with unit-specific lambda.
 </p>
 
 
@@ -105,7 +120,7 @@ fake_data |&gt;
 ## Create an objective function:
 indep_homog_objfun(
   params=c(
-    lambda=0.1,gamma=0.01,p0=0.1,
+    lambda.out=0.05,lambda=0.1,gamma=0.01,p0=0.1,
     isol_factor=0.2,alpha=0.02,beta=0.1
   ),
   est=c("lambda","gamma"),
@@ -160,6 +175,6 @@ h(out$par)
 coef(h)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.12.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.13.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

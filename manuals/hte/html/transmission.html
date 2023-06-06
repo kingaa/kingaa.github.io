@@ -83,6 +83,26 @@ and isolated patients, respectively.
 On an isolated patient, this force of infection is reduced by the factor
 <code>isol_factor</code>.
 </p>
+<p>Parameters in the model include:
+</p>
+
+<dl>
+<dt>b</dt><dd><p>transmission rate. In the homogeneous model, this is constant across units in the hospital; in the unit-specific model, there is one value of <code>b</code> for each unit.</p>
+</dd>
+<dt>lambda.out</dt><dd><p>force of infection outside the hospital</p>
+</dd>
+<dt>gamma</dt><dd><p>recovery rate</p>
+</dd>
+<dt>alpha,beta</dt><dd><p>false positive and negative probabilities</p>
+</dd>
+<dt>p0</dt><dd><p>probability of infection on admission</p>
+</dd>
+<dt>a</dt><dd><p>multiplicative effect of contact isolation on transmissibility</p>
+</dd>
+<dt>isol_factor</dt><dd><p>multiplicative effect of contact isolation on susceptibility</p>
+</dd>
+</dl>
+
 <p><code>trans_homog_filter</code> runs a fixed-point Bernoulli filter
 for the transmission model with global b and gamma.
 </p>
@@ -159,6 +179,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.12.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.13.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['declarations_461',['DECLARATIONS',['../init_8h.html#a88719a51b5f835edcb2fdaaf5e722d3d',1,'init.h']]]
+  ['curtailfn_463',['CURTAILFN',['../generics_8h.html#af23e61630ef7f6e5061d17915f0d7d55',1,'generics.h']]]
 ];

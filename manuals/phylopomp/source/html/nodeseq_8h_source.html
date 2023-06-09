@@ -256,7 +256,7 @@ $(document).ready(function(){initNavTree('nodeseq_8h_source.html',''); initResiz
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (p-&gt;size() &gt; 1) {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      p-&gt;erase(a);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keyword">delete</span> a;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>()) { <span class="comment">// remove isolated root</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>()) {     <span class="comment">// remove isolated root</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    } <span class="keywordflow">else</span> {</div>
@@ -289,9 +289,9 @@ $(document).ready(function(){initNavTree('nodeseq_8h_source.html',''); initResiz
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a> j = begin();</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">while</span> (j != end()) {</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordflow">if</span> ((*j)-&gt;dead_root()) {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <a class="code" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    j++;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        j++;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  };</div>

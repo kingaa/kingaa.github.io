@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><title>R: Curtail a genealogy to the given time</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table style="width: 100%;"><tr><td>curtail {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2 id='curtail'>Curtail a genealogy to the given time</h2>
+
+<h3>Description</h3>
+
+<p>Discards all nodes beyond the given time.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>curtail(object, time = NA, prune = TRUE, obscure = TRUE)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="curtail_:_object">object</code></td>
+<td>
+<p><code>gpsim</code> object.</p>
+</td></tr>
+<tr><td><code id="curtail_:_time">time</code></td>
+<td>
+<p>logical; return the current time?</p>
+</td></tr>
+<tr><td><code id="curtail_:_prune">prune</code></td>
+<td>
+<p>logical; prune the genealogy?</p>
+</td></tr>
+<tr><td><code id="curtail_:_obscure">obscure</code></td>
+<td>
+<p>logical; obscure the demes?</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A curtailed genealogy object.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>simulate("SIIR",time=1) |&gt; newick()
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.5.1 <a href="00Index.html">Index</a>]</div>
+</div>
+</body></html>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['param_5fset_467',['PARAM_SET',['../popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c',1,'popul_proc.h']]]
+  ['makefn_468',['MAKEFN',['../generics_8h.html#ab5553bb581629a90c1654e17490555fe',1,'generics.h']]],
+  ['methods_469',['METHODS',['../init_8h.html#a06d5e17211e44605874f59f330a17c5b',1,'init.h']]]
 ];

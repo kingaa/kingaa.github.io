@@ -10,6 +10,7 @@ var classmaster__t =
     [ "birth", "classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d", null ],
     [ "bytesize", "classmaster__t.html#aa59abe2a4005145b9553251239d888c7", null ],
     [ "clean", "classmaster__t.html#a0accd63dd906f13a3b826887bd4977a1", null ],
+    [ "curtail", "classmaster__t.html#ac41aea0367dd395b8e507834b34fd15e", null ],
     [ "death", "classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7", null ],
     [ "describe", "classmaster__t.html#a3160c40c436623a25a257075406231ff", null ],
     [ "graft", "classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556", null ],

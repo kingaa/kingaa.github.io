@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['infofn_464',['INFOFN',['../generics_8h.html#a1096bbcf10c13ec72e41dc93a182bce2',1,'generics.h']]]
+  ['generics_466',['GENERICS',['../generics_8h.html#a2733882fe92c8eb7d252c113560e7962',1,'generics.h']]]
 ];

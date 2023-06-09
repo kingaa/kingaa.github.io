@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['_5fdeme_380',['_deme',['../classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e',1,'ball_t']]],
-  ['_5fgreen_5fball_381',['_green_ball',['../classnode__t.html#a6da5bdf987dcd66fb927724b56d14738',1,'node_t']]],
-  ['_5fholder_382',['_holder',['../classball__t.html#a353e894ba3486713539eff3657137828',1,'ball_t']]],
-  ['_5finven_383',['_inven',['../classinventory__t.html#ad689a669a621ceec0cf5741b995ce307',1,'inventory_t']]],
-  ['_5fowner_384',['_owner',['../classball__t.html#ae596048561548a1d8334a59af8c2b48d',1,'ball_t']]],
-  ['_5ft0_385',['_t0',['../classgenealogy__t.html#ad697bb78f7c78a7de642335ba28afd8a',1,'genealogy_t']]],
-  ['_5ftime_386',['_time',['../classgenealogy__t.html#a7d237288f7816ea5c480f9bba9bc9229',1,'genealogy_t']]],
-  ['_5funique_387',['_unique',['../classgenealogy__t.html#ad97d0f84f97372a052e477fd15f22fa8',1,'genealogy_t']]]
+  ['_5fdeme_381',['_deme',['../classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e',1,'ball_t']]],
+  ['_5fgreen_5fball_382',['_green_ball',['../classnode__t.html#a6da5bdf987dcd66fb927724b56d14738',1,'node_t']]],
+  ['_5fholder_383',['_holder',['../classball__t.html#a353e894ba3486713539eff3657137828',1,'ball_t']]],
+  ['_5finven_384',['_inven',['../classinventory__t.html#ad689a669a621ceec0cf5741b995ce307',1,'inventory_t']]],
+  ['_5fndeme_385',['_ndeme',['../classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321',1,'genealogy_t']]],
+  ['_5fowner_386',['_owner',['../classball__t.html#ae596048561548a1d8334a59af8c2b48d',1,'ball_t']]],
+  ['_5ft0_387',['_t0',['../classgenealogy__t.html#ad697bb78f7c78a7de642335ba28afd8a',1,'genealogy_t']]],
+  ['_5ftime_388',['_time',['../classgenealogy__t.html#a7d237288f7816ea5c480f9bba9bc9229',1,'genealogy_t']]],
+  ['_5funique_389',['_unique',['../classgenealogy__t.html#ad97d0f84f97372a052e477fd15f22fa8',1,'genealogy_t']]]
 ];

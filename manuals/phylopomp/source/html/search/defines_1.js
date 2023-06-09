@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['err_462',['err',['../internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024',1,'internal.h']]]
+  ['declarations_464',['DECLARATIONS',['../init_8h.html#a88719a51b5f835edcb2fdaaf5e722d3d',1,'init.h']]]
 ];

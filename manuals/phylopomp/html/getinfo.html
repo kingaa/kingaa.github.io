@@ -35,6 +35,7 @@ function processMathHTML() {
   description = FALSE,
   structure = FALSE,
   yaml = FALSE,
+  ndeme = FALSE,
   lineages = FALSE,
   tree = FALSE
 )
@@ -76,6 +77,10 @@ function processMathHTML() {
 <td>
 <p>logical; return the structure in YAML format?</p>
 </td></tr>
+<tr><td><code id="getInfo_:_ndeme">ndeme</code></td>
+<td>
+<p>logical; return the number of demes?</p>
+</td></tr>
 <tr><td><code id="getInfo_:_lineages">lineages</code></td>
 <td>
 <p>logical; return the lineage-count function?</p>
@@ -105,6 +110,8 @@ function processMathHTML() {
 </dd>
 <dt>structure</dt><dd><p>the state of the genealogy process in <span class="rlang"><b>R</b></span> list format</p>
 </dd>
+<dt>ndeme</dt><dd><p>the number of demes (an integer)</p>
+</dd>
 <dt>lineages</dt><dd><p>a <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function through time</p>
 </dd>
 </dl>
@@ -128,6 +135,6 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.3.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.5.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

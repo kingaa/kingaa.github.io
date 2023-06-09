@@ -489,9 +489,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a> j = begin();</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">while</span> (j != end()) {</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordflow">if</span> ((*j)-&gt;dead_root()) {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <a class="code" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    j++;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        j++;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  };</div>
@@ -703,11 +703,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph.png" border="0" usemap="#aclassnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph" id="aclassnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph">
-<area shape="rect" title="remove a dead root node" alt="" coords="585,31,771,57"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="389,5,522,32"/>
-<area shape="rect" href="classgenealogy__t.html#a0c56c8313f9840b8b33fcfb843246233" title=" " alt="" coords="373,56,537,83"/>
+<area shape="rect" title="remove a dead root node" alt="" coords="572,31,757,57"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="382,5,515,32"/>
+<area shape="rect" href="classgenealogy__t.html#af52c5305df1b672659c0af0ec91f559e" title=" " alt="" coords="373,56,524,83"/>
 <area shape="rect" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8" title="erase all deme information" alt="" coords="164,5,325,32"/>
 <area shape="rect" href="parse_8cc.html#acd7a1ef0ba805edc4cefb18e975452fc" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" href="classmaster__t.html#ac41aea0367dd395b8e507834b34fd15e" title=" " alt="" coords="180,56,309,83"/>
 </map>
 </div>
 
@@ -746,7 +747,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (p-&gt;size() &gt; 1) {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      p-&gt;erase(a);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      <span class="keyword">delete</span> a;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>()) { <span class="comment">// remove isolated root</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>()) {     <span class="comment">// remove isolated root</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    } <span class="keywordflow">else</span> {</div>
@@ -775,10 +776,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a5b3576542f04b82beb2cd9bf89279390_icgraph.png" border="0" usemap="#aclassnodeseq__t_a5b3576542f04b82beb2cd9bf89279390_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a5b3576542f04b82beb2cd9bf89279390_icgraph" id="aclassnodeseq__t_a5b3576542f04b82beb2cd9bf89279390_icgraph">
-<area shape="rect" title=" " alt="" coords="560,56,687,83"/>
-<area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="357,5,503,32"/>
-<area shape="rect" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380" title="prune the tree (drop all black balls)" alt="" coords="357,56,503,83"/>
-<area shape="rect" href="classgenealogy__t.html#a0c56c8313f9840b8b33fcfb843246233" title=" " alt="" coords="348,107,512,133"/>
+<area shape="rect" title=" " alt="" coords="543,31,669,57"/>
+<area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="348,5,495,32"/>
+<area shape="rect" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380" title="prune the tree (drop all black balls)" alt="" coords="348,56,495,83"/>
 <area shape="rect" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7" title="death in deme i" alt="" coords="175,5,300,32"/>
 <area shape="rect" href="classmaster__t.html#af0e3048867ca697ed1274dd09d92d60c" title="makes a jump" alt="" coords="5,5,127,32"/>
 <area shape="rect" href="parse_8cc.html#acd7a1ef0ba805edc4cefb18e975452fc" title=" " alt="" coords="182,56,293,83"/>
@@ -1127,10 +1127,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph.png" border="0" usemap="#aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph" id="aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph">
-<area shape="rect" title="swap balls a and b, wherever they lie" alt="" coords="783,144,913,171"/>
-<area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="592,81,713,108"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="586,144,719,171"/>
-<area shape="rect" href="classgenealogy__t.html#a0c56c8313f9840b8b33fcfb843246233" title=" " alt="" coords="571,195,735,221"/>
+<area shape="rect" title="swap balls a and b, wherever they lie" alt="" coords="769,157,900,184"/>
+<area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="585,81,707,108"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="579,157,713,184"/>
+<area shape="rect" href="classgenealogy__t.html#af52c5305df1b672659c0af0ec91f559e" title=" " alt="" coords="571,208,721,235"/>
 <area shape="rect" href="classgenealogy__t.html#a0397d188e3ec289972135bdc1af616ce" title="birth into deme d" alt="" coords="372,5,512,32"/>
 <area shape="rect" href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6" title="movement into deme d" alt="" coords="361,56,523,83"/>
 <area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="363,107,521,133"/>
@@ -1140,6 +1140,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c" title="sample in deme i" alt="" coords="176,107,312,133"/>
 <area shape="rect" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8" title="erase all deme information" alt="" coords="361,157,523,184"/>
 <area shape="rect" href="parse_8cc.html#acd7a1ef0ba805edc4cefb18e975452fc" title=" " alt="" coords="189,157,299,184"/>
+<area shape="rect" href="classmaster__t.html#ac41aea0367dd395b8e507834b34fd15e" title=" " alt="" coords="377,208,507,235"/>
 </map>
 </div>
 

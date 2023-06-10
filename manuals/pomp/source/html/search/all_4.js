@@ -6,7 +6,7 @@ var searchData=
   ['dbetanbinom_53',['dbetanbinom',['../pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152',1,'pomp.h']]],
   ['dens_5fou2_54',['dens_ou2',['../ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a',1,'ou2.c']]],
   ['deulermultinom_55',['deulermultinom',['../pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c',1,'pomp.h']]],
-  ['deulermultinom_5fmulti_56',['deulermultinom_multi',['../distributions_8c.html#a50920f29449483bee92b3b08c7134e83',1,'distributions.c']]],
+  ['deulermultinom_5fmulti_56',['deulermultinom_multi',['../distributions_8c.html#a7f6bc8c3509b09313972b4ccd73c00c5',1,'distributions.c']]],
   ['dflt_57',['dflt',['../pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a3911cbc079cca9f8b6953023b97c3598',1,'pomp_defines.h']]],
   ['direction_5ft_58',['direction_t',['../partrans_8c.html#ae9ae980041e438eed7a3af43ce4e9f6b',1,'partrans.c']]],
   ['discrete_59',['discrete',['../pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a32811eb9eed4b85ef0847fcde95b69ad',1,'pomp_defines.h']]],

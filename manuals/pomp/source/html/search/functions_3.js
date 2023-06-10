@@ -6,7 +6,7 @@ var searchData=
   ['dbetanbinom_393',['dbetanbinom',['../pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152',1,'pomp.h']]],
   ['dens_5fou2_394',['dens_ou2',['../ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a',1,'ou2.c']]],
   ['deulermultinom_395',['deulermultinom',['../pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c',1,'pomp.h']]],
-  ['deulermultinom_5fmulti_396',['deulermultinom_multi',['../distributions_8c.html#a50920f29449483bee92b3b08c7134e83',1,'distributions.c']]],
+  ['deulermultinom_5fmulti_396',['deulermultinom_multi',['../distributions_8c.html#a7f6bc8c3509b09313972b4ccd73c00c5',1,'distributions.c']]],
   ['dmultinom_397',['dmultinom',['../pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e',1,'pomp.h']]],
   ['do_5fdmeasure_398',['do_dmeasure',['../dmeasure_8c.html#a326516e59ec4f791bcc752ef5f763c71',1,'do_dmeasure(SEXP object, SEXP y, SEXP x, SEXP times, SEXP params, SEXP log, SEXP gnsi):&#160;dmeasure.c'],['../pomp__decls_8h.html#a326516e59ec4f791bcc752ef5f763c71',1,'do_dmeasure(SEXP object, SEXP y, SEXP x, SEXP times, SEXP params, SEXP log, SEXP gnsi):&#160;dmeasure.c']]],
   ['do_5fdprior_399',['do_dprior',['../dprior_8c.html#aa41223e2376a1ecca8a599619048da63',1,'do_dprior(SEXP object, SEXP params, SEXP log, SEXP gnsi):&#160;dprior.c'],['../pomp__decls_8h.html#aa41223e2376a1ecca8a599619048da63',1,'do_dprior(SEXP object, SEXP params, SEXP log, SEXP gnsi):&#160;dprior.c']]],

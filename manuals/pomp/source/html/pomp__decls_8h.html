@@ -2048,27 +2048,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00114">114</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">int</span> k, n, nx, ns, np, nt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">double</span> *F, *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  SEXP f;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  PROTECT(x = AS_NUMERIC(x)); nx = LENGTH(x); <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = REAL(x);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  PROTECT(size = AS_NUMERIC(size)); ns = LENGTH(size); S = REAL(size);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  PROTECT(prob = AS_NUMERIC(prob)); np = LENGTH(prob); P = REAL(prob);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  PROTECT(theta = AS_NUMERIC(theta)); nt = LENGTH(theta); T = REAL(theta);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  PROTECT(log = AS_INTEGER(log));</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  n = (nx &gt; ns) ? nx : ns;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  n = (n &gt; np) ? n : np;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  n = (n &gt; nt) ? n : nt;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  PROTECT(f = NEW_NUMERIC(n)); F = REAL(f);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; n; k++) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    F[k] = <a class="code" href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>[k%nx],S[k%ns],P[k%np],T[k%nt],INTEGER(log)[0]);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  UNPROTECT(6);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">return</span> f;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a6c490604aea6eace860456a7a4dc5a8d"><div class="ttname"><a href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div><div class="ttdeci">static R_INLINE double dbetabinom(double x, double size, double prob, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00177">pomp.h:177</a></div></div>
+<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00121">121</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">int</span> k, n, nx, ns, np, nt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">double</span> *F, *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  SEXP f;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  PROTECT(x = AS_NUMERIC(x)); nx = LENGTH(x); <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = REAL(x);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  PROTECT(size = AS_NUMERIC(size)); ns = LENGTH(size); S = REAL(size);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  PROTECT(prob = AS_NUMERIC(prob)); np = LENGTH(prob); P = REAL(prob);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  PROTECT(theta = AS_NUMERIC(theta)); nt = LENGTH(theta); T = REAL(theta);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  PROTECT(log = AS_INTEGER(log));</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  n = (nx &gt; ns) ? nx : ns;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  n = (n &gt; np) ? n : np;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  n = (n &gt; nt) ? n : nt;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  PROTECT(f = NEW_NUMERIC(n)); F = REAL(f);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; n; k++) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    F[k] = <a class="code" href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>[k%nx],S[k%ns],P[k%np],T[k%nt],INTEGER(log)[0]);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  UNPROTECT(6);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="ttc" id="apomp_8h_html_a6c490604aea6eace860456a7a4dc5a8d"><div class="ttname"><a href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div><div class="ttdeci">static R_INLINE double dbetabinom(double x, double size, double prob, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00176">pomp.h:176</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2125,25 +2125,29 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00046">46</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                                            {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> ntrans = length(rate);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">int</span> *dim, n;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  SEXP f;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  dim = INTEGER(GET_DIM(x));</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span> (dim[0] != ntrans)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;NROW(&#39;x&#39;) should match length of &#39;rate&#39;&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  n = dim[1];</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (length(size)&gt;1)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordflow">if</span> (length(deltat)&gt;1)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  PROTECT(f = NEW_NUMERIC(n));</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="distributions_8c.html#a50920f29449483bee92b3b08c7134e83">deulermultinom_multi</a>(&amp;n,&amp;ntrans,REAL(size),REAL(rate),REAL(deltat),REAL(x),INTEGER(log),REAL(f));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  UNPROTECT(1);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> f;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="ttc" id="adistributions_8c_html_a50920f29449483bee92b3b08c7134e83"><div class="ttname"><a href="distributions_8c.html#a50920f29449483bee92b3b08c7134e83">deulermultinom_multi</a></div><div class="ttdeci">static void deulermultinom_multi(int *n, int *ntrans, double *size, double *rate, double *deltat, double *trans, int *give_log, double *f)</div><div class="ttdef"><b>Definition:</b> <a href="distributions_8c_source.html#l00016">distributions.c:16</a></div></div>
+<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00049">49</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                                            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">int</span> ntrans = length(rate);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">int</span> *dim, n;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  SEXP f;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  dim = INTEGER(GET_DIM(x));</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (dim[0] != ntrans)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;NROW(&#39;x&#39;) should match length of &#39;rate&#39;&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  n = dim[1];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (length(size)&gt;1)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (length(deltat)&gt;1)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  PROTECT(f = NEW_NUMERIC(n));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  PROTECT(size = AS_NUMERIC(size));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  PROTECT(rate = AS_NUMERIC(rate));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  PROTECT(deltat = AS_NUMERIC(deltat));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(log = AS_LOGICAL(log));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="distributions_8c.html#a7f6bc8c3509b09313972b4ccd73c00c5">deulermultinom_multi</a>(ntrans,n,REAL(size),REAL(rate),REAL(deltat),REAL(x),INTEGER(log),REAL(f));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  UNPROTECT(5);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> f;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="ttc" id="adistributions_8c_html_a7f6bc8c3509b09313972b4ccd73c00c5"><div class="ttname"><a href="distributions_8c.html#a7f6bc8c3509b09313972b4ccd73c00c5">deulermultinom_multi</a></div><div class="ttdeci">static void deulermultinom_multi(int m, int n, double *size, double *rate, double *deltat, double *trans, int *give_log, double *f)</div><div class="ttdef"><b>Definition:</b> <a href="distributions_8c_source.html#l00015">distributions.c:15</a></div></div>
 <div class="ttc" id="apomp__internal_8h_html_a8224a361dddd2ad59b411982e5ea746f"><div class="ttname"><a href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a></div><div class="ttdeci">#define warn(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00015">pomp_internal.h:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2151,7 +2155,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="pomp__decls_8h_aa055d45aa938bf55afe432967292b892_cgraph.png" border="0" usemap="#apomp__decls_8h_aa055d45aa938bf55afe432967292b892_cgraph" alt=""/></div>
 <map name="apomp__decls_8h_aa055d45aa938bf55afe432967292b892_cgraph" id="apomp__decls_8h_aa055d45aa938bf55afe432967292b892_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,147,32"/>
-<area shape="rect" href="distributions_8c.html#a50920f29449483bee92b3b08c7134e83" title=" " alt="" coords="195,5,361,32"/>
+<area shape="rect" href="distributions_8c.html#a7f6bc8c3509b09313972b4ccd73c00c5" title=" " alt="" coords="195,5,361,32"/>
 <area shape="rect" href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c" title=" " alt="" coords="409,5,536,32"/>
 </map>
 </div>
@@ -2390,7 +2394,7 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="alookup__table_8c_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
 <div class="ttc" id="alookup__table_8c_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
 <div class="ttc" id="alookup__table_8c_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
-<div class="ttc" id="apomp_8h_html_addcd0794ab9edf0788164f18b0080590"><div class="ttname"><a href="pomp_8h.html#addcd0794ab9edf0788164f18b0080590">pomp_measure_model_density</a></div><div class="ttdeci">void pomp_measure_model_density(double *lik, const double *y, const double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00231">pomp.h:231</a></div></div>
+<div class="ttc" id="apomp_8h_html_addcd0794ab9edf0788164f18b0080590"><div class="ttname"><a href="pomp_8h.html#addcd0794ab9edf0788164f18b0080590">pomp_measure_model_density</a></div><div class="ttdeci">void pomp_measure_model_density(double *lik, const double *y, const double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00230">pomp.h:230</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_a5ddde1fa5bcf8c3949fd4865a7ab474c"><div class="ttname"><a href="pomp__decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a></div><div class="ttdeci">void unset_pomp_userdata(void)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00032">userdata.c:32</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00032">pomp_fun.c:32</a></div></div>
 <div class="ttc" id="apomp__decls_8h_html_aa019045daea9be339fd1e70e3441d252"><div class="ttname"><a href="pomp__decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a></div><div class="ttdeci">void set_pomp_userdata(SEXP userdata)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00008">userdata.c:8</a></div></div>
@@ -2567,7 +2571,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
 <div class="ttc" id="adprior_8c_html_a0d7fde328f6573bb69afd5d887d92599"><div class="ttname"><a href="dprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *p, int n)</div><div class="ttdef"><b>Definition:</b> <a href="dprior_8c_source.html#l00033">dprior.c:33</a></div></div>
 <div class="ttc" id="adprior_8c_html_a2136fa17c5e1e54de6d6a4e5fe62f169"><div class="ttname"><a href="dprior_8c.html#a2136fa17c5e1e54de6d6a4e5fe62f169">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP names, SEXP log, SEXP args)</div><div class="ttdef"><b>Definition:</b> <a href="dprior_8c_source.html#l00011">dprior.c:11</a></div></div>
-<div class="ttc" id="apomp_8h_html_a3faa3c7fe8f69a8f03b0cf34bb6d66b6"><div class="ttname"><a href="pomp_8h.html#a3faa3c7fe8f69a8f03b0cf34bb6d66b6">pomp_dprior</a></div><div class="ttdeci">void pomp_dprior(double *lik, const double *p, int give_log, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00237">pomp.h:237</a></div></div>
+<div class="ttc" id="apomp_8h_html_a3faa3c7fe8f69a8f03b0cf34bb6d66b6"><div class="ttname"><a href="pomp_8h.html#a3faa3c7fe8f69a8f03b0cf34bb6d66b6">pomp_dprior</a></div><div class="ttdeci">void pomp_dprior(double *lik, const double *p, int give_log, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00236">pomp.h:236</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3004,7 +3008,7 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="aemeasure_8c_html_a9e133b8f86812dcd3682439751eaef63"><div class="ttname"><a href="emeasure_8c.html#a9e133b8f86812dcd3682439751eaef63">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="emeasure_8c_source.html#l00063">emeasure.c:63</a></div></div>
 <div class="ttc" id="aemeasure_8c_html_ae5591ed3a1a462f91141cff304975884"><div class="ttname"><a href="emeasure_8c.html#ae5591ed3a1a462f91141cff304975884">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="emeasure_8c_source.html#l00013">emeasure.c:13</a></div></div>
 <div class="ttc" id="aemeasure_8c_html_aff505c906b432ad2e9b72dc28feb374d"><div class="ttname"><a href="emeasure_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int n, int nreps, int ntimes, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="emeasure_8c_source.html#l00087">emeasure.c:87</a></div></div>
-<div class="ttc" id="apomp_8h_html_ae9bb1378a2799a6928d1225c2da63d81"><div class="ttname"><a href="pomp_8h.html#ae9bb1378a2799a6928d1225c2da63d81">pomp_measure_model_expectation</a></div><div class="ttdeci">void pomp_measure_model_expectation(double *f, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00223">pomp.h:223</a></div></div>
+<div class="ttc" id="apomp_8h_html_ae9bb1378a2799a6928d1225c2da63d81"><div class="ttname"><a href="pomp_8h.html#ae9bb1378a2799a6928d1225c2da63d81">pomp_measure_model_expectation</a></div><div class="ttdeci">void pomp_measure_model_expectation(double *f, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00222">pomp.h:222</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a263b864ea80d9008e4c96ffe013f1dff"><div class="ttname"><a href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a></div><div class="ttdeci">static R_INLINE void fixdimnames(SEXP x, const char **names, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00108">pomp_defines.h:108</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_ac56010c8d35a155162376d066856f663"><div class="ttname"><a href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a></div><div class="ttdeci">static R_INLINE int invalid_names(SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00055">pomp_defines.h:55</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -3194,7 +3198,7 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="apartrans_8c_html_ae9ae980041e438eed7a3af43ce4e9f6b"><div class="ttname"><a href="partrans_8c.html#ae9ae980041e438eed7a3af43ce4e9f6b">direction_t</a></div><div class="ttdeci">direction_t</div><div class="ttdef"><b>Definition:</b> <a href="partrans_8c_source.html#l00011">partrans.c:11</a></div></div>
 <div class="ttc" id="apartrans_8c_html_ae9ae980041e438eed7a3af43ce4e9f6ba9edb3685af8fa8f6972aa4a1a5eb98c2"><div class="ttname"><a href="partrans_8c.html#ae9ae980041e438eed7a3af43ce4e9f6ba9edb3685af8fa8f6972aa4a1a5eb98c2">from</a></div><div class="ttdeci">@ from</div><div class="ttdef"><b>Definition:</b> <a href="partrans_8c_source.html#l00011">partrans.c:11</a></div></div>
 <div class="ttc" id="apartrans_8c_html_ae9ae980041e438eed7a3af43ce4e9f6baf6d5fba6cbb9fe52e4176ef9fe5b1f54"><div class="ttname"><a href="partrans_8c.html#ae9ae980041e438eed7a3af43ce4e9f6baf6d5fba6cbb9fe52e4176ef9fe5b1f54">to</a></div><div class="ttdeci">@ to</div><div class="ttdef"><b>Definition:</b> <a href="partrans_8c_source.html#l00011">partrans.c:11</a></div></div>
-<div class="ttc" id="apomp_8h_html_a36db4c064e42345dc674fab1e0a1b83c"><div class="ttname"><a href="pomp_8h.html#a36db4c064e42345dc674fab1e0a1b83c">pomp_transform_fn</a></div><div class="ttdeci">void pomp_transform_fn(double *pt, const double *p, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00239">pomp.h:239</a></div></div>
+<div class="ttc" id="apomp_8h_html_a36db4c064e42345dc674fab1e0a1b83c"><div class="ttname"><a href="pomp_8h.html#a36db4c064e42345dc674fab1e0a1b83c">pomp_transform_fn</a></div><div class="ttdeci">void pomp_transform_fn(double *pt, const double *p, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00238">pomp.h:238</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a76a484fb785e5a4b35f15e41a1b8fc1b"><div class="ttname"><a href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a></div><div class="ttdeci">static R_INLINE SEXP matchnames(SEXP provided, SEXP needed, const char *where)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00064">pomp_defines.h:64</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3424,7 +3428,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keywordflow">return</span> x;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a224e5b970a611148739b18bce21f9ca8"><div class="ttname"><a href="pomp_8h.html#a224e5b970a611148739b18bce21f9ca8">pomp_rinit</a></div><div class="ttdeci">void pomp_rinit(double *x, const double *p, double t, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00199">pomp.h:199</a></div></div>
+<div class="ttc" id="apomp_8h_html_a224e5b970a611148739b18bce21f9ca8"><div class="ttname"><a href="pomp_8h.html#a224e5b970a611148739b18bce21f9ca8">pomp_rinit</a></div><div class="ttdeci">void pomp_rinit(double *x, const double *p, double t, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00198">pomp.h:198</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a2d76325a3950678cb407b4af2959c8bf"><div class="ttname"><a href="pomp__defines_8h.html#a2d76325a3950678cb407b4af2959c8bf">paste</a></div><div class="ttdeci">static R_INLINE SEXP paste(SEXP a, SEXP b, SEXP sep)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00246">pomp_defines.h:246</a></div></div>
 <div class="ttc" id="arinit_8c_html_a1d34a269c2da0e05ebce19a2d07bf123"><div class="ttname"><a href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int m, int n, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00070">rinit.c:70</a></div></div>
 <div class="ttc" id="arinit_8c_html_a966f509fab1f9d9e38fc64d7e5773ede"><div class="ttname"><a href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede">pomp_default_rinit</a></div><div class="ttdeci">static SEXP pomp_default_rinit(SEXP params, SEXP Pnames, int npar, int nrep, int nsim)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00245">rinit.c:245</a></div></div>
@@ -3719,7 +3723,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a34eca0414089b1c39633d0f792224039"><div class="ttname"><a href="pomp_8h.html#a34eca0414089b1c39633d0f792224039">pomp_measure_model_simulator</a></div><div class="ttdeci">void pomp_measure_model_simulator(double *y, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00219">pomp.h:219</a></div></div>
+<div class="ttc" id="apomp_8h_html_a34eca0414089b1c39633d0f792224039"><div class="ttname"><a href="pomp_8h.html#a34eca0414089b1c39633d0f792224039">pomp_measure_model_simulator</a></div><div class="ttdeci">void pomp_measure_model_simulator(double *y, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00218">pomp.h:218</a></div></div>
 <div class="ttc" id="armeasure_8c_html_a9e133b8f86812dcd3682439751eaef63"><div class="ttname"><a href="rmeasure_8c.html#a9e133b8f86812dcd3682439751eaef63">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="rmeasure_8c_source.html#l00063">rmeasure.c:63</a></div></div>
 <div class="ttc" id="armeasure_8c_html_ae5591ed3a1a462f91141cff304975884"><div class="ttname"><a href="rmeasure_8c.html#ae5591ed3a1a462f91141cff304975884">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="rmeasure_8c_source.html#l00013">rmeasure.c:13</a></div></div>
 <div class="ttc" id="armeasure_8c_html_aff505c906b432ad2e9b72dc28feb374d"><div class="ttname"><a href="rmeasure_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int n, int nreps, int ntimes, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="rmeasure_8c_source.html#l00087">rmeasure.c:87</a></div></div>
@@ -3904,7 +3908,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">return</span> P;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a910c57a1b150c29312792eba4a5fb2d3"><div class="ttname"><a href="pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3">pomp_rprior</a></div><div class="ttdeci">void pomp_rprior(double *p, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00235">pomp.h:235</a></div></div>
+<div class="ttc" id="apomp_8h_html_a910c57a1b150c29312792eba4a5fb2d3"><div class="ttname"><a href="pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3">pomp_rprior</a></div><div class="ttdeci">void pomp_rprior(double *p, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00234">pomp.h:234</a></div></div>
 <div class="ttc" id="arprior_8c_html_a0d7fde328f6573bb69afd5d887d92599"><div class="ttname"><a href="rprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *p, int n)</div><div class="ttdef"><b>Definition:</b> <a href="rprior_8c_source.html#l00032">rprior.c:32</a></div></div>
 <div class="ttc" id="arprior_8c_html_a47e0916f81aa8c67b2cd749534467369"><div class="ttname"><a href="rprior_8c.html#a47e0916f81aa8c67b2cd749534467369">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(SEXP params)</div><div class="ttdef"><b>Definition:</b> <a href="rprior_8c_source.html#l00048">rprior.c:48</a></div></div>
 <div class="ttc" id="arprior_8c_html_ad0f00e555a10801616b1d7f177d88ec3"><div class="ttname"><a href="rprior_8c.html#ad0f00e555a10801616b1d7f177d88ec3">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="rprior_8c_source.html#l00011">rprior.c:11</a></div></div>
@@ -4533,7 +4537,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="keywordflow">return</span> F;</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a1c79f52f1a622f5a59fea40ad9dfe1f4"><div class="ttname"><a href="pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4">pomp_skeleton</a></div><div class="ttdeci">void pomp_skeleton(double *f, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00215">pomp.h:215</a></div></div>
+<div class="ttc" id="apomp_8h_html_a1c79f52f1a622f5a59fea40ad9dfe1f4"><div class="ttname"><a href="pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4">pomp_skeleton</a></div><div class="ttdeci">void pomp_skeleton(double *f, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00214">pomp.h:214</a></div></div>
 <div class="ttc" id="askeleton_8c_html_a4c519c3f1f7ceca7aae16c0aa702cfeb"><div class="ttname"><a href="skeleton_8c.html#a4c519c3f1f7ceca7aae16c0aa702cfeb">eval_skeleton_native</a></div><div class="ttdeci">void eval_skeleton_native(double *f, double *time, double *x, double *p, int nvars, int npars, int ncovars, int ntimes, int nrepx, int nrepp, int nreps, int *sidx, int *pidx, int *cidx, lookup_table_t *covar_table, pomp_skeleton *fun, SEXP args, double *cov)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00247">skeleton.c:247</a></div></div>
 <div class="ttc" id="askeleton_8c_html_a53b6db198caa0f42fbbccb00bc27a12e"><div class="ttname"><a href="skeleton_8c.html#a53b6db198caa0f42fbbccb00bc27a12e">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int nvars, int nreps, int ntimes, SEXP Snames)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00083">skeleton.c:83</a></div></div>
 <div class="ttc" id="askeleton_8c_html_a82ea4779fc1cc65f27c3546cbb6669c8"><div class="ttname"><a href="skeleton_8c.html#a82ea4779fc1cc65f27c3546cbb6669c8">add_skel_args</a></div><div class="ttdeci">SEXP add_skel_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00012">skeleton.c:12</a></div></div>
@@ -4830,7 +4834,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_abde17f5a684e4a1a6c276a2ce3da3715"><div class="ttname"><a href="pomp_8h.html#abde17f5a684e4a1a6c276a2ce3da3715">pomp_measure_model_covariance</a></div><div class="ttdeci">void pomp_measure_model_covariance(double *f, const double *x, const double *p, const int *vmatindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00227">pomp.h:227</a></div></div>
+<div class="ttc" id="apomp_8h_html_abde17f5a684e4a1a6c276a2ce3da3715"><div class="ttname"><a href="pomp_8h.html#abde17f5a684e4a1a6c276a2ce3da3715">pomp_measure_model_covariance</a></div><div class="ttdeci">void pomp_measure_model_covariance(double *f, const double *x, const double *p, const int *vmatindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00226">pomp.h:226</a></div></div>
 <div class="ttc" id="avmeasure_8c_html_a9e133b8f86812dcd3682439751eaef63"><div class="ttname"><a href="vmeasure_8c.html#a9e133b8f86812dcd3682439751eaef63">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="vmeasure_8c_source.html#l00063">vmeasure.c:63</a></div></div>
 <div class="ttc" id="avmeasure_8c_html_ae5591ed3a1a462f91141cff304975884"><div class="ttname"><a href="vmeasure_8c.html#ae5591ed3a1a462f91141cff304975884">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="vmeasure_8c_source.html#l00013">vmeasure.c:13</a></div></div>
 <div class="ttc" id="avmeasure_8c_html_aff505c906b432ad2e9b72dc28feb374d"><div class="ttname"><a href="vmeasure_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int n, int nreps, int ntimes, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="vmeasure_8c_source.html#l00087">vmeasure.c:87</a></div></div>
@@ -5156,7 +5160,7 @@ Here is the call graph for this function:</div>
 <div class="ttc" id="aeuler_8c_html_ad78b5357467ce6dfb3b594a64a0e3d08"><div class="ttname"><a href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *dt, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00069">euler.c:69</a></div></div>
 <div class="ttc" id="aeuler_8c_html_ae5591ed3a1a462f91141cff304975884"><div class="ttname"><a href="euler_8c.html#ae5591ed3a1a462f91141cff304975884">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00012">euler.c:12</a></div></div>
 <div class="ttc" id="aeuler_8c_html_aff505c906b432ad2e9b72dc28feb374d"><div class="ttname"><a href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int n, int nreps, int ntimes, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00094">euler.c:94</a></div></div>
-<div class="ttc" id="apomp_8h_html_abd7cfb2f9064495241ac3474f912d36d"><div class="ttname"><a href="pomp_8h.html#abd7cfb2f9064495241ac3474f912d36d">pomp_onestep_sim</a></div><div class="ttdeci">void pomp_onestep_sim(double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00206">pomp.h:206</a></div></div>
+<div class="ttc" id="apomp_8h_html_abd7cfb2f9064495241ac3474f912d36d"><div class="ttname"><a href="pomp_8h.html#abd7cfb2f9064495241ac3474f912d36d">pomp_onestep_sim</a></div><div class="ttdeci">void pomp_onestep_sim(double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00205">pomp.h:205</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -5805,7 +5809,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  UNPROTECT(2);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00162">pomp.h:162</a></div></div>
+<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00161">pomp.h:161</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -6552,7 +6556,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  UNPROTECT(2);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00155">pomp.h:155</a></div></div>
+<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00154">pomp.h:154</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -8613,25 +8617,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00096">96</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                            {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">int</span> k, nval, ns, np, nt;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">double</span> *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  SEXP ans;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  PROTECT(n = AS_INTEGER(n)); nval = INTEGER(n)[0];</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  PROTECT(size = AS_NUMERIC(size)); ns = LENGTH(size); S = REAL(size);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  PROTECT(prob = AS_NUMERIC(prob)); np = LENGTH(prob); P = REAL(prob);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  PROTECT(theta = AS_NUMERIC(theta)); nt = LENGTH(theta); T = REAL(theta);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  PROTECT(ans = NEW_NUMERIC(nval)); <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = REAL(ans);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  GetRNGstate();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nval; k++) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>[k] = <a class="code" href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a>(S[k%ns],P[k%np],T[k%nt]);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  PutRNGstate();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  UNPROTECT(5);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a27ce90ca6f901016f2745cd1408cbde5"><div class="ttname"><a href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div><div class="ttdeci">static R_INLINE double rbetabinom(double size, double prob, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00173">pomp.h:173</a></div></div>
+<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00103">103</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                                            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">int</span> k, nval, ns, np, nt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">double</span> *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  SEXP ans;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  PROTECT(n = AS_INTEGER(n)); nval = INTEGER(n)[0];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  PROTECT(size = AS_NUMERIC(size)); ns = LENGTH(size); S = REAL(size);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  PROTECT(prob = AS_NUMERIC(prob)); np = LENGTH(prob); P = REAL(prob);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  PROTECT(theta = AS_NUMERIC(theta)); nt = LENGTH(theta); T = REAL(theta);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  PROTECT(ans = NEW_NUMERIC(nval)); <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = REAL(ans);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  GetRNGstate();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nval; k++) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>[k] = <a class="code" href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a>(S[k%ns],P[k%np],T[k%nt]);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  PutRNGstate();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  UNPROTECT(5);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="ttc" id="apomp_8h_html_a27ce90ca6f901016f2745cd1408cbde5"><div class="ttname"><a href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div><div class="ttdeci">static R_INLINE double rbetabinom(double size, double prob, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00172">pomp.h:172</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -8682,28 +8686,33 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00025">25</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> ntrans = length(rate);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">int</span> dim[2];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  SEXP nn, x, nm;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (length(size)&gt;1)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">if</span> (length(deltat)&gt;1)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  PROTECT(nn = AS_INTEGER(n));</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  dim[0] = ntrans;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  dim[1] = INTEGER(nn)[0];</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,dim));</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  PROTECT(nm = GET_NAMES(rate));</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(x,nm,2);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  GetRNGstate();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="distributions_8c.html#a1993ad21f9fe53c1cb300374a672814a">reulermultinom_multi</a>(INTEGER(nn),&amp;ntrans,REAL(size),REAL(rate),REAL(deltat),REAL(x));</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  PutRNGstate();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  UNPROTECT(3);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">return</span> x;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="ttc" id="adistributions_8c_html_a1993ad21f9fe53c1cb300374a672814a"><div class="ttname"><a href="distributions_8c.html#a1993ad21f9fe53c1cb300374a672814a">reulermultinom_multi</a></div><div class="ttdeci">static void reulermultinom_multi(int *n, int *ntrans, double *size, double *rate, double *deltat, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="distributions_8c_source.html#l00007">distributions.c:7</a></div></div>
+<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00023">23</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> ntrans = length(rate);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> dim[2];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  SEXP x, nm;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (length(size)&gt;1)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (length(deltat)&gt;1)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  PROTECT(n = AS_INTEGER(n));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  PROTECT(size = AS_NUMERIC(size));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  PROTECT(rate = AS_NUMERIC(rate));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  PROTECT(deltat = AS_NUMERIC(deltat));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  dim[0] = ntrans;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  dim[1] = *INTEGER(n);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">if</span> (dim[1] == NA_INTEGER || dim[1] &lt; 0)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: &#39;n&#39; must be a non-negative integer.&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,dim));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  PROTECT(nm = GET_NAMES(rate));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(x,nm,2);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  GetRNGstate();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="distributions_8c.html#a535016daa0c6d33c1868cc3eace73372">reulermultinom_multi</a>(dim[0],dim[1],REAL(size),REAL(rate),REAL(deltat),REAL(x));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  PutRNGstate();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  UNPROTECT(6);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="ttc" id="adistributions_8c_html_a535016daa0c6d33c1868cc3eace73372"><div class="ttname"><a href="distributions_8c.html#a535016daa0c6d33c1868cc3eace73372">reulermultinom_multi</a></div><div class="ttdeci">static void reulermultinom_multi(int m, int n, double *size, double *rate, double *deltat, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="distributions_8c_source.html#l00007">distributions.c:7</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -8711,7 +8720,7 @@ Here is the call graph for this function:</div>
 <map name="apomp__decls_8h_abacea3217a3136190d12e38f91a7f128_cgraph" id="apomp__decls_8h_abacea3217a3136190d12e38f91a7f128_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,145,83"/>
 <area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="229,5,321,32"/>
-<area shape="rect" href="distributions_8c.html#a1993ad21f9fe53c1cb300374a672814a" title=" " alt="" coords="193,56,357,83"/>
+<area shape="rect" href="distributions_8c.html#a535016daa0c6d33c1868cc3eace73372" title=" " alt="" coords="193,56,357,83"/>
 <area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="220,107,331,133"/>
 <area shape="rect" href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9" title=" " alt="" coords="405,56,528,83"/>
 </map>
@@ -8751,29 +8760,29 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00070">70</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                                 {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">int</span> k, nval, nsig, ndt;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">double</span> *x, *sig, *dt;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  SEXP ans;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  PROTECT(n = AS_INTEGER(n));</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  nval = INTEGER(n)[0];</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a> = AS_NUMERIC(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  nsig = LENGTH(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  sig = REAL(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  PROTECT(deltat = AS_NUMERIC(deltat));</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  ndt = LENGTH(deltat);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  dt = REAL(deltat);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  PROTECT(ans = NEW_NUMERIC(nval));</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  x = REAL(ans);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  GetRNGstate();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nval; k++) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    x[k] = <a class="code" href="pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e">rgammawn</a>(sig[k%nsig],dt[k%ndt]);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  PutRNGstate();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  UNPROTECT(4);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">return</span> ans;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="distributions_8c_source.html#l00077">77</a> of file <a class="el" href="distributions_8c_source.html">distributions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                 {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> k, nval, nsig, ndt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">double</span> *x, *sig, *dt;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  SEXP ans;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  PROTECT(n = AS_INTEGER(n));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  nval = INTEGER(n)[0];</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a> = AS_NUMERIC(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  nsig = LENGTH(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  sig = REAL(<a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  PROTECT(deltat = AS_NUMERIC(deltat));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  ndt = LENGTH(deltat);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  dt = REAL(deltat);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  PROTECT(ans = NEW_NUMERIC(nval));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  x = REAL(ans);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  GetRNGstate();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nval; k++) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    x[k] = <a class="code" href="pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e">rgammawn</a>(sig[k%nsig],dt[k%ndt]);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  PutRNGstate();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  UNPROTECT(4);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> ans;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="ttc" id="apomp_8h_html_a52cad6bd7c9be6be2215659798114e0e"><div class="ttname"><a href="pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e">rgammawn</a></div><div class="ttdeci">static R_INLINE double rgammawn(double sigma, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00020">pomp.h:20</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -9303,7 +9312,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a7cbbce02475d974d83e25dc46c4b6f1d"><div class="ttname"><a href="pomp_8h.html#a7cbbce02475d974d83e25dc46c4b6f1d">pomp_ssa_rate_fn</a></div><div class="ttdeci">double pomp_ssa_rate_fn(int event, double t, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00203">pomp.h:203</a></div></div>
+<div class="ttc" id="apomp_8h_html_a7cbbce02475d974d83e25dc46c4b6f1d"><div class="ttname"><a href="pomp_8h.html#a7cbbce02475d974d83e25dc46c4b6f1d">pomp_ssa_rate_fn</a></div><div class="ttdeci">double pomp_ssa_rate_fn(int event, double t, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00202">pomp.h:202</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a2285fe40c11882d02308957485772528"><div class="ttname"><a href="pomp__defines_8h.html#a2285fe40c11882d02308957485772528">MATCHROWNAMES</a></div><div class="ttdeci">#define MATCHROWNAMES(X, N, W)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00013">pomp_defines.h:13</a></div></div>
 <div class="ttc" id="assa_8c_html_a08a1d63aa145b71449d68985c31ab32c"><div class="ttname"><a href="ssa_8c.html#a08a1d63aa145b71449d68985c31ab32c">SSA</a></div><div class="ttdeci">static void SSA(pomp_ssa_rate_fn *ratefun, int irep, int nvar, int nevent, int npar, int nrep, int ntimes, double *xstart, double t, const double *times, const double *params, double *xout, const double *v, int nzero, const int *izero, const int *istate, const int *ipar, int ncovar, const int *icovar, Rboolean hasvname, const int *ivmat, int mcov, lookup_table_t *tab, const double *hmax)</div><div class="ttdef"><b>Definition:</b> <a href="ssa_8c_source.html#l00122">ssa.c:122</a></div></div>
 <div class="ttc" id="assa_8c_html_a492c6ccf2bde2bebcd32e73e0933ee92"><div class="ttname"><a href="ssa_8c.html#a492c6ccf2bde2bebcd32e73e0933ee92">FIRST</a></div><div class="ttdeci">#define FIRST</div><div class="ttdef"><b>Definition:</b> <a href="ssa_8c_source.html#l00200">ssa.c:200</a></div></div>

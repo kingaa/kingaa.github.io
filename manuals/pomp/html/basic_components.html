@@ -30,6 +30,7 @@ Accordingly, for each such component, there are two basic model components, one 
 <h3>Details</h3>
 
 <p>In addition to the parts listed above, <span class="pkg">pomp</span> includes two additional basic model components: the deterministic skeleton, and parameter transformations that can be used to map the parameter space onto a Euclidean space for estimation purposes.
+There are also basic model components for computing the mean and variance of the measurement process conditional on the latent-state process.
 </p>
 <p>There are thus altogether eleven <b>basic model components</b>:
 </p>
@@ -69,7 +70,7 @@ Accordingly, for each such component, there are two basic model components, one 
 </p>
 </li></ol>
 
-<p>Each of these can be set or modified in the <code>pomp</code> constructor function or in any of the <span class="pkg">pomp</span> <a href="../../pomp/help/elementary+20algorithms.html">elementary algorithms</a> or <a href="../../pomp/help/estimation+20algorithms.html">estimation algorithms</a> using an argument that matches the basic model component.
+<p>Each of these can be set or modified in the <code>pomp</code> <a href="../../pomp/help/pomp.html">constructor function</a> or in any of the <span class="pkg">pomp</span> <a href="../../pomp/help/elementary+20algorithms.html">elementary algorithms</a> or <a href="../../pomp/help/estimation+20algorithms.html">estimation algorithms</a> using an argument that matches the basic model component.
 A basic model component can be unset by passing <code>NULL</code> in the same way.
 </p>
 <p>Help pages detailing each basic model component are provided.
@@ -104,6 +105,6 @@ A basic model component can be unset by passing <code>NULL</code> in the same wa
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.1.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

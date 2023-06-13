@@ -75,11 +75,12 @@ If <code>tol</code> is not achieved in <code>maxit</code> or fewer iterations, a
 <p>The basic transmission model assumes that the force of infection
 on an unisolated patient is
 </p>
-<p style="text-align: center;"><code class="reqn">\lambda=b(P_u+aP_i),</code>
+<p style="text-align: center;"><code class="reqn">\lambda=b(P_u+aP_i)+\iota,</code>
 </p>
 
 <p>where <code class="reqn">P_u</code>, <code class="reqn">P_i</code> are the prevalences among unisolated
-and isolated patients, respectively.
+and isolated patients, respectively and <code class="reqn">\iota</code> represents
+the risk of acquisition unrelated to local prevalence.
 On an isolated patient, this force of infection is reduced by the factor
 <code>isol_factor</code>.
 </p>
@@ -89,7 +90,9 @@ On an isolated patient, this force of infection is reduced by the factor
 <dl>
 <dt>b</dt><dd><p>transmission rate. In the homogeneous model, this is constant across units in the hospital; in the unit-specific model, there is one value of <code>b</code> for each unit.</p>
 </dd>
-<dt>lambda.out</dt><dd><p>force of infection outside the hospital</p>
+<dt>lambda.out</dt><dd><p>force of colonization outside the hospital</p>
+</dd>
+<dt>iota</dt><dd><p>baseline force of colonization</p>
 </dd>
 <dt>gamma</dt><dd><p>recovery rate</p>
 </dd>
@@ -146,7 +149,7 @@ fake_data |&gt;
 trans_homog_objfun(
   params=c(
     a=1,b=0.1,gamma=0.01,p0=0.1,lambda.out=0.01,
-    isol_factor=0.2,alpha=0.02,beta=0.1
+    iota=0,isol_factor=0.2,alpha=0.02,beta=0.1
   ),
   est=c("a","b"),
   data=dat
@@ -171,7 +174,9 @@ trans_unit_spec_objfun(
     b.A=0.1,b.B=0.1,b.C=0.1,b.D=0.1,b.E=0.1,
     gamma=0.01,p0=0.1,
     lambda.out=0.1,
-    isol_factor=0.2,alpha=0.02,beta=0.1
+    iota=0,
+    isol_factor=0.2,
+    alpha=0.02,beta=0.1
   ),
   data=dat
 ) -&gt; f
@@ -179,6 +184,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.13.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.14.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -17,4 +17,5 @@ try({
     invisible(.Fortran("hello",PACKAGE="helloF"))
     dyn.unload(paste0("helloF",.Platform$dynlib.ext))
     file.remove(list.files(pattern="^helloF\\..*"))
+    invisible(NULL)
 })

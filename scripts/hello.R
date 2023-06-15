@@ -9,6 +9,7 @@ try({
     invisible(.C("hello",PACKAGE="helloC"))
     dyn.unload(paste0("helloC",.Platform$dynlib.ext))
     file.remove(list.files(pattern="^helloC\\..*"))
+    invisible(NULL)
 })
 
 try({
@@ -30,4 +31,5 @@ try({
     invisible(.Fortran("hello",PACKAGE="helloF"))
     dyn.unload(paste0("helloF",.Platform$dynlib.ext))
     file.remove(list.files(pattern="^helloF\\..*"))
+    invisible(NULL)
 })

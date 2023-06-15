@@ -9,4 +9,5 @@ try({
     invisible(.C("hello",PACKAGE="helloC"))
     dyn.unload(paste0("helloC",.Platform$dynlib.ext))
     file.remove(list.files(pattern="^helloC\\..*"))
+    invisible(NULL)
 })

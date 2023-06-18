@@ -14,9 +14,9 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>approximate Bayesian computation {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>abc {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='approximate+20Bayesian+20computation'>Approximate Bayesian computation</h2>
+<h2 id='abc'>Approximate Bayesian computation</h2>
 
 <h3>Description</h3>
 
@@ -75,18 +75,18 @@ abc(
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="approximate+20Bayesian+20computation_:_data">data</code></td>
+<tr><td><code id="abc_:_data">data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_Nabc">Nabc</code></td>
+<tr><td><code id="abc_:_Nabc">Nabc</code></td>
 <td>
 <p>the number of ABC iterations to perform.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_proposal">proposal</code></td>
+<tr><td><code id="abc_:_proposal">proposal</code></td>
 <td>
 <p>optional function that draws from the proposal
 distribution.  Currently, the proposal distribution must be symmetric for
@@ -94,53 +94,53 @@ proper inference: it is the user's responsibility to ensure that it is.
 Several functions that construct appropriate proposal function are
 provided: see <a href="../../pomp/help/proposals.html">MCMC proposals</a> for more information.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_scale">scale</code></td>
+<tr><td><code id="abc_:_scale">scale</code></td>
 <td>
 <p>named numeric vector of scales.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_epsilon">epsilon</code></td>
+<tr><td><code id="abc_:_epsilon">epsilon</code></td>
 <td>
 <p>ABC tolerance.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_probes">probes</code></td>
+<tr><td><code id="abc_:_probes">probes</code></td>
 <td>
 <p>a single probe or a list of one or more probes.
 A probe is simply a scalar- or vector-valued function of one argument that can be applied to the data array of a &lsquo;pomp&rsquo;.
 A vector-valued probe must always return a vector of the same size.
 A number of useful probes are provided with the package:
-see <a href="../../pomp/help/basic+20probes.html">basic probes</a>.</p>
+see <a href="../../pomp/help/basic_probes.html">basic probes</a>.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_params">params</code></td>
+<tr><td><code id="abc_:_params">params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_rinit">rinit</code></td>
+<tr><td><code id="abc_:_rinit">rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_rprocess">rprocess</code></td>
+<tr><td><code id="abc_:_rprocess">rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess_spec.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_rmeasure">rmeasure</code></td>
+<tr><td><code id="abc_:_rmeasure">rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
-For more information, see <a href="../../pomp/help/rmeasure+20specification.html">rmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/rmeasure_spec.html">rmeasure specification</a>.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_dprior">dprior</code></td>
+<tr><td><code id="abc_:_dprior">dprior</code></td>
 <td>
 <p>optional; prior distribution density evaluator, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
-For more information, see <a href="../../pomp/help/prior+20specification.html">prior specification</a>.
+For more information, see <a href="../../pomp/help/prior_spec.html">prior specification</a>.
 Setting <code>dprior=NULL</code> resets the prior distribution to its default, which is a flat improper prior.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_...">...</code></td>
+<tr><td><code id="abc_:_...">...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -149,7 +149,7 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr><td><code id="approximate+20Bayesian+20computation_:_verbose">verbose</code></td>
+<tr><td><code id="abc_:_verbose">verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -225,22 +225,22 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <h3>See Also</h3>
 
 <p>More on methods based on summary statistics: 
-<code><a href="../../pomp/help/basic+20probes.html">basic probes</a></code>,
-<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
-<code><a href="../../pomp/help/probe+20matching.html">probe matching</a></code>,
+<code><a href="../../pomp/help/basic_probes.html">basic_probes</a></code>,
+<code><a href="../../pomp/help/nlf.html">nlf</a></code>,
+<code><a href="../../pomp/help/probe_match.html">probe_match</a></code>,
 <code><a href="../../pomp/help/probe.html">probe</a>()</code>,
-<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>,
+<code><a href="../../pomp/help/spect_match.html">spect_match</a></code>,
 <code><a href="../../pomp/help/spect.html">spect</a>()</code>
 </p>
 <p>More on <span class="pkg">pomp</span> estimation algorithms:
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
-<code><a href="../../pomp/help/estimation+20algorithms.html">estimation algorithms</a></code>,
+<code><a href="../../pomp/help/estimation_algorithms.html">estimation_algorithms</a></code>,
 <code><a href="../../pomp/help/mif2.html">mif2</a>()</code>,
-<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
+<code><a href="../../pomp/help/nlf.html">nlf</a></code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
-<code><a href="../../pomp/help/probe+20matching.html">probe matching</a></code>,
-<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>
+<code><a href="../../pomp/help/probe_match.html">probe_match</a></code>,
+<code><a href="../../pomp/help/spect_match.html">spect_match</a></code>
 </p>
 <p>More on Markov chain Monte Carlo methods:
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
@@ -250,10 +250,10 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/bsmc2.html">bsmc2</a>()</code>,
 <code><a href="../../pomp/help/dprior.html">dprior</a>()</code>,
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>,
-<code><a href="../../pomp/help/prior+20specification.html">prior specification</a></code>,
+<code><a href="../../pomp/help/prior_spec.html">prior_spec</a></code>,
 <code><a href="../../pomp/help/rprior.html">rprior</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.2.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

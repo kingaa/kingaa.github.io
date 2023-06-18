@@ -14,9 +14,9 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container">
 
-<table style="width: 100%;"><tr><td>basic probes {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>basic_probes {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='basic+20probes'>Useful probes for partially-observed Markov processes</h2>
+<h2 id='basic_probes'>Useful probes for partially-observed Markov processes</h2>
 
 <h3>Description</h3>
 
@@ -62,36 +62,36 @@ probe_nlar(var, lags, powers, transform = identity)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="basic+20probes_:_var">var</code>, <code id="basic+20probes_:_vars">vars</code></td>
+<tr><td><code id="basic_probes_:_var">var</code>, <code id="basic_probes_:_vars">vars</code></td>
 <td>
 <p>character; the name(s) of the observed variable(s).</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_trim">trim</code></td>
+<tr><td><code id="basic_probes_:_trim">trim</code></td>
 <td>
 <p>the fraction of observations to be trimmed (see <code><a href="../../base/html/mean.html">mean</a></code>).</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_transform">transform</code></td>
+<tr><td><code id="basic_probes_:_transform">transform</code></td>
 <td>
 <p>transformation to be applied to the data before the probe is computed.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_na.rm">na.rm</code></td>
+<tr><td><code id="basic_probes_:_na.rm">na.rm</code></td>
 <td>
 <p>if <code>TRUE</code>, remove all NA observations prior to computing the probe.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_kernel.width">kernel.width</code></td>
+<tr><td><code id="basic_probes_:_kernel.width">kernel.width</code></td>
 <td>
 <p>width of modified Daniell smoothing kernel to be used
 in power-spectrum computation: see <code><a href="../../stats/help/kernel.html">kernel</a></code>.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_probs">probs</code></td>
+<tr><td><code id="basic_probes_:_probs">probs</code></td>
 <td>
 <p>the quantile or quantiles to compute: see <code><a href="../../stats/html/quantile.html">quantile</a></code>.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_...">...</code></td>
+<tr><td><code id="basic_probes_:_...">...</code></td>
 <td>
 <p>additional arguments passed to the underlying algorithms.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_lags">lags</code></td>
+<tr><td><code id="basic_probes_:_lags">lags</code></td>
 <td>
 <p>In <code>probe_ccf</code>, a vector of lags between time series.
 Positive lags correspond to <code>x</code> advanced relative to <code>y</code>;
@@ -101,11 +101,11 @@ negative lags, to the reverse.
 autoregressive model that will be fit to the actual and simulated data.
 See Details, below, for a precise description.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_type">type</code></td>
+<tr><td><code id="basic_probes_:_type">type</code></td>
 <td>
 <p>Compute autocorrelation or autocovariance?</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_ref">ref</code></td>
+<tr><td><code id="basic_probes_:_ref">ref</code></td>
 <td>
 <p>empirical reference distribution.  Simulated data will be
 regressed against the values of <code>ref</code>, sorted and, optionally,
@@ -113,15 +113,15 @@ differenced.  The resulting regression coefficients capture information
 about the shape of the marginal distribution.  A good choice for <code>ref</code>
 is the data itself.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_order">order</code></td>
+<tr><td><code id="basic_probes_:_order">order</code></td>
 <td>
 <p>order of polynomial regression.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_diff">diff</code></td>
+<tr><td><code id="basic_probes_:_diff">diff</code></td>
 <td>
 <p>order of differencing to perform.</p>
 </td></tr>
-<tr><td><code id="basic+20probes_:_powers">powers</code></td>
+<tr><td><code id="basic_probes_:_powers">powers</code></td>
 <td>
 <p>the powers of each term (corresponding to <code>lags</code>) in the
 the nonlinear autoregressive model that will be fit to the actual and
@@ -157,14 +157,14 @@ numerical value.
 <h3>See Also</h3>
 
 <p>More on methods based on summary statistics: 
-<code><a href="../../pomp/help/approximate+20Bayesian+20computation.html">approximate Bayesian computation</a></code>,
-<code><a href="../../pomp/help/nonlinear+20forecasting.html">nonlinear forecasting</a></code>,
-<code><a href="../../pomp/help/probe+20matching.html">probe matching</a></code>,
+<code><a href="../../pomp/help/abc.html">abc</a>()</code>,
+<code><a href="../../pomp/help/nlf.html">nlf</a></code>,
+<code><a href="../../pomp/help/probe_match.html">probe_match</a></code>,
 <code><a href="../../pomp/help/probe.html">probe</a>()</code>,
-<code><a href="../../pomp/help/spectrum+20matching.html">spectrum matching</a></code>,
+<code><a href="../../pomp/help/spect_match.html">spect_match</a></code>,
 <code><a href="../../pomp/help/spect.html">spect</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.2.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -87,27 +87,27 @@ This will be coerced internally to storage mode <code>double</code>.</p>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
-For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
+For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
 </td></tr>
 <tr><td><code id="kalman_:_rprocess">rprocess</code></td>
 <td>
-<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
+<p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess_spec.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
-For more information, see <a href="../../pomp/help/rprocess+20specification.html">rprocess specification for the documentation on these plugins</a>.</p>
+For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
 <tr><td><code id="kalman_:_emeasure">emeasure</code></td>
 <td>
 <p>the expectation of the measured variables, conditional on the latent state.
 This can be specified as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>emeasure=NULL</code> removes the emeasure component.
-For more information, see <a href="../../pomp/help/emeasure+20specification.html">emeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/emeasure_spec.html">emeasure specification</a>.</p>
 </td></tr>
 <tr><td><code id="kalman_:_vmeasure">vmeasure</code></td>
 <td>
 <p>the covariance of the measured variables, conditional on the latent state.
 This can be specified as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>vmeasure=NULL</code> removes the vmeasure component.
-For more information, see <a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a>.</p>
+For more information, see <a href="../../pomp/help/vmeasure_spec.html">vmeasure specification</a>.</p>
 </td></tr>
 <tr><td><code id="kalman_:_...">...</code></td>
 <td>
@@ -174,7 +174,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 <p>More on <span class="pkg">pomp</span> elementary algorithms: 
-<code><a href="../../pomp/help/elementary+20algorithms.html">elementary algorithms</a></code>,
+<code><a href="../../pomp/help/elementary_algorithms.html">elementary_algorithms</a></code>,
 <code><a href="../../pomp/help/pfilter.html">pfilter</a>()</code>,
 <code><a href="../../pomp/help/pomp-package.html">pomp-package</a></code>,
 <code><a href="../../pomp/help/probe.html">probe</a>()</code>,
@@ -184,6 +184,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.2.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.3.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

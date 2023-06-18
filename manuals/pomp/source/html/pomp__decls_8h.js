@@ -22,6 +22,7 @@ var pomp__decls_8h =
     [ "bspline_eval", "pomp__decls_8h.html#a71cbe26144698d7db860dc0f9f0fff0c", null ],
     [ "D_BetaBinom", "pomp__decls_8h.html#a631dafe45b2fd04f5fb99e59c1c4f1cf", null ],
     [ "D_Euler_Multinom", "pomp__decls_8h.html#aa055d45aa938bf55afe432967292b892", null ],
+    [ "do_dinit", "pomp__decls_8h.html#aa791ce91b1a00dfb19ecaf829dfc287a", null ],
     [ "do_dmeasure", "pomp__decls_8h.html#a326516e59ec4f791bcc752ef5f763c71", null ],
     [ "do_dprior", "pomp__decls_8h.html#aa41223e2376a1ecca8a599619048da63", null ],
     [ "do_dprocess", "pomp__decls_8h.html#a2a6438a8b3220ecd24e531d5b3dd4534", null ],

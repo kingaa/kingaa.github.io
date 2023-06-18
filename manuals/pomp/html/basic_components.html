@@ -32,7 +32,7 @@ Accordingly, for each such component, there are two basic model components, one 
 <p>In addition to the parts listed above, <span class="pkg">pomp</span> includes two additional basic model components: the deterministic skeleton, and parameter transformations that can be used to map the parameter space onto a Euclidean space for estimation purposes.
 There are also basic model components for computing the mean and variance of the measurement process conditional on the latent-state process.
 </p>
-<p>There are thus altogether eleven <b>basic model components</b>:
+<p>There are thus altogether twelve <b>basic model components</b>:
 </p>
 
 <ol>
@@ -63,6 +63,9 @@ There are also basic model components for computing the mean and variance of the
 <li> <p><a href="../../pomp/help/rinit+20specification.html">rinit</a>, which samples from the initial-state distribution,
 </p>
 </li>
+<li> <p><a href="../../pomp/help/dinit+20specification.html">dinit</a>, which evaluates the initial-state density,
+</p>
+</li>
 <li> <p><a href="../../pomp/help/skeleton+20specification.html">skeleton</a>, which evaluates the deterministic skeleton,
 </p>
 </li>
@@ -88,6 +91,7 @@ A basic model component can be unset by passing <code>NULL</code> in the same wa
 <code><a href="../../pomp/help/accumulator+20variables.html">accumulator variables</a></code>,
 <code><a href="../../pomp/help/betabinomial.html">betabinomial</a></code>,
 <code><a href="../../pomp/help/covariates.html">covariates</a></code>,
+<code><a href="../../pomp/help/dinit+20specification.html">dinit specification</a></code>,
 <code><a href="../../pomp/help/distributions.html">distributions</a></code>,
 <code><a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a></code>,
 <code><a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a></code>,
@@ -105,6 +109,6 @@ A basic model component can be unset by passing <code>NULL</code> in the same wa
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.1.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.2.3 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

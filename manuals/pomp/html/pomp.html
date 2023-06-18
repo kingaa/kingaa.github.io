@@ -29,6 +29,8 @@ These comprise:
 <dl>
 <dt>rinit,</dt><dd><p>which samples from the distribution of the state process at the zero-time;</p>
 </dd>
+<dt>dinit,</dt><dd><p>which evaluates the density of the state process at the zero-time;</p>
+</dd>
 <dt>rprocess,</dt><dd><p>the simulator of the unobserved Markov state process;</p>
 </dd>
 <dt>dprocess,</dt><dd><p>the evaluator of the probability density function for transitions of the unobserved Markov state process;</p>
@@ -63,6 +65,7 @@ These comprise:
   t0,
   ...,
   rinit,
+  dinit,
   rprocess,
   dprocess,
   rmeasure,
@@ -128,6 +131,13 @@ This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></sp
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit+20specification.html">rinit specification</a>.</p>
 </td></tr>
+<tr><td><code id="pomp_:_dinit">dinit</code></td>
+<td>
+<p>evaluator of the initial-state density.
+This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
+Setting <code>dinit=NULL</code> removes this basic component.
+For more information, see <a href="../../pomp/help/dinit+20specification.html">dinit specification</a>.</p>
+</td></tr>
 <tr><td><code id="pomp_:_rprocess">rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess+20specification.html">rprocess plugins</a>.
@@ -136,8 +146,7 @@ For more information, see <a href="../../pomp/help/rprocess+20specification.html
 </td></tr>
 <tr><td><code id="pomp_:_dprocess">dprocess</code></td>
 <td>
-<p>optional;
-specification of the probability density evaluation function of the unobserved state process.
+<p>evaluator of the probability density of transitions of the unobserved state process.
 Setting <code>dprocess=NULL</code> removes the latent-state density evaluator.
 For more information, see <a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a>.</p>
 </td></tr>
@@ -345,6 +354,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/basic+20components.html">basic components</a></code>,
 <code><a href="../../pomp/help/betabinomial.html">betabinomial</a></code>,
 <code><a href="../../pomp/help/covariates.html">covariates</a></code>,
+<code><a href="../../pomp/help/dinit+20specification.html">dinit specification</a></code>,
 <code><a href="../../pomp/help/distributions.html">distributions</a></code>,
 <code><a href="../../pomp/help/dmeasure+20specification.html">dmeasure specification</a></code>,
 <code><a href="../../pomp/help/dprocess+20specification.html">dprocess specification</a></code>,
@@ -361,6 +371,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure+20specification.html">vmeasure specification</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.1.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.2.3 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

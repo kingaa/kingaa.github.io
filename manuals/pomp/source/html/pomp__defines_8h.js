@@ -29,6 +29,7 @@ var pomp__defines_8h =
     ] ],
     [ "as_matrix", "pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d", null ],
     [ "as_state_array", "pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1", null ],
+    [ "fillrownames", "pomp__defines_8h.html#a70fd8ac5f480dcaebc10fe9cb9074732", null ],
     [ "fixdimnames", "pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff", null ],
     [ "getListElement", "pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f", null ],
     [ "getPairListElement", "pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513", null ],

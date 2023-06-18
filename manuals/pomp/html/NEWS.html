@@ -18,6 +18,26 @@ function processMathHTML() {
 
 <h2 id='NEWS'>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 5.2.2</h3>
+
+
+<ul>
+<li><p> This version adds the new basic component <code>dinit</code> for evaluating the probability density function of the initial-state distribution.
+There is a corresponding workhorse function, <code>dinit()</code>.
+</p>
+</li>
+<li><p> The constructor <code>pomp</code> now takes the optional argument <code>nstatevars</code>, which can be used to increase the dimension of the latent state-vectors created by <code>rinit</code>.
+By default, <code>nstatevars = length(statenames)</code>, and <code>nstatevars</code> can only be used to <em>increase</em>, not to decrease, the dimension of the latent state process.
+Moreover, <code>nstatevars</code> has no effect if the <code>rinit</code> basic component is furnished as an <span class="rlang"><b>R</b></span> function.
+</p>
+</li>
+<li><p> Name checking on internally-created vectors and arrays is less strict than previously.
+In particular, it is possible to have variables without names (i.e., <code>""</code>).
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 5.2.1</h3>
 
 

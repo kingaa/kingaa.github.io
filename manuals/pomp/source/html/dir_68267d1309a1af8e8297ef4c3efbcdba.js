@@ -1,6 +1,7 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "bspline.c", "bspline_8c.html", "bspline_8c" ],
+    [ "dinit.c", "dinit_8c.html", "dinit_8c" ],
     [ "distributions.c", "distributions_8c.html", "distributions_8c" ],
     [ "dmeasure.c", "dmeasure_8c.html", "dmeasure_8c" ],
     [ "dprior.c", "dprior_8c.html", "dprior_8c" ],

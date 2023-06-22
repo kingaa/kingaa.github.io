@@ -27,7 +27,7 @@ var searchData=
   ['do_5fsimulate_74',['do_simulate',['../pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7',1,'do_simulate(SEXP object, SEXP params, SEXP nsim, SEXP rettype, SEXP gnsi):&#160;simulate.c'],['../simulate_8c.html#adbe89f4789c66d534f2521bc3c4c98e7',1,'do_simulate(SEXP object, SEXP params, SEXP nsim, SEXP rettype, SEXP gnsi):&#160;simulate.c']]],
   ['do_5fskeleton_75',['do_skeleton',['../pomp__decls_8h.html#a93ce73bdd2e70be7b043dcfc1a5d259c',1,'do_skeleton(SEXP object, SEXP x, SEXP t, SEXP params, SEXP gnsi):&#160;skeleton.c'],['../skeleton_8c.html#a93ce73bdd2e70be7b043dcfc1a5d259c',1,'do_skeleton(SEXP object, SEXP x, SEXP t, SEXP params, SEXP gnsi):&#160;skeleton.c']]],
   ['do_5fvmeasure_76',['do_vmeasure',['../pomp__decls_8h.html#a97fc58eebfdaa733377f210c1dd48082',1,'do_vmeasure(SEXP object, SEXP x, SEXP times, SEXP params, SEXP gnsi):&#160;vmeasure.c'],['../vmeasure_8c.html#a97fc58eebfdaa733377f210c1dd48082',1,'do_vmeasure(SEXP object, SEXP x, SEXP times, SEXP params, SEXP gnsi):&#160;vmeasure.c']]],
-  ['dot_5fproduct_77',['dot_product',['../pomp_8h.html#a1173f77c43279c4e160634cc5649e4d8',1,'pomp.h']]],
+  ['dot_5fproduct_77',['dot_product',['../pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5',1,'pomp.h']]],
   ['dprior_2ec_78',['dprior.c',['../dprior_8c.html',1,'']]],
   ['dprocess_2ec_79',['dprocess.c',['../dprocess_8c.html',1,'']]]
 ];

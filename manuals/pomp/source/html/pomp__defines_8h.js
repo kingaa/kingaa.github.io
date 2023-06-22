@@ -36,8 +36,6 @@ var pomp__defines_8h =
     [ "invalid_names", "pomp__defines_8h.html#ac56010c8d35a155162376d066856f663", null ],
     [ "makearray", "pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49", null ],
     [ "matchnames", "pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b", null ],
-    [ "paste", "pomp__defines_8h.html#a2d76325a3950678cb407b4af2959c8bf", null ],
-    [ "paste0", "pomp__defines_8h.html#a7113f106ccbbafb6a71989d6f6e9811d", null ],
     [ "setcolnames", "pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b", null ],
     [ "setrownames", "pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4", null ]
 ];

@@ -1,6 +1,6 @@
 var classball__t =
 [
-    [ "ball_t", "classball__t.html#a87e6cd9c5f32cbd65883308a2dbcf73c", null ],
+    [ "ball_t", "classball__t.html#a9103dc83519d8ad323aa8841d9d73623", null ],
     [ "ball_t", "classball__t.html#acc57a0661a45a5e75106a404accf5473", null ],
     [ "ball_t", "classball__t.html#a138d81675bebd933f65652c6a257752b", null ],
     [ "~ball_t", "classball__t.html#ab87fc87694e3fae311df924db6ede99e", null ],
@@ -11,7 +11,10 @@ var classball__t =
     [ "deme", "classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d", null ],
     [ "describe", "classball__t.html#a4c6efe3187ab90b7011d445291dd4cd5", null ],
     [ "holder", "classball__t.html#a84b2949440ac7d1fcd8127076e082928", null ],
+    [ "holder", "classball__t.html#aa43e86ea4b912fb0cf99565adc9ed2fa", null ],
     [ "is", "classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f", null ],
+    [ "lineage", "classball__t.html#a1464e9dd09cfbf751cc24f00e2fa4bcd", null ],
+    [ "lineage", "classball__t.html#a12fa86d0b980103199ff7ee6dedace4a", null ],
     [ "newick", "classball__t.html#a6ea0514941c8f2a89306e60065562e83", null ],
     [ "operator=", "classball__t.html#a54b3988414b186f130147910777eae55", null ],
     [ "operator=", "classball__t.html#acef9053249f21e93b4c7a039533b7aa3", null ],
@@ -19,7 +22,6 @@ var classball__t =
     [ "owner", "classball__t.html#a294281fa004817d36e9dfb8f3f3944ee", null ],
     [ "structure", "classball__t.html#a7624737bc15d3d74fad0d4faa71f488c", null ],
     [ "yaml", "classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd", null ],
-    [ "compare", "classball__t.html#a2dd44fa74715e10793bb2ec52c45a0ef", null ],
     [ "operator>>", "classball__t.html#a6f6f397a35a9d8c4613aa04af51c72a9", null ],
     [ "operator>>", "classball__t.html#a129033754b7a3af4cb7b1c3940f1b2c7", null ],
     [ "_deme", "classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e", null ],

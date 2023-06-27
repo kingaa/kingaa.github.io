@@ -90,30 +90,31 @@ $(document).ready(function(){initNavTree('parse_8cc.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="genealogy_8h_source.html">genealogy.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="generics_8h_source.html">generics.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for parse.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse_8cc__incl.png" border="0" usemap="#asrc_2parse_8cc" alt=""/></div>
 <map name="asrc_2parse_8cc" id="asrc_2parse_8cc">
-<area shape="rect" title=" " alt="" coords="701,5,800,32"/>
-<area shape="rect" href="genealogy_8h.html" title=" " alt="" coords="599,80,699,107"/>
-<area shape="rect" href="generics_8h.html" title=" " alt="" coords="963,304,1053,331"/>
-<area shape="rect" title=" " alt="" coords="429,453,488,480"/>
-<area shape="rect" title=" " alt="" coords="175,453,241,480"/>
-<area shape="rect" title=" " alt="" coords="827,229,887,256"/>
-<area shape="rect" title=" " alt="" coords="549,155,635,181"/>
-<area shape="rect" href="internal_8h.html" title=" " alt="" coords="769,453,853,480"/>
-<area shape="rect" href="nodeseq_8h.html" title=" " alt="" coords="314,155,403,181"/>
-<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="659,155,754,181"/>
-<area shape="rect" title=" " alt="" coords="651,528,693,555"/>
-<area shape="rect" title=" " alt="" coords="717,528,795,555"/>
-<area shape="rect" title=" " alt="" coords="819,528,909,555"/>
-<area shape="rect" title=" " alt="" coords="934,528,1034,555"/>
-<area shape="rect" title=" " alt="" coords="279,229,321,256"/>
-<area shape="rect" title=" " alt="" coords="246,379,370,405"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="517,229,584,256"/>
+<area shape="rect" title=" " alt="" coords="999,5,1097,32"/>
+<area shape="rect" href="genealogy_8h.html" title=" " alt="" coords="741,80,841,107"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="794,453,878,480"/>
+<area shape="rect" href="generics_8h.html" title=" " alt="" coords="1086,304,1175,331"/>
+<area shape="rect" title=" " alt="" coords="396,453,455,480"/>
+<area shape="rect" title=" " alt="" coords="305,453,372,480"/>
+<area shape="rect" title=" " alt="" coords="899,229,959,256"/>
+<area shape="rect" title=" " alt="" coords="805,155,891,181"/>
+<area shape="rect" href="nodeseq_8h.html" title=" " alt="" coords="246,155,335,181"/>
+<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="686,155,781,181"/>
+<area shape="rect" title=" " alt="" coords="676,528,719,555"/>
+<area shape="rect" title=" " alt="" coords="743,528,820,555"/>
+<area shape="rect" title=" " alt="" coords="844,528,935,555"/>
+<area shape="rect" title=" " alt="" coords="959,528,1059,555"/>
+<area shape="rect" title=" " alt="" coords="211,229,253,256"/>
+<area shape="rect" title=" " alt="" coords="195,379,319,405"/>
+<area shape="rect" href="node_8h.html" title=" " alt="" coords="533,229,600,256"/>
 <area shape="rect" href="ball_8h.html" title=" " alt="" coords="613,379,672,405"/>
-<area shape="rect" href="pocket_8h.html" title=" " alt="" coords="512,304,589,331"/>
+<area shape="rect" href="pocket_8h.html" title=" " alt="" coords="528,304,605,331"/>
 <area shape="rect" title=" " alt="" coords="547,379,589,405"/>
 </map>
 </div>
@@ -122,12 +123,12 @@ Include dependency graph for parse.cc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:acd7a1ef0ba805edc4cefb18e975452fc"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse_8cc.html#acd7a1ef0ba805edc4cefb18e975452fc">parse_newick</a> (SEXP X, SEXP T0, SEXP Prune, SEXP Obscure, SEXP Time, SEXP Descript, SEXP Yaml, SEXP Structure, SEXP Lineages, SEXP Tree)</td></tr>
-<tr class="separator:acd7a1ef0ba805edc4cefb18e975452fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755d1a27c545574819d2e2cdfd0cdca1"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1">parse_newick</a> (SEXP X, SEXP T0, SEXP Tf)</td></tr>
+<tr class="separator:a755d1a27c545574819d2e2cdfd0cdca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="acd7a1ef0ba805edc4cefb18e975452fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd7a1ef0ba805edc4cefb18e975452fc">&#9670;&nbsp;</a></span>parse_newick()</h2>
+<a id="a755d1a27c545574819d2e2cdfd0cdca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755d1a27c545574819d2e2cdfd0cdca1">&#9670;&nbsp;</a></span>parse_newick()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,49 +149,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Prune</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Obscure</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Time</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Descript</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Yaml</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Structure</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Lineages</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>Tree</em>&#160;</td>
+          <td class="paramname"><em>Tf</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -201,113 +160,55 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>A parser for Newick code. Returns a genealogy in the phylopomp format. </p>
 
-<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00009">9</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    PROTECT(X = AS_CHARACTER(X));</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    PROTECT(T0 = AS_NUMERIC(T0));</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::string x = (<span class="keyword">const</span> <span class="keywordtype">char</span> *) CHAR(STRING_ELT(X,0));</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> G(*REAL(T0));</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    G.parse(x,*REAL(T0));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// prune and/or obscure if requested</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> do_prune = *LOGICAL(AS_LOGICAL(Prune));</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> do_obscure = *LOGICAL(AS_LOGICAL(Obscure));</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (do_prune) G.prune();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (do_obscure) G.obscure();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">size_t</span> nout = 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> get_time = *LOGICAL(AS_LOGICAL(Time));</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (get_time) nout++;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> get_desc = *LOGICAL(AS_LOGICAL(Descript));</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (get_desc) nout++;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> get_yaml = *LOGICAL(AS_LOGICAL(Yaml));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (get_yaml) nout++;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> get_struc = *LOGICAL(AS_LOGICAL(Structure));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (get_struc) nout++;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> get_lin = *LOGICAL(AS_LOGICAL(Lineages));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (get_lin) nout++;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> get_tree = *LOGICAL(AS_LOGICAL(Tree));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (get_tree) nout++;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// pack up return values in a list</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> k = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    SEXP out, outnames;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    PROTECT(out = NEW_LIST(nout));</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    PROTECT(outnames = NEW_CHARACTER(nout));</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (get_time) {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      k = <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(out,outnames,<a class="code" href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b">time</a>(G),<span class="stringliteral">&quot;time&quot;</span>,k);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (get_desc) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      k = <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(out,outnames,<a class="code" href="generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c">describe</a>(G),<span class="stringliteral">&quot;description&quot;</span>,k);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (get_yaml) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      k = <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(out,outnames,<a class="code" href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a>(G),<span class="stringliteral">&quot;yaml&quot;</span>,k);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span> (get_struc) {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      k = <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(out,outnames,<a class="code" href="generics_8h.html#a107fe8ca7a39b3825503e3e6198591ac">structure</a>(G),<span class="stringliteral">&quot;structure&quot;</span>,k);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (get_lin) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      k = <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(out,outnames,<a class="code" href="generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a">lineage_count</a>(G),<span class="stringliteral">&quot;lineages&quot;</span>,k);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (get_tree) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      k = <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(out,outnames,<a class="code" href="generics_8h.html#a80e792583cf9de00235b5935bd3e6a94">newick</a>(G),<span class="stringliteral">&quot;tree&quot;</span>,k);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    SET_NAMES(out,outnames);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    UNPROTECT(4);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00010">10</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                               {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    PROTECT(X = AS_CHARACTER(X));</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    PROTECT(T0 = AS_NUMERIC(T0));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    PROTECT(Tf = AS_NUMERIC(Tf));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">double</span> t0 = *REAL(T0);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> tf = *REAL(Tf);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string x = CHAR(STRING_ELT(X,0));</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> G(t0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    G.parse(x,t0);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (!ISNA(tf)) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keywordflow">if</span> (G.time() &gt; tf) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    G.curtail(tf);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    G.time() = tf;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    UNPROTECT(3);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(G);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
 <div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00022">genealogy.h:22</a></div></div>
-<div class="ttc" id="agenerics_8h_html_a107fe8ca7a39b3825503e3e6198591ac"><div class="ttname"><a href="generics_8h.html#a107fe8ca7a39b3825503e3e6198591ac">structure</a></div><div class="ttdeci">SEXP structure(const TYPE &amp;G)</div><div class="ttdoc">structure in R list format</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00059">generics.h:59</a></div></div>
-<div class="ttc" id="agenerics_8h_html_a36efa45617897629bf9b3ebbd4a4262c"><div class="ttname"><a href="generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c">describe</a></div><div class="ttdeci">SEXP describe(const TYPE &amp;X)</div><div class="ttdoc">human readable output</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00049">generics.h:49</a></div></div>
-<div class="ttc" id="agenerics_8h_html_a76ff6404ca2416a8d7fb42faa09da53b"><div class="ttname"><a href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b">time</a></div><div class="ttdeci">SEXP time(TYPE &amp;X)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00021">generics.h:21</a></div></div>
-<div class="ttc" id="agenerics_8h_html_a80e792583cf9de00235b5935bd3e6a94"><div class="ttname"><a href="generics_8h.html#a80e792583cf9de00235b5935bd3e6a94">newick</a></div><div class="ttdeci">SEXP newick(const TYPE &amp;X)</div><div class="ttdoc">tree in newick format</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00065">generics.h:65</a></div></div>
-<div class="ttc" id="agenerics_8h_html_aa0dc1a38b4f1568720c53ba3fb48f693"><div class="ttname"><a href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a></div><div class="ttdeci">SEXP yaml(const TYPE &amp;X)</div><div class="ttdoc">human/machine readable output</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00039">generics.h:39</a></div></div>
-<div class="ttc" id="agenerics_8h_html_aac836aeca3f60d7f55e7917dd56aac9a"><div class="ttname"><a href="generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a">lineage_count</a></div><div class="ttdeci">SEXP lineage_count(const TYPE &amp;G)</div><div class="ttdoc">number of lineages through time</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00121">generics.h:121</a></div></div>
-<div class="ttc" id="ainternal_8h_html_a53266ca5329fe6d2e931aee06e78578c"><div class="ttname"><a href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a></div><div class="ttdeci">int set_list_elem(SEXP list, SEXP names, SEXP element, const char *name, int pos)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00051">internal.h:51</a></div></div>
+<div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00028">generics.h:28</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="parse_8cc_acd7a1ef0ba805edc4cefb18e975452fc_cgraph.png" border="0" usemap="#aparse_8cc_acd7a1ef0ba805edc4cefb18e975452fc_cgraph" alt=""/></div>
-<map name="aparse_8cc_acd7a1ef0ba805edc4cefb18e975452fc_cgraph" id="aparse_8cc_acd7a1ef0ba805edc4cefb18e975452fc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,245,116,272"/>
-<area shape="rect" href="generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c" title="human readable output" alt="" coords="206,5,283,32"/>
-<area shape="rect" href="generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a" title="number of lineages through time" alt="" coords="188,56,301,83"/>
-<area shape="rect" href="generics_8h.html#a80e792583cf9de00235b5935bd3e6a94" title="tree in newick format" alt="" coords="211,107,279,133"/>
-<area shape="rect" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8" title="erase all deme information" alt="" coords="164,208,325,235"/>
-<area shape="rect" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459" title="Parse a Newick string and create the indicated genealogy." alt="" coords="171,271,318,297"/>
-<area shape="rect" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380" title="prune the tree (drop all black balls)" alt="" coords="171,157,318,184"/>
-<area shape="rect" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c" title=" " alt="" coords="190,321,299,348"/>
-<area shape="rect" href="generics_8h.html#a107fe8ca7a39b3825503e3e6198591ac" title="structure in R list format" alt="" coords="205,372,285,399"/>
-<area shape="rect" href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b" title=" " alt="" coords="219,423,271,449"/>
-<area shape="rect" href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693" title="human/machine readable output" alt="" coords="217,473,272,500"/>
-<area shape="rect" href="classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f" title="Get all balls of a color." alt="" coords="387,93,533,120"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="393,195,527,221"/>
-<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="409,144,511,171"/>
-<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="595,144,780,171"/>
-<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="1061,195,1191,221"/>
-<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="848,144,987,171"/>
-<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1055,144,1197,171"/>
-<area shape="rect" href="classball__t.html#a84b2949440ac7d1fcd8127076e082928" title="in whose pocket do I lie?" alt="" coords="1245,195,1352,221"/>
-<area shape="rect" href="classnode__t.html#ab10430fd8addd5852699c30a23729880" title="pointer to my green ball" alt="" coords="846,321,989,348"/>
-<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="602,448,773,475"/>
-<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="840,448,995,475"/>
-<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="598,397,777,424"/>
-<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="373,397,547,424"/>
-<area shape="rect" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b" title=" " alt="" coords="828,397,1007,424"/>
-<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="1056,397,1196,424"/>
-<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="397,43,523,69"/>
-<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title=" " alt="" coords="649,43,726,69"/>
+<div class="center"><img src="parse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph.png" border="0" usemap="#aparse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph" alt=""/></div>
+<map name="aparse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph" id="aparse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,600,116,626"/>
+<area shape="rect" href="classgenealogy__t.html#af52c5305df1b672659c0af0ec91f559e" title=" " alt="" coords="164,169,315,196"/>
+<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="1049,498,1189,525"/>
+<area shape="rect" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459" title="Parse a Newick string and create the indicated genealogy." alt="" coords="166,498,313,525"/>
+<area shape="rect" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="210,752,269,778"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme (of a black ball)." alt="" coords="404,93,507,120"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="363,194,548,221"/>
+<area shape="rect" href="classnode__t.html#ab10430fd8addd5852699c30a23729880" title="pointer to my green ball" alt="" coords="841,397,983,424"/>
+<area shape="rect" href="classpocket__t.html#a946cef04d564142f0e900b96a0d64dda" title="retrieve the last ball" alt="" coords="385,144,525,170"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="620,30,751,57"/>
+<area shape="rect" href="classgenealogy__t.html#a63bf3e42ee63bdf17f77fc17eb313453" title="get zero time." alt="" coords="371,42,539,69"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="616,194,755,221"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="841,194,983,221"/>
+<area shape="rect" href="classball__t.html#aa43e86ea4b912fb0cf99565adc9ed2fa" title="in whose pocket do I lie?" alt="" coords="1066,194,1173,221"/>
+<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="600,549,771,576"/>
+<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="835,549,989,576"/>
+<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="596,498,775,525"/>
+<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="369,448,542,474"/>
+<area shape="rect" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14" title="order nodes in order of increasing time" alt="" coords="394,650,517,677"/>
+<area shape="rect" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b" title=" " alt="" coords="823,498,1001,525"/>
+<area shape="rect" href="classnodeseq__t.html#a642a9a6799ed5ee49e620a95a3f884b7" title=" " alt="" coords="608,650,763,677"/>
 </map>
 </div>
 

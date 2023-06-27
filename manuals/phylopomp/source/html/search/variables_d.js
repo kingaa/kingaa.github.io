@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['t0_433',['t0',['../classpopul__proc__t.html#ae10b9965fc1e537b75a934a3f51aaffe',1,'popul_proc_t']]]
+  ['uniq_467',['uniq',['../classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675',1,'ball_t::uniq()'],['../classnode__t.html#acaa19616699522ec853e82c3923b0ce7',1,'node_t::uniq()']]]
 ];

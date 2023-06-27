@@ -16,7 +16,6 @@ var classpopul__proc__t =
     [ "play", "classpopul__proc__t.html#ad068ea25f9bf0e7f7630286e47c34aaf", null ],
     [ "rinit", "classpopul__proc__t.html#aa79dec602ad44715031a0defa2188374", null ],
     [ "time", "classpopul__proc__t.html#a760c881d2c672e8608426aef9e468b3e", null ],
-    [ "timezero", "classpopul__proc__t.html#a4d339f1de607a6bdd19b717337ae5448", null ],
     [ "update_clocks", "classpopul__proc__t.html#a5c39f3fc30543d551a40c7bd477f51f4", null ],
     [ "update_IVPs", "classpopul__proc__t.html#a1cd1ffd27b8a41a0c56482773223d2f1", null ],
     [ "update_params", "classpopul__proc__t.html#ad276e23cf73e8a46029cc150293092d4", null ],
@@ -28,6 +27,5 @@ var classpopul__proc__t =
     [ "event", "classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7", null ],
     [ "next", "classpopul__proc__t.html#ae060467dcae23466c0a03a2b195a6b59", null ],
     [ "params", "classpopul__proc__t.html#a8a2a10e0c201ca751a06083d3f3ee3d9", null ],
-    [ "state", "classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9", null ],
-    [ "t0", "classpopul__proc__t.html#ae10b9965fc1e537b75a934a3f51aaffe", null ]
+    [ "state", "classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9", null ]
 ];

@@ -18,6 +18,7 @@ drawDetails.ballGrob	internals
 drawDetails.resizingTextGrob	internals
 foreach	reexports
 freeze	reexports
+geneal	geneal
 genealogy diagram internals	internals
 genealogyGrob	internals
 getInfo	getinfo
@@ -30,12 +31,11 @@ Moran	moran
 moran	moran
 moran_exact	moran
 newick	newick
-newick2df	newick2df
 nodeGrob	internals
 parse_newick	parse
 phylopomp	phylopomp
+plot.gpgen	treeplot
 plot.gplin	lineages
-plot.gpsim	treeplot
 plot_grid	reexports
 pocketGrob	internals
 postDrawDetails.ballGrob	internals
@@ -43,7 +43,9 @@ postDrawDetails.resizingTextGrob	internals
 preDrawDetails.ballGrob	internals
 preDrawDetails.resizingTextGrob	internals
 print.gpdiag	diagram
+print.gpgen	internals
 print.gpsim	internals
+print.gpyaml	internals
 read_yaml	reexports
 reexports	reexports
 registerDoSEQ	reexports
@@ -57,6 +59,7 @@ runSIR	sir
 runSIRS	sir
 SEIR	seir
 seir	seir
+seirs_pomp	seir
 SI2R	si2r
 si2r	si2r
 SIIR	siir

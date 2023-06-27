@@ -2,7 +2,7 @@ var hierarchy =
 [
     [ "ball_compare", "structball__compare.html", null ],
     [ "ball_t", "classball__t.html", null ],
-    [ "inventory_t< ndeme >", "classinventory__t.html", null ],
+    [ "inventory_t< NDEME >", "classinventory__t.html", null ],
     [ "inventory_t< ndeme >", "classinventory__t.html", null ],
     [ "lbdp_parameters_t", "structlbdp__parameters__t.html", null ],
     [ "lbdp_state_t", "structlbdp__state__t.html", null ],

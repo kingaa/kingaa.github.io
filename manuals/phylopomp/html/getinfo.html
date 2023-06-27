@@ -30,6 +30,7 @@ function processMathHTML() {
   object,
   prune = TRUE,
   obscure = TRUE,
+  trace = FALSE,
   t0 = FALSE,
   time = FALSE,
   description = FALSE,
@@ -37,7 +38,9 @@ function processMathHTML() {
   yaml = FALSE,
   ndeme = FALSE,
   lineages = FALSE,
-  tree = FALSE
+  newick = FALSE,
+  nsample = FALSE,
+  genealogy = FALSE
 )
 </code></pre>
 
@@ -56,6 +59,10 @@ function processMathHTML() {
 <tr><td><code id="getInfo_:_obscure">obscure</code></td>
 <td>
 <p>logical; obscure the demes?</p>
+</td></tr>
+<tr><td><code id="getInfo_:_trace">trace</code></td>
+<td>
+<p>logical; trace the lineages?</p>
 </td></tr>
 <tr><td><code id="getInfo_:_t0">t0</code></td>
 <td>
@@ -85,9 +92,17 @@ function processMathHTML() {
 <td>
 <p>logical; return the lineage-count function?</p>
 </td></tr>
-<tr><td><code id="getInfo_:_tree">tree</code></td>
+<tr><td><code id="getInfo_:_newick">newick</code></td>
 <td>
-<p>logical; return the tree?</p>
+<p>logical; return a Newick-format description of the tree?</p>
+</td></tr>
+<tr><td><code id="getInfo_:_nsample">nsample</code></td>
+<td>
+<p>logical; return the number of samples?</p>
+</td></tr>
+<tr><td><code id="getInfo_:_genealogy">genealogy</code></td>
+<td>
+<p>logical; return the lineage-traced genealogy?</p>
 </td></tr>
 </table>
 
@@ -98,11 +113,15 @@ function processMathHTML() {
 </p>
 
 <dl>
-<dt>t0</dt><dd><p>the initial time</p>
+<dt>t0</dt><dd><p>the initial time (a numeric scalar)</p>
 </dd>
-<dt>time</dt><dd><p>the current time</p>
+<dt>time</dt><dd><p>the final time (a numeric scalar)</p>
 </dd>
-<dt>tree</dt><dd><p>the genealogical tree, in Newick format</p>
+<dt>ndeme</dt><dd><p>the number of demes (an integer)</p>
+</dd>
+<dt>nsample</dt><dd><p>the number of samples (an integer)</p>
+</dd>
+<dt>newick</dt><dd><p>the genealogical tree, in Newick format</p>
 </dd>
 <dt>description</dt><dd><p>a human readable description of the state of the genealogy process</p>
 </dd>
@@ -110,9 +129,9 @@ function processMathHTML() {
 </dd>
 <dt>structure</dt><dd><p>the state of the genealogy process in <span class="rlang"><b>R</b></span> list format</p>
 </dd>
-<dt>ndeme</dt><dd><p>the number of demes (an integer)</p>
-</dd>
 <dt>lineages</dt><dd><p>a <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function through time</p>
+</dd>
+<dt>genealogy</dt><dd><p>the lineage-traced genealogy (as a raw vector)</p>
 </dd>
 </dl>
 
@@ -135,6 +154,6 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.5.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.9.1.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['parse_337',['parse',['../classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459',1,'genealogy_t']]],
-  ['parse_5fnewick_338',['parse_newick',['../parse_8cc.html#acd7a1ef0ba805edc4cefb18e975452fc',1,'parse.cc']]],
-  ['play_339',['play',['../classmaster__t.html#a192af9a2412fb7fe97fade765da8393a',1,'master_t::play()'],['../classpopul__proc__t.html#ad068ea25f9bf0e7f7630286e47c34aaf',1,'popul_proc_t::play(double tfin)']]],
-  ['popul_5fproc_5ft_340',['popul_proc_t',['../classpopul__proc__t.html#a46fa08f2282f2c19bcda0bda9760f104',1,'popul_proc_t::popul_proc_t(double t0=0)'],['../classpopul__proc__t.html#a5a9fb1c0e7210f7e38c0c9152756d1ec',1,'popul_proc_t::popul_proc_t(raw_t *o)'],['../classpopul__proc__t.html#a0ed480e26187e90d35a563f7b35ede09',1,'popul_proc_t::popul_proc_t(const popul_proc_t &amp;X)'],['../classpopul__proc__t.html#aa38e91ea46e8712befe1fcadf1ac74bd',1,'popul_proc_t::popul_proc_t(popul_proc_t &amp;&amp;)=delete']]],
-  ['prune_341',['prune',['../classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380',1,'genealogy_t']]]
+  ['r_5finit_5fphylopomp_370',['R_init_phylopomp',['../decls_8h.html#a071d822d4db004b7729f6819ffabbc44',1,'decls.h']]],
+  ['random_5fball_371',['random_ball',['../classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07',1,'inventory_t']]],
+  ['random_5finteger_372',['random_integer',['../internal_8h.html#a30243865c01653487f851881a5a9fc28',1,'internal.h']]],
+  ['random_5fpair_373',['random_pair',['../classinventory__t.html#a6e8dbc98608507421e36946d895d4f2e',1,'inventory_t']]],
+  ['repair_5fholder_374',['repair_holder',['../classpocket__t.html#a80133bf9e65cbf626193a6995a6245d4',1,'pocket_t']]],
+  ['repair_5fowners_375',['repair_owners',['../classnodeseq__t.html#a5f978d0d983fff4ffd5fc2ecfab3c289',1,'nodeseq_t::repair_owners()'],['../classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953',1,'pocket_t::repair_owners()']]],
+  ['revive_376',['revive',['../generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373',1,'generics.h']]],
+  ['rinit_377',['rinit',['../classmaster__t.html#aaf98db199eea5e058023a412139633b2',1,'master_t::rinit()'],['../classpopul__proc__t.html#aa79dec602ad44715031a0defa2188374',1,'popul_proc_t::rinit()']]],
+  ['run_378',['run',['../generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe',1,'generics.h']]]
 ];

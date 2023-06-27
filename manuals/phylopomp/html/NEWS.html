@@ -18,6 +18,45 @@ function processMathHTML() {
 
 <h2 id='NEWS'>News for package &lsquo;phylopomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">phylopomp</span> version 0.9</h3>
+
+
+<ul>
+<li><p> Inclusion of <span class="pkg">pomp</span> methods for SEIRS model.
+</p>
+</li>
+<li><p> The new function <code>geneal</code> extracts the bare genealogy from a simulated master process object.
+</p>
+</li>
+<li><p> Changes in the interfaces to <code>lbdp_exact</code>, <code>lbdp_pomp</code>, <code>moran_exact</code>, and <code>sir_pomp</code>.
+These functions now take as data objects of class &lsquo;gpgen&rsquo;.
+</p>
+</li>
+<li><p> The old function <code>newick2df</code> is no more.
+</p>
+</li>
+<li><p> Considerable reworking of the internals.
+</p>
+</li>
+<li><p> Definition of new class, &lsquo;gpsim&rsquo;, for bare genealogies.
+</p>
+</li>
+<li><p> Definition of new class, &lsquo;gpyaml&rsquo;, for YAML descriptions.
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">phylopomp</span> version 0.8</h3>
+
+
+<ul>
+<li><p> The interface to <code>getInfo</code> has changed.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">phylopomp</span> version 0.7</h3>
 
 
@@ -26,10 +65,10 @@ function processMathHTML() {
 This can be controlled through the use of the <code>diagram</code> function's <code>palette</code> argument (cf. <code>plot</code>).
 </p>
 </li>
-<li><p> The new function 'curtail' curtails a genealogy (i.e., casts away nodes beyond a given time).
+<li><p> The new function <code>curtail</code> curtails a genealogy (i.e., casts away nodes beyond a given time).
 </p>
 </li>
-<li><p> The new function 'newick' extracts a Newick-format description of a genealogy.
+<li><p> The new function <code>newick</code> extracts a Newick-format description of a genealogy.
 </p>
 </li>
 <li><p> The SIRS model is included as a synonym for SIR.

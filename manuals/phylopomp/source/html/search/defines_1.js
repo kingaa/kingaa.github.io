@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['declarations_464',['DECLARATIONS',['../init_8h.html#a88719a51b5f835edcb2fdaaf5e722d3d',1,'init.h']]]
+  ['code_496',['code',['../seirs__pomp_8cc.html#a814f6dab3b0678113d97a3684282934a',1,'seirs_pomp.cc']]]
 ];

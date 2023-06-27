@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: parse_newick</title>
+<!DOCTYPE html><html><head><title>R: parse a Newick string</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -16,28 +16,17 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>parse_newick {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='parse_newick'>parse_newick</h2>
+<h2 id='parse_newick'>parse a Newick string</h2>
 
 <h3>Description</h3>
 
-<p>Parse a Newick description and extract various equivalent representations.
+<p>Parses a Newick description and returns a binary version of the genealogy.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>parse_newick(
-  x,
-  prune = TRUE,
-  obscure = TRUE,
-  t0 = 0,
-  time = FALSE,
-  description = FALSE,
-  structure = FALSE,
-  yaml = FALSE,
-  lineages = TRUE,
-  tree = FALSE
-)
+<pre><code class='language-R'>parse_newick(x, t0 = 0, tf = NA)
 </code></pre>
 
 
@@ -49,66 +38,22 @@ function processMathHTML() {
 <p>character; the Newick description.
 See Details for specifics.</p>
 </td></tr>
-<tr><td><code id="parse_newick_:_prune">prune</code></td>
-<td>
-<p>logical; prune the genealogy?</p>
-</td></tr>
-<tr><td><code id="parse_newick_:_obscure">obscure</code></td>
-<td>
-<p>logical; obscure the demes?</p>
-</td></tr>
 <tr><td><code id="parse_newick_:_t0">t0</code></td>
 <td>
 <p>numeric; the root time.</p>
 </td></tr>
-<tr><td><code id="parse_newick_:_time">time</code></td>
+<tr><td><code id="parse_newick_:_tf">tf</code></td>
 <td>
-<p>logical; return the current time?</p>
-</td></tr>
-<tr><td><code id="parse_newick_:_description">description</code></td>
-<td>
-<p>logical; return the description?</p>
-</td></tr>
-<tr><td><code id="parse_newick_:_structure">structure</code></td>
-<td>
-<p>logical; return the structure in <span class="rlang"><b>R</b></span> list format?</p>
-</td></tr>
-<tr><td><code id="parse_newick_:_yaml">yaml</code></td>
-<td>
-<p>logical; return the structure in YAML format?</p>
-</td></tr>
-<tr><td><code id="parse_newick_:_lineages">lineages</code></td>
-<td>
-<p>logical; return the lineage-count function?</p>
-</td></tr>
-<tr><td><code id="parse_newick_:_tree">tree</code></td>
-<td>
-<p>logical; return the tree?</p>
+<p>numeric; the current or final time.</p>
 </td></tr>
 </table>
 
 
 <h3>Value</h3>
 
-<p>A list containing the requested elements, including any or all of:
+<p>An object of class &ldquo;gpgen&rdquo;.
 </p>
 
-<dl>
-<dt>time</dt><dd><p>the current time</p>
-</dd>
-<dt>description</dt><dd><p>a human readable description of the state of the genealogy process</p>
-</dd>
-<dt>yaml</dt><dd><p>the state of the genealogy process in YAML format</p>
-</dd>
-<dt>structure</dt><dd><p>the state of the genealogy process in <span class="rlang"><b>R</b></span> list format</p>
-</dd>
-<dt>lineages</dt><dd><p>a <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function through time</p>
-</dd>
-<dt>tree</dt><dd><p>the genealogical tree, in Newick format</p>
-</dd>
-</dl>
-
-
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.5.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.9.1.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

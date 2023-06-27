@@ -49,6 +49,8 @@ continueSEIR(
   psi = NA,
   delta = NA
 )
+
+seirs_pomp(x, Beta, sigma, gamma, psi, delta = 0, S0, E0, I0, R0)
 </code></pre>
 
 
@@ -104,7 +106,17 @@ continueSEIR(
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
+<tr><td><code id="seir_:_x">x</code></td>
+<td>
+<p>genealogy in <span class="pkg">phylopomp</span> format.</p>
+</td></tr>
 </table>
+
+
+<h3>Details</h3>
+
+<p><code>seirs_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and an SEIRS model.
+</p>
 
 
 <h3>Value</h3>
@@ -145,6 +157,6 @@ simulate("SEIR",sigma=1,delta=1,time=20,I0=4) |&gt;
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.5.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.9.1.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

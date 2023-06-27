@@ -52,7 +52,7 @@ runSIRS(
 
 continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, delta = NA)
 
-sir_pomp(data, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
+sir_pomp(x, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
 
 runSIRS(
   time,
@@ -68,7 +68,7 @@ runSIRS(
 
 continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, delta = NA)
 
-sirs_pomp(data, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
+sirs_pomp(x, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
 </code></pre>
 
 
@@ -116,9 +116,9 @@ sirs_pomp(data, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
-<tr><td><code id="sir_:_data">data</code></td>
+<tr><td><code id="sir_:_x">x</code></td>
 <td>
-<p>data frame containing the lineage count function</p>
+<p>genealogy in <span class="pkg">phylopomp</span> format (i.e., an object that inherits from &lsquo;gpgen&rsquo;).</p>
 </td></tr>
 </table>
 
@@ -164,6 +164,6 @@ simulate("SIRS",delta=1,time=20,I0=4) |&gt; plot()
 simulate("SIRS",delta=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.7.5.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.9.1.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

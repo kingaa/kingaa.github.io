@@ -88,22 +88,22 @@ $(document).ready(function(){initNavTree('probe__acf_8c.html',''); initResizable
 <div class="title">probe_acf.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for probe_acf.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="probe__acf_8c__incl.png" border="0" usemap="#asrc_2probe__acf_8c" alt=""/></div>
 <map name="asrc_2probe__acf_8c" id="asrc_2probe__acf_8c">
-<area shape="rect" title=" " alt="" coords="305,5,423,32"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="240,80,368,107"/>
-<area shape="rect" title=" " alt="" coords="392,80,459,107"/>
+<area shape="rect" title=" " alt="" coords="294,5,413,32"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="262,80,346,107"/>
+<area shape="rect" title=" " alt="" coords="371,80,437,107"/>
 <area shape="rect" title=" " alt="" coords="5,304,48,331"/>
 <area shape="rect" title=" " alt="" coords="72,304,149,331"/>
 <area shape="rect" title=" " alt="" coords="324,229,415,256"/>
 <area shape="rect" title=" " alt="" coords="334,304,434,331"/>
 <area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="163,155,290,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="489,155,601,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="490,155,558,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="178,229,249,256"/>
 <area shape="rect" title=" " alt="" coords="173,304,309,331"/>
 </map>
@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ct++;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series %ld has no data&quot;</span>,j+1);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series %ld has no data&quot;</span>,j+1);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    xx /= ct;           <span class="comment">// mean of x[j,]</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (k = 0, p0 = p; k &lt; n; p0 += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, k++)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordflow">if</span> (R_FINITE(*p0)) *p0 -= xx;</div>
@@ -215,7 +215,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_ae8f6d2fd6490d3153cb4133bf183a404"><div class="ttname"><a href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a></div><div class="ttdeci">int nvars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00131">trajectory.c:131</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -223,8 +223,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="probe__acf_8c_a5d99d0781d78dd79d7516d73c89f62ea_icgraph.png" border="0" usemap="#aprobe__acf_8c_a5d99d0781d78dd79d7516d73c89f62ea_icgraph" alt=""/></div>
 <map name="aprobe__acf_8c_a5d99d0781d78dd79d7516d73c89f62ea_icgraph" id="aprobe__acf_8c_a5d99d0781d78dd79d7516d73c89f62ea_icgraph">
 <area shape="rect" title=" " alt="" coords="140,31,291,57"/>
-<area shape="rect" href="pomp__decls_8h.html#aeb81a79c270779cdaa8ab7f2270c4569" title=" " alt="" coords="5,5,92,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a95593efb3dabcae5680a0ac5fb800fa3" title=" " alt="" coords="6,56,91,83"/>
+<area shape="rect" href="decls_8h.html#aeb81a79c270779cdaa8ab7f2270c4569" title=" " alt="" coords="5,5,92,32"/>
+<area shape="rect" href="decls_8h.html#a95593efb3dabcae5680a0ac5fb800fa3" title=" " alt="" coords="6,56,91,83"/>
 </map>
 </div>
 
@@ -301,7 +301,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      ct++;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 1 has no data&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 1 has no data&quot;</span>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  xx /= ct;         <span class="comment">// mean of x[j]</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">for</span> (k = 0, p = x; k &lt; n; k++, p++) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (R_FINITE(*p)) *p -= xx;</div>
@@ -314,7 +314,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      ct++;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 2 has no data&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 2 has no data&quot;</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  xx /= ct;         <span class="comment">// mean of y[j]</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">for</span> (k = 0, p = y; k &lt; n; k++, p++) {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (R_FINITE(*p)) *p -= xx;</div>
@@ -347,7 +347,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="probe__acf_8c_ae6e4e25744357eec0f8ca5705bea9727_icgraph.png" border="0" usemap="#aprobe__acf_8c_ae6e4e25744357eec0f8ca5705bea9727_icgraph" alt=""/></div>
 <map name="aprobe__acf_8c_ae6e4e25744357eec0f8ca5705bea9727_icgraph" id="aprobe__acf_8c_ae6e4e25744357eec0f8ca5705bea9727_icgraph">
 <area shape="rect" title=" " alt="" coords="139,5,288,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a95593efb3dabcae5680a0ac5fb800fa3" title=" " alt="" coords="5,5,91,32"/>
+<area shape="rect" href="decls_8h.html#a95593efb3dabcae5680a0ac5fb800fa3" title=" " alt="" coords="5,5,91,32"/>
 </map>
 </div>
 
@@ -497,7 +497,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  correlation = *(INTEGER(AS_INTEGER(corr))); <span class="comment">// correlation, or covariance?</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  n = LENGTH(x);        <span class="comment">// n = # of observations</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> (n != LENGTH(y)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;x&#39; and &#39;y&#39; must have equal lengths&quot;</span>); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> (n != LENGTH(y)) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;x&#39; and &#39;y&#39; must have equal lengths&quot;</span>); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = duplicate(AS_NUMERIC(x)));</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a> = duplicate(AS_NUMERIC(y)));</div>

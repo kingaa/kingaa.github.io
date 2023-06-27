@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('bspline_8c_source.html',''); initResiz
 <div class="contents">
 <a href="bspline_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- C++ -*-</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pomp__internal_8h.html">pomp_internal.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// The following function computes the derivative of order &#39;deriv&#39; of the i-th</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// B-spline of given degree with given knots at each of the nx points in x.</span></div>
@@ -146,9 +146,9 @@ $(document).ready(function(){initNavTree('bspline_8c_source.html',''); initResiz
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">double</span> *knots = NULL;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">double</span> *xdata, *ydata;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (deg &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (nb &lt;= deg) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; degree&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">if</span> (d &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (deg &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (nb &lt;= deg) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; degree&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">if</span> (d &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  knots = (<span class="keywordtype">double</span> *) R_Calloc(nk,<span class="keywordtype">double</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(xr = AS_NUMERIC(x));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  PROTECT(y = allocMatrix(REALSXP,nx,nb));</div>
@@ -156,7 +156,7 @@ $(document).ready(function(){initNavTree('bspline_8c_source.html',''); initResiz
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  ydata = REAL(y);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  minx = REAL(range)[0];</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  maxx = REAL(range)[1];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (minx &gt;= maxx) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;improper range &#39;rg&#39;&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (minx &gt;= maxx) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;improper range &#39;rg&#39;&quot;</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  dx = (maxx-minx)/((<span class="keywordtype">double</span>) (nb-deg));</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  knots[0] = minx-deg*dx;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">for</span> (i = 1; i &lt; nk; i++) knots[i] = knots[i-1]+dx;</div>
@@ -217,11 +217,11 @@ $(document).ready(function(){initNavTree('bspline_8c_source.html',''); initResiz
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">double</span> dx;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (period &lt;= 0.0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have period &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt;= 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (degree &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt; degree) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt;= degree&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">if</span> (deriv &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (period &lt;= 0.0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have period &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt;= 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (degree &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt; degree) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt;= degree&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">if</span> (deriv &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  knots = (<span class="keywordtype">double</span> *) R_Calloc(nknots+degree+1,<span class="keywordtype">double</span>);</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  yy = (<span class="keywordtype">double</span> *) R_Calloc(nknots,<span class="keywordtype">double</span>);</div>
@@ -247,8 +247,8 @@ $(document).ready(function(){initNavTree('bspline_8c_source.html',''); initResiz
 <div class="ttc" id="abspline_8c_html_a71cbe26144698d7db860dc0f9f0fff0c"><div class="ttname"><a href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a></div><div class="ttdeci">void bspline_eval(double *y, const double *x, int nx, int i, int degree, int deriv, const double *knots)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00009">bspline.c:9</a></div></div>
 <div class="ttc" id="abspline_8c_html_a91ae33a36d3f40dd64783f1dae67ff8b"><div class="ttname"><a href="bspline_8c.html#a91ae33a36d3f40dd64783f1dae67ff8b">bspline_basis</a></div><div class="ttdeci">SEXP bspline_basis(SEXP range, SEXP x, SEXP nbasis, SEXP degree, SEXP deriv)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00050">bspline.c:50</a></div></div>
 <div class="ttc" id="abspline_8c_html_acabb1ca64e069e1b7767c31435e761d8"><div class="ttname"><a href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8">periodic_bspline_basis_eval</a></div><div class="ttdeci">void periodic_bspline_basis_eval(double x, double period, int degree, int nbasis, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00118">bspline.c:118</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html"><div class="ttname"><a href="pomp__internal_8h.html">pomp_internal.h</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

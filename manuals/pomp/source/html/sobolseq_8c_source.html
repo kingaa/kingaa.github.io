@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('sobolseq_8c_source.html',''); initResi
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">   greater than 2^32-1 has also been removed. This case generates an error.</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pomp__internal_8h.html">pomp_internal.h</a>&quot;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="sobolseq_8c.html#a2fe80f9a6e1412b55b8e13163559bbfe">   59</a></span>&#160;<span class="keyword">typedef</span> Int32 <a class="code" href="sobolseq_8c.html#a2fe80f9a6e1412b55b8e13163559bbfe">uint32_t</a>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="sobolseq_8c.html#ad2ef622b5e2e8077c41f6793f20aba35">   60</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnlopt__soboldata__s.html">nlopt_soboldata_s</a> *<a class="code" href="sobolseq_8c.html#ad2ef622b5e2e8077c41f6793f20aba35">nlopt_sobol</a>;</div>
@@ -319,7 +319,7 @@ $(document).ready(function(){initNavTree('sobolseq_8c_source.html',''); initResi
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="pomp__decls_8h.html#a670defd3a8b9d05d86bc8da76de23778">  234</a></span>&#160;SEXP <a class="code" href="sobolseq_8c.html#a670defd3a8b9d05d86bc8da76de23778">sobol_sequence</a> (SEXP dim, SEXP length)</div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="decls_8h.html#a670defd3a8b9d05d86bc8da76de23778">  234</a></span>&#160;SEXP <a class="code" href="sobolseq_8c.html#a670defd3a8b9d05d86bc8da76de23778">sobol_sequence</a> (SEXP dim, SEXP length)</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  SEXP data;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> d = (<span class="keywordtype">unsigned</span> int) INTEGER(dim)[0];</div>
@@ -327,7 +327,7 @@ $(document).ready(function(){initNavTree('sobolseq_8c_source.html',''); initResi
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordtype">double</span> *dp;</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <a class="code" href="structnlopt__soboldata__s.html">nlopt_sobol</a> s = <a class="code" href="sobolseq_8c.html#a144bd11f1148a8f19f75b0567ad4d95a">nlopt_sobol_create</a>((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) d);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keywordflow">if</span> (s==0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;dimension is too high&quot;</span>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keywordflow">if</span> (s==0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;dimension is too high&quot;</span>);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  PROTECT(data = allocMatrix(REALSXP,d,n)); dp = REAL(data);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <a class="code" href="sobolseq_8c.html#a66138f1615f8bea909b9ad7107ce3c51">nlopt_sobol_skip</a>(s,n,dp);</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">for</span> (k = 1; k &lt; n; k++) <a class="code" href="sobolseq_8c.html#a8a0ebcfa3fdd7c7a8296647c972fe54b">sobol_gen</a>(s,dp+k*d);</div>
@@ -335,8 +335,8 @@ $(document).ready(function(){initNavTree('sobolseq_8c_source.html',''); initResi
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  UNPROTECT(1);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">return</span>(data);</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
-<div class="ttc" id="apomp__internal_8h_html"><div class="ttname"><a href="pomp__internal_8h.html">pomp_internal.h</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="asoboldata_8h_html"><div class="ttname"><a href="soboldata_8h.html">soboldata.h</a></div></div>
 <div class="ttc" id="asoboldata_8h_html_a674c1a85fb1c09ec56b0b8f6319e7b97"><div class="ttname"><a href="soboldata_8h.html#a674c1a85fb1c09ec56b0b8f6319e7b97">MAXDIM</a></div><div class="ttdeci">#define MAXDIM</div><div class="ttdef"><b>Definition:</b> <a href="soboldata_8h_source.html#l00034">soboldata.h:34</a></div></div>
 <div class="ttc" id="asoboldata_8h_html_a7e86155219ad0072e38f32e3df23057c"><div class="ttname"><a href="soboldata_8h.html#a7e86155219ad0072e38f32e3df23057c">sobol_a</a></div><div class="ttdeci">static const uint32_t sobol_a[MAXDIM-1]</div><div class="ttdef"><b>Definition:</b> <a href="soboldata_8h_source.html#l00040">soboldata.h:40</a></div></div>

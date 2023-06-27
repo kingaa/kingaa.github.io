@@ -88,20 +88,20 @@ $(document).ready(function(){initNavTree('bspline_8c.html',''); initResizable();
 <div class="title">bspline.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for bspline.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="bspline_8c__incl.png" border="0" usemap="#asrc_2bspline_8c" alt=""/></div>
 <map name="asrc_2bspline_8c" id="asrc_2bspline_8c">
 <area shape="rect" title=" " alt="" coords="253,5,355,32"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="240,80,368,107"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="262,80,346,107"/>
 <area shape="rect" title=" " alt="" coords="5,304,48,331"/>
 <area shape="rect" title=" " alt="" coords="72,304,149,331"/>
 <area shape="rect" title=" " alt="" coords="324,229,415,256"/>
 <area shape="rect" title=" " alt="" coords="334,304,434,331"/>
 <area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="163,155,290,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="489,155,601,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="490,155,558,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="178,229,249,256"/>
 <area shape="rect" title=" " alt="" coords="173,304,309,331"/>
 </map>
@@ -179,9 +179,9 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">double</span> *knots = NULL;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">double</span> *xdata, *ydata;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (deg &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (nb &lt;= deg) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; degree&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">if</span> (d &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span> (deg &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">if</span> (nb &lt;= deg) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; degree&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">if</span> (d &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  knots = (<span class="keywordtype">double</span> *) R_Calloc(nk,<span class="keywordtype">double</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(xr = AS_NUMERIC(x));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  PROTECT(y = allocMatrix(REALSXP,nx,nb));</div>
@@ -189,7 +189,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  ydata = REAL(y);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  minx = REAL(range)[0];</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  maxx = REAL(range)[1];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (minx &gt;= maxx) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;improper range &#39;rg&#39;&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span> (minx &gt;= maxx) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;improper range &#39;rg&#39;&quot;</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  dx = (maxx-minx)/((<span class="keywordtype">double</span>) (nb-deg));</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  knots[0] = minx-deg*dx;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">for</span> (i = 1; i &lt; nk; i++) knots[i] = knots[i-1]+dx;</div>
@@ -202,7 +202,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">return</span>(y);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="ttc" id="abspline_8c_html_a71cbe26144698d7db860dc0f9f0fff0c"><div class="ttname"><a href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a></div><div class="ttdeci">void bspline_eval(double *y, const double *x, int nx, int i, int degree, int deriv, const double *knots)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00009">bspline.c:9</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -317,7 +317,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="625,64,729,91"/>
 <area shape="rect" href="bspline_8c.html#a91ae33a36d3f40dd64783f1dae67ff8b" title=" " alt="" coords="437,5,548,32"/>
 <area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="408,57,577,98"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,97,108,124"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,97,108,124"/>
 <area shape="rect" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883" title=" " alt="" coords="173,21,343,48"/>
 <area shape="rect" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8" title=" " alt="" coords="156,72,360,99"/>
 </map>
@@ -470,7 +470,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="bspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph.png" border="0" usemap="#abspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph" alt=""/></div>
 <map name="abspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph" id="abspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph">
 <area shape="rect" title=" " alt="" coords="156,5,360,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -534,11 +534,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">double</span> dx;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (period &lt;= 0.0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have period &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt;= 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (degree &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt; degree) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt;= degree&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">if</span> (deriv &lt; 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (period &lt;= 0.0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have period &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt;= 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (degree &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt; degree) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt;= degree&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">if</span> (deriv &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  knots = (<span class="keywordtype">double</span> *) R_Calloc(nknots+degree+1,<span class="keywordtype">double</span>);</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  yy = (<span class="keywordtype">double</span> *) R_Calloc(nknots,<span class="keywordtype">double</span>);</div>
@@ -576,7 +576,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="408,23,577,65"/>
 <area shape="rect" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883" title=" " alt="" coords="173,5,343,32"/>
 <area shape="rect" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8" title=" " alt="" coords="156,56,360,83"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,56,108,83"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,56,108,83"/>
 </map>
 </div>
 

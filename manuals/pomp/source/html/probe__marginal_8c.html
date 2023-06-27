@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('probe__marginal_8c.html',''); initResi
 <div class="title">probe_marginal.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -96,20 +96,20 @@ Include dependency graph for probe_marginal.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="probe__marginal_8c__incl.png" border="0" usemap="#asrc_2probe__marginal_8c" alt=""/></div>
 <map name="asrc_2probe__marginal_8c" id="asrc_2probe__marginal_8c">
-<area shape="rect" title=" " alt="" coords="345,5,503,32"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="227,155,355,181"/>
-<area shape="rect" href="pomp__mat_8h.html" title=" " alt="" coords="372,80,476,107"/>
-<area shape="rect" title=" " alt="" coords="500,80,567,107"/>
+<area shape="rect" title=" " alt="" coords="329,5,487,32"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="249,155,333,181"/>
+<area shape="rect" href="pomp__mat_8h.html" title=" " alt="" coords="356,80,460,107"/>
+<area shape="rect" title=" " alt="" coords="484,80,551,107"/>
 <area shape="rect" title=" " alt="" coords="5,379,48,405"/>
 <area shape="rect" title=" " alt="" coords="72,379,149,405"/>
 <area shape="rect" title=" " alt="" coords="324,304,415,331"/>
 <area shape="rect" title=" " alt="" coords="334,379,434,405"/>
 <area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="163,229,290,256"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="489,229,601,256"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="490,229,558,256"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="178,304,249,331"/>
 <area shape="rect" title=" " alt="" coords="173,379,309,405"/>
-<area shape="rect" title=" " alt="" coords="525,155,608,181"/>
-<area shape="rect" title=" " alt="" coords="379,155,501,181"/>
+<area shape="rect" title=" " alt="" coords="503,155,585,181"/>
+<area shape="rect" title=" " alt="" coords="357,155,478,181"/>
 </map>
 </div>
 </div>
@@ -249,7 +249,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="probe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph.png" border="0" usemap="#aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph" alt=""/></div>
 <map name="aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph" id="aprobe__marginal_8c_a9accae76d6ed9147d0db36478294f156_icgraph">
 <area shape="rect" title=" " alt="" coords="220,5,403,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a33683f39715bc5813eab0d124dbc9899" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="decls_8h.html#a33683f39715bc5813eab0d124dbc9899" title=" " alt="" coords="5,5,172,32"/>
 </map>
 </div>
 
@@ -372,7 +372,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="probe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph.png" border="0" usemap="#aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph" alt=""/></div>
 <map name="aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph" id="aprobe__marginal_8c_ab7ed44d923122eec45887a267060c3e1_icgraph">
 <area shape="rect" title=" " alt="" coords="220,5,347,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a3a1a19b1194b1b0380d189ff12188a4b" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="decls_8h.html#a3a1a19b1194b1b0380d189ff12188a4b" title=" " alt="" coords="5,5,172,32"/>
 </map>
 </div>
 
@@ -421,7 +421,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  nx = n - df;                <span class="comment">// nx = rows in model matrix</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  dim[0] = nx; dim[1] = np;       <span class="comment">// dimensions of model matrix</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (nx &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have diff &lt; number of observations&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (nx &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have diff &lt; number of observations&quot;</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  PROTECT(z = duplicate(AS_NUMERIC(ref)));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  PROTECT(mm = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,dim));</div>
@@ -443,8 +443,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  UNPROTECT(6);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span>(retval);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="aprobe__marginal_8c_html_a9accae76d6ed9147d0db36478294f156"><div class="ttname"><a href="probe__marginal_8c.html#a9accae76d6ed9147d0db36478294f156">order_reg_model_matrix</a></div><div class="ttdeci">static void order_reg_model_matrix(double *z, double *X, double *tau, int *pivot, int n, int np, int diff)</div><div class="ttdef"><b>Definition:</b> <a href="probe__marginal_8c_source.html#l00078">probe_marginal.c:78</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -510,7 +510,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  nx = INTEGER(GET_DIM(mm))[0]; <span class="comment">// nx = number of rows in model matrix</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  np = INTEGER(GET_DIM(mm))[1]; <span class="comment">// np = order of polynomial</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span> (n-df != nx) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;length of &#39;ref&#39; must equal length of data&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span> (n-df != nx) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;length of &#39;ref&#39; must equal length of data&quot;</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = duplicate(AS_NUMERIC(x)));</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  PROTECT(beta = NEW_NUMERIC(np));</div>

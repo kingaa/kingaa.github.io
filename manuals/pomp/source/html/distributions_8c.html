@@ -91,20 +91,20 @@ $(document).ready(function(){initNavTree('distributions_8c.html',''); initResiza
 <div class="textblock"><code>#include &lt;R.h&gt;</code><br />
 <code>#include &lt;Rmath.h&gt;</code><br />
 <code>#include &lt;Rdefines.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for distributions.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="distributions_8c__incl.png" border="0" usemap="#asrc_2distributions_8c" alt=""/></div>
 <map name="asrc_2distributions_8c" id="asrc_2distributions_8c">
-<area shape="rect" title=" " alt="" coords="51,5,189,32"/>
+<area shape="rect" title=" " alt="" coords="73,5,210,32"/>
 <area shape="rect" title=" " alt="" coords="5,304,48,331"/>
 <area shape="rect" title=" " alt="" coords="80,304,157,331"/>
 <area shape="rect" title=" " alt="" coords="393,229,484,256"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="157,80,285,107"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="201,80,285,107"/>
 <area shape="rect" title=" " alt="" coords="363,304,463,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="158,155,285,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="360,155,472,181"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="179,155,306,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="382,155,450,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="247,229,318,256"/>
 <area shape="rect" title=" " alt="" coords="203,304,339,331"/>
 </map>
@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordflow">return</span> f;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
-<div class="ttc" id="apomp_8h_html_a6c490604aea6eace860456a7a4dc5a8d"><div class="ttname"><a href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div><div class="ttdeci">static R_INLINE double dbetabinom(double x, double size, double prob, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00174">pomp.h:174</a></div></div>
+<div class="ttc" id="apomp_8h_html_a6c490604aea6eace860456a7a4dc5a8d"><div class="ttname"><a href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div><div class="ttdeci">static R_INLINE double dbetabinom(double x, double size, double prob, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00177">pomp.h:177</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -259,12 +259,12 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  SEXP f;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  dim = INTEGER(GET_DIM(x));</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (dim[0] != ntrans)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;NROW(&#39;x&#39;) should match length of &#39;rate&#39;&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;NROW(&#39;x&#39;) should match length of &#39;rate&#39;&quot;</span>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  n = dim[1];</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (length(size)&gt;1)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (length(deltat)&gt;1)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  PROTECT(f = NEW_NUMERIC(n));</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  PROTECT(size = AS_NUMERIC(size));</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  PROTECT(rate = AS_NUMERIC(rate));</div>
@@ -275,8 +275,8 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> f;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 <div class="ttc" id="adistributions_8c_html_a7f6bc8c3509b09313972b4ccd73c00c5"><div class="ttname"><a href="distributions_8c.html#a7f6bc8c3509b09313972b4ccd73c00c5">deulermultinom_multi</a></div><div class="ttdeci">static void deulermultinom_multi(int m, int n, double *size, double *rate, double *deltat, double *trans, int *give_log, double *f)</div><div class="ttdef"><b>Definition:</b> <a href="distributions_8c_source.html#l00015">distributions.c:15</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_a8224a361dddd2ad59b411982e5ea746f"><div class="ttname"><a href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a></div><div class="ttdeci">#define warn(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00015">pomp_internal.h:15</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_a8224a361dddd2ad59b411982e5ea746f"><div class="ttname"><a href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a></div><div class="ttdeci">#define warn(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00014">pomp.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -368,7 +368,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    trans += m;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a0ed4cc2bf09ba401406d3175da73226c"><div class="ttname"><a href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">deulermultinom</a></div><div class="ttdeci">static R_INLINE double deulermultinom(int m, double size, const double *rate, double dt, double *trans, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00074">pomp.h:74</a></div></div>
+<div class="ttc" id="apomp_8h_html_a0ed4cc2bf09ba401406d3175da73226c"><div class="ttname"><a href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">deulermultinom</a></div><div class="ttdeci">static R_INLINE double deulermultinom(int m, double size, const double *rate, double dt, double *trans, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00077">pomp.h:77</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -384,7 +384,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="distributions_8c_a7f6bc8c3509b09313972b4ccd73c00c5_icgraph.png" border="0" usemap="#adistributions_8c_a7f6bc8c3509b09313972b4ccd73c00c5_icgraph" alt=""/></div>
 <map name="adistributions_8c_a7f6bc8c3509b09313972b4ccd73c00c5_icgraph" id="adistributions_8c_a7f6bc8c3509b09313972b4ccd73c00c5_icgraph">
 <area shape="rect" title=" " alt="" coords="195,5,361,32"/>
-<area shape="rect" href="distributions_8c.html#aa055d45aa938bf55afe432967292b892" title=" " alt="" coords="5,5,147,32"/>
+<area shape="rect" href="decls_8h.html#aa055d45aa938bf55afe432967292b892" title=" " alt="" coords="5,5,147,32"/>
 </map>
 </div>
 
@@ -446,7 +446,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  UNPROTECT(5);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a27ce90ca6f901016f2745cd1408cbde5"><div class="ttname"><a href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div><div class="ttdeci">static R_INLINE double rbetabinom(double size, double prob, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00170">pomp.h:170</a></div></div>
+<div class="ttc" id="apomp_8h_html_a27ce90ca6f901016f2745cd1408cbde5"><div class="ttname"><a href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div><div class="ttdeci">static R_INLINE double rbetabinom(double size, double prob, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00173">pomp.h:173</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -503,9 +503,9 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> dim[2];</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  SEXP x, nm;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">if</span> (length(size)&gt;1)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;size&#39; is meaningful&quot;</span>);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (length(deltat)&gt;1)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: only the first element of &#39;dt&#39; is meaningful&quot;</span>);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  PROTECT(n = AS_INTEGER(n));</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  PROTECT(size = AS_NUMERIC(size));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  PROTECT(rate = AS_NUMERIC(rate));</div>
@@ -513,7 +513,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  dim[0] = ntrans;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  dim[1] = *INTEGER(n);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">if</span> (dim[1] == NA_INTEGER || dim[1] &lt; 0)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: &#39;n&#39; must be a non-negative integer.&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: &#39;n&#39; must be a non-negative integer.&quot;</span>);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,dim));</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  PROTECT(nm = GET_NAMES(rate));</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a>(x,nm,2);</div>
@@ -597,7 +597,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a678ef311e74501d7b800f0b47500374a"><div class="ttname"><a href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a></div><div class="ttdeci">#define sigma</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00080">gompertz.c:80</a></div></div>
-<div class="ttc" id="apomp_8h_html_a52cad6bd7c9be6be2215659798114e0e"><div class="ttname"><a href="pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e">rgammawn</a></div><div class="ttdeci">static R_INLINE double rgammawn(double sigma, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00020">pomp.h:20</a></div></div>
+<div class="ttc" id="apomp_8h_html_a52cad6bd7c9be6be2215659798114e0e"><div class="ttname"><a href="pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e">rgammawn</a></div><div class="ttdeci">static R_INLINE double rgammawn(double sigma, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00023">pomp.h:23</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -676,7 +676,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    trans += m;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_af728af2cd3b4be45164906d02a3206a9"><div class="ttname"><a href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">reulermultinom</a></div><div class="ttdeci">static R_INLINE void reulermultinom(int m, double size, const double *rate, double dt, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00041">pomp.h:41</a></div></div>
+<div class="ttc" id="apomp_8h_html_af728af2cd3b4be45164906d02a3206a9"><div class="ttname"><a href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">reulermultinom</a></div><div class="ttdeci">static R_INLINE void reulermultinom(int m, double size, const double *rate, double dt, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00044">pomp.h:44</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -692,7 +692,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="distributions_8c_a535016daa0c6d33c1868cc3eace73372_icgraph.png" border="0" usemap="#adistributions_8c_a535016daa0c6d33c1868cc3eace73372_icgraph" alt=""/></div>
 <map name="adistributions_8c_a535016daa0c6d33c1868cc3eace73372_icgraph" id="adistributions_8c_a535016daa0c6d33c1868cc3eace73372_icgraph">
 <area shape="rect" title=" " alt="" coords="193,5,357,32"/>
-<area shape="rect" href="distributions_8c.html#abacea3217a3136190d12e38f91a7f128" title=" " alt="" coords="5,5,145,32"/>
+<area shape="rect" href="decls_8h.html#abacea3217a3136190d12e38f91a7f128" title=" " alt="" coords="5,5,145,32"/>
 </map>
 </div>
 

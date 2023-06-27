@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('resample_8c.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;Rdefines.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for resample.c:</div>
 <div class="dyncontent">
@@ -97,14 +97,14 @@ Include dependency graph for resample.c:</div>
 <map name="asrc_2resample_8c" id="asrc_2resample_8c">
 <area shape="rect" title=" " alt="" coords="75,5,192,32"/>
 <area shape="rect" title=" " alt="" coords="5,229,96,256"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="171,80,299,107"/>
-<area shape="rect" title=" " alt="" coords="117,304,160,331"/>
-<area shape="rect" title=" " alt="" coords="344,304,421,331"/>
-<area shape="rect" title=" " alt="" coords="446,304,546,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="171,155,298,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="323,155,435,181"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="194,80,278,107"/>
+<area shape="rect" title=" " alt="" coords="109,304,152,331"/>
+<area shape="rect" title=" " alt="" coords="336,304,413,331"/>
+<area shape="rect" title=" " alt="" coords="438,304,538,331"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="173,155,299,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="323,155,391,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="222,229,293,256"/>
-<area shape="rect" title=" " alt="" coords="184,304,320,331"/>
+<area shape="rect" title=" " alt="" coords="176,304,312,331"/>
 </map>
 </div>
 </div>
@@ -170,7 +170,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">for</span> (j = 1; j &lt; nw; j++) w[j] += w[j-1];</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span> (w[nw-1] &lt;= 0.0)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;systematic_resampling&#39;: non-positive sum of weights&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;systematic_resampling&#39;: non-positive sum of weights&quot;</span>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  du = w[nw-1] / ((double) np);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  u = -du*unif_rand();</div>
@@ -186,17 +186,17 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; np; j++) p[j] += offset;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="resample_8c_a37f1a2acca063e96f0efa73705ec87b2_icgraph.png" border="0" usemap="#aresample_8c_a37f1a2acca063e96f0efa73705ec87b2_icgraph" alt=""/></div>
 <map name="aresample_8c_a37f1a2acca063e96f0efa73705ec87b2_icgraph" id="aresample_8c_a37f1a2acca063e96f0efa73705ec87b2_icgraph">
 <area shape="rect" title=" " alt="" coords="379,56,497,83"/>
-<area shape="rect" href="pfilter_8c.html#acfcb3a7b41bc3b2b9315163717854242" title=" " alt="" coords="213,5,274,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a982475f3663a786d7883672aa2ed072e" title=" " alt="" coords="156,56,331,83"/>
-<area shape="rect" href="pomp__decls_8h.html#ac643fb3aad609b1078e9abb994ec6cf2" title=" " alt="" coords="207,107,279,133"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,56,108,83"/>
+<area shape="rect" href="decls_8h.html#acfcb3a7b41bc3b2b9315163717854242" title=" " alt="" coords="213,5,274,32"/>
+<area shape="rect" href="decls_8h.html#a982475f3663a786d7883672aa2ed072e" title=" " alt="" coords="156,56,331,83"/>
+<area shape="rect" href="decls_8h.html#ac643fb3aad609b1078e9abb994ec6cf2" title=" " alt="" coords="207,107,279,133"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,56,108,83"/>
 </map>
 </div>
 
@@ -259,7 +259,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="resample_8c_a982475f3663a786d7883672aa2ed072e_icgraph.png" border="0" usemap="#aresample_8c_a982475f3663a786d7883672aa2ed072e_icgraph" alt=""/></div>
 <map name="aresample_8c_a982475f3663a786d7883672aa2ed072e_icgraph" id="aresample_8c_a982475f3663a786d7883672aa2ed072e_icgraph">
 <area shape="rect" title=" " alt="" coords="156,5,331,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 

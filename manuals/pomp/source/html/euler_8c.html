@@ -92,22 +92,22 @@ $(document).ready(function(){initNavTree('euler_8c.html',''); initResizable(); }
 <code>#include &lt;Rmath.h&gt;</code><br />
 <code>#include &lt;Rdefines.h&gt;</code><br />
 <code>#include &lt;Rinternals.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for euler.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="euler_8c__incl.png" border="0" usemap="#asrc_2euler_8c" alt=""/></div>
 <map name="asrc_2euler_8c" id="asrc_2euler_8c">
-<area shape="rect" title=" " alt="" coords="199,5,288,32"/>
-<area shape="rect" title=" " alt="" coords="9,304,51,331"/>
-<area shape="rect" title=" " alt="" coords="83,304,161,331"/>
-<area shape="rect" title=" " alt="" coords="386,229,477,256"/>
-<area shape="rect" title=" " alt="" coords="416,304,516,331"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="179,80,307,107"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="231,155,357,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="43,155,155,181"/>
-<area shape="rect" href="pomp_8h.html" title=" " alt="" coords="240,229,311,256"/>
-<area shape="rect" title=" " alt="" coords="207,304,343,331"/>
+<area shape="rect" title=" " alt="" coords="187,5,277,32"/>
+<area shape="rect" title=" " alt="" coords="5,304,48,331"/>
+<area shape="rect" title=" " alt="" coords="80,304,157,331"/>
+<area shape="rect" title=" " alt="" coords="383,229,473,256"/>
+<area shape="rect" title=" " alt="" coords="413,304,513,331"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="190,80,274,107"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="219,155,346,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="75,155,143,181"/>
+<area shape="rect" href="pomp_8h.html" title=" " alt="" coords="237,229,307,256"/>
+<area shape="rect" title=" " alt="" coords="204,304,340,331"/>
 </map>
 </div>
 </div>
@@ -239,11 +239,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_ae5591ed3a1a462f91141cff304975884_icgraph.png" border="0" usemap="#aeuler_8c_ae5591ed3a1a462f91141cff304975884_icgraph" alt=""/></div>
 <map name="aeuler_8c_ae5591ed3a1a462f91141cff304975884_icgraph" id="aeuler_8c_ae5591ed3a1a462f91141cff304975884_icgraph">
 <area shape="rect" title=" " alt="" coords="856,5,937,32"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -337,7 +337,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">double</span> *<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>, t0;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  SEXP cvec, <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">if</span> (deltat &lt;= 0) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;delta.t&#39; should be a positive number.&quot;</span>); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">if</span> (deltat &lt;= 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;delta.t&#39; should be a positive number.&quot;</span>); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">int</span> *dim;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  dim = INTEGER(GET_DIM(xstart)); <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a> = dim[0]; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a> = dim[1];</div>
@@ -347,15 +347,15 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  PROTECT(tstart = AS_NUMERIC(tstart));</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  PROTECT(times = AS_NUMERIC(times));</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  t0 = *(REAL(tstart));</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span> (t0 &gt; *(REAL(times))) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;t0&#39; must be no later than &#39;times[1]&#39;.&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span> (t0 &gt; *(REAL(times))) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;t0&#39; must be no later than &#39;times[1]&#39;.&quot;</span>);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  SEXP <a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>, Pnames, Cnames;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a> = GET_ROWNAMES(GET_DIMNAMES(xstart)));</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  PROTECT(Pnames = GET_ROWNAMES(GET_DIMNAMES(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>)));</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  PROTECT(Cnames = <a class="code" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a>(covar));</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  PROTECT(Cnames = <a class="code" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a>(covar));</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">// set up the covariate table</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="structlookup__table__t.html">lookup_table_t</a> covariate_table = <a class="code" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a>(covar,&amp;<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="structlookup__table__t.html">lookup_table_t</a> covariate_table = <a class="code" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a>(covar,&amp;<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  PROTECT(cvec = NEW_NUMERIC(<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>));</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a> = REAL(cvec);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
@@ -364,7 +364,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">int</span> *zidx = INTEGER(PROTECT(<a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,accumvars,<span class="stringliteral">&quot;state variables&quot;</span>)));</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="comment">// extract user function</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>(func,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,NA_STRING,Cnames));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>(func,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,NA_STRING,Cnames));</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="comment">// array to hold results</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a>(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,ntimes,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>));</div>
@@ -393,12 +393,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    *((<span class="keywordtype">void</span> **) (&amp;ff)) = R_ExternalPtrAddr(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="pomp__decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a>(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a>(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    GetRNGstate();</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">default</span>: <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;unrecognized &#39;mode&#39; %d&quot;</span>,<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;unrecognized &#39;mode&#39; %d&quot;</span>,<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">break</span>;                              <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
@@ -419,7 +419,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    R_CheckUserInterrupt();</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> (t &gt; time[step]) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;times&#39; must be an increasing sequence.&quot;</span>);  <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> (t &gt; time[step]) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;times&#39; must be an increasing sequence.&quot;</span>);  <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">// set accumulator variables to zero</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++)</div>
@@ -446,7 +446,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; nstep; k++) {</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="comment">// interpolate the covar functions for the covariates</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,t,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,t,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="comment">// loop over replicates</span></div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keywordtype">double</span> *ap, *pm, *xm, *ps = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>);</div>
@@ -465,7 +465,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;          PROTECT(nm = GET_NAMES(ans));</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a>(nm))</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;rprocess&#39; must return a named numeric vector.&quot;</span>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;rprocess&#39; must return a named numeric vector.&quot;</span>);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;          pidx = INTEGER(PROTECT(<a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(nm,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,<span class="stringliteral">&quot;state variables&quot;</span>)));</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          nprotect += 3;</div>
@@ -493,7 +493,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;          <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keywordflow">default</span>:                  <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;          <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;unrecognized &#39;mode&#39; %d&quot;</span>,<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;          <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;unrecognized &#39;mode&#39; %d&quot;</span>,<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordflow">break</span>;                  <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        }</div>
@@ -520,7 +520,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a>: <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a>: {</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    PutRNGstate();</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="pomp__decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a>();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a>();</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  }</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
@@ -536,19 +536,20 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
+<div class="ttc" id="adecls_8h_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
+<div class="ttc" id="adecls_8h_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
+<div class="ttc" id="adecls_8h_html_a5ddde1fa5bcf8c3949fd4865a7ab474c"><div class="ttname"><a href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a></div><div class="ttdeci">void unset_pomp_userdata(void)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00032">userdata.c:32</a></div></div>
+<div class="ttc" id="adecls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
+<div class="ttc" id="adecls_8h_html_aa019045daea9be339fd1e70e3441d252"><div class="ttname"><a href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a></div><div class="ttdeci">void set_pomp_userdata(SEXP userdata)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00008">userdata.c:8</a></div></div>
+<div class="ttc" id="adecls_8h_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
 <div class="ttc" id="aeuler_8c_html_a0681d20c093a288da04bffa9adbfe48a"><div class="ttname"><a href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a">num_map_steps</a></div><div class="ttdeci">int num_map_steps(double t1, double t2, double deltat)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00344">euler.c:344</a></div></div>
 <div class="ttc" id="aeuler_8c_html_a3da8d135fe6d232031cf7c314f432265"><div class="ttname"><a href="euler_8c.html#a3da8d135fe6d232031cf7c314f432265">num_euler_steps</a></div><div class="ttdeci">int num_euler_steps(double t1, double t2, double *deltat)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00319">euler.c:319</a></div></div>
 <div class="ttc" id="aeuler_8c_html_ad78b5357467ce6dfb3b594a64a0e3d08"><div class="ttname"><a href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *dt, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00067">euler.c:67</a></div></div>
 <div class="ttc" id="aeuler_8c_html_ae5591ed3a1a462f91141cff304975884"><div class="ttname"><a href="euler_8c.html#ae5591ed3a1a462f91141cff304975884">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00010">euler.c:10</a></div></div>
 <div class="ttc" id="aeuler_8c_html_aff505c906b432ad2e9b72dc28feb374d"><div class="ttname"><a href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int n, int nreps, int ntimes, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00092">euler.c:92</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
-<div class="ttc" id="alookup__table_8c_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
-<div class="ttc" id="alookup__table_8c_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
-<div class="ttc" id="alookup__table_8c_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
-<div class="ttc" id="apomp_8h_html_abd7cfb2f9064495241ac3474f912d36d"><div class="ttname"><a href="pomp_8h.html#abd7cfb2f9064495241ac3474f912d36d">pomp_onestep_sim</a></div><div class="ttdeci">void pomp_onestep_sim(double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00207">pomp.h:207</a></div></div>
-<div class="ttc" id="apomp__decls_8h_html_a5ddde1fa5bcf8c3949fd4865a7ab474c"><div class="ttname"><a href="pomp__decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a></div><div class="ttdeci">void unset_pomp_userdata(void)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00032">userdata.c:32</a></div></div>
-<div class="ttc" id="apomp__decls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
-<div class="ttc" id="apomp__decls_8h_html_aa019045daea9be339fd1e70e3441d252"><div class="ttname"><a href="pomp__decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a></div><div class="ttdeci">void set_pomp_userdata(SEXP userdata)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00008">userdata.c:8</a></div></div>
+<div class="ttc" id="apomp_8h_html_abd7cfb2f9064495241ac3474f912d36d"><div class="ttname"><a href="pomp_8h.html#abd7cfb2f9064495241ac3474f912d36d">pomp_onestep_sim</a></div><div class="ttdeci">void pomp_onestep_sim(double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00210">pomp.h:210</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a0aa36f1ae250f8c08c6222d21729af94a32811eb9eed4b85ef0847fcde95b69ad"><div class="ttname"><a href="pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a32811eb9eed4b85ef0847fcde95b69ad">discrete</a></div><div class="ttdeci">@ discrete</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00017">pomp_defines.h:17</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a0aa36f1ae250f8c08c6222d21729af94a8e659bdb4aa674f348aed67fe394ba59"><div class="ttname"><a href="pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a8e659bdb4aa674f348aed67fe394ba59">onestep</a></div><div class="ttdeci">@ onestep</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00017">pomp_defines.h:17</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a0aa36f1ae250f8c08c6222d21729af94aadb417b559f09f8023df24ecf53eec0e"><div class="ttname"><a href="pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94aadb417b559f09f8023df24ecf53eec0e">euler</a></div><div class="ttdeci">@ euler</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00017">pomp_defines.h:17</a></div></div>
@@ -559,7 +560,6 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4">undef</a></div><div class="ttdeci">@ undef</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d"><div class="ttname"><a href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a></div><div class="ttdeci">@ regNative</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00016">pomp_defines.h:16</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_ac56010c8d35a155162376d066856f663"><div class="ttname"><a href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a></div><div class="ttdeci">static R_INLINE int invalid_names(SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00055">pomp_defines.h:55</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="astructlookup__table__t_html"><div class="ttname"><a href="structlookup__table__t.html">lookup_table_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00020">pomp_defines.h:20</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a14099a72d03b2c4a17df78083aaefedb"><div class="ttname"><a href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a></div><div class="ttdeci">int npars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00132">trajectory.c:132</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a4edeebb04b42d65deaf721d0abbc091e"><div class="ttname"><a href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a></div><div class="ttdeci">int ncovars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00133">trajectory.c:133</a></div></div>
@@ -577,17 +577,17 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,309,177,336"/>
 <area shape="rect" href="euler_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="268,5,349,32"/>
 <area shape="rect" href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08" title=" " alt="" coords="269,56,349,83"/>
-<area shape="rect" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="227,107,390,133"/>
+<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="227,107,390,133"/>
 <area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="763,208,880,235"/>
-<area shape="rect" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="225,208,392,235"/>
+<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="225,208,392,235"/>
 <area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="608,259,715,285"/>
 <area shape="rect" href="euler_8c.html#a3da8d135fe6d232031cf7c314f432265" title=" " alt="" coords="242,309,375,336"/>
 <area shape="rect" href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="244,360,373,387"/>
-<area shape="rect" href="pomp__decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="237,411,380,437"/>
+<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="237,411,380,437"/>
 <area shape="rect" href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d" title=" " alt="" coords="268,461,349,488"/>
-<area shape="rect" href="pomp__decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="233,512,384,539"/>
-<area shape="rect" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="255,563,362,589"/>
-<area shape="rect" href="pomp__decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="225,613,392,640"/>
+<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="233,512,384,539"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="255,563,362,589"/>
+<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="225,613,392,640"/>
 <area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="440,335,560,361"/>
 <area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="449,385,551,412"/>
 <area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="446,436,554,463"/>
@@ -601,10 +601,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_a83f6b69b51bdf12eb0fe150ccc05f80d_icgraph.png" border="0" usemap="#aeuler_8c_a83f6b69b51bdf12eb0fe150ccc05f80d_icgraph" alt=""/></div>
 <map name="aeuler_8c_a83f6b69b51bdf12eb0fe150ccc05f80d_icgraph" id="aeuler_8c_a83f6b69b51bdf12eb0fe150ccc05f80d_icgraph">
 <area shape="rect" title=" " alt="" coords="636,5,808,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -717,11 +717,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph.png" border="0" usemap="#aeuler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph" alt=""/></div>
 <map name="aeuler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph" id="aeuler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph">
 <area shape="rect" title=" " alt="" coords="856,5,936,32"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -790,11 +790,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph.png" border="0" usemap="#aeuler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph" alt=""/></div>
 <map name="aeuler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph" id="aeuler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph">
 <area shape="rect" title=" " alt="" coords="856,5,989,32"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -846,14 +846,14 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph.png" border="0" usemap="#aeuler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph" alt=""/></div>
 <map name="aeuler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph" id="aeuler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph">
 <area shape="rect" title=" " alt="" coords="860,56,989,83"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="639,5,811,32"/>
-<area shape="rect" href="pomp__decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="637,56,812,83"/>
-<area shape="rect" href="pomp__decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="653,107,796,133"/>
-<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="489,5,589,32"/>
-<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="488,81,589,108"/>
+<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="639,5,811,32"/>
+<area shape="rect" href="decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="637,56,812,83"/>
+<area shape="rect" href="decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="653,107,796,133"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="489,5,589,32"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="488,81,589,108"/>
 </map>
 </div>
 
@@ -940,11 +940,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph.png" border="0" usemap="#aeuler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph" alt=""/></div>
 <map name="aeuler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph" id="aeuler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph">
 <area shape="rect" title=" " alt="" coords="856,5,937,32"/>
-<area shape="rect" href="euler_8c.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
-<area shape="rect" href="pomp__decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="pomp__decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="pomp__decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="init_8c.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="636,5,808,32"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 

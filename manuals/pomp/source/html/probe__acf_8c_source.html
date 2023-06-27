@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="contents">
 <a href="probe__acf_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- mode: C++ -*-</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pomp__internal_8h.html">pomp_internal.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// vectorized routine for ACF calculation</span></div>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ct++;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series %ld has no data&quot;</span>,j+1);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series %ld has no data&quot;</span>,j+1);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    xx /= ct;           <span class="comment">// mean of x[j,]</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (k = 0, p0 = p; k &lt; n; p0 += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, k++)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordflow">if</span> (R_FINITE(*p0)) *p0 -= xx;</div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      ct++;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 1 has no data&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 1 has no data&quot;</span>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  xx /= ct;         <span class="comment">// mean of x[j]</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">for</span> (k = 0, p = x; k &lt; n; k++, p++) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (R_FINITE(*p)) *p -= xx;</div>
@@ -157,7 +157,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      ct++;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 2 has no data&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series 2 has no data&quot;</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  xx /= ct;         <span class="comment">// mean of y[j]</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">for</span> (k = 0, p = y; k &lt; n; k++, p++) {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (R_FINITE(*p)) *p -= xx;</div>
@@ -185,7 +185,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="pomp__decls_8h.html#aeb81a79c270779cdaa8ab7f2270c4569">  100</a></span>&#160;SEXP <a class="code" href="probe__acf_8c.html#aeb81a79c270779cdaa8ab7f2270c4569">probe_acf</a> (SEXP x, SEXP lags, SEXP corr) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="decls_8h.html#aeb81a79c270779cdaa8ab7f2270c4569">  100</a></span>&#160;SEXP <a class="code" href="probe__acf_8c.html#aeb81a79c270779cdaa8ab7f2270c4569">probe_acf</a> (SEXP x, SEXP lags, SEXP corr) {</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  SEXP ans, ans_names;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">int</span> nlag, correlation, <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, n;</div>
@@ -230,7 +230,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="pomp__decls_8h.html#a95593efb3dabcae5680a0ac5fb800fa3">  145</a></span>&#160;SEXP <a class="code" href="probe__acf_8c.html#a95593efb3dabcae5680a0ac5fb800fa3">probe_ccf</a> (SEXP x, SEXP y, SEXP lags, SEXP corr) {</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="decls_8h.html#a95593efb3dabcae5680a0ac5fb800fa3">  145</a></span>&#160;SEXP <a class="code" href="probe__acf_8c.html#a95593efb3dabcae5680a0ac5fb800fa3">probe_ccf</a> (SEXP x, SEXP y, SEXP lags, SEXP corr) {</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  SEXP ans, ans_names;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>[2], xx, *p;</div>
@@ -243,7 +243,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  correlation = *(INTEGER(AS_INTEGER(corr))); <span class="comment">// correlation, or covariance?</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  n = LENGTH(x);        <span class="comment">// n = # of observations</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> (n != LENGTH(y)) <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;x&#39; and &#39;y&#39; must have equal lengths&quot;</span>); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span> (n != LENGTH(y)) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;x&#39; and &#39;y&#39; must have equal lengths&quot;</span>); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = duplicate(AS_NUMERIC(x)));</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a> = duplicate(AS_NUMERIC(y)));</div>
@@ -272,8 +272,8 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00013">gompertz.c:13</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html"><div class="ttname"><a href="pomp__internal_8h.html">pomp_internal.h</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="aprobe__acf_8c_html_a5d99d0781d78dd79d7516d73c89f62ea"><div class="ttname"><a href="probe__acf_8c.html#a5d99d0781d78dd79d7516d73c89f62ea">pomp_acf_compute</a></div><div class="ttdeci">static void pomp_acf_compute(double *acf, double *x, int n, int nvars, int *lags, int nlag)</div><div class="ttdef"><b>Definition:</b> <a href="probe__acf_8c_source.html#l00011">probe_acf.c:11</a></div></div>
 <div class="ttc" id="aprobe__acf_8c_html_a95593efb3dabcae5680a0ac5fb800fa3"><div class="ttname"><a href="probe__acf_8c.html#a95593efb3dabcae5680a0ac5fb800fa3">probe_ccf</a></div><div class="ttdeci">SEXP probe_ccf(SEXP x, SEXP y, SEXP lags, SEXP corr)</div><div class="ttdef"><b>Definition:</b> <a href="probe__acf_8c_source.html#l00145">probe_acf.c:145</a></div></div>
 <div class="ttc" id="aprobe__acf_8c_html_ae6e4e25744357eec0f8ca5705bea9727"><div class="ttname"><a href="probe__acf_8c.html#ae6e4e25744357eec0f8ca5705bea9727">pomp_ccf_compute</a></div><div class="ttdeci">static void pomp_ccf_compute(double *ccf, double *x, double *y, int n, int *lags, int nlag)</div><div class="ttdef"><b>Definition:</b> <a href="probe__acf_8c_source.html#l00047">probe_acf.c:47</a></div></div>

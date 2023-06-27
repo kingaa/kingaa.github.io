@@ -91,20 +91,20 @@ $(document).ready(function(){initNavTree('transformations_8c.html',''); initResi
 <div class="textblock"><code>#include &lt;R.h&gt;</code><br />
 <code>#include &lt;Rmath.h&gt;</code><br />
 <code>#include &lt;Rdefines.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for transformations.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="transformations_8c__incl.png" border="0" usemap="#asrc_2transformations_8c" alt=""/></div>
 <map name="asrc_2transformations_8c" id="asrc_2transformations_8c">
-<area shape="rect" title=" " alt="" coords="40,5,200,32"/>
+<area shape="rect" title=" " alt="" coords="61,5,221,32"/>
 <area shape="rect" title=" " alt="" coords="5,304,48,331"/>
 <area shape="rect" title=" " alt="" coords="80,304,157,331"/>
 <area shape="rect" title=" " alt="" coords="393,229,484,256"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="157,80,285,107"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="201,80,285,107"/>
 <area shape="rect" title=" " alt="" coords="363,304,463,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="158,155,285,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="360,155,472,181"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="179,155,306,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="382,155,450,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="247,229,318,256"/>
 <area shape="rect" title=" " alt="" coords="203,304,339,331"/>
 </map>
@@ -182,7 +182,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a798e4073d613ca5ba9618e1b3253df14"><div class="ttname"><a href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a></div><div class="ttdeci">#define Y</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00013">gompertz.c:13</a></div></div>
-<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00159">pomp.h:159</a></div></div>
+<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00162">pomp.h:162</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -220,7 +220,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  UNPROTECT(2);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a798e4073d613ca5ba9618e1b3253df14">Y</a>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00152">pomp.h:152</a></div></div>
+<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00155">pomp.h:155</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -261,7 +261,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  UNPROTECT(1);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">return</span> P;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="ttc" id="apomp_8h_html_a4b9004ae67cdf750e5354cf295e91618"><div class="ttname"><a href="pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618">logit</a></div><div class="ttdeci">static R_INLINE double logit(double p)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00033">pomp.h:33</a></div></div>
+<div class="ttc" id="apomp_8h_html_a4b9004ae67cdf750e5354cf295e91618"><div class="ttname"><a href="pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618">logit</a></div><div class="ttdeci">static R_INLINE double logit(double p)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00036">pomp.h:36</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

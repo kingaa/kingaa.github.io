@@ -92,20 +92,20 @@ $(document).ready(function(){initNavTree('ou2_8c.html',''); initResizable(); });
 <div class="textblock"><code>#include &lt;R.h&gt;</code><br />
 <code>#include &lt;Rmath.h&gt;</code><br />
 <code>#include &lt;Rdefines.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ou2.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="ou2_8c__incl.png" border="0" usemap="#asrc_2ou2_8c" alt=""/></div>
 <map name="asrc_2ou2_8c" id="asrc_2ou2_8c">
-<area shape="rect" title=" " alt="" coords="80,5,160,32"/>
+<area shape="rect" title=" " alt="" coords="101,5,181,32"/>
 <area shape="rect" title=" " alt="" coords="5,304,48,331"/>
 <area shape="rect" title=" " alt="" coords="80,304,157,331"/>
 <area shape="rect" title=" " alt="" coords="393,229,484,256"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="157,80,285,107"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="201,80,285,107"/>
 <area shape="rect" title=" " alt="" coords="363,304,463,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="158,155,285,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="360,155,472,181"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="179,155,306,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="382,155,450,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="247,229,318,256"/>
 <area shape="rect" title=" " alt="" coords="203,304,339,331"/>
 </map>
@@ -676,7 +676,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="ou2_8c_source.html#l00076">76</a> of file <a class="el" href="ou2_8c_source.html">ou2.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">if</span> (t2-t1 != 1)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;ou2_pdf error: transitions must be consecutive&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;ou2_pdf error: transitions must be consecutive&quot;</span>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  f[0] = <a class="code" href="ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a">dens_ou2</a>(x[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],x[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],z[<a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>],z[<a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>],<a class="code" href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a>,<a class="code" href="ou2_8c.html#a6e6cd685f94be3c0552ee4cb3e0881ff">ALPHA2</a>,<a class="code" href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a>,<a class="code" href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a>,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="ou2_8c.html#ab2ee134520af69f566c53e1653198f29">SIGMA1</a>,<a class="code" href="ou2_8c.html#ae5afe6a4069844a8988fffedaa523856">SIGMA2</a>,<a class="code" href="ou2_8c.html#a3f470cf546586fe861be7be3c24557bc">SIGMA3</a>,1);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
@@ -688,7 +688,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="aou2_8c_html_aef2261269821a4680fe2d8389edb6af1"><div class="ttname"><a href="ou2_8c.html#aef2261269821a4680fe2d8389edb6af1">ALPHA3</a></div><div class="ttdeci">#define ALPHA3</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00048">ou2.c:48</a></div></div>
 <div class="ttc" id="aou2_8c_html_af8e4e3fc5b56a3cf8340fd6534c71e00"><div class="ttname"><a href="ou2_8c.html#af8e4e3fc5b56a3cf8340fd6534c71e00">ALPHA4</a></div><div class="ttdeci">#define ALPHA4</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00049">ou2.c:49</a></div></div>
 <div class="ttc" id="aou2_8c_html_afec7121cee3ac42de7f64aefd50c66cf"><div class="ttname"><a href="ou2_8c.html#afec7121cee3ac42de7f64aefd50c66cf">ALPHA1</a></div><div class="ttdeci">#define ALPHA1</div><div class="ttdef"><b>Definition:</b> <a href="ou2_8c_source.html#l00046">ou2.c:46</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1124,7 +1124,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="ou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph.png" border="0" usemap="#aou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph" alt=""/></div>
 <map name="aou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph" id="aou2_8c_a8c409ae997e2b81c3b15dd2f40f78a8a_icgraph">
 <area shape="rect" title=" " alt="" coords="135,5,219,32"/>
-<area shape="rect" href="ou2_8c.html#ad1c5b49ac4fe519757a8f7598d509306" title=" " alt="" coords="5,5,87,32"/>
+<area shape="rect" href="decls_8h.html#ad1c5b49ac4fe519757a8f7598d509306" title=" " alt="" coords="5,5,87,32"/>
 </map>
 </div>
 
@@ -1225,7 +1225,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="ou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph.png" border="0" usemap="#aou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph" alt=""/></div>
 <map name="aou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph" id="aou2_8c_a202fca38e8cd5e9f0a9e0c33921b01cd_icgraph">
 <area shape="rect" title=" " alt="" coords="141,5,219,32"/>
-<area shape="rect" href="ou2_8c.html#a169ee0dc87d392a574e8815b934d19f1" title=" " alt="" coords="5,5,93,32"/>
+<area shape="rect" href="decls_8h.html#a169ee0dc87d392a574e8815b934d19f1" title=" " alt="" coords="5,5,93,32"/>
 </map>
 </div>
 

@@ -1,6 +1,7 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "bspline.c", "bspline_8c.html", "bspline_8c" ],
+    [ "decls.h", "decls_8h.html", "decls_8h" ],
     [ "dinit.c", "dinit_8c.html", "dinit_8c" ],
     [ "distributions.c", "distributions_8c.html", "distributions_8c" ],
     [ "dmeasure.c", "dmeasure_8c.html", "dmeasure_8c" ],
@@ -10,6 +11,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "euler.c", "euler_8c.html", "euler_8c" ],
     [ "gompertz.c", "gompertz_8c.html", "gompertz_8c" ],
     [ "init.c", "init_8c.html", "init_8c" ],
+    [ "internal.h", "internal_8h.html", null ],
     [ "logmeanexp.c", "logmeanexp_8c.html", "logmeanexp_8c" ],
     [ "lookup_table.c", "lookup__table_8c.html", "lookup__table_8c" ],
     [ "mif2.c", "mif2_8c.html", "mif2_8c" ],
@@ -17,10 +19,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "partrans.c", "partrans_8c.html", "partrans_8c" ],
     [ "pfilter.c", "pfilter_8c.html", "pfilter_8c" ],
     [ "pomp.h", "pomp_8h.html", "pomp_8h" ],
-    [ "pomp_decls.h", "pomp__decls_8h.html", "pomp__decls_8h" ],
     [ "pomp_defines.h", "pomp__defines_8h.html", "pomp__defines_8h" ],
     [ "pomp_fun.c", "pomp__fun_8c.html", "pomp__fun_8c" ],
-    [ "pomp_internal.h", "pomp__internal_8h.html", "pomp__internal_8h" ],
     [ "pomp_mat.h", "pomp__mat_8h.html", "pomp__mat_8h" ],
     [ "probe.c", "probe_8c.html", "probe_8c" ],
     [ "probe_acf.c", "probe__acf_8c.html", "probe__acf_8c" ],

@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('wpfilter_8c.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;Rdefines.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for wpfilter.c:</div>
 <div class="dyncontent">
@@ -97,14 +97,14 @@ Include dependency graph for wpfilter.c:</div>
 <map name="asrc_2wpfilter_8c" id="asrc_2wpfilter_8c">
 <area shape="rect" title=" " alt="" coords="80,5,187,32"/>
 <area shape="rect" title=" " alt="" coords="5,229,96,256"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="171,80,299,107"/>
-<area shape="rect" title=" " alt="" coords="117,304,160,331"/>
-<area shape="rect" title=" " alt="" coords="344,304,421,331"/>
-<area shape="rect" title=" " alt="" coords="446,304,546,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="171,155,298,181"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="323,155,435,181"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="194,80,278,107"/>
+<area shape="rect" title=" " alt="" coords="109,304,152,331"/>
+<area shape="rect" title=" " alt="" coords="336,304,413,331"/>
+<area shape="rect" title=" " alt="" coords="438,304,538,331"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="173,155,299,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="323,155,391,181"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="222,229,293,256"/>
-<area shape="rect" title=" " alt="" coords="184,304,320,331"/>
+<area shape="rect" title=" " alt="" coords="176,304,312,331"/>
 </map>
 </div>
 </div>
@@ -193,7 +193,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  dim = INTEGER(dimP);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">//  npars = dim[0];</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordflow">if</span> (dim[1] &gt; 1 &amp;&amp; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a> != dim[1])</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;ncol(&#39;params&#39;) does not match ncol(&#39;states&#39;)&quot;</span>); <span class="comment">// # nocov</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;ncol(&#39;params&#39;) does not match ncol(&#39;states&#39;)&quot;</span>); <span class="comment">// # nocov</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  PROTECT(Pnames = GET_ROWNAMES(GET_DIMNAMES(Params)));</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  np = *INTEGER(AS_INTEGER(Np));</div>
@@ -336,7 +336,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">int</span> sample[np];</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      GetRNGstate();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <a class="code" href="pomp__decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a>(<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,REAL(W),np,sample,0);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <a class="code" href="decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a>(<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,REAL(W),np,sample,0);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      PutRNGstate();</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <span class="keywordflow">for</span> (k = 0; k &lt; np; k++) { <span class="comment">// copy the particles</span></div>
@@ -358,13 +358,13 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">return</span>(retval);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="ttc" id="adecls_8h_html_a37f1a2acca063e96f0efa73705ec87b2"><div class="ttname"><a href="decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a></div><div class="ttdeci">void nosort_resamp(int nw, double *w, int np, int *p, int offset)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00025">resample.c:25</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
-<div class="ttc" id="apomp__decls_8h_html_a37f1a2acca063e96f0efa73705ec87b2"><div class="ttname"><a href="pomp__decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a></div><div class="ttdeci">void nosort_resamp(int nw, double *w, int np, int *p, int offset)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00025">resample.c:25</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a263b864ea80d9008e4c96ffe013f1dff"><div class="ttname"><a href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff">fixdimnames</a></div><div class="ttdeci">static R_INLINE void fixdimnames(SEXP x, const char **names, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00127">pomp_defines.h:127</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00108">pomp_defines.h:108</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a8ab2bdfb97326c698544007bd60c1a49"><div class="ttname"><a href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a></div><div class="ttdeci">static R_INLINE SEXP makearray(int rank, const int *dim)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00040">pomp_defines.h:40</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_ad396407a99088c710b270a9c1dc3aa9d"><div class="ttname"><a href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a></div><div class="ttdeci">static R_INLINE SEXP as_matrix(SEXP x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00143">pomp_defines.h:143</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_a72f66d373d52ab42fd8af134bd7f9cda"><div class="ttname"><a href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a></div><div class="ttdeci">int nreps</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00134">trajectory.c:134</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_ae8f6d2fd6490d3153cb4133bf183a404"><div class="ttname"><a href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a></div><div class="ttdeci">int nvars</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00131">trajectory.c:131</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -377,7 +377,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="292,31,403,57"/>
 <area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="131,107,239,133"/>
 <area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="139,157,231,184"/>
-<area shape="rect" href="pomp__decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2" title=" " alt="" coords="125,208,244,235"/>
+<area shape="rect" href="decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2" title=" " alt="" coords="125,208,244,235"/>
 </map>
 </div>
 

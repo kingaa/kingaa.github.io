@@ -88,13 +88,13 @@ $(document).ready(function(){initNavTree('probe__nlar_8c_source.html',''); initR
 <div class="contents">
 <a href="probe__nlar_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- mode: C++; -*-</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pomp__internal_8h.html">pomp_internal.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pomp__mat_8h.html">pomp_mat.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="probe__nlar_8c.html#afd315040fac0de8def98fd667a0e440c">poly_nlar_fit</a>(<span class="keywordtype">double</span> *beta, <span class="keywordtype">double</span> *y, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> nterms, <span class="keywordtype">int</span> *lag, <span class="keywordtype">int</span> *power, <span class="keywordtype">double</span> *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>);</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="pomp__decls_8h.html#a9f90ddaaa65be036697557e76d8e0d0c">    9</a></span>&#160;SEXP <a class="code" href="probe__nlar_8c.html#a9f90ddaaa65be036697557e76d8e0d0c">probe_nlar</a> (SEXP x, SEXP lags, SEXP powers) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="decls_8h.html#a9f90ddaaa65be036697557e76d8e0d0c">    9</a></span>&#160;SEXP <a class="code" href="probe__nlar_8c.html#a9f90ddaaa65be036697557e76d8e0d0c">probe_nlar</a> (SEXP x, SEXP lags, SEXP powers) {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  SEXP y, beta, beta_names;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">int</span> n, nterms;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">int</span> k;</div>
@@ -220,7 +220,7 @@ $(document).ready(function(){initNavTree('probe__nlar_8c_source.html',''); initR
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="agompertz_8c_html_aa7082577997805000f8e8b56846642cd"><div class="ttname"><a href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a></div><div class="ttdeci">#define tau</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00081">gompertz.c:81</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html"><div class="ttname"><a href="pomp__internal_8h.html">pomp_internal.h</a></div></div>
+<div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html"><div class="ttname"><a href="pomp__mat_8h.html">pomp_mat.h</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html_a305b5b8bb23bc880b442f68dc1219ed6"><div class="ttname"><a href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6">pomp_qr</a></div><div class="ttdeci">static R_INLINE void pomp_qr(double *a, int m, int n, int *pivot, double *tau)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00024">pomp_mat.h:24</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html_a595e9be65aee622370178eb5a49f85c2"><div class="ttname"><a href="pomp__mat_8h.html#a595e9be65aee622370178eb5a49f85c2">pomp_qrqy</a></div><div class="ttdeci">static R_INLINE void pomp_qrqy(double *c, double *a, int lda, double *tau, int m, int n, int k, char *side, char *transpose)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00039">pomp_mat.h:39</a></div></div>

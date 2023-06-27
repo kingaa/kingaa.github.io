@@ -88,26 +88,26 @@ $(document).ready(function(){initNavTree('synth__lik_8c.html',''); initResizable
 <div class="title">synth_lik.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="pomp__internal_8h_source.html">pomp_internal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for synth_lik.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="synth__lik_8c__incl.png" border="0" usemap="#asrc_2synth__lik_8c" alt=""/></div>
 <map name="asrc_2synth__lik_8c" id="asrc_2synth__lik_8c">
-<area shape="rect" title=" " alt="" coords="307,5,421,32"/>
-<area shape="rect" href="pomp__internal_8h.html" title=" " alt="" coords="227,155,355,181"/>
-<area shape="rect" href="pomp__mat_8h.html" title=" " alt="" coords="372,80,476,107"/>
+<area shape="rect" title=" " alt="" coords="296,5,411,32"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="249,155,333,181"/>
+<area shape="rect" href="pomp__mat_8h.html" title=" " alt="" coords="356,80,460,107"/>
 <area shape="rect" title=" " alt="" coords="5,379,48,405"/>
 <area shape="rect" title=" " alt="" coords="72,379,149,405"/>
 <area shape="rect" title=" " alt="" coords="324,304,415,331"/>
 <area shape="rect" title=" " alt="" coords="334,379,434,405"/>
 <area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="163,229,290,256"/>
-<area shape="rect" href="pomp__decls_8h.html" title=" " alt="" coords="489,229,601,256"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="490,229,558,256"/>
 <area shape="rect" href="pomp_8h.html" title=" " alt="" coords="178,304,249,331"/>
 <area shape="rect" title=" " alt="" coords="173,379,309,405"/>
-<area shape="rect" title=" " alt="" coords="525,155,608,181"/>
-<area shape="rect" title=" " alt="" coords="379,155,501,181"/>
+<area shape="rect" title=" " alt="" coords="503,155,585,181"/>
+<area shape="rect" title=" " alt="" coords="357,155,478,181"/>
 </map>
 </div>
 </div>
@@ -187,7 +187,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  y2 = (<span class="keywordtype">double</span> *) R_alloc(nrow*ncol,<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (nrow &lt;= ncol)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;nsim&#39; (=%ld) should be (much) larger than the number of probes (=%ld)&quot;</span>,nrow,ncol); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;nsim&#39; (=%ld) should be (much) larger than the number of probes (=%ld)&quot;</span>,nrow,ncol); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// compute column means, center each column, precondition</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  memcpy(y1,y,nrow*ncol*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
@@ -261,7 +261,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  *loglik = -0.5*rss-half_log_det;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_aa7082577997805000f8e8b56846642cd"><div class="ttname"><a href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a></div><div class="ttdeci">#define tau</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00081">gompertz.c:81</a></div></div>
-<div class="ttc" id="apomp__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__internal_8h_source.html#l00014">pomp_internal.h:14</a></div></div>
+<div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00013">pomp.h:13</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html_a24159b4842915664a9cd3d4cce56b529"><div class="ttname"><a href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a></div><div class="ttdeci">#define FCONE</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00007">pomp_mat.h:7</a></div></div>
 <div class="ttc" id="apomp__mat_8h_html_a614853020d1cfbd754ac82a5895b5547"><div class="ttname"><a href="pomp__mat_8h.html#a614853020d1cfbd754ac82a5895b5547">pomp_backsolve</a></div><div class="ttdeci">static R_INLINE void pomp_backsolve(double *a, int lda, int n, double *x, int incx, char *uplo, char *transpose, char *unit)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00011">pomp_mat.h:11</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -279,7 +279,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="synth__lik_8c_a357cf49307356489922f2cb22efac4fd_icgraph.png" border="0" usemap="#asynth__lik_8c_a357cf49307356489922f2cb22efac4fd_icgraph" alt=""/></div>
 <map name="asynth__lik_8c_a357cf49307356489922f2cb22efac4fd_icgraph" id="asynth__lik_8c_a357cf49307356489922f2cb22efac4fd_icgraph">
 <area shape="rect" title=" " alt="" coords="155,5,304,32"/>
-<area shape="rect" href="pomp__decls_8h.html#aba3bb9e9bce5419b23032d95b1bba531" title=" " alt="" coords="5,5,107,32"/>
+<area shape="rect" href="decls_8h.html#aba3bb9e9bce5419b23032d95b1bba531" title=" " alt="" coords="5,5,107,32"/>
 </map>
 </div>
 

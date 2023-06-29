@@ -1,7 +1,6 @@
 var seirs__pomp_8cc =
 [
     [ "Beta", "seirs__pomp_8cc.html#a69481325cd251d42dac1c62fb459cddc", null ],
-    [ "code", "seirs__pomp_8cc.html#a814f6dab3b0678113d97a3684282934a", null ],
     [ "Delta", "seirs__pomp_8cc.html#a35b7eb5ca51863be70bf9a60d5c6ca51", null ],
     [ "E", "seirs__pomp_8cc.html#a07484107e6d9fdf38b53edf631d6511d", null ],
     [ "E0", "seirs__pomp_8cc.html#a73f0647950b85591fbe61fff44d45c2e", null ],
@@ -9,7 +8,6 @@ var seirs__pomp_8cc =
     [ "I", "seirs__pomp_8cc.html#a60ef6e1bcfabb95cfeb300e1d03ce470", null ],
     [ "I0", "seirs__pomp_8cc.html#a73d113d91ab7ec355ca707cc930eb718", null ],
     [ "lik", "seirs__pomp_8cc.html#aad91cdbfd6d164f4f7c8b573b4784311", null ],
-    [ "lin_ct", "seirs__pomp_8cc.html#af991ba8103e9b4b3373aeca3b2c17caf", null ],
     [ "linE", "seirs__pomp_8cc.html#a3a7f185345ca4965fe7e23dda048f217", null ],
     [ "LINEAGE", "seirs__pomp_8cc.html#a54933b958c4ef8c9973de90a76666ebe", null ],
     [ "linI", "seirs__pomp_8cc.html#a53cf84700525c501e6ebd1993e737229", null ],

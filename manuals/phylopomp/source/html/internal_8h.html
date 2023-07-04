@@ -84,8 +84,7 @@ $(document).ready(function(){initNavTree('internal_8h.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">internal.h File Reference</div>  </div>
 </div><!--header-->
@@ -154,13 +153,6 @@ Typedefs</h2></td></tr>
 <tr class="separator:af450b2ac2081b900cfe5a2e5b5530357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c08bbb85c89413f5e8af55c20429103"><td class="memItemLeft" align="right" valign="top">typedef size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></td></tr>
 <tr class="separator:a5c08bbb85c89413f5e8af55c20429103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a30243865c01653487f851881a5a9fc28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a30243865c01653487f851881a5a9fc28">random_integer</a> (int n)</td></tr>
-<tr class="separator:a30243865c01653487f851881a5a9fc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53266ca5329fe6d2e931aee06e78578c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a> (SEXP list, SEXP names, SEXP element, const char *name, int pos)</td></tr>
-<tr class="separator:a53266ca5329fe6d2e931aee06e78578c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad25a1c617278c25cbcbb9b9a3a6b8024"></a>
@@ -269,127 +261,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00026">26</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a30243865c01653487f851881a5a9fc28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30243865c01653487f851881a5a9fc28">&#9670;&nbsp;</a></span>random_integer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int random_integer </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00030">30</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                  {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) floor(R_unif_index((<span class="keywordtype">double</span>) n));</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="internal_8h_a30243865c01653487f851881a5a9fc28_icgraph.png" border="0" usemap="#ainternal_8h_a30243865c01653487f851881a5a9fc28_icgraph" alt=""/></div>
-<map name="ainternal_8h_a30243865c01653487f851881a5a9fc28_icgraph" id="ainternal_8h_a30243865c01653487f851881a5a9fc28_icgraph">
-<area shape="rect" title=" " alt="" coords="643,157,768,184"/>
-<area shape="rect" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07" title="choose a random ball from deme i" alt="" coords="409,120,595,147"/>
-<area shape="rect" href="classinventory__t.html#a6e8dbc98608507421e36946d895d4f2e" title=" " alt="" coords="175,208,361,235"/>
-<area shape="rect" href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d" title="n births into deme j with parent in deme i" alt="" coords="209,5,327,32"/>
-<area shape="rect" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7" title="death in deme i" alt="" coords="205,56,331,83"/>
-<area shape="rect" href="classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4" title="migration from deme i to deme j" alt="" coords="199,107,337,133"/>
-<area shape="rect" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c" title="sample in deme i" alt="" coords="200,157,336,184"/>
-<area shape="rect" href="classmaster__t.html#af0e3048867ca697ed1274dd09d92d60c" title="makes a jump" alt="" coords="5,56,127,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a53266ca5329fe6d2e931aee06e78578c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53266ca5329fe6d2e931aee06e78578c">&#9670;&nbsp;</a></span>set_list_elem()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int set_list_elem </td>
-          <td>(</td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>names</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP&#160;</td>
-          <td class="paramname"><em>element</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="internal_8h_source.html#l00035">35</a> of file <a class="el" href="internal_8h_source.html">internal.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                                     {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  SET_ELEMENT(list,pos,element);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  SET_STRING_ELT(names,pos,mkChar(name));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">return</span> ++pos;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="internal_8h_a53266ca5329fe6d2e931aee06e78578c_icgraph.png" border="0" usemap="#ainternal_8h_a53266ca5329fe6d2e931aee06e78578c_icgraph" alt=""/></div>
-<map name="ainternal_8h_a53266ca5329fe6d2e931aee06e78578c_icgraph" id="ainternal_8h_a53266ca5329fe6d2e931aee06e78578c_icgraph">
-<area shape="rect" title=" " alt="" coords="416,97,525,123"/>
-<area shape="rect" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed" title="lineage count and saturation" alt="" coords="205,5,363,47"/>
-<area shape="rect" href="classball__t.html#a7624737bc15d3d74fad0d4faa71f488c" title="R list description." alt="" coords="222,71,346,98"/>
-<area shape="rect" href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59" title="R list description." alt="" coords="200,122,368,149"/>
-<area shape="rect" href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52" title="R list description." alt="" coords="218,173,350,199"/>
-<area shape="rect" href="classmaster__t.html#ae7718a2fc6afc0852aa784a00c338ba9" title="structure in R list format" alt="" coords="5,122,152,149"/>
-</map>
-</div>
 
 </div>
 </div>

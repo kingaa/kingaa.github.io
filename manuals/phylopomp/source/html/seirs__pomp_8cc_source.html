@@ -209,11 +209,11 @@ $(document).ready(function(){initNavTree('seirs__pomp_8cc_source.html',''); init
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          <span class="keywordflow">if</span> (unif_rand() &lt; prop_prob) {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            lineage[b-&gt;<a class="code" href="classball__t.html#a12fa86d0b980103199ff7ee6dedace4a">lineage</a>()] = 0; <span class="comment">// lineage is put into E deme</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="seirs__pomp_8cc.html#a3a7f185345ca4965fe7e23dda048f217">linE</a> += 1.0;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(prop_prob); <span class="comment">// FIXME: this will be ignored if &#39;ll&#39; is an accumulator variable</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(prop_prob);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            lineage[b-&gt;<a class="code" href="classball__t.html#a12fa86d0b980103199ff7ee6dedace4a">lineage</a>()] = 1; <span class="comment">// lineage is put into I deme</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="seirs__pomp_8cc.html#a53cf84700525c501e6ebd1993e737229">linI</a> += 1.0;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(1-prop_prob); <span class="comment">// FIXME: this will be ignored if &#39;ll&#39; is an accumulator variable</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <a class="code" href="seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(1-prop_prob);</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;          }</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
@@ -255,7 +255,7 @@ $(document).ready(function(){initNavTree('seirs__pomp_8cc_source.html',''); init
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="seirs__pomp_8cc.html#af4f12397387d83cd9c47b663c74f1f29">node</a> = <a class="code" href="seirs__pomp_8cc.html#af4f12397387d83cd9c47b663c74f1f29">node</a>+1;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">if</span> (!p-&gt;<a class="code" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <span class="comment">// FIXME: adjust for root-deme proposals here?</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      <a class="code" href="seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordtype">int</span> parent = p-&gt;<a class="code" href="classnode__t.html#ab10430fd8addd5852699c30a23729880">green_ball</a>()-&gt;<a class="code" href="classball__t.html#a12fa86d0b980103199ff7ee6dedace4a">lineage</a>();</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordflow">if</span> (parent &lt; 0 || parent &gt;= nSAMPLE) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;big trouble!&quot;</span>); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      <span class="keywordflow">if</span> (ISNA(lineage[parent])) {</div>
@@ -375,9 +375,9 @@ $(document).ready(function(){initNavTree('seirs__pomp_8cc_source.html',''); init
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">case</span> 3:                   <span class="comment">// waning</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="seirs__pomp_8cc.html#a5c71a5e59a53413cd6c270266d63b031">R</a> -= 1; <a class="code" href="seirs__pomp_8cc.html#af933676109efed7ab34cea71d748a517">S</a> += 1;</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keywordflow">default</span>:                                       <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        error(<span class="stringliteral">&quot;impossible error in &#39;%s&#39;!&quot;</span>,__func__); <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">break</span>;                                       <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keywordflow">default</span>:                                     <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;impossible error in &#39;%s&#39;!&quot;</span>,__func__); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">break</span>;                                     <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      }</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      <a class="code" href="seirs__pomp_8cc.html#a3a7f185345ca4965fe7e23dda048f217">linE</a> = nearbyint(<a class="code" href="seirs__pomp_8cc.html#a3a7f185345ca4965fe7e23dda048f217">linE</a>);</div>

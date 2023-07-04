@@ -1135,28 +1135,26 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    *INTEGER(Name) = int(<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    PROTECT(Color = NEW_CHARACTER(1));</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    SET_STRING_ELT(Color,0,mkChar(<a class="code" href="classball__t.html#a3545dd485a4dfd8364552bf3d360555e">color_symbol</a>().c_str()));</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(O,On,Name,<span class="stringliteral">&quot;name&quot;</span>,0);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(O,On,Color,<span class="stringliteral">&quot;color&quot;</span>,1);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    set_list_elem(O,On,Name,<span class="stringliteral">&quot;name&quot;</span>,0);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    set_list_elem(O,On,Color,<span class="stringliteral">&quot;color&quot;</span>,1);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>)) {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;      PROTECT(Deme = NEW_INTEGER(1));</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      *INTEGER(Deme) = int(<a class="code" href="classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e">_deme</a>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <a class="code" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a>(O,On,Deme,<span class="stringliteral">&quot;deme&quot;</span>,2);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      set_list_elem(O,On,Deme,<span class="stringliteral">&quot;deme&quot;</span>,2);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      UNPROTECT(1);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    SET_NAMES(O,On);</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    UNPROTECT(4);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">return</span> O;</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  };</div>
-<div class="ttc" id="ainternal_8h_html_a53266ca5329fe6d2e931aee06e78578c"><div class="ttname"><a href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c">set_list_elem</a></div><div class="ttdeci">int set_list_elem(SEXP list, SEXP names, SEXP element, const char *name, int pos)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00035">internal.h:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classball__t_a7624737bc15d3d74fad0d4faa71f488c_cgraph.png" border="0" usemap="#aclassball__t_a7624737bc15d3d74fad0d4faa71f488c_cgraph" alt=""/></div>
 <map name="aclassball__t_a7624737bc15d3d74fad0d4faa71f488c_cgraph" id="aclassball__t_a7624737bc15d3d74fad0d4faa71f488c_cgraph">
-<area shape="rect" title="R list description." alt="" coords="5,56,129,83"/>
+<area shape="rect" title="R list description." alt="" coords="5,31,129,57"/>
 <area shape="rect" href="classball__t.html#a3545dd485a4dfd8364552bf3d360555e" title="machine&#45;readable color symbols" alt="" coords="177,5,331,32"/>
 <area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="379,31,456,57"/>
-<area shape="rect" href="internal_8h.html#a53266ca5329fe6d2e931aee06e78578c" title=" " alt="" coords="199,107,309,133"/>
 </map>
 </div>
 

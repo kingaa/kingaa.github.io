@@ -22,6 +22,25 @@ function processMathHTML() {
 
 
 <ul>
+<li> <p><code>getInfo()</code>, <code>parse_newick()</code> now always trace lineages.
+</p>
+</li>
+<li><p> Lineage and deme information has been refactored: nodes no longer carry deme information, balls do.
+</p>
+</li>
+<li><p> The genealogy description (<code>getInfo(description=TRUE)</code>) now reports both deme and lineage.
+</p>
+</li>
+<li> <p><code>curtail()</code> more carefully rewinds the history.
+</p>
+</li></ul>
+
+
+
+<h3>Changes in <span class="pkg">phylopomp</span> version 0.9</h3>
+
+
+<ul>
 <li><p> Inclusion of <span class="pkg">pomp</span> methods for SEIRS model.
 </p>
 </li>
@@ -134,7 +153,7 @@ The proper formatting for plots is accomplished within the plotting routines the
 <li><p> Corrected certain inconsistencies in the way the lineage-count table was reported and used in pomp objects.
 The <code>lbdp_pomp</code> and <code>sir_pomp</code> functions assume a particular form of the lineage count table, such that every entry corresponds to either a root, a branch point, or a sample (but NB, the last entry is treated differently).
 This assumption was violated beginning with version 0.2.0.0 in that the lineage count table returned by <code>lineages()</code> contained an entry for internal nodes.
-Now, when <code>obscure=TRUE</code> (the default), the behavior is as it was before, consistent with the assumptions of <code>lbdp_pomp</code> and <code>sir_pomp</code> 
+Now, when <code>obscure=TRUE</code> (the default), the behavior is as it was before, consistent with the assumptions of <code>lbdp_pomp</code> and <code>sir_pomp</code>
 </p>
 </li></ul>
 

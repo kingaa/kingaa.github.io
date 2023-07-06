@@ -16,9 +16,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
       [ "master_t", "classmaster__t.html", "classmaster__t" ]
     ] ],
     [ "moran.cc", "moran_8cc.html", "moran_8cc" ],
-    [ "node.h", "node_8h.html", [
-      [ "node_t", "classnode__t.html", "classnode__t" ]
-    ] ],
+    [ "node.h", "node_8h.html", "node_8h" ],
     [ "nodeseq.h", "nodeseq_8h.html", "nodeseq_8h" ],
     [ "parse.cc", "parse_8cc.html", "parse_8cc" ],
     [ "pocket.h", "pocket_8h.html", "pocket_8h" ],

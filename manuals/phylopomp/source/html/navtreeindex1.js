@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"decls_8h.html#aa3a5b958c8d3e2f6bcc4bc9eba80129f":[2,0,0,2,5],
+"decls_8h.html#ae4e9c32b49282c41f7865fce81a24146":[2,0,0,2,0],
+"decls_8h.html#ae565b9d03861c8072ae2390e0c456e6d":[2,0,0,2,1],
 "decls_8h_source.html":[2,0,0,2],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[2,0,0],
 "files.html":[2,0],
@@ -103,6 +106,7 @@ var NAVTREEINDEX1 =
 "parse_8cc_source.html":[2,0,0,14],
 "pocket_8h.html":[2,0,0,15],
 "pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f":[2,0,0,15,2],
+"pocket_8h.html#acedc4c4e7ef5f0993a6b2054b8fec08b":[2,0,0,15,3],
 "pocket_8h_source.html":[2,0,0,15],
 "popul__proc_8h.html":[2,0,0,16],
 "popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81":[2,0,0,16,3],

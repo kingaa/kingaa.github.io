@@ -26,7 +26,7 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>yaml(object, prune = TRUE, obscure = TRUE, trace = FALSE)
+<pre><code class='language-R'>yaml(object)
 </code></pre>
 
 
@@ -37,33 +37,21 @@ function processMathHTML() {
 <td>
 <p><code>gpsim</code> object.</p>
 </td></tr>
-<tr><td><code id="yaml_:_prune">prune</code></td>
-<td>
-<p>logical; prune the genealogy?</p>
-</td></tr>
-<tr><td><code id="yaml_:_obscure">obscure</code></td>
-<td>
-<p>logical; obscure the demes?</p>
-</td></tr>
-<tr><td><code id="yaml_:_trace">trace</code></td>
-<td>
-<p>logical; trace the lineages?</p>
-</td></tr>
 </table>
 
 
 <h3>Value</h3>
 
-<p>A string in yaml format.
+<p>A string in yaml format, with class &ldquo;gpyaml&rdquo;.
 </p>
 
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>simulate("SIIR",time=1) |&gt; yaml() |&gt; cat()
+<pre><code class='language-R'>simulate("SIIR",time=1) |&gt; yaml()
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.9.3.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.1.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

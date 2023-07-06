@@ -18,7 +18,7 @@ var classnodeseq__t =
     [ "sort", "classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14", null ],
     [ "structure", "classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253", null ],
     [ "swap", "classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624", null ],
-    [ "trace_lineage", "classnodeseq__t.html#a180a98598cc23635a67395071e9158db", null ],
+    [ "trace_lineage", "classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27", null ],
     [ "trace_lineages", "classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce", null ],
     [ "yaml", "classnodeseq__t.html#a1e165e9bd12ca6080c0e5aa2cab0625d", null ],
     [ "operator>>", "classnodeseq__t.html#aeeb424f6a8d8c31c309725edd406dc2c", null ],

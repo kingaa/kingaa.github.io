@@ -13,8 +13,6 @@ var classball__t =
     [ "holder", "classball__t.html#a84b2949440ac7d1fcd8127076e082928", null ],
     [ "holder", "classball__t.html#aa43e86ea4b912fb0cf99565adc9ed2fa", null ],
     [ "is", "classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f", null ],
-    [ "lineage", "classball__t.html#a1464e9dd09cfbf751cc24f00e2fa4bcd", null ],
-    [ "lineage", "classball__t.html#a12fa86d0b980103199ff7ee6dedace4a", null ],
     [ "newick", "classball__t.html#a6ea0514941c8f2a89306e60065562e83", null ],
     [ "operator=", "classball__t.html#a54b3988414b186f130147910777eae55", null ],
     [ "operator=", "classball__t.html#acef9053249f21e93b4c7a039533b7aa3", null ],

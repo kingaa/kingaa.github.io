@@ -344,7 +344,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>(pompfun,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,NA_STRING,Cnames));</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">// extract &#39;userdata&#39; as pairlist</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = VectorToPairList(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>))));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// create array to store results</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7">ret_array</a>(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,ntimes,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,repnames));</div>
@@ -407,7 +407,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="adecls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
 <div class="ttc" id="adecls_8h_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
 <div class="ttc" id="adecls_8h_html_ab2d2bf78c9a2e064a57e6c9bf3d52bc2"><div class="ttname"><a href="decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2">iterate_skeleton_R</a></div><div class="ttdeci">void iterate_skeleton_R(double *X, double t, double deltat, double *time, double *x, double *p, SEXP fn, SEXP args, SEXP Snames, int nvars, int npars, int ncovars, int ntimes, int nrepp, int nreps, int nzeros, lookup_table_t *covar_table, int *zeroindex, double *cov)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00161">skeleton.c:161</a></div></div>
-<div class="ttc" id="adecls_8h_html_aca7782b5824af2ba096aa0d7f1c4834b"><div class="ttname"><a href="decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b">iterate_skeleton_native</a></div><div class="ttdeci">void iterate_skeleton_native(double *X, double t, double deltat, double *time, double *x, double *p, int nvars, int npars, int ncovars, int ntimes, int nrepp, int nreps, int nzeros, int *sidx, int *pidx, int *cidx, lookup_table_t *covar_table, int *zeroindex, pomp_skeleton *fun, SEXP args, double *cov)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00278">skeleton.c:278</a></div></div>
+<div class="ttc" id="adecls_8h_html_aca7782b5824af2ba096aa0d7f1c4834b"><div class="ttname"><a href="decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b">iterate_skeleton_native</a></div><div class="ttdeci">void iterate_skeleton_native(double *X, double t, double deltat, double *time, double *x, double *p, int nvars, int npars, int ncovars, int ntimes, int nrepp, int nreps, int nzeros, int *sidx, int *pidx, int *cidx, lookup_table_t *covar_table, int *zeroindex, pomp_skeleton *fun, SEXP args, double *cov)</div><div class="ttdef"><b>Definition:</b> <a href="skeleton_8c_source.html#l00274">skeleton.c:274</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="apomp_8h_html_a1c79f52f1a622f5a59fea40ad9dfe1f4"><div class="ttname"><a href="pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4">pomp_skeleton</a></div><div class="ttdeci">void pomp_skeleton(double *f, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00219">pomp.h:219</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a76a484fb785e5a4b35f15e41a1b8fc1b"><div class="ttname"><a href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a></div><div class="ttdeci">static R_INLINE SEXP matchnames(SEXP provided, SEXP needed, const char *where)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00059">pomp_defines.h:59</a></div></div>
@@ -434,28 +434,26 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="trajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph.png" border="0" usemap="#atrajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph" alt=""/></div>
 <map name="atrajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph" id="atrajectory_8c_a3ee9c5f69ec3b1b090448cb76634602d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,208,107,235"/>
-<area shape="rect" href="decls_8h.html#a82ea4779fc1cc65f27c3546cbb6669c8" title=" " alt="" coords="185,5,299,32"/>
-<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="199,56,285,83"/>
-<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="161,157,323,184"/>
-<area shape="rect" href="decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="155,537,329,564"/>
-<area shape="rect" href="decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="171,436,313,463"/>
-<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="592,309,699,336"/>
-<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="159,588,325,615"/>
-<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="171,259,313,285"/>
-<area shape="rect" href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7" title=" " alt="" coords="201,107,283,133"/>
-<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="405,5,516,32"/>
-<area shape="rect" href="decls_8h.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="396,563,525,589"/>
-<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="385,613,536,640"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="407,512,514,539"/>
-<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="377,664,544,691"/>
-<area shape="rect" href="skeleton_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="421,411,501,437"/>
-<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="747,411,864,437"/>
-<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="401,309,521,336"/>
-<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="409,259,512,285"/>
-<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="407,56,515,83"/>
-<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="415,107,507,133"/>
-<area shape="rect" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b" title=" " alt="" coords="408,157,513,184"/>
+<area shape="rect" title=" " alt="" coords="5,259,107,285"/>
+<area shape="rect" href="decls_8h.html#a82ea4779fc1cc65f27c3546cbb6669c8" title=" " alt="" coords="185,31,299,57"/>
+<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="199,81,285,108"/>
+<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="161,208,323,235"/>
+<area shape="rect" href="decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="155,259,329,285"/>
+<area shape="rect" href="decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="171,309,313,336"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="555,436,661,463"/>
+<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="159,563,325,589"/>
+<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="171,512,313,539"/>
+<area shape="rect" href="trajectory_8c.html#a2109a7d0e874cf7da59ecdde93f802b7" title=" " alt="" coords="201,132,283,159"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="387,5,497,32"/>
+<area shape="rect" href="decls_8h.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="377,208,507,235"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="389,259,495,285"/>
+<area shape="rect" href="skeleton_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="402,309,482,336"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="709,411,827,437"/>
+<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="382,563,502,589"/>
+<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="391,512,493,539"/>
+<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="388,56,496,83"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="396,107,488,133"/>
+<area shape="rect" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b" title=" " alt="" coords="389,157,495,184"/>
 </map>
 </div>
 
@@ -513,7 +511,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  PROTECT(ob = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;skeleton&quot;</span>)));</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  PROTECT(pompfun = GET_SLOT(ob,install(<span class="stringliteral">&quot;skel.fn&quot;</span>)));</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="comment">// extract &#39;userdata&#39; as pairlist</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = VectorToPairList(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>))));</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="trajectory_8c.html#a852c03f3cb2e07fb73c219e4f9a7bf9f">COMMON</a>(<span class="keywordtype">object</span>) = <a class="code" href="trajectory_8c.html#ac8d8b2659244f8b65022c653e1604b05">object</a>;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <a class="code" href="trajectory_8c.html#a852c03f3cb2e07fb73c219e4f9a7bf9f">COMMON</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>) = <a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>;</div>
@@ -794,15 +792,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="trajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph.png" border="0" usemap="#atrajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph" alt=""/></div>
 <map name="atrajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph" id="atrajectory_8c_a388d1f049a9d7284d0e7ba26591e6099_cgraph">
-<area shape="rect" title=" " alt="" coords="5,132,120,159"/>
-<area shape="rect" href="decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="168,81,328,108"/>
-<area shape="rect" href="decls_8h.html#ab5870e93076f917246e64740c1416a05" title=" " alt="" coords="184,157,312,184"/>
-<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="384,5,535,32"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="406,107,513,133"/>
-<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="376,56,543,83"/>
-<area shape="rect" href="skeleton_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="419,157,499,184"/>
-<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="591,233,708,260"/>
-<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="406,259,513,285"/>
+<area shape="rect" title=" " alt="" coords="5,31,120,57"/>
+<area shape="rect" href="decls_8h.html#a4c519c3f1f7ceca7aae16c0aa702cfeb" title=" " alt="" coords="168,5,328,32"/>
+<area shape="rect" href="decls_8h.html#ab5870e93076f917246e64740c1416a05" title=" " alt="" coords="184,56,312,83"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="376,5,483,32"/>
+<area shape="rect" href="skeleton_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="389,56,469,83"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="531,132,648,159"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="376,157,483,184"/>
 </map>
 </div>
 

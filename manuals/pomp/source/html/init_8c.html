@@ -138,47 +138,48 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00054">54</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                 {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// C functions provided for users</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;bspline_eval&quot;</span>,(DL_FUNC) &amp;<a class="code" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;periodic_bspline_basis_eval&quot;</span>,(DL_FUNC) &amp;<a class="code" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8">periodic_bspline_basis_eval</a>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a44f810b1f9d483bd150f3e71102b9534">get_userdata</a>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_int&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#ab81184a02668adfde937ace9d4cd3c89">get_userdata_int</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_double&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a5703410301afea05b3a3d521ad65597f">get_userdata_double</a>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;pomp_fun_handler&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;load_stack_incr&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">load_stack_incr</a>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;load_stack_decr&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a0a653dae61a3500aaadf64fdefa79c4b">load_stack_decr</a>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;set_pomp_userdata&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;unset_pomp_userdata&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;make_covariate_table&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_covariate_names&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;table_lookup&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;lookup_in_table&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#aaf5964c67b353b466461b1eb1269e129">lookup_in_table</a>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;apply_probe_data&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#add3f83f20679bad53b6c982ed9dde8ea">apply_probe_data</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;apply_probe_sim&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;systematic_resampling&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a982475f3663a786d7883672aa2ed072e">systematic_resampling</a>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;randwalk_perturbation&quot;</span>, (DL_FUNC) &amp;<a class="code" href="decls_8h.html#add4b451ca3aa78a5e56183372c18bdb7">randwalk_perturbation</a>);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// Register routines</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  R_registerRoutines(info,NULL,<a class="code" href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a>,NULL,NULL);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  R_useDynamicSymbols(info,TRUE);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00055">55</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                 {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// C functions provided for users</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;bspline_eval&quot;</span>,(DL_FUNC) &amp;<a class="code" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;periodic_bspline_basis_eval&quot;</span>,(DL_FUNC) &amp;<a class="code" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8">periodic_bspline_basis_eval</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a44f810b1f9d483bd150f3e71102b9534">get_userdata</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_int&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#ab81184a02668adfde937ace9d4cd3c89">get_userdata_int</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_double&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a5703410301afea05b3a3d521ad65597f">get_userdata_double</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;pomp_fun_handler&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;load_stack_incr&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">load_stack_incr</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;load_stack_decr&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a0a653dae61a3500aaadf64fdefa79c4b">load_stack_decr</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;make_covariate_table&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_covariate_names&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;table_lookup&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;lookup_in_table&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#aaf5964c67b353b466461b1eb1269e129">lookup_in_table</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;apply_probe_data&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#add3f83f20679bad53b6c982ed9dde8ea">apply_probe_data</a>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;apply_probe_sim&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;systematic_resampling&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a982475f3663a786d7883672aa2ed072e">systematic_resampling</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;randwalk_perturbation&quot;</span>, (DL_FUNC) &amp;<a class="code" href="decls_8h.html#add4b451ca3aa78a5e56183372c18bdb7">randwalk_perturbation</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// THE FOLLOWING TWO FUNCTIONS WILL GO AWAY SOON</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;set_pomp_userdata&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  R_RegisterCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;unset_pomp_userdata&quot;</span>,(DL_FUNC) &amp;<a class="code" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Register routines</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  R_registerRoutines(info,NULL,<a class="code" href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a>,NULL,NULL);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  R_useDynamicSymbols(info,TRUE);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="ttc" id="abspline_8c_html_a71cbe26144698d7db860dc0f9f0fff0c"><div class="ttname"><a href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a></div><div class="ttdeci">void bspline_eval(double *y, const double *x, int nx, int i, int degree, int deriv, const double *knots)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00009">bspline.c:9</a></div></div>
 <div class="ttc" id="abspline_8c_html_acabb1ca64e069e1b7767c31435e761d8"><div class="ttname"><a href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8">periodic_bspline_basis_eval</a></div><div class="ttdeci">void periodic_bspline_basis_eval(double x, double period, int degree, int nbasis, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00118">bspline.c:118</a></div></div>
 <div class="ttc" id="adecls_8h_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
 <div class="ttc" id="adecls_8h_html_a0a653dae61a3500aaadf64fdefa79c4b"><div class="ttname"><a href="decls_8h.html#a0a653dae61a3500aaadf64fdefa79c4b">load_stack_decr</a></div><div class="ttdeci">SEXP load_stack_decr(SEXP pack)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00130">pomp_fun.c:130</a></div></div>
 <div class="ttc" id="adecls_8h_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
-<div class="ttc" id="adecls_8h_html_a44f810b1f9d483bd150f3e71102b9534"><div class="ttname"><a href="decls_8h.html#a44f810b1f9d483bd150f3e71102b9534">get_userdata</a></div><div class="ttdeci">const SEXP get_userdata(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00012">userdata.c:12</a></div></div>
-<div class="ttc" id="adecls_8h_html_a5703410301afea05b3a3d521ad65597f"><div class="ttname"><a href="decls_8h.html#a5703410301afea05b3a3d521ad65597f">get_userdata_double</a></div><div class="ttdeci">const double * get_userdata_double(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00025">userdata.c:25</a></div></div>
+<div class="ttc" id="adecls_8h_html_a44f810b1f9d483bd150f3e71102b9534"><div class="ttname"><a href="decls_8h.html#a44f810b1f9d483bd150f3e71102b9534">get_userdata</a></div><div class="ttdeci">const SEXP get_userdata(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00020">userdata.c:20</a></div></div>
+<div class="ttc" id="adecls_8h_html_a5703410301afea05b3a3d521ad65597f"><div class="ttname"><a href="decls_8h.html#a5703410301afea05b3a3d521ad65597f">get_userdata_double</a></div><div class="ttdeci">const double * get_userdata_double(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00033">userdata.c:33</a></div></div>
 <div class="ttc" id="adecls_8h_html_a5ae1bdf9e79d36d8fc709cbc509d4c8c"><div class="ttname"><a href="decls_8h.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">load_stack_incr</a></div><div class="ttdeci">SEXP load_stack_incr(SEXP pack)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00121">pomp_fun.c:121</a></div></div>
-<div class="ttc" id="adecls_8h_html_a5ddde1fa5bcf8c3949fd4865a7ab474c"><div class="ttname"><a href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a></div><div class="ttdeci">void unset_pomp_userdata(void)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00032">userdata.c:32</a></div></div>
+<div class="ttc" id="adecls_8h_html_a5ddde1fa5bcf8c3949fd4865a7ab474c"><div class="ttname"><a href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a></div><div class="ttdeci">void unset_pomp_userdata(void)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00041">userdata.c:41</a></div></div>
 <div class="ttc" id="adecls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
 <div class="ttc" id="adecls_8h_html_a982475f3663a786d7883672aa2ed072e"><div class="ttname"><a href="decls_8h.html#a982475f3663a786d7883672aa2ed072e">systematic_resampling</a></div><div class="ttdeci">SEXP systematic_resampling(SEXP weights, SEXP np)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00009">resample.c:9</a></div></div>
 <div class="ttc" id="adecls_8h_html_aa019045daea9be339fd1e70e3441d252"><div class="ttname"><a href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a></div><div class="ttdeci">void set_pomp_userdata(SEXP userdata)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00008">userdata.c:8</a></div></div>
 <div class="ttc" id="adecls_8h_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
 <div class="ttc" id="adecls_8h_html_aaf5964c67b353b466461b1eb1269e129"><div class="ttname"><a href="decls_8h.html#aaf5964c67b353b466461b1eb1269e129">lookup_in_table</a></div><div class="ttdeci">SEXP lookup_in_table(SEXP covar, SEXP t)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00024">lookup_table.c:24</a></div></div>
-<div class="ttc" id="adecls_8h_html_ab81184a02668adfde937ace9d4cd3c89"><div class="ttname"><a href="decls_8h.html#ab81184a02668adfde937ace9d4cd3c89">get_userdata_int</a></div><div class="ttdeci">const int * get_userdata_int(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00018">userdata.c:18</a></div></div>
+<div class="ttc" id="adecls_8h_html_ab81184a02668adfde937ace9d4cd3c89"><div class="ttname"><a href="decls_8h.html#ab81184a02668adfde937ace9d4cd3c89">get_userdata_int</a></div><div class="ttdeci">const int * get_userdata_int(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00026">userdata.c:26</a></div></div>
 <div class="ttc" id="adecls_8h_html_ad2595c6a453ae9fad2f232595ced5ccc"><div class="ttname"><a href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a></div><div class="ttdeci">SEXP apply_probe_sim(SEXP object, SEXP nsim, SEXP params, SEXP probes, SEXP datval, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="probe_8c_source.html#l00029">probe.c:29</a></div></div>
 <div class="ttc" id="adecls_8h_html_add3f83f20679bad53b6c982ed9dde8ea"><div class="ttname"><a href="decls_8h.html#add3f83f20679bad53b6c982ed9dde8ea">apply_probe_data</a></div><div class="ttdeci">SEXP apply_probe_data(SEXP object, SEXP probes)</div><div class="ttdef"><b>Definition:</b> <a href="probe_8c_source.html#l00004">probe.c:4</a></div></div>
 <div class="ttc" id="adecls_8h_html_add4b451ca3aa78a5e56183372c18bdb7"><div class="ttname"><a href="decls_8h.html#add4b451ca3aa78a5e56183372c18bdb7">randwalk_perturbation</a></div><div class="ttdeci">SEXP randwalk_perturbation(SEXP params, SEXP rw_sd)</div><div class="ttdef"><b>Definition:</b> <a href="mif2_8c_source.html#l00006">mif2.c:6</a></div></div>
@@ -188,56 +189,56 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="init_8c_ac82c44c250cd2f69f3259d56f09c1c26_cgraph.png" border="0" usemap="#ainit_8c_ac82c44c250cd2f69f3259d56f09c1c26_cgraph" alt=""/></div>
 <map name="ainit_8c_ac82c44c250cd2f69f3259d56f09c1c26_cgraph" id="ainit_8c_ac82c44c250cd2f69f3259d56f09c1c26_cgraph">
-<area shape="rect" title=" " alt="" coords="5,1791,108,1817"/>
-<area shape="rect" href="decls_8h.html#add3f83f20679bad53b6c982ed9dde8ea" title=" " alt="" coords="189,5,327,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="191,815,325,841"/>
-<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="1005,1107,1167,1133"/>
-<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="1003,1056,1169,1083"/>
-<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="1015,1208,1157,1235"/>
-<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="1011,904,1161,931"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="1033,752,1139,779"/>
-<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="1003,1157,1169,1184"/>
-<area shape="rect" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c" title=" " alt="" coords="626,1929,730,1956"/>
-<area shape="rect" href="decls_8h.html#a44f810b1f9d483bd150f3e71102b9534" title=" " alt="" coords="205,1968,311,1995"/>
-<area shape="rect" href="decls_8h.html#a5703410301afea05b3a3d521ad65597f" title=" " alt="" coords="179,2019,337,2045"/>
-<area shape="rect" href="decls_8h.html#ab81184a02668adfde937ace9d4cd3c89" title=" " alt="" coords="193,2069,323,2096"/>
-<area shape="rect" href="decls_8h.html#a0a653dae61a3500aaadf64fdefa79c4b" title=" " alt="" coords="195,2120,321,2147"/>
-<area shape="rect" href="decls_8h.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c" title=" " alt="" coords="197,2171,319,2197"/>
-<area shape="rect" href="decls_8h.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="1023,1917,1149,1944"/>
-<area shape="rect" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8" title=" " alt="" coords="156,1867,360,1893"/>
-<area shape="rect" href="decls_8h.html#add4b451ca3aa78a5e56183372c18bdb7" title=" " alt="" coords="408,1765,577,1792"/>
-<area shape="rect" href="decls_8h.html#a982475f3663a786d7883672aa2ed072e" title=" " alt="" coords="171,2221,345,2248"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="441,777,544,804"/>
-<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="1249,473,1360,500"/>
-<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="1259,1309,1351,1336"/>
-<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="1043,245,1129,272"/>
-<area shape="rect" href="decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="643,1208,713,1235"/>
-<area shape="rect" href="decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="811,549,918,576"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="628,752,728,779"/>
-<area shape="rect" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b" title=" " alt="" coords="625,803,731,829"/>
-<area shape="rect" href="rinit_8c.html#afdfe8d3f0939427e72c44c0e4f3bb102" title=" " alt="" coords="824,1360,905,1387"/>
-<area shape="rect" href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c" title=" " alt="" coords="825,1005,905,1032"/>
-<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="1591,1019,1708,1045"/>
-<area shape="rect" href="rinit_8c.html#a4d765252bd25e8eb50da6837a15b5416" title=" " alt="" coords="831,1309,898,1336"/>
-<area shape="rect" href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede" title=" " alt="" coords="792,1259,937,1285"/>
-<area shape="rect" href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123" title=" " alt="" coords="1045,1309,1127,1336"/>
-<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="1251,727,1359,753"/>
-<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="1245,1157,1365,1184"/>
-<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="1253,1208,1356,1235"/>
-<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="1436,1145,1543,1172"/>
-<area shape="rect" href="rmeasure_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="1045,397,1127,424"/>
-<area shape="rect" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1" title=" " alt="" coords="1027,448,1145,475"/>
-<area shape="rect" href="rmeasure_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="1046,347,1126,373"/>
-<area shape="rect" href="rmeasure_8c.html#aff505c906b432ad2e9b72dc28feb374d" title=" " alt="" coords="1045,600,1127,627"/>
-<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="779,904,951,931"/>
-<area shape="rect" href="rprocess_8c.html#a37e868d572ef0240fa585840f2aed80f" title=" " alt="" coords="999,853,1173,880"/>
-<area shape="rect" href="decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="806,1107,923,1133"/>
-<area shape="rect" href="pomp__defines_8h.html#ae6384e27fab4a5bb90ecf28da5f66513" title=" " alt="" coords="420,2019,565,2045"/>
-<area shape="rect" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="1223,1968,1386,1995"/>
-<area shape="rect" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="1221,2019,1388,2045"/>
-<area shape="rect" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="1251,1917,1358,1944"/>
-<area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="408,1867,577,1909"/>
-<area shape="rect" href="resample_8c.html#a37f1a2acca063e96f0efa73705ec87b2" title=" " alt="" coords="433,2221,552,2248"/>
+<area shape="rect" title=" " alt="" coords="5,1709,108,1735"/>
+<area shape="rect" href="decls_8h.html#add3f83f20679bad53b6c982ed9dde8ea" title=" " alt="" coords="189,1107,327,1134"/>
+<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="191,1158,325,1185"/>
+<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="1030,1107,1193,1134"/>
+<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="1028,1006,1195,1033"/>
+<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="1040,1361,1183,1387"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="1058,1411,1165,1438"/>
+<area shape="rect" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c" title=" " alt="" coords="639,1875,743,1902"/>
+<area shape="rect" href="decls_8h.html#a44f810b1f9d483bd150f3e71102b9534" title=" " alt="" coords="439,1785,546,1811"/>
+<area shape="rect" href="decls_8h.html#a5703410301afea05b3a3d521ad65597f" title=" " alt="" coords="413,1683,572,1710"/>
+<area shape="rect" href="decls_8h.html#ab81184a02668adfde937ace9d4cd3c89" title=" " alt="" coords="625,1766,756,1793"/>
+<area shape="rect" href="decls_8h.html#a0a653dae61a3500aaadf64fdefa79c4b" title=" " alt="" coords="195,1937,321,1963"/>
+<area shape="rect" href="decls_8h.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c" title=" " alt="" coords="197,1987,319,2014"/>
+<area shape="rect" href="decls_8h.html#aaf5964c67b353b466461b1eb1269e129" title=" " alt="" coords="1049,1665,1174,1691"/>
+<area shape="rect" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8" title=" " alt="" coords="156,1835,360,1862"/>
+<area shape="rect" href="decls_8h.html#add4b451ca3aa78a5e56183372c18bdb7" title=" " alt="" coords="408,1567,577,1594"/>
+<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="183,2038,333,2065"/>
+<area shape="rect" href="decls_8h.html#a982475f3663a786d7883672aa2ed072e" title=" " alt="" coords="171,2089,345,2115"/>
+<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="175,2139,341,2166"/>
+<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="441,626,544,653"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="1275,271,1385,298"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="1284,803,1376,830"/>
+<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="1068,145,1155,171"/>
+<area shape="rect" href="decls_8h.html#ad963b9a55d662fd9085f90fa1d05b399" title=" " alt="" coords="655,981,726,1007"/>
+<area shape="rect" href="decls_8h.html#aa4917309d8b878da9adfc8ee6223bc2a" title=" " alt="" coords="837,474,943,501"/>
+<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="641,601,741,627"/>
+<area shape="rect" href="pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b" title=" " alt="" coords="638,651,743,678"/>
+<area shape="rect" href="rinit_8c.html#afdfe8d3f0939427e72c44c0e4f3bb102" title=" " alt="" coords="849,905,931,931"/>
+<area shape="rect" href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c" title=" " alt="" coords="850,955,930,982"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="1616,1285,1733,1311"/>
+<area shape="rect" href="rinit_8c.html#a4d765252bd25e8eb50da6837a15b5416" title=" " alt="" coords="857,1057,923,1083"/>
+<area shape="rect" href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede" title=" " alt="" coords="817,803,963,830"/>
+<area shape="rect" href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123" title=" " alt="" coords="1071,854,1152,881"/>
+<area shape="rect" href="pomp__defines_8h.html#a70fd8ac5f480dcaebc10fe9cb9074732" title=" " alt="" coords="1277,854,1383,881"/>
+<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="1276,626,1384,653"/>
+<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="1270,1817,1390,1843"/>
+<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="1279,1361,1381,1387"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="1461,1335,1568,1362"/>
+<area shape="rect" href="rmeasure_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="1071,347,1152,374"/>
+<area shape="rect" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1" title=" " alt="" coords="1052,297,1171,323"/>
+<area shape="rect" href="rmeasure_8c.html#a9e133b8f86812dcd3682439751eaef63" title=" " alt="" coords="1071,398,1151,425"/>
+<area shape="rect" href="rmeasure_8c.html#aff505c906b432ad2e9b72dc28feb374d" title=" " alt="" coords="1071,550,1152,577"/>
+<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="804,1310,976,1337"/>
+<area shape="rect" href="rprocess_8c.html#a37e868d572ef0240fa585840f2aed80f" title=" " alt="" coords="1024,601,1199,627"/>
+<area shape="rect" href="decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="831,854,949,881"/>
+<area shape="rect" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="1249,1665,1411,1691"/>
+<area shape="rect" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="1247,1715,1413,1742"/>
+<area shape="rect" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="1277,1766,1383,1793"/>
+<area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="408,1836,577,1877"/>
+<area shape="rect" href="resample_8c.html#a37f1a2acca063e96f0efa73705ec87b2" title=" " alt="" coords="433,2089,552,2115"/>
 </map>
 </div>
 

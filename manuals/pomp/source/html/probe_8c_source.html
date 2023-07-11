@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; nprobe; i++) {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    SET_ELEMENT(vals,i,eval(PROTECT(lang2(VECTOR_ELT(probes,i),data)),</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      CLOENV(VECTOR_ELT(probes,i))));</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                            CLOENV(VECTOR_ELT(probes,i))));</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (!IS_NUMERIC(VECTOR_ELT(vals,i))) {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;probe %ld returns a non-numeric result&quot;</span>,i+1);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc">   29</a></span>&#160;SEXP <a class="code" href="probe_8c.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a> (SEXP <span class="keywordtype">object</span>, SEXP nsim, SEXP <a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  SEXP probes, SEXP datval, SEXP gnsi) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                      SEXP probes, SEXP datval, SEXP gnsi) {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  SEXP x, y, names, sims;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  SEXP returntype, retval, val, valnames;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> nprobe, nsims, nobs, ntimes, nvals;</div>
@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  xdim[0] = nsims; xdim[1] = nvals;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  PROTECT(retval = <a class="code" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49">makearray</a>(2,xdim));</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  PROTECT(valnames = NEW_LIST(2));</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  SET_ELEMENT(valnames,1,names);    <span class="comment">// set column names</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  SET_ELEMENT(valnames,1,names);        <span class="comment">// set column names</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  SET_DIMNAMES(retval,valnames);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">for</span> (p = 0, k = 0; p &lt; nprobe; p++, k += len) { <span class="comment">// loop over probes</span></div>
@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="comment">// evaluate the probe on the simulated data</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      PROTECT(val = eval(PROTECT(lang2(VECTOR_ELT(probes,p),x)),</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        CLOENV(VECTOR_ELT(probes,p))));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                         CLOENV(VECTOR_ELT(probes,p))));</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">if</span> (!IS_NUMERIC(val)) {</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;probe %ld returns a non-numeric result.&quot;</span>,p+1);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      }</div>

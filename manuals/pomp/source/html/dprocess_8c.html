@@ -185,7 +185,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  PROTECT(S1names = <a class="code" href="dprocess_8c.html#a7113f106ccbbafb6a71989d6f6e9811d">paste0</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,mkString(<span class="stringliteral">&quot;_1&quot;</span>)));</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  PROTECT(S2names = <a class="code" href="dprocess_8c.html#a7113f106ccbbafb6a71989d6f6e9811d">paste0</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,mkString(<span class="stringliteral">&quot;_2&quot;</span>)));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = VectorToPairList(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="comment">// Covariates</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">for</span> (v = LENGTH(Cnames)-1; v &gt;= 0; v--) {</div>
@@ -314,22 +314,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dprocess_8c_source.html#l00267">267</a> of file <a class="el" href="dprocess_8c_source.html">dprocess.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;{</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>, <a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>, covar;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  PROTECT(times=AS_NUMERIC(times));</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1">as_state_array</a>(x));</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">// extract the process function</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dprocess&quot;</span>)));</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="comment">// extract other arguments</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = VectorToPairList(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>))));</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  PROTECT(covar = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)));</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="comment">// evaluate the density</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611">onestep_density</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,x,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,covar,log,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  UNPROTECT(7);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="dprocess_8c_source.html#l00264">264</a> of file <a class="el" href="dprocess_8c_source.html">dprocess.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>, <a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>, covar;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  PROTECT(times=AS_NUMERIC(times));</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1">as_state_array</a>(x));</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">// extract the process function</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dprocess&quot;</span>)));</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="comment">// extract other arguments</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  PROTECT(covar = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)));</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="comment">// evaluate the density</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611">onestep_density</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,x,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,covar,log,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  UNPROTECT(7);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
 <div class="ttc" id="adprocess_8c_html_af743054a6e56b1e76d6ee59866b22611"><div class="ttname"><a href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611">onestep_density</a></div><div class="ttdeci">static SEXP onestep_density(SEXP func, SEXP x, SEXP times, SEXP params, SEXP covar, SEXP log, SEXP args, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="dprocess_8c_source.html#l00120">dprocess.c:121</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a8b775a55898690bdc11c348d0b5dc8c1"><div class="ttname"><a href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1">as_state_array</a></div><div class="ttdeci">static R_INLINE SEXP as_state_array(SEXP x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00181">pomp_defines.h:181</a></div></div>
@@ -344,7 +344,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,56,108,83"/>
 <area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="177,5,264,32"/>
 <area shape="rect" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1" title=" " alt="" coords="161,56,280,83"/>
-<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="156,233,285,260"/>
+<area shape="rect" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611" title=" " alt="" coords="156,183,285,209"/>
 <area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="361,5,472,32"/>
 <area shape="rect" href="dprocess_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="376,56,457,83"/>
 <area shape="rect" href="dprocess_8c.html#a7853b2436f140d9aa7ca0bac61dc21c6" title=" " alt="" coords="377,107,457,133"/>
@@ -352,9 +352,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="333,208,500,235"/>
 <area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="345,259,488,285"/>
 <area shape="rect" href="dprocess_8c.html#af4fb5592481eef6dc2aaf6f158871763" title=" " alt="" coords="376,309,457,336"/>
-<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="341,360,492,387"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="363,411,470,437"/>
-<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="333,461,500,488"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="363,360,470,387"/>
 <area shape="rect" href="dprocess_8c.html#a7113f106ccbbafb6a71989d6f6e9811d" title=" " alt="" coords="575,56,641,83"/>
 <area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="548,208,668,235"/>
 <area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="557,259,659,285"/>
@@ -653,61 +651,56 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    *((<span class="keywordtype">void</span> **) (&amp;ff)) = R_ExternalPtrAddr(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>);</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a>(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; ntimes-1; k++, t1++, t2++) {</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; ntimes-1; k++, t1++, t2++) {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      R_CheckUserInterrupt();</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      R_CheckUserInterrupt();</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="comment">// interpolate the covariates at time t1</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,*t1,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <span class="comment">// interpolate the covariates at time t1</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,*t1,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, ft++) {</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, ft++) {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">double</span> *p = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>)+<a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>*(j%nrepsp);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordtype">double</span> *x1 = x1p+<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>*(j%nrepsx);</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordtype">double</span> *x2 = x2p+<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>*(j%nrepsx);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">double</span> *p = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>)+<a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>*(j%nrepsp);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordtype">double</span> *x1 = x1p+<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>*(j%nrepsx);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">double</span> *x2 = x2p+<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>*(j%nrepsx);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        (*ff)(ft,x1,x2,*t1,*t2,p,sidx,pidx,cidx,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        (*ff)(ft,x1,x2,*t1,*t2,p,sidx,pidx,cidx,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">if</span> (!give_log) *ft = exp(*ft);</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span> (!give_log) *ft = exp(*ft);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      x1p = x2p;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      x2p += nrepsx*<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      x1p = x2p;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      x2p += nrepsx*<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  }</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a>();</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordflow">default</span>: {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">double</span> *ft = REAL(F);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">int</span> j, k;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; ntimes-1; k++) { <span class="comment">// loop over times</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, ft++) { <span class="comment">// loop over replicates</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        *ft = R_NaReal;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;&#39;dprocess&#39; unspecified: likelihood undefined.&quot;</span>);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  UNPROTECT(nprotect);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordflow">return</span> F;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">default</span>: {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">double</span> *ft = REAL(F);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">int</span> j, k;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; ntimes-1; k++) { <span class="comment">// loop over times</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, ft++) { <span class="comment">// loop over replicates</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        *ft = R_NaReal;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;&#39;dprocess&#39; unspecified: likelihood undefined.&quot;</span>);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  }</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  UNPROTECT(nprotect);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordflow">return</span> F;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
 <div class="ttc" id="adecls_8h_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
 <div class="ttc" id="adecls_8h_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
-<div class="ttc" id="adecls_8h_html_a5ddde1fa5bcf8c3949fd4865a7ab474c"><div class="ttname"><a href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c">unset_pomp_userdata</a></div><div class="ttdeci">void unset_pomp_userdata(void)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00032">userdata.c:32</a></div></div>
 <div class="ttc" id="adecls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
-<div class="ttc" id="adecls_8h_html_aa019045daea9be339fd1e70e3441d252"><div class="ttname"><a href="decls_8h.html#aa019045daea9be339fd1e70e3441d252">set_pomp_userdata</a></div><div class="ttdeci">void set_pomp_userdata(SEXP userdata)</div><div class="ttdef"><b>Definition:</b> <a href="userdata_8c_source.html#l00008">userdata.c:8</a></div></div>
 <div class="ttc" id="adecls_8h_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
 <div class="ttc" id="adprocess_8c_html_a7853b2436f140d9aa7ca0bac61dc21c6"><div class="ttname"><a href="dprocess_8c.html#a7853b2436f140d9aa7ca0bac61dc21c6">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t1, double *t2, double *x1, double *x2, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="dprocess_8c_source.html#l00079">dprocess.c:80</a></div></div>
 <div class="ttc" id="adprocess_8c_html_ae5591ed3a1a462f91141cff304975884"><div class="ttname"><a href="dprocess_8c.html#ae5591ed3a1a462f91141cff304975884">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Snames, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="dprocess_8c_source.html#l00014">dprocess.c:14</a></div></div>
@@ -732,16 +725,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="dprocess_8c_af743054a6e56b1e76d6ee59866b22611_cgraph.png" border="0" usemap="#adprocess_8c_af743054a6e56b1e76d6ee59866b22611_cgraph" alt=""/></div>
 <map name="adprocess_8c_af743054a6e56b1e76d6ee59866b22611_cgraph" id="adprocess_8c_af743054a6e56b1e76d6ee59866b22611_cgraph">
-<area shape="rect" title=" " alt="" coords="5,208,135,235"/>
+<area shape="rect" title=" " alt="" coords="5,157,135,184"/>
 <area shape="rect" href="dprocess_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="225,5,307,32"/>
 <area shape="rect" href="dprocess_8c.html#a7853b2436f140d9aa7ca0bac61dc21c6" title=" " alt="" coords="226,56,306,83"/>
 <area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="185,107,347,133"/>
 <area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="183,157,349,184"/>
 <area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="195,208,337,235"/>
 <area shape="rect" href="dprocess_8c.html#af4fb5592481eef6dc2aaf6f158871763" title=" " alt="" coords="225,259,307,285"/>
-<area shape="rect" href="decls_8h.html#aa019045daea9be339fd1e70e3441d252" title=" " alt="" coords="191,309,341,336"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="213,360,319,387"/>
-<area shape="rect" href="decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c" title=" " alt="" coords="183,411,349,437"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="213,309,319,336"/>
 <area shape="rect" href="dprocess_8c.html#a7113f106ccbbafb6a71989d6f6e9811d" title=" " alt="" coords="424,5,491,32"/>
 <area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="397,157,517,184"/>
 <area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="406,208,509,235"/>

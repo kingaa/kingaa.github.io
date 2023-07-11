@@ -44,6 +44,7 @@ which conceptually &ldquo;hitches&rdquo; the workhorses to the user-defined proc
   globals,
   cfile,
   cdir = getOption("pomp_cdir", NULL),
+  on_load,
   shlib.args,
   compile = TRUE,
   verbose = getOption("verbose", FALSE)
@@ -84,7 +85,7 @@ it is not used for any component specified using C snippets.
 </td></tr>
 <tr><td><code id="hitch_:_globals">globals</code></td>
 <td>
-<p>optional character;
+<p>optional character or C snippet;
 arbitrary C code that will be hard-coded into the shared-object library created when C snippets are provided.
 If no C snippets are used, <code>globals</code> has no effect.</p>
 </td></tr>
@@ -101,6 +102,12 @@ If the chosen filename would result in over-writing an existing file, an error i
 <code>cdir</code> specifies the name of the directory within which C snippet code will be compiled.
 By default, this is in a temporary directory specific to the <span class="rlang"><b>R</b></span> session.
 One can also set this directory using the <code>pomp_cdir</code> global option.</p>
+</td></tr>
+<tr><td><code id="hitch_:_on_load">on_load</code></td>
+<td>
+<p>optional character or C snippet:
+arbitrary C code that will be executed when the C snippet file is loaded.
+If no C snippets are used, <code>on_load</code> has no effect.</p>
 </td></tr>
 <tr><td><code id="hitch_:_shlib.args">shlib.args</code></td>
 <td>
@@ -158,6 +165,6 @@ character string with the full contents of the C snippet file.  </p>
 <p><code><a href="../../pomp/help/pomp.html">pomp</a></code>, <code><a href="../../pomp/help/spy.html">spy</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.4.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.5.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

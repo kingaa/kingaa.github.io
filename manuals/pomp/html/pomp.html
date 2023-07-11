@@ -85,6 +85,7 @@ These comprise:
   covarnames,
   PACKAGE,
   globals,
+  on_load,
   cdir = getOption("pomp_cdir", NULL),
   cfile,
   shlib.args,
@@ -261,9 +262,15 @@ it is not used for any component specified using C snippets.
 </td></tr>
 <tr><td><code id="pomp_constructor_:_globals">globals</code></td>
 <td>
-<p>optional character;
+<p>optional character or C snippet;
 arbitrary C code that will be hard-coded into the shared-object library created when C snippets are provided.
 If no C snippets are used, <code>globals</code> has no effect.</p>
+</td></tr>
+<tr><td><code id="pomp_constructor_:_on_load">on_load</code></td>
+<td>
+<p>optional character or C snippet:
+arbitrary C code that will be executed when the C snippet file is loaded.
+If no C snippets are used, <code>on_load</code> has no effect.</p>
 </td></tr>
 <tr><td><code id="pomp_constructor_:_cdir">cdir</code></td>
 <td>
@@ -371,6 +378,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.4.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.5.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>pfilter {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Parallel particle filter computations</h2>
+<h2 id='pfilter'>Parallel particle filter computations</h2>
 
 <h3>Description</h3>
 
@@ -27,13 +27,13 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'ANY,numeric'
-pfilter(data, Nrep, ...)
+pfilter(data, Nrep, ..., .options.future = list(seed = TRUE))
 
 ## S4 method for signature 'ANY,missing'
 pfilter(data, Nrep, ...)
 
 ## S4 method for signature 'pompList,numeric'
-pfilter(data, Nrep, ...)
+pfilter(data, Nrep, ..., .options.future = list(seed = TRUE))
 
 ## S4 method for signature 'pompList,missing'
 pfilter(data, Nrep, ...)
@@ -43,18 +43,23 @@ pfilter(data, Nrep, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>data</code></td>
+<tr><td><code id="pfilter_:_data">data</code></td>
 <td>
 <p>passed to <code><a href="../../pomp/help/pfilter.html">pomp::pfilter</a></code></p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>Nrep</code></td>
+<tr><td><code id="pfilter_:_Nrep">Nrep</code></td>
 <td>
 <p>number of replicate particle filter computations to run.
 By default, <code>Nrep = 1</code>.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="pfilter_:_...">...</code></td>
 <td>
 <p>all additional arguments are passed to <code><a href="../../pomp/help/pfilter.html">pomp::pfilter</a></code></p>
+</td></tr>
+<tr><td><code id="pfilter_:_.options.future">.options.future</code></td>
+<td>
+<p>list of options for the <span class="pkg">doFuture</span> backend.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for details.</p>
 </td></tr>
 </table>
 
@@ -69,9 +74,6 @@ By default, <code>Nrep = 1</code>.</p>
 
 <pre><code class='language-R'>library(circumstance)
 library(doFuture)
-library(doRNG)
-registerDoFuture()
-registerDoRNG()
 
 ou2() -&gt; ou2
 
@@ -82,6 +84,6 @@ plan(multicore)
 system.time(ou2 |&gt; pfilter(Np=10000,Nrep=6) -&gt; pfs)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.8.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.9.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

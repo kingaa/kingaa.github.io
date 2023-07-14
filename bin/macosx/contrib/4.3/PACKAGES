@@ -1,3 +1,12 @@
+Package: circumstance
+Version: 0.0.9.1
+Depends: R(>= 4.1.0), pomp(>= 5.1)
+Imports: methods, foreach, doFuture, future, grid, grDevices, graphics,
+        utils
+Suggests: dplyr, tidyr, ggplot2
+License: GPL-3
+MD5sum: 7e84f729d685a6a2ccd23112ea6ecd88
+
 Package: hte
 Version: 0.0.14.0
 Depends: R(>= 4.2.0)

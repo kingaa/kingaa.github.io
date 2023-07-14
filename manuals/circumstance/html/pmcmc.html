@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>pmcmc {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Particle Markov chain Monte Carlo in parallel</h2>
+<h2 id='pmcmc'>Particle Markov chain Monte Carlo in parallel</h2>
 
 <h3>Description</h3>
 
@@ -27,36 +27,41 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'ANY,data.frame'
-pmcmc(data, starts, ...)
+pmcmc(data, starts, ..., .options.future = list(seed = TRUE))
 
 ## S4 method for signature 'ANY,missing'
 pmcmc(data, starts, ...)
 
 ## S4 method for signature 'pompList,missing'
-pmcmc(data, starts, ...)
+pmcmc(data, ..., .options.future = list(seed = TRUE))
 
 ## S4 method for signature 'pfilterList,missing'
-pmcmc(data, starts, ...)
+pmcmc(data, ..., .options.future = list(seed = TRUE))
 
 ## S4 method for signature 'pmcmcList,missing'
-pmcmc(data, starts, ...)
+pmcmc(data, ..., .options.future = list(seed = TRUE))
 </code></pre>
 
 
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>data</code></td>
+<tr><td><code id="pmcmc_:_data">data</code></td>
 <td>
 <p>passed to <code><a href="../../pomp/help/pmcmc.html">pomp::pmcmc</a></code></p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>starts</code></td>
+<tr><td><code id="pmcmc_:_starts">starts</code></td>
 <td>
 <p>data frame containing parameters at which to begin iterated filtering</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="pmcmc_:_...">...</code></td>
 <td>
 <p>all additional arguments are passed to <code><a href="../../pomp/help/pmcmc.html">pomp::pmcmc</a></code></p>
+</td></tr>
+<tr><td><code id="pmcmc_:_.options.future">.options.future</code></td>
+<td>
+<p>list of options for the <span class="pkg">doFuture</span> backend.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for details.</p>
 </td></tr>
 </table>
 
@@ -66,6 +71,6 @@ pmcmc(data, starts, ...)
 <p><code><a href="../../pomp/help/pmcmc.html">pomp::pmcmc</a></code>.
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.8.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.9.1 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

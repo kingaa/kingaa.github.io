@@ -27,13 +27,13 @@ function processMathHTML() {
 <h3>Usage</h3>
 
 <pre><code class='language-R'>## S4 method for signature 'ANY,numeric'
-pfilter(data, Nrep, ..., .options.future = list(seed = TRUE))
+pfilter(data, Nrep, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 
 ## S4 method for signature 'ANY,missing'
-pfilter(data, Nrep, ...)
+pfilter(data, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 
 ## S4 method for signature 'pompList,numeric'
-pfilter(data, Nrep, ..., .options.future = list(seed = TRUE))
+pfilter(data, Nrep, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 
 ## S4 method for signature 'pompList,missing'
 pfilter(data, Nrep, ...)
@@ -56,10 +56,22 @@ By default, <code>Nrep = 1</code>.</p>
 <td>
 <p>all additional arguments are passed to <code><a href="../../pomp/help/pfilter.html">pomp::pfilter</a></code></p>
 </td></tr>
-<tr><td><code id="pfilter_:_.options.future">.options.future</code></td>
+<tr><td><code id="pfilter_:_seed">seed</code></td>
 <td>
-<p>list of options for the <span class="pkg">doFuture</span> backend.
-See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for details.</p>
+<p>seed for the parallel random-number generator.
+Setting <code>seed=TRUE</code> passes the current seed to the parallel RNG.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
+</td></tr>
+<tr><td><code id="pfilter_:_chunk.size">chunk.size</code></td>
+<td>
+<p>average number of elements processed per chunk.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
+</td></tr>
+<tr><td><code id="pfilter_:_scheduling">scheduling</code></td>
+<td>
+<p>average number of chunks that each worker processes.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.
+This is ignored unless <code>chunk.size=NULL</code>.</p>
 </td></tr>
 </table>
 
@@ -84,6 +96,6 @@ plan(multicore)
 system.time(ou2 |&gt; pfilter(Np=10000,Nrep=6) -&gt; pfs)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.9.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.10.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

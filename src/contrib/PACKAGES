@@ -8,13 +8,13 @@ MD5sum: 6351ba9fdfa095ca76ce6df619974c55
 NeedsCompilation: no
 
 Package: circumstance
-Version: 0.0.9.1
+Version: 0.0.10.0
 Depends: R(>= 4.1.0), pomp(>= 5.1)
 Imports: methods, foreach, doFuture, future, grid, grDevices, graphics,
         utils
 Suggests: dplyr, tidyr, ggplot2
 License: GPL-3
-MD5sum: 13fe7154a04aa0bad1cee7c59044c9a8
+MD5sum: 06a7d80973dbb7f2899f84a94a49d88c
 NeedsCompilation: no
 
 Package: hte

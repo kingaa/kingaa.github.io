@@ -26,13 +26,11 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>continue(object, ...)
-
-## S4 method for signature 'mif2List'
-continue(object, ..., .options.future = list(seed = TRUE))
+<pre><code class='language-R'>## S4 method for signature 'mif2List'
+continue(object, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 
 ## S4 method for signature 'pmcmcList'
-continue(object, ..., .options.future = list(seed = TRUE))
+continue(object, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 </code></pre>
 
 
@@ -48,10 +46,22 @@ continue(object, ..., .options.future = list(seed = TRUE))
 <p>additional arguments will be passed to the underlying method.
 This allows one to modify parameters used in the original computations.</p>
 </td></tr>
-<tr><td><code id="continue_:_.options.future">.options.future</code></td>
+<tr><td><code id="continue_:_seed">seed</code></td>
 <td>
-<p>list of options for the <span class="pkg">doFuture</span> backend.
-See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for details.</p>
+<p>seed for the parallel random-number generator.
+Setting <code>seed=TRUE</code> passes the current seed to the parallel RNG.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
+</td></tr>
+<tr><td><code id="continue_:_chunk.size">chunk.size</code></td>
+<td>
+<p>average number of elements processed per chunk.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
+</td></tr>
+<tr><td><code id="continue_:_scheduling">scheduling</code></td>
+<td>
+<p>average number of chunks that each worker processes.
+See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.
+This is ignored unless <code>chunk.size=NULL</code>.</p>
 </td></tr>
 </table>
 
@@ -61,6 +71,6 @@ See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code
 <p><code><a href="../../circumstance/help/mif2.html">mif2</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.9.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.10.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

@@ -101,14 +101,13 @@ Include dependency graph for pomp_mat.h:</div>
 <area shape="rect" title=" " alt="" coords="5,80,88,107"/>
 <area shape="rect" title=" " alt="" coords="113,80,234,107"/>
 <area shape="rect" href="internal_8h.html" title=" " alt="" coords="258,80,342,107"/>
-<area shape="rect" title=" " alt="" coords="15,304,57,331"/>
-<area shape="rect" title=" " alt="" coords="81,304,159,331"/>
-<area shape="rect" title=" " alt="" coords="333,229,424,256"/>
-<area shape="rect" title=" " alt="" coords="343,304,443,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="173,155,299,181"/>
-<area shape="rect" href="decls_8h.html" title=" " alt="" coords="499,155,567,181"/>
-<area shape="rect" href="pomp_8h.html" title=" " alt="" coords="187,229,258,256"/>
-<area shape="rect" title=" " alt="" coords="183,304,319,331"/>
+<area shape="rect" title=" " alt="" coords="57,304,100,331"/>
+<area shape="rect" title=" " alt="" coords="124,304,201,331"/>
+<area shape="rect" title=" " alt="" coords="248,304,339,331"/>
+<area shape="rect" title=" " alt="" coords="331,229,431,256"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="171,155,298,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="507,155,575,181"/>
+<area shape="rect" href="pomp_8h.html" title=" " alt="" coords="185,229,255,256"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -228,17 +227,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="pomp__mat_8h_source.html#l00011">11</a> of file <a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                              {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">// Level 2 BLAS triangular-matrix solver DTRSV(UPLO,TRANS,DIAG,N,A,LDA,X,INCX)</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">// DTRSV:  x &lt;- A ^{-1} x -or- x &lt;- A ^{-T} x, A triangular</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="comment">// N is the order of A</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">// LDA is A&#39;s leading dimension</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">// INCX is the increment between successive X locations</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// UPLO is &quot;U&quot; or &quot;L&quot; depending on whether A is upper or lower triangular</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// TRANSPOSE is &quot;T&quot; or &quot;N&quot; depending on whether the transpose is desired</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">// DIAG is &quot;U&quot; or &quot;N&quot; depending on whether A is unit triangular or not</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  F77_CALL(dtrsv)(uplo,transpose,unit,&amp;n,a,&amp;lda,x,&amp;incx <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="comment">// Level 2 BLAS triangular-matrix solver DTRSV(UPLO,TRANS,DIAG,N,A,LDA,X,INCX)</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">// DTRSV:  x &lt;- A ^{-1} x -or- x &lt;- A ^{-T} x, A triangular</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// N is the order of A</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="comment">// LDA is A&#39;s leading dimension</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="comment">// INCX is the increment between successive X locations</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// UPLO is &quot;U&quot; or &quot;L&quot; depending on whether A is upper or lower triangular</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">// TRANSPOSE is &quot;T&quot; or &quot;N&quot; depending on whether the transpose is desired</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">// DIAG is &quot;U&quot; or &quot;N&quot; depending on whether A is unit triangular or not</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  F77_CALL(dtrsv)(uplo,transpose,unit,&amp;n,a,&amp;lda,x,&amp;incx <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
 <div class="ttc" id="apomp__mat_8h_html_a24159b4842915664a9cd3d4cce56b529"><div class="ttname"><a href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a></div><div class="ttdeci">#define FCONE</div><div class="ttdef"><b>Definition:</b> <a href="pomp__mat_8h_source.html#l00007">pomp_mat.h:7</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -309,21 +308,22 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pomp__mat_8h_source.html#l00024">24</a> of file <a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                                                                {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> info, j, lwork = -1;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">double</span> work1;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; n; j++) pivot[j] = 0; <span class="comment">// zero out the pivots (assumed by DGEQP3)</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="comment">// LAPACK QR decomposition routine</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="comment">// DGEQP3(M,N,A,LDA,JPVT,TAU,WORK,LWORK,INFO)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  F77_CALL(dgeqp3)(&amp;m,&amp;n,a,&amp;m,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,&amp;work1,&amp;lwork,&amp;info); <span class="comment">// workspace query</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  lwork = (int) ceil(work1);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">double</span> work[lwork];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    F77_CALL(dgeqp3)(&amp;m,&amp;n,a,&amp;m,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,work,&amp;lwork,&amp;info); <span class="comment">// actual call</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; n; j++) pivot[j]--;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="pomp__mat_8h_source.html#l00027">27</a> of file <a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> info, j, lwork = -1;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">double</span> work1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// zero out the pivots (assumed by DGEQP3)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; n; j++) pivot[j] = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="comment">// LAPACK QR decomposition routine</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// DGEQP3(M,N,A,LDA,JPVT,TAU,WORK,LWORK,INFO)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  F77_CALL(dgeqp3)(&amp;m,&amp;n,a,&amp;m,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,&amp;work1,&amp;lwork,&amp;info); <span class="comment">// workspace query</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  lwork = (int) ceil(work1);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">double</span> work[lwork];</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    F77_CALL(dgeqp3)(&amp;m,&amp;n,a,&amp;m,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,work,&amp;lwork,&amp;info); <span class="comment">// actual call</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; n; j++) pivot[j]--;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="agompertz_8c_html_aa7082577997805000f8e8b56846642cd"><div class="ttname"><a href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a></div><div class="ttdeci">#define tau</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00094">gompertz.c:94</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -416,20 +416,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pomp__mat_8h_source.html#l00039">39</a> of file <a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                                                                                              {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">int</span> info, lwork = -1;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">double</span> work1;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// workspace query</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// DORMQR(SIDE,TRANS,M,N,K,A,LDA,TAU,C,LDC,WORK,LWORK,INFO)</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  F77_CALL(dormqr)(side,transpose,&amp;m,&amp;n,&amp;k,a,&amp;lda,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,c,&amp;m,&amp;work1,&amp;lwork,&amp;info <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  lwork = (int) ceil(work1);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {             <span class="comment">// actual call</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">double</span> work[lwork];</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    F77_CALL(dormqr)(side,transpose,&amp;m,&amp;n,&amp;k,a,&amp;lda,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,c,&amp;m,work,&amp;lwork,&amp;info <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="pomp__mat_8h_source.html#l00046">46</a> of file <a class="el" href="pomp__mat_8h_source.html">pomp_mat.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">int</span> info, lwork = -1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">double</span> work1;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// workspace query</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// DORMQR(SIDE,TRANS,M,N,K,A,LDA,TAU,C,LDC,WORK,LWORK,INFO)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  F77_CALL(dormqr)(side,transpose,&amp;m,&amp;n,&amp;k,a,&amp;lda,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,c,&amp;m,&amp;work1,&amp;lwork,&amp;info <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  lwork = (int) ceil(work1);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  {                             <span class="comment">// actual call</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">double</span> work[lwork];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    F77_CALL(dormqr)(side,transpose,&amp;m,&amp;n,&amp;k,a,&amp;lda,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>,c,&amp;m,work,&amp;lwork,&amp;info <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a> <a class="code" href="pomp__mat_8h.html#a24159b4842915664a9cd3d4cce56b529">FCONE</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

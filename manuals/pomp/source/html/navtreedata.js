@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "pomp", "index.html", [
+    [ "C source codes for <strong>pomp</strong>", "index.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -51,8 +52,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"ou2_8c.html#a39104e744ca71e0cd070ff508eb64a9a",
-"trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525"
+"ou2_8c.html#a3128cc29e366777d66d8b049451ca8a0",
+"trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

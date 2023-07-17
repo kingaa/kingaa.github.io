@@ -96,16 +96,16 @@ Include dependency graph for init.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="init_8c__incl.png" border="0" usemap="#asrc_2init_8c" alt=""/></div>
 <map name="asrc_2init_8c" id="asrc_2init_8c">
-<area shape="rect" title=" " alt="" coords="333,5,411,32"/>
-<area shape="rect" href="internal_8h.html" title=" " alt="" coords="243,80,327,107"/>
-<area shape="rect" title=" " alt="" coords="369,304,505,331"/>
-<area shape="rect" title=" " alt="" coords="107,304,149,331"/>
-<area shape="rect" title=" " alt="" coords="5,304,83,331"/>
-<area shape="rect" title=" " alt="" coords="296,229,387,256"/>
-<area shape="rect" title=" " alt="" coords="209,304,309,331"/>
-<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="101,155,227,181"/>
-<area shape="rect" href="decls_8h.html" title=" " alt="" coords="251,155,319,181"/>
-<area shape="rect" href="pomp_8h.html" title=" " alt="" coords="150,229,221,256"/>
+<area shape="rect" title=" " alt="" coords="291,5,368,32"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="221,80,305,107"/>
+<area shape="rect" title=" " alt="" coords="329,80,465,107"/>
+<area shape="rect" title=" " alt="" coords="5,304,48,331"/>
+<area shape="rect" title=" " alt="" coords="72,304,149,331"/>
+<area shape="rect" title=" " alt="" coords="196,304,287,331"/>
+<area shape="rect" title=" " alt="" coords="279,229,379,256"/>
+<area shape="rect" href="pomp__defines_8h.html" title=" " alt="" coords="119,155,246,181"/>
+<area shape="rect" href="decls_8h.html" title=" " alt="" coords="455,155,523,181"/>
+<area shape="rect" href="pomp_8h.html" title=" " alt="" coords="133,229,203,256"/>
 </map>
 </div>
 </div>
@@ -164,7 +164,8 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Register routines</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  R_registerRoutines(info,NULL,<a class="code" href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a>,NULL,NULL);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  R_useDynamicSymbols(info,TRUE);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  R_forceSymbols(info,FALSE);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="ttc" id="abspline_8c_html_a71cbe26144698d7db860dc0f9f0fff0c"><div class="ttname"><a href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a></div><div class="ttdeci">void bspline_eval(double *y, const double *x, int nx, int i, int degree, int deriv, const double *knots)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00009">bspline.c:9</a></div></div>
 <div class="ttc" id="abspline_8c_html_acabb1ca64e069e1b7767c31435e761d8"><div class="ttname"><a href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8">periodic_bspline_basis_eval</a></div><div class="ttdeci">void periodic_bspline_basis_eval(double x, double period, int degree, int nbasis, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00118">bspline.c:118</a></div></div>
 <div class="ttc" id="adecls_8h_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>

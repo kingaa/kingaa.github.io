@@ -26,7 +26,7 @@ function processMathHTML() {
 
 <h3>Details</h3>
 
-<p>It can happen that one desires to pass information to one of the <abbr><span class="acronym">POMP</span></abbr> model <dfn>basic components</dfn> (see <a href="../../pomp/help/pomp.html">here for a definition of this term</a>) outside of the standard routes (i.e., via model parameters or covariates).
+<p>It can happen that one desires to pass information to one of the <abbr><span class="acronym">POMP</span></abbr> model <dfn>basic components</dfn> (see <a href="../../pomp/help/basic_components.html">here for a definition of this term</a>) outside of the standard routes (i.e., via model parameters or covariates).
 <span class="pkg">pomp</span> provides facilities for this purpose.
 We refer to the objects one wishes to pass in this way as <dfn>user data</dfn>.
 </p>
@@ -88,7 +88,7 @@ This warning helps forestall accidental triggering of this facility due to typog
      y1 = rpois(x1+theta); y2 = rpois(x2+theta);
     }")</pre>
 <p>Here, the call to <code>get_userdata_double</code> retrieves a <em>pointer</em> to the stored value of <code>theta</code>.
-Note the need to escape the quotes in the C snippet text.
+Note that, by using <span class="rlang"><b>R</b></span> string literals (<code>r"{}"</code>) we avoid the need to escape the quotes in the C snippet text.
 </p>
 <p>It is possible to store and retrieve integer objects also, using <code>get_userdata_int</code>.
 </p>
@@ -116,7 +116,7 @@ See the <a href="https://cran.r-project.org/doc/manuals/R-exts.html">Writing <sp
 <h3>Setting <code>globals</code></h3>
 
 <p>The use of the userdata facilities incurs a run-time cost.
-It is faster and more elegant, when using C snippets, to put the needed objects directly into the C snippet library.
+It is often more efficient, when using C snippets, to put the needed objects directly into the C snippet library.
 The <code>globals</code> argument does this.
 See the example below.
 </p>
@@ -215,6 +215,6 @@ See the example below.
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.5.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.3.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

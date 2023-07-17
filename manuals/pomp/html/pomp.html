@@ -83,6 +83,7 @@ These comprise:
   statenames,
   paramnames,
   covarnames,
+  nstatevars,
   PACKAGE,
   globals,
   on_load,
@@ -103,7 +104,7 @@ These comprise:
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
-Internally, <code>data</code> will be internally coerced to an array with storage-mode <code>double</code>.</p>
+Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
 <tr><td><code id="pomp_constructor_:_times">times</code></td>
 <td>
@@ -237,7 +238,8 @@ these are read from the names of the data variables.</p>
 <td>
 <p>optional character vector;
 names of the latent state variables.
-It is typically only necessary to supply <code>statenames</code> when C snippets are in use.</p>
+It is typically only necessary to supply <code>statenames</code> when C snippets are in use.
+See also <code>nstatevars</code>.</p>
 </td></tr>
 <tr><td><code id="pomp_constructor_:_paramnames">paramnames</code></td>
 <td>
@@ -251,6 +253,12 @@ It is typically only necessary to supply <code>paramnames</code> when C snippets
 names of the covariates.
 It is not usually necessary to specify <code>covarnames</code> since, by default,
 these are read from the names of the covariates.</p>
+</td></tr>
+<tr><td><code id="pomp_constructor_:_nstatevars">nstatevars</code></td>
+<td>
+<p>optional integer scalar;
+If C snippets or native routines are used, one can specify the number of state variables with this argument.
+By default, <code>nstatevars = length(statenames)</code>.</p>
 </td></tr>
 <tr><td><code id="pomp_constructor_:_PACKAGE">PACKAGE</code></td>
 <td>
@@ -378,6 +386,6 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.2.5.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.3.1.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

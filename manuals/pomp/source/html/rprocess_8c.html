@@ -258,7 +258,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      SEXP <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordtype">double</span> deltat = 1.0;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(rproc,install(<span class="stringliteral">&quot;step.fn&quot;</span>)));</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d">euler_model_simulator</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,xstart,tstart,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,deltat,type,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44">euler_simulator</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,xstart,tstart,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,deltat,type,</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                        accumvars,covar,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      nprotect += 2;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
@@ -269,7 +269,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordtype">double</span> deltat;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(rproc,install(<span class="stringliteral">&quot;step.fn&quot;</span>)));</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      deltat = *(REAL(AS_NUMERIC(GET_SLOT(rproc,install(<span class="stringliteral">&quot;delta.t&quot;</span>)))));</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d">euler_model_simulator</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,xstart,tstart,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,deltat,type,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44">euler_simulator</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,xstart,tstart,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,deltat,type,</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                        accumvars,covar,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      nprotect += 2;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
@@ -296,8 +296,8 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="ttc" id="adecls_8h_html_a83f6b69b51bdf12eb0fe150ccc05f80d"><div class="ttname"><a href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d">euler_model_simulator</a></div><div class="ttdeci">SEXP euler_model_simulator(SEXP func, SEXP xstart, SEXP tstart, SEXP times, SEXP params, double deltat, rprocmode method, SEXP accumvars, SEXP covar, SEXP args, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00107">euler.c:108</a></div></div>
 <div class="ttc" id="adecls_8h_html_a868191e685624fbffd57ee4f32859ac6"><div class="ttname"><a href="decls_8h.html#a868191e685624fbffd57ee4f32859ac6">SSA_simulator</a></div><div class="ttdeci">SEXP SSA_simulator(SEXP func, SEXP xstart, SEXP tstart, SEXP times, SEXP params, SEXP vmatrix, SEXP covar, SEXP accumvars, SEXP hmax, SEXP args, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="ssa_8c_source.html#l00228">ssa.c:228</a></div></div>
+<div class="ttc" id="adecls_8h_html_af1e18bd117c75ccef2b6bd7f45439b44"><div class="ttname"><a href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44">euler_simulator</a></div><div class="ttdeci">SEXP euler_simulator(SEXP func, SEXP xstart, SEXP tstart, SEXP times, SEXP params, double deltat, rprocmode method, SEXP accumvars, SEXP covar, SEXP args, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00107">euler.c:108</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00021">pomp.h:21</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a0aa36f1ae250f8c08c6222d21729af94a0e24e0126aae5a1f0e94feb82e032d23"><div class="ttname"><a href="pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a0e24e0126aae5a1f0e94feb82e032d23">gill</a></div><div class="ttdeci">@ gill</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00017">pomp_defines.h:17</a></div></div>
@@ -321,31 +321,31 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="rprocess_8c_a91f2867fc46d33e1778108853725d74a_cgraph.png" border="0" usemap="#arprocess_8c_a91f2867fc46d33e1778108853725d74a_cgraph" alt=""/></div>
 <map name="arprocess_8c_a91f2867fc46d33e1778108853725d74a_cgraph" id="arprocess_8c_a91f2867fc46d33e1778108853725d74a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,160,105,187"/>
-<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="196,59,283,85"/>
-<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="611,109,722,136"/>
-<area shape="rect" href="decls_8h.html#a83f6b69b51bdf12eb0fe150ccc05f80d" title=" " alt="" coords="153,489,325,516"/>
-<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="613,248,721,275"/>
-<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="621,172,713,199"/>
-<area shape="rect" href="rprocess_8c.html#a37e868d572ef0240fa585840f2aed80f" title=" " alt="" coords="379,109,553,136"/>
-<area shape="rect" href="decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="181,819,298,845"/>
-<area shape="rect" href="euler_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="425,312,507,339"/>
-<area shape="rect" href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08" title=" " alt="" coords="426,464,506,491"/>
-<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="385,667,547,693"/>
-<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="929,489,1047,516"/>
-<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="383,717,549,744"/>
-<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="775,565,881,592"/>
-<area shape="rect" href="euler_8c.html#a3da8d135fe6d232031cf7c314f432265" title=" " alt="" coords="399,515,533,541"/>
-<area shape="rect" href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="401,363,531,389"/>
-<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="395,869,537,896"/>
-<area shape="rect" href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d" title=" " alt="" coords="425,211,507,237"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="613,945,720,972"/>
-<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="607,869,727,896"/>
-<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="615,717,718,744"/>
-<area shape="rect" href="ssa_8c.html#a8c08e69dae809f2cec273c05025824f9" title=" " alt="" coords="373,971,559,997"/>
-<area shape="rect" href="ssa_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="425,920,507,947"/>
-<area shape="rect" href="ssa_8c.html#a08a1d63aa145b71449d68985c31ab32c" title=" " alt="" coords="442,1021,490,1048"/>
-<area shape="rect" href="ssa_8c.html#ababe355bb7829a954134d13bfe49fabd" title=" " alt="" coords="628,1021,705,1048"/>
+<area shape="rect" title=" " alt="" coords="5,128,105,155"/>
+<area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="172,27,259,53"/>
+<area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="563,77,674,104"/>
+<area shape="rect" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44" title=" " alt="" coords="153,457,277,484"/>
+<area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="565,216,673,243"/>
+<area shape="rect" href="pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49" title=" " alt="" coords="573,140,665,167"/>
+<area shape="rect" href="rprocess_8c.html#a37e868d572ef0240fa585840f2aed80f" title=" " alt="" coords="331,77,505,104"/>
+<area shape="rect" href="decls_8h.html#a868191e685624fbffd57ee4f32859ac6" title=" " alt="" coords="157,787,274,813"/>
+<area shape="rect" href="euler_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="377,280,459,307"/>
+<area shape="rect" href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08" title=" " alt="" coords="378,432,458,459"/>
+<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="337,635,499,661"/>
+<area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="881,457,999,484"/>
+<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="335,685,501,712"/>
+<area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="727,533,833,560"/>
+<area shape="rect" href="euler_8c.html#a3da8d135fe6d232031cf7c314f432265" title=" " alt="" coords="351,483,485,509"/>
+<area shape="rect" href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="353,331,483,357"/>
+<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="347,837,489,864"/>
+<area shape="rect" href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d" title=" " alt="" coords="377,179,459,205"/>
+<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="565,913,672,940"/>
+<area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="559,837,679,864"/>
+<area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="567,685,670,712"/>
+<area shape="rect" href="ssa_8c.html#a8c08e69dae809f2cec273c05025824f9" title=" " alt="" coords="325,939,511,965"/>
+<area shape="rect" href="ssa_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="377,888,459,915"/>
+<area shape="rect" href="ssa_8c.html#a08a1d63aa145b71449d68985c31ab32c" title=" " alt="" coords="394,989,442,1016"/>
+<area shape="rect" href="ssa_8c.html#ababe355bb7829a954134d13bfe49fabd" title=" " alt="" coords="580,989,657,1016"/>
 </map>
 </div>
 <div class="dynheader">

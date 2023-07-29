@@ -75,7 +75,7 @@ var decls_8h =
     [ "R_GammaWN", "decls_8h.html#a256259848397b531d0b334182b9c6ca1", null ],
     [ "R_init_pomp", "decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26", null ],
     [ "randwalk_perturbation", "decls_8h.html#add4b451ca3aa78a5e56183372c18bdb7", null ],
-    [ "set_pomp_userdata", "decls_8h.html#aa019045daea9be339fd1e70e3441d252", null ],
+    [ "set_pomp_userdata", "decls_8h.html#ace5dee7cc463ac9356a3f192d5479446", null ],
     [ "sobol_sequence", "decls_8h.html#a670defd3a8b9d05d86bc8da76de23778", null ],
     [ "SSA_simulator", "decls_8h.html#a868191e685624fbffd57ee4f32859ac6", null ],
     [ "synth_loglik", "decls_8h.html#aba3bb9e9bce5419b23032d95b1bba531", null ],

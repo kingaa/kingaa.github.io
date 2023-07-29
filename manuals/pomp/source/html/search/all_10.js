@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sdim_257',['sdim',['../structnlopt__soboldata__s.html#a9d1d043992124f262f8d8a6aeab155f1',1,'nlopt_soboldata_s']]],
-  ['set_5fpomp_5fuserdata_258',['set_pomp_userdata',['../decls_8h.html#aa019045daea9be339fd1e70e3441d252',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c'],['../userdata_8c.html#aa019045daea9be339fd1e70e3441d252',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c']]],
+  ['set_5fpomp_5fuserdata_258',['set_pomp_userdata',['../decls_8h.html#ace5dee7cc463ac9356a3f192d5479446',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c'],['../userdata_8c.html#ace5dee7cc463ac9356a3f192d5479446',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c']]],
   ['set_5fpomp_5fuserdata_5ft_259',['set_pomp_userdata_t',['../pomp__defines_8h.html#a623827898b5e1101b91a6b9c76f11af9',1,'pomp_defines.h']]],
   ['setcolnames_260',['setcolnames',['../pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b',1,'pomp_defines.h']]],
   ['setrownames_261',['setrownames',['../pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4',1,'pomp_defines.h']]],

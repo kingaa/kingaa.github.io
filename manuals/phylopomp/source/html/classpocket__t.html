@@ -249,14 +249,14 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00127">127</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                       {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">if</span> ((*i)-&gt;color == c) <span class="keywordflow">return</span> *i;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;no ball of color %s&quot;</span>,colores[c]); <span class="comment">// # nocov</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  };</div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00011">internal.h:11</a></div></div>
-<div class="ttc" id="apocket_8h_html_a1d489f73333ce98b5df5cd25284e260f"><div class="ttname"><a href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_compare &gt;::const_iterator ball_it</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00025">pocket.h:25</a></div></div>
+<div class="ttc" id="apocket_8h_html_ac6103e4aa84ad86bbfa30c7f21164c31"><div class="ttname"><a href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_iterator ball_it</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00025">pocket.h:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -331,7 +331,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00036">36</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) <span class="keyword">delete</span> *i;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); i != end(); i++) <span class="keyword">delete</span> *i;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    clear();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  };</div>
 </div><!-- fragment --><div class="dynheader">
@@ -375,7 +375,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00143">143</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                  {</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    std::string s = <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    s += (*i)-&gt;describe(); ++i;</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">while</span> (i != end()) {</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      s += <span class="stringliteral">&quot;, &quot;</span> + (*i)-&gt;describe(); ++i;</div>
@@ -414,7 +414,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00110">110</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                               {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = find(b);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">return</span> (i != end());</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  };</div>
 </div><!-- fragment --><div class="dynheader">
@@ -461,7 +461,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00115">115</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                               {</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      result = ((*i)-&gt;color == c);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> result;</div>
@@ -541,7 +541,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00135">135</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                        {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordflow">if</span> (*i != b) <span class="keywordflow">return</span> *i;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;error in &#39;%s&#39;: there is no other.&quot;</span>,__func__); <span class="comment">// # nocov</span></div>
@@ -577,7 +577,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00073">73</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                 {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      (*i)-&gt;holder() = p;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  };</div>
@@ -622,7 +622,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00082">82</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                                                   {</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::unordered_map&lt;name_t,node_t*&gt;::const_iterator n;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <a class="code" href="classball__t.html">ball_t</a> *b = *i;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">if</span> (b-&gt;<a class="code" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        n = node_name.find(b-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
@@ -686,13 +686,13 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    SEXP o;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    PROTECT(o = NEW_LIST(size()));</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">int</span> k = 0;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#acedc4c4e7ef5f0993a6b2054b8fec08b">ball_rev_it</a> i = crbegin(); i != crend(); i++) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a> i = crbegin(); i != crend(); i++) {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      SET_ELEMENT(o,k++,(*i)-&gt;structure());</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    UNPROTECT(1);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> o;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  };</div>
-<div class="ttc" id="apocket_8h_html_acedc4c4e7ef5f0993a6b2054b8fec08b"><div class="ttname"><a href="pocket_8h.html#acedc4c4e7ef5f0993a6b2054b8fec08b">ball_rev_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_compare &gt;::const_reverse_iterator ball_rev_it</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00026">pocket.h:26</a></div></div>
+<div class="ttc" id="apocket_8h_html_a0d112f9f3e6fc7daa1c4f579bcda917a"><div class="ttname"><a href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_reverse_iterator ball_rev_it</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00026">pocket.h:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -726,7 +726,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                            {</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    std::string o = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    std::string t = tab + <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = begin(); i != end(); i++) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      o += tab + <span class="stringliteral">&quot;- &quot;</span> + (*i)-&gt;yaml(t);</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> o;</div>
@@ -775,7 +775,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                         {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">size_t</span> psize = p.size();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    memcpy(o,&amp;psize,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f">ball_it</a> i = p.begin(); i != p.end(); i++)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = p.begin(); i != p.end(); i++)</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      o = (**i &gt;&gt; o);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> o;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  };</div>

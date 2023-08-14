@@ -2,9 +2,9 @@ var searchData=
 [
   ['ball_11',['ball',['../classpocket__t.html#a691c0051eb3d93cb110d0c8dda55db15',1,'pocket_t']]],
   ['ball_2eh_12',['ball.h',['../ball_8h.html',1,'']]],
-  ['ball_5fcompare_13',['ball_compare',['../structball__compare.html',1,'']]],
-  ['ball_5fit_14',['ball_it',['../pocket_8h.html#a1d489f73333ce98b5df5cd25284e260f',1,'pocket.h']]],
-  ['ball_5frev_5fit_15',['ball_rev_it',['../pocket_8h.html#acedc4c4e7ef5f0993a6b2054b8fec08b',1,'pocket.h']]],
+  ['ball_5fit_13',['ball_it',['../pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31',1,'pocket.h']]],
+  ['ball_5forder_14',['ball_order',['../structball__order.html',1,'']]],
+  ['ball_5frev_5fit_15',['ball_rev_it',['../pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a',1,'pocket.h']]],
   ['ball_5ft_16',['ball_t',['../classball__t.html',1,'ball_t'],['../classball__t.html#a138d81675bebd933f65652c6a257752b',1,'ball_t::ball_t(ball_t &amp;&amp;)=delete'],['../classball__t.html#acc57a0661a45a5e75106a404accf5473',1,'ball_t::ball_t(const ball_t &amp;)=delete'],['../classball__t.html#a9103dc83519d8ad323aa8841d9d73623',1,'ball_t::ball_t(node_t *who=0, name_t u=0, color_t col=green, name_t d=undeme)']]],
   ['bare_2ecc_17',['bare.cc',['../bare_8cc.html',1,'']]],
   ['beta_18',['Beta',['../structseir__parameters__t.html#a6b0cc0a3d624267a65233a032b8a1bd0',1,'seir_parameters_t::Beta()'],['../structsi2r__parameters__t.html#a5c768da00ed369fb712c8f6bbf814be4',1,'si2r_parameters_t::Beta()'],['../structsir__parameters__t.html#a7273e292749e1861a646d34ea7fb32f9',1,'sir_parameters_t::Beta()'],['../seirs__pomp_8cc.html#a69481325cd251d42dac1c62fb459cddc',1,'Beta():&#160;seirs_pomp.cc']]],

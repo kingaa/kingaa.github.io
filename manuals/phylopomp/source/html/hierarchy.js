@@ -1,6 +1,6 @@
 var hierarchy =
 [
-    [ "ball_compare", "structball__compare.html", null ],
+    [ "ball_order", "structball__order.html", null ],
     [ "ball_t", "classball__t.html", null ],
     [ "inventory_t< NDEME >", "classinventory__t.html", null ],
     [ "inventory_t< ndeme >", "classinventory__t.html", null ],

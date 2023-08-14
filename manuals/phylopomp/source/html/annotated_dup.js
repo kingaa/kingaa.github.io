@@ -1,6 +1,6 @@
 var annotated_dup =
 [
-    [ "ball_compare", "structball__compare.html", "structball__compare" ],
+    [ "ball_order", "structball__order.html", "structball__order" ],
     [ "ball_t", "classball__t.html", "classball__t" ],
     [ "genealogy_t", "classgenealogy__t.html", "classgenealogy__t" ],
     [ "inventory_t", "classinventory__t.html", "classinventory__t" ],

@@ -10,8 +10,10 @@ var pomp__defines_8h =
     [ "load_stack_incr_t", "pomp__defines_8h.html#a85e0ef6a374d13c50fe4df71bb40e732", null ],
     [ "make_covariate_table_t", "pomp__defines_8h.html#a10b1a245b93c0da80fa2d56beecfc00c", null ],
     [ "pomp_fun_handler_t", "pomp__defines_8h.html#a59d683af3d9ea489d44279ef0bd032ad", null ],
+    [ "set_pomp_userdata_t", "pomp__defines_8h.html#a623827898b5e1101b91a6b9c76f11af9", null ],
     [ "systematic_resampling_t", "pomp__defines_8h.html#a95c92d700dd0f2d195cf475caa794222", null ],
     [ "table_lookup_t", "pomp__defines_8h.html#a7ff013e34421ef0e9973f1d0b051ca64", null ],
+    [ "unset_pomp_userdata_t", "pomp__defines_8h.html#a6c6480891cd0fc25bdeb30fed92a0a13", null ],
     [ "pompfunmode", "pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0", [
       [ "undef", "pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4", null ],
       [ "Rfun", "pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a010cbf4e4887691452cc62528b4485ad", null ],

@@ -10,8 +10,8 @@ var searchData=
   ['apply_5fprobe_5fdata_5ft_32',['apply_probe_data_t',['../pomp__defines_8h.html#a9deb59d193f473e53aa411a54a3c53ea',1,'pomp_defines.h']]],
   ['apply_5fprobe_5fsim_33',['apply_probe_sim',['../decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc',1,'apply_probe_sim(SEXP object, SEXP nsim, SEXP params, SEXP probes, SEXP datval, SEXP gnsi):&#160;probe.c'],['../probe_8c.html#ad2595c6a453ae9fad2f232595ced5ccc',1,'apply_probe_sim(SEXP object, SEXP nsim, SEXP params, SEXP probes, SEXP datval, SEXP gnsi):&#160;probe.c']]],
   ['apply_5fprobe_5fsim_5ft_34',['apply_probe_sim_t',['../pomp__defines_8h.html#a8a276263812477416c7b2019e67798c4',1,'pomp_defines.h']]],
-  ['args_35',['args',['../trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd',1,'trajectory.c']]],
-  ['args_36',['ARGS',['../ssa_8c.html#aff1b09d6630c6c0942f78171e74c1b9d',1,'ssa.c']]],
+  ['args_35',['ARGS',['../ssa_8c.html#aff1b09d6630c6c0942f78171e74c1b9d',1,'ssa.c']]],
+  ['args_36',['args',['../trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd',1,'trajectory.c']]],
   ['as_5fmatrix_37',['as_matrix',['../pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d',1,'pomp_defines.h']]],
   ['as_5fstate_5farray_38',['as_state_array',['../pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1',1,'pomp_defines.h']]]
 ];

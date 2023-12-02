@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('synth__lik_8c_source.html',''); initRe
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  y2 = (<span class="keywordtype">double</span> *) R_alloc(nrow*ncol,<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span> (nrow &lt;= ncol)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;nsim&#39; (=%ld) should be (much) larger than the number of probes (=%ld)&quot;</span>,nrow,ncol); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;nsim&#39; (=%d) should be (much) larger than the number of probes (=%d)&quot;</span>,nrow,ncol); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// compute column means, center each column, precondition</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  memcpy(y1,y,nrow*ncol*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>

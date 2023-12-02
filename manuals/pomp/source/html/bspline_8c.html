@@ -116,8 +116,8 @@ Functions</h2></td></tr>
 <tr class="separator:a91ae33a36d3f40dd64783f1dae67ff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5300e64c53a9cbb6aa52d351bd338883"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883">periodic_bspline_basis</a> (SEXP x, SEXP nbasis, SEXP degree, SEXP period, SEXP deriv)</td></tr>
 <tr class="separator:a5300e64c53a9cbb6aa52d351bd338883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acabb1ca64e069e1b7767c31435e761d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8">periodic_bspline_basis_eval</a> (double x, double period, int degree, int nbasis, double *y)</td></tr>
-<tr class="separator:acabb1ca64e069e1b7767c31435e761d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad552306d18f13eac5425052762f64a0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bspline_8c.html#ad552306d18f13eac5425052762f64a0c">bspline_basis_eval_deriv</a> (double x, double *knots, int degree, int nbasis, int deriv, double *y)</td></tr>
+<tr class="separator:ad552306d18f13eac5425052762f64a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f083190a387483412260be17208ee1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bspline_8c.html#a2f083190a387483412260be17208ee1e">periodic_bspline_basis_eval_deriv</a> (double x, double period, int degree, int nbasis, int deriv, double *y)</td></tr>
 <tr class="separator:a2f083190a387483412260be17208ee1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -209,6 +209,83 @@ Here is the call graph for this function:</div>
 <map name="abspline_8c_a91ae33a36d3f40dd64783f1dae67ff8b_cgraph" id="abspline_8c_a91ae33a36d3f40dd64783f1dae67ff8b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,116,32"/>
 <area shape="rect" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c" title=" " alt="" coords="164,5,268,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad552306d18f13eac5425052762f64a0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad552306d18f13eac5425052762f64a0c">&#9670;&nbsp;</a></span>bspline_basis_eval_deriv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bspline_basis_eval_deriv </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>knots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>degree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbasis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>deriv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bspline_8c_source.html#l00114">114</a> of file <a class="el" href="bspline_8c_source.html">bspline.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nbasis; i++) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a>(&amp;y[i],&amp;x,1,i,degree,deriv,knots);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bspline_8c_ad552306d18f13eac5425052762f64a0c_cgraph.png" border="0" usemap="#abspline_8c_ad552306d18f13eac5425052762f64a0c_cgraph" alt=""/></div>
+<map name="abspline_8c_ad552306d18f13eac5425052762f64a0c_cgraph" id="abspline_8c_ad552306d18f13eac5425052762f64a0c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,151,47"/>
+<area shape="rect" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c" title=" " alt="" coords="199,13,303,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bspline_8c_ad552306d18f13eac5425052762f64a0c_icgraph.png" border="0" usemap="#abspline_8c_ad552306d18f13eac5425052762f64a0c_icgraph" alt=""/></div>
+<map name="abspline_8c_ad552306d18f13eac5425052762f64a0c_icgraph" id="abspline_8c_ad552306d18f13eac5425052762f64a0c_icgraph">
+<area shape="rect" title=" " alt="" coords="156,5,301,47"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,13,108,39"/>
 </map>
 </div>
 
@@ -313,12 +390,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="bspline_8c_a71cbe26144698d7db860dc0f9f0fff0c_icgraph.png" border="0" usemap="#abspline_8c_a71cbe26144698d7db860dc0f9f0fff0c_icgraph" alt=""/></div>
 <map name="abspline_8c_a71cbe26144698d7db860dc0f9f0fff0c_icgraph" id="abspline_8c_a71cbe26144698d7db860dc0f9f0fff0c_icgraph">
-<area shape="rect" title=" " alt="" coords="625,64,729,91"/>
-<area shape="rect" href="bspline_8c.html#a91ae33a36d3f40dd64783f1dae67ff8b" title=" " alt="" coords="437,5,548,32"/>
-<area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="408,57,577,98"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,97,108,124"/>
-<area shape="rect" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883" title=" " alt="" coords="173,21,343,48"/>
-<area shape="rect" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8" title=" " alt="" coords="156,72,360,99"/>
+<area shape="rect" title=" " alt="" coords="440,93,544,120"/>
+<area shape="rect" href="bspline_8c.html#a91ae33a36d3f40dd64783f1dae67ff8b" title=" " alt="" coords="252,5,363,32"/>
+<area shape="rect" href="bspline_8c.html#ad552306d18f13eac5425052762f64a0c" title=" " alt="" coords="235,57,380,98"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="39,123,141,149"/>
+<area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="223,174,392,215"/>
+<area shape="rect" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883" title=" " alt="" coords="5,181,175,208"/>
 </map>
 </div>
 
@@ -391,7 +468,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  UNPROTECT(2);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">return</span> y;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="ttc" id="abspline_8c_html_a2f083190a387483412260be17208ee1e"><div class="ttname"><a href="bspline_8c.html#a2f083190a387483412260be17208ee1e">periodic_bspline_basis_eval_deriv</a></div><div class="ttdeci">void periodic_bspline_basis_eval_deriv(double x, double period, int degree, int nbasis, int deriv, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00123">bspline.c:123</a></div></div>
+<div class="ttc" id="abspline_8c_html_a2f083190a387483412260be17208ee1e"><div class="ttname"><a href="bspline_8c.html#a2f083190a387483412260be17208ee1e">periodic_bspline_basis_eval_deriv</a></div><div class="ttdeci">void periodic_bspline_basis_eval_deriv(double x, double period, int degree, int nbasis, int deriv, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="bspline_8c_source.html#l00121">bspline.c:121</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -400,76 +477,6 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,13,175,39"/>
 <area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="223,5,392,47"/>
 <area shape="rect" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c" title=" " alt="" coords="440,13,544,39"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="acabb1ca64e069e1b7767c31435e761d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acabb1ca64e069e1b7767c31435e761d8">&#9670;&nbsp;</a></span>periodic_bspline_basis_eval()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void periodic_bspline_basis_eval </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>period</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>degree</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>nbasis</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bspline_8c_source.html#l00118">118</a> of file <a class="el" href="bspline_8c_source.html">bspline.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                                         {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="bspline_8c.html#a2f083190a387483412260be17208ee1e">periodic_bspline_basis_eval_deriv</a>(x,period,degree,nbasis,0,y);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bspline_8c_acabb1ca64e069e1b7767c31435e761d8_cgraph.png" border="0" usemap="#abspline_8c_acabb1ca64e069e1b7767c31435e761d8_cgraph" alt=""/></div>
-<map name="abspline_8c_acabb1ca64e069e1b7767c31435e761d8_cgraph" id="abspline_8c_acabb1ca64e069e1b7767c31435e761d8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,13,209,39"/>
-<area shape="rect" href="bspline_8c.html#a2f083190a387483412260be17208ee1e" title=" " alt="" coords="257,5,427,47"/>
-<area shape="rect" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c" title=" " alt="" coords="475,13,579,39"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="bspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph.png" border="0" usemap="#abspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph" alt=""/></div>
-<map name="abspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph" id="abspline_8c_acabb1ca64e069e1b7767c31435e761d8_icgraph">
-<area shape="rect" title=" " alt="" coords="156,5,360,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -525,39 +532,39 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bspline_8c_source.html#l00123">123</a> of file <a class="el" href="bspline_8c_source.html">bspline.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">int</span> nknots = nbasis+2*degree+1;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">int</span> shift = (degree-1)/2;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">double</span> *knots = NULL, *yy = NULL;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">double</span> dx;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (period &lt;= 0.0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have period &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt;= 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; 0&quot;</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (degree &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt; degree) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt;= degree&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">if</span> (deriv &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  knots = (<span class="keywordtype">double</span> *) R_Calloc(nknots+degree+1,<span class="keywordtype">double</span>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  yy = (<span class="keywordtype">double</span> *) R_Calloc(nknots,<span class="keywordtype">double</span>);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  dx = period/((double) nbasis);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">for</span> (k = -degree; k &lt;= nbasis+degree; k++) {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    knots[degree+k] = k*dx;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  x = fmod(x,period);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">if</span> (x &lt; 0.0) x += period;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nknots; k++) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a>(&amp;yy[k],&amp;x,1,k,degree,deriv,knots);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; degree; k++) yy[k] += yy[nbasis+k];</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nbasis; k++) {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    j = (shift+k)%nbasis;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    y[k] = yy[j];</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  R_Free(yy); R_Free(knots);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="bspline_8c_source.html#l00121">121</a> of file <a class="el" href="bspline_8c_source.html">bspline.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">int</span> nknots = nbasis+2*degree+1;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">int</span> shift = (degree-1)/2;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">double</span> *knots = NULL, *yy = NULL;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">double</span> dx;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">if</span> (period &lt;= 0.0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have period &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt;= 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt; 0&quot;</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">if</span> (degree &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have degree &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">if</span> (nbasis &lt; degree) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have nbasis &gt;= degree&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span> (deriv &lt; 0) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have deriv &gt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  knots = (<span class="keywordtype">double</span> *) R_Calloc(nknots+degree+1,<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  yy = (<span class="keywordtype">double</span> *) R_Calloc(nknots,<span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  dx = period/((double) nbasis);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordflow">for</span> (k = -degree; k &lt;= nbasis+degree; k++) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    knots[degree+k] = k*dx;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  x = fmod(x,period);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">if</span> (x &lt; 0.0) x += period;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nknots; k++) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c">bspline_eval</a>(&amp;yy[k],&amp;x,1,k,degree,deriv,knots);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; degree; k++) yy[k] += yy[nbasis+k];</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; nbasis; k++) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    j = (shift+k)%nbasis;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    y[k] = yy[j];</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  R_Free(yy); R_Free(knots);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -572,10 +579,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="bspline_8c_a2f083190a387483412260be17208ee1e_icgraph.png" border="0" usemap="#abspline_8c_a2f083190a387483412260be17208ee1e_icgraph" alt=""/></div>
 <map name="abspline_8c_a2f083190a387483412260be17208ee1e_icgraph" id="abspline_8c_a2f083190a387483412260be17208ee1e_icgraph">
-<area shape="rect" title=" " alt="" coords="408,23,577,65"/>
-<area shape="rect" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883" title=" " alt="" coords="173,5,343,32"/>
-<area shape="rect" href="bspline_8c.html#acabb1ca64e069e1b7767c31435e761d8" title=" " alt="" coords="156,56,360,83"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,56,108,83"/>
+<area shape="rect" title=" " alt="" coords="223,23,392,65"/>
+<area shape="rect" href="bspline_8c.html#a5300e64c53a9cbb6aa52d351bd338883" title=" " alt="" coords="5,5,175,32"/>
+<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="39,56,141,83"/>
 </map>
 </div>
 

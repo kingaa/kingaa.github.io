@@ -2,12 +2,12 @@ var pomp_8h =
 [
     [ "err", "pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024", null ],
     [ "warn", "pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f", null ],
+    [ "bspline_basis_eval_deriv_t", "pomp_8h.html#a99ae492baeffbc3e7d8e05c58334fae5", null ],
     [ "bspline_eval_t", "pomp_8h.html#a85b0cb67e5834d8e61aa4630633c2b82", null ],
     [ "get_userdata_double_t", "pomp_8h.html#a78a7cf897e1bdd58e6834f1cef1e7ffe", null ],
     [ "get_userdata_int_t", "pomp_8h.html#a972196c9ce996d8da810a48a2ac55b9c", null ],
     [ "get_userdata_t", "pomp_8h.html#a4609ede6ba1edfd09a82649f71b1c536", null ],
     [ "periodic_bspline_basis_eval_deriv_t", "pomp_8h.html#ab77fe28863d98e64dec19f9c1b252e66", null ],
-    [ "periodic_bspline_basis_eval_t", "pomp_8h.html#ae6bc5cab41578889f9dd83f37844ad92", null ],
     [ "pomp_dinit", "pomp_8h.html#a1639b4119d90dfdf24b810a759171ff9", null ],
     [ "pomp_dmeasure", "pomp_8h.html#a512b62346ff39e290130b66f0498805a", null ],
     [ "pomp_dprior", "pomp_8h.html#a3faa3c7fe8f69a8f03b0cf34bb6d66b6", null ],

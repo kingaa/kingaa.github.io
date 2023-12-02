@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('probe__acf_8c_source.html',''); initRe
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ct++;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series %ld has no data&quot;</span>,j+1);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (ct &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;series %d has no data&quot;</span>,j+1);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    xx /= ct;                   <span class="comment">// mean of x[j,]</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (k = 0, p0 = p; k &lt; n; p0 += <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>, k++)</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordflow">if</span> (R_FINITE(*p0)) *p0 -= xx;</div>

@@ -20,7 +20,6 @@ var decls_8h =
     [ "apply_probe_sim", "decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc", null ],
     [ "bspline_basis", "decls_8h.html#a91ae33a36d3f40dd64783f1dae67ff8b", null ],
     [ "bspline_basis_eval_deriv", "decls_8h.html#ad552306d18f13eac5425052762f64a0c", null ],
-    [ "bspline_eval", "decls_8h.html#a71cbe26144698d7db860dc0f9f0fff0c", null ],
     [ "D_BetaBinom", "decls_8h.html#a631dafe45b2fd04f5fb99e59c1c4f1cf", null ],
     [ "D_Euler_Multinom", "decls_8h.html#aa055d45aa938bf55afe432967292b892", null ],
     [ "do_dinit", "decls_8h.html#aa791ce91b1a00dfb19ecaf829dfc287a", null ],
@@ -81,6 +80,5 @@ var decls_8h =
     [ "synth_loglik", "decls_8h.html#aba3bb9e9bce5419b23032d95b1bba531", null ],
     [ "systematic_resampling", "decls_8h.html#a982475f3663a786d7883672aa2ed072e", null ],
     [ "table_lookup", "decls_8h.html#a036b9fb7cfc62e3984889f95024971a0", null ],
-    [ "unset_pomp_userdata", "decls_8h.html#a5ddde1fa5bcf8c3949fd4865a7ab474c", null ],
     [ "wpfilter", "decls_8h.html#ac643fb3aad609b1078e9abb994ec6cf2", null ]
 ];

@@ -5,6 +5,5 @@ var searchData=
   ['bspline_5fbasis_41',['bspline_basis',['../bspline_8c.html#a91ae33a36d3f40dd64783f1dae67ff8b',1,'bspline_basis(SEXP range, SEXP x, SEXP nbasis, SEXP degree, SEXP deriv):&#160;bspline.c'],['../decls_8h.html#a91ae33a36d3f40dd64783f1dae67ff8b',1,'bspline_basis(SEXP range, SEXP x, SEXP nbasis, SEXP degree, SEXP deriv):&#160;bspline.c']]],
   ['bspline_5fbasis_5feval_5fderiv_42',['bspline_basis_eval_deriv',['../bspline_8c.html#ad552306d18f13eac5425052762f64a0c',1,'bspline_basis_eval_deriv(double x, double *knots, int degree, int nbasis, int deriv, double *y):&#160;bspline.c'],['../decls_8h.html#ad552306d18f13eac5425052762f64a0c',1,'bspline_basis_eval_deriv(double x, double *knots, int degree, int nbasis, int deriv, double *y):&#160;bspline.c']]],
   ['bspline_5fbasis_5feval_5fderiv_5ft_43',['bspline_basis_eval_deriv_t',['../pomp_8h.html#a99ae492baeffbc3e7d8e05c58334fae5',1,'pomp.h']]],
-  ['bspline_5feval_44',['bspline_eval',['../bspline_8c.html#a71cbe26144698d7db860dc0f9f0fff0c',1,'bspline_eval(double *y, const double *x, int nx, int i, int degree, int deriv, const double *knots):&#160;bspline.c'],['../decls_8h.html#a71cbe26144698d7db860dc0f9f0fff0c',1,'bspline_eval(double *y, const double *x, int nx, int i, int degree, int deriv, const double *knots):&#160;bspline.c']]],
-  ['bspline_5feval_5ft_45',['bspline_eval_t',['../pomp_8h.html#a85b0cb67e5834d8e61aa4630633c2b82',1,'pomp.h']]]
+  ['bspline_5feval_44',['bspline_eval',['../bspline_8c.html#a2237300eb36fec7026017251da56382e',1,'bspline.c']]]
 ];

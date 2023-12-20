@@ -104,6 +104,8 @@ On an isolated patient, this force of infection is reduced by the factor
 </dd>
 <dt>isol_factor</dt><dd><p>multiplicative effect of contact isolation on susceptibility</p>
 </dd>
+<dt>eta</dt><dd><p>additional information on infection status</p>
+</dd>
 </dl>
 
 <p><code>trans_homog_filter</code> runs a fixed-point Bernoulli filter
@@ -149,7 +151,7 @@ fake_data |&gt;
 trans_homog_objfun(
   params=c(
     a=1,b=0.1,gamma=0.01,p0=0.1,lambda.out=0.01,
-    iota=0,isol_factor=0.2,alpha=0.02,beta=0.1
+    iota=0,isol_factor=0.2,alpha=0.02,beta=0.1,eta=0.5
   ),
   est=c("a","b"),
   data=dat
@@ -176,7 +178,8 @@ trans_unit_spec_objfun(
     lambda.out=0.1,
     iota=0,
     isol_factor=0.2,
-    alpha=0.02,beta=0.1
+    alpha=0.02,beta=0.1,
+    eta=0.5
   ),
   data=dat
 ) -&gt; f
@@ -184,6 +187,6 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.14.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.15.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

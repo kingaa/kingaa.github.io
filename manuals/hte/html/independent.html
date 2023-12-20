@@ -73,6 +73,8 @@ indep_unit_spec_objfun(params, data, est = character(0))
 </dd>
 <dt>isol_factor</dt><dd><p>multiplicative effect of contact isolation on susceptibility</p>
 </dd>
+<dt>eta</dt><dd><p>additional information on infection status</p>
+</dd>
 </dl>
 
 <p><code>indep_homog_filter</code> runs a Bernoulli filter for the
@@ -121,7 +123,7 @@ fake_data |&gt;
 indep_homog_objfun(
   params=c(
     lambda.out=0.05,lambda=0.1,gamma=0.01,p0=0.1,
-    isol_factor=0.2,alpha=0.02,beta=0.1
+    isol_factor=0.2,alpha=0.02,beta=0.1,eta = 0.5
   ),
   est=c("lambda","gamma"),
   data=dat
@@ -155,7 +157,7 @@ theta &lt;- coef(f)
 indep_unit_spec_objfun(
   params=c(
     lambda=setNames(rep.int(theta["lambda"],6),unique(dat$unit)),
-    theta[c("p0","gamma","alpha","beta","isol_factor")]
+    theta[c("p0","gamma","alpha","beta","isol_factor","eta")]
   ),
   est=c(
     "lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out","gamma"
@@ -175,6 +177,6 @@ h(out$par)
 coef(h)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.14.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.15.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

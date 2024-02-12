@@ -1,7 +1,6 @@
 var seirs__pomp_8cc =
 [
     [ "Beta", "seirs__pomp_8cc.html#a69481325cd251d42dac1c62fb459cddc", null ],
-    [ "Delta", "seirs__pomp_8cc.html#a35b7eb5ca51863be70bf9a60d5c6ca51", null ],
     [ "E", "seirs__pomp_8cc.html#a07484107e6d9fdf38b53edf631d6511d", null ],
     [ "E0", "seirs__pomp_8cc.html#a73f0647950b85591fbe61fff44d45c2e", null ],
     [ "gamma", "seirs__pomp_8cc.html#a42e729077189bab1dae844253dd2ad1d", null ],
@@ -14,6 +13,7 @@ var seirs__pomp_8cc =
     [ "ll", "seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba", null ],
     [ "N", "seirs__pomp_8cc.html#a0240ac851181b84ac374872dc5434ee4", null ],
     [ "node", "seirs__pomp_8cc.html#af4f12397387d83cd9c47b663c74f1f29", null ],
+    [ "omega", "seirs__pomp_8cc.html#ae605ef61cefdc8af0983d954ac7d1ec8", null ],
     [ "psi", "seirs__pomp_8cc.html#aebfab0be95178c0a2497fca46e5eb377", null ],
     [ "R", "seirs__pomp_8cc.html#a5c71a5e59a53413cd6c270266d63b031", null ],
     [ "R0", "seirs__pomp_8cc.html#a30ab9da60435727bc80839d416461b8f", null ],

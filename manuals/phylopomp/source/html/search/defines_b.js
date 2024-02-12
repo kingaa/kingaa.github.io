@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['warn_523',['warn',['../internal_8h.html#a8224a361dddd2ad59b411982e5ea746f',1,'internal.h']]]
+  ['s_518',['S',['../seirs__pomp_8cc.html#af933676109efed7ab34cea71d748a517',1,'seirs_pomp.cc']]],
+  ['s0_519',['S0',['../seirs__pomp_8cc.html#a5cfab9793f7fd3ac4ab45eff41df9f37',1,'seirs_pomp.cc']]],
+  ['sigma_520',['sigma',['../seirs__pomp_8cc.html#a678ef311e74501d7b800f0b47500374a',1,'seirs_pomp.cc']]]
 ];

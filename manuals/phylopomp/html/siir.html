@@ -36,7 +36,7 @@ function processMathHTML() {
   psi2 = 0,
   sigma12 = 0,
   sigma21 = 0,
-  delta = 0,
+  omega = 0,
   S0 = 500,
   I1_0 = 10,
   I2_0 = 10,
@@ -53,7 +53,7 @@ continueSIIR(
   psi2 = NA,
   sigma12 = NA,
   sigma21 = NA,
-  delta = NA
+  omega = NA
 )
 </code></pre>
 
@@ -85,7 +85,7 @@ continueSIIR(
 <td>
 <p>movement rates from deme 1 to 2 and 2 to 1, respectively</p>
 </td></tr>
-<tr><td><code id="siir_:_delta">delta</code></td>
+<tr><td><code id="siir_:_omega">omega</code></td>
 <td>
 <p>rate of loss of immunity</p>
 </td></tr>
@@ -148,6 +148,6 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.1.4 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

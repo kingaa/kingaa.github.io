@@ -102,9 +102,9 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ordering for balls in pockets. </p>
-<p>Without this, order depends on machine state, defeating reproducibility. </p>
+<p>Without this, order depends on machine state, defeating reproducibility. The correctness of the algorithms depends on this order. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00018">18</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00019">19</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3667f4d183a8e0a0faf57bd51973941d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3667f4d183a8e0a0faf57bd51973941d">&#9670;&nbsp;</a></span>operator()()</h2>
@@ -140,13 +140,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00019">19</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                                           {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> (a-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> &lt; b-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) ||</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      ((a-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == b-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) &amp;&amp; (a-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a> &lt; b-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>));</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  };</div>
-<div class="ttc" id="aclassball__t_html_a2c9aacc8dae1325e7ff3b8e22dd88675"><div class="ttname"><a href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">ball_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00036">ball.h:36</a></div></div>
-<div class="ttc" id="aclassball__t_html_ada6b9e789dc34806789eb6f41892dd46"><div class="ttname"><a href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">ball_t::color</a></div><div class="ttdeci">color_t color</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00037">ball.h:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00020">20</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                                           {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> (a-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> &lt; b-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) ||</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      ((a-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == b-&gt;<a class="code" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) &amp;&amp; (a-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a> &lt; b-&gt;<a class="code" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  };</div>
+<div class="ttc" id="aclassball__t_html_a2c9aacc8dae1325e7ff3b8e22dd88675"><div class="ttname"><a href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">ball_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00037">ball.h:37</a></div></div>
+<div class="ttc" id="aclassball__t_html_ada6b9e789dc34806789eb6f41892dd46"><div class="ttname"><a href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">ball_t::color</a></div><div class="ttdeci">color_t color</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00038">ball.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

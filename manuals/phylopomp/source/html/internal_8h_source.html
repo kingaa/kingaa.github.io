@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('internal_8h_source.html',''); initResi
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> e = 0;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; nrate) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (rate[e] &lt; 0)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate rate[%ld]=%lg&quot;</span>,__func__,e,rate[e]); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate rate[%d]=%lg&quot;</span>,__func__,e,rate[e]); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    u -= rate[e++];</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span> (e == nrate)</div>

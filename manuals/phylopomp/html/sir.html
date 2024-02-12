@@ -32,7 +32,7 @@ function processMathHTML() {
   Beta = 2,
   gamma = 1,
   psi = 1,
-  delta = 0,
+  omega = 0,
   S0 = 100,
   I0 = 2,
   R0 = 0
@@ -44,15 +44,15 @@ runSIRS(
   Beta = 2,
   gamma = 1,
   psi = 1,
-  delta = 0,
+  omega = 0,
   S0 = 100,
   I0 = 2,
   R0 = 0
 )
 
-continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, delta = NA)
+continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
 
-sir_pomp(x, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
+sir_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 
 runSIRS(
   time,
@@ -60,15 +60,15 @@ runSIRS(
   Beta = 2,
   gamma = 1,
   psi = 1,
-  delta = 0,
+  omega = 0,
   S0 = 100,
   I0 = 2,
   R0 = 0
 )
 
-continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, delta = NA)
+continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
 
-sirs_pomp(x, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
+sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 </code></pre>
 
 
@@ -95,7 +95,7 @@ sirs_pomp(x, Beta, gamma, psi, delta = 0, S0, I0, R0, t0 = 0)
 <td>
 <p>sampling rate.</p>
 </td></tr>
-<tr><td><code id="sir_:_delta">delta</code></td>
+<tr><td><code id="sir_:_omega">omega</code></td>
 <td>
 <p>immunity waning rate</p>
 </td></tr>
@@ -160,10 +160,10 @@ runSIR(Beta=3,gamma=0.1,psi=0.2,S0=100,I0=5,R0=0,time=2,t0=0) -&gt; x
 plot_grid(plotlist=list(plot(x,points=TRUE),diagram(x)),
   ncol=1,rel_heights=c(4,1))
 
-simulate("SIRS",delta=1,time=20,I0=4) |&gt; plot()
-simulate("SIRS",delta=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
+simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
+simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.1.4 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

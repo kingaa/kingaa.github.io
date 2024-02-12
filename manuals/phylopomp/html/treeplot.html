@@ -109,7 +109,7 @@ If it is a vector, it should have at least as many elements as there are demes i
   )
 
   pb &lt;- utils::txtProgressBar(0,length(times),0,style=3)
-  x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,delta=0.5,
+  x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,omega=0.5,
     psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,S0=200,I1_0=3,I2_0=2)
   for (k in seq_len(length(times))) {
     x &lt;- simulate(x,time=times[k])
@@ -140,6 +140,6 @@ If it is a vector, it should have at least as many elements as there are demes i
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.1.4 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.2.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

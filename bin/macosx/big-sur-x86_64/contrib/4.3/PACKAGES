@@ -6,6 +6,16 @@ Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
 License: GPL-3
 MD5sum: a0fe5d812f711c36ad6b8a60bddf0539
 
+Package: phylopomp
+Version: 0.10.2.0
+Depends: R(>= 4.2)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp(>= 5.2.4.3), cowplot
+LinkingTo: pomp
+Suggests: tidyverse, doFuture, doRNG, broom
+License: GPL-3
+MD5sum: 305d4a5aa5aa5e7c088456731dda9d12
+
 Package: pomp
 Version: 5.5.2.0
 Depends: R(>= 4.1.0)

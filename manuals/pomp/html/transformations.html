@@ -68,14 +68,15 @@ It maps the unit interval <code class="reqn">[0,1]</code> into the extended real
 </p>
 <p>The inverse of the logit transformation is the expit transformation.
 </p>
-<p>The log-barycentric transformation takes a vector <code class="reqn">X_i</code>, <code class="reqn">i=1,\dots,n</code>, to a vector <code class="reqn">Y_i</code>, where </p>
+<p>The log-barycentric transformation takes a vector <code class="reqn">X\in{R^{n}_+}</code>, to a vector <code class="reqn">Y\in{R^n}</code>, where </p>
 <p style="text-align: center;"><code class="reqn">Y_i = \log\frac{X_i}{\sum_j X_j}.</code>
 </p>
 
-<p>If <code class="reqn">X</code> is an <code class="reqn">n</code>-vector, it takes every simplex defined by <code class="reqn">\sum_i X_i = c</code>, <code class="reqn">c</code> constant, to n-dimensional Euclidean space <code class="reqn">R^n</code>.
+<p>The transformation is not one-to-one.
+However, for each <code class="reqn">c&gt;0</code>, it maps the simplex <code class="reqn">\{X\in{R^n_+}:\sum_i X_i = c\}</code> bijectively onto <code class="reqn">n</code>-dimensional Euclidean space <code class="reqn">R^n</code>.
 </p>
 <p>The inverse of the log-barycentric transformation is implemented as <code>inv_log_barycentric</code>.
-Note that it is not a true inverse, in the sense that it takes <code class="reqn">R^n</code> to the <em>unit</em> simplex, <code class="reqn">\sum_i X_i = 1</code>.
+Note that it is not a true inverse, in the sense that it takes <code class="reqn">R^n</code> to the <em>unit</em> simplex, <code class="reqn">\{X\in{R^n_+}:\sum_i X_i = 1\}</code>.
 Thus, </p>
 <pre>
     log_barycentric(inv_log_barycentric(Y)) == Y,
@@ -111,6 +112,6 @@ Thus, </p>
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.5.2.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.6.0.0 <a href="00Index.html">Index</a>]</div>
 </div>
 </body></html>

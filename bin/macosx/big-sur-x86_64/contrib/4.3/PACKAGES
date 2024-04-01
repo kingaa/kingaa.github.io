@@ -6,6 +6,14 @@ Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
 License: GPL-3
 MD5sum: ce1a0cc62cf51decd3029e565a15b45e
 
+Package: ouch
+Version: 2.19-2
+Depends: R(>= 3.6)
+Imports: methods, stats, graphics, grDevices, utils, subplex
+Suggests: ape
+License: GPL-3
+MD5sum: 19484dfb71335523d7cde7e1b04ccc89
+
 Package: phylopomp
 Version: 0.10.3.1
 Depends: R(>= 4.2)

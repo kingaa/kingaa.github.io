@@ -278,8 +278,8 @@ Functions</h2></td></tr>
 <tr class="separator:a650670c909a5329eb24d77c821cd5e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a388d1f049a9d7284d0e7ba26591e6099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099">pomp_vf_eval</a> (int *neq, double *t, double *y, double *ydot, double *yout, int *ip)</td></tr>
 <tr class="separator:a388d1f049a9d7284d0e7ba26591e6099"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a37b08d4f29e8bdd81eb910cf4bff6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decls_8h.html#a7a37b08d4f29e8bdd81eb910cf4bff6d">pomp_desolve_takedown</a> (void)</td></tr>
-<tr class="separator:a7a37b08d4f29e8bdd81eb910cf4bff6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1f879a376bbbef32d6d8fde12078ed"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decls_8h.html#abc1f879a376bbbef32d6d8fde12078ed">pomp_desolve_takedown</a> (void)</td></tr>
+<tr class="separator:abc1f879a376bbbef32d6d8fde12078ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d549367377037bf0c52dbf9ebfa0ccc"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decls_8h.html#a5d549367377037bf0c52dbf9ebfa0ccc">LogitTransform</a> (SEXP P)</td></tr>
 <tr class="separator:a5d549367377037bf0c52dbf9ebfa0ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68db7c3a0f761d40b1d94b8e71a633dc"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decls_8h.html#a68db7c3a0f761d40b1d94b8e71a633dc">ExpitTransform</a> (SEXP <a class="el" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>)</td></tr>
@@ -2177,22 +2177,22 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dinit_8c_source.html#l00216">216</a> of file <a class="el" href="dinit_8c_source.html">dinit.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;   {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  SEXP F, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>, <a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>, covar;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  PROTECT(t0=AS_NUMERIC(t0));</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(x));</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="comment">// extract the process function</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dinit&quot;</span>)));</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="comment">// extract other arguments</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  PROTECT(covar = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)));</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="comment">// evaluate the density</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  PROTECT(F = <a class="code" href="dinit_8c.html#aaf4b691dc5d079394332aedad44ea9c9">init_density</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,x,t0,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,covar,log,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  UNPROTECT(7);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordflow">return</span> F;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="dinit_8c_source.html#l00220">220</a> of file <a class="el" href="dinit_8c_source.html">dinit.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;   {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  SEXP F, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>, <a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>, covar;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  PROTECT(t0=AS_NUMERIC(t0));</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(x));</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="comment">// extract the process function</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dinit&quot;</span>)));</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="comment">// extract other arguments</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  PROTECT(covar = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="comment">// evaluate the density</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  PROTECT(F = <a class="code" href="dinit_8c.html#aaf4b691dc5d079394332aedad44ea9c9">init_density</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,x,t0,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,covar,log,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  UNPROTECT(7);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">return</span> F;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
 <div class="ttc" id="adinit_8c_html_aaf4b691dc5d079394332aedad44ea9c9"><div class="ttname"><a href="dinit_8c.html#aaf4b691dc5d079394332aedad44ea9c9">init_density</a></div><div class="ttdeci">static SEXP init_density(SEXP func, SEXP X, SEXP t0, SEXP params, SEXP covar, SEXP log, SEXP args, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="dinit_8c_source.html#l00097">dinit.c:98</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_ad396407a99088c710b270a9c1dc3aa9d"><div class="ttname"><a href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a></div><div class="ttdeci">static R_INLINE SEXP as_matrix(SEXP x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00145">pomp_defines.h:145</a></div></div>
 <div class="ttc" id="atrajectory_8c_html_ae1150d665d648766c28508b57a8cb644"><div class="ttname"><a href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a></div><div class="ttdeci">SEXP fn</div><div class="ttdef"><b>Definition:</b> <a href="trajectory_8c_source.html#l00138">trajectory.c:138</a></div></div>
@@ -2690,22 +2690,22 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="dprocess_8c_source.html#l00271">271</a> of file <a class="el" href="dprocess_8c_source.html">dprocess.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>, <a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>, covar;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  PROTECT(times=AS_NUMERIC(times));</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1">as_state_array</a>(x));</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="comment">// extract the process function</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dprocess&quot;</span>)));</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">// extract other arguments</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  PROTECT(covar = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)));</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="comment">// evaluate the density</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611">onestep_density</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,x,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,covar,log,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  UNPROTECT(7);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="dprocess_8c_source.html#l00273">273</a> of file <a class="el" href="dprocess_8c_source.html">dprocess.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>, <a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>, covar;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  PROTECT(times=AS_NUMERIC(times));</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  PROTECT(x = <a class="code" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1">as_state_array</a>(x));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">// extract the process function</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dprocess&quot;</span>)));</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">// extract other arguments</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  PROTECT(covar = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)));</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="comment">// evaluate the density</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611">onestep_density</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,x,times,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,covar,log,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,gnsi));</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  UNPROTECT(7);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
 <div class="ttc" id="adprocess_8c_html_af743054a6e56b1e76d6ee59866b22611"><div class="ttname"><a href="dprocess_8c.html#af743054a6e56b1e76d6ee59866b22611">onestep_density</a></div><div class="ttdeci">static SEXP onestep_density(SEXP func, SEXP x, SEXP times, SEXP params, SEXP covar, SEXP log, SEXP args, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="dprocess_8c_source.html#l00127">dprocess.c:128</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -3282,120 +3282,121 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">int</span> j;</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = <a class="code" href="rinit_8c.html#afdfe8d3f0939427e72c44c0e4f3bb102">add_args</a>(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,Pnames,Cnames));</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    PROTECT(ans = AS_NUMERIC(<a class="code" href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,time,ps,npar,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>,<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>)));</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    PROTECT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a> = GET_NAMES(ans));</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>))</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;user &#39;rinit&#39; must return a named numeric vector.&quot;</span>);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    nvar = LENGTH(ans);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    xs = REAL(ans);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    midx = INTEGER(PROTECT(match(Pnames,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,0)));</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; nvar; j++) {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keywordflow">if</span> (midx[j] != 0)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;a state variable and a parameter share the name: &#39;%s&#39;.&quot;</span>,CHAR(STRING_ELT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,j)));</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    PROTECT(x = <a class="code" href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123">ret_array</a>(nvar,ns,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>));</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    xt = REAL(x);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    memcpy(xt,xs,nvar*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    nprotect += 5;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">for</span> (j = 1, xt += nvar; j &lt; ns; j++, xt += nvar) {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      PROTECT(ans = <a class="code" href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,time,ps+npar*(j%nrep),npar,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>,<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>));</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      xs = REAL(ans);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keywordflow">if</span> (LENGTH(ans) != nvar)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;user &#39;rinit&#39; returns vectors of variable length.&quot;</span>);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      memcpy(xt,xs,nvar*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      UNPROTECT(1);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a>: <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a>: {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">int</span> *sidx, *pidx, *cidx;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">double</span> *xt, *ps, time;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <a class="code" href="pomp_8h.html#a849cb5008ab19114475e2730a51ff9d7">pomp_rinit</a> *ff = NULL;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">int</span> j;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    nvar = *INTEGER(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;nstatevars&quot;</span>)));</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    PROTECT(x = <a class="code" href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123">ret_array</a>(nvar,ns,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>)); nprotect++;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    sidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;stateindex&quot;</span>)));</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    pidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;paramindex&quot;</span>)));</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    cidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;covarindex&quot;</span>)));</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">// address of native routine</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    *((<span class="keywordtype">void</span> **) (&amp;ff)) = R_ExternalPtrAddr(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    GetRNGstate();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    time = *(REAL(t0));</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// loop over replicates</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">for</span> (j = 0, xt = REAL(x), ps = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>); j &lt; ns; j++, xt += nvar)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      (*ff)(xt,ps+npar*(j%nrep),time,sidx,pidx,cidx,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    PutRNGstate();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordflow">default</span>: {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    PROTECT(x = <a class="code" href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede">pomp_default_rinit</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,Pnames,npar,nrep,ns)); nprotect++;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="comment">// now add column names</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordflow">if</span> (nrep &gt; 1) {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    SEXP dn, xn;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">int</span> k, *p;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">if</span> (isNull(pcnames)) {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      PROTECT(pcnames = NEW_INTEGER(nrep)); nprotect++;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordflow">for</span> (k = 0, p = INTEGER(pcnames); k &lt; nrep; k++, p++) *p = k+1;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">if</span> (nsims &gt; 1) {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordtype">int</span> k, *sp;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      SEXP us;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      PROTECT(us = mkString(<span class="stringliteral">&quot;_&quot;</span>));</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      PROTECT(xn = NEW_INTEGER(ns));</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">for</span> (k = 0, sp = INTEGER(xn); k &lt; ns; k++, sp++) *sp = (k/nrep)+1;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      PROTECT(xn = <a class="code" href="rinit_8c.html#a4d765252bd25e8eb50da6837a15b5416">paste0</a>(pcnames,us,xn));</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      PROTECT(dn = GET_DIMNAMES(x));</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      nprotect += 4;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      SET_ELEMENT(dn,1,xn);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      SET_DIMNAMES(x,dn);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      PROTECT(dn = GET_DIMNAMES(x)); nprotect++;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      SET_ELEMENT(dn,1,pcnames);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      SET_DIMNAMES(x,dn);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  UNPROTECT(nprotect);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordflow">return</span> x;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;}</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    PROTECT(ans = <a class="code" href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,time,ps,npar,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>,<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>));</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    PROTECT(ans = AS_NUMERIC(ans));</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    PROTECT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a> = GET_NAMES(ans));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>))</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;user &#39;rinit&#39; must return a named numeric vector.&quot;</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    nvar = LENGTH(ans);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    xs = REAL(ans);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    midx = INTEGER(PROTECT(match(Pnames,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,0)));</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; nvar; j++) {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keywordflow">if</span> (midx[j] != 0)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;a state variable and a parameter share the name: &#39;%s&#39;.&quot;</span>,CHAR(STRING_ELT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,j)));</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    PROTECT(x = <a class="code" href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123">ret_array</a>(nvar,ns,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    xt = REAL(x);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    memcpy(xt,xs,nvar*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    nprotect += 6;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">for</span> (j = 1, xt += nvar; j &lt; ns; j++, xt += nvar) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      PROTECT(ans = <a class="code" href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,time,ps+npar*(j%nrep),npar,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>,<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>));</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      xs = REAL(ans);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordflow">if</span> (LENGTH(ans) != nvar)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;user &#39;rinit&#39; returns vectors of variable length.&quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      memcpy(xt,xs,nvar*<span class="keyword">sizeof</span>(<span class="keywordtype">double</span>));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      UNPROTECT(1);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a>: <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a>: {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">int</span> *sidx, *pidx, *cidx;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">double</span> *xt, *ps, time;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="pomp_8h.html#a849cb5008ab19114475e2730a51ff9d7">pomp_rinit</a> *ff = NULL;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    nvar = *INTEGER(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;nstatevars&quot;</span>)));</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    PROTECT(x = <a class="code" href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123">ret_array</a>(nvar,ns,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>)); nprotect++;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    sidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;stateindex&quot;</span>)));</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    pidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;paramindex&quot;</span>)));</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    cidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;covarindex&quot;</span>)));</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">// address of native routine</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    *((<span class="keywordtype">void</span> **) (&amp;ff)) = R_ExternalPtrAddr(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    GetRNGstate();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    time = *(REAL(t0));</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// loop over replicates</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">for</span> (j = 0, xt = REAL(x), ps = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>); j &lt; ns; j++, xt += nvar)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      (*ff)(xt,ps+npar*(j%nrep),time,sidx,pidx,cidx,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    PutRNGstate();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keywordflow">default</span>: {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    PROTECT(x = <a class="code" href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede">pomp_default_rinit</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,Pnames,npar,nrep,ns)); nprotect++;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">// now add column names</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">if</span> (nrep &gt; 1) {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    SEXP dn, xn;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">int</span> k, *p;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">if</span> (isNull(pcnames)) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      PROTECT(pcnames = NEW_INTEGER(nrep)); nprotect++;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordflow">for</span> (k = 0, p = INTEGER(pcnames); k &lt; nrep; k++, p++) *p = k+1;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (nsims &gt; 1) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordtype">int</span> k, *sp;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      SEXP us;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      PROTECT(us = mkString(<span class="stringliteral">&quot;_&quot;</span>));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      PROTECT(xn = NEW_INTEGER(ns));</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">for</span> (k = 0, sp = INTEGER(xn); k &lt; ns; k++, sp++) *sp = (k/nrep)+1;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      PROTECT(xn = <a class="code" href="rinit_8c.html#a4d765252bd25e8eb50da6837a15b5416">paste0</a>(pcnames,us,xn));</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      PROTECT(dn = GET_DIMNAMES(x));</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      nprotect += 4;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      SET_ELEMENT(dn,1,xn);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      SET_DIMNAMES(x,dn);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      PROTECT(dn = GET_DIMNAMES(x)); nprotect++;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      SET_ELEMENT(dn,1,pcnames);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      SET_DIMNAMES(x,dn);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  UNPROTECT(nprotect);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
 <div class="ttc" id="apomp_8h_html_a849cb5008ab19114475e2730a51ff9d7"><div class="ttname"><a href="pomp_8h.html#a849cb5008ab19114475e2730a51ff9d7">pomp_rinit</a></div><div class="ttdeci">void pomp_rinit(double *x, const double *p, double t0, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00039">pomp.h:40</a></div></div>
 <div class="ttc" id="arinit_8c_html_a1d34a269c2da0e05ebce19a2d07bf123"><div class="ttname"><a href="rinit_8c.html#a1d34a269c2da0e05ebce19a2d07bf123">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int m, int n, SEXP names)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00079">rinit.c:79</a></div></div>
 <div class="ttc" id="arinit_8c_html_a4d765252bd25e8eb50da6837a15b5416"><div class="ttname"><a href="rinit_8c.html#a4d765252bd25e8eb50da6837a15b5416">paste0</a></div><div class="ttdeci">static R_INLINE SEXP paste0(SEXP a, SEXP b, SEXP c)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00010">rinit.c:10</a></div></div>
-<div class="ttc" id="arinit_8c_html_a966f509fab1f9d9e38fc64d7e5773ede"><div class="ttname"><a href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede">pomp_default_rinit</a></div><div class="ttdeci">static SEXP pomp_default_rinit(SEXP params, SEXP Pnames, int npar, int nrep, int nsim)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00253">rinit.c:253</a></div></div>
+<div class="ttc" id="arinit_8c_html_a966f509fab1f9d9e38fc64d7e5773ede"><div class="ttname"><a href="rinit_8c.html#a966f509fab1f9d9e38fc64d7e5773ede">pomp_default_rinit</a></div><div class="ttdeci">static SEXP pomp_default_rinit(SEXP params, SEXP Pnames, int npar, int nrep, int nsim)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00254">rinit.c:254</a></div></div>
 <div class="ttc" id="arinit_8c_html_ac243dd8b5b0b777968905b257e24dc9c"><div class="ttname"><a href="rinit_8c.html#ac243dd8b5b0b777968905b257e24dc9c">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t0, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00058">rinit.c:59</a></div></div>
 <div class="ttc" id="arinit_8c_html_afdfe8d3f0939427e72c44c0e4f3bb102"><div class="ttname"><a href="rinit_8c.html#afdfe8d3f0939427e72c44c0e4f3bb102">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Pnames, SEXP Cnames)</div><div class="ttdef"><b>Definition:</b> <a href="rinit_8c_source.html#l00021">rinit.c:21</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -3798,71 +3799,73 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordflow">if</span> (first) {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        PROTECT(ans = AS_NUMERIC(<a class="code" href="rprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,p,<a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>)));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        PROTECT(nm = GET_NAMES(ans));</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a>(nm))</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;          <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;rprior&#39; must return a named numeric vector.&quot;</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        posn = INTEGER(PROTECT(<a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(Pnames,nm,<span class="stringliteral">&quot;parameters&quot;</span>)));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        nprotect += 3;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        pa = REAL(ans);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; LENGTH(ans); i++) p[posn[i]] = pa[i];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        first = 0;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        PROTECT(ans = AS_NUMERIC(<a class="code" href="rprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,p,<a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>)));</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        pa = REAL(ans);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; LENGTH(ans); i++) p[posn[i]] = pa[i];</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        UNPROTECT(1);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        PROTECT(ans = <a class="code" href="rprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,p,<a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        PROTECT(ans = AS_NUMERIC(ans));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        PROTECT(nm = GET_NAMES(ans));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663">invalid_names</a>(nm))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;&#39;rprior&#39; must return a named numeric vector.&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        posn = INTEGER(PROTECT(<a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(Pnames,nm,<span class="stringliteral">&quot;parameters&quot;</span>)));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        nprotect += 4;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        pa = REAL(ans);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; LENGTH(ans); i++) p[posn[i]] = pa[i];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        first = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        PROTECT(ans = <a class="code" href="rprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a>(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>,p,<a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>));</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        PROTECT(ans = AS_NUMERIC(ans));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        pa = REAL(ans);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; LENGTH(ans); i++) p[posn[i]] = pa[i];</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        UNPROTECT(2);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a>: <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a>: {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">double</span> *p;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">int</span> *pidx = 0;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3">pomp_rprior</a> *ff = NULL;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">int</span> j;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// extract parameter index</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    pidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;paramindex&quot;</span>)));</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">// address of native routine</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    *((<span class="keywordtype">void</span> **) (&amp;ff)) = R_ExternalPtrAddr(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    R_CheckUserInterrupt();     <span class="comment">// check for user interrupt</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0a68b9b7d7ecabc154b06307bb01caa288">native</a>: <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0afea0bbef864c95976371693c4688026d">regNative</a>: {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">double</span> *p;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">int</span> *pidx = 0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3">pomp_rprior</a> *ff = NULL;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">// extract parameter index</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    pidx = INTEGER(GET_SLOT(pompfun,install(<span class="stringliteral">&quot;paramindex&quot;</span>)));</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">// address of native routine</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    *((<span class="keywordtype">void</span> **) (&amp;ff)) = R_ExternalPtrAddr(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>);</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    GetRNGstate();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    R_CheckUserInterrupt();     <span class="comment">// check for user interrupt</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">// loop over replicates</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">for</span> (j = 0, p = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>); j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, p += <a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>)</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      (*ff)(p,pidx);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    PutRNGstate();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    GetRNGstate();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">// loop over replicates</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">for</span> (j = 0, p = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>); j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, p += <a class="code" href="trajectory_8c.html#a14099a72d03b2c4a17df78083aaefedb">npars</a>)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      (*ff)(p,pidx);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    PutRNGstate();</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">default</span>: <span class="comment">// just duplicate</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;&#39;rprior&#39; unspecified: duplicating parameters.&quot;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">default</span>: <span class="comment">// just duplicate</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;&#39;rprior&#39; unspecified: duplicating parameters.&quot;</span>);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  UNPROTECT(nprotect);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  UNPROTECT(nprotect);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
 <div class="ttc" id="apomp_8h_html_a910c57a1b150c29312792eba4a5fb2d3"><div class="ttname"><a href="pomp_8h.html#a910c57a1b150c29312792eba4a5fb2d3">pomp_rprior</a></div><div class="ttdeci">void pomp_rprior(double *p, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00106">pomp.h:107</a></div></div>
 <div class="ttc" id="arprior_8c_html_a0d7fde328f6573bb69afd5d887d92599"><div class="ttname"><a href="rprior_8c.html#a0d7fde328f6573bb69afd5d887d92599">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *p, int n)</div><div class="ttdef"><b>Definition:</b> <a href="rprior_8c_source.html#l00031">rprior.c:31</a></div></div>
 <div class="ttc" id="arprior_8c_html_a47e0916f81aa8c67b2cd749534467369"><div class="ttname"><a href="rprior_8c.html#a47e0916f81aa8c67b2cd749534467369">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(SEXP params)</div><div class="ttdef"><b>Definition:</b> <a href="rprior_8c_source.html#l00047">rprior.c:47</a></div></div>
@@ -7652,14 +7655,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a7a37b08d4f29e8bdd81eb910cf4bff6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a37b08d4f29e8bdd81eb910cf4bff6d">&#9670;&nbsp;</a></span>pomp_desolve_takedown()</h2>
+<a id="abc1f879a376bbbef32d6d8fde12078ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1f879a376bbbef32d6d8fde12078ed">&#9670;&nbsp;</a></span>pomp_desolve_takedown()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void pomp_desolve_takedown </td>
+          <td class="memname">SEXP pomp_desolve_takedown </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -7722,7 +7725,8 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <a class="code" href="trajectory_8c.html#a852c03f3cb2e07fb73c219e4f9a7bf9f">COMMON</a>(<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>) = <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0adfae35394ef2ad547edb9abfc391cab4">undef</a>;</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordflow">return</span> R_NilValue;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

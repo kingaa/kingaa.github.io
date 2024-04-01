@@ -61,7 +61,7 @@ var decls_8h =
     [ "periodic_bspline_basis_eval_deriv", "decls_8h.html#a2f083190a387483412260be17208ee1e", null ],
     [ "pfilter", "decls_8h.html#acfcb3a7b41bc3b2b9315163717854242", null ],
     [ "pomp_desolve_setup", "decls_8h.html#a650670c909a5329eb24d77c821cd5e21", null ],
-    [ "pomp_desolve_takedown", "decls_8h.html#a7a37b08d4f29e8bdd81eb910cf4bff6d", null ],
+    [ "pomp_desolve_takedown", "decls_8h.html#abc1f879a376bbbef32d6d8fde12078ed", null ],
     [ "pomp_fun_handler", "decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e", null ],
     [ "pomp_vf_eval", "decls_8h.html#a388d1f049a9d7284d0e7ba26591e6099", null ],
     [ "probe_acf", "decls_8h.html#aeb81a79c270779cdaa8ab7f2270c4569", null ],

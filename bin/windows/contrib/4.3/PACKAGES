@@ -23,12 +23,12 @@ License: GPL-3
 Archs: x64
 
 Package: phylopomp
-Version: 0.10.3.1
+Version: 0.10.4.0
 Depends: R(>= 4.2)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
-        foreach, tidyr, pomp(>= 5.2.4.3), cowplot
+        foreach, tidyr, pomp(>= 5.7.1.0), cowplot
 LinkingTo: pomp
-Suggests: tidyverse, doFuture, doRNG, broom
+Suggests: tidyverse, doFuture, broom
 License: GPL-3
 Archs: x64
 

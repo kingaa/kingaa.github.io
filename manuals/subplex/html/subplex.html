@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>subplex {subplex}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='subplex'>Minimization of a function by the subplex algorithm</h2>
+<h2>Minimization of a function by the subplex algorithm</h2>
 
 <h3>Description</h3>
 
@@ -33,17 +33,17 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="subplex_:_par">par</code></td>
+<tr><td><code id="par">par</code></td>
 <td>
 <p>Initial guess of the parameters to be optimized over.</p>
 </td></tr>
-<tr><td><code id="subplex_:_fn">fn</code></td>
+<tr><td><code id="fn">fn</code></td>
 <td>
 <p>The function to be minimized.  Its first argument must be the
 vector of parameters to be optimized over.  It should return a scalar
 result.</p>
 </td></tr>
-<tr><td><code id="subplex_:_control">control</code></td>
+<tr><td><code id="control">control</code></td>
 <td>
 <p>A list of control parameters, consisting of some or all of
 the following: </p>
@@ -62,12 +62,12 @@ relative to <code>par</code>: if <code>par + parscale = par</code> in any compon
 <code>parscale</code> is too small.  The default value is <code>1</code>.  </p>
 </dd> </dl>
 </td></tr>
-<tr><td><code id="subplex_:_hessian">hessian</code></td>
+<tr><td><code id="hessian">hessian</code></td>
 <td>
 <p>If <code>hessian=TRUE</code>, the Hessian of the objective at the
 estimated optimum will be numerically computed.</p>
 </td></tr>
-<tr><td><code id="subplex_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>Additional arguments to be passed to the function <code>fn</code>.</p>
 </td></tr>
@@ -173,6 +173,7 @@ rosen &lt;- function (x, g = 0, h = 0) {
 subplex(par=c(b=11,a=-33),fn=rosen,h=22,control=list(abstol=1e-9,parscale=5),hessian=TRUE)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.8.3 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>subplex</em> version 1.8.3 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

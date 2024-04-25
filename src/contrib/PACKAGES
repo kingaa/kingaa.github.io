@@ -14,7 +14,7 @@ Imports: methods, foreach, doFuture, future, grid, grDevices, graphics,
         utils
 Suggests: dplyr, tidyr, ggplot2
 License: GPL-3
-MD5sum: ed1f67ac12dce6a05a3f14926cb6d0fa
+MD5sum: f043225f711e17d6240f659e536aeee1
 NeedsCompilation: no
 
 Package: hte
@@ -32,7 +32,7 @@ Depends: R(>= 3.6)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape
 License: GPL-3
-MD5sum: 3cbda66a11f1207cbdae017365898de6
+MD5sum: 15c7908f8e1da403e17a208b046aa080
 NeedsCompilation: yes
 
 Package: panelPomp
@@ -51,7 +51,7 @@ Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
 LinkingTo: pomp
 Suggests: tidyverse, doFuture, broom
 License: GPL-3
-MD5sum: c252c55b90aa2739957011f3434fff8d
+MD5sum: fd970499078bac7f66e52fa17c73dcec
 NeedsCompilation: yes
 
 Package: pomp
@@ -61,7 +61,7 @@ Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
         data.table
 Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
 License: GPL-3
-MD5sum: f924894620a45879d5c819359db35d1d
+MD5sum: fdbac06a438f65c868fb81b952c424af
 NeedsCompilation: yes
 
 Package: subplex
@@ -69,7 +69,7 @@ Version: 1.8.3
 Depends: R(>= 2.5.1)
 Suggests: tinytest
 License: GPL-3
-MD5sum: d9836f4c21488e6b934c354302048e0d
+MD5sum: 72e57196a1ffaf07690450ca374ac71d
 NeedsCompilation: yes
 
 Package: tao
@@ -77,5 +77,5 @@ Version: 1.1.1
 Depends: R(>= 3.0.0)
 Suggests: tinytest
 License: GPL-3
-MD5sum: d7653918e2500d257c69b9e988bf922b
+MD5sum: b52f7b0013b7f1bae4b336b64ad0d8ef
 NeedsCompilation: no

@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>ou2 {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='ou2'>Two-dimensional discrete-time Ornstein-Uhlenbeck process</h2>
+<h2>Two-dimensional discrete-time Ornstein-Uhlenbeck process</h2>
 
 <h3>Description</h3>
 
@@ -46,29 +46,29 @@ function processMathHTML() {
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="ou2_:_alpha_1">alpha_1</code>, <code id="ou2_:_alpha_2">alpha_2</code>, <code id="ou2_:_alpha_3">alpha_3</code>, <code id="ou2_:_alpha_4">alpha_4</code></td>
+<tr><td><code id="alpha_1">alpha_1</code>, <code id="alpha_2">alpha_2</code>, <code id="alpha_3">alpha_3</code>, <code id="alpha_4">alpha_4</code></td>
 <td>
 <p>entries of the <code class="reqn">\alpha</code> matrix, in column-major order.
 That is, <code>alpha_2</code> is in the lower-left position.</p>
 </td></tr>
-<tr><td><code id="ou2_:_sigma_1">sigma_1</code>, <code id="ou2_:_sigma_2">sigma_2</code>, <code id="ou2_:_sigma_3">sigma_3</code></td>
+<tr><td><code id="sigma_1">sigma_1</code>, <code id="sigma_2">sigma_2</code>, <code id="sigma_3">sigma_3</code></td>
 <td>
 <p>entries of the lower-triangular <code class="reqn">\sigma</code> matrix.
 <code>sigma_2</code> is the entry in the lower-left position.</p>
 </td></tr>
-<tr><td><code id="ou2_:_tau">tau</code></td>
+<tr><td><code id="tau">tau</code></td>
 <td>
 <p>measurement error s.d.</p>
 </td></tr>
-<tr><td><code id="ou2_:_x1_0">x1_0</code>, <code id="ou2_:_x2_0">x2_0</code></td>
+<tr><td><code id="x1_0">x1_0</code>, <code id="x2_0">x2_0</code></td>
 <td>
 <p>latent variable values at time <code>t0</code></p>
 </td></tr>
-<tr><td><code id="ou2_:_times">times</code></td>
+<tr><td><code id="times">times</code></td>
 <td>
 <p>vector of observation times</p>
 </td></tr>
-<tr><td><code id="ou2_:_t0">t0</code></td>
+<tr><td><code id="t0">t0</code></td>
 <td>
 <p>the zero time</p>
 </td></tr>
@@ -123,6 +123,7 @@ pf &lt;- pfilter(po,Np=1000)
 logLik(pf)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

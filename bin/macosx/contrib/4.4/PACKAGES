@@ -1,0 +1,15 @@
+Package: circumstance
+Version: 0.0.10.1
+Depends: R(>= 4.1.0), pomp(>= 5.1)
+Imports: methods, foreach, doFuture, future, grid, grDevices, graphics,
+        utils
+Suggests: dplyr, tidyr, ggplot2
+License: GPL-3
+MD5sum: dca6cb3e22420f76bdba8531b27550f6
+
+Package: tao
+Version: 1.1.1
+Depends: R(>= 3.0.0)
+Suggests: tinytest
+License: GPL-3
+MD5sum: fc97d8b7f290f5ff2452c9d9c1c81f2e

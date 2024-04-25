@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>seir {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='seir'>Classical susceptible-exposed-infected-recovered model</h2>
+<h2>Classical susceptible-exposed-infected-recovered model</h2>
 
 <h3>Description</h3>
 
@@ -57,56 +57,56 @@ seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="seir_:_time">time</code></td>
+<tr><td><code id="time">time</code></td>
 <td>
 <p>final time</p>
 </td></tr>
-<tr><td><code id="seir_:_t0">t0</code></td>
+<tr><td><code id="t0">t0</code></td>
 <td>
 <p>initial time</p>
 </td></tr>
-<tr><td><code id="seir_:_Beta">Beta</code></td>
+<tr><td><code id="Beta">Beta</code></td>
 <td>
 <p>transmission rate</p>
 </td></tr>
-<tr><td><code id="seir_:_sigma">sigma</code></td>
+<tr><td><code id="sigma">sigma</code></td>
 <td>
 <p>progression rate</p>
 </td></tr>
-<tr><td><code id="seir_:_gamma">gamma</code></td>
+<tr><td><code id="gamma">gamma</code></td>
 <td>
 <p>recovery rate</p>
 </td></tr>
-<tr><td><code id="seir_:_psi">psi</code></td>
+<tr><td><code id="psi">psi</code></td>
 <td>
 <p>per capita sampling rate</p>
 </td></tr>
-<tr><td><code id="seir_:_omega">omega</code></td>
+<tr><td><code id="omega">omega</code></td>
 <td>
 <p>rate of waning of immunity</p>
 </td></tr>
-<tr><td><code id="seir_:_S0">S0</code></td>
+<tr><td><code id="S0">S0</code></td>
 <td>
 <p>initial size of susceptible population</p>
 </td></tr>
-<tr><td><code id="seir_:_E0">E0</code></td>
+<tr><td><code id="E0">E0</code></td>
 <td>
 <p>initial size of exposed population</p>
 </td></tr>
-<tr><td><code id="seir_:_I0">I0</code></td>
+<tr><td><code id="I0">I0</code></td>
 <td>
 <p>initial size of infected population</p>
 </td></tr>
-<tr><td><code id="seir_:_R0">R0</code></td>
+<tr><td><code id="R0">R0</code></td>
 <td>
 <p>initial size of immune population</p>
 </td></tr>
-<tr><td><code id="seir_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
-<tr><td><code id="seir_:_x">x</code></td>
+<tr><td><code id="x">x</code></td>
 <td>
 <p>genealogy in <span class="pkg">phylopomp</span> format.</p>
 </td></tr>
@@ -157,6 +157,7 @@ simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt;
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.5.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.5.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>hansen {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='hansen'>Ornstein-Uhlenbeck models of trait evolution</h2>
+<h2>Ornstein-Uhlenbeck models of trait evolution</h2>
 
 <h3>Description</h3>
 
@@ -44,7 +44,7 @@ The fitting is done using <code>optim</code> or <code>subplex</code>.
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="hansen_:_data">data</code></td>
+<tr><td><code id="data">data</code></td>
 <td>
 <p>Phenotypic data for extant species, i.e., species at the terminal twigs of the phylogenetic tree.
 This can either be a single named numeric vector, a list of <code>nchar</code> named vectors, or a data frame containing <code>nchar</code> data variables.
@@ -54,18 +54,18 @@ data are supplied as one or more named vectors, the names attributes are taken t
 If the data are supplied as a
 data-frame, the rownames serve that purpose.</p>
 </td></tr>
-<tr><td><code id="hansen_:_tree">tree</code></td>
+<tr><td><code id="tree">tree</code></td>
 <td>
 <p>A phylogenetic tree, specified as an <code>ouchtree</code> object.</p>
 </td></tr>
-<tr><td><code id="hansen_:_regimes">regimes</code></td>
+<tr><td><code id="regimes">regimes</code></td>
 <td>
 <p>A vector of codes, one for each node in the tree, specifying the selective regimes hypothesized to have been operative.
 Corresponding to each node, enter the code of the regime hypothesized for the branch segment terminating in that node.
 For the root node, because it has no branch segment terminating on it, the regime specification is irrelevant.
 If there are <code>nchar</code> quantitative characters, then one can specify a single set of <code>regimes</code> for all characters or a list of <code>nchar</code> regime specifications, one for each character.</p>
 </td></tr>
-<tr><td><code id="hansen_:_sqrt.alpha">sqrt.alpha</code>, <code id="hansen_:_sigma">sigma</code></td>
+<tr><td><code id="sqrt.alpha">sqrt.alpha</code>, <code id="sigma">sigma</code></td>
 <td>
 <p>These are used to initialize the optimization algorithm.
 The selection strength matrix <code class="reqn">\alpha</code> and the random drift variance-covariance matrix <code class="reqn">\sigma^2</code> are parameterized by their matrix square roots.
@@ -73,22 +73,22 @@ Specifically, these initial guesses are each packed into lower-triangular matric
 The product of this matrix with its transpose is the <code class="reqn">\alpha</code> or <code class="reqn">\sigma^2</code> matrix.
 See Details for more information.</p>
 </td></tr>
-<tr><td><code id="hansen_:_fit">fit</code></td>
+<tr><td><code id="fit">fit</code></td>
 <td>
 <p>If <code>fit=TRUE</code>, then the likelihood will be maximized.
 If <code>fit=FALSE</code>, the likelihood will be evaluated at the specified values of <code>sqrt.alpha</code> and <code>sigma</code>;
 the optima <code>theta</code> will be returned as well.</p>
 </td></tr>
-<tr><td><code id="hansen_:_method">method</code></td>
+<tr><td><code id="method">method</code></td>
 <td>
 <p>The method to be used by the optimization algorithm.
 See <code><a href="../../subplex/help/subplex.html">subplex::subplex</a></code> and <code><a href="../../stats/help/optim.html">stats::optim</a></code> for information on the available options.</p>
 </td></tr>
-<tr><td><code id="hansen_:_hessian">hessian</code></td>
+<tr><td><code id="hessian">hessian</code></td>
 <td>
 <p>If <code>hessian=TRUE</code>, then the Hessian matrix will be computed by <code>optim</code>.</p>
 </td></tr>
-<tr><td><code id="hansen_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>Additional arguments will be passed as <code>control</code> options to <code>optim</code> or <code>subplex</code>.
 See <code><a href="../../stats/help/optim.html">stats::optim()</a></code> and <code><a href="../../subplex/help/subplex.html">subplex::subplex()</a></code> for information on the available options.</p>
@@ -223,6 +223,7 @@ if (requireNamespace("ape")) {
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-2 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>design {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='design'>Design matrices for pomp calculations</h2>
+<h2>Design matrices for pomp calculations</h2>
 
 <h3>Description</h3>
 
@@ -54,35 +54,35 @@ sobol_design(lower = numeric(0), upper = numeric(0), nseq)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="design_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>In <code>profile_design</code>, additional arguments specify the parameters over which to profile and the values of these parameters.
 In <code>slice_design</code>, additional numeric vector arguments specify the locations of points along the slices.</p>
 </td></tr>
-<tr><td><code id="design_:_lower">lower</code>, <code id="design_:_upper">upper</code></td>
+<tr><td><code id="lower">lower</code>, <code id="upper">upper</code></td>
 <td>
 <p>named numeric vectors giving the lower and upper bounds
 of the ranges, respectively.</p>
 </td></tr>
-<tr><td><code id="design_:_nprof">nprof</code></td>
+<tr><td><code id="nprof">nprof</code></td>
 <td>
 <p>The number of points per profile point.</p>
 </td></tr>
-<tr><td><code id="design_:_type">type</code></td>
+<tr><td><code id="type">type</code></td>
 <td>
 <p>the type of design to use.
 <code>type="runif"</code> uses <code><a href="../../pomp/help/runif_design.html">runif_design</a></code>.
 <code>type="sobol"</code> uses <code><a href="../../pomp/help/sobol_design.html">sobol_design</a></code>;</p>
 </td></tr>
-<tr><td><code id="design_:_stringsAsFactors">stringsAsFactors</code></td>
+<tr><td><code id="stringsAsFactors">stringsAsFactors</code></td>
 <td>
 <p>should character vectors be converted to factors?</p>
 </td></tr>
-<tr><td><code id="design_:_nseq">nseq</code></td>
+<tr><td><code id="nseq">nseq</code></td>
 <td>
 <p>Total number of points requested.</p>
 </td></tr>
-<tr><td><code id="design_:_center">center</code></td>
+<tr><td><code id="center">center</code></td>
 <td>
 <p><code>center</code> is a named numeric vector specifying the point
 through which the slice(s) is (are) to be taken.</p>
@@ -162,6 +162,7 @@ plot(x)
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

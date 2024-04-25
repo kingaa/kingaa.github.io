@@ -1,0 +1,47 @@
+Package: circumstance
+Version: 0.0.10.1
+Depends: R(>= 4.1.0), pomp(>= 5.1)
+Imports: methods, foreach, doFuture, future, grid, grDevices, graphics,
+        utils
+Suggests: dplyr, tidyr, ggplot2
+License: GPL-3
+
+Package: ouch
+Version: 2.19-2
+Depends: R(>= 3.6)
+Imports: methods, stats, graphics, grDevices, utils, subplex
+Suggests: ape
+License: GPL-3
+Archs: x64
+
+Package: phylopomp
+Version: 0.10.5.0
+Depends: R(>= 4.2)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp(>= 5.7.1.0), cowplot
+LinkingTo: pomp
+Suggests: tidyverse, doFuture, broom
+License: GPL-3
+Archs: x64
+
+Package: pomp
+Version: 5.7.1.0
+Depends: R(>= 4.1.0)
+Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
+        data.table
+Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
+License: GPL-3
+Archs: x64
+
+Package: subplex
+Version: 1.8.3
+Depends: R(>= 2.5.1)
+Suggests: tinytest
+License: GPL-3
+Archs: x64
+
+Package: tao
+Version: 1.1.1
+Depends: R(>= 3.0.0)
+Suggests: tinytest
+License: GPL-3

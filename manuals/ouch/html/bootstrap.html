@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>bootstrap {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='bootstrap'>Bootstrapping for uncertainty quantification</h2>
+<h2>Bootstrapping for uncertainty quantification</h2>
 
 <h3>Description</h3>
 
@@ -43,19 +43,19 @@ bootstrap(object, nboot = 200, seed = NULL, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="bootstrap_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>A fitted model object.</p>
 </td></tr>
-<tr><td><code id="bootstrap_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>Additional arguments are passed to <code><a href="../../ouch/help/update.html">update</a></code>.</p>
 </td></tr>
-<tr><td><code id="bootstrap_:_nboot">nboot</code></td>
+<tr><td><code id="nboot">nboot</code></td>
 <td>
 <p>integer; number of bootstrap replicates.</p>
 </td></tr>
-<tr><td><code id="bootstrap_:_seed">seed</code></td>
+<tr><td><code id="seed">seed</code></td>
 <td>
 <p>integer; setting <code>seed</code> to a non-<code>NULL</code> value allows one to fix the random seed (see <a href="../../ouch/help/simulate.html">simulate</a>).</p>
 </td></tr>
@@ -128,6 +128,7 @@ print(t(sapply(boots.h5,quantile,probs=c(0.025,0.975))),digits=3)
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-2 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

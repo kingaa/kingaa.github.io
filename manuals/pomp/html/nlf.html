@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>nlf {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='nlf'>Nonlinear forecasting</h2>
+<h2>Nonlinear forecasting</h2>
 
 <h3>Description</h3>
 
@@ -86,28 +86,28 @@ nlf_objfun(
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="nlf_:_data">data</code></td>
+<tr><td><code id="data">data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr><td><code id="nlf_:_est">est</code></td>
+<tr><td><code id="est">est</code></td>
 <td>
 <p>character vector; the names of parameters to be estimated.</p>
 </td></tr>
-<tr><td><code id="nlf_:_lags">lags</code></td>
+<tr><td><code id="lags">lags</code></td>
 <td>
 <p>A vector specifying the lags to use when constructing the nonlinear autoregressive prediction model.
 The first lag is the prediction interval.</p>
 </td></tr>
-<tr><td><code id="nlf_:_nrbf">nrbf</code></td>
+<tr><td><code id="nrbf">nrbf</code></td>
 <td>
 <p>integer scalar;
 the number of radial basis functions to be used at each lag.</p>
 </td></tr>
-<tr><td><code id="nlf_:_ti">ti</code>, <code id="nlf_:_tf">tf</code></td>
+<tr><td><code id="ti">ti</code>, <code id="tf">tf</code></td>
 <td>
 <p>required numeric values.
 NLF works by generating simulating long time series from the model.
@@ -117,14 +117,14 @@ The simulated time series will be from <code>ti</code> to <code>tf</code>, with 
 An error will be generated unless the data-to-parameter ratio exceeds 10 and
 a warning will be given if the ratio is smaller than 30.</p>
 </td></tr>
-<tr><td><code id="nlf_:_seed">seed</code></td>
+<tr><td><code id="seed">seed</code></td>
 <td>
 <p>integer.
 When fitting, it is often best to fix the seed of the random-number generator (RNG).
 This is accomplished by setting <code>seed</code> to an integer.
 By default, <code>seed = NULL</code>, which does not alter the RNG state.</p>
 </td></tr>
-<tr><td><code id="nlf_:_transform.data">transform.data</code></td>
+<tr><td><code id="transform.data">transform.data</code></td>
 <td>
 <p>optional function.
 If specified, forecasting is performed using data and model simulations transformed by this function.
@@ -134,13 +134,13 @@ The main purpose of <code>transform.data</code> is to achieve approximately mult
 If the data are univariate, <code>transform.data</code> should take a scalar and return a scalar.
 If the data are multivariate, <code>transform.data</code> should assume a vector input and return a vector of the same length.</p>
 </td></tr>
-<tr><td><code id="nlf_:_period">period</code></td>
+<tr><td><code id="period">period</code></td>
 <td>
 <p>numeric; <code>period=NA</code> means the model is nonseasonal.
 <code>period &gt; 0</code> is the period of seasonal forcing.
 <code>period &lt;= 0</code> is equivalent to <code>period = NA</code>.</p>
 </td></tr>
-<tr><td><code id="nlf_:_tensor">tensor</code></td>
+<tr><td><code id="tensor">tensor</code></td>
 <td>
 <p>logical;
 if FALSE, the fitted model is a generalized additive model with time mod period as one of the predictors,
@@ -148,37 +148,37 @@ i.e., a gam with time-varying intercept.
 If TRUE, the fitted model is a gam with lagged state variables as predictors and time-periodic coefficients, constructed using tensor products of basis functions of state variables with basis
 functions of time.</p>
 </td></tr>
-<tr><td><code id="nlf_:_fail.value">fail.value</code></td>
+<tr><td><code id="fail.value">fail.value</code></td>
 <td>
 <p>optional numeric scalar;
 if non-<code>NA</code>, this value is substituted for non-finite values of the objective function.
 It should be a large number (i.e., bigger than any legitimate values the objective function is likely to take).</p>
 </td></tr>
-<tr><td><code id="nlf_:_params">params</code></td>
+<tr><td><code id="params">params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr><td><code id="nlf_:_rinit">rinit</code></td>
+<tr><td><code id="rinit">rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
 </td></tr>
-<tr><td><code id="nlf_:_rprocess">rprocess</code></td>
+<tr><td><code id="rprocess">rprocess</code></td>
 <td>
 <p>simulator of the latent state process, specified using one of the <a href="../../pomp/help/rprocess_spec.html">rprocess plugins</a>.
 Setting <code>rprocess=NULL</code> removes the latent-state simulator.
 For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess specification for the documentation on these plugins</a>.</p>
 </td></tr>
-<tr><td><code id="nlf_:_rmeasure">rmeasure</code></td>
+<tr><td><code id="rmeasure">rmeasure</code></td>
 <td>
 <p>simulator of the measurement model, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure_spec.html">rmeasure specification</a>.</p>
 </td></tr>
-<tr><td><code id="nlf_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>additional arguments supply new or modify existing model characteristics or components.
 See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
@@ -187,7 +187,7 @@ See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of
 This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
 See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
 </td></tr>
-<tr><td><code id="nlf_:_verbose">verbose</code></td>
+<tr><td><code id="verbose">verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -330,6 +330,7 @@ On the other hand, if one retrieves a stored objective function from a file, or 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

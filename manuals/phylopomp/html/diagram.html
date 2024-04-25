@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>diagram {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='diagram'>Genealogy process diagram</h2>
+<h2>Genealogy process diagram</h2>
 
 <h3>Description</h3>
 
@@ -45,53 +45,53 @@ print(x, newpage = is.null(vp), vp = NULL, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="diagram_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p><code>gpsim</code> object.</p>
 </td></tr>
-<tr><td><code id="diagram_:_prune">prune</code></td>
+<tr><td><code id="prune">prune</code></td>
 <td>
 <p>logical; prune the genealogy?</p>
 </td></tr>
-<tr><td><code id="diagram_:_obscure">obscure</code></td>
+<tr><td><code id="obscure">obscure</code></td>
 <td>
 <p>logical; obscure the demes?</p>
 </td></tr>
-<tr><td><code id="diagram_:_m">m</code></td>
+<tr><td><code id="m">m</code></td>
 <td>
 <p>width of plotting window, in nodes.
 By default, the nodes will be adjusted in width to fit the window.</p>
 </td></tr>
-<tr><td><code id="diagram_:_n">n</code></td>
+<tr><td><code id="n">n</code></td>
 <td>
 <p>height of the pockets, in balls.
 By default, the balls will be adjusted in size to fit the space available.</p>
 </td></tr>
-<tr><td><code id="diagram_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>other arguments, ignored.</p>
 </td></tr>
-<tr><td><code id="diagram_:_digits">digits</code></td>
+<tr><td><code id="digits">digits</code></td>
 <td>
 <p>non-negative integer;
 number of decimal digits to print in the node time</p>
 </td></tr>
-<tr><td><code id="diagram_:_palette">palette</code></td>
+<tr><td><code id="palette">palette</code></td>
 <td>
 <p>color palette for indicating demes.
 This can be furnished either as a function or a vector of colors.
 If this is a function, it should take a single integer argument, the number of colors required.
 If it is a vector, it should have at least as many elements as there are demes in the genealogy.</p>
 </td></tr>
-<tr><td><code id="diagram_:_x">x</code></td>
+<tr><td><code id="x">x</code></td>
 <td>
 <p> An <span class="rlang"><b>R</b></span> object. </p>
 </td></tr>
-<tr><td><code id="diagram_:_newpage">newpage</code></td>
+<tr><td><code id="newpage">newpage</code></td>
 <td>
 <p>draw new empty page first?</p>
 </td></tr>
-<tr><td><code id="diagram_:_vp">vp</code></td>
+<tr><td><code id="vp">vp</code></td>
 <td>
 <p>viewport to draw plot in</p>
 </td></tr>
@@ -112,6 +112,7 @@ plot_grid(plotlist=list(plot(x,points=TRUE)[[1]],diagram(x)),
   ncol=1,rel_heights=c(4,1))
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.5.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.5.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>rprocess {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='rprocess'>rprocess workhorse</h2>
+<h2>rprocess workhorse</h2>
 
 <h3>Description</h3>
 
@@ -41,12 +41,12 @@ rprocess(
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="rprocess_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>an object of class &lsquo;pomp&rsquo;, or of a class that extends &lsquo;pomp&rsquo;.
 This will typically be the output of <code>pomp</code>, <code>simulate</code>, or one of the <span class="pkg">pomp</span> inference algorithms.</p>
 </td></tr>
-<tr><td><code id="rprocess_:_x0">x0</code></td>
+<tr><td><code id="x0">x0</code></td>
 <td>
 <p>an <code>nvar</code> x <code>nrep</code> matrix containing the starting state of the system.
 Columns of <code>x0</code> correspond to states;
@@ -54,21 +54,21 @@ rows to components of the state vector.
 One independent simulation will be performed for each column.
 Note that in this case, <code>params</code> must also have <code>nrep</code> columns.</p>
 </td></tr>
-<tr><td><code id="rprocess_:_t0">t0</code></td>
+<tr><td><code id="t0">t0</code></td>
 <td>
 <p>the initial time, i.e., the time corresponding to the state in <code>x0</code>.</p>
 </td></tr>
-<tr><td><code id="rprocess_:_times">times</code></td>
+<tr><td><code id="times">times</code></td>
 <td>
 <p>a numeric vector (length <code>ntimes</code>) containing times.
 These must be in non-decreasing order.</p>
 </td></tr>
-<tr><td><code id="rprocess_:_params">params</code></td>
+<tr><td><code id="params">params</code></td>
 <td>
 <p>a <code>npar</code> x <code>nrep</code> matrix of parameters.
 Each column is treated as an independent parameter set, in correspondence with the corresponding column of <code>x0</code>.</p>
 </td></tr>
-<tr><td><code id="rprocess_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>additional arguments are ignored.</p>
 </td></tr>
@@ -117,6 +117,7 @@ The rownames of <code>x</code> will correspond to those of <code>x0</code>.
 <code><a href="../../pomp/help/workhorses.html">workhorses</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

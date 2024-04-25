@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>parameter_trans {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='parameter_trans'>parameter transformations</h2>
+<h2>parameter transformations</h2>
 
 <h3>Description</h3>
 
@@ -48,24 +48,24 @@ parameter_trans(toEst, fromEst, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="parameter_trans_:_toEst">toEst</code>, <code id="parameter_trans_:_fromEst">fromEst</code></td>
+<tr><td><code id="toEst">toEst</code>, <code id="fromEst">fromEst</code></td>
 <td>
 <p>procedures that perform transformation of model parameters to and from the estimation scale, respectively.
 These can be furnished using C snippets, <span class="rlang"><b>R</b></span> functions, or via procedures in an external, dynamically loaded library.</p>
 </td></tr>
-<tr><td><code id="parameter_trans_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>ignored.</p>
 </td></tr>
-<tr><td><code id="parameter_trans_:_log">log</code></td>
+<tr><td><code id="log">log</code></td>
 <td>
 <p>names of parameters to be log transformed.</p>
 </td></tr>
-<tr><td><code id="parameter_trans_:_logit">logit</code></td>
+<tr><td><code id="logit">logit</code></td>
 <td>
 <p>names of parameters to be logit transformed.</p>
 </td></tr>
-<tr><td><code id="parameter_trans_:_barycentric">barycentric</code></td>
+<tr><td><code id="barycentric">barycentric</code></td>
 <td>
 <p>names of parameters to be collectively transformed according to the log barycentric transformation.
 <strong>Important note:</strong> variables to be log-barycentrically transformed <em>must be adjacent</em> in the parameter vector.</p>
@@ -161,6 +161,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

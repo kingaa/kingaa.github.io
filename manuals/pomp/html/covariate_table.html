@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>covariates {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='covariates'>Covariates</h2>
+<h2>Covariates</h2>
 
 <h3>Description</h3>
 
@@ -37,19 +37,19 @@ covariate_table(..., order = c("linear", "constant"), times)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="covariates_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>numeric vectors or data frames containing time-varying covariates.
 It must be possible to bind these into a data frame.</p>
 </td></tr>
-<tr><td><code id="covariates_:_order">order</code></td>
+<tr><td><code id="order">order</code></td>
 <td>
 <p>the order of interpolation to be used.
 Options are &ldquo;linear&rdquo; (the default) and &ldquo;constant&rdquo;.
 Setting <code>order="linear"</code> treats the covariates as piecewise linear functions of time;
 <code>order="constant"</code> treats them as right-continuous piecewise constant functions.</p>
 </td></tr>
-<tr><td><code id="covariates_:_times">times</code></td>
+<tr><td><code id="times">times</code></td>
 <td>
 <p>the times corresponding to the covariates.
 This may be given as a vector of (non-decreasing, finite) numerical values.
@@ -99,6 +99,7 @@ Nor are parameter transformations permitted to depend upon covariates.
 <code><a href="../../pomp/help/lookup.html">lookup</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

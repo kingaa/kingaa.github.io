@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>sir {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='sir'>Classical susceptible-infected-recovered model</h2>
+<h2>Classical susceptible-infected-recovered model</h2>
 
 <h3>Description</h3>
 
@@ -75,48 +75,48 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="sir_:_time">time</code></td>
+<tr><td><code id="time">time</code></td>
 <td>
 <p>final time</p>
 </td></tr>
-<tr><td><code id="sir_:_t0">t0</code></td>
+<tr><td><code id="t0">t0</code></td>
 <td>
 <p>initial time</p>
 </td></tr>
-<tr><td><code id="sir_:_Beta">Beta</code></td>
+<tr><td><code id="Beta">Beta</code></td>
 <td>
 <p>transmission rate.</p>
 </td></tr>
-<tr><td><code id="sir_:_gamma">gamma</code></td>
+<tr><td><code id="gamma">gamma</code></td>
 <td>
 <p>recovery rate.</p>
 </td></tr>
-<tr><td><code id="sir_:_psi">psi</code></td>
+<tr><td><code id="psi">psi</code></td>
 <td>
 <p>sampling rate.</p>
 </td></tr>
-<tr><td><code id="sir_:_omega">omega</code></td>
+<tr><td><code id="omega">omega</code></td>
 <td>
 <p>immunity waning rate</p>
 </td></tr>
-<tr><td><code id="sir_:_S0">S0</code></td>
+<tr><td><code id="S0">S0</code></td>
 <td>
 <p>initial size of susceptible population.</p>
 </td></tr>
-<tr><td><code id="sir_:_I0">I0</code></td>
+<tr><td><code id="I0">I0</code></td>
 <td>
 <p>initial size of infected population.</p>
 </td></tr>
-<tr><td><code id="sir_:_R0">R0</code></td>
+<tr><td><code id="R0">R0</code></td>
 <td>
 <p>initial size of recovered population.</p>
 </td></tr>
-<tr><td><code id="sir_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
-<tr><td><code id="sir_:_x">x</code></td>
+<tr><td><code id="x">x</code></td>
 <td>
 <p>genealogy in <span class="pkg">phylopomp</span> format (i.e., an object that inherits from &lsquo;gpgen&rsquo;).</p>
 </td></tr>
@@ -164,6 +164,7 @@ simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
 simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.5.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.10.5.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

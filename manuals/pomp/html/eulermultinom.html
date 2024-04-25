@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>eulermultinom {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='eulermultinom'>Eulermultinomial and gamma-whitenoise distributions</h2>
+<h2>Eulermultinomial and gamma-whitenoise distributions</h2>
 
 <h3>Description</h3>
 
@@ -39,32 +39,32 @@ rgammawn(n = 1, sigma, dt)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="eulermultinom_:_n">n</code></td>
+<tr><td><code id="n">n</code></td>
 <td>
 <p>integer; number of random variates to generate.</p>
 </td></tr>
-<tr><td><code id="eulermultinom_:_size">size</code></td>
+<tr><td><code id="size">size</code></td>
 <td>
 <p>scalar integer; number of individuals at risk.</p>
 </td></tr>
-<tr><td><code id="eulermultinom_:_rate">rate</code></td>
+<tr><td><code id="rate">rate</code></td>
 <td>
 <p>numeric vector of hazard rates.</p>
 </td></tr>
-<tr><td><code id="eulermultinom_:_dt">dt</code></td>
+<tr><td><code id="dt">dt</code></td>
 <td>
 <p>numeric scalar; duration of Euler step.</p>
 </td></tr>
-<tr><td><code id="eulermultinom_:_x">x</code></td>
+<tr><td><code id="x">x</code></td>
 <td>
 <p>matrix or vector containing number of individuals that have
 succumbed to each death process.</p>
 </td></tr>
-<tr><td><code id="eulermultinom_:_log">log</code></td>
+<tr><td><code id="log">log</code></td>
 <td>
 <p>logical; if TRUE, return logarithm(s) of probabilities.</p>
 </td></tr>
-<tr><td><code id="eulermultinom_:_sigma">sigma</code></td>
+<tr><td><code id="sigma">sigma</code></td>
 <td>
 <p>numeric scalar; intensity of the Gamma white noise process.</p>
 </td></tr>
@@ -220,6 +220,7 @@ print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW))
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

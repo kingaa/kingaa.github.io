@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>mif2 {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='mif2'>Parallel iterated filtering</h2>
+<h2>Parallel iterated filtering</h2>
 
 <h3>Description</h3>
 
@@ -46,30 +46,30 @@ mif2(data, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="mif2_:_data">data</code></td>
+<tr><td><code id="data">data</code></td>
 <td>
 <p>passed to <code><a href="../../pomp/help/mif2.html">pomp::mif2</a></code></p>
 </td></tr>
-<tr><td><code id="mif2_:_starts">starts</code></td>
+<tr><td><code id="starts">starts</code></td>
 <td>
 <p>data frame containing parameters at which to begin iterated filtering</p>
 </td></tr>
-<tr><td><code id="mif2_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>all additional arguments are passed to <code><a href="../../pomp/help/mif2.html">pomp::mif2</a></code></p>
 </td></tr>
-<tr><td><code id="mif2_:_seed">seed</code></td>
+<tr><td><code id="seed">seed</code></td>
 <td>
 <p>seed for the parallel random-number generator.
 Setting <code>seed=TRUE</code> passes the current seed to the parallel RNG.
 See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
 </td></tr>
-<tr><td><code id="mif2_:_chunk.size">chunk.size</code></td>
+<tr><td><code id="chunk.size">chunk.size</code></td>
 <td>
 <p>average number of elements processed per chunk.
 See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
 </td></tr>
-<tr><td><code id="mif2_:_scheduling">scheduling</code></td>
+<tr><td><code id="scheduling">scheduling</code></td>
 <td>
 <p>average number of chunks that each worker processes.
 See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.
@@ -83,6 +83,7 @@ This is ignored unless <code>chunk.size=NULL</code>.</p>
 <p><code><a href="../../pomp/help/mif2.html">pomp::mif2</a></code>.
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.10.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.10.1 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

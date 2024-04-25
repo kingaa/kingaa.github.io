@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>continue {circumstance}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='continue'>Continue an iterative calculation</h2>
+<h2>Continue an iterative calculation</h2>
 
 <h3>Description</h3>
 
@@ -37,27 +37,27 @@ continue(object, ..., seed = TRUE, chunk.size = NULL, scheduling = 1)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="continue_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>the result of an iterative <span class="pkg">pomp</span> computation</p>
 </td></tr>
-<tr><td><code id="continue_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>additional arguments will be passed to the underlying method.
 This allows one to modify parameters used in the original computations.</p>
 </td></tr>
-<tr><td><code id="continue_:_seed">seed</code></td>
+<tr><td><code id="seed">seed</code></td>
 <td>
 <p>seed for the parallel random-number generator.
 Setting <code>seed=TRUE</code> passes the current seed to the parallel RNG.
 See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
 </td></tr>
-<tr><td><code id="continue_:_chunk.size">chunk.size</code></td>
+<tr><td><code id="chunk.size">chunk.size</code></td>
 <td>
 <p>average number of elements processed per chunk.
 See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.</p>
 </td></tr>
-<tr><td><code id="continue_:_scheduling">scheduling</code></td>
+<tr><td><code id="scheduling">scheduling</code></td>
 <td>
 <p>average number of chunks that each worker processes.
 See <code><a href="../../doFuture/help/+25dofuture+25.html">%dofuture%</a></code> for more information.
@@ -71,6 +71,7 @@ This is ignored unless <code>chunk.size=NULL</code>.</p>
 <p><code><a href="../../circumstance/help/mif2.html">mif2</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.10.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>circumstance</em> version 0.0.10.1 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

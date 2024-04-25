@@ -1,0 +1,33 @@
+Package: ouch
+Version: 2.19-2
+Depends: R(>= 3.6)
+Imports: methods, stats, graphics, grDevices, utils, subplex
+Suggests: ape
+License: GPL-3
+MD5sum: 9d3f45f20e0f99b78b49767dc7306dc3
+
+Package: phylopomp
+Version: 0.10.5.0
+Depends: R(>= 4.2)
+Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
+        foreach, tidyr, pomp(>= 5.7.1.0), cowplot
+LinkingTo: pomp
+Suggests: tidyverse, doFuture, broom
+License: GPL-3
+MD5sum: 74a31d93efb2a22f6c1b7781b9c8a748
+
+Package: pomp
+Version: 5.7.1.0
+Depends: R(>= 4.1.0)
+Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
+        data.table
+Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
+License: GPL-3
+MD5sum: 13ace7ea180d8cb680e7aa80f9b81927
+
+Package: subplex
+Version: 1.8.3
+Depends: R(>= 2.5.1)
+Suggests: tinytest
+License: GPL-3
+MD5sum: 0967d4c19e47587903f0db34cbd3d445

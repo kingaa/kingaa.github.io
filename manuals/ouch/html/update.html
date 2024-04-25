@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>update {ouch}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='update'>Update and refit an <span class="pkg">ouch</span> model</h2>
+<h2>Update and refit an <span class="pkg">ouch</span> model</h2>
 
 <h3>Description</h3>
 
@@ -38,22 +38,22 @@ update(object, data, ...)
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="update_:_object">object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>fitted model object.</p>
 </td></tr>
-<tr><td><code id="update_:_data">data</code></td>
+<tr><td><code id="data">data</code></td>
 <td>
 <p>data that replace those used in the original fit.</p>
 </td></tr>
-<tr><td><code id="update_:_regimes">regimes</code></td>
+<tr><td><code id="regimes">regimes</code></td>
 <td>
 <p>A vector of codes, one for each node in the tree, specifying the selective regimes hypothesized to have been operative.
 Corresponding to each node, enter the code of the regime hypothesized for the branch segment terminating in that node.
 For the root node, because it has no branch segment terminating on it, the regime specification is irrelevant.
 If there are <code>nchar</code> quantitative characters, then one can specify a single set of <code>regimes</code> for all characters or a list of <code>nchar</code> regime specifications, one for each character.</p>
 </td></tr>
-<tr><td><code id="update_:_sqrt.alpha">sqrt.alpha</code>, <code id="update_:_sigma">sigma</code></td>
+<tr><td><code id="sqrt.alpha">sqrt.alpha</code>, <code id="sigma">sigma</code></td>
 <td>
 <p>These are used to initialize the optimization algorithm.
 The selection strength matrix <code class="reqn">\alpha</code> and the random drift variance-covariance matrix <code class="reqn">\sigma^2</code> are parameterized by their matrix square roots.
@@ -61,7 +61,7 @@ Specifically, these initial guesses are each packed into lower-triangular matric
 The product of this matrix with its transpose is the <code class="reqn">\alpha</code> or <code class="reqn">\sigma^2</code> matrix.
 See Details for more information.</p>
 </td></tr>
-<tr><td><code id="update_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>Additional arguments replace the corresponding arguments in the original call.</p>
 </td></tr>
@@ -89,6 +89,7 @@ See Details for more information.</p>
 <code><a href="../../ouch/help/summary.html">summary</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-2 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>ouch</em> version 2.19-2 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

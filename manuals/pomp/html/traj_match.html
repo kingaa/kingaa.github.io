@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>traj_match {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='traj_match'>Trajectory matching</h2>
+<h2>Trajectory matching</h2>
 
 <h3>Description</h3>
 
@@ -66,41 +66,41 @@ traj_objfun(
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="traj_match_:_data">data</code></td>
+<tr><td><code id="data">data</code></td>
 <td>
 <p>either a data frame holding the time series data,
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_est">est</code></td>
+<tr><td><code id="est">est</code></td>
 <td>
 <p>character vector; the names of parameters to be estimated.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_fail.value">fail.value</code></td>
+<tr><td><code id="fail.value">fail.value</code></td>
 <td>
 <p>optional numeric scalar;
 if non-<code>NA</code>, this value is substituted for non-finite values of the objective function.
 It should be a large number (i.e., bigger than any legitimate values the objective function is likely to take).</p>
 </td></tr>
-<tr><td><code id="traj_match_:_ode_control">ode_control</code></td>
+<tr><td><code id="ode_control">ode_control</code></td>
 <td>
 <p>optional list;
 the elements of this list will be passed to <code><a href="../../deSolve/help/ode.html">ode</a></code> if the skeleton is a vectorfield, and ignored if it is a map.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_params">params</code></td>
+<tr><td><code id="params">params</code></td>
 <td>
 <p>optional; named numeric vector of parameters.
 This will be coerced internally to storage mode <code>double</code>.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_rinit">rinit</code></td>
+<tr><td><code id="rinit">rinit</code></td>
 <td>
 <p>simulator of the initial-state distribution.
 This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_skeleton">skeleton</code></td>
+<tr><td><code id="skeleton">skeleton</code></td>
 <td>
 <p>optional; the deterministic skeleton of the unobserved state process.
 Depending on whether the model operates in continuous or discrete time, this is either a vectorfield or a map.
@@ -108,13 +108,13 @@ Accordingly, this is supplied using either the <code><a href="../../pomp/help/sk
 For more information, see <a href="../../pomp/help/skeleton_spec.html">skeleton specification</a>.
 Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_dmeasure">dmeasure</code></td>
+<tr><td><code id="dmeasure">dmeasure</code></td>
 <td>
 <p>evaluator of the measurement model density, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>dmeasure=NULL</code> removes the measurement density evaluator.
 For more information, see <a href="../../pomp/help/dmeasure_spec.html">dmeasure specification</a>.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_partrans">partrans</code></td>
+<tr><td><code id="partrans">partrans</code></td>
 <td>
 <p>optional parameter transformations, constructed using <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
 </p>
@@ -124,11 +124,11 @@ One should supply the <code>partrans</code> argument via a call to <code><a href
 For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
 </td></tr>
-<tr><td><code id="traj_match_:_...">...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>additional arguments will modify the model structure</p>
 </td></tr>
-<tr><td><code id="traj_match_:_verbose">verbose</code></td>
+<tr><td><code id="verbose">verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
 </td></tr>
@@ -238,6 +238,7 @@ On the other hand, if one retrieves a stored objective function from a file, or 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.7.1.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

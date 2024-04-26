@@ -44,14 +44,14 @@ MD5sum: 591cb8456588a3ca972b4da5671e8cdc
 NeedsCompilation: no
 
 Package: phylopomp
-Version: 0.10.5.0
+Version: 0.10.6.0
 Depends: R(>= 4.2)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
         foreach, tidyr, pomp(>= 5.7.1.0), cowplot
 LinkingTo: pomp
 Suggests: tidyverse, doFuture, broom
 License: GPL-3
-MD5sum: fd970499078bac7f66e52fa17c73dcec
+MD5sum: d649fd5732c92928c40133e67a2b623a
 NeedsCompilation: yes
 
 Package: pomp

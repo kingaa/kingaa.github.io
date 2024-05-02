@@ -94,7 +94,7 @@ Internally, <code>data</code> will be coerced to an array with storage-mode <cod
 <td>
 <p>specification of the magnitude of the random-walk perturbations that will be applied to some or all model parameters.
 Parameters that are to be estimated should have positive perturbations specified here.
-The specification is given using the <code><a href="../../pomp/help/rw.sd.html">rw.sd</a></code> function, which creates a list of unevaluated expressions.
+The specification is given using the <code><a href="../../pomp/help/rw_sd.html">rw_sd</a></code> function, which creates a list of unevaluated expressions.
 The latter are evaluated in a context where the model time variable is defined (as <code>time</code>).
 The expression <code>ivp(s)</code> can be used in this context as shorthand for </p>
 <pre>ifelse(time==time[1],s,0).</pre>
@@ -201,7 +201,7 @@ To obtain the latter, it is advisable to run several <code><a href="../../pomp/h
 </dd>
 <dt><code><a href="../../pomp/help/coef.html">coef</a></code></dt><dd><p> extracts the point estimate </p>
 </dd>
-<dt><code><a href="../../pomp/help/eff.sample.size.html">eff.sample.size</a></code></dt><dd><p> extracts the effective sample size of the final filtering iteration</p>
+<dt><code><a href="../../pomp/help/eff_sample_size.html">eff_sample_size</a></code></dt><dd><p> extracts the effective sample size of the final filtering iteration</p>
 </dd>
 </dl>
 
@@ -211,7 +211,7 @@ To obtain the latter, it is advisable to run several <code><a href="../../pomp/h
 
 <h3>Specifying the perturbations</h3>
 
-<p>The <code>rw.sd</code> function simply returns a list containing its arguments as unevaluated expressions.
+<p>The <code>rw_sd</code> function simply returns a list containing its arguments as unevaluated expressions.
 These are then evaluated in a context containing the model <code>time</code> variable.
 This allows for easy specification of the structure of the perturbations that are to be applied.
 For example,
@@ -309,7 +309,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/traj_match.html">traj_match</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

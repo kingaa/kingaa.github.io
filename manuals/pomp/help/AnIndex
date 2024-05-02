@@ -19,7 +19,6 @@ as.data.frame.pomp	as_data_frame
 as.data.frame.pompList	as_data_frame
 as.data.frame.probed_pomp	as_data_frame
 as.data.frame.wpfilterd_pomp	as_data_frame
-as.pomp	pomp-defunct
 as_pomp	as_pomp
 bake	bake
 basic_components	basic_components
@@ -34,7 +33,6 @@ bsmc2,ANY-method	bsmc2
 bsmc2,data.frame-method	bsmc2
 bsmc2,missing-method	bsmc2
 bsmc2,pomp-method	bsmc2
-bspline.basis	pomp-defunct
 bsplines	bsplines
 bspline_basis	bsplines
 c	concat
@@ -56,7 +54,6 @@ conc,Pfilter-method	conc
 conc,Pmcmc-method	conc
 conc,Pomp-method	conc
 concat	concat
-cond.logLik	pomp-defunct
 cond_logLik	cond_logLik
 cond_logLik,ANY-method	cond_logLik
 cond_logLik,bsmcd_pomp-method	cond_logLik
@@ -88,7 +85,6 @@ covmat,probed_pomp-method	covmat
 Csnippet	csnippet
 dacca	dacca
 dbetabinom	betabinom
-defunct	pomp-defunct
 design	design
 deulermultinom	eulermultinom
 dinit	dinit
@@ -119,7 +115,6 @@ eakf,pomp-method	kalman
 ebola	ebola
 ebolaModel	ebola
 ebolaWA2014	ebola
-eff.sample.size	pomp-defunct
 eff_sample_size	eff_sample_size
 eff_sample_size,ANY-method	eff_sample_size
 eff_sample_size,bsmcd_pomp-method	eff_sample_size
@@ -207,9 +202,6 @@ mif2,mif2d_pomp-method	mif2
 mif2,missing-method	mif2
 mif2,pfilterd_pomp-method	mif2
 mif2,pomp-method	mif2
-mvn.diag.rw	pomp-defunct
-mvn.rw	pomp-defunct
-mvn.rw.adaptive	pomp-defunct
 mvn_diag_rw	proposals
 mvn_rw	proposals
 mvn_rw_adaptive	proposals
@@ -250,7 +242,6 @@ partrans,missing-method	partrans
 partrans,objfun-method	partrans
 partrans,pomp-method	partrans
 parus	parus
-periodic.bspline.basis	pomp-defunct
 periodic_bspline_basis	bsplines
 pfilter	pfilter
 pfilter,ANY-method	pfilter
@@ -297,8 +288,6 @@ pomp_fun,Csnippet-method	pomp_fun
 pomp_fun,function-method	pomp_fun
 pomp_fun,missing-method	pomp_fun
 pomp_fun,pomp_fun-method	pomp_fun
-pred.mean	pomp-defunct
-pred.var	pomp-defunct
 pred_mean	pred_mean
 pred_mean,ANY-method	pred_mean
 pred_mean,kalmand_pomp-method	pred_mean
@@ -322,16 +311,6 @@ probe,objfun-method	probe
 probe,pomp-method	probe
 probe,probed_pomp-method	probe
 probe,probe_match_objfun-method	probe
-probe.acf	pomp-defunct
-probe.ccf	pomp-defunct
-probe.marginal	pomp-defunct
-probe.mean	pomp-defunct
-probe.median	pomp-defunct
-probe.nlar	pomp-defunct
-probe.period	pomp-defunct
-probe.quantile	pomp-defunct
-probe.sd	pomp-defunct
-probe.var	pomp-defunct
 probe_acf	basic_probes
 probe_ccf	basic_probes
 probe_marginal	basic_probes
@@ -382,11 +361,9 @@ rprocess,missing-method	rprocess
 rprocess,pomp-method	rprocess
 rprocess_spec	rprocess_spec
 runif_design	design
-rw.sd	pomp-defunct
 rw2	rw2
 rw_sd	rw_sd
 sannbox	sannbox
-saved.states	pomp-defunct
 saved_states	saved_states
 saved_states,ANY-method	saved_states
 saved_states,missing-method	saved_states

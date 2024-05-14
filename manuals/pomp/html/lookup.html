@@ -44,15 +44,16 @@ function processMathHTML() {
 </table>
 
 
-<h3>Details</h3>
-
-<p>A warning will be generated if extrapolation is performed.
-</p>
-
-
 <h3>Value</h3>
 
 <p>A numeric vector or matrix of the interpolated values.
+</p>
+
+
+<h3>Extrapolation</h3>
+
+<p>If <code>t</code> is outside the range of the lookup table, the values will be extrapolated, and a warning will be issued.
+The type of extrapolation performed will be constant or linear according to the <code>order</code> flag used when creating the table.
 </p>
 
 
@@ -63,7 +64,7 @@ function processMathHTML() {
 <code><a href="../../pomp/help/covariates.html">covariates</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.2.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

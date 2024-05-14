@@ -31,6 +31,8 @@ covariate_table(..., order = c("linear", "constant"), times)
 
 ## S4 method for signature 'character'
 covariate_table(..., order = c("linear", "constant"), times)
+
+repair_lookup_table(table, t, order)
 </code></pre>
 
 
@@ -55,6 +57,15 @@ Setting <code>order="linear"</code> treats the covariates as piecewise linear fu
 This may be given as a vector of (non-decreasing, finite) numerical values.
 Alternatively, one can specify by name which of the given variables is the time variable.</p>
 </td></tr>
+<tr><td><code id="table">table</code></td>
+<td>
+<p>a &lsquo;covartable&rsquo; object created by a call to <code><a href="../../pomp/help/covariate_table.html">covariate_table</a></code></p>
+</td></tr>
+<tr><td><code id="t">t</code></td>
+<td>
+<p>numeric vector;
+times at which interpolated values of the covariates in <code>table</code> are required.</p>
+</td></tr>
 </table>
 
 
@@ -67,6 +78,26 @@ When a basic component is defined using an <span class="rlang"><b>R</b></span> f
 <p>An exception to this rule is the prior (<code>rprior</code> and <code>dprior</code>):
 covariate-dependent priors are not allowed.
 Nor are parameter transformations permitted to depend upon covariates.
+</p>
+<p><code>repair_lookup_table</code> applies <code><a href="../../pomp/help/lookup.html">lookup</a></code> at the provided values of <code>t</code> and returns the resulting lookup table.
+If <code>order</code> is unsupplied, the interpolation-order from <code>table</code> is preserved.
+<strong><code>repair_lookup_table</code> should be considered experimental: its interface may change without notice</strong>.
+</p>
+
+
+<h3>Value</h3>
+
+<p><code>covariate_table</code> returns a lookup table suitable for inclusion of covariates in a &lsquo;pomp&rsquo; object.
+Specifically, this is an object of class &lsquo;covartable&rsquo;.
+</p>
+<p><code>repair_lookup_table</code> returns a lookup table with entries at the provided values of <code>t</code>.
+</p>
+
+
+<h3>Extrapolation</h3>
+
+<p>If <code>t</code> is outside the range of the lookup table, the values will be extrapolated, and a warning will be issued.
+The type of extrapolation performed will be constant or linear according to the <code>order</code> flag used when creating the table.
 </p>
 
 
@@ -99,7 +130,7 @@ Nor are parameter transformations permitted to depend upon covariates.
 <code><a href="../../pomp/help/lookup.html">lookup</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.2.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

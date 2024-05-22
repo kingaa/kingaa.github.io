@@ -1,6 +1,7 @@
 var internal_8h =
 [
     [ "err", "internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024", null ],
+    [ "R_NO_REMAP", "internal_8h.html#a367e747a6abc54938d838483bb3c97ee", null ],
     [ "rprint", "internal_8h.html#a51e2ad0ec422f18f5d7e9a5cbd4f9613", null ],
     [ "warn", "internal_8h.html#a8224a361dddd2ad59b411982e5ea746f", null ],
     [ "name_t", "internal_8h.html#a5c08bbb85c89413f5e8af55c20429103", null ],

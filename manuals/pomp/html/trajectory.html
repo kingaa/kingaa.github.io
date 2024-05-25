@@ -106,12 +106,7 @@ For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specif
 </td></tr>
 <tr><td><code id="...">...</code></td>
 <td>
-<p>additional arguments supply new or modify existing model characteristics or components.
-See <code><a href="../../pomp/help/pomp.html">pomp</a></code> for a full list of recognized arguments.
-</p>
-<p>When named arguments not recognized by <code><a href="../../pomp/help/pomp.html">pomp</a></code> are provided, these are made available to all basic components via the so-called <dfn>userdata</dfn> facility.
-This allows the user to pass information to the basic components outside of the usual routes of covariates (<code>covar</code>) and model parameters (<code>params</code>).
-See <a href="../../pomp/help/userdata.html">userdata</a> for information on how to use this facility.</p>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="ode_control">ode_control</code></td>
 <td>
@@ -122,7 +117,7 @@ the elements of this list will be passed to <code><a href="../../deSolve/help/od
 <td>
 <p>the format in which to return the results.
 </p>
-<p><code>format = "pomps"</code> causes the trajectories to be returned as a single &lsquo;pomp&rsquo; object (if a single parameter vector have been furnished to <code>trajectory</code>) or as a &lsquo;pompList&rsquo; object (if multiple parameters have been furnished).
+<p><code>format = "pomps"</code> causes the trajectories to be returned as a single &lsquo;pomp&rsquo; object (if a single parameter vector has been furnished to <code>trajectory</code>) or as a &lsquo;pompList&rsquo; object (if a matrix of parameters have been furnished).
 In each of these, the <code>states</code> slot will have been replaced by the computed trajectory.
 Use <code><a href="../../pomp/help/states.html">states</a></code> to view these.
 </p>
@@ -245,7 +240,7 @@ See above for details.
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.3.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.8.4.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['n_508',['N',['../seirs__pomp_8cc.html#a0240ac851181b84ac374872dc5434ee4',1,'seirs_pomp.cc']]],
-  ['node_509',['node',['../seirs__pomp_8cc.html#af4f12397387d83cd9c47b663c74f1f29',1,'seirs_pomp.cc']]]
+  ['makefn_514',['MAKEFN',['../generics_8h.html#ab5553bb581629a90c1654e17490555fe',1,'generics.h']]],
+  ['methods_515',['METHODS',['../init_8h.html#a06d5e17211e44605874f59f330a17c5b',1,'init.h']]]
 ];

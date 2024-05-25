@@ -20,6 +20,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "nodeseq.h", "nodeseq_8h.html", "nodeseq_8h" ],
     [ "parse.cc", "parse_8cc.html", "parse_8cc" ],
     [ "pocket.h", "pocket_8h.html", "pocket_8h" ],
+    [ "pomplink.h", "pomplink_8h.html", "pomplink_8h" ],
     [ "popul_proc.h", "popul__proc_8h.html", "popul__proc_8h" ],
     [ "seir.cc", "seir_8cc.html", "seir_8cc" ],
     [ "seirs_pomp.cc", "seirs__pomp_8cc.html", "seirs__pomp_8cc" ],

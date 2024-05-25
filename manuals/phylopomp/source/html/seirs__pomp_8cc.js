@@ -1,6 +1,7 @@
 var seirs__pomp_8cc =
 [
     [ "Beta", "seirs__pomp_8cc.html#a69481325cd251d42dac1c62fb459cddc", null ],
+    [ "COLOR", "seirs__pomp_8cc.html#a4b5014034c9aac136ab8c82c2d16dc82", null ],
     [ "E", "seirs__pomp_8cc.html#a07484107e6d9fdf38b53edf631d6511d", null ],
     [ "E0", "seirs__pomp_8cc.html#a73f0647950b85591fbe61fff44d45c2e", null ],
     [ "ellE", "seirs__pomp_8cc.html#a064e65664252647026c892fdf367316f", null ],
@@ -9,7 +10,6 @@ var seirs__pomp_8cc =
     [ "I", "seirs__pomp_8cc.html#a60ef6e1bcfabb95cfeb300e1d03ce470", null ],
     [ "I0", "seirs__pomp_8cc.html#a73d113d91ab7ec355ca707cc930eb718", null ],
     [ "lik", "seirs__pomp_8cc.html#aad91cdbfd6d164f4f7c8b573b4784311", null ],
-    [ "LINEAGE", "seirs__pomp_8cc.html#a54933b958c4ef8c9973de90a76666ebe", null ],
     [ "ll", "seirs__pomp_8cc.html#ae1d1ec9482079231e898236e2b23c9ba", null ],
     [ "N", "seirs__pomp_8cc.html#a0240ac851181b84ac374872dc5434ee4", null ],
     [ "node", "seirs__pomp_8cc.html#af4f12397387d83cd9c47b663c74f1f29", null ],

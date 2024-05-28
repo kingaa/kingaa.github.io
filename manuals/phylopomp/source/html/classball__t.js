@@ -25,6 +25,7 @@ var classball__t =
     [ "_deme", "classball__t.html#af5f61c97d6d6963a8687a042f0f04b0e", null ],
     [ "_holder", "classball__t.html#a353e894ba3486713539eff3657137828", null ],
     [ "_owner", "classball__t.html#ae596048561548a1d8334a59af8c2b48d", null ],
+    [ "bytesize", "classball__t.html#a4bba3277085b3623254524797250b6bc", null ],
     [ "color", "classball__t.html#ada6b9e789dc34806789eb6f41892dd46", null ],
     [ "uniq", "classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675", null ]
 ];

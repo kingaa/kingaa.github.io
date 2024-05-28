@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="inventory_8h.html">inventory.h</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> MEMORY_MAX = (1&lt;&lt;28); <span class="comment">// 256MB</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="genealogy_8h.html#a3689f6c3c7b97099618baf1af0df9ae7">   16</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="genealogy_8h.html#a3689f6c3c7b97099618baf1af0df9ae7">MEMORY_MAX</a> = (1&lt;&lt;28); <span class="comment">// 256MB</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classgenealogy__t.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classgenealogy__t.html">genealogy_t</a> : <span class="keyword">public</span> <a class="code" href="classnodeseq__t.html">nodeseq_t</a> {</div>
@@ -220,58 +220,58 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a">  167</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a">lineage_count</a> (<span class="keywordtype">double</span> *tout, <span class="keywordtype">int</span> *deme,</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                      <span class="keywordtype">int</span> *ell, <span class="keywordtype">int</span> *sat, <span class="keywordtype">int</span> *etype)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                      <span class="keywordtype">int</span> *<a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>, <span class="keywordtype">int</span> *sat, <span class="keywordtype">int</span> *etype)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> tcur = <a class="code" href="classgenealogy__t.html#a63bf3e42ee63bdf17f77fc17eb313453">timezero</a>();</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; j++) {</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      tout[j] = tcur;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      deme[j] = j+1;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      sat[j] = ell[j] = 0;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      sat[j] = <a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>[j] = 0;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      etype[j] = 0;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> i = begin(); i != end(); i++) {</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <a class="code" href="classnode__t.html">node_t</a> *p = *i;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">if</span> (tcur &lt; p-&gt;slate) {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        tout += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; ell += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; sat += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        tout += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; <a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; sat += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        deme += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; etype += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        tcur = p-&gt;<a class="code" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; j++) {</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;          tout[j] = tcur;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;          deme[j] = j+1;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;          ell[j] = (ell-<a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>)[j];</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;          <a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>[j] = (<a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>-<a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>)[j];</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;          sat[j] = 0;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;          etype[j] = 0;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      p-&gt;<a class="code" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4">lineage_incr</a>(ell,sat,etype);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      p-&gt;<a class="code" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4">lineage_incr</a>(<a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>,sat,etype);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    tout += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; ell += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; sat += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    tout += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; <a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; sat += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    deme += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; etype += <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    tcur = <a class="code" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45">time</a>();</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>; j++) {</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      tout[j] = tcur;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      sat[j] = ell[j] = 0;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      sat[j] = <a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>[j] = 0;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      deme[j] = j+1;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      etype[j] = 3;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  };</div>
 <div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed">  203</a></span>&#160;  SEXP <a class="code" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed">lineage_count</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    SEXP tout, deme, ell, sat, etype, out, outn;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    SEXP tout, deme, <a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>, sat, etype, out, outn;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">int</span> nt = <a class="code" href="classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3">ntime</a>(<a class="code" href="classgenealogy__t.html#a63bf3e42ee63bdf17f77fc17eb313453">timezero</a>())+1;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">int</span> nl = <a class="code" href="classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>*nt;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    PROTECT(tout = NEW_NUMERIC(nl));</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    PROTECT(deme = NEW_INTEGER(nl));</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    PROTECT(ell = NEW_INTEGER(nl));</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    PROTECT(<a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> = NEW_INTEGER(nl));</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    PROTECT(sat = NEW_INTEGER(nl));</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    PROTECT(etype = NEW_INTEGER(nl));</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    PROTECT(out = NEW_LIST(5));</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    PROTECT(outn = NEW_CHARACTER(5));</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    set_list_elem(out,outn,tout,<span class="stringliteral">&quot;time&quot;</span>,0);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    set_list_elem(out,outn,deme,<span class="stringliteral">&quot;deme&quot;</span>,1);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    set_list_elem(out,outn,ell,<span class="stringliteral">&quot;lineages&quot;</span>,2);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    set_list_elem(out,outn,sat,<span class="stringliteral">&quot;saturation&quot;</span>,3);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    set_list_elem(out,outn,etype,<span class="stringliteral">&quot;event_type&quot;</span>,4);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,tout,<span class="stringliteral">&quot;time&quot;</span>,0);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,deme,<span class="stringliteral">&quot;deme&quot;</span>,1);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,<a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>,<span class="stringliteral">&quot;lineages&quot;</span>,2);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,sat,<span class="stringliteral">&quot;saturation&quot;</span>,3);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,etype,<span class="stringliteral">&quot;event_type&quot;</span>,4);</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    SET_NAMES(out,outn);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed">lineage_count</a>(REAL(tout),INTEGER(deme),INTEGER(ell),</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed">lineage_count</a>(REAL(tout),INTEGER(deme),INTEGER(<a class="code" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>),</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                  INTEGER(sat),INTEGER(etype));</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    UNPROTECT(7);</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> out;</div>
@@ -280,40 +280,40 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49">  227</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49">gendat</a> (<span class="keywordtype">double</span> *tout, <span class="keywordtype">int</span> *anc, <span class="keywordtype">int</span> *lin,</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;               <span class="keywordtype">int</span> *sat, <span class="keywordtype">int</span> *type,</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;               <span class="keywordtype">int</span> *index, <span class="keywordtype">int</span> *child)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span> m, n, k;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordtype">int</span> m, <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>, k;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> i, j;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">for</span> (k = 0, n = 0, i = begin(); i != end(); i++, n++) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">for</span> (k = 0, <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = 0, i = begin(); i != end(); i++, <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>++) {</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <a class="code" href="classnode__t.html">node_t</a> *p = *i;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      assert(!p-&gt;<a class="code" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a>(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>)); <span class="comment">// tree should be pruned first</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      tout[n] = p-&gt;<a class="code" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      tout[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = p-&gt;<a class="code" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        type[n] = 0;            <span class="comment">// root node</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        type[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = 0;            <span class="comment">// root node</span></div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a>(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>)) {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        type[n] = 1;            <span class="comment">// sample node</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        type[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = 1;            <span class="comment">// sample node</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        type[n] = 2;            <span class="comment">// internal node</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        type[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = 2;            <span class="comment">// internal node</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      lin[n] = p-&gt;<a class="code" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>();    <span class="comment">// 0-based indexing</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      sat[n] = p-&gt;<a class="code" href="classnode__t.html#af3d818f04a9a0db70752922a54e984be">nchildren</a>();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      index[n] = k;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      k += sat[n];</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      child[n] = NA_INTEGER;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      lin[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = p-&gt;<a class="code" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>();    <span class="comment">// 0-based indexing</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      sat[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = p-&gt;<a class="code" href="classnode__t.html#af3d818f04a9a0db70752922a54e984be">nchildren</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      index[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = k;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      k += sat[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>];</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      child[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = NA_INTEGER;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        anc[n] = n;             <span class="comment">// 0-based indexing</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        anc[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;             <span class="comment">// 0-based indexing</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">for</span> (m = 0, j = begin(); j != i; j++, m++) {</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;          <a class="code" href="classnode__t.html">node_t</a> *q = *j;</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;          <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#a68679ebb1dd1b102ab4b00a9e665d7df">parent</a>()-&gt;<a class="code" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a> == q-&gt;<a class="code" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>) {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            anc[n] = m;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            anc[<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>] = m;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;          }</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (k = 0, n = 0, i = begin(); i != end(); i++, n++) {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (k = 0, <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = 0, i = begin(); i != end(); i++, <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>++) {</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <a class="code" href="classnode__t.html">node_t</a> *p = *i;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      j = i; j++;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keywordflow">for</span> (m = n+1; j != end(); m++, j++) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keywordflow">for</span> (m = <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>+1; j != end(); m++, j++) {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <a class="code" href="classnode__t.html">node_t</a> *q = *j;</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (p-&gt;<a class="code" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a> == q-&gt;<a class="code" href="classnode__t.html#a68679ebb1dd1b102ab4b00a9e665d7df">parent</a>()-&gt;<a class="code" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>) {</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;          child[k++] = m;</div>
@@ -323,23 +323,23 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  };</div>
 <div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb">  272</a></span>&#160;  SEXP <a class="code" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb">gendat</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    SEXP tout, anc, lin, sat, type, index, child, out, outn;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">size_t</span> n = <a class="code" href="classnodeseq__t.html#a6e3d15ce3489935b81089a55907f9f22">length</a>();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    PROTECT(tout = NEW_NUMERIC(n));</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    PROTECT(type = NEW_INTEGER(n));</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    PROTECT(lin = NEW_INTEGER(n));</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    PROTECT(sat = NEW_INTEGER(n));</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    PROTECT(index = NEW_INTEGER(n));</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    PROTECT(child = NEW_INTEGER(n));</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    PROTECT(anc = NEW_INTEGER(n));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = <a class="code" href="classnodeseq__t.html#a6e3d15ce3489935b81089a55907f9f22">length</a>();</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    PROTECT(tout = NEW_NUMERIC(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    PROTECT(type = NEW_INTEGER(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    PROTECT(lin = NEW_INTEGER(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    PROTECT(sat = NEW_INTEGER(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    PROTECT(index = NEW_INTEGER(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    PROTECT(child = NEW_INTEGER(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    PROTECT(anc = NEW_INTEGER(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    PROTECT(out = NEW_LIST(7));</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    PROTECT(outn = NEW_CHARACTER(7));</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    set_list_elem(out,outn,tout,<span class="stringliteral">&quot;nodetime&quot;</span>,0);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    set_list_elem(out,outn,type,<span class="stringliteral">&quot;nodetype&quot;</span>,1);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    set_list_elem(out,outn,lin,<span class="stringliteral">&quot;lineage&quot;</span>,2);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    set_list_elem(out,outn,sat,<span class="stringliteral">&quot;saturation&quot;</span>,3);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    set_list_elem(out,outn,index,<span class="stringliteral">&quot;index&quot;</span>,4);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    set_list_elem(out,outn,child,<span class="stringliteral">&quot;child&quot;</span>,5);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    set_list_elem(out,outn,anc,<span class="stringliteral">&quot;ancestor&quot;</span>,6);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,tout,<span class="stringliteral">&quot;nodetime&quot;</span>,0);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,type,<span class="stringliteral">&quot;nodetype&quot;</span>,1);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,lin,<span class="stringliteral">&quot;lineage&quot;</span>,2);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,sat,<span class="stringliteral">&quot;saturation&quot;</span>,3);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,index,<span class="stringliteral">&quot;index&quot;</span>,4);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,child,<span class="stringliteral">&quot;child&quot;</span>,5);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(out,outn,anc,<span class="stringliteral">&quot;ancestor&quot;</span>,6);</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    SET_NAMES(out,outn);</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb">gendat</a>(REAL(tout),INTEGER(anc),INTEGER(lin),INTEGER(sat),</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;           INTEGER(type),INTEGER(index),INTEGER(child));</div>
@@ -348,11 +348,11 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  };</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
 <div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7">  299</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7">nsample</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">size_t</span> n = 0;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = 0;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> k = cbegin(); k != cend(); k++) {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordflow">if</span> ((*k)-&gt;holds(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>)) n++;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordflow">if</span> ((*k)-&gt;holds(<a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>)) <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>++;</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">return</span> n;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  };</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="keyword">public</span>:</div>
@@ -366,9 +366,9 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    PROTECT(T0 = NEW_NUMERIC(1));</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    *REAL(T0) = double(<a class="code" href="classgenealogy__t.html#a63bf3e42ee63bdf17f77fc17eb313453">timezero</a>());</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    PROTECT(Nodes = <a class="code" href="classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253">nodeseq_t::structure</a>());</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    set_list_elem(O,On,Time,<span class="stringliteral">&quot;time&quot;</span>,0);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    set_list_elem(O,On,T0,<span class="stringliteral">&quot;t0&quot;</span>,1);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    set_list_elem(O,On,Nodes,<span class="stringliteral">&quot;nodes&quot;</span>,2);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(O,On,Time,<span class="stringliteral">&quot;time&quot;</span>,0);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(O,On,T0,<span class="stringliteral">&quot;t0&quot;</span>,1);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a>(O,On,Nodes,<span class="stringliteral">&quot;nodes&quot;</span>,2);</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    SET_NAMES(O,On);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    UNPROTECT(5);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">return</span> O;</div>
@@ -404,7 +404,7 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
 <div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a2f1f2af36f1456dc4978f19e32acad2f">  359</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classgenealogy__t.html#a2f1f2af36f1456dc4978f19e32acad2f">valid</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{};</div>
 <div class="line"><a name="l00361"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db">  361</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db">check_genealogy_size</a> (<span class="keywordtype">size_t</span> grace = 0)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> maxq = MEMORY_MAX/(<span class="keyword">sizeof</span>(<a class="code" href="classnode__t.html">node_t</a>)+2*<span class="keyword">sizeof</span>(<a class="code" href="classball__t.html">ball_t</a>));</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> maxq = <a class="code" href="genealogy_8h.html#a3689f6c3c7b97099618baf1af0df9ae7">MEMORY_MAX</a>/(<span class="keyword">sizeof</span>(<a class="code" href="classnode__t.html">node_t</a>)+2*<span class="keyword">sizeof</span>(<a class="code" href="classball__t.html">ball_t</a>));</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">if</span> (size() &gt; maxq+grace) {</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;maximum genealogy size exceeded!&quot;</span>); <span class="comment">// #nocov</span></div>
@@ -548,8 +548,8 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160; </div>
 <div class="line"><a name="l00525"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b">  525</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b">scan_label</a> (<span class="keyword">const</span> std::string&amp; s, <a class="code" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>* col,</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                     <a class="code" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> *deme, <a class="code" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> *<a class="code" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45">time</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordtype">size_t</span> n = s.size();</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordflow">if</span> (n &lt; 5)</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &lt; 5)</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: empty or invalid label.&quot;</span>,__func__);</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keywordflow">switch</span> (s[0]) {</div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
@@ -567,8 +567,8 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    }</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    <span class="keywordtype">size_t</span> i = 1;</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    <span class="keywordtype">size_t</span> sz;</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">while</span> (i &lt; n &amp;&amp; s[i] == <span class="charliteral">&#39;_&#39;</span>) i++;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <span class="keywordflow">if</span> (i == n)</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">while</span> (i &lt; <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; s[i] == <span class="charliteral">&#39;_&#39;</span>) i++;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <span class="keywordflow">if</span> (i == <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: no deme specified.&quot;</span>,__func__);</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;(&#39;</span> || s[i] == <span class="charliteral">&#39;)&#39;</span> || s[i] == <span class="charliteral">&#39;,&#39;</span> || s[i] == <span class="charliteral">&#39;;&#39;</span>)</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: invalid deme.&quot;</span>,__func__);</div>
@@ -589,9 +589,9 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other deme-parsing error.&quot;</span>,__func__);</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    }</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    <span class="comment">// skip to branch length</span></div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="keywordflow">while</span> (i &lt; n &amp;&amp; s[i] != <span class="charliteral">&#39;:&#39;</span> &amp;&amp;</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    <span class="keywordflow">while</span> (i &lt; <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; s[i] != <span class="charliteral">&#39;:&#39;</span> &amp;&amp;</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;           s[i] != <span class="charliteral">&#39;(&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;)&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;,&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;;&#39;</span>) i++;</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keywordflow">if</span> (i == n || s[i] != <span class="charliteral">&#39;:&#39;</span>)</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="keywordflow">if</span> (i == <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> || s[i] != <span class="charliteral">&#39;:&#39;</span>)</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: missing or invalid branch length.&quot;</span>,__func__);</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    i++;</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keywordflow">try</span> {</div>
@@ -651,7 +651,7 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;  };</div>
 <div class="line"><a name="l00633"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd">  633</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd">scan_tree</a> (<span class="keyword">const</span> std::string&amp; s,</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;                    <span class="keyword">const</span> <a class="code" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t0, <a class="code" href="classnode__t.html">node_t</a> **root) {</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordtype">size_t</span> n = s.size();</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    <span class="keywordtype">size_t</span> i = 1, j = 1, k;</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keywordtype">size_t</span> stack = 1;</div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    <span class="keywordflow">while</span> (j &lt; n &amp;&amp; stack &gt; 0) {</div>
@@ -681,8 +681,8 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160; </div>
 <div class="line"><a name="l00664"></a><span class="lineno"><a class="line" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459">  664</a></span>&#160;  <a class="code" href="classgenealogy__t.html">genealogy_t</a>&amp; <a class="code" href="classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459">parse</a> (<span class="keyword">const</span> std::string&amp; s, <a class="code" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t0, <a class="code" href="classnode__t.html">node_t</a> *p = 0) {</div>
 <div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordtype">size_t</span> i = 0;</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">size_t</span> n = s.size();</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordflow">while</span> (i &lt; n) {</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    <span class="keywordflow">while</span> (i &lt; <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;      <span class="keywordflow">switch</span> (s[i]) {</div>
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;      <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        {</div>
@@ -812,12 +812,16 @@ $(document).ready(function(){initNavTree('genealogy_8h_source.html',''); initRes
 <div class="ttc" id="aclasspocket__t_html"><div class="ttname"><a href="classpocket__t.html">pocket_t</a></div><div class="ttdoc">A pocket is a set of balls.</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00032">pocket.h:32</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a946cef04d564142f0e900b96a0d64dda"><div class="ttname"><a href="classpocket__t.html#a946cef04d564142f0e900b96a0d64dda">pocket_t::last_ball</a></div><div class="ttdeci">ball_t * last_ball(void) const</div><div class="ttdoc">retrieve the last ball</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00124">pocket.h:124</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_affc2fde2447d03aaf5c8990525c23bf6"><div class="ttname"><a href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">pocket_t::holds</a></div><div class="ttdeci">bool holds(ball_t *b) const</div><div class="ttdoc">does this node hold the given ball?</div><div class="ttdef"><b>Definition:</b> <a href="pocket_8h_source.html#l00111">pocket.h:111</a></div></div>
+<div class="ttc" id="agenealogy_8h_html_a3689f6c3c7b97099618baf1af0df9ae7"><div class="ttname"><a href="genealogy_8h.html#a3689f6c3c7b97099618baf1af0df9ae7">MEMORY_MAX</a></div><div class="ttdeci">static const size_t MEMORY_MAX</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00016">genealogy.h:16</a></div></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
 <div class="ttc" id="ainternal_8h_html_a41dc1dd0917b4ee9721f1d14b9c59946"><div class="ttname"><a href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a></div><div class="ttdeci">Rbyte raw_t</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00043">internal.h:43</a></div></div>
+<div class="ttc" id="ainternal_8h_html_a5a3fde3ea6d48d04abc86836027e2415"><div class="ttname"><a href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a></div><div class="ttdeci">static int set_list_elem(SEXP list, SEXP names, SEXP element, const char *name, int pos)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00053">internal.h:54</a></div></div>
 <div class="ttc" id="ainternal_8h_html_a5c08bbb85c89413f5e8af55c20429103"><div class="ttname"><a href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></div><div class="ttdeci">size_t name_t</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00045">internal.h:45</a></div></div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
 <div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00044">internal.h:44</a></div></div>
 <div class="ttc" id="ainventory_8h_html"><div class="ttname"><a href="inventory_8h.html">inventory.h</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_a9d5bb438b2c23069ed9c406cdf838d7c"><div class="ttname"><a href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a></div><div class="ttdeci">#define ell</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00008">lbdp_pomp.c:8</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00010">lbdp_pomp.c:10</a></div></div>
 <div class="ttc" id="anodeseq_8h_html"><div class="ttname"><a href="nodeseq_8h.html">nodeseq.h</a></div></div>
 <div class="ttc" id="anodeseq_8h_html_ab7cf8c23ad3ad8416142396f5600e3e9"><div class="ttname"><a href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::const_iterator node_it</div><div class="ttdef"><b>Definition:</b> <a href="nodeseq_8h_source.html#l00014">nodeseq.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

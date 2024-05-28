@@ -6,6 +6,7 @@ var classnodeseq__t =
     [ "clean", "classnodeseq__t.html#a165644e4095236a169a47db1a915141f", null ],
     [ "colored", "classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f", null ],
     [ "comb", "classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb", null ],
+    [ "compare", "classnodeseq__t.html#a642a9a6799ed5ee49e620a95a3f884b7", null ],
     [ "dawn", "classnodeseq__t.html#a103886080efad3f60cbbd4bc36fb82d8", null ],
     [ "describe", "classnodeseq__t.html#a1499d26fc7f9d8e287c3e5b3c7e98699", null ],
     [ "destroy_node", "classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276", null ],

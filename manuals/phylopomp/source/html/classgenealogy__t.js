@@ -49,5 +49,6 @@ var classgenealogy__t =
     [ "_ndeme", "classgenealogy__t.html#a83db6a45b9eec1f9b9b790dfbad8e321", null ],
     [ "_t0", "classgenealogy__t.html#ad697bb78f7c78a7de642335ba28afd8a", null ],
     [ "_time", "classgenealogy__t.html#a7d237288f7816ea5c480f9bba9bc9229", null ],
-    [ "_unique", "classgenealogy__t.html#ad97d0f84f97372a052e477fd15f22fa8", null ]
+    [ "_unique", "classgenealogy__t.html#ad97d0f84f97372a052e477fd15f22fa8", null ],
+    [ "magic", "classgenealogy__t.html#aca82b47418a937a0788748b9b757c0a6", null ]
 ];

@@ -22,5 +22,6 @@ var classinventory__t =
     [ "size", "classinventory__t.html#ac2167b30743cac4a8f8bb51bb1a2b143", null ],
     [ "operator>>", "classinventory__t.html#ad2905f4c3cca4bb07c3c8fcf97e8374a", null ],
     [ "operator>>", "classinventory__t.html#a61dc29e132f9492d9631c10bee049cc5", null ],
-    [ "_inven", "classinventory__t.html#aa899a584147d62652092b0eb2840e833", null ]
+    [ "_inven", "classinventory__t.html#aa899a584147d62652092b0eb2840e833", null ],
+    [ "ndeme", "classinventory__t.html#ab2437bddd6447999b248369dec35094d", null ]
 ];

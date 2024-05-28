@@ -88,8 +88,7 @@ $(document).ready(function(){initNavTree('classpopul__proc__t.html',''); initRes
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#friends">Friends</a> &#124;
-<a href="classpopul__proc__t-members.html">List of all members</a>  </div>
+<a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">popul_proc_t&lt; STATE, PARAMETERS, NEVENT, NDEME &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
@@ -136,7 +135,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1cd1ffd27b8a41a0c56482773223d2f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpopul__proc__t.html#a1cd1ffd27b8a41a0c56482773223d2f1">update_IVPs</a> (double *, int)</td></tr>
 <tr class="memdesc:a1cd1ffd27b8a41a0c56482773223d2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">set initial-value parameters  <a href="classpopul__proc__t.html#a1cd1ffd27b8a41a0c56482773223d2f1">More...</a><br /></td></tr>
 <tr class="separator:a1cd1ffd27b8a41a0c56482773223d2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a379239413f290a7744e97a12b50ad2e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpopul__proc__t.html#a379239413f290a7744e97a12b50ad2e0">event_rates</a> (double *rate, int n) const</td></tr>
+<tr class="memitem:a379239413f290a7744e97a12b50ad2e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpopul__proc__t.html#a379239413f290a7744e97a12b50ad2e0">event_rates</a> (double *rate, int <a class="el" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) const</td></tr>
 <tr class="memdesc:a379239413f290a7744e97a12b50ad2e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute event rates  <a href="classpopul__proc__t.html#a379239413f290a7744e97a12b50ad2e0">More...</a><br /></td></tr>
 <tr class="separator:a379239413f290a7744e97a12b50ad2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa79dec602ad44715031a0defa2188374"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpopul__proc__t.html#aa79dec602ad44715031a0defa2188374">rinit</a> (void)=0</td></tr>
@@ -595,12 +594,13 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="popul__proc_8h.html#a456320e2c4ca160f5d1c86b03322a96f">RATE_CALC</a>(<a class="code" href="classpopul__proc__t.html#a8a2a10e0c201ca751a06083d3f3ee3d9">params</a>.lambda * <a class="code" href="classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9">state</a>.n);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="popul__proc_8h.html#a456320e2c4ca160f5d1c86b03322a96f">RATE_CALC</a>(<a class="code" href="classpopul__proc__t.html#a8a2a10e0c201ca751a06083d3f3ee3d9">params</a>.mu * <a class="code" href="classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9">state</a>.n);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="popul__proc_8h.html#a456320e2c4ca160f5d1c86b03322a96f">RATE_CALC</a>(<a class="code" href="classpopul__proc__t.html#a8a2a10e0c201ca751a06083d3f3ee3d9">params</a>.psi * <a class="code" href="classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9">state</a>.n);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (m != n) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of events!&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (m != <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of events!&quot;</span>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> total;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="ttc" id="aclasspopul__proc__t_html_a8a2a10e0c201ca751a06083d3f3ee3d9"><div class="ttname"><a href="classpopul__proc__t.html#a8a2a10e0c201ca751a06083d3f3ee3d9">popul_proc_t::params</a></div><div class="ttdeci">parameters_t params</div><div class="ttdef"><b>Definition:</b> <a href="popul__proc_8h_source.html#l00035">popul_proc.h:35</a></div></div>
 <div class="ttc" id="aclasspopul__proc__t_html_a989ef80c5a2190312c83f843763213d9"><div class="ttname"><a href="classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9">popul_proc_t::state</a></div><div class="ttdeci">state_t state</div><div class="ttdef"><b>Definition:</b> <a href="popul__proc_8h_source.html#l00034">popul_proc.h:34</a></div></div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00010">lbdp_pomp.c:10</a></div></div>
 <div class="ttc" id="apopul__proc_8h_html_a456320e2c4ca160f5d1c86b03322a96f"><div class="ttname"><a href="popul__proc_8h.html#a456320e2c4ca160f5d1c86b03322a96f">RATE_CALC</a></div><div class="ttdeci">#define RATE_CALC(X)</div><div class="ttdef"><b>Definition:</b> <a href="popul__proc_8h_source.html#l00179">popul_proc.h:179</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -960,9 +960,10 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="lbdp_8cc_source.html#l00046">46</a> of file <a class="el" href="lbdp_8cc_source.html">lbdp.cc</a>.</p>
 <div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                               {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> m = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(n0);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (m != n) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of initial-value parameters!&quot;</span>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(<a class="code" href="lbdp__pomp_8c.html#a5ab4ec96e05f898b0b753c48cbb63e72">n0</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (m != <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of initial-value parameters!&quot;</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="ttc" id="albdp__pomp_8c_html_a5ab4ec96e05f898b0b753c48cbb63e72"><div class="ttname"><a href="lbdp__pomp_8c.html#a5ab4ec96e05f898b0b753c48cbb63e72">n0</a></div><div class="ttdeci">#define n0</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00007">lbdp_pomp.c:7</a></div></div>
 <div class="ttc" id="apopul__proc_8h_html_a8735aaa74e4f4154281d48aaaec0483c"><div class="ttname"><a href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a></div><div class="ttdeci">#define PARAM_SET(X)</div><div class="ttdef"><b>Definition:</b> <a href="popul__proc_8h_source.html#l00177">popul_proc.h:177</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -998,11 +999,14 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="lbdp_8cc_source.html#l00037">37</a> of file <a class="el" href="lbdp_8cc_source.html">lbdp.cc</a>.</p>
 <div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                                 {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> m = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(lambda);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(mu);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(psi);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (m != n) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of parameters!&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(<a class="code" href="lbdp__pomp_8c.html#ae58c3260bfb1facea39e0aec11acee3a">lambda</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(<a class="code" href="lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144">mu</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(<a class="code" href="lbdp__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (m != <a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of parameters!&quot;</span>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="ttc" id="albdp__pomp_8c_html_a16e1e5ba474fcf3e45ade32acf66c144"><div class="ttname"><a href="lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144">mu</a></div><div class="ttdeci">#define mu</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00005">lbdp_pomp.c:5</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_ae58c3260bfb1facea39e0aec11acee3a"><div class="ttname"><a href="lbdp__pomp_8c.html#ae58c3260bfb1facea39e0aec11acee3a">lambda</a></div><div class="ttdeci">#define lambda</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00004">lbdp_pomp.c:4</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_aebfab0be95178c0a2497fca46e5eb377"><div class="ttname"><a href="lbdp__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a></div><div class="ttdeci">#define psi</div><div class="ttdef"><b>Definition:</b> <a href="lbdp__pomp_8c_source.html#l00006">lbdp_pomp.c:6</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1059,12 +1063,12 @@ template&lt;class STATE , class PARAMETERS , size_t NEVENT, size_t NDEME = 1&gt;
 <div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                                {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  std::string t = tab + <span class="stringliteral">&quot;  &quot;</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  std::string p = tab + <span class="stringliteral">&quot;parameter:\n&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(lambda)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(mu)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(psi)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(n0);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(<a class="code" href="lbdp__pomp_8c.html#ae58c3260bfb1facea39e0aec11acee3a">lambda</a>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(<a class="code" href="lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144">mu</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(<a class="code" href="lbdp__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(<a class="code" href="lbdp__pomp_8c.html#a5ab4ec96e05f898b0b753c48cbb63e72">n0</a>);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  std::string s = tab + <span class="stringliteral">&quot;state:\n&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    + <a class="code" href="popul__proc_8h.html#a64030cbe7357ebee096f09691c2350b9">YAML_STATE</a>(n);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    + <a class="code" href="popul__proc_8h.html#a64030cbe7357ebee096f09691c2350b9">YAML_STATE</a>(<a class="code" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordflow">return</span> p+s;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="ttc" id="apopul__proc_8h_html_a0dbabba4f59f5883641f8dc2fdc0ef81"><div class="ttname"><a href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a></div><div class="ttdeci">#define YAML_PARAM(X)</div><div class="ttdef"><b>Definition:</b> <a href="popul__proc_8h_source.html#l00180">popul_proc.h:180</a></div></div>
@@ -1175,7 +1179,7 @@ template&lt;class STATE , class PARAMETERS , size_t NEVENT, size_t NDEME = 1&gt;
 </div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
+<h2 class="groupheader">Field Documentation</h2>
 <a id="a491ddc88dbcd6fd3dc97a3f9ec8a6ef7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a491ddc88dbcd6fd3dc97a3f9ec8a6ef7">&#9670;&nbsp;</a></span>current</h2>
 

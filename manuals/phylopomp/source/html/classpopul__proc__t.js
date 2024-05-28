@@ -25,6 +25,8 @@ var classpopul__proc__t =
     [ "operator>>", "classpopul__proc__t.html#a35e2084126f7c826780e23f12204c33b", null ],
     [ "current", "classpopul__proc__t.html#a491ddc88dbcd6fd3dc97a3f9ec8a6ef7", null ],
     [ "event", "classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7", null ],
+    [ "ndeme", "classpopul__proc__t.html#a9253a17f76fa0628b4c8cd5f78298cf3", null ],
+    [ "nevent", "classpopul__proc__t.html#a33698e6780d44b730271a27dcf43fac8", null ],
     [ "next", "classpopul__proc__t.html#ae060467dcae23466c0a03a2b195a6b59", null ],
     [ "params", "classpopul__proc__t.html#a8a2a10e0c201ca751a06083d3f3ee3d9", null ],
     [ "state", "classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9", null ]

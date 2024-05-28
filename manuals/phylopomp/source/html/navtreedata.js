@@ -26,11 +26,11 @@ var NAVTREE =
 [
   [ "phylopomp", "index.html", [
     [ "Source code for Markov genealogy process simulators", "index.html", null ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
+      [ "Data Fields", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
@@ -40,7 +40,7 @@ var NAVTREE =
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
+      [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
@@ -56,8 +56,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"decls_8h.html",
-"structsir__parameters__t.html"
+"classpopul__proc__t.html#aa38e91ea46e8712befe1fcadf1ac74bd",
+"structlbdp__state__t.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

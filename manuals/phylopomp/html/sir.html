@@ -99,17 +99,9 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 <td>
 <p>immunity waning rate</p>
 </td></tr>
-<tr><td><code id="S0">S0</code></td>
+<tr><td><code id="S0">S0</code>, <code id="I0">I0</code>, <code id="R0">R0</code></td>
 <td>
-<p>initial size of susceptible population.</p>
-</td></tr>
-<tr><td><code id="I0">I0</code></td>
-<td>
-<p>initial size of infected population.</p>
-</td></tr>
-<tr><td><code id="R0">R0</code></td>
-<td>
-<p>initial size of recovered population.</p>
+<p>initial sizes of susceptible, infected, and recovered populations, respectively.</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -135,11 +127,20 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 </p>
 
 
+<h3>References</h3>
+
+<p>A. A. King, Q. Lin, and E. L. Ionides. Exact phylodynamic likelihood via structured Markov genealogy processes. <em>arXiv</em> 2405.17032, 2024. DOI:10.48550/arxiv.2405.17032
+</p>
+<p>A. A. King, Q. Lin, and E. L. Ionides. Markov genealogy processes. <em>Theoretical Population Biology</em> <b>143</b>, 77&ndash;91, 2022. DOI:10.1016/j.tpb.2021.11.003
+</p>
+
+
 <h3>See Also</h3>
 
 <p>More example genealogy processes: 
 <code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
 <code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/s2i2r2.html">s2i2r2</a></code>,
 <code><a href="../../phylopomp/help/seir.html">seir</a></code>,
 <code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
 <code><a href="../../phylopomp/help/siir.html">siir</a></code>,
@@ -164,7 +165,7 @@ simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
 simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.12.0.1 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.13.1.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

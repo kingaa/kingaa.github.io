@@ -22,8 +22,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "pocket.h", "pocket_8h.html", "pocket_8h" ],
     [ "pomplink.h", "pomplink_8h.html", "pomplink_8h" ],
     [ "popul_proc.h", "popul__proc_8h.html", "popul__proc_8h" ],
+    [ "s2i2r2.cc", "s2i2r2_8cc.html", "s2i2r2_8cc" ],
     [ "seir.cc", "seir_8cc.html", "seir_8cc" ],
-    [ "seirs_pomp.cc", "seirs__pomp_8cc.html", "seirs__pomp_8cc" ],
     [ "si2r.cc", "si2r_8cc.html", "si2r_8cc" ],
     [ "siir.cc", "siir_8cc.html", "siir_8cc" ],
     [ "sir.cc", "sir_8cc.html", "sir_8cc" ]

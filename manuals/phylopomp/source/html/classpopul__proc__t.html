@@ -1000,10 +1000,9 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> m = 0;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(lambda);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(mu);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(<a class="code" href="seirs__pomp_8cc.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="popul__proc_8h.html#a8735aaa74e4f4154281d48aaaec0483c">PARAM_SET</a>(psi);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (m != n) <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;wrong number of parameters!&quot;</span>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="ttc" id="aseirs__pomp_8cc_html_aebfab0be95178c0a2497fca46e5eb377"><div class="ttname"><a href="seirs__pomp_8cc.html#aebfab0be95178c0a2497fca46e5eb377">psi</a></div><div class="ttdeci">#define psi</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8cc_source.html#l00034">seirs_pomp.cc:34</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1062,7 +1061,7 @@ template&lt;class STATE , class PARAMETERS , size_t NEVENT, size_t NDEME = 1&gt;
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  std::string p = tab + <span class="stringliteral">&quot;parameter:\n&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(lambda)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(mu)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(<a class="code" href="seirs__pomp_8cc.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(psi)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    + <a class="code" href="popul__proc_8h.html#a0dbabba4f59f5883641f8dc2fdc0ef81">YAML_PARAM</a>(n0);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  std::string s = tab + <span class="stringliteral">&quot;state:\n&quot;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    + <a class="code" href="popul__proc_8h.html#a64030cbe7357ebee096f09691c2350b9">YAML_STATE</a>(n);</div>
@@ -1363,6 +1362,7 @@ template&lt;class STATE , class PARAMETERS , size_t NEVENT, size_t NDEME = 1&gt;
 <li>src/<a class="el" href="popul__proc_8h_source.html">popul_proc.h</a></li>
 <li>src/<a class="el" href="lbdp_8cc_source.html">lbdp.cc</a></li>
 <li>src/<a class="el" href="moran_8cc_source.html">moran.cc</a></li>
+<li>src/<a class="el" href="s2i2r2_8cc_source.html">s2i2r2.cc</a></li>
 <li>src/<a class="el" href="seir_8cc_source.html">seir.cc</a></li>
 <li>src/<a class="el" href="si2r_8cc_source.html">si2r.cc</a></li>
 <li>src/<a class="el" href="siir_8cc_source.html">siir.cc</a></li>

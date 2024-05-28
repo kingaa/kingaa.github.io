@@ -39,7 +39,8 @@ function processMathHTML() {
   lineages = FALSE,
   newick = FALSE,
   nsample = FALSE,
-  genealogy = FALSE
+  genealogy = FALSE,
+  gendat = FALSE
 )
 </code></pre>
 
@@ -99,6 +100,10 @@ function processMathHTML() {
 <td>
 <p>logical; return the lineage-traced genealogy?</p>
 </td></tr>
+<tr><td><code id="gendat">gendat</code></td>
+<td>
+<p>logical; return the data-frame format?</p>
+</td></tr>
 </table>
 
 
@@ -126,6 +131,8 @@ function processMathHTML() {
 </dd>
 <dt>lineages</dt><dd><p>a <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the lineage count function through time</p>
 </dd>
+<dt>gendat</dt><dd><p>a <code><a href="../../tibble/help/tibble.html">tibble</a></code> containing the (obscured) genealogy in a data-frame format</p>
+</dd>
 <dt>genealogy</dt><dd><p>the lineage-traced genealogy (as a raw vector)</p>
 </dd>
 </dl>
@@ -149,7 +156,7 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.12.0.1 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.13.1.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

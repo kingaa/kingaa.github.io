@@ -109,21 +109,9 @@ seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0)
 <td>
 <p>rate of waning of immunity</p>
 </td></tr>
-<tr><td><code id="S0">S0</code></td>
+<tr><td><code id="S0">S0</code>, <code id="E0">E0</code>, <code id="I0">I0</code>, <code id="R0">R0</code></td>
 <td>
-<p>initial size of susceptible population</p>
-</td></tr>
-<tr><td><code id="E0">E0</code></td>
-<td>
-<p>initial size of exposed population</p>
-</td></tr>
-<tr><td><code id="I0">I0</code></td>
-<td>
-<p>initial size of infected population</p>
-</td></tr>
-<tr><td><code id="R0">R0</code></td>
-<td>
-<p>initial size of immune population</p>
+<p>initial sizes of S, E, I, R compartments, respectively.</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -149,11 +137,18 @@ seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0)
 </p>
 
 
+<h3>References</h3>
+
+<p>A. A. King, Q. Lin, and E. L. Ionides. Exact phylodynamic likelihood via structured Markov genealogy processes. <em>arXiv</em> 2405.17032, 2024. DOI:10.48550/arxiv.2405.17032
+</p>
+
+
 <h3>See Also</h3>
 
 <p>More example genealogy processes: 
 <code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
 <code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/s2i2r2.html">s2i2r2</a></code>,
 <code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
 <code><a href="../../phylopomp/help/siir.html">siir</a></code>,
 <code><a href="../../phylopomp/help/simulate.html">simulate</a>()</code>,
@@ -181,7 +176,7 @@ simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt;
   plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.12.0.1 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.13.1.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

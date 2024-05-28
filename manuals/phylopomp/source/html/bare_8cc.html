@@ -129,6 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8158e143efd87cb657d01da7e41cae96"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bare_8cc.html#a8158e143efd87cb657d01da7e41cae96">yaml</a> (SEXP State)</td></tr>
 <tr class="memdesc:a8158e143efd87cb657d01da7e41cae96"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract a YAML description  <a href="bare_8cc.html#a8158e143efd87cb657d01da7e41cae96">More...</a><br /></td></tr>
 <tr class="separator:a8158e143efd87cb657d01da7e41cae96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9aacb867dca35703b1e2c3b6bd17bcc"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bare_8cc.html#ad9aacb867dca35703b1e2c3b6bd17bcc">gendat</a> (SEXP State)</td></tr>
+<tr class="memdesc:ad9aacb867dca35703b1e2c3b6bd17bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">data-frame format  <a href="bare_8cc.html#ad9aacb867dca35703b1e2c3b6bd17bcc">More...</a><br /></td></tr>
+<tr class="separator:ad9aacb867dca35703b1e2c3b6bd17bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ada4a251e5c2e96bb99f11b015e9bdd6a"></a>
@@ -170,7 +173,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> out;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
 <div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00022">genealogy.h:22</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_af52c5305df1b672659c0af0ec91f559e"><div class="ttname"><a href="classgenealogy__t.html#af52c5305df1b672659c0af0ec91f559e">genealogy_t::curtail</a></div><div class="ttdeci">void curtail(slate_t tnew)</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00402">genealogy.h:402</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_af52c5305df1b672659c0af0ec91f559e"><div class="ttname"><a href="classgenealogy__t.html#af52c5305df1b672659c0af0ec91f559e">genealogy_t::curtail</a></div><div class="ttdeci">void curtail(slate_t tnew)</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00474">genealogy.h:474</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00028">generics.h:28</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -191,6 +194,68 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="548,97,687,123"/>
 <area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="735,122,877,149"/>
 <area shape="rect" href="classball__t.html#aa43e86ea4b912fb0cf99565adc9ed2fa" title="in whose pocket do I lie?" alt="" coords="925,198,1032,225"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9aacb867dca35703b1e2c3b6bd17bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9aacb867dca35703b1e2c3b6bd17bcc">&#9670;&nbsp;</a></span>gendat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SEXP gendat </td>
+          <td>(</td>
+          <td class="paramtype">SEXP&#160;</td>
+          <td class="paramname"><em>State</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>data-frame format </p>
+
+<p class="definition">Definition at line <a class="el" href="bare_8cc_source.html#l00027">27</a> of file <a class="el" href="bare_8cc_source.html">bare.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                           {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> A = State;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    A.<a class="code" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380">prune</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    A.<a class="code" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8">obscure</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    A.<a class="code" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">trace_lineages</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> A.<a class="code" href="classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49">gendat</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  }</div>
+<div class="ttc" id="aclassgenealogy__t_html_a46e674c719812e57f14bc7e50cc0c380"><div class="ttname"><a href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380">genealogy_t::prune</a></div><div class="ttdeci">genealogy_t &amp; prune(void)</div><div class="ttdoc">prune the tree (drop all black balls)</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00443">genealogy.h:443</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_ab9e3fa3675e983dcf930d44b73f75dd8"><div class="ttname"><a href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8">genealogy_t::obscure</a></div><div class="ttdeci">genealogy_t &amp; obscure(void)</div><div class="ttdoc">erase all deme information</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00454">genealogy.h:454</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_ad8557c4bc55d1bc9233d8862f9547c49"><div class="ttname"><a href="classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49">genealogy_t::gendat</a></div><div class="ttdeci">void gendat(double *tout, int *anc, int *lin, int *sat, int *type, int *index, int *child) const</div><div class="ttdoc">nodelist in data-frame format</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00227">genealogy.h:227</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a7d003899b6bbc529699e1a02858de8ce"><div class="ttname"><a href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">nodeseq_t::trace_lineages</a></div><div class="ttdeci">void trace_lineages(void)</div><div class="ttdef"><b>Definition:</b> <a href="nodeseq_8h_source.html#l00249">nodeseq.h:249</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bare_8cc_ad9aacb867dca35703b1e2c3b6bd17bcc_cgraph.png" border="0" usemap="#abare_8cc_ad9aacb867dca35703b1e2c3b6bd17bcc_cgraph" alt=""/></div>
+<map name="abare_8cc_ad9aacb867dca35703b1e2c3b6bd17bcc_cgraph" id="abare_8cc_ad9aacb867dca35703b1e2c3b6bd17bcc_cgraph">
+<area shape="rect" title="data&#45;frame format" alt="" coords="5,250,72,277"/>
+<area shape="rect" href="classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49" title="nodelist in data&#45;frame format" alt="" coords="569,22,723,49"/>
+<area shape="rect" href="classgenealogy__t.html#ab9e3fa3675e983dcf930d44b73f75dd8" title="erase all deme information" alt="" coords="135,275,297,302"/>
+<area shape="rect" href="classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380" title="prune the tree (drop all black balls)" alt="" coords="143,225,289,251"/>
+<area shape="rect" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce" title=" " alt="" coords="120,351,312,378"/>
+<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="796,123,916,150"/>
+<area shape="rect" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="797,22,915,49"/>
+<area shape="rect" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="795,326,917,353"/>
+<area shape="rect" href="classnode__t.html#af3d818f04a9a0db70752922a54e984be" title="number of descendants" alt="" coords="789,73,923,99"/>
+<area shape="rect" href="classnode__t.html#a68679ebb1dd1b102ab4b00a9e665d7df" title=" " alt="" coords="987,22,1103,49"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="973,123,1116,150"/>
+<area shape="rect" href="classball__t.html#aa43e86ea4b912fb0cf99565adc9ed2fa" title="in whose pocket do I lie?" alt="" coords="1164,225,1271,251"/>
+<area shape="rect" href="classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f" title="Get all balls of a color." alt="" coords="360,225,505,251"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="366,275,499,302"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="381,326,484,353"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="553,275,739,302"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="581,326,711,353"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="787,174,925,201"/>
+<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="369,174,496,201"/>
+<area shape="rect" href="classnode__t.html#ab10430fd8addd5852699c30a23729880" title="pointer to my green ball" alt="" coords="575,123,717,150"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="607,174,685,201"/>
+<area shape="rect" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27" title=" " alt="" coords="553,377,739,403"/>
 </map>
 </div>
 
@@ -219,7 +284,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classgenealogy__t.html">genealogy_t</a> A = State;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> mkString(A.<a class="code" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">yaml</a>().c_str());</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  }</div>
-<div class="ttc" id="aclassgenealogy__t_html_a199104f51028c884cf9751fcbfa7ff45"><div class="ttname"><a href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">genealogy_t::yaml</a></div><div class="ttdeci">virtual std::string yaml(std::string tab=&quot;&quot;) const</div><div class="ttdoc">machine-readable info</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00268">genealogy.h:268</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a199104f51028c884cf9751fcbfa7ff45"><div class="ttname"><a href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">genealogy_t::yaml</a></div><div class="ttdeci">virtual std::string yaml(std::string tab=&quot;&quot;) const</div><div class="ttdoc">machine-readable info</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00340">genealogy.h:340</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

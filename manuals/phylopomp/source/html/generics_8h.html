@@ -108,16 +108,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="generics_8h__dep__incl.png" border="0" usemap="#asrc_2generics_8hdep" alt=""/></div>
 <map name="asrc_2generics_8hdep" id="asrc_2generics_8hdep">
-<area shape="rect" title=" " alt="" coords="494,5,606,32"/>
+<area shape="rect" title=" " alt="" coords="557,5,669,32"/>
 <area shape="rect" href="bare_8cc.html" title=" " alt="" coords="5,80,97,107"/>
 <area shape="rect" href="getinfo_8cc.html" title=" " alt="" coords="122,80,231,107"/>
 <area shape="rect" href="lbdp_8cc.html" title=" " alt="" coords="255,80,346,107"/>
 <area shape="rect" href="moran_8cc.html" title=" " alt="" coords="371,80,476,107"/>
 <area shape="rect" href="parse_8cc.html" title=" " alt="" coords="501,80,599,107"/>
-<area shape="rect" href="seir_8cc.html" title=" " alt="" coords="624,80,711,107"/>
-<area shape="rect" href="si2r_8cc.html" title=" " alt="" coords="735,80,821,107"/>
-<area shape="rect" href="siir_8cc.html" title=" " alt="" coords="846,80,929,107"/>
-<area shape="rect" href="sir_8cc.html" title=" " alt="" coords="953,80,1032,107"/>
+<area shape="rect" href="s2i2r2_8cc.html" title=" " alt="" coords="624,80,727,107"/>
+<area shape="rect" href="seir_8cc.html" title=" " alt="" coords="751,80,837,107"/>
+<area shape="rect" href="si2r_8cc.html" title=" " alt="" coords="861,80,948,107"/>
+<area shape="rect" href="siir_8cc.html" title=" " alt="" coords="973,80,1055,107"/>
+<area shape="rect" href="sir_8cc.html" title=" " alt="" coords="1080,80,1159,107"/>
 </map>
 </div>
 </div>
@@ -176,6 +177,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aac836aeca3f60d7f55e7917dd56aac9a"><td class="memTemplItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a">lineage_count</a> (const TYPE &amp;G)</td></tr>
 <tr class="memdesc:aac836aeca3f60d7f55e7917dd56aac9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of lineages through time  <a href="generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a">More...</a><br /></td></tr>
 <tr class="separator:aac836aeca3f60d7f55e7917dd56aac9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04f8a891b3066d0829d45a8d9f69ca2"><td class="memTemplParams" colspan="2">template&lt;class TYPE &gt; </td></tr>
+<tr class="memitem:aa04f8a891b3066d0829d45a8d9f69ca2"><td class="memTemplItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="generics_8h.html#aa04f8a891b3066d0829d45a8d9f69ca2">gendat</a> (const TYPE &amp;G)</td></tr>
+<tr class="memdesc:aa04f8a891b3066d0829d45a8d9f69ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">data-frame format  <a href="generics_8h.html#aa04f8a891b3066d0829d45a8d9f69ca2">More...</a><br /></td></tr>
+<tr class="separator:aa04f8a891b3066d0829d45a8d9f69ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d5d2f1938d48ca0dc500a47d8130a1"><td class="memTemplParams" colspan="2">template&lt;class TYPE &gt; </td></tr>
 <tr class="memitem:ac2d5d2f1938d48ca0dc500a47d8130a1"><td class="memTemplItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1">make</a> (SEXP Params, SEXP IVPs, SEXP T0)</td></tr>
 <tr class="memdesc:ac2d5d2f1938d48ca0dc500a47d8130a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialization  <a href="generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1">More...</a><br /></td></tr>
@@ -223,7 +228,7 @@ Functions</h2></td></tr>
 <div class="line">    return genealogy&lt;TYPE&gt;(State);                              \</div>
 <div class="line">  }                                                             \</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00135">135</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00141">141</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
 
 </div>
 </div>
@@ -265,13 +270,13 @@ Functions</h2></td></tr>
 <div class="line"><a class="code" href="generics_8h.html#aec40d1cebbd63ef2703d23178f842ac5">    YAMLFN</a>(X,TYPE)                              \</div>
 <div class="line">                                                \</div>
 <div class="line">  }                                             \</div>
-<div class="ttc" id="agenerics_8h_html_a5361bd571982c3e0ac8ba0e3d879906d"><div class="ttname"><a href="generics_8h.html#a5361bd571982c3e0ac8ba0e3d879906d">GENEALFN</a></div><div class="ttdeci">#define GENEALFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00135">generics.h:135</a></div></div>
-<div class="ttc" id="agenerics_8h_html_ab5553bb581629a90c1654e17490555fe"><div class="ttname"><a href="generics_8h.html#ab5553bb581629a90c1654e17490555fe">MAKEFN</a></div><div class="ttdeci">#define MAKEFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00123">generics.h:123</a></div></div>
-<div class="ttc" id="agenerics_8h_html_ac4e97b3ff727b4ac0a73567317716ab2"><div class="ttname"><a href="generics_8h.html#ac4e97b3ff727b4ac0a73567317716ab2">RUNFN</a></div><div class="ttdeci">#define RUNFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00131">generics.h:131</a></div></div>
-<div class="ttc" id="agenerics_8h_html_aec40d1cebbd63ef2703d23178f842ac5"><div class="ttname"><a href="generics_8h.html#aec40d1cebbd63ef2703d23178f842ac5">YAMLFN</a></div><div class="ttdeci">#define YAMLFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00139">generics.h:139</a></div></div>
-<div class="ttc" id="agenerics_8h_html_af39875085676ef6b9342e125665b3834"><div class="ttname"><a href="generics_8h.html#af39875085676ef6b9342e125665b3834">REVIVEFN</a></div><div class="ttdeci">#define REVIVEFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00127">generics.h:127</a></div></div>
+<div class="ttc" id="agenerics_8h_html_a5361bd571982c3e0ac8ba0e3d879906d"><div class="ttname"><a href="generics_8h.html#a5361bd571982c3e0ac8ba0e3d879906d">GENEALFN</a></div><div class="ttdeci">#define GENEALFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00141">generics.h:141</a></div></div>
+<div class="ttc" id="agenerics_8h_html_ab5553bb581629a90c1654e17490555fe"><div class="ttname"><a href="generics_8h.html#ab5553bb581629a90c1654e17490555fe">MAKEFN</a></div><div class="ttdeci">#define MAKEFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00129">generics.h:129</a></div></div>
+<div class="ttc" id="agenerics_8h_html_ac4e97b3ff727b4ac0a73567317716ab2"><div class="ttname"><a href="generics_8h.html#ac4e97b3ff727b4ac0a73567317716ab2">RUNFN</a></div><div class="ttdeci">#define RUNFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00137">generics.h:137</a></div></div>
+<div class="ttc" id="agenerics_8h_html_aec40d1cebbd63ef2703d23178f842ac5"><div class="ttname"><a href="generics_8h.html#aec40d1cebbd63ef2703d23178f842ac5">YAMLFN</a></div><div class="ttdeci">#define YAMLFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00145">generics.h:145</a></div></div>
+<div class="ttc" id="agenerics_8h_html_af39875085676ef6b9342e125665b3834"><div class="ttname"><a href="generics_8h.html#af39875085676ef6b9342e125665b3834">REVIVEFN</a></div><div class="ttdeci">#define REVIVEFN(X, TYPE)</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00133">generics.h:133</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00143">143</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00149">149</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
 
 </div>
 </div>
@@ -303,9 +308,9 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    SEXP <a class="code" href="generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1">make</a> ## X (SEXP Params, SEXP IVPs, SEXP T0) { \</div>
 <div class="line">    return make&lt;TYPE&gt;(Params,IVPs,T0);                                  \</div>
 <div class="line">  }                                                                     \</div>
-<div class="ttc" id="agenerics_8h_html_ac2d5d2f1938d48ca0dc500a47d8130a1"><div class="ttname"><a href="generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1">make</a></div><div class="ttdeci">SEXP make(SEXP Params, SEXP IVPs, SEXP T0)</div><div class="ttdoc">initialization</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00068">generics.h:68</a></div></div>
+<div class="ttc" id="agenerics_8h_html_ac2d5d2f1938d48ca0dc500a47d8130a1"><div class="ttname"><a href="generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1">make</a></div><div class="ttdeci">SEXP make(SEXP Params, SEXP IVPs, SEXP T0)</div><div class="ttdoc">initialization</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00074">generics.h:74</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00123">123</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00129">129</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
 
 </div>
 </div>
@@ -337,9 +342,9 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    SEXP <a class="code" href="generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373">revive</a> ## X (SEXP State, SEXP Params) {   \</div>
 <div class="line">    return revive&lt;TYPE&gt;(State,Params);                                  \</div>
 <div class="line">  }                                                                     \</div>
-<div class="ttc" id="agenerics_8h_html_a2bfed015514f5a852e1fb7cf5c776373"><div class="ttname"><a href="generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373">revive</a></div><div class="ttdeci">SEXP revive(SEXP State, SEXP Params)</div><div class="ttdoc">refresh parameters</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00087">generics.h:87</a></div></div>
+<div class="ttc" id="agenerics_8h_html_a2bfed015514f5a852e1fb7cf5c776373"><div class="ttname"><a href="generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373">revive</a></div><div class="ttdeci">SEXP revive(SEXP State, SEXP Params)</div><div class="ttdoc">refresh parameters</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00093">generics.h:93</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00127">127</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00133">133</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
 
 </div>
 </div>
@@ -371,9 +376,9 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    SEXP <a class="code" href="generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe">run</a> ## X (SEXP State, SEXP Times) {  \</div>
 <div class="line">    return run&lt;TYPE&gt;(State,Times);                              \</div>
 <div class="line">  }                                                             \</div>
-<div class="ttc" id="agenerics_8h_html_a2a1306a52d2fb7322440ecd1f0754dbe"><div class="ttname"><a href="generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe">run</a></div><div class="ttdeci">SEXP run(SEXP State, SEXP Tout)</div><div class="ttdoc">run simulations</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00099">generics.h:99</a></div></div>
+<div class="ttc" id="agenerics_8h_html_a2a1306a52d2fb7322440ecd1f0754dbe"><div class="ttname"><a href="generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe">run</a></div><div class="ttdeci">SEXP run(SEXP State, SEXP Tout)</div><div class="ttdoc">run simulations</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00105">generics.h:105</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00131">131</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00137">137</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
 
 </div>
 </div>
@@ -407,7 +412,7 @@ Functions</h2></td></tr>
 <div class="line">  }                                                     \</div>
 <div class="ttc" id="agenerics_8h_html_aa0dc1a38b4f1568720c53ba3fb48f693"><div class="ttname"><a href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a></div><div class="ttdeci">SEXP yaml(const TYPE &amp;X)</div><div class="ttdoc">human/machine readable output</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00038">generics.h:38</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00139">139</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00145">145</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
 
 </div>
 </div>
@@ -439,6 +444,33 @@ template&lt;class TYPE &gt; </div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="aa04f8a891b3066d0829d45a8d9f69ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04f8a891b3066d0829d45a8d9f69ca2">&#9670;&nbsp;</a></span>gendat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">SEXP gendat </td>
+          <td>(</td>
+          <td class="paramtype">const TYPE &amp;&#160;</td>
+          <td class="paramname"><em>G</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>data-frame format </p>
+
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00068">68</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                            {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">return</span> G.gendat();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a8ecffbf3ac4fb49c4cd4dbb7a77ad12d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ecffbf3ac4fb49c4cd4dbb7a77ad12d">&#9670;&nbsp;</a></span>genealogy()</h2>
 
@@ -459,15 +491,15 @@ template&lt;class TYPE &gt; </div>
 
 <p>extract the bare genealogy </p>
 
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00114">114</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                            {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  TYPE A = State;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  SEXP out;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  PROTECT(out = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A.geneal));</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  SET_ATTR(out,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  UNPROTECT(1);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00120">120</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                            {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  TYPE A = State;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  SEXP out;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  PROTECT(out = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A.geneal));</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  SET_ATTR(out,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  UNPROTECT(1);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition:</b> <a href="generics_8h_source.html#l00028">generics.h:28</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -544,23 +576,23 @@ template&lt;class TYPE &gt; </div>
 
 <p>initialization </p>
 
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00068">68</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                            {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  SEXP o;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  PROTECT(Params = AS_NUMERIC(Params));</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  PROTECT(IVPs = AS_NUMERIC(IVPs));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  PROTECT(T0 = AS_NUMERIC(T0));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  GetRNGstate();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  TYPE X = *REAL(T0);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  X.update_params(REAL(Params),LENGTH(Params));</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  X.update_IVPs(REAL(IVPs),LENGTH(IVPs));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  X.rinit();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  X.update_clocks();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  PutRNGstate();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  PROTECT(o = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(X));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  UNPROTECT(4);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> o;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00074">74</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  SEXP o;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  PROTECT(Params = AS_NUMERIC(Params));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  PROTECT(IVPs = AS_NUMERIC(IVPs));</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  PROTECT(T0 = AS_NUMERIC(T0));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  GetRNGstate();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  TYPE X = *REAL(T0);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  X.update_params(REAL(Params),LENGTH(Params));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  X.update_IVPs(REAL(IVPs),LENGTH(IVPs));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  X.rinit();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  X.update_clocks();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  PutRNGstate();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  PROTECT(o = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(X));</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  UNPROTECT(4);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">return</span> o;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -647,16 +679,7 @@ template&lt;class TYPE &gt; </div>
 <div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                       {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">return</span> ScalarInteger(X.nsample());</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="generics_8h_adcf8ea15d650a3c74806cf20b353d8e8_icgraph.png" border="0" usemap="#agenerics_8h_adcf8ea15d650a3c74806cf20b353d8e8_icgraph" alt=""/></div>
-<map name="agenerics_8h_adcf8ea15d650a3c74806cf20b353d8e8_icgraph" id="agenerics_8h_adcf8ea15d650a3c74806cf20b353d8e8_icgraph">
-<area shape="rect" title=" " alt="" coords="133,5,212,32"/>
-<area shape="rect" href="seirs__pomp_8cc.html#a80b87c0e9d16875de84f321356e66a11" title=" " alt="" coords="5,5,85,32"/>
-</map>
-</div>
-
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2bfed015514f5a852e1fb7cf5c776373"></a>
@@ -689,16 +712,16 @@ template&lt;class TYPE &gt; </div>
 
 <p>refresh parameters </p>
 
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00087">87</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                      {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  SEXP o;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  TYPE X = State;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  PROTECT(Params = AS_NUMERIC(Params));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  X.update_params(REAL(Params),LENGTH(Params));</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  PROTECT(o = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(X));</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  UNPROTECT(2);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">return</span> o;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00093">93</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                      {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  SEXP o;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  TYPE X = State;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  PROTECT(Params = AS_NUMERIC(Params));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  X.update_params(REAL(Params),LENGTH(Params));</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  PROTECT(o = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(X));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  UNPROTECT(2);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">return</span> o;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -741,19 +764,19 @@ template&lt;class TYPE &gt; </div>
 
 <p>run simulations </p>
 
-<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00099">99</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                 {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  SEXP out;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  TYPE X = State;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  PROTECT(Tout = AS_NUMERIC(Tout));</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  GetRNGstate();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  X.valid();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  X.play(*REAL(Tout));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  PutRNGstate();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  PROTECT(out = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(X));</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  UNPROTECT(2);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="generics_8h_source.html#l00105">105</a> of file <a class="el" href="generics_8h_source.html">generics.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                 {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  SEXP out;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  TYPE X = State;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  PROTECT(Tout = AS_NUMERIC(Tout));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  GetRNGstate();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  X.valid();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  X.play(*REAL(Tout));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  PutRNGstate();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  PROTECT(out = <a class="code" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(X));</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  UNPROTECT(2);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

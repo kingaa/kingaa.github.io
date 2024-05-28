@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['g_433',['g',['../structmoran__state__t.html#a315322329482b4cc2ecac3ec3137dac6',1,'moran_state_t']]],
-  ['gamma_434',['gamma',['../structseir__parameters__t.html#a7f3aaddd913d3323d046d4e529e7b851',1,'seir_parameters_t::gamma()'],['../structsi2r__parameters__t.html#a065e243533969eb9390ffdd67817873e',1,'si2r_parameters_t::gamma()'],['../structsiir__parameters__t.html#aeef57dbb9706ca174d66fef5c0c3bcc3',1,'siir_parameters_t::gamma()'],['../structsir__parameters__t.html#aaa8f925e0bdbf85034adf951855a5906',1,'sir_parameters_t::gamma()']]],
-  ['geneal_435',['geneal',['../classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632',1,'master_t']]],
-  ['get_5fuserdata_436',['get_userdata',['../pomplink_8h.html#aaebeb1369a763abb5c9d3e85406737f9',1,'pomplink.h']]],
-  ['get_5fuserdata_5fdouble_437',['get_userdata_double',['../pomplink_8h.html#ab8c5f92e888b86a4bd87789856c07bbb',1,'pomplink.h']]],
-  ['get_5fuserdata_5fint_438',['get_userdata_int',['../pomplink_8h.html#a950f5be1c4ce64a64de7e8939b87830c',1,'pomplink.h']]]
+  ['e_466',['E',['../structseir__state__t.html#afcae6a186f661183467c78387fccf594',1,'seir_state_t']]],
+  ['e0_467',['E0',['../structseir__parameters__t.html#a7f388c708b04d3e6969bef7a4e67ff1c',1,'seir_parameters_t']]],
+  ['event_468',['event',['../classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7',1,'popul_proc_t']]]
 ];

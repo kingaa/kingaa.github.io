@@ -7,6 +7,7 @@ bake	reexports
 ballGrob	internals
 continueLBDP	lbdp
 continueMoran	moran
+continueS2I2R2	s2i2r2
 continueSEIR	seir
 continueSEIRS	seir
 continueSI2R	si2r
@@ -19,6 +20,7 @@ drawDetails.ballGrob	internals
 drawDetails.resizingTextGrob	internals
 foreach	reexports
 freeze	reexports
+gendat	gendat
 geneal	geneal
 genealogy diagram internals	internals
 genealogyGrob	internals
@@ -54,12 +56,15 @@ registerDoSEQ	reexports
 resizingTextGrob	internals
 runLBDP	lbdp
 runMoran	moran
+runS2I2R2	s2i2r2
 runSEIR	seir
 runSEIRS	seir
 runSI2R	si2r
 runSIIR	siir
 runSIR	sir
 runSIRS	sir
+S2I2R2	s2i2r2
+s2i2r2	s2i2r2
 SEIR	seir
 seir	seir
 seirs_pomp	seir

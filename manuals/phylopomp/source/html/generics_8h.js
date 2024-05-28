@@ -7,6 +7,7 @@ var generics_8h =
     [ "RUNFN", "generics_8h.html#ac4e97b3ff727b4ac0a73567317716ab2", null ],
     [ "YAMLFN", "generics_8h.html#aec40d1cebbd63ef2703d23178f842ac5", null ],
     [ "describe", "generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c", null ],
+    [ "gendat", "generics_8h.html#aa04f8a891b3066d0829d45a8d9f69ca2", null ],
     [ "genealogy", "generics_8h.html#a8ecffbf3ac4fb49c4cd4dbb7a77ad12d", null ],
     [ "lineage_count", "generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a", null ],
     [ "make", "generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1", null ],

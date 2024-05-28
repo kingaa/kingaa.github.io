@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['s_463',['S',['../structseir__state__t.html#a6199fbd50fd9cb8f7216b47d4c44250a',1,'seir_state_t::S()'],['../structsi2r__state__t.html#ad27e7e21b3c5221b60f830a3531fc67e',1,'si2r_state_t::S()'],['../structsiir__state__t.html#a603187e07d3eca3e5ac1f63dd5b938ca',1,'siir_state_t::S()'],['../structsir__state__t.html#a034d559808a108c4dc695645acb8211a',1,'sir_state_t::S()']]],
-  ['s0_464',['S0',['../structseir__parameters__t.html#aa8bc31f72667e6e29f19f992ae6c0847',1,'seir_parameters_t::S0()'],['../structsi2r__parameters__t.html#a70e988b61261eb2052721f9618dcf0f1',1,'si2r_parameters_t::S0()'],['../structsiir__parameters__t.html#a1b92f48f2e20ca56b329a1c37e710649',1,'siir_parameters_t::S0()'],['../structsir__parameters__t.html#a971ad17450e8c8e7981930ff23870b21',1,'sir_parameters_t::S0()']]],
-  ['sigma_465',['sigma',['../structseir__parameters__t.html#a92fd44edd72554f773e322b2a257340e',1,'seir_parameters_t']]],
-  ['sigma12_466',['sigma12',['../structsi2r__parameters__t.html#af3be8d987f540133619b9f234c602f58',1,'si2r_parameters_t::sigma12()'],['../structsiir__parameters__t.html#a933e8598d7bb86abcb82c6c5450a4e56',1,'siir_parameters_t::sigma12()']]],
-  ['sigma21_467',['sigma21',['../structsi2r__parameters__t.html#ade9ffa1d68142c5d37b62d9012dd1422',1,'si2r_parameters_t::sigma21()'],['../structsiir__parameters__t.html#a4466d9c00cf49570b7981381b7a4c379',1,'siir_parameters_t::sigma21()']]],
-  ['slate_468',['slate',['../classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9',1,'node_t']]],
-  ['state_469',['state',['../classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9',1,'popul_proc_t']]]
+  ['r_505',['R',['../structseir__state__t.html#aeae1fe3562f35382697df1cb7f44f724',1,'seir_state_t::R()'],['../structsi2r__state__t.html#aa13f459d42b4d3b7ffb347f1137ed0aa',1,'si2r_state_t::R()'],['../structsiir__state__t.html#a2c9d1f93983cc01543b5a6c65a7f9cb1',1,'siir_state_t::R()'],['../structsir__state__t.html#a7a2a0153b30104a30cac1cc99d0f7c8b',1,'sir_state_t::R()']]],
+  ['r0_506',['R0',['../structseir__parameters__t.html#a8250a38278eb5a8cb94399f87555324b',1,'seir_parameters_t::R0()'],['../structsi2r__parameters__t.html#af1dcca589edf305895f6d73e0a5f3b89',1,'si2r_parameters_t::R0()'],['../structsiir__parameters__t.html#a9320ead48f661f231e1ce6bc1dd71f65',1,'siir_parameters_t::R0()'],['../structsir__parameters__t.html#a3c880ce0a6995e3861c46bd41f79c467',1,'sir_parameters_t::R0()']]],
+  ['r1_507',['R1',['../structs2i2r2__state__t.html#a1c8862a5f249a135255c728f0d0e5253',1,'s2i2r2_state_t']]],
+  ['r1_5f0_508',['R1_0',['../structs2i2r2__parameters__t.html#a0a5fbbf713ffcb175facff5cf371d7d5',1,'s2i2r2_parameters_t']]],
+  ['r2_509',['R2',['../structs2i2r2__state__t.html#ad236eace159acb7b828464d10652ab67',1,'s2i2r2_state_t']]],
+  ['r2_5f0_510',['R2_0',['../structs2i2r2__parameters__t.html#ae7721304ee35e3c555b187a3e018b077',1,'s2i2r2_parameters_t']]]
 ];

@@ -17,6 +17,8 @@ var hierarchy =
       [ "master_t< POPN, NDEME >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT, NDEME >", "classpopul__proc__t.html", null ],
+    [ "s2i2r2_parameters_t", "structs2i2r2__parameters__t.html", null ],
+    [ "s2i2r2_state_t", "structs2i2r2__state__t.html", null ],
     [ "seir_parameters_t", "structseir__parameters__t.html", null ],
     [ "seir_state_t", "structseir__state__t.html", null ],
     [ "std::set", null, [

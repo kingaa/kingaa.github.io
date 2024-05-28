@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['e_430',['E',['../structseir__state__t.html#afcae6a186f661183467c78387fccf594',1,'seir_state_t']]],
-  ['e0_431',['E0',['../structseir__parameters__t.html#a7f388c708b04d3e6969bef7a4e67ff1c',1,'seir_parameters_t']]],
-  ['event_432',['event',['../classpopul__proc__t.html#aa86b66d4c55efbfb4d1d7dc95b62afc7',1,'popul_proc_t']]]
+  ['d1_464',['d1',['../structs2i2r2__parameters__t.html#ac0cf704b0124733ea4fcb39bc502a607',1,'s2i2r2_parameters_t']]],
+  ['d2_465',['d2',['../structs2i2r2__parameters__t.html#ac9df9842df5d178122197933c0cf1c37',1,'s2i2r2_parameters_t']]]
 ];

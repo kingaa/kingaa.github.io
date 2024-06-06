@@ -6,7 +6,7 @@ var searchData=
   ['r1_5f0_205',['R1_0',['../structs2i2r2__parameters__t.html#a0a5fbbf713ffcb175facff5cf371d7d5',1,'s2i2r2_parameters_t']]],
   ['r2_206',['R2',['../structs2i2r2__state__t.html#ad236eace159acb7b828464d10652ab67',1,'s2i2r2_state_t']]],
   ['r2_5f0_207',['R2_0',['../structs2i2r2__parameters__t.html#ae7721304ee35e3c555b187a3e018b077',1,'s2i2r2_parameters_t']]],
-  ['r_5finit_5fphylopomp_208',['R_init_phylopomp',['../init_8c.html#a071d822d4db004b7729f6819ffabbc44',1,'R_init_phylopomp(DllInfo *info):&#160;init.c'],['../decls_8h.html#a071d822d4db004b7729f6819ffabbc44',1,'R_init_phylopomp(DllInfo *info):&#160;init.c']]],
+  ['r_5finit_5fphylopomp_208',['R_init_phylopomp',['../init_8c.html#a071d822d4db004b7729f6819ffabbc44',1,'R_init_phylopomp(DllInfo *info):&#160;init.c'],['../decls_8h.html#a851f5d8a59230f860de7268be7e14e09',1,'R_init_phylopomp(DllInfo *):&#160;init.c']]],
   ['r_5fno_5fremap_209',['R_NO_REMAP',['../internal_8h.html#a367e747a6abc54938d838483bb3c97ee',1,'internal.h']]],
   ['random_5fball_210',['random_ball',['../classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07',1,'inventory_t']]],
   ['random_5fchoice_211',['random_choice',['../seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746',1,'seirs_pomp.c']]],

@@ -1,13 +1,13 @@
 var decls_8h =
 [
-    [ "lbdp_dmeas", "decls_8h.html#ae4e9c32b49282c41f7865fce81a24146", null ],
-    [ "lbdp_gill", "decls_8h.html#ae565b9d03861c8072ae2390e0c456e6d", null ],
-    [ "lbdp_rinit", "decls_8h.html#a1f97159e9f335dd851ac8220d276e87d", null ],
-    [ "R_init_phylopomp", "decls_8h.html#a071d822d4db004b7729f6819ffabbc44", null ],
-    [ "seirs_dmeas", "decls_8h.html#a95d1405823ab8f7e52d6b686cb3b035a", null ],
-    [ "seirs_gill", "decls_8h.html#a354dc0949a215794cc3f0935ef3de45c", null ],
-    [ "seirs_rinit", "decls_8h.html#ad6e51ebd10eea07e1f79412df0ca2443", null ],
-    [ "sirs_dmeas", "decls_8h.html#a00471ac3cb48272a152e2e8c44bb0aa5", null ],
-    [ "sirs_gill", "decls_8h.html#aa3a5b958c8d3e2f6bcc4bc9eba80129f", null ],
-    [ "sirs_rinit", "decls_8h.html#a7f2ac9c19aa12b30274e0229926fba6a", null ]
+    [ "lbdp_dmeas", "decls_8h.html#a1a91afb40a7dd236eb379a3f1f992ebe", null ],
+    [ "lbdp_gill", "decls_8h.html#af178df242402d0288d1e2ad7d2fde659", null ],
+    [ "lbdp_rinit", "decls_8h.html#a8e456f9d139d5f0d32e83acf7cadb2e7", null ],
+    [ "R_init_phylopomp", "decls_8h.html#a851f5d8a59230f860de7268be7e14e09", null ],
+    [ "seirs_dmeas", "decls_8h.html#a6fc30998bc55528242599e10535fa97b", null ],
+    [ "seirs_gill", "decls_8h.html#ab8fb5cd6961d565e75bc2c17c7603205", null ],
+    [ "seirs_rinit", "decls_8h.html#af5458d08be6f6dcf12c3466e8a01fe2b", null ],
+    [ "sirs_dmeas", "decls_8h.html#a7b460433880bdc16debf35bd2bab47c5", null ],
+    [ "sirs_gill", "decls_8h.html#a13a5344f6efd51451462b23aeacbf3da", null ],
+    [ "sirs_rinit", "decls_8h.html#a2eff16adf4a245bffc7b5ca26f86a443", null ]
 ];

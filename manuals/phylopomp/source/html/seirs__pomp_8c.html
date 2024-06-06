@@ -326,7 +326,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00301">301</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00304">304</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
 
 </div>
 </div>
@@ -572,7 +572,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="seirs__pomp_8c_a1ee828473e2fb81fac0b893e19cee15a_icgraph.png" border="0" usemap="#aseirs__pomp_8c_a1ee828473e2fb81fac0b893e19cee15a_icgraph" alt=""/></div>
 <map name="aseirs__pomp_8c_a1ee828473e2fb81fac0b893e19cee15a_icgraph" id="aseirs__pomp_8c_a1ee828473e2fb81fac0b893e19cee15a_icgraph">
 <area shape="rect" title=" " alt="" coords="133,5,241,32"/>
-<area shape="rect" href="decls_8h.html#a354dc0949a215794cc3f0935ef3de45c" title=" " alt="" coords="5,5,85,32"/>
+<area shape="rect" href="decls_8h.html#ab8fb5cd6961d565e75bc2c17c7603205" title=" " alt="" coords="5,5,85,32"/>
 </map>
 </div>
 
@@ -667,49 +667,44 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  *penalty = 0;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// 0: transmission, s=(0,0)</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  alpha = <a class="code" href="seirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*<a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>*<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>/<a class="code" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  pi = 1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>+1);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  *logpi = log(pi); logpi++;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="comment">// 1: transmission, s=(0,1)</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  pi = (1-pi)/2;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  *logpi = log(pi)-log(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>); logpi++;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// 2: transmission, s=(1,0)</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  *logpi = log(pi)-log(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>); logpi++;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// 3: progression, s=(0,0)</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// 4: progression, s=(0,1)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  pi = (<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; 0) ? 1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> : 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  assert(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt;= <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  *logpi = log(pi); logpi++;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// 1: transmission, s=(0,1)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  pi = (1-pi)/2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  *logpi = log(pi)-log(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>); logpi++;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// 2: transmission, s=(1,0)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  *logpi = log(pi)-log(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>); logpi++;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// 3: progression, s=(0,0)</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  alpha = <a class="code" href="seirs__pomp_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>*<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  pi = <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>/(<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>+1);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> &gt; <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    event_rate += (*rate = alpha*(1-pi)); rate++;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    *logpi = log(1-pi); logpi++;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    *logpi = log(pi)-log(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>); logpi++;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    *rate = 0; rate++;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    *logpi = 0; logpi++;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    *rate = 0; rate++;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    *logpi = 0; logpi++;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    *penalty += alpha;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// 5: recovery</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  alpha = <a class="code" href="seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    event_rate += (*rate = alpha); rate++;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    *logpi = 0; logpi++;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    *rate = 0; rate++;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    *logpi = 0; logpi++;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    *penalty += alpha;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// 6: waning</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  event_rate += (*rate = <a class="code" href="seirs__pomp_8c.html#ae605ef61cefdc8af0983d954ac7d1ec8">omega</a>*<a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>); rate++;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  *logpi = 0; logpi++;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// 7: sampling (Q = 0)</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  *penalty += <a class="code" href="seirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">return</span> event_rate;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  pi = (<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> &gt; 0) ? <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>/<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> : 1;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  assert(<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> &gt;= <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  event_rate += (*rate = alpha*(1-pi)); rate++;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  *logpi = log(1-pi); logpi++;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// 4: progression, s=(0,1)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  event_rate += (*rate = alpha*pi); rate++;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  *logpi = log(pi)-log(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>); logpi++;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// 5: recovery</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  alpha = <a class="code" href="seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    event_rate += (*rate = alpha); rate++;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    *logpi = 0; logpi++;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    *rate = 0; rate++;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    *logpi = 0; logpi++;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    *penalty += alpha;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// 6: waning</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  event_rate += (*rate = <a class="code" href="seirs__pomp_8c.html#ae605ef61cefdc8af0983d954ac7d1ec8">omega</a>*<a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>); rate++;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  *logpi = 0; logpi++;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// 7: sampling (Q = 0)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  *penalty += <a class="code" href="seirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  assert(!ISNAN(event_rate));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">return</span> event_rate;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 <div class="ttc" id="aseirs__pomp_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00030">seirs_pomp.c:30</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a064e65664252647026c892fdf367316f"><div class="ttname"><a href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a></div><div class="ttdeci">#define ellE</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00037">seirs_pomp.c:37</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a07484107e6d9fdf38b53edf631d6511d"><div class="ttname"><a href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a></div><div class="ttdeci">#define E</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00032">seirs_pomp.c:32</a></div></div>
@@ -728,7 +723,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="seirs__pomp_8c_a54dfb3fa4f46d022acec5343c825b04a_icgraph.png" border="0" usemap="#aseirs__pomp_8c_a54dfb3fa4f46d022acec5343c825b04a_icgraph" alt=""/></div>
 <map name="aseirs__pomp_8c_a54dfb3fa4f46d022acec5343c825b04a_icgraph" id="aseirs__pomp_8c_a54dfb3fa4f46d022acec5343c825b04a_icgraph">
 <area shape="rect" title=" " alt="" coords="133,5,232,32"/>
-<area shape="rect" href="decls_8h.html#a354dc0949a215794cc3f0935ef3de45c" title=" " alt="" coords="5,5,85,32"/>
+<area shape="rect" href="decls_8h.html#ab8fb5cd6961d565e75bc2c17c7603205" title=" " alt="" coords="5,5,85,32"/>
 </map>
 </div>
 
@@ -778,8 +773,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="seirs__pomp_8c_a583bcadefe06514d513e228384be3746_icgraph.png" border="0" usemap="#aseirs__pomp_8c_a583bcadefe06514d513e228384be3746_icgraph" alt=""/></div>
 <map name="aseirs__pomp_8c_a583bcadefe06514d513e228384be3746_icgraph" id="aseirs__pomp_8c_a583bcadefe06514d513e228384be3746_icgraph">
 <area shape="rect" title=" " alt="" coords="140,31,261,57"/>
-<area shape="rect" href="decls_8h.html#a354dc0949a215794cc3f0935ef3de45c" title=" " alt="" coords="9,5,89,32"/>
-<area shape="rect" href="decls_8h.html#ad6e51ebd10eea07e1f79412df0ca2443" title=" " alt="" coords="5,56,92,83"/>
+<area shape="rect" href="decls_8h.html#ab8fb5cd6961d565e75bc2c17c7603205" title=" " alt="" coords="9,5,89,32"/>
+<area shape="rect" href="decls_8h.html#af5458d08be6f6dcf12c3466e8a01fe2b" title=" " alt="" coords="5,56,92,83"/>
 </map>
 </div>
 
@@ -867,12 +862,12 @@ Here is the caller graph for this function:</div>
 
 <p>Measurement model likelihood (dmeasure). </p>
 
-<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00304">304</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;   {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <a class="code" href="seirs__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
-<div class="ttc" id="aseirs__pomp_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="seirs__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00301">seirs_pomp.c:301</a></div></div>
+<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00307">307</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;   {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <a class="code" href="seirs__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="ttc" id="aseirs__pomp_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="seirs__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00304">seirs_pomp.c:304</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_ae1d1ec9482079231e898236e2b23c9ba"><div class="ttname"><a href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a></div><div class="ttdeci">#define ll</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00035">seirs_pomp.c:35</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -941,133 +936,141 @@ Here is the caller graph for this function:</div>
 <p>Simulator for the latent-state process (rprocess).</p>
 <p>This is the Gillespie algorithm applied to the solution of the filter equation for the SEIRS process. </p>
 
-<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00164">164</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">double</span> tstep = 0.0, tmax = t + dt;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">double</span> *color = &amp;<a class="code" href="seirs__pomp_8c.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a> = *<a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nsample&quot;</span>);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *nodetype = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nodetype&quot;</span>);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *lineage = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;lineage&quot;</span>);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *saturation = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;saturation&quot;</span>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *index = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;index&quot;</span>);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *child = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;child&quot;</span>);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordtype">int</span> parent = (int) <a class="code" href="seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> += 1;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="comment">// singular portion of filter equation</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordflow">if</span> (nodetype[parent] != 0) {    <span class="comment">// not a root</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">int</span> parlin = lineage[parent];</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    assert(parlin &gt;= 0 &amp;&amp; parlin &lt; <a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a>);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    assert(!ISNA(color[parlin]));</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="comment">// if parent is not in deme I, likelihood = 0</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">if</span> (nearbyint(color[parlin]) != 1) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += R_NegInf;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      color[parlin] = 1;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> += 1;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span> (nodetype[parent] == 1) {     <span class="comment">// sample</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keywordflow">if</span> (saturation[parent] == 1) { <span class="comment">// s=(0,1)</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">int</span> c = child[index[parent]];</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        color[lineage[c]] = 1;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(<a class="code" href="seirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>);       <span class="comment">// boost</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      } <span class="keywordflow">else</span> {                <span class="comment">// s=(0,0)</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> -= 1;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(<a class="code" href="seirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>)); <span class="comment">// boost</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      color[parlin] = R_NaReal;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (nodetype[parent] == 2) { <span class="comment">// branch point s=(1,1)</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      assert(saturation[parent]==2);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += (<a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> &gt; 0 &amp;&amp; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; 0) ? log(<a class="code" href="seirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*<a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>/<a class="code" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>/(<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>+1)) : R_NegInf;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> += 1;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keywordtype">int</span> c1 = child[index[parent]];</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordtype">int</span> c2 = child[index[parent]+1];</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      assert(c1 != c2);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      assert(lineage[c1] != lineage[c2]);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      assert(lineage[c1] != parlin || lineage[c2] != parlin);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      assert(lineage[c1] == parlin || lineage[c2] == parlin);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keywordflow">if</span> (unif_rand() &lt; 0.5) {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        color[lineage[c1]] = 0;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        color[lineage[c2]] = 1;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        color[lineage[c1]] = 1;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        color[lineage[c2]] = 0;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(0.5);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      assert(0);                                 <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">// continuous portion of filter equation:</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">// take Gillespie steps to the end of the interval</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordtype">double</span> rate[7], logpi[7];</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordtype">int</span> event;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">double</span> event_rate = 0;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordtype">double</span> penalty = 0;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  event_rate = <a class="code" href="seirs__pomp_8c.html#a54dfb3fa4f46d022acec5343c825b04a">event_rates</a>(__x,__p,t,</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                           __stateindex,__parindex,__covindex,</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                           __covars,rate,logpi,&amp;penalty);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  tstep = exp_rand()/event_rate;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">while</span> (t + tstep &lt; tmax) {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">event</span> = <a class="code" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a>(event_rate,rate,7);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep + logpi[event];</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">switch</span> (event) {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordflow">case</span> 0:                   <span class="comment">// transmission, s=(0,0)</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)+log(1-<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>/<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">case</span> 1:                   <span class="comment">// transmission, s=(0,1)</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>/<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>)-log(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">case</span> 2:                   <span class="comment">// transmission, s=(1,0)</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)-log(<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a">change_color</a>(color,<a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a>,<a class="code" href="seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746">random_choice</a>(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>),1,0);</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> += 1; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> -= 1;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">case</span> 3:                   <span class="comment">// progression, s=(0,0)</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
+<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00159">159</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">double</span> tstep = 0.0, tmax = t + dt;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">double</span> *color = &amp;<a class="code" href="seirs__pomp_8c.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a> = *<a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nsample&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *nodetype = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nodetype&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *lineage = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;lineage&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *saturation = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;saturation&quot;</span>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *index = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;index&quot;</span>);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *child = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;child&quot;</span>);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">int</span> parent = (int) <a class="code" href="seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <a class="code" href="seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> += 1;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="comment">// singular portion of filter equation</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">if</span> (nodetype[parent] != 0) {    <span class="comment">// not a root</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">int</span> parlin = lineage[parent];</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    assert(parlin &gt;= 0 &amp;&amp; parlin &lt; <a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    assert(!ISNA(color[parlin]));</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="comment">// if parent is not in deme I, likelihood = 0</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (nearbyint(color[parlin]) != 1) {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += R_NegInf;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      color[parlin] = 1;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> += 1;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">if</span> (nodetype[parent] == 1) {     <span class="comment">// sample</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordflow">if</span> (saturation[parent] == 1) { <span class="comment">// s=(0,1)</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordtype">int</span> c = child[index[parent]];</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        color[lineage[c]] = 1;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(<a class="code" href="seirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>);       <span class="comment">// boost</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      } <span class="keywordflow">else</span> {                <span class="comment">// s=(0,0)</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> -= 1;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(<a class="code" href="seirs__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a>*(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>)); <span class="comment">// boost</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      color[parlin] = R_NaReal;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (nodetype[parent] == 2) { <span class="comment">// branch point s=(1,1)</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      assert(saturation[parent]==2);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += (<a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> &gt; 0 &amp;&amp; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> &gt; 0) ? log(<a class="code" href="seirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc">Beta</a>*<a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>/<a class="code" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>/(<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>+1)) : R_NegInf;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> += 1;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = (<a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> &gt; 0) ? <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> : 0;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <span class="keywordtype">int</span> c1 = child[index[parent]];</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keywordtype">int</span> c2 = child[index[parent]+1];</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      assert(c1 != c2);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      assert(lineage[c1] != lineage[c2]);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      assert(lineage[c1] != parlin || lineage[c2] != parlin);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      assert(lineage[c1] == parlin || lineage[c2] == parlin);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keywordflow">if</span> (unif_rand() &lt; 0.5) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        color[lineage[c1]] = 0;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        color[lineage[c2]] = 1;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        color[lineage[c1]] = 1;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        color[lineage[c2]] = 0;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(0.5);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      assert(0);                                 <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  }</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="comment">// continuous portion of filter equation:</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="comment">// take Gillespie steps to the end of the interval</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keywordtype">double</span> rate[7], logpi[7];</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordtype">int</span> event;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">double</span> event_rate = 0;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">double</span> penalty = 0;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  event_rate = <a class="code" href="seirs__pomp_8c.html#a54dfb3fa4f46d022acec5343c825b04a">event_rates</a>(__x,__p,t,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                           __stateindex,__parindex,__covindex,</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                           __covars,rate,logpi,&amp;penalty);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  tstep = exp_rand()/event_rate;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">while</span> (t + tstep &lt; tmax) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">event</span> = <a class="code" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a>(event_rate,rate,7);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep + logpi[event];</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">switch</span> (event) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">case</span> 0:                   <span class="comment">// transmission, s=(0,0)</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)+log(1-<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>/<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">case</span> 1:                   <span class="comment">// transmission, s=(0,1)</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>/<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>)-log(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">case</span> 2:                   <span class="comment">// transmission, s=(1,0)</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> += 1;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>)-log(<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a">change_color</a>(color,<a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a>,<a class="code" href="seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746">random_choice</a>(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>),1,0);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> += 1; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> -= 1;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">case</span> 3:                   <span class="comment">// progression, s=(0,0)</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(1-<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>/<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">case</span> 4:                   <span class="comment">// progression, s=(0,1)</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> += 1;</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a">change_color</a>(color,<a class="code" href="generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8">nsample</a>,<a class="code" href="seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746">random_choice</a>(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>),0,1);</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> += 1;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">case</span> 5:                   <span class="comment">// recovery</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">case</span> 6:                   <span class="comment">// waning</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> -= 1; <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> += 1;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">default</span>:                  <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      assert(0);              <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">break</span>;                  <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordflow">case</span> 5:                   <span class="comment">// recovery</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> -= 1; <a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">case</span> 6:                   <span class="comment">// waning</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> -= 1; <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> += 1;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      assert(!ISNAN(<a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordflow">default</span>:                  <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      assert(0);              <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">break</span>;                  <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    t += tstep;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    event_rate = <a class="code" href="seirs__pomp_8c.html#a54dfb3fa4f46d022acec5343c825b04a">event_rates</a>(__x,__p,t,</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                             __stateindex,__parindex,__covindex,</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                             __covars,rate,logpi,&amp;penalty);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    tstep = exp_rand()/event_rate;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  tstep = tmax - t;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    t += tstep;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    event_rate = <a class="code" href="seirs__pomp_8c.html#a54dfb3fa4f46d022acec5343c825b04a">event_rates</a>(__x,__p,t,</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                             __stateindex,__parindex,__covindex,</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                             __covars,rate,logpi,&amp;penalty);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    tstep = exp_rand()/event_rate;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  tstep = tmax - t;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div>
 <div class="ttc" id="ainit_8c_html_a950f5be1c4ce64a64de7e8939b87830c"><div class="ttname"><a href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a></div><div class="ttdeci">get_userdata_int_t * get_userdata_int</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00007">init.c:7</a></div></div>
 <div class="ttc" id="ainternal_8h_html_a4a6b554c46520e890bcd30a914b65988"><div class="ttname"><a href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a></div><div class="ttdeci">static int rcateg(double erate, double *rate, int nrate)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00063">internal.h:63</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a1ee828473e2fb81fac0b893e19cee15a"><div class="ttname"><a href="seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a">change_color</a></div><div class="ttdeci">static void change_color(double *color, int nsample, int n, int from, int to)</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00008">seirs_pomp.c:8</a></div></div>
@@ -1150,48 +1153,48 @@ Here is the call graph for this function:</div>
 <p>Latent-state initializer (rinit component).</p>
 <p>The state variables include S, E, I, R plus 'ellE' and 'ellI' (numbers of E- and I-deme lineages), the accumulated weight ('ll'), and the coloring of each lineage ('COLOR'). </p>
 
-<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00109">109</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">double</span> *color = &amp;<a class="code" href="seirs__pomp_8c.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> nnode = *<a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nnode&quot;</span>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *nodetype = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nodetype&quot;</span>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *lineage = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;lineage&quot;</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *saturation = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;saturation&quot;</span>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *index = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;index&quot;</span>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *child = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;child&quot;</span>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">double</span> adj = <a class="code" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>/(<a class="code" href="seirs__pomp_8c.html#a5cfab9793f7fd3ac4ab45eff41df9f37">S0</a>+<a class="code" href="seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e">E0</a>+<a class="code" href="seirs__pomp_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a>+<a class="code" href="seirs__pomp_8c.html#a30ab9da60435727bc80839d416461b8f">R0</a>);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a5cfab9793f7fd3ac4ab45eff41df9f37">S0</a>*adj);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e">E0</a>*adj);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a>*adj);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a30ab9da60435727bc80839d416461b8f">R0</a>*adj);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> = 0;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> = 0;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">// color lineages by sampling without replacement</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordtype">double</span> nE = <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">double</span> nI = <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">int</span> parent = 0;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordflow">while</span> (nodetype[parent] == 0 &amp;&amp; parent &lt; nnode) {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, j = index[parent]; i &lt; saturation[parent]; i++, j++) {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordtype">int</span> c = child[j];</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="keywordtype">int</span> pick = <a class="code" href="seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746">random_choice</a>(nE+nI);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">if</span> (pick &lt; nearbyint(nE)) {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    color[lineage[c]] = 0; <span class="comment">// lineage is put into E deme</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> += 1; nE -= 1;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    color[lineage[c]] = 1; <span class="comment">// lineage is put into I deme</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> += 1; nI -= 1;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      }</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    parent++;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = -dhyper(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>,<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>,<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>,<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>+<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>,1);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>);</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> = parent-1;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="seirs__pomp_8c_source.html#l00104">104</a> of file <a class="el" href="seirs__pomp_8c_source.html">seirs_pomp.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">double</span> *color = &amp;<a class="code" href="seirs__pomp_8c.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> nnode = *<a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nnode&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *nodetype = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;nodetype&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *lineage = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;lineage&quot;</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *saturation = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;saturation&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *index = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;index&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> *child = <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a>(<span class="stringliteral">&quot;child&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">double</span> adj = <a class="code" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>/(<a class="code" href="seirs__pomp_8c.html#a5cfab9793f7fd3ac4ab45eff41df9f37">S0</a>+<a class="code" href="seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e">E0</a>+<a class="code" href="seirs__pomp_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a>+<a class="code" href="seirs__pomp_8c.html#a30ab9da60435727bc80839d416461b8f">R0</a>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <a class="code" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a5cfab9793f7fd3ac4ab45eff41df9f37">S0</a>*adj);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e">E0</a>*adj);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a>*adj);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a30ab9da60435727bc80839d416461b8f">R0</a>*adj);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> = 0;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> = 0;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="comment">// color lineages by sampling without replacement</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">double</span> nE = <a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">double</span> nI = <a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">int</span> parent = 0;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">while</span> (nodetype[parent] == 0 &amp;&amp; parent &lt; nnode) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, j = index[parent]; i &lt; saturation[parent]; i++, j++) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordtype">int</span> c = child[j];</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keywordtype">int</span> pick = <a class="code" href="seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746">random_choice</a>(nE+nI);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="keywordflow">if</span> (pick &lt; nearbyint(nE)) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        color[lineage[c]] = 0; <span class="comment">// lineage is put into E deme</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> += 1; nE -= 1;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        color[lineage[c]] = 1; <span class="comment">// lineage is put into I deme</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> += 1; nI -= 1;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    parent++;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <a class="code" href="seirs__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = -dhyper(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>,<a class="code" href="seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d">E</a>,<a class="code" href="seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470">I</a>,<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>+<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>,1);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a064e65664252647026c892fdf367316f">ellE</a>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a> = nearbyint(<a class="code" href="seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1">ellI</a>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> = parent-1;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
 <div class="ttc" id="aseirs__pomp_8c_html_a30ab9da60435727bc80839d416461b8f"><div class="ttname"><a href="seirs__pomp_8c.html#a30ab9da60435727bc80839d416461b8f">R0</a></div><div class="ttdeci">#define R0</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00029">seirs_pomp.c:29</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a5cfab9793f7fd3ac4ab45eff41df9f37"><div class="ttname"><a href="seirs__pomp_8c.html#a5cfab9793f7fd3ac4ab45eff41df9f37">S0</a></div><div class="ttdeci">#define S0</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00026">seirs_pomp.c:26</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a73d113d91ab7ec355ca707cc930eb718"><div class="ttname"><a href="seirs__pomp_8c.html#a73d113d91ab7ec355ca707cc930eb718">I0</a></div><div class="ttdeci">#define I0</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00028">seirs_pomp.c:28</a></div></div>

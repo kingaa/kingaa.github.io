@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r_5finit_5fphylopomp_433',['R_init_phylopomp',['../decls_8h.html#a071d822d4db004b7729f6819ffabbc44',1,'R_init_phylopomp(DllInfo *info):&#160;init.c'],['../init_8c.html#a071d822d4db004b7729f6819ffabbc44',1,'R_init_phylopomp(DllInfo *info):&#160;init.c']]],
+  ['r_5finit_5fphylopomp_433',['R_init_phylopomp',['../decls_8h.html#a851f5d8a59230f860de7268be7e14e09',1,'R_init_phylopomp(DllInfo *):&#160;init.c'],['../init_8c.html#a071d822d4db004b7729f6819ffabbc44',1,'R_init_phylopomp(DllInfo *info):&#160;init.c']]],
   ['random_5fball_434',['random_ball',['../classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07',1,'inventory_t']]],
   ['random_5fchoice_435',['random_choice',['../seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746',1,'seirs_pomp.c']]],
   ['random_5finteger_436',['random_integer',['../internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78',1,'internal.h']]],

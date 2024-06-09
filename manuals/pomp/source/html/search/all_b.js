@@ -1,7 +1,7 @@
 var searchData=
 [
   ['m_140',['m',['../structnlopt__soboldata__s.html#ac52a99fed23e084a6ac1590a613f29f1',1,'nlopt_soboldata_s']]],
-  ['make_5fcovariate_5ftable_141',['make_covariate_table',['../decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f',1,'make_covariate_table(SEXP object, int *ncovar):&#160;lookup_table.c'],['../lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f',1,'make_covariate_table(SEXP object, int *ncovar):&#160;lookup_table.c']]],
+  ['make_5fcovariate_5ftable_141',['make_covariate_table',['../decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed',1,'make_covariate_table(SEXP, int *):&#160;lookup_table.c'],['../lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f',1,'make_covariate_table(SEXP object, int *ncovar):&#160;lookup_table.c']]],
   ['make_5fcovariate_5ftable_5ft_142',['make_covariate_table_t',['../pomp__defines_8h.html#a10b1a245b93c0da80fa2d56beecfc00c',1,'pomp_defines.h']]],
   ['makearray_143',['makearray',['../pomp__defines_8h.html#a8ab2bdfb97326c698544007bd60c1a49',1,'pomp_defines.h']]],
   ['matchcolnames_144',['MATCHCOLNAMES',['../pomp__defines_8h.html#adb4e73b0ef17f1c358709d02b9d8745a',1,'pomp_defines.h']]],

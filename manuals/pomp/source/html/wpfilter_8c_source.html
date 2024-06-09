@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// computes conditional log likelihood and effective sample size.</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// returns a named list.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// AT PRESENT, NO PARAMETER RESAMPLING IS PERFORMED.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="decls_8h.html#ac643fb3aad609b1078e9abb994ec6cf2">   10</a></span>&#160;SEXP <a class="code" href="wpfilter_8c.html#ac643fb3aad609b1078e9abb994ec6cf2">wpfilter</a> (SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, SEXP Params, SEXP Weights, SEXP W, SEXP Trigger, SEXP Target, SEXP Np)</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="decls_8h.html#a1c47fabab25be7910ba58cc20426bf35">   10</a></span>&#160;SEXP <a class="code" href="wpfilter_8c.html#ac643fb3aad609b1078e9abb994ec6cf2">wpfilter</a> (SEXP <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, SEXP Params, SEXP Weights, SEXP W, SEXP Trigger, SEXP Target, SEXP Np)</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  SEXP dimX, dimP, Xnames, Pnames;</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="keywordtype">int</span> sample[np];</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      GetRNGstate();</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <a class="code" href="decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a>(<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,REAL(W),np,sample,0);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <a class="code" href="decls_8h.html#a2f8f78d126b50ffa8da9b867053278df">nosort_resamp</a>(<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,REAL(W),np,sample,0);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      PutRNGstate();</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <span class="keywordflow">for</span> (k = 0; k &lt; np; k++) { <span class="comment">// copy the particles</span></div>
@@ -281,7 +281,7 @@ $(document).ready(function(){initNavTree('wpfilter_8c_source.html',''); initResi
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keywordflow">return</span>(retval);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
-<div class="ttc" id="adecls_8h_html_a37f1a2acca063e96f0efa73705ec87b2"><div class="ttname"><a href="decls_8h.html#a37f1a2acca063e96f0efa73705ec87b2">nosort_resamp</a></div><div class="ttdeci">void nosort_resamp(int nw, double *w, int np, int *p, int offset)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00025">resample.c:25</a></div></div>
+<div class="ttc" id="adecls_8h_html_a2f8f78d126b50ffa8da9b867053278df"><div class="ttname"><a href="decls_8h.html#a2f8f78d126b50ffa8da9b867053278df">nosort_resamp</a></div><div class="ttdeci">void nosort_resamp(int, double *, int, int *, int)</div><div class="ttdef"><b>Definition:</b> <a href="resample_8c_source.html#l00025">resample.c:25</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a207fd5507206d307cd63f95374fcd00d"><div class="ttname"><a href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a></div><div class="ttdeci">#define X</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00014">gompertz.c:14</a></div></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
 <div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00021">pomp.h:21</a></div></div>

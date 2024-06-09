@@ -18,6 +18,17 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;pomp&rsquo;</h2>
 
+<h3>Changes in <span class="pkg">pomp</span> version 5.9.1</h3>
+
+
+<ul>
+<li><p> The rprocess plugin <code>onestep</code> now always takes exactly one step to get from one observation time to the next, even when the interval between them is zero.
+That is, if <code>P</code> is a &lsquo;pomp&rsquo; object with an rprocess built using <code>rprocess=onestep(f)</code>, <code>t0=timezero(P)</code>, and <code>t=time(P)</code>, then <code>f</code> will be called exactly once for the interval (<code>t0</code>,<code>t[1]</code>) and once for each of the intervals (<code>t[i-1]</code>,<code>t[i]</code>), <code>i=2,...,length(t)</code>.
+</p>
+</li></ul>
+
+
+
 <h3>Changes in <span class="pkg">pomp</span> version 5.8.4</h3>
 
 

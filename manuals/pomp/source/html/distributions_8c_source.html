@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="decls_8h.html#abacea3217a3136190d12e38f91a7f128">   23</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#abacea3217a3136190d12e38f91a7f128">R_Euler_Multinom</a> (SEXP n, SEXP size, SEXP rate, SEXP deltat) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="decls_8h.html#a6133e3ef45a5d9fe3deab72750062df9">   23</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#abacea3217a3136190d12e38f91a7f128">R_Euler_Multinom</a> (SEXP n, SEXP size, SEXP rate, SEXP deltat) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> ntrans = length(rate);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> dim[2];</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  SEXP x, nm;</div>
@@ -134,7 +134,7 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> x;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="decls_8h.html#aa055d45aa938bf55afe432967292b892">   49</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#aa055d45aa938bf55afe432967292b892">D_Euler_Multinom</a> (SEXP x, SEXP size, SEXP rate, SEXP deltat, SEXP log) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="decls_8h.html#aa7cf2dcaaa5333231ed19998fd9dfde6">   49</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#aa055d45aa938bf55afe432967292b892">D_Euler_Multinom</a> (SEXP x, SEXP size, SEXP rate, SEXP deltat, SEXP log) {</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">int</span> ntrans = length(rate);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">int</span> *dim, n;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  SEXP f;</div>
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// mu dW/dt is a candidate for a random rate process within an</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// Euler-multinomial context, i.e., </span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// E[mu*dW] = mu*dt and Var[mu*dW] = mu*sigma^2*dt</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="decls_8h.html#a256259848397b531d0b334182b9c6ca1">   77</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#a256259848397b531d0b334182b9c6ca1">R_GammaWN</a> (SEXP n, SEXP <a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>, SEXP deltat) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="decls_8h.html#a05f8691fcce63ae69c6eb740a5e39f41">   77</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#a256259848397b531d0b334182b9c6ca1">R_GammaWN</a> (SEXP n, SEXP <a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>, SEXP deltat) {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> k, nval, nsig, ndt;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">double</span> *x, *sig, *dt;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  SEXP ans;</div>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// This function draws a random variate from a beta-binomial distribution.</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// The binomial has size n and probability P ~ Beta(mu,theta).</span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// That is, E[P] = mu and Var[P] = </span></div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="decls_8h.html#aa8ca33711b215b87cc650765175f1ca8">  103</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#aa8ca33711b215b87cc650765175f1ca8">R_BetaBinom</a> (SEXP n, SEXP size, SEXP prob, SEXP theta) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="decls_8h.html#a3d15947a5f8c829a5672f83b2246d7b8">  103</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#aa8ca33711b215b87cc650765175f1ca8">R_BetaBinom</a> (SEXP n, SEXP size, SEXP prob, SEXP theta) {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">int</span> k, nval, ns, np, nt;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">double</span> *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  SEXP ans;</div>
@@ -206,7 +206,7 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="decls_8h.html#a631dafe45b2fd04f5fb99e59c1c4f1cf">  121</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#a631dafe45b2fd04f5fb99e59c1c4f1cf">D_BetaBinom</a> (SEXP x, SEXP size, SEXP prob, SEXP theta, SEXP log) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="decls_8h.html#a7eb19c7180d18dc9f384cea477ee1a83">  121</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#a631dafe45b2fd04f5fb99e59c1c4f1cf">D_BetaBinom</a> (SEXP x, SEXP size, SEXP prob, SEXP theta, SEXP log) {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">int</span> k, n, nx, ns, np, nt;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">double</span> *F, *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  SEXP f;</div>

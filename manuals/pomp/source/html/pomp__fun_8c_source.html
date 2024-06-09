@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('pomp__fun_8c_source.html',''); initRes
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// If &#39;gsni&#39; is TRUE, and there are names in one or more of the S,P,O,C arguments, we look up the</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// names in the corresponding &#39;pomp_fun&#39; slots and storing the corresponding index</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// inside the &#39;pomp_fun&#39;.</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">   30</a></span>&#160;SEXP <a class="code" href="pomp__fun_8c.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a> (SEXP pfun, SEXP gnsi, <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0">pompfunmode</a> *<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="decls_8h.html#ada19523cc1edc44a799fce734f25c934">   30</a></span>&#160;SEXP <a class="code" href="pomp__fun_8c.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a> (SEXP pfun, SEXP gnsi, <a class="code" href="pomp__defines_8h.html#a9b7b93971f7c1bb47567c959809206b0">pompfunmode</a> *<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                       SEXP S, SEXP P, SEXP O, SEXP C)</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> nprotect = 0;</div>
@@ -206,7 +206,7 @@ $(document).ready(function(){initNavTree('pomp__fun_8c_source.html',''); initRes
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">return</span> f;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="decls_8h.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">  121</a></span>&#160;SEXP <a class="code" href="pomp__fun_8c.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">load_stack_incr</a> (SEXP pack) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="decls_8h.html#a90946f2aeaeb4f5826c8de7facb25999">  121</a></span>&#160;SEXP <a class="code" href="pomp__fun_8c.html#a5ae1bdf9e79d36d8fc709cbc509d4c8c">load_stack_incr</a> (SEXP pack) {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *pkg;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  void (*ff)(void);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  pkg = (<span class="keyword">const</span> <span class="keywordtype">char</span> *) CHAR(STRING_ELT(pack,0));</div>
@@ -215,7 +215,7 @@ $(document).ready(function(){initNavTree('pomp__fun_8c_source.html',''); initRes
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> R_NilValue;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="decls_8h.html#a0a653dae61a3500aaadf64fdefa79c4b">  130</a></span>&#160;SEXP <a class="code" href="pomp__fun_8c.html#a0a653dae61a3500aaadf64fdefa79c4b">load_stack_decr</a> (SEXP pack) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="decls_8h.html#a17019a937f12763c2df28735e19b88c3">  130</a></span>&#160;SEXP <a class="code" href="pomp__fun_8c.html#a0a653dae61a3500aaadf64fdefa79c4b">load_stack_decr</a> (SEXP pack) {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  SEXP s;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *pkg;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  void (*ff)(<span class="keywordtype">int</span> *);</div>

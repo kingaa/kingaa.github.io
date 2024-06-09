@@ -236,11 +236,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_ae5591ed3a1a462f91141cff304975884_icgraph.png" border="0" usemap="#aeuler_8c_ae5591ed3a1a462f91141cff304975884_icgraph" alt=""/></div>
 <map name="aeuler_8c_ae5591ed3a1a462f91141cff304975884_icgraph" id="aeuler_8c_ae5591ed3a1a462f91141cff304975884_icgraph">
 <area shape="rect" title=" " alt="" coords="808,5,889,32"/>
-<area shape="rect" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44" title=" " alt="" coords="636,5,760,32"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a19293a3a394b4e0885714f833bc2a96b" title=" " alt="" coords="636,5,760,32"/>
+<area shape="rect" href="decls_8h.html#af129ae090fa637ebcec13e50e6c0d7be" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#a632ad1476e98dfe96ef9ee0e7f939b45" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -349,10 +349,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  SEXP <a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>, Pnames, Cnames;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a> = GET_ROWNAMES(GET_DIMNAMES(xstart)));</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  PROTECT(Pnames = GET_ROWNAMES(GET_DIMNAMES(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>)));</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  PROTECT(Cnames = <a class="code" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a>(covar));</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  PROTECT(Cnames = <a class="code" href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff">get_covariate_names</a>(covar));</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">// set up the covariate table</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="structlookup__table__t.html">lookup_table_t</a> covariate_table = <a class="code" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a>(covar,&amp;<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <a class="code" href="structlookup__table__t.html">lookup_table_t</a> covariate_table = <a class="code" href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed">make_covariate_table</a>(covar,&amp;<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  PROTECT(cvec = NEW_NUMERIC(<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>));</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a> = REAL(cvec);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
@@ -361,7 +361,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">int</span> *zidx = INTEGER(PROTECT(<a class="code" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b">matchnames</a>(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,accumvars,<span class="stringliteral">&quot;state variables&quot;</span>)));</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="comment">// extract user function</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>(func,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,NA_STRING,Cnames));</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="decls_8h.html#ada19523cc1edc44a799fce734f25c934">pomp_fun_handler</a>(func,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,NA_STRING,Cnames));</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="comment">// array to hold results</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = <a class="code" href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d">ret_array</a>(<a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a>,<a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>,ntimes,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>));</div>
@@ -426,7 +426,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">switch</span> (method) {</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a8e659bdb4aa674f348aed67fe394ba59">onestep</a>: <span class="keywordflow">default</span>:      <span class="comment">// one step</span></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      dt = time[step]-t;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      nstep = (dt &gt; 0) ? 1 : 0;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      nstep = 1;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="pomp__defines_8h.html#a0aa36f1ae250f8c08c6222d21729af94a32811eb9eed4b85ef0847fcde95b69ad">discrete</a>:              <span class="comment">// fixed step</span></div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      dt = deltat;</div>
@@ -442,7 +442,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; nstep; k++) {</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="comment">// interpolate the covar functions for the covariates</span></div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,t,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <a class="code" href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f">table_lookup</a>(&amp;covariate_table,t,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="comment">// loop over replicates</span></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordtype">double</span> *ap, *pm, *xm, *ps = REAL(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>);</div>
@@ -531,10 +531,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
-<div class="ttc" id="adecls_8h_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
-<div class="ttc" id="adecls_8h_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
-<div class="ttc" id="adecls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
-<div class="ttc" id="adecls_8h_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
+<div class="ttc" id="adecls_8h_html_a8fc25ac8149dbd6da367aa01dd9ad9ed"><div class="ttname"><a href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP, int *)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
+<div class="ttc" id="adecls_8h_html_ada19523cc1edc44a799fce734f25c934"><div class="ttname"><a href="decls_8h.html#ada19523cc1edc44a799fce734f25c934">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP, SEXP, pompfunmode *, SEXP, SEXP, SEXP, SEXP)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
+<div class="ttc" id="adecls_8h_html_ade6439566617e54cb9f4507f7ad2824f"><div class="ttname"><a href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *, double, double *)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
+<div class="ttc" id="adecls_8h_html_ae6345040eb63a38c0ff7ae42f3ea35ff"><div class="ttname"><a href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
 <div class="ttc" id="aeuler_8c_html_a0681d20c093a288da04bffa9adbfe48a"><div class="ttname"><a href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a">num_map_steps</a></div><div class="ttdeci">int num_map_steps(double t1, double t2, double deltat)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00342">euler.c:342</a></div></div>
 <div class="ttc" id="aeuler_8c_html_a3da8d135fe6d232031cf7c314f432265"><div class="ttname"><a href="euler_8c.html#a3da8d135fe6d232031cf7c314f432265">num_euler_steps</a></div><div class="ttdeci">int num_euler_steps(double t1, double t2, double *deltat)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00317">euler.c:317</a></div></div>
 <div class="ttc" id="aeuler_8c_html_ad78b5357467ce6dfb3b594a64a0e3d08"><div class="ttname"><a href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *dt, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="euler_8c_source.html#l00067">euler.c:67</a></div></div>
@@ -570,15 +570,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,259,129,285"/>
 <area shape="rect" href="euler_8c.html#ae5591ed3a1a462f91141cff304975884" title=" " alt="" coords="220,5,301,32"/>
 <area shape="rect" href="euler_8c.html#ad78b5357467ce6dfb3b594a64a0e3d08" title=" " alt="" coords="221,56,301,83"/>
-<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="179,107,342,133"/>
+<area shape="rect" href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff" title=" " alt="" coords="179,107,342,133"/>
 <area shape="rect" href="pomp__defines_8h.html#ac56010c8d35a155162376d066856f663" title=" " alt="" coords="715,208,832,235"/>
-<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="177,208,344,235"/>
+<area shape="rect" href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed" title=" " alt="" coords="177,208,344,235"/>
 <area shape="rect" href="pomp__defines_8h.html#a76a484fb785e5a4b35f15e41a1b8fc1b" title=" " alt="" coords="560,259,667,285"/>
 <area shape="rect" href="euler_8c.html#a3da8d135fe6d232031cf7c314f432265" title=" " alt="" coords="194,309,327,336"/>
 <area shape="rect" href="euler_8c.html#a0681d20c093a288da04bffa9adbfe48a" title=" " alt="" coords="196,360,325,387"/>
-<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="189,411,332,437"/>
+<area shape="rect" href="decls_8h.html#ada19523cc1edc44a799fce734f25c934" title=" " alt="" coords="189,411,332,437"/>
 <area shape="rect" href="euler_8c.html#aff505c906b432ad2e9b72dc28feb374d" title=" " alt="" coords="220,461,301,488"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="207,512,314,539"/>
+<area shape="rect" href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f" title=" " alt="" coords="207,512,314,539"/>
 <area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="392,335,512,361"/>
 <area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="401,385,503,412"/>
 <area shape="rect" href="pomp__defines_8h.html#a263b864ea80d9008e4c96ffe013f1dff" title=" " alt="" coords="398,436,506,463"/>
@@ -592,10 +592,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_af1e18bd117c75ccef2b6bd7f45439b44_icgraph.png" border="0" usemap="#aeuler_8c_af1e18bd117c75ccef2b6bd7f45439b44_icgraph" alt=""/></div>
 <map name="aeuler_8c_af1e18bd117c75ccef2b6bd7f45439b44_icgraph" id="aeuler_8c_af1e18bd117c75ccef2b6bd7f45439b44_icgraph">
 <area shape="rect" title=" " alt="" coords="636,5,760,32"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#af129ae090fa637ebcec13e50e6c0d7be" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#a632ad1476e98dfe96ef9ee0e7f939b45" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -708,11 +708,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph.png" border="0" usemap="#aeuler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph" alt=""/></div>
 <map name="aeuler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph" id="aeuler_8c_ad78b5357467ce6dfb3b594a64a0e3d08_icgraph">
 <area shape="rect" title=" " alt="" coords="808,5,888,32"/>
-<area shape="rect" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44" title=" " alt="" coords="636,5,760,32"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a19293a3a394b4e0885714f833bc2a96b" title=" " alt="" coords="636,5,760,32"/>
+<area shape="rect" href="decls_8h.html#af129ae090fa637ebcec13e50e6c0d7be" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#a632ad1476e98dfe96ef9ee0e7f939b45" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -781,11 +781,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph.png" border="0" usemap="#aeuler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph" alt=""/></div>
 <map name="aeuler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph" id="aeuler_8c_a3da8d135fe6d232031cf7c314f432265_icgraph">
 <area shape="rect" title=" " alt="" coords="808,5,941,32"/>
-<area shape="rect" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44" title=" " alt="" coords="636,5,760,32"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a19293a3a394b4e0885714f833bc2a96b" title=" " alt="" coords="636,5,760,32"/>
+<area shape="rect" href="decls_8h.html#af129ae090fa637ebcec13e50e6c0d7be" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#a632ad1476e98dfe96ef9ee0e7f939b45" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 
@@ -837,14 +837,14 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph.png" border="0" usemap="#aeuler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph" alt=""/></div>
 <map name="aeuler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph" id="aeuler_8c_a0681d20c093a288da04bffa9adbfe48a_icgraph">
 <area shape="rect" title=" " alt="" coords="860,56,989,83"/>
-<area shape="rect" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44" title=" " alt="" coords="663,5,787,32"/>
-<area shape="rect" href="decls_8h.html#aca7782b5824af2ba096aa0d7f1c4834b" title=" " alt="" coords="637,56,812,83"/>
-<area shape="rect" href="decls_8h.html#ab2d2bf78c9a2e064a57e6c9bf3d52bc2" title=" " alt="" coords="653,107,796,133"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="489,5,589,32"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
-<area shape="rect" href="decls_8h.html#a3ee9c5f69ec3b1b090448cb76634602d" title=" " alt="" coords="488,81,589,108"/>
+<area shape="rect" href="decls_8h.html#a19293a3a394b4e0885714f833bc2a96b" title=" " alt="" coords="663,5,787,32"/>
+<area shape="rect" href="decls_8h.html#ae06448ff2e2ef1613edd4618634dbed6" title=" " alt="" coords="637,56,812,83"/>
+<area shape="rect" href="decls_8h.html#adcdcf759e7db4fcc8f07d2692c18183b" title=" " alt="" coords="653,107,796,133"/>
+<area shape="rect" href="decls_8h.html#af129ae090fa637ebcec13e50e6c0d7be" title=" " alt="" coords="489,5,589,32"/>
+<area shape="rect" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#a632ad1476e98dfe96ef9ee0e7f939b45" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a1bcec7f4a5a240606fb8235312d5cc45" title=" " alt="" coords="488,81,589,108"/>
 </map>
 </div>
 
@@ -931,11 +931,11 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="euler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph.png" border="0" usemap="#aeuler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph" alt=""/></div>
 <map name="aeuler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph" id="aeuler_8c_aff505c906b432ad2e9b72dc28feb374d_icgraph">
 <area shape="rect" title=" " alt="" coords="808,5,889,32"/>
-<area shape="rect" href="decls_8h.html#af1e18bd117c75ccef2b6bd7f45439b44" title=" " alt="" coords="636,5,760,32"/>
-<area shape="rect" href="decls_8h.html#a91f2867fc46d33e1778108853725d74a" title=" " alt="" coords="488,5,588,32"/>
-<area shape="rect" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7" title=" " alt="" coords="337,5,440,32"/>
-<area shape="rect" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc" title=" " alt="" coords="156,5,289,32"/>
-<area shape="rect" href="decls_8h.html#ac82c44c250cd2f69f3259d56f09c1c26" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" href="decls_8h.html#a19293a3a394b4e0885714f833bc2a96b" title=" " alt="" coords="636,5,760,32"/>
+<area shape="rect" href="decls_8h.html#af129ae090fa637ebcec13e50e6c0d7be" title=" " alt="" coords="488,5,588,32"/>
+<area shape="rect" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853" title=" " alt="" coords="337,5,440,32"/>
+<area shape="rect" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446" title=" " alt="" coords="156,5,289,32"/>
+<area shape="rect" href="decls_8h.html#a632ad1476e98dfe96ef9ee0e7f939b45" title=" " alt="" coords="5,5,108,32"/>
 </map>
 </div>
 

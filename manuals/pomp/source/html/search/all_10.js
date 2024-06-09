@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sdim_256',['sdim',['../structnlopt__soboldata__s.html#a9d1d043992124f262f8d8a6aeab155f1',1,'nlopt_soboldata_s']]],
-  ['set_5fpomp_5fuserdata_257',['set_pomp_userdata',['../decls_8h.html#ace5dee7cc463ac9356a3f192d5479446',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c'],['../userdata_8c.html#ace5dee7cc463ac9356a3f192d5479446',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c']]],
+  ['set_5fpomp_5fuserdata_257',['set_pomp_userdata',['../decls_8h.html#ac8e269d1663ac1f67722366434b79ef6',1,'set_pomp_userdata(SEXP):&#160;userdata.c'],['../userdata_8c.html#ace5dee7cc463ac9356a3f192d5479446',1,'set_pomp_userdata(SEXP userdata):&#160;userdata.c']]],
   ['set_5fpomp_5fuserdata_5ft_258',['set_pomp_userdata_t',['../pomp__defines_8h.html#a623827898b5e1101b91a6b9c76f11af9',1,'pomp_defines.h']]],
   ['setcolnames_259',['setcolnames',['../pomp__defines_8h.html#a796a0cd2011dadc57c790c46532ef00b',1,'pomp_defines.h']]],
   ['setrownames_260',['setrownames',['../pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4',1,'pomp_defines.h']]],
@@ -21,15 +21,15 @@ var searchData=
   ['sobol_5fgen_274',['sobol_gen',['../sobolseq_8c.html#a8a0ebcfa3fdd7c7a8296647c972fe54b',1,'sobolseq.c']]],
   ['sobol_5finit_275',['sobol_init',['../sobolseq_8c.html#a26079fb02c638050adfae1b98eebb878',1,'sobolseq.c']]],
   ['sobol_5fminit_276',['sobol_minit',['../soboldata_8h.html#abf7f339dac9a70340f88439a8f1d3715',1,'soboldata.h']]],
-  ['sobol_5fsequence_277',['sobol_sequence',['../decls_8h.html#a670defd3a8b9d05d86bc8da76de23778',1,'sobol_sequence(SEXP dim, SEXP length):&#160;sobolseq.c'],['../sobolseq_8c.html#a670defd3a8b9d05d86bc8da76de23778',1,'sobol_sequence(SEXP dim, SEXP length):&#160;sobolseq.c']]],
+  ['sobol_5fsequence_277',['sobol_sequence',['../decls_8h.html#a91cd56241914126e7f0a89c67bfac2f3',1,'sobol_sequence(SEXP, SEXP):&#160;sobolseq.c'],['../sobolseq_8c.html#a670defd3a8b9d05d86bc8da76de23778',1,'sobol_sequence(SEXP dim, SEXP length):&#160;sobolseq.c']]],
   ['soboldata_278',['soboldata',['../sobolseq_8c.html#a52160f57d740b401ac0039631da55c2a',1,'sobolseq.c']]],
   ['soboldata_2eh_279',['soboldata.h',['../soboldata_8h.html',1,'']]],
   ['sobolseq_2ec_280',['sobolseq.c',['../sobolseq_8c.html',1,'']]],
   ['ssa_281',['SSA',['../ssa_8c.html#a08a1d63aa145b71449d68985c31ab32c',1,'ssa.c']]],
   ['ssa_2ec_282',['ssa.c',['../ssa_8c.html',1,'']]],
-  ['ssa_5fsimulator_283',['SSA_simulator',['../decls_8h.html#a868191e685624fbffd57ee4f32859ac6',1,'SSA_simulator(SEXP func, SEXP xstart, SEXP tstart, SEXP times, SEXP params, SEXP vmatrix, SEXP covar, SEXP accumvars, SEXP hmax, SEXP args, SEXP gnsi):&#160;ssa.c'],['../ssa_8c.html#a868191e685624fbffd57ee4f32859ac6',1,'SSA_simulator(SEXP func, SEXP xstart, SEXP tstart, SEXP times, SEXP params, SEXP vmatrix, SEXP covar, SEXP accumvars, SEXP hmax, SEXP args, SEXP gnsi):&#160;ssa.c']]],
+  ['ssa_5fsimulator_283',['SSA_simulator',['../decls_8h.html#ac796abcef7f5d6add4d98023a0bde62b',1,'SSA_simulator(SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP, SEXP):&#160;ssa.c'],['../ssa_8c.html#a868191e685624fbffd57ee4f32859ac6',1,'SSA_simulator(SEXP func, SEXP xstart, SEXP tstart, SEXP times, SEXP params, SEXP vmatrix, SEXP covar, SEXP accumvars, SEXP hmax, SEXP args, SEXP gnsi):&#160;ssa.c']]],
   ['synth_5flik_2ec_284',['synth_lik.c',['../synth__lik_8c.html',1,'']]],
-  ['synth_5floglik_285',['synth_loglik',['../decls_8h.html#aba3bb9e9bce5419b23032d95b1bba531',1,'synth_loglik(SEXP ysim, SEXP ydat):&#160;synth_lik.c'],['../synth__lik_8c.html#aba3bb9e9bce5419b23032d95b1bba531',1,'synth_loglik(SEXP ysim, SEXP ydat):&#160;synth_lik.c']]],
-  ['systematic_5fresampling_286',['systematic_resampling',['../decls_8h.html#a982475f3663a786d7883672aa2ed072e',1,'systematic_resampling(SEXP weights, SEXP np):&#160;resample.c'],['../resample_8c.html#a982475f3663a786d7883672aa2ed072e',1,'systematic_resampling(SEXP weights, SEXP np):&#160;resample.c']]],
+  ['synth_5floglik_285',['synth_loglik',['../decls_8h.html#ab735e5526875ee755d72af6c8750bc05',1,'synth_loglik(SEXP, SEXP):&#160;synth_lik.c'],['../synth__lik_8c.html#aba3bb9e9bce5419b23032d95b1bba531',1,'synth_loglik(SEXP ysim, SEXP ydat):&#160;synth_lik.c']]],
+  ['systematic_5fresampling_286',['systematic_resampling',['../decls_8h.html#a9f4822de0304baafeca236b97ecb216b',1,'systematic_resampling(SEXP, SEXP):&#160;resample.c'],['../resample_8c.html#a982475f3663a786d7883672aa2ed072e',1,'systematic_resampling(SEXP weights, SEXP np):&#160;resample.c']]],
   ['systematic_5fresampling_5ft_287',['systematic_resampling_t',['../pomp__defines_8h.html#a95c92d700dd0f2d195cf475caa794222',1,'pomp_defines.h']]]
 ];

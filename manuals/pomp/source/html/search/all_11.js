@@ -5,7 +5,7 @@ var searchData=
   ['t_5fsigma_290',['T_sigma',['../gompertz_8c.html#a757a8fce372da1cf6bf283ad0d551b5d',1,'gompertz.c']]],
   ['t_5ftau_291',['T_tau',['../gompertz_8c.html#a7d82cf2074afa4cfb2f3ccef3147b5f1',1,'gompertz.c']]],
   ['t_5fx_5f0_292',['T_X_0',['../gompertz_8c.html#ae51e7437f94eebfb3a19f094cdc7fe0d',1,'gompertz.c']]],
-  ['table_5flookup_293',['table_lookup',['../decls_8h.html#a036b9fb7cfc62e3984889f95024971a0',1,'table_lookup(lookup_table_t *tab, double x, double *y):&#160;lookup_table.c'],['../lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0',1,'table_lookup(lookup_table_t *tab, double x, double *y):&#160;lookup_table.c']]],
+  ['table_5flookup_293',['table_lookup',['../decls_8h.html#ade6439566617e54cb9f4507f7ad2824f',1,'table_lookup(lookup_table_t *, double, double *):&#160;lookup_table.c'],['../lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0',1,'table_lookup(lookup_table_t *tab, double x, double *y):&#160;lookup_table.c']]],
   ['table_5flookup_5ft_294',['table_lookup_t',['../pomp__defines_8h.html#a7ff013e34421ef0e9973f1d0b051ca64',1,'pomp_defines.h']]],
   ['tau_295',['TAU',['../gompertz_8c.html#a3d8c9c145887af5174ba4cc6789862ad',1,'TAU():&#160;gompertz.c'],['../ou2_8c.html#a3d8c9c145887af5174ba4cc6789862ad',1,'TAU():&#160;ou2.c']]],
   ['tau_296',['tau',['../gompertz_8c.html#aa7082577997805000f8e8b56846642cd',1,'gompertz.c']]],

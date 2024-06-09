@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="gompertz_8c.html#a99670a9dfb3b867756c0a48bfad3c4da">   17</a></span>&#160;<span class="preprocessor">#define VY          (f[vmatindex[0]])  </span><span class="comment">// variance</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// normal measurement model density</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="decls_8h.html#a3e104e02f3e2f197f3527742692b3379">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a3e104e02f3e2f197f3527742692b3379">_gompertz_normal_dmeasure</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="decls_8h.html#a3dc4318ebe71bfe439dc5c6816aec9e9">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a3e104e02f3e2f197f3527742692b3379">_gompertz_normal_dmeasure</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;(</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keywordtype">double</span> *lik, <span class="keywordtype">double</span> *y, <span class="keywordtype">double</span> *x, <span class="keywordtype">double</span> *p, <span class="keywordtype">int</span> give_log,</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keywordtype">int</span> *obsindex, <span class="keywordtype">int</span> *stateindex, <span class="keywordtype">int</span> *parindex, <span class="keywordtype">int</span> *covindex,</div>
@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// normal measurement model simulator</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="decls_8h.html#a446a3650c179d439b7a9fbd19b898f0f">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a446a3650c179d439b7a9fbd19b898f0f">_gompertz_normal_rmeasure</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="decls_8h.html#a1a7b791e4e3d33b6ac0b5dd04425c9be">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a446a3650c179d439b7a9fbd19b898f0f">_gompertz_normal_rmeasure</a></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;(</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keywordtype">double</span> *y, <span class="keywordtype">double</span> *x, <span class="keywordtype">double</span> *p,</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keywordtype">int</span> *obsindex, <span class="keywordtype">int</span> *stateindex, <span class="keywordtype">int</span> *parindex, <span class="keywordtype">int</span> *covindex,</div>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// measurement model expectation</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="decls_8h.html#a77159d0224fb1966b1be9459560ac68e">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a77159d0224fb1966b1be9459560ac68e">_gompertz_normal_emeasure</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="decls_8h.html#ad181675b4773a3f401bedc49de88b54c">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a77159d0224fb1966b1be9459560ac68e">_gompertz_normal_emeasure</a></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;(</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; <span class="keywordtype">double</span> *f, <span class="keywordtype">double</span> *x, <span class="keywordtype">double</span> *p,</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; <span class="keywordtype">int</span> *obsindex, <span class="keywordtype">int</span> *stateindex, <span class="keywordtype">int</span> *parindex, <span class="keywordtype">int</span> *covindex,</div>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// measurement model variance</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="decls_8h.html#a244feb924f5f70105a411229d4f1dc28">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a244feb924f5f70105a411229d4f1dc28">_gompertz_normal_vmeasure</a> (<span class="keywordtype">double</span> *f, <span class="keywordtype">double</span> *x, <span class="keywordtype">double</span> *p,</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="decls_8h.html#ac6fd08b625a00245a898d5375b90a725">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a244feb924f5f70105a411229d4f1dc28">_gompertz_normal_vmeasure</a> (<span class="keywordtype">double</span> *f, <span class="keywordtype">double</span> *x, <span class="keywordtype">double</span> *p,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                <span class="keywordtype">int</span> *vmatindex, <span class="keywordtype">int</span> *stateindex, <span class="keywordtype">int</span> *parindex, <span class="keywordtype">int</span> *covindex,</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                <span class="keywordtype">double</span> *covars, <span class="keywordtype">double</span> t) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">double</span> et = exp(<a class="code" href="gompertz_8c.html#a3d8c9c145887af5174ba4cc6789862ad">TAU</a>*<a class="code" href="gompertz_8c.html#a3d8c9c145887af5174ba4cc6789862ad">TAU</a>);</div>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// stochastic Gompertz model with log-normal process noise</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="decls_8h.html#a291abfa2131cba9d126c40848f244c8d">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a291abfa2131cba9d126c40848f244c8d">_gompertz_step</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="decls_8h.html#a2cf2fd72947e8ff6f76c2a8d70e649d3">   58</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a291abfa2131cba9d126c40848f244c8d">_gompertz_step</a></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;(</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; <span class="keywordtype">double</span> *x, <span class="keyword">const</span> <span class="keywordtype">double</span> *p,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *stateindex, <span class="keyword">const</span> <span class="keywordtype">int</span> *parindex, <span class="keyword">const</span> <span class="keywordtype">int</span> *covindex,</div>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// the deterministic skeleton</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="decls_8h.html#aaea03fa2e44da9e3cf5ecdfd62511831">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#aaea03fa2e44da9e3cf5ecdfd62511831">_gompertz_skeleton</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="decls_8h.html#ad0665a1991b34b2d1c9c85db01ed034b">   70</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#aaea03fa2e44da9e3cf5ecdfd62511831">_gompertz_skeleton</a></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;(</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; <span class="keywordtype">double</span> *f, <span class="keywordtype">double</span> *x, <span class="keyword">const</span> <span class="keywordtype">double</span> *p,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *stateindex, <span class="keyword">const</span> <span class="keywordtype">int</span> *parindex, <span class="keyword">const</span> <span class="keywordtype">int</span> *covindex,</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="gompertz_8c.html#a7d82cf2074afa4cfb2f3ccef3147b5f1">   99</a></span>&#160;<span class="preprocessor">#define T_tau           (__pt[__parindex[3]])</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="gompertz_8c.html#ae51e7437f94eebfb3a19f094cdc7fe0d">  100</a></span>&#160;<span class="preprocessor">#define T_X_0           (__pt[__parindex[4]])</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="decls_8h.html#aca5373a67e9cf38b01e66427eb874d7a">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#aca5373a67e9cf38b01e66427eb874d7a">_gompertz_to_trans</a></div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="decls_8h.html#a825a990c0794920e7661efabe955a9e1">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#aca5373a67e9cf38b01e66427eb874d7a">_gompertz_to_trans</a></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;(</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; <span class="keywordtype">double</span> *__pt, <span class="keyword">const</span> <span class="keywordtype">double</span> *__p, <span class="keyword">const</span> <span class="keywordtype">int</span> *__parindex</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; ) {</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('gompertz_8c_source.html',''); initResi
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="gompertz_8c.html#ae51e7437f94eebfb3a19f094cdc7fe0d">T_X_0</a> = log(<a class="code" href="gompertz_8c.html#a216f42bf177ca87e5f7724df32173717">X_0</a>);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="decls_8h.html#a18828beb7b3f836de491fa5b6382ae51">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a18828beb7b3f836de491fa5b6382ae51">_gompertz_from_trans</a></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="decls_8h.html#adab01a70b6ea0338ce91c04f773b54a2">  113</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="gompertz_8c.html#a18828beb7b3f836de491fa5b6382ae51">_gompertz_from_trans</a></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;(</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; <span class="keywordtype">double</span> *__p, <span class="keyword">const</span> <span class="keywordtype">double</span> *__pt, <span class="keyword">const</span> <span class="keywordtype">int</span> *__parindex</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; ) {</div>

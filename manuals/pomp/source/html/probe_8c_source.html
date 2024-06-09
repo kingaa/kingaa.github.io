@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <a href="probe_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- mode: C++; -*-</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="decls_8h.html#add3f83f20679bad53b6c982ed9dde8ea">    4</a></span>&#160;SEXP <a class="code" href="probe_8c.html#add3f83f20679bad53b6c982ed9dde8ea">apply_probe_data</a> (SEXP <span class="keywordtype">object</span>, SEXP probes) {</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="decls_8h.html#a91f31f12db7a1e75775f01eb11ead99d">    4</a></span>&#160;SEXP <a class="code" href="probe_8c.html#add3f83f20679bad53b6c982ed9dde8ea">apply_probe_data</a> (SEXP <span class="keywordtype">object</span>, SEXP probes) {</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  SEXP retval, data, vals;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">int</span> nprobe;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">int</span> i;</div>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordflow">return</span> retval;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="decls_8h.html#ad2595c6a453ae9fad2f232595ced5ccc">   29</a></span>&#160;SEXP <a class="code" href="probe_8c.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a> (SEXP <span class="keywordtype">object</span>, SEXP nsim, SEXP <a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="decls_8h.html#a34c714747e1b49d142af4d58fee24446">   29</a></span>&#160;SEXP <a class="code" href="probe_8c.html#ad2595c6a453ae9fad2f232595ced5ccc">apply_probe_sim</a> (SEXP <span class="keywordtype">object</span>, SEXP nsim, SEXP <a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                      SEXP probes, SEXP datval, SEXP gnsi) {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  SEXP x, y, names, sims;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  SEXP returntype, retval, val, valnames;</div>
@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  PROTECT(names = GET_NAMES(datval));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  PROTECT(returntype = NEW_INTEGER(1));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  *(INTEGER(returntype)) = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  PROTECT(sims = <a class="code" href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7">do_simulate</a>(<span class="keywordtype">object</span>,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,nsim,returntype,gnsi));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  PROTECT(sims = <a class="code" href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853">do_simulate</a>(<span class="keywordtype">object</span>,<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>,nsim,returntype,gnsi));</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  PROTECT(y = VECTOR_ELT(sims,1));</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  *(INTEGER(gnsi)) = 0;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
@@ -197,7 +197,7 @@ $(document).ready(function(){initNavTree('probe_8c_source.html',''); initResizab
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  UNPROTECT(9);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">return</span> retval;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
-<div class="ttc" id="adecls_8h_html_adbe89f4789c66d534f2521bc3c4c98e7"><div class="ttname"><a href="decls_8h.html#adbe89f4789c66d534f2521bc3c4c98e7">do_simulate</a></div><div class="ttdeci">SEXP do_simulate(SEXP object, SEXP params, SEXP nsim, SEXP rettype, SEXP gnsi)</div><div class="ttdef"><b>Definition:</b> <a href="simulate_8c_source.html#l00006">simulate.c:6</a></div></div>
+<div class="ttc" id="adecls_8h_html_aa9d3b94c1a9a99e0db90e251f670e853"><div class="ttname"><a href="decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853">do_simulate</a></div><div class="ttdeci">SEXP do_simulate(SEXP, SEXP, SEXP, SEXP, SEXP)</div><div class="ttdef"><b>Definition:</b> <a href="simulate_8c_source.html#l00006">simulate.c:6</a></div></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
 <div class="ttc" id="apomp_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00021">pomp.h:21</a></div></div>
 <div class="ttc" id="apomp__defines_8h_html_a26453e4cfff7ec27ff31d617583dcae4"><div class="ttname"><a href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4">setrownames</a></div><div class="ttdeci">static R_INLINE void setrownames(SEXP x, SEXP names, int rank)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__defines_8h_source.html#l00110">pomp_defines.h:110</a></div></div>

@@ -249,7 +249,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="dmeasure_8c_a7ef96aa5550bad09e38528b3b9b91b3b_icgraph.png" border="0" usemap="#admeasure_8c_a7ef96aa5550bad09e38528b3b9b91b3b_icgraph" alt=""/></div>
 <map name="admeasure_8c_a7ef96aa5550bad09e38528b3b9b91b3b_icgraph" id="admeasure_8c_a7ef96aa5550bad09e38528b3b9b91b3b_icgraph">
 <area shape="rect" title=" " alt="" coords="164,5,245,32"/>
-<area shape="rect" href="decls_8h.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" href="decls_8h.html#a983ad52a265f059c6e25be89cdf97fd7" title=" " alt="" coords="5,5,116,32"/>
 </map>
 </div>
 
@@ -354,16 +354,16 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  PROTECT(Onames = GET_ROWNAMES(GET_DIMNAMES(y)));</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a> = GET_ROWNAMES(GET_DIMNAMES(x)));</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  PROTECT(Pnames = GET_ROWNAMES(GET_DIMNAMES(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>)));</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  PROTECT(Cnames = <a class="code" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a>(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>))));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  PROTECT(Cnames = <a class="code" href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff">get_covariate_names</a>(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>))));</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="comment">// set up the covariate table</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  covariate_table = <a class="code" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a>(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)),&amp;<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  covariate_table = <a class="code" href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed">make_covariate_table</a>(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;covar&quot;</span>)),&amp;<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>);</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  PROTECT(cvec = NEW_NUMERIC(<a class="code" href="trajectory_8c.html#a4edeebb04b42d65deaf721d0abbc091e">ncovars</a>));</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a> = REAL(cvec);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="comment">// extract the user-defined function</span></div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  PROTECT(pompfun = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;dmeasure&quot;</span>)));</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a>(pompfun,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,Onames,Cnames));</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a> = <a class="code" href="decls_8h.html#ada19523cc1edc44a799fce734f25c934">pomp_fun_handler</a>(pompfun,gnsi,&amp;<a class="code" href="trajectory_8c.html#a6c1c1c275092d79f830aa36620cfd33d">mode</a>,<a class="code" href="trajectory_8c.html#a2e65cd991bb60dd57098ab40b91ac722">Snames</a>,Pnames,Onames,Cnames));</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// extract &#39;userdata&#39; as pairlist</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a> = GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;userdata&quot;</span>)));</div>
@@ -388,7 +388,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      R_CheckUserInterrupt();   <span class="comment">// check for user interrupt</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,*time,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>); <span class="comment">// interpolate the covariates</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <a class="code" href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f">table_lookup</a>(&amp;covariate_table,*time,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>); <span class="comment">// interpolate the covariates</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, ft++) { <span class="comment">// loop over replicates</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
@@ -442,7 +442,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      R_CheckUserInterrupt();   <span class="comment">// check for user interrupt</span></div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="comment">// interpolate the covar functions for the covariates</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <a class="code" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a>(&amp;covariate_table,*time,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <a class="code" href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f">table_lookup</a>(&amp;covariate_table,*time,<a class="code" href="trajectory_8c.html#ac0e9686ed371713a6e6717115c66f602">cov</a>);</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="trajectory_8c.html#a72f66d373d52ab42fd8af134bd7f9cda">nreps</a>; j++, ft++) { <span class="comment">// loop over replicates</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
@@ -477,10 +477,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  UNPROTECT(nprotect);</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordflow">return</span> F;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
-<div class="ttc" id="adecls_8h_html_a036b9fb7cfc62e3984889f95024971a0"><div class="ttname"><a href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *tab, double x, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
-<div class="ttc" id="adecls_8h_html_a1e57a24640cb0d9f6f8d55e02c3d553f"><div class="ttname"><a href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP object, int *ncovar)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
-<div class="ttc" id="adecls_8h_html_a94db08f2d9f751e7832aaadb5ae6920e"><div class="ttname"><a href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP pfun, SEXP gnsi, pompfunmode *mode, SEXP S, SEXP P, SEXP O, SEXP C)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
-<div class="ttc" id="adecls_8h_html_aa7a80c78f9ef26859eea09b5299e702b"><div class="ttname"><a href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP object)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
+<div class="ttc" id="adecls_8h_html_a8fc25ac8149dbd6da367aa01dd9ad9ed"><div class="ttname"><a href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed">make_covariate_table</a></div><div class="ttdeci">lookup_table_t make_covariate_table(SEXP, int *)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00011">lookup_table.c:11</a></div></div>
+<div class="ttc" id="adecls_8h_html_ada19523cc1edc44a799fce734f25c934"><div class="ttname"><a href="decls_8h.html#ada19523cc1edc44a799fce734f25c934">pomp_fun_handler</a></div><div class="ttdeci">SEXP pomp_fun_handler(SEXP, SEXP, pompfunmode *, SEXP, SEXP, SEXP, SEXP)</div><div class="ttdef"><b>Definition:</b> <a href="pomp__fun_8c_source.html#l00030">pomp_fun.c:30</a></div></div>
+<div class="ttc" id="adecls_8h_html_ade6439566617e54cb9f4507f7ad2824f"><div class="ttname"><a href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f">table_lookup</a></div><div class="ttdeci">void table_lookup(lookup_table_t *, double, double *)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00053">lookup_table.c:53</a></div></div>
+<div class="ttc" id="adecls_8h_html_ae6345040eb63a38c0ff7ae42f3ea35ff"><div class="ttname"><a href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff">get_covariate_names</a></div><div class="ttdeci">SEXP get_covariate_names(SEXP)</div><div class="ttdef"><b>Definition:</b> <a href="lookup__table_8c_source.html#l00007">lookup_table.c:7</a></div></div>
 <div class="ttc" id="admeasure_8c_html_a7ef96aa5550bad09e38528b3b9b91b3b"><div class="ttname"><a href="dmeasure_8c.html#a7ef96aa5550bad09e38528b3b9b91b3b">add_args</a></div><div class="ttdeci">static R_INLINE SEXP add_args(SEXP args, SEXP Onames, SEXP Snames, SEXP Pnames, SEXP Cnames, SEXP log)</div><div class="ttdef"><b>Definition:</b> <a href="dmeasure_8c_source.html#l00010">dmeasure.c:11</a></div></div>
 <div class="ttc" id="admeasure_8c_html_a9a858c8c108cd54973666dd765f8718c"><div class="ttname"><a href="dmeasure_8c.html#a9a858c8c108cd54973666dd765f8718c">eval_call</a></div><div class="ttdeci">static R_INLINE SEXP eval_call(SEXP fn, SEXP args, double *t, double *y, int nobs, double *x, int nvar, double *p, int npar, double *c, int ncov)</div><div class="ttdef"><b>Definition:</b> <a href="dmeasure_8c_source.html#l00075">dmeasure.c:75</a></div></div>
 <div class="ttc" id="admeasure_8c_html_af4fb5592481eef6dc2aaf6f158871763"><div class="ttname"><a href="dmeasure_8c.html#af4fb5592481eef6dc2aaf6f158871763">ret_array</a></div><div class="ttdeci">static R_INLINE SEXP ret_array(int nreps, int ntimes)</div><div class="ttdef"><b>Definition:</b> <a href="dmeasure_8c_source.html#l00101">dmeasure.c:101</a></div></div>
@@ -513,11 +513,11 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d" title=" " alt="" coords="204,56,291,83"/>
 <area shape="rect" href="pomp__defines_8h.html#a8b775a55898690bdc11c348d0b5dc8c1" title=" " alt="" coords="188,107,307,133"/>
 <area shape="rect" href="dmeasure_8c.html#a9a858c8c108cd54973666dd765f8718c" title=" " alt="" coords="207,157,287,184"/>
-<area shape="rect" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b" title=" " alt="" coords="166,208,329,235"/>
-<area shape="rect" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f" title=" " alt="" coords="164,259,331,285"/>
-<area shape="rect" href="decls_8h.html#a94db08f2d9f751e7832aaadb5ae6920e" title=" " alt="" coords="176,309,319,336"/>
+<area shape="rect" href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff" title=" " alt="" coords="166,208,329,235"/>
+<area shape="rect" href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed" title=" " alt="" coords="164,259,331,285"/>
+<area shape="rect" href="decls_8h.html#ada19523cc1edc44a799fce734f25c934" title=" " alt="" coords="176,309,319,336"/>
 <area shape="rect" href="dmeasure_8c.html#af4fb5592481eef6dc2aaf6f158871763" title=" " alt="" coords="207,360,288,387"/>
-<area shape="rect" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0" title=" " alt="" coords="194,411,301,437"/>
+<area shape="rect" href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f" title=" " alt="" coords="194,411,301,437"/>
 <area shape="rect" href="pomp__defines_8h.html#a26453e4cfff7ec27ff31d617583dcae4" title=" " alt="" coords="383,81,494,108"/>
 <area shape="rect" href="pomp__defines_8h.html#ab39b1553739e35037c2a8846ba65594f" title=" " alt="" coords="379,259,499,285"/>
 <area shape="rect" href="pomp__fun_8c.html#ad3048ea27b0cd1af35870f0b0db5228e" title=" " alt="" coords="387,309,490,336"/>
@@ -643,7 +643,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="dmeasure_8c_a9a858c8c108cd54973666dd765f8718c_icgraph.png" border="0" usemap="#admeasure_8c_a9a858c8c108cd54973666dd765f8718c_icgraph" alt=""/></div>
 <map name="admeasure_8c_a9a858c8c108cd54973666dd765f8718c_icgraph" id="admeasure_8c_a9a858c8c108cd54973666dd765f8718c_icgraph">
 <area shape="rect" title=" " alt="" coords="164,5,244,32"/>
-<area shape="rect" href="decls_8h.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" href="decls_8h.html#a983ad52a265f059c6e25be89cdf97fd7" title=" " alt="" coords="5,5,116,32"/>
 </map>
 </div>
 
@@ -711,7 +711,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="dmeasure_8c_af4fb5592481eef6dc2aaf6f158871763_icgraph.png" border="0" usemap="#admeasure_8c_af4fb5592481eef6dc2aaf6f158871763_icgraph" alt=""/></div>
 <map name="admeasure_8c_af4fb5592481eef6dc2aaf6f158871763_icgraph" id="admeasure_8c_af4fb5592481eef6dc2aaf6f158871763_icgraph">
 <area shape="rect" title=" " alt="" coords="164,5,245,32"/>
-<area shape="rect" href="decls_8h.html#a326516e59ec4f791bcc752ef5f763c71" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" href="decls_8h.html#a983ad52a265f059c6e25be89cdf97fd7" title=" " alt="" coords="5,5,116,32"/>
 </map>
 </div>
 

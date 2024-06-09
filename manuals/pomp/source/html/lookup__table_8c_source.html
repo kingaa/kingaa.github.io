@@ -92,11 +92,11 @@ $(document).ready(function(){initNavTree('lookup__table_8c_source.html',''); ini
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="decls_8h.html#aa7a80c78f9ef26859eea09b5299e702b">    7</a></span>&#160;SEXP <a class="code" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a> (SEXP <span class="keywordtype">object</span>) {</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="decls_8h.html#ae6345040eb63a38c0ff7ae42f3ea35ff">    7</a></span>&#160;SEXP <a class="code" href="lookup__table_8c.html#aa7a80c78f9ef26859eea09b5299e702b">get_covariate_names</a> (SEXP <span class="keywordtype">object</span>) {</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordflow">return</span> GET_ROWNAMES(GET_DIMNAMES(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;table&quot;</span>))));</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="decls_8h.html#a1e57a24640cb0d9f6f8d55e02c3d553f">   11</a></span>&#160;<a class="code" href="structlookup__table__t.html">lookup_table_t</a> <a class="code" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a> (SEXP <span class="keywordtype">object</span>, <span class="keywordtype">int</span> *ncovar) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="decls_8h.html#a8fc25ac8149dbd6da367aa01dd9ad9ed">   11</a></span>&#160;<a class="code" href="structlookup__table__t.html">lookup_table_t</a> <a class="code" href="lookup__table_8c.html#a1e57a24640cb0d9f6f8d55e02c3d553f">make_covariate_table</a> (SEXP <span class="keywordtype">object</span>, <span class="keywordtype">int</span> *ncovar) {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="structlookup__table__t.html">lookup_table_t</a> tab;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">int</span> *dim;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  dim = INTEGER(GET_DIM(GET_SLOT(<span class="keywordtype">object</span>,install(<span class="stringliteral">&quot;table&quot;</span>))));</div>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('lookup__table_8c_source.html',''); ini
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keywordflow">return</span> tab;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="decls_8h.html#aaf5964c67b353b466461b1eb1269e129">   24</a></span>&#160;SEXP <a class="code" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129">lookup_in_table</a> (SEXP covar, SEXP t) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="decls_8h.html#afbec5a723223278096829f0532d5dc3a">   24</a></span>&#160;SEXP <a class="code" href="lookup__table_8c.html#aaf5964c67b353b466461b1eb1269e129">lookup_in_table</a> (SEXP covar, SEXP t) {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> xdim[2], nvar;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">int</span> j, nt;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">double</span> *tp, *xp;</div>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('lookup__table_8c_source.html',''); ini
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">// linear interpolation on a lookup table</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="decls_8h.html#a036b9fb7cfc62e3984889f95024971a0">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a> (<a class="code" href="structlookup__table__t.html">lookup_table_t</a> *tab, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> *y)</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="decls_8h.html#ade6439566617e54cb9f4507f7ad2824f">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0">table_lookup</a> (<a class="code" href="structlookup__table__t.html">lookup_table_t</a> *tab, <span class="keywordtype">double</span> x, <span class="keywordtype">double</span> *y)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">int</span> flag = 0;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">int</span> j, k, n;</div>

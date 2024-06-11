@@ -1,5 +1,8 @@
 var NAVTREEINDEX2 =
 {
+"structlbdp__parameters__t.html#ab7aaded0bb02f027d0774772805748aa":[1,0,4,2],
+"structlbdp__parameters__t.html#ac97175142eaf003e60eeedd79fe06a21":[1,0,4,0],
+"structlbdp__parameters__t.html#aea8aaa84faa50d712405b772d2a76413":[1,0,4,3],
 "structlbdp__state__t.html":[1,0,5],
 "structlbdp__state__t.html#a95ed79b0aac0de0e4f94275544bcf023":[1,0,5,0],
 "structmoran__parameters__t.html":[1,0,7],

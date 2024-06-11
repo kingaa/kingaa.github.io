@@ -117,13 +117,15 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 
 <h3>Details</h3>
 
-<p><code>sir_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and a SIR model.
+<p><code>sir_pomp</code> constructs a &lsquo;pomp&rsquo; object containing a given set of data and a SIR model.
 </p>
 
 
 <h3>Value</h3>
 
 <p><code>runSIR</code> and <code>continueSIR</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;SIR&rdquo;.
+</p>
+<p><code>sir_pomp</code> and <code>sirs_pomp</code> return &lsquo;pomp&rsquo; objects.
 </p>
 
 
@@ -165,7 +167,7 @@ simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
 simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.2.3 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

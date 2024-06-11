@@ -6,6 +6,7 @@ var seirs__pomp_8c =
     [ "E0", "seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e", null ],
     [ "ellE", "seirs__pomp_8c.html#a064e65664252647026c892fdf367316f", null ],
     [ "ellI", "seirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1", null ],
+    [ "EVENT_RATES", "seirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01", null ],
     [ "gamma", "seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d", null ],
     [ "I", "seirs__pomp_8c.html#a60ef6e1bcfabb95cfeb300e1d03ce470", null ],
     [ "I0", "seirs__pomp_8c.html#a73d113d91ab7ec355ca707cc930eb718", null ],

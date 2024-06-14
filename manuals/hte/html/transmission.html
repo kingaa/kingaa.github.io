@@ -12,11 +12,11 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>transmission {hte}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2 id='transmission'>Transmission model</h2>
+<h2>Transmission model</h2>
 
 <h3>Description</h3>
 
@@ -46,24 +46,24 @@ trans_unit_spec_objfun(
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="transmission_:_params">params</code></td>
+<tr><td><code id="params">params</code></td>
 <td>
 <p>named vector of parameters</p>
 </td></tr>
-<tr><td><code id="transmission_:_data">data</code></td>
+<tr><td><code id="data">data</code></td>
 <td>
 <p>patient movement, isolation, and testing data</p>
 </td></tr>
-<tr><td><code id="transmission_:_tol">tol</code></td>
+<tr><td><code id="tol">tol</code></td>
 <td>
 <p>positive scalar; convergence tolerance (mean difference).</p>
 </td></tr>
-<tr><td><code id="transmission_:_maxit">maxit</code></td>
+<tr><td><code id="maxit">maxit</code></td>
 <td>
 <p>scalar integer; maximum number of fixed-point iterations.
 If <code>tol</code> is not achieved in <code>maxit</code> or fewer iterations, an error is generated.</p>
 </td></tr>
-<tr><td><code id="transmission_:_est">est</code></td>
+<tr><td><code id="est">est</code></td>
 <td>
 <p>names of parameters to estimate</p>
 </td></tr>
@@ -126,6 +126,9 @@ and recovery rates that can be different inside and outside of hospital.
 
 <h3>See Also</h3>
 
+<p>More on the transmission model: 
+<code><a href="../../hte/help/abm.html">abm</a></code>
+</p>
 <p>More on stateful objective functions: 
 <code><a href="../../hte/help/independent.html">independent</a></code>,
 <code><a href="../../hte/help/stobfun.html">stobfun</a>()</code>
@@ -187,6 +190,7 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.16.0 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.17.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

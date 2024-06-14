@@ -1,3 +1,11 @@
+Package: hte
+Version: 0.0.17.0
+Depends: R(>= 4.2.0)
+Imports: methods, utils, dplyr, tibble, tidyr, progress, lubridate
+Suggests: ggplot2, knitr, doFuture, doRNG, pomp, tidyverse
+License: GPL-3
+MD5sum: c1f9c015f661c017828c99ea0e1956b8
+
 Package: phylopomp
 Version: 0.14.2.3
 Depends: R(>= 4.2)

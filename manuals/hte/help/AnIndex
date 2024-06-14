@@ -1,4 +1,5 @@
 hte-package	package
+abm	abm
 Bernoulli_filter	bernoulli_filter
 Bfilter	bernoulli_filter
 coal_last	coal_last
@@ -15,8 +16,10 @@ indep_homog_objfun	independent
 indep_infect	simuldat
 indep_unit_spec_filter	independent
 indep_unit_spec_objfun	independent
+run_abm	abm
 simuldat	simuldat
 simul_patient	simuldat
+sim_pat_mov	fake_data
 stobfun	stobfun
 transf_fns	stobfun
 transmission	transmission

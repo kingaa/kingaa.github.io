@@ -101,9 +101,9 @@ $(document).ready(function(){initNavTree('probe__marginal_8c_source.html',''); i
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  np = *(INTEGER(AS_INTEGER(order))); <span class="comment">// order of polynomial regression</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  df = *(INTEGER(AS_INTEGER(diff)));  <span class="comment">// order of differencing</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  n = LENGTH(ref);            <span class="comment">// n = number of observations</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  nx = n - df;                <span class="comment">// nx = rows in model matrix</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  dim[0] = nx; dim[1] = np;       <span class="comment">// dimensions of model matrix</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  n = LENGTH(ref);                    <span class="comment">// n = number of observations</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  nx = n - df;                        <span class="comment">// nx = rows in model matrix</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  dim[0] = nx; dim[1] = np;           <span class="comment">// dimensions of model matrix</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span> (nx &lt; 1) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;must have diff &lt; number of observations&quot;</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('probe__marginal_8c_source.html',''); i
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  SET_NAMES(retval,retvalnames);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="probe__marginal_8c.html#a9accae76d6ed9147d0db36478294f156">order_reg_model_matrix</a>(REAL(z),REAL(mm),REAL(<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>),INTEGER(pivot),n,np,df);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  UNPROTECT(6);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">return</span>(retval);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('probe__marginal_8c_source.html',''); i
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">char</span> tmp[BUFSIZ];</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  df = *(INTEGER(AS_INTEGER(diff)));  <span class="comment">// order of differencing</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  n = LENGTH(x);              <span class="comment">// n = number of observations</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  n = LENGTH(x);                      <span class="comment">// n = number of observations</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">// unpack the setup information</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  PROTECT(mm = VECTOR_ELT(setup,0));    <span class="comment">//  QR-decomposed model matrix</span></div>
@@ -144,10 +144,10 @@ $(document).ready(function(){initNavTree('probe__marginal_8c_source.html',''); i
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  nx = INTEGER(GET_DIM(mm))[0]; <span class="comment">// nx = number of rows in model matrix</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  np = INTEGER(GET_DIM(mm))[1]; <span class="comment">// np = order of polynomial</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">if</span> (n-df != nx) <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;length of &#39;ref&#39; must equal length of data&quot;</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  PROTECT(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a> = duplicate(AS_NUMERIC(x)));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  PROTECT(beta = NEW_NUMERIC(np));</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  PROTECT(beta_names = NEW_STRING(np));</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; np; i++) {</div>
@@ -183,22 +183,22 @@ $(document).ready(function(){initNavTree('probe__marginal_8c_source.html',''); i
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// z is now an nx-vector</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// center z</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">for</span> (j = 0, xx = 0.0; j &lt; nx; j++) xx += z[j]; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">for</span> (j = 0, xx = 0.0; j &lt; nx; j++) xx += z[j];</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  xx /= nx; <span class="comment">// xx = mean(z)</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) z[j] -= xx;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// now sort</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  R_qsort(z,1,nx);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// Now create the model matrix, using contents of z </span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// Now create the model matrix, using contents of z</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">if</span> (np &lt; 1) np = 1;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>[j] = z[j]; <span class="comment">// first column</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">for</span> (i = 1, <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a> = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a> = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>+nx; i &lt; np; i++, <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a> += nx, <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a> += nx) </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">for</span> (i = 1, <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a> = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a> = <a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>+nx; i &lt; np; i++, <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a> += nx, <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a> += nx)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) <a class="code" href="ou2_8c.html#a79ae03a0214cb30e57b9e8835f2a0019">X2</a>[j] = <a class="code" href="ou2_8c.html#a1964818ccd90a6173ea48cecb652feeb">X1</a>[j]*z[j];</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// QR decompose the model matrix </span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// QR decompose the model matrix</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="pomp__mat_8h.html#a305b5b8bb23bc880b442f68dc1219ed6">pomp_qr</a>(<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>,nx,np,pivot,<a class="code" href="gompertz_8c.html#aa7082577997805000f8e8b56846642cd">tau</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// thanks to Simon N. Wood for the original version of the following code</span></div>
@@ -215,7 +215,7 @@ $(document).ready(function(){initNavTree('probe__marginal_8c_source.html',''); i
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// x is now an nx-vector</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// center x</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">for</span> (j = 0, xx = 0.0; j &lt; nx; j++) xx += x[j]; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">for</span> (j = 0, xx = 0.0; j &lt; nx; j++) xx += x[j];</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  xx /= nx; <span class="comment">// xx = mean(x)</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">for</span> (j = 0; j &lt; nx; j++) x[j] -= xx;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>

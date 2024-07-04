@@ -194,7 +194,7 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    x /= nrow;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; nrow; i++) yp[i] -= x; <span class="comment">// center the column</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">for</span> (x = 0, i = 0; i &lt; nrow; i++) x += yp[i]*yp[i];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    d = sqrt(x/(nrow-1));          <span class="comment">// column SD</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    d = sqrt(x/(nrow-1));                  <span class="comment">// column SD</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; nrow; i++) yp[i] /= d; <span class="comment">// precondition</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -231,9 +231,9 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      x += w[i];</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      xx += w[i]*yp[i];</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    xx /= x;            <span class="comment">// column mean</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    xx /= x;                    <span class="comment">// column mean</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; nrow; i++) yp[i] -= xx; <span class="comment">// center the column</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ydat[j] -= xx;      <span class="comment">// subtract mean from realized probe</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ydat[j] -= xx;              <span class="comment">// subtract mean from realized probe</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span> (xx = 0, i = 0; i &lt; nrow; i++) {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      xx += yp[i]*yp[i];</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      yp[i] /= wbar;</div>

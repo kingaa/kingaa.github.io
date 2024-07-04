@@ -158,9 +158,9 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// This function draws a random increment of a gamma whitenoise process.</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">// This will have expectation=dt and variance=(sigma^2*dt)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// If dW = rgammawn(sigma,dt), then </span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// If dW = rgammawn(sigma,dt), then</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// mu dW/dt is a candidate for a random rate process within an</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// Euler-multinomial context, i.e., </span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// Euler-multinomial context, i.e.,</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// E[mu*dW] = mu*dt and Var[mu*dW] = mu*sigma^2*dt</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="decls_8h.html#a05f8691fcce63ae69c6eb740a5e39f41">   77</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#a256259848397b531d0b334182b9c6ca1">R_GammaWN</a> (SEXP n, SEXP <a class="code" href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a>, SEXP deltat) {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">int</span> k, nval, nsig, ndt;</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('distributions_8c_source.html',''); ini
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// This function draws a random variate from a beta-binomial distribution.</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">// The binomial has size n and probability P ~ Beta(mu,theta).</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// That is, E[P] = mu and Var[P] = </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// That is, E[P] = mu and Var[P] =</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="decls_8h.html#a3d15947a5f8c829a5672f83b2246d7b8">  103</a></span>&#160;SEXP <a class="code" href="distributions_8c.html#aa8ca33711b215b87cc650765175f1ca8">R_BetaBinom</a> (SEXP n, SEXP size, SEXP prob, SEXP theta) {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">int</span> k, nval, ns, np, nt;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">double</span> *<a class="code" href="gompertz_8c.html#a207fd5507206d307cd63f95374fcd00d">X</a>, *S, *P, *T;</div>

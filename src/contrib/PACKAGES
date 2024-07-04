@@ -27,12 +27,12 @@ MD5sum: ca0b31010d50e852c3c63a4df3c0e36f
 NeedsCompilation: yes
 
 Package: ouch
-Version: 2.19-2
-Depends: R(>= 3.6)
+Version: 2.20-0
+Depends: R(>= 4.1)
 Imports: methods, stats, graphics, grDevices, utils, subplex
 Suggests: ape
 License: GPL-3
-MD5sum: 15c7908f8e1da403e17a208b046aa080
+MD5sum: dacc42b1de8f6ca55ed6b5951eed7139
 NeedsCompilation: yes
 
 Package: panelPomp

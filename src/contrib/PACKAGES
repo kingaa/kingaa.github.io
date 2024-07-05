@@ -65,11 +65,11 @@ MD5sum: bac6818e9820e0103f25ddd989490575
 NeedsCompilation: yes
 
 Package: subplex
-Version: 1.8.3
-Depends: R(>= 2.5.1)
+Version: 1.9
+Depends: R(>= 4.1.0)
 Suggests: tinytest
 License: GPL-3
-MD5sum: 72e57196a1ffaf07690450ca374ac71d
+MD5sum: 9acc2ba6d75a266eb1ae4e988af4b1b9
 NeedsCompilation: yes
 
 Package: tao

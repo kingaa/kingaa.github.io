@@ -32,3 +32,10 @@ Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
 Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
 License: GPL-3
 MD5sum: c1aeca1235dab3a9fa1de501a6e33e1a
+
+Package: subplex
+Version: 1.9
+Depends: R(>= 4.1.0)
+Suggests: tinytest
+License: GPL-3
+MD5sum: 51afe99d446bcd08480c8099448e08a3

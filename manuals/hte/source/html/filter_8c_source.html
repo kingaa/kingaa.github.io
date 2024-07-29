@@ -142,92 +142,92 @@ $(document).ready(function(){initNavTree('filter_8c_source.html',''); initResiza
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">if</span> (t2 &gt; t1) {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">double</span> s = lambda+gamma;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">double</span> a = exp(-s*(t2-t1));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> (1-a)*lambda/s + a*p;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (s &gt; 0) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">double</span> a = exp(-s*(t2-t1));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      p = (1-a)*lambda/s + a*p;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">   64</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">test_prob</a></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;(<span class="keywordtype">int</span> result, <span class="keywordtype">double</span> Alpha, <span class="keywordtype">double</span> Beta, <span class="keywordtype">double</span> *out)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">if</span> (result==1) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    out[0] = Alpha;             <span class="comment">// false positive</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    out[1] = 1-Beta;            <span class="comment">// true positive</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    out[0] = 1-Alpha;           <span class="comment">// true negative</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    out[1] = Beta;              <span class="comment">// false negative</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">   76</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">filtration</a></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;(<span class="keywordtype">int</span> result, <span class="keywordtype">double</span> p, <span class="keywordtype">double</span> Alpha, <span class="keywordtype">double</span> Beta, <span class="keywordtype">double</span> Eta, <span class="keywordtype">double</span> *ll)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (result != NA_INTEGER) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (result == 2) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      p = (Eta*p)/(1-p+Eta*p);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordtype">double</span> prob[2], lik;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">test_prob</a>(result, Alpha, Beta, prob);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      prob[0] *= 1 - p;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      prob[1] *= p;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      lik = prob[0] + prob[1];</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      p = prob[1] / lik;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      *ll += log(lik);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> p;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="filter_8c.html#a9701768cde10c1179393a608b5344366">  106</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filter_8c.html#a9701768cde10c1179393a608b5344366">Bernoulli_Filter</a></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;(</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; <span class="comment">// input:</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Alpha,       <span class="comment">// false positive testing rate</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Beta,        <span class="comment">// false negative testing rate</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *p0,          <span class="comment">// prevalence on admission</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *isol_fact,   <span class="comment">// effect of isolation on susceptibility</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Eta,        <span class="comment">// additional information on infection status</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *patno,          <span class="comment">// patient number</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *result,         <span class="comment">// test result</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *isol,           <span class="comment">// contact isolation status (1 = isolated)</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *rowid,          <span class="comment">// row id</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *loc,            <span class="comment">// location</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *dim,            <span class="comment">// dimension of the dataset</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Lambda,      <span class="comment">// force of infection</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Gamma,       <span class="comment">// recovery rate</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Time,        <span class="comment">// timestamps</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; <span class="comment">// output:</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; <span class="keywordtype">int</span> *Patient,                 <span class="comment">// patient ID</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; <span class="keywordtype">int</span> *Occ,                     <span class="comment">// occupancy</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; <span class="keywordtype">double</span> *Prev_i,               <span class="comment">// prevalence among isolated patients</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; <span class="keywordtype">double</span> *Prev_u,               <span class="comment">// prevalence among unisolated patients</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; <span class="keywordtype">double</span> *Loglik                <span class="comment">// log likelihood</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; )</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">int</span> k = 0;            <span class="comment">// pointer to line in the patient-history data</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">int</span> pat = patno[0];   <span class="comment">// patient number</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">double</span> p = *p0;       <span class="comment">// probability of infection</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">double</span> isf = *isol_fact;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordflow">while</span> (k &lt; dim[0]) {          <span class="comment">// loop over events</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">if</span> (pat != patno[k]) {      <span class="comment">// beginning of a new patient block</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      pat = patno[k];</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      p = *p0;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">int</span> <span class="keyword">event</span> = rowid[k]-1;     <span class="comment">// zero-based column number</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">int</span> locat = loc[k]-1;       <span class="comment">// zero-based row number</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">int</span> isolat = isol[k];       <span class="comment">// is the patient isolated?</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (event &lt; 0 || event &gt;= dim[2])</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <a class="code" href="hte__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: rowid mistake!&quot;</span>,__func__); <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (locat &lt; 0 || locat &gt;= dim[1])</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <a class="code" href="hte__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: location mistake!&quot;</span>,__func__); <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// indices into Patient, Occ, Prev, Lambda, Gamma, Loglik, Time:</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">int</span> i = locat + <span class="keyword">event</span>*dim[1]; <span class="comment">// current unit &amp; event</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">int</span> i1 = i+dim[1];            <span class="comment">// next event, same unit</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">// assimilate new test result:</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    p = <a class="code" href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">filtration</a>(result[k],p,*Alpha,*Beta,*Eta, &amp;Loglik[i]);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">if</span> (Patient[i] != NA_INTEGER)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <a class="code" href="hte__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: cannot overwrite patient ID!&quot;</span>,__func__); <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">   65</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">test_prob</a></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;(<span class="keywordtype">int</span> result, <span class="keywordtype">double</span> Alpha, <span class="keywordtype">double</span> Beta, <span class="keywordtype">double</span> *out)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span> (result==1) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    out[0] = Alpha;             <span class="comment">// false positive</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    out[1] = 1-Beta;            <span class="comment">// true positive</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    out[0] = 1-Alpha;           <span class="comment">// true negative</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    out[1] = Beta;              <span class="comment">// false negative</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">   77</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code" href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">filtration</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;(<span class="keywordtype">int</span> result, <span class="keywordtype">double</span> p, <span class="keywordtype">double</span> Alpha, <span class="keywordtype">double</span> Beta, <span class="keywordtype">double</span> Eta, <span class="keywordtype">double</span> *ll)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span> (result != NA_INTEGER) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (result == 2) {      <span class="comment">// isolation effect</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      p = (Eta*p)/(1-p+Eta*p);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordtype">double</span> prob[2], lik;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">test_prob</a>(result, Alpha, Beta, prob);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      prob[0] *= 1 - p;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      prob[1] *= p;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      lik = prob[0] + prob[1];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      p = prob[1] / lik;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      *ll += log(lik);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="filter_8c.html#a9701768cde10c1179393a608b5344366">  107</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="filter_8c.html#a9701768cde10c1179393a608b5344366">Bernoulli_Filter</a></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;(</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; <span class="comment">// input:</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Alpha,       <span class="comment">// false positive testing rate</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Beta,        <span class="comment">// false negative testing rate</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *p0,          <span class="comment">// prevalence on admission</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *isol_fact,   <span class="comment">// effect of isolation on susceptibility</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Eta,        <span class="comment">// additional information on infection status</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *patno,          <span class="comment">// patient number</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *result,         <span class="comment">// test result</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *isol,           <span class="comment">// contact isolation status (1 = isolated)</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *rowid,          <span class="comment">// row id</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *loc,            <span class="comment">// location</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; <span class="keyword">const</span> <span class="keywordtype">int</span> *dim,            <span class="comment">// dimension of the dataset</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Lambda,      <span class="comment">// force of infection</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Gamma,       <span class="comment">// recovery rate</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; <span class="keyword">const</span> <span class="keywordtype">double</span> *Time,        <span class="comment">// timestamps</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; <span class="comment">// output:</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; <span class="keywordtype">int</span> *Patient,                 <span class="comment">// patient ID</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; <span class="keywordtype">int</span> *Occ,                     <span class="comment">// occupancy</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; <span class="keywordtype">double</span> *Prev_i,               <span class="comment">// prevalence among isolated patients</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; <span class="keywordtype">double</span> *Prev_u,               <span class="comment">// prevalence among unisolated patients</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; <span class="keywordtype">double</span> *Loglik                <span class="comment">// log likelihood</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">int</span> k = 0;            <span class="comment">// pointer to line in the patient-history data</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">int</span> pat = patno[0];   <span class="comment">// patient number</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">double</span> p = *p0;       <span class="comment">// probability of infection</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">double</span> isf = *isol_fact;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordflow">while</span> (k &lt; dim[0]) {          <span class="comment">// loop over events</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (pat != patno[k]) {      <span class="comment">// beginning of a new patient block</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      pat = patno[k];</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      p = *p0;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">int</span> <span class="keyword">event</span> = rowid[k]-1;     <span class="comment">// zero-based column number</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">int</span> locat = loc[k]-1;       <span class="comment">// zero-based row number</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">int</span> isolat = isol[k];       <span class="comment">// is the patient isolated?</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    assert(event &gt;= 0);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    assert(event &lt; dim[2]);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    assert(locat &gt;= 0);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    assert(locat &lt; dim[1]);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// indices into Patient, Occ, Prev, Lambda, Gamma, Loglik, Time:</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">int</span> i = locat + <span class="keyword">event</span>*dim[1]; <span class="comment">// current unit &amp; event</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">int</span> i1 = i+dim[1];            <span class="comment">// next event, same unit</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">// assimilate new test result:</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    p = <a class="code" href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">filtration</a>(result[k],p,*Alpha,*Beta,*Eta, &amp;Loglik[i]);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    assert(Patient[i] == NA_INTEGER);</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    Patient[i] = pat;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    k++;                    <span class="comment">// advance to next line in patient history</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">if</span> (k &lt; dim[0] &amp;&amp; pat == patno[k]) {</div>
@@ -304,14 +304,13 @@ $(document).ready(function(){initNavTree('filter_8c_source.html',''); initResiza
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    k++;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
-<div class="ttc" id="afilter_8c_html_a02d22dd760e39a2b5189125c52df2a2a"><div class="ttname"><a href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">filtration</a></div><div class="ttdeci">static double filtration(int result, double p, double Alpha, double Beta, double Eta, double *ll)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00076">filter.c:77</a></div></div>
+<div class="ttc" id="afilter_8c_html_a02d22dd760e39a2b5189125c52df2a2a"><div class="ttname"><a href="filter_8c.html#a02d22dd760e39a2b5189125c52df2a2a">filtration</a></div><div class="ttdeci">static double filtration(int result, double p, double Alpha, double Beta, double Eta, double *ll)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00077">filter.c:78</a></div></div>
 <div class="ttc" id="afilter_8c_html_a09095ca3c0c44a3085e330ad5386152b"><div class="ttname"><a href="filter_8c.html#a09095ca3c0c44a3085e330ad5386152b">Bernoulli_Filter_Wrapper</a></div><div class="ttdeci">SEXP Bernoulli_Filter_Wrapper(SEXP Alpha, SEXP Beta, SEXP P0, SEXP Isol_Factor, SEXP Eta, SEXP Patno, SEXP Result, SEXP Isol, SEXP Rowid, SEXP Loc, SEXP Dim, SEXP Lambda, SEXP Gamma, SEXP Unit, SEXP Time)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00004">filter.c:5</a></div></div>
 <div class="ttc" id="afilter_8c_html_a5bb0d10c9c7df5ac90a01fbcc66f46db"><div class="ttname"><a href="filter_8c.html#a5bb0d10c9c7df5ac90a01fbcc66f46db">prediction</a></div><div class="ttdeci">static double prediction(double t1, double t2, double p, double lambda, double gamma)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00052">filter.c:53</a></div></div>
-<div class="ttc" id="afilter_8c_html_a928d0067ff420da9ba1cb8a9b6558957"><div class="ttname"><a href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">test_prob</a></div><div class="ttdeci">static void test_prob(int result, double Alpha, double Beta, double *out)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00064">filter.c:65</a></div></div>
+<div class="ttc" id="afilter_8c_html_a928d0067ff420da9ba1cb8a9b6558957"><div class="ttname"><a href="filter_8c.html#a928d0067ff420da9ba1cb8a9b6558957">test_prob</a></div><div class="ttdeci">static void test_prob(int result, double Alpha, double Beta, double *out)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00065">filter.c:66</a></div></div>
 <div class="ttc" id="afilter_8c_html_a93796b877f1dc3723bcee2b5816c39f9"><div class="ttname"><a href="filter_8c.html#a93796b877f1dc3723bcee2b5816c39f9">BFilter</a></div><div class="ttdeci">void BFilter(const double *Alpha, const double *Beta, const double *p0, const double *isol_fact, const double *Eta, const int *result, const int *isol, const int *loc, const double *time, const int *dim, const double *lambda, const double *gamma, double *logLik)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00194">filter.c:195</a></div></div>
-<div class="ttc" id="afilter_8c_html_a9701768cde10c1179393a608b5344366"><div class="ttname"><a href="filter_8c.html#a9701768cde10c1179393a608b5344366">Bernoulli_Filter</a></div><div class="ttdeci">void Bernoulli_Filter(const double *Alpha, const double *Beta, const double *p0, const double *isol_fact, const double *Eta, const int *patno, const int *result, const int *isol, const int *rowid, const int *loc, const int *dim, const double *Lambda, const double *Gamma, const double *Time, int *Patient, int *Occ, double *Prev_i, double *Prev_u, double *Loglik)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00106">filter.c:107</a></div></div>
+<div class="ttc" id="afilter_8c_html_a9701768cde10c1179393a608b5344366"><div class="ttname"><a href="filter_8c.html#a9701768cde10c1179393a608b5344366">Bernoulli_Filter</a></div><div class="ttdeci">void Bernoulli_Filter(const double *Alpha, const double *Beta, const double *p0, const double *isol_fact, const double *Eta, const int *patno, const int *result, const int *isol, const int *rowid, const int *loc, const int *dim, const double *Lambda, const double *Gamma, const double *Time, int *Patient, int *Occ, double *Prev_i, double *Prev_u, double *Loglik)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00107">filter.c:108</a></div></div>
 <div class="ttc" id="ahte__internal_8h_html"><div class="ttname"><a href="hte__internal_8h.html">hte_internal.h</a></div></div>
-<div class="ttc" id="ahte__internal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="hte__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="hte__internal_8h_source.html#l00013">hte_internal.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

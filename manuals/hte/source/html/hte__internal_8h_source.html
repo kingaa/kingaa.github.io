@@ -96,12 +96,18 @@ $(document).ready(function(){initNavTree('hte__internal_8h_source.html',''); ini
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Rdefines.h&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;Rinternals.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hte__decls_8h.html">hte_decls.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="hte__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">   13</a></span>&#160;<span class="preprocessor">#define err(...) errorcall(R_NilValue,__VA_ARGS__)</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="hte__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">   14</a></span>&#160;<span class="preprocessor">#define warn(...) warningcall(R_NilValue,__VA_ARGS__)</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hte__decls_8h.html">hte_decls.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="hte__internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">   19</a></span>&#160;<span class="preprocessor">#define err(...) errorcall(R_NilValue,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="hte__internal_8h.html#a8224a361dddd2ad59b411982e5ea746f">   20</a></span>&#160;<span class="preprocessor">#define warn(...) warningcall(R_NilValue,__VA_ARGS__)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ahte__decls_8h_html"><div class="ttname"><a href="hte__decls_8h.html">hte_decls.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

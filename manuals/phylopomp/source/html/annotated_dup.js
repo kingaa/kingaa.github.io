@@ -22,5 +22,7 @@ var annotated_dup =
     [ "siir_parameters_t", "structsiir__parameters__t.html", "structsiir__parameters__t" ],
     [ "siir_state_t", "structsiir__state__t.html", "structsiir__state__t" ],
     [ "sir_parameters_t", "structsir__parameters__t.html", "structsir__parameters__t" ],
-    [ "sir_state_t", "structsir__state__t.html", "structsir__state__t" ]
+    [ "sir_state_t", "structsir__state__t.html", "structsir__state__t" ],
+    [ "twospecies_parameters_t", "structtwospecies__parameters__t.html", "structtwospecies__parameters__t" ],
+    [ "twospecies_state_t", "structtwospecies__state__t.html", "structtwospecies__state__t" ]
 ];

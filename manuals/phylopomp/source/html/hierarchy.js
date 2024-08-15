@@ -31,5 +31,7 @@ var hierarchy =
     [ "siir_parameters_t", "structsiir__parameters__t.html", null ],
     [ "siir_state_t", "structsiir__state__t.html", null ],
     [ "sir_parameters_t", "structsir__parameters__t.html", null ],
-    [ "sir_state_t", "structsir__state__t.html", null ]
+    [ "sir_state_t", "structsir__state__t.html", null ],
+    [ "twospecies_parameters_t", "structtwospecies__parameters__t.html", null ],
+    [ "twospecies_state_t", "structtwospecies__state__t.html", null ]
 ];

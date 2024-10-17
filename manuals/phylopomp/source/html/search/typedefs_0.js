@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ball_5fit_577',['ball_it',['../pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31',1,'pocket.h']]],
-  ['ball_5frev_5fit_578',['ball_rev_it',['../pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a',1,'pocket.h']]]
+  ['ball_5fit_611',['ball_it',['../pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31',1,'pocket.h']]],
+  ['ball_5frev_5fit_612',['ball_rev_it',['../pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a',1,'pocket.h']]]
 ];

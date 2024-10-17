@@ -905,23 +905,23 @@ Here is the caller graph for this function:</div>
 
 <p>makes a jump </p>
 
-<p class="definition">Definition at line <a class="el" href="lbdp_8cc_source.html#l00070">70</a> of file <a class="el" href="lbdp_8cc_source.html">lbdp.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                      {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">switch</span> (event) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    state.n += 1; <a class="code" href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d">birth</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    state.n -= 1; <a class="code" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7">death</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c">sample</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">default</span>:                      <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    assert(0);                  <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">break</span>;                      <span class="comment">// #nocov</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="lbdp_8cc_source.html#l00072">72</a> of file <a class="el" href="lbdp_8cc_source.html">lbdp.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                      {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">switch</span> (event) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    state.n += 1; <a class="code" href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d">birth</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    state.n -= 1; <a class="code" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7">death</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c">sample</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">default</span>:                      <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    assert(0);                  <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">break</span>;                      <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="ttc" id="aclassmaster__t_html_a0e3609f1ba9e693cad576ddbffef068d"><div class="ttname"><a href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d">master_t::birth</a></div><div class="ttdeci">void birth(name_t i=0, name_t j=0, int n=1)</div><div class="ttdoc">n births into deme j with parent in deme i</div><div class="ttdef"><b>Definition:</b> <a href="master_8h_source.html#l00142">master.h:142</a></div></div>
 <div class="ttc" id="aclassmaster__t_html_a39c6766e6d3bff200e7037485fb1ddd7"><div class="ttname"><a href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7">master_t::death</a></div><div class="ttdeci">void death(name_t i=0)</div><div class="ttdoc">death in deme i</div><div class="ttdef"><b>Definition:</b> <a href="master_8h_source.html#l00153">master.h:153</a></div></div>
 <div class="ttc" id="aclassmaster__t_html_aa6c8e866f0eb65749ab054a223cf823c"><div class="ttname"><a href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c">master_t::sample</a></div><div class="ttdeci">void sample(name_t i=0)</div><div class="ttdoc">sample in deme i</div><div class="ttdef"><b>Definition:</b> <a href="master_8h_source.html#l00166">master.h:166</a></div></div>
@@ -1288,12 +1288,13 @@ Here is the call graph for this function:</div>
 
 <p>initialize the state </p>
 
-<p class="definition">Definition at line <a class="el" href="lbdp_8cc_source.html#l00064">64</a> of file <a class="el" href="lbdp_8cc_source.html">lbdp.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                  {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  state.n = params.n0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556">graft</a>(0,params.n0);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="lbdp_8cc_source.html#l00066">66</a> of file <a class="el" href="lbdp_8cc_source.html">lbdp.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                  {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  state.n = params.n0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556">graft</a>(<a class="code" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>,params.n0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 <div class="ttc" id="aclassmaster__t_html_a5aa15d06560da90b51d8c8a72df92556"><div class="ttname"><a href="classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556">master_t::graft</a></div><div class="ttdeci">void graft(name_t i=0, int m=1)</div><div class="ttdoc">new root in deme i</div><div class="ttdef"><b>Definition:</b> <a href="master_8h_source.html#l00159">master.h:159</a></div></div>
+<div class="ttc" id="albdp_8cc_html_ae241dd82f0d473afd1b39c94f801c127"><div class="ttname"><a href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a></div><div class="ttdeci">static int deme</div><div class="ttdef"><b>Definition:</b> <a href="lbdp_8cc_source.html#l00007">lbdp.cc:7</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -557,20 +557,20 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00049">49</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                      {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// Register routines</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  R_registerRoutines(info,NULL,<a class="code" href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a>,NULL,<a class="code" href="init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae">extMethods</a>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  R_useDynamicSymbols(info,TRUE);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//  R_useDynamicSymbols(info,FALSE);</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">//  R_forceSymbols(info,TRUE);</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="init_8c.html#aaebeb1369a763abb5c9d3e85406737f9">get_userdata</a> = (get_userdata_t*) R_GetCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="init_8c.html#ab8c5f92e888b86a4bd87789856c07bbb">get_userdata_double</a> = (get_userdata_double_t*) R_GetCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_double&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a> = (get_userdata_int_t*) R_GetCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_int&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="ttc" id="ainit_8c_html_a446ed3b3877d86ba01ac24d6501e25ae"><div class="ttname"><a href="init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae">extMethods</a></div><div class="ttdeci">static const R_CallMethodDef extMethods[]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00044">init.c:44</a></div></div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00048">48</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                      {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">// Register routines</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  R_registerRoutines(info,NULL,<a class="code" href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a>,NULL,<a class="code" href="init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae">extMethods</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  R_useDynamicSymbols(info,TRUE);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="comment">//  R_useDynamicSymbols(info,FALSE);</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">//  R_forceSymbols(info,TRUE);</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="init_8c.html#aaebeb1369a763abb5c9d3e85406737f9">get_userdata</a> = (get_userdata_t*) R_GetCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="init_8c.html#ab8c5f92e888b86a4bd87789856c07bbb">get_userdata_double</a> = (get_userdata_double_t*) R_GetCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_double&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a> = (get_userdata_int_t*) R_GetCCallable(<span class="stringliteral">&quot;pomp&quot;</span>,<span class="stringliteral">&quot;get_userdata_int&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="ainit_8c_html_a446ed3b3877d86ba01ac24d6501e25ae"><div class="ttname"><a href="init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae">extMethods</a></div><div class="ttdeci">static const R_CallMethodDef extMethods[]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00043">init.c:43</a></div></div>
 <div class="ttc" id="ainit_8c_html_a950f5be1c4ce64a64de7e8939b87830c"><div class="ttname"><a href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a></div><div class="ttdeci">get_userdata_int_t * get_userdata_int</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00007">init.c:7</a></div></div>
-<div class="ttc" id="ainit_8c_html_aa5ecd2cda6339e38a7040278a02baaa5"><div class="ttname"><a href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a></div><div class="ttdeci">static const R_CallMethodDef callMethods[]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00028">init.c:28</a></div></div>
+<div class="ttc" id="ainit_8c_html_aa5ecd2cda6339e38a7040278a02baaa5"><div class="ttname"><a href="init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5">callMethods</a></div><div class="ttdeci">static const R_CallMethodDef callMethods[]</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00027">init.c:27</a></div></div>
 <div class="ttc" id="ainit_8c_html_aaebeb1369a763abb5c9d3e85406737f9"><div class="ttname"><a href="init_8c.html#aaebeb1369a763abb5c9d3e85406737f9">get_userdata</a></div><div class="ttdeci">get_userdata_t * get_userdata</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00005">init.c:5</a></div></div>
 <div class="ttc" id="ainit_8c_html_ab8c5f92e888b86a4bd87789856c07bbb"><div class="ttname"><a href="init_8c.html#ab8c5f92e888b86a4bd87789856c07bbb">get_userdata_double</a></div><div class="ttdeci">get_userdata_double_t * get_userdata_double</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00006">init.c:6</a></div></div>
 </div><!-- fragment -->
@@ -646,13 +646,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SIR),</div>
-<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SIIR),</div>
 <div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(LBDP),</div>
 <div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(Moran),</div>
-<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SI2R),</div>
-<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SEIR),</div>
 <div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(S2I2R2),</div>
+<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SEIR),</div>
+<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SI2R),</div>
+<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SIIR),</div>
+<div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(SIR),</div>
 <div class="line">  <a class="code" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(TwoSpecies),</div>
 <div class="line">  {<span class="stringliteral">&quot;parse_newick&quot;</span>, (DL_FUNC) &amp;<a class="code" href="init_8c.html#a888f6a962714e136419f7a5c0d6801bb">parse_newick</a>, 3},</div>
 <div class="line">  {<span class="stringliteral">&quot;curtail&quot;</span>, (DL_FUNC) &amp;<a class="code" href="init_8c.html#a86dfcabdaa7f5a869e5e8943740d7196">curtail</a>, 2},</div>
@@ -666,7 +666,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="ainit_8c_html_abf29b98fcd9084af45fcf434e788ac32"><div class="ttname"><a href="init_8c.html#abf29b98fcd9084af45fcf434e788ac32">yaml</a></div><div class="ttdeci">SEXP yaml(SEXP)</div><div class="ttdoc">extract a YAML description</div><div class="ttdef"><b>Definition:</b> <a href="bare_8cc_source.html#l00021">bare.cc:21</a></div></div>
 <div class="ttc" id="ainit_8h_html_a06d5e17211e44605874f59f330a17c5b"><div class="ttname"><a href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a></div><div class="ttdeci">#define METHODS(X)</div><div class="ttdef"><b>Definition:</b> <a href="init_8h_source.html#l00014">init.h:14</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00028">28</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00027">27</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -695,7 +695,7 @@ Here is the caller graph for this function:</div>
 <div class="line">}</div>
 <div class="ttc" id="ainit_8c_html_a9c6f0ea5016932d4927478ff1221a2c3"><div class="ttname"><a href="init_8c.html#a9c6f0ea5016932d4927478ff1221a2c3">getInfo</a></div><div class="ttdeci">SEXP getInfo(SEXP)</div><div class="ttdef"><b>Definition:</b> <a href="getinfo_8cc_source.html#l00019">getinfo.cc:19</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00044">44</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00043">43</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

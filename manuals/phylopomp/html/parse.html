@@ -49,12 +49,49 @@ See Details for specifics.</p>
 </table>
 
 
+<h3>Details</h3>
+
+<p><code>parse_newick</code> can only handle a subset of the full Newick specification.
+In particular, labels are assumed to be of the form &lt;TYPE&gt;_&lt;DEME&gt;_&lt;LABEL&gt;,
+i.e., each label has three parts, separated by underscores (&lsquo;_&rsquo;).
+The parts are as follows.
+</p>
+
+<ul>
+<li><p> TYPE must be a single character from among the following: &lsquo;b&rsquo;, &lsquo;g&rsquo;, &lsquo;m&rsquo;, &lsquo;o&rsquo;.
+</p>
+
+<ul>
+<li> <p>&lsquo;b&rsquo; signifies a sample.
+</p>
+</li>
+<li> <p>&lsquo;g&rsquo; signifies an internal node.
+</p>
+</li>
+<li> <p>&lsquo;m&rsquo; signifies a root.
+</p>
+</li>
+<li> <p>&lsquo;o&rsquo; indicates an extant lineage.
+</p>
+</li></ul>
+
+</li>
+<li><p> DEME must be a non-negative integer, specifying the deme in which the branch resides.
+If deme information is not present, use 0.
+</p>
+</li>
+<li><p> LABEL is ignored and may be left out.
+</p>
+</li></ul>
+
+
+
 <h3>Value</h3>
 
 <p>An object of class &ldquo;gpgen&rdquo;.
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.3.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.5.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

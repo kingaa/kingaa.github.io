@@ -29,28 +29,28 @@ function processMathHTML() {
 <pre><code class='language-R'>runTwoSpecies(
   time,
   t0 = 0,
-  Beta11 = 4,
-  Beta12 = 0,
-  Beta21 = 0,
-  Beta22 = 4,
-  gamma1 = 1,
-  gamma2 = 1,
-  psi1 = 1,
+  Beta11 = 0.5,
+  Beta12 = 0.5,
+  Beta21 = 0.06,
+  Beta22 = 1.5,
+  gamma1 = 0.5,
+  gamma2 = 0.5,
+  psi1 = 2,
   psi2 = 0,
   omega1 = 0,
   omega2 = 0,
-  b1 = 0,
-  b2 = 0,
-  d1 = 0,
-  d2 = 0,
+  b1 = 0.2,
+  b2 = 0.5,
+  d1 = 0.2,
+  d2 = 0.5,
   iota1 = 0,
-  iota2 = 0,
-  S1_0 = 100,
-  S2_0 = 100,
+  iota2 = 0.001,
+  S1_0 = 1000,
+  S2_0 = 300,
   I1_0 = 0,
-  I2_0 = 10,
+  I2_0 = 0,
   R1_0 = 0,
-  R2_0 = 0
+  R2_0 = 700
 )
 
 continueTwoSpecies(
@@ -72,6 +72,32 @@ continueTwoSpecies(
   d2 = NA,
   iota1 = NA,
   iota2 = NA
+)
+
+twospecies_pomp(
+  x,
+  Beta11,
+  Beta12,
+  Beta21,
+  Beta22,
+  gamma1,
+  gamma2,
+  psi1,
+  psi2,
+  omega1,
+  omega2,
+  b1,
+  b2,
+  d1,
+  d2,
+  iota1,
+  iota2,
+  S1_0,
+  S2_0,
+  I1_0,
+  I2_0,
+  R1_0,
+  R2_0
 )
 </code></pre>
 
@@ -140,12 +166,24 @@ continueTwoSpecies(
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
+<tr><td><code id="x">x</code></td>
+<td>
+<p>genealogy in <span class="pkg">phylopomp</span> format.</p>
+</td></tr>
 </table>
+
+
+<h3>Details</h3>
+
+<p><code>twospecies_pomp</code> constructs a &lsquo;pomp&rsquo; object containing a given set of data and a TwoSpecies model.
+</p>
 
 
 <h3>Value</h3>
 
 <p><code>runTwoSpecies</code> and <code>continueTwoSpecies</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;TwoSpecies&rdquo;.
+</p>
+<p><code>twospecies_pomp</code> returns a &lsquo;pomp&rsquo; object.
 </p>
 
 
@@ -162,7 +200,7 @@ continueTwoSpecies(
 <code><a href="../../phylopomp/help/sir.html">sir</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.3.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.5.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

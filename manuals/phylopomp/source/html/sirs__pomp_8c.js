@@ -19,5 +19,6 @@ var sirs__pomp_8c =
     [ "event_rates", "sirs__pomp_8c.html#a00f022696c1e56408f5af7156887e2e0", null ],
     [ "sirs_dmeas", "sirs__pomp_8c.html#a00471ac3cb48272a152e2e8c44bb0aa5", null ],
     [ "sirs_gill", "sirs__pomp_8c.html#aaa3cb1ab4cc8009c9ea74a3475d89655", null ],
-    [ "sirs_rinit", "sirs__pomp_8c.html#a7f2ac9c19aa12b30274e0229926fba6a", null ]
+    [ "sirs_rinit", "sirs__pomp_8c.html#a7f2ac9c19aa12b30274e0229926fba6a", null ],
+    [ "nrate", "sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52", null ]
 ];

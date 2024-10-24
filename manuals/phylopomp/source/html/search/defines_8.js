@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['n_682',['N',['../seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4',1,'N():&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4',1,'N():&#160;sirs_pomp.c']]],
-  ['n_683',['n',['../lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720',1,'lbdp_pomp.c']]],
-  ['n0_684',['n0',['../lbdp__pomp_8c.html#a5ab4ec96e05f898b0b753c48cbb63e72',1,'lbdp_pomp.c']]],
-  ['n1_685',['N1',['../twospecies__pomp_8c.html#abd7b39be02bc15d79b73e5cf2b531299',1,'twospecies_pomp.c']]],
-  ['n2_686',['N2',['../twospecies__pomp_8c.html#acd864640121c7df2c19f61f7baa507e4',1,'twospecies_pomp.c']]],
-  ['node_687',['node',['../lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29',1,'node():&#160;lbdp_pomp.c'],['../seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29',1,'node():&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29',1,'node():&#160;sirs_pomp.c'],['../twospecies__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29',1,'node():&#160;twospecies_pomp.c']]]
+  ['makefn_691',['MAKEFN',['../generics_8h.html#ab5553bb581629a90c1654e17490555fe',1,'generics.h']]],
+  ['methods_692',['METHODS',['../init_8h.html#a06d5e17211e44605874f59f330a17c5b',1,'init.h']]],
+  ['mu_693',['mu',['../lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144',1,'lbdp_pomp.c']]]
 ];

@@ -52,8 +52,6 @@ runSIRS(
 
 continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
 
-sir_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
-
 runSIRS(
   time,
   t0 = 0,
@@ -67,6 +65,8 @@ runSIRS(
 )
 
 continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
+
+sir_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 
 sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, t0 = 0)
 </code></pre>
@@ -168,7 +168,7 @@ simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
 simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.5.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>phylopomp</em> version 0.14.6.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

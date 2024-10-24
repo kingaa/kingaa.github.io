@@ -169,7 +169,7 @@ Functions</h2></td></tr>
 <tr class="separator:a9da99d294700810dfb7c0a621d0c1f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3fde3ea6d48d04abc86836027e2415"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a> (SEXP list, SEXP names, SEXP element, const char *name, int pos)</td></tr>
 <tr class="separator:a5a3fde3ea6d48d04abc86836027e2415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a6b554c46520e890bcd30a914b65988"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a> (double erate, double *rate, int nrate)</td></tr>
+<tr class="memitem:a4a6b554c46520e890bcd30a914b65988"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a> (double erate, double *rate, int <a class="el" href="twospecies__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>)</td></tr>
 <tr class="separator:a4a6b554c46520e890bcd30a914b65988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -333,13 +333,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="internal_8h_a9da99d294700810dfb7c0a621d0c1f78_icgraph.png" border="0" usemap="#ainternal_8h_a9da99d294700810dfb7c0a621d0c1f78_icgraph" alt=""/></div>
 <map name="ainternal_8h_a9da99d294700810dfb7c0a621d0c1f78_icgraph" id="ainternal_8h_a9da99d294700810dfb7c0a621d0c1f78_icgraph">
-<area shape="rect" title=" " alt="" coords="643,157,768,184"/>
-<area shape="rect" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07" title="choose a random ball from deme i" alt="" coords="409,120,595,147"/>
-<area shape="rect" href="classinventory__t.html#a6e8dbc98608507421e36946d895d4f2e" title=" " alt="" coords="175,208,361,235"/>
+<area shape="rect" title=" " alt="" coords="643,208,768,235"/>
+<area shape="rect" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07" title="choose a random ball from deme i" alt="" coords="409,157,595,184"/>
+<area shape="rect" href="classinventory__t.html#a6e8dbc98608507421e36946d895d4f2e" title=" " alt="" coords="175,259,361,285"/>
 <area shape="rect" href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d" title="n births into deme j with parent in deme i" alt="" coords="209,5,327,32"/>
 <area shape="rect" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7" title="death in deme i" alt="" coords="205,56,331,83"/>
 <area shape="rect" href="classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4" title="migration from deme i to deme j" alt="" coords="199,107,337,133"/>
 <area shape="rect" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c" title="sample in deme i" alt="" coords="200,157,336,184"/>
+<area shape="rect" href="classmaster__t.html#a72c7a78645c992e83131a54510b1bf42" title="sample_death in deme i" alt="" coords="178,208,358,235"/>
 <area shape="rect" href="classmaster__t.html#a46d190c2e3964b3ba18560e96c1b8ca0" title="makes a jump" alt="" coords="5,56,127,83"/>
 </map>
 </div>
@@ -390,15 +391,16 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                                 {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">double</span> u = erate*unif_rand();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> e = 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; nrate) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; <a class="code" href="sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (rate[e] &lt; 0)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate rate[%d]=%lg&quot;</span>,__func__,e,rate[e]); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    u -= rate[e++];</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  assert(e!=nrate);             <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  assert(e!=<a class="code" href="sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);             <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> e;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
+<div class="ttc" id="asirs__pomp_8c_html_a9f9327a16fb80b77d8d1f9459655ff52"><div class="ttname"><a href="sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a></div><div class="ttdeci">static const int nrate</div><div class="ttdef"><b>Definition:</b> <a href="sirs__pomp_8c_source.html#l00004">sirs_pomp.c:4</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

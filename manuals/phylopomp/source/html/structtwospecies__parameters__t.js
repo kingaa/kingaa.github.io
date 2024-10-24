@@ -6,6 +6,8 @@ var structtwospecies__parameters__t =
     [ "Beta12", "structtwospecies__parameters__t.html#a88700821fbbadbc8b2706ae1eca8cb37", null ],
     [ "Beta21", "structtwospecies__parameters__t.html#a3d10d68891615762df976fa936258326", null ],
     [ "Beta22", "structtwospecies__parameters__t.html#a2e00abbe8dbb289c20073bac56d7d5fd", null ],
+    [ "c1", "structtwospecies__parameters__t.html#a4da181d8b296a6e3e4d4534e9481f597", null ],
+    [ "c2", "structtwospecies__parameters__t.html#a26c5c9ab5ceba8e5c3addb7700a4440e", null ],
     [ "d1", "structtwospecies__parameters__t.html#a31df423445a3841e11df83dab1d2976b", null ],
     [ "d2", "structtwospecies__parameters__t.html#a4720cdf2f968a639488425f0a9541bfe", null ],
     [ "gamma1", "structtwospecies__parameters__t.html#a44681cbc5470a62eca81a6d2519bd5d2", null ],

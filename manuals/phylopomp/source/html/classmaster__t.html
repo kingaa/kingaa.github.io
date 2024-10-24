@@ -190,6 +190,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6c8e866f0eb65749ab054a223cf823c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c">sample</a> (<a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> i=0)</td></tr>
 <tr class="memdesc:aa6c8e866f0eb65749ab054a223cf823c"><td class="mdescLeft">&#160;</td><td class="mdescRight">sample in deme i  <a href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c">More...</a><br /></td></tr>
 <tr class="separator:aa6c8e866f0eb65749ab054a223cf823c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c7a78645c992e83131a54510b1bf42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#a72c7a78645c992e83131a54510b1bf42">sample_death</a> (<a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> i=0)</td></tr>
+<tr class="memdesc:a72c7a78645c992e83131a54510b1bf42"><td class="mdescLeft">&#160;</td><td class="mdescRight">sample_death in deme i  <a href="classmaster__t.html#a72c7a78645c992e83131a54510b1bf42">More...</a><br /></td></tr>
+<tr class="separator:a72c7a78645c992e83131a54510b1bf42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf3f98270ade9b0fef7a538b83887ec4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4">migrate</a> (<a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> i=0, <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> j=0)</td></tr>
 <tr class="memdesc:acf3f98270ade9b0fef7a538b83887ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">migration from deme i to deme j  <a href="classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4">More...</a><br /></td></tr>
 <tr class="separator:acf3f98270ade9b0fef7a538b83887ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1054,16 +1057,16 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 
 <p>migration from deme i to deme j </p>
 
-<p class="definition">Definition at line <a class="el" href="master_8h_source.html#l00171">171</a> of file <a class="el" href="master_8h_source.html">master.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                            {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classball__t.html">ball_t</a> *a = <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07">random_ball</a>(i);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#acdfc69f6301092caadf6c06547321448">erase</a>(a);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6">migrate</a>(a,<a class="code" href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592">time</a>(),j);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    a-&gt;<a class="code" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = j;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a0a77b9316c22d1b1d8bab383815a7e8b">insert</a>(a);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  };</div>
+<p class="definition">Definition at line <a class="el" href="master_8h_source.html#l00177">177</a> of file <a class="el" href="master_8h_source.html">master.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                            {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="classball__t.html">ball_t</a> *a = <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07">random_ball</a>(i);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#acdfc69f6301092caadf6c06547321448">erase</a>(a);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6">migrate</a>(a,<a class="code" href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592">time</a>(),j);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    a-&gt;<a class="code" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = j;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a0a77b9316c22d1b1d8bab383815a7e8b">insert</a>(a);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  };</div>
 <div class="ttc" id="aclassball__t_html_a29e8d8205e8f323bf69767ab5bc9809d"><div class="ttname"><a href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">ball_t::deme</a></div><div class="ttdeci">name_t deme(void) const</div><div class="ttdoc">view deme</div><div class="ttdef"><b>Definition:</b> <a href="ball_8h_source.html#l00086">ball.h:86</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a98f2a41cf3c11d347d550faded2098f6"><div class="ttname"><a href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6">genealogy_t::migrate</a></div><div class="ttdeci">ball_t * migrate(ball_t *a, slate_t t, name_t d=0)</div><div class="ttdoc">movement into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00441">genealogy.h:441</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a98f2a41cf3c11d347d550faded2098f6"><div class="ttname"><a href="classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6">genealogy_t::migrate</a></div><div class="ttdeci">ball_t * migrate(ball_t *a, slate_t t, name_t d=0)</div><div class="ttdoc">movement into deme d</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00451">genealogy.h:451</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1388,6 +1391,73 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a72c7a78645c992e83131a54510b1bf42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c7a78645c992e83131a54510b1bf42">&#9670;&nbsp;</a></span>sample_death()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class POPN , size_t NDEME = 1&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmaster__t.html">master_t</a>&lt; POPN, NDEME &gt;::sample_death </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>&#160;</td>
+          <td class="paramname"><em>i</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sample_death in deme i </p>
+
+<p class="definition">Definition at line <a class="el" href="master_8h_source.html#l00171">171</a> of file <a class="el" href="master_8h_source.html">master.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                   {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="classball__t.html">ball_t</a> *a = <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07">random_ball</a>(i);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a>.<a class="code" href="classinventory__t.html#acdfc69f6301092caadf6c06547321448">erase</a>(a);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21">sample_death</a>(a,<a class="code" href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592">time</a>());</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  };</div>
+<div class="ttc" id="aclassgenealogy__t_html_aa31413f824c0b39c7103809607215f21"><div class="ttname"><a href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21">genealogy_t::sample_death</a></div><div class="ttdeci">void sample_death(ball_t *a, slate_t t)</div><div class="ttdoc">insert a sample node and simultaneously terminate the lineage</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00441">genealogy.h:441</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmaster__t_a72c7a78645c992e83131a54510b1bf42_cgraph.png" border="0" usemap="#aclassmaster__t_a72c7a78645c992e83131a54510b1bf42_cgraph" alt=""/></div>
+<map name="aclassmaster__t_a72c7a78645c992e83131a54510b1bf42_cgraph" id="aclassmaster__t_a72c7a78645c992e83131a54510b1bf42_cgraph">
+<area shape="rect" title="sample_death in deme i" alt="" coords="5,344,185,370"/>
+<area shape="rect" href="classinventory__t.html#acdfc69f6301092caadf6c06547321448" title=" " alt="" coords="489,36,629,62"/>
+<area shape="rect" href="classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07" title="choose a random ball from deme i" alt="" coords="233,394,419,421"/>
+<area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="247,256,405,298"/>
+<area shape="rect" href="classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592" title="current time" alt="" coords="267,445,385,472"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="951,112,1054,138"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="754,36,831,62"/>
+<area shape="rect" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78" title=" " alt="" coords="497,441,622,468"/>
+<area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="499,238,620,265"/>
+<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="496,289,623,316"/>
+<area shape="rect" href="classgenealogy__t.html#aa115d7b8b51148da35c947176e7dc454" title=" " alt="" coords="467,390,652,417"/>
+<area shape="rect" href="classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="489,188,629,214"/>
+<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="737,137,848,164"/>
+<area shape="rect" href="classnode__t.html#ab10430fd8addd5852699c30a23729880" title="pointer to my green ball" alt="" coords="721,441,864,468"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="727,238,858,265"/>
+<area shape="rect" href="classball__t.html#aa43e86ea4b912fb0cf99565adc9ed2fa" title="in whose pocket do I lie?" alt="" coords="1311,289,1417,316"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="933,340,1072,366"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="700,390,885,417"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1120,340,1263,366"/>
+<area shape="rect" href="classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db" title="check the size of the genealogy (to prevent memory exhaustion)." alt="" coords="719,543,867,584"/>
+<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="715,492,870,518"/>
+<area shape="rect" href="generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b" title=" " alt="" coords="533,492,585,518"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ae7718a2fc6afc0852aa784a00c338ba9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7718a2fc6afc0852aa784a00c338ba9">&#9670;&nbsp;</a></span>structure()</h2>
 
@@ -1484,12 +1554,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmaster__t_a08340c5fd9867843fcf1d523c88ea592_icgraph.png" border="0" usemap="#aclassmaster__t_a08340c5fd9867843fcf1d523c88ea592_icgraph" alt=""/></div>
 <map name="aclassmaster__t_a08340c5fd9867843fcf1d523c88ea592_icgraph" id="aclassmaster__t_a08340c5fd9867843fcf1d523c88ea592_icgraph">
-<area shape="rect" title="current time" alt="" coords="361,107,480,133"/>
-<area shape="rect" href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d" title="n births into deme j with parent in deme i" alt="" coords="185,107,303,133"/>
-<area shape="rect" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7" title="death in deme i" alt="" coords="181,5,307,32"/>
-<area shape="rect" href="classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556" title="new root in deme i" alt="" coords="185,208,303,235"/>
-<area shape="rect" href="classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4" title="migration from deme i to deme j" alt="" coords="175,157,313,184"/>
-<area shape="rect" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c" title="sample in deme i" alt="" coords="176,56,312,83"/>
+<area shape="rect" title="current time" alt="" coords="403,132,521,159"/>
+<area shape="rect" href="classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d" title="n births into deme j with parent in deme i" alt="" coords="205,5,324,32"/>
+<area shape="rect" href="classmaster__t.html#a39c6766e6d3bff200e7037485fb1ddd7" title="death in deme i" alt="" coords="202,56,327,83"/>
+<area shape="rect" href="classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556" title="new root in deme i" alt="" coords="205,208,324,235"/>
+<area shape="rect" href="classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4" title="migration from deme i to deme j" alt="" coords="195,157,334,184"/>
+<area shape="rect" href="classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c" title="sample in deme i" alt="" coords="197,107,333,133"/>
+<area shape="rect" href="classmaster__t.html#a72c7a78645c992e83131a54510b1bf42" title="sample_death in deme i" alt="" coords="175,259,355,285"/>
 <area shape="rect" href="classmaster__t.html#a46d190c2e3964b3ba18560e96c1b8ca0" title="makes a jump" alt="" coords="5,56,127,83"/>
 <area shape="rect" href="classmaster__t.html#a4a4fe8b3d947b2f59ca7085fee9f6574" title="initialize the state" alt="" coords="9,208,123,235"/>
 </map>
@@ -1689,7 +1760,7 @@ template&lt;class POPN , size_t NDEME = 1&gt; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    A.<a class="code" href="classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc">inventory</a> = A.<a class="code" href="classmaster__t.html#a4502c438f3ad1b7d8873a3da5c642632">geneal</a>.<a class="code" href="classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c">extant</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> o;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
-<div class="ttc" id="aclassgenealogy__t_html_a509845ed2d4596d7b2e7206cc3108d0c"><div class="ttname"><a href="classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c">genealogy_t::extant</a></div><div class="ttdeci">std::pair&lt; node_it, node_it &gt; extant(void) const</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00451">genealogy.h:451</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a509845ed2d4596d7b2e7206cc3108d0c"><div class="ttname"><a href="classgenealogy__t.html#a509845ed2d4596d7b2e7206cc3108d0c">genealogy_t::extant</a></div><div class="ttdeci">std::pair&lt; node_it, node_it &gt; extant(void) const</div><div class="ttdef"><b>Definition:</b> <a href="genealogy_8h_source.html#l00461">genealogy.h:461</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

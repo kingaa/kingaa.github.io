@@ -22,6 +22,7 @@ var classmaster__t =
     [ "play", "classmaster__t.html#a192af9a2412fb7fe97fade765da8393a", null ],
     [ "rinit", "classmaster__t.html#a4a4fe8b3d947b2f59ca7085fee9f6574", null ],
     [ "sample", "classmaster__t.html#aa6c8e866f0eb65749ab054a223cf823c", null ],
+    [ "sample_death", "classmaster__t.html#a72c7a78645c992e83131a54510b1bf42", null ],
     [ "structure", "classmaster__t.html#ae7718a2fc6afc0852aa784a00c338ba9", null ],
     [ "time", "classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592", null ],
     [ "timezero", "classmaster__t.html#a57d44eab6a012323e2fd076fb8e2c5e4", null ],

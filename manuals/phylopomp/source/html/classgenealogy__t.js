@@ -33,6 +33,7 @@ var classgenealogy__t =
     [ "parse", "classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459", null ],
     [ "prune", "classgenealogy__t.html#a46e674c719812e57f14bc7e50cc0c380", null ],
     [ "sample", "classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b", null ],
+    [ "sample_death", "classgenealogy__t.html#aa31413f824c0b39c7103809607215f21", null ],
     [ "scan_ball", "classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0", null ],
     [ "scan_color", "classgenealogy__t.html#ad0476423ab2c0d36ced85ca3ed66dce9", null ],
     [ "scan_label", "classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b", null ],

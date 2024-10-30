@@ -26,5 +26,6 @@ var seirs__pomp_8c =
     [ "random_choice", "seirs__pomp_8c.html#a583bcadefe06514d513e228384be3746", null ],
     [ "seirs_dmeas", "seirs__pomp_8c.html#a95d1405823ab8f7e52d6b686cb3b035a", null ],
     [ "seirs_gill", "seirs__pomp_8c.html#a80b87c0e9d16875de84f321356e66a11", null ],
-    [ "seirs_rinit", "seirs__pomp_8c.html#ad6e51ebd10eea07e1f79412df0ca2443", null ]
+    [ "seirs_rinit", "seirs__pomp_8c.html#ad6e51ebd10eea07e1f79412df0ca2443", null ],
+    [ "nrate", "seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52", null ]
 ];

@@ -19,7 +19,7 @@ var searchData=
   ['node_5ft_178',['node_t',['../classnode__t.html#aefe4ba2746fe009be474a1ba336a510a',1,'node_t::node_t(node_t &amp;&amp;p)=delete'],['../classnode__t.html#a8711bfa5f6a0a5c424816f2c9d0e17da',1,'node_t::node_t(const node_t &amp;p)=delete'],['../classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09',1,'node_t::node_t(name_t u=0, slate_t t=R_NaReal)'],['../classnode__t.html',1,'node_t']]],
   ['nodeseq_2eh_179',['nodeseq.h',['../nodeseq_8h.html',1,'']]],
   ['nodeseq_5ft_180',['nodeseq_t',['../classnodeseq__t.html',1,'']]],
-  ['nrate_181',['nrate',['../sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate():&#160;sirs_pomp.c'],['../twospecies__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate():&#160;twospecies_pomp.c']]],
+  ['nrate_181',['nrate',['../seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate():&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate():&#160;sirs_pomp.c'],['../twospecies__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate():&#160;twospecies_pomp.c']]],
   ['nsample_182',['nsample',['../classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7',1,'genealogy_t::nsample()'],['../generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8',1,'nsample():&#160;generics.h']]],
   ['ntime_183',['ntime',['../classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3',1,'nodeseq_t']]],
   ['null_5flineage_184',['null_lineage',['../node_8h.html#affb5e86666af08d682543f786e480f13',1,'node.h']]]

@@ -391,16 +391,16 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                                 {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">double</span> u = erate*unif_rand();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> e = 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; <a class="code" href="sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; <a class="code" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (rate[e] &lt; 0)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate rate[%d]=%lg&quot;</span>,__func__,e,rate[e]); <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    u -= rate[e++];</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  assert(e!=<a class="code" href="sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);             <span class="comment">// #nocov</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  assert(e!=<a class="code" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);             <span class="comment">// #nocov</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordflow">return</span> e;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition:</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
-<div class="ttc" id="asirs__pomp_8c_html_a9f9327a16fb80b77d8d1f9459655ff52"><div class="ttname"><a href="sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a></div><div class="ttdeci">static const int nrate</div><div class="ttdef"><b>Definition:</b> <a href="sirs__pomp_8c_source.html#l00004">sirs_pomp.c:4</a></div></div>
+<div class="ttc" id="aseirs__pomp_8c_html_a9f9327a16fb80b77d8d1f9459655ff52"><div class="ttname"><a href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a></div><div class="ttdeci">static const int nrate</div><div class="ttdef"><b>Definition:</b> <a href="seirs__pomp_8c_source.html#l00004">seirs_pomp.c:4</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

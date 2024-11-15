@@ -15,14 +15,14 @@ License: GPL-3
 MD5sum: 138251a138aab76b6e8befb0180d39b0
 
 Package: phylopomp
-Version: 0.14.6.5
+Version: 0.14.8.0
 Depends: R(>= 4.3)
 Imports: grid, ggtree, yaml, ggplot2, scales, ape, dplyr, tibble,
         foreach, tidyr, pomp(>= 5.9.1.0), cowplot
 LinkingTo: pomp
 Suggests: tidyverse, doFuture, broom
 License: GPL-3
-MD5sum: 8939e746b6b35e6325cb08d624c36586
+MD5sum: 26a8e1cac46450d69c707b5a3b1f206e
 
 Package: pomp
 Version: 5.11.0.0

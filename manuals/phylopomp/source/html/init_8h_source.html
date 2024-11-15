@@ -92,19 +92,19 @@ $(document).ready(function(){initNavTree('init_8h_source.html',''); initResizabl
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;R_ext/Rdynload.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="internal_8h.html">internal.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="init_8h.html#a88719a51b5f835edcb2fdaaf5e722d3d">    7</a></span>&#160;<span class="preprocessor">#define DECLARATIONS(X)                         \</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">  SEXP make ## X (SEXP Params, SEXP IVPs, SEXP T0);         \</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">  SEXP revive ## X (SEXP State, SEXP Params);               \</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="init_8h.html#a88719a51b5f835edcb2fdaaf5e722d3d">    7</a></span>&#160;<span class="preprocessor">#define DECLARATIONS(X)                                 \</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">  SEXP make ## X (SEXP Params, SEXP IVPs, SEXP T0);     \</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">  SEXP revive ## X (SEXP State, SEXP Params);           \</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">  SEXP run ## X (SEXP State, SEXP Times);               \</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">  SEXP geneal ## X (SEXP State);                    \</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">  SEXP yaml ## X (SEXP State);                      \</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">  </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">  SEXP geneal ## X (SEXP State);                        \</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">  SEXP yaml ## X (SEXP State)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">   14</a></span>&#160;<span class="preprocessor">#define METHODS(X)                              \</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">  {&quot;make&quot;</span> #X, (DL_FUNC) &amp;make ## X, 3},         \</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  {&quot;revive&quot; #X, (DL_FUNC) &amp;revive ## X, 2},     \</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  {&quot;run&quot; #X, (DL_FUNC) &amp;run ## X, 2},           \</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  {&quot;yaml&quot; #X, (DL_FUNC) &amp;yaml ## X, 1},     \</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {&quot;geneal&quot; #X, (DL_FUNC) &amp;geneal ## X, 1}  \</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  {&quot;yaml&quot; #X, (DL_FUNC) &amp;yaml ## X, 1},         \</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {&quot;geneal&quot; #X, (DL_FUNC) &amp;geneal ## X, 1}      \</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>

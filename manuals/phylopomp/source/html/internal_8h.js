@@ -8,6 +8,7 @@ var internal_8h =
     [ "raw_t", "internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946", null ],
     [ "slate_t", "internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357", null ],
     [ "random_integer", "internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78", null ],
+    [ "random_sample_wo_repl", "internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09", null ],
     [ "rcateg", "internal_8h.html#a4a6b554c46520e890bcd30a914b65988", null ],
     [ "set_list_elem", "internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415", null ]
 ];

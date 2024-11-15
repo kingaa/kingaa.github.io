@@ -1,6 +1,14 @@
 var init_8c =
 [
     [ "curtail", "init_8c.html#a86dfcabdaa7f5a869e5e8943740d7196", null ],
+    [ "DECLARATIONS", "init_8c.html#a97afe9dda4bc53cce88a8915998b2d75", null ],
+    [ "DECLARATIONS", "init_8c.html#ac03760d5eec0a5363bfd8112c3706ac8", null ],
+    [ "DECLARATIONS", "init_8c.html#a291df47fba24f56f8ae24a4d09482729", null ],
+    [ "DECLARATIONS", "init_8c.html#a4655ca8afa587fc3cbc0187922ff70a8", null ],
+    [ "DECLARATIONS", "init_8c.html#ac40d5f269d436ade88cd09bcc0049d10", null ],
+    [ "DECLARATIONS", "init_8c.html#a0901bcd57b6a0df47c0c318b9398db0a", null ],
+    [ "DECLARATIONS", "init_8c.html#a3ae2c84e40ecbe1cd39dc646d10e24f4", null ],
+    [ "DECLARATIONS", "init_8c.html#a679bd8b9f9093652fabb9a3bfb046b10", null ],
     [ "gendat", "init_8c.html#a387b11f3f139523611c57cdb2e3ba5e1", null ],
     [ "getInfo", "init_8c.html#a9c6f0ea5016932d4927478ff1221a2c3", null ],
     [ "parse_newick", "init_8c.html#a888f6a962714e136419f7a5c0d6801bb", null ],

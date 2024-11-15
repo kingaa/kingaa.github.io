@@ -17,7 +17,7 @@ var classinventory__t =
     [ "operator=", "classinventory__t.html#af51f39eb1cac1a738df7214ab18a36e6", null ],
     [ "operator[]", "classinventory__t.html#ac7f9c1d7a3bbf837ce34b4f3d4674540", null ],
     [ "random_ball", "classinventory__t.html#a7b67f22a42ec86fbcd15a6fd88c5ea07", null ],
-    [ "random_pair", "classinventory__t.html#a6e8dbc98608507421e36946d895d4f2e", null ],
+    [ "random_balls", "classinventory__t.html#a6f436e681d488aa09a11847619674349", null ],
     [ "size", "classinventory__t.html#a34c8757a76c9ef4f6c793875671a34e0", null ],
     [ "size", "classinventory__t.html#ac2167b30743cac4a8f8bb51bb1a2b143", null ],
     [ "operator>>", "classinventory__t.html#ad2905f4c3cca4bb07c3c8fcf97e8374a", null ],

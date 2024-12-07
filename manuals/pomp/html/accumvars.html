@@ -28,8 +28,10 @@ function processMathHTML() {
 
 <p>In formulating models, one sometimes wishes to define a state variable that will accumulate some quantity over the interval between successive observations.
 <span class="pkg">pomp</span> provides a facility to make such features more convenient.
-Specifically, variables named in the <code>pomp</code>'s <code>accumvars</code> argument will be set to zero immediately following each observation.
-See <code><a href="../../pomp/help/sir.html">sir</a></code> and the tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a> for examples.
+Specifically, if <code class="reqn">a</code> is a state-variable named in the <code>pomp</code>'s <code>accumvars</code> argument, then for each interval <code class="reqn">(t_k,t_{k+1})</code>, <code class="reqn">k=0,1,2,\dots</code>, <code class="reqn">a</code> will be set to zero at prior to any <code><a href="../../pomp/help/rprocess.html">rprocess</a></code> computation over that interval.
+Deterministic trajectory computation is handled slightly differently:
+see <code><a href="../../pomp/help/flow.html">flow</a></code>.
+For examples, see <code><a href="../../pomp/help/sir.html">sir</a></code> and the tutorials on the <a href="https://kingaa.github.io/pomp/">package website</a>.
 </p>
 
 
@@ -190,7 +192,7 @@ See <code><a href="../../pomp/help/sir.html">sir</a></code> and the tutorials on
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

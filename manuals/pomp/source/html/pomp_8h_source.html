@@ -214,209 +214,238 @@ $(document).ready(function(){initNavTree('pomp_8h_source.html',''); initResizabl
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">  137</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">reulermultinom</a></div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="pomp_8h.html#a210a3bacc8d9a585b5237408fbe04ae0">  137</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#a210a3bacc8d9a585b5237408fbe04ae0">eeulermultinom</a></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;(<span class="keywordtype">int</span> m, <span class="keywordtype">double</span> size, <span class="keyword">const</span> <span class="keywordtype">double</span> *rate, <span class="keywordtype">double</span> dt, <span class="keywordtype">double</span> *trans)</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">double</span> lambda = 0.0;</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> ( !R_FINITE(size) || size &lt; 0.0 || floor(size+0.5) != size ||</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;       !R_FINITE(dt) || dt &lt; 0.0) {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) trans[k] = R_NaReal;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: NAs produced.&quot;</span>);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">if</span> (!R_FINITE(rate[k]) || rate[k] &lt; 0.0) {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; m; j++) trans[j] = R_NaReal;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: NAs produced.&quot;</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    p += rate[k]; <span class="comment">// total event rate</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">if</span> (p &gt; 0.0) {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    size = rbinom(size,1-exp(-p*dt)); <span class="comment">// total number of events</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    m -= 1;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordflow">if</span> (rate[k] &gt; p) p = rate[k];</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      trans[k] = ((size &gt; 0) &amp;&amp; (p &gt; 0)) ? rbinom(size,rate[k]/p) : 0;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      size -= trans[k];</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      p -= rate[k];</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    trans[m] = size;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) trans[k] = 0.0;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">  172</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">deulermultinom</a></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;(<span class="keywordtype">int</span> m, <span class="keywordtype">double</span> size, <span class="keyword">const</span> <span class="keywordtype">double</span> *rate, <span class="keywordtype">double</span> dt, <span class="keywordtype">double</span> *trans, <span class="keywordtype">int</span> give_log)</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">double</span> n = 0.0;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordtype">double</span> ff = 0.0;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">int</span> k;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordflow">if</span> ((dt &lt; 0.0) || (size &lt; 0.0) || (floor(size+0.5) != size)) {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: NaNs produced.&quot;</span>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> R_NaN;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (rate[k] &lt; 0.0) {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: NaNs produced.&quot;</span>);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      <span class="keywordflow">return</span> R_NaN;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">if</span> (trans[k] &lt; 0.0) {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      ff = (give_log) ? R_NegInf: 0.0;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <span class="keywordflow">return</span> ff;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    p += rate[k]; <span class="comment">// total event rate</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    n += trans[k]; <span class="comment">// total number of events</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">if</span> (n &gt; size) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    ff = (give_log) ? R_NegInf: 0.0;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">return</span> ff;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  ff = dbinom(n,size,1-exp(-p*dt),1); <span class="comment">// total number of events</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  m -= 1;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span> ((n &gt; 0) &amp;&amp; (p &gt; 0)) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keywordflow">if</span> (rate[k] &gt; p) p = rate[k];</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      ff += dbinom(trans[k],n,rate[k]/p,1);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    n -= trans[k];</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    p -= rate[k];</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  ff = (give_log) ? ff : exp(ff);</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordflow">return</span> ff;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e">  214</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e">dmultinom</a></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;(<span class="keywordtype">int</span> m, <span class="keyword">const</span> <span class="keywordtype">double</span> *prob, <span class="keywordtype">double</span> *x, <span class="keywordtype">int</span> give_log)</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordtype">double</span> n = 0.0;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordtype">double</span> ff = 0.0;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">int</span> k;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">if</span> (prob[k] &lt; 0.0) {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;dmultinom&#39;: NaNs produced.&quot;</span>);</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keywordflow">return</span> R_NaN;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> ((x[k] &lt; 0.0) || (floor(x[k]+0.5) != x[k])) {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      ff = (give_log) ? R_NegInf: 0.0;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keywordflow">return</span> ff;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    p += prob[k]; <span class="comment">// sum of probabilities</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    n += x[k]; <span class="comment">// total number of events</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">if</span> ((n &gt; 0) &amp;&amp; (p &gt; 0)) {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <span class="keywordflow">if</span> (prob[k] &gt; p) p = prob[k];</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      ff += dbinom(x[k],n,prob[k]/p,1);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (x[k] &lt; 0.0) {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      ff = R_NegInf;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keywordflow">return</span> ff;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    n -= x[k];</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    p -= prob[k];</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  ff = (give_log) ? ff : exp(ff);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">return</span> ff;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">  249</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;(<span class="keywordtype">double</span> *xt, <span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">double</span> sum;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordflow">for</span> (i = 0, sum = 0.0; i &lt; n; i++) sum += x[i];</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; i++) xt[i] = log(x[i]/sum);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">  259</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;(<span class="keywordtype">double</span> *xt, <span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keywordtype">int</span> n)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keywordtype">double</span> sum;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordflow">for</span> (i = 0, sum = 0.0; i &lt; n; i++) sum += (xt[i] = exp(x[i]));</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; i++) xt[i] /= sum;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5">  269</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5">dot_product</a></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;(<span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keyword">const</span> <span class="keywordtype">double</span> *y)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;{</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++) p += x[j]*y[j];</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">return</span> p;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="pomp_8h.html#a5023cae249633906ec84ddda4bd45a36">  278</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a5023cae249633906ec84ddda4bd45a36">exp2geom_rate_correction</a></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;(<span class="keywordtype">double</span> <a class="code" href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>, <span class="keywordtype">double</span> dt)</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">return</span> (dt &gt; 0) ? log1p(<a class="code" href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>*dt)/dt : <a class="code" href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00285"></a><span class="lineno"><a class="line" href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">  285</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;(<span class="keywordtype">double</span> size, <span class="keywordtype">double</span> prob, <span class="keywordtype">double</span> theta)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keywordflow">return</span> rbinom(size,rbeta(prob*theta,(1.0-prob)*theta));</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00292"></a><span class="lineno"><a class="line" href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">  292</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> prob, <span class="keywordtype">double</span> theta, <span class="keywordtype">int</span> give_log)</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordtype">double</span> a = theta*prob;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordtype">double</span> b = theta*(1.0-prob);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keywordtype">double</span> f = lchoose(size,x)-lbeta(a,b)+lbeta(a+x,b+size-x);</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordflow">return</span> (give_log) ? f : exp(f);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="pomp_8h.html#a586276e45f0216dc002a76ff2ff91809">  302</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a586276e45f0216dc002a76ff2ff91809">rbetanbinom</a></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;(<span class="keywordtype">double</span> mu, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> theta)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;{</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keywordtype">double</span> p = size/(size+mu);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keywordflow">return</span> rnbinom(size,rbeta(p*theta,(1.0-p)*theta));</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="keyword">static</span> R_INLINE</div>
-<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152">  310</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152">dbetanbinom</a></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> mu, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> theta, <span class="keywordtype">int</span> give_log)</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;{</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordtype">double</span> p = size/(size+mu);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">double</span> a = theta*p;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">double</span> b = theta*(1.0-p);</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">double</span> f = lchoose(size+x-1,size-1)-lbeta(a,b)+lbeta(a+size,b+x);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordflow">return</span> (give_log) ? f : exp(f);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> ( !R_FINITE(size) || size &lt; 0.0 || !R_FINITE(dt) || dt &lt; 0.0) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) trans[k] = R_NaReal;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;eeulermultinom&#39;: NAs produced.&quot;</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span> (!R_FINITE(rate[k]) || rate[k] &lt; 0.0) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; m; j++) trans[j] = R_NaReal;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;eeulermultinom&#39;: NAs produced.&quot;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    lambda += rate[k];</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordflow">if</span> (lambda &gt; 0.0) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    size = size*(1-exp(-lambda*dt));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      trans[k] = size*rate[k]/lambda;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) trans[k] = 0.0;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">reulermultinom</a></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;(<span class="keywordtype">int</span> m, <span class="keywordtype">double</span> size, <span class="keyword">const</span> <span class="keywordtype">double</span> *rate, <span class="keywordtype">double</span> dt, <span class="keywordtype">double</span> *trans)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;{</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">int</span> j, k;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordflow">if</span> ( !R_FINITE(size) || size &lt; 0.0 || floor(size+0.5) != size ||</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;       !R_FINITE(dt) || dt &lt; 0.0) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) trans[k] = R_NaReal;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: NAs produced.&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span> (!R_FINITE(rate[k]) || rate[k] &lt; 0.0) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">for</span> (j = 0; j &lt; m; j++) trans[j] = R_NaReal;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;reulermultinom&#39;: NAs produced.&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    p += rate[k]; <span class="comment">// total event rate</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordflow">if</span> (p &gt; 0.0) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    size = rbinom(size,1-exp(-p*dt)); <span class="comment">// total number of events</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    m -= 1;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">if</span> (rate[k] &gt; p) p = rate[k];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      trans[k] = ((size &gt; 0) &amp;&amp; (p &gt; 0)) ? rbinom(size,rate[k]/p) : 0;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      size -= trans[k];</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      p -= rate[k];</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    trans[m] = size;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) trans[k] = 0.0;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">  200</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">deulermultinom</a></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;(<span class="keywordtype">int</span> m, <span class="keywordtype">double</span> size, <span class="keyword">const</span> <span class="keywordtype">double</span> *rate, <span class="keywordtype">double</span> dt, <span class="keywordtype">double</span> *trans, <span class="keywordtype">int</span> give_log)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">double</span> n = 0.0;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">double</span> ff = 0.0;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">int</span> k;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordflow">if</span> ((dt &lt; 0.0) || (size &lt; 0.0) || (floor(size+0.5) != size)) {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: NaNs produced.&quot;</span>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">return</span> R_NaN;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">if</span> (rate[k] &lt; 0.0) {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;deulermultinom&#39;: NaNs produced.&quot;</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      <span class="keywordflow">return</span> R_NaN;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">if</span> (trans[k] &lt; 0.0) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      ff = (give_log) ? R_NegInf: 0.0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      <span class="keywordflow">return</span> ff;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    p += rate[k]; <span class="comment">// total event rate</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    n += trans[k]; <span class="comment">// total number of events</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="keywordflow">if</span> (n &gt; size) {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    ff = (give_log) ? R_NegInf: 0.0;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> ff;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  ff = dbinom(n,size,1-exp(-p*dt),1); <span class="comment">// total number of events</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  m -= 1;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">if</span> ((n &gt; 0) &amp;&amp; (p &gt; 0)) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keywordflow">if</span> (rate[k] &gt; p) p = rate[k];</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      ff += dbinom(trans[k],n,rate[k]/p,1);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    n -= trans[k];</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    p -= rate[k];</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  ff = (give_log) ? ff : exp(ff);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordflow">return</span> ff;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e">  242</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e">dmultinom</a></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;(<span class="keywordtype">int</span> m, <span class="keyword">const</span> <span class="keywordtype">double</span> *prob, <span class="keywordtype">double</span> *x, <span class="keywordtype">int</span> give_log)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keywordtype">double</span> n = 0.0;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">double</span> ff = 0.0;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordtype">int</span> k;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">if</span> (prob[k] &lt; 0.0) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <a class="code" href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a>(<span class="stringliteral">&quot;in &#39;dmultinom&#39;: NaNs produced.&quot;</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">return</span> R_NaN;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">if</span> ((x[k] &lt; 0.0) || (floor(x[k]+0.5) != x[k])) {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      ff = (give_log) ? R_NegInf: 0.0;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">return</span> ff;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    p += prob[k]; <span class="comment">// sum of probabilities</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    n += x[k]; <span class="comment">// total number of events</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordflow">for</span> (k = 0; k &lt; m; k++) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">if</span> ((n &gt; 0) &amp;&amp; (p &gt; 0)) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keywordflow">if</span> (prob[k] &gt; p) p = prob[k];</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      ff += dbinom(x[k],n,prob[k]/p,1);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (x[k] &lt; 0.0) {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      ff = R_NegInf;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <span class="keywordflow">return</span> ff;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    n -= x[k];</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    p -= prob[k];</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  ff = (give_log) ? ff : exp(ff);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">return</span> ff;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">  277</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;(<span class="keywordtype">double</span> *xt, <span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordtype">double</span> sum;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordflow">for</span> (i = 0, sum = 0.0; i &lt; n; i++) sum += x[i];</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; i++) xt[i] = log(x[i]/sum);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">  287</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;(<span class="keywordtype">double</span> *xt, <span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keywordtype">int</span> n)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">double</span> sum;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordflow">for</span> (i = 0, sum = 0.0; i &lt; n; i++) sum += (xt[i] = exp(x[i]));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordflow">for</span> (i = 0; i &lt; n; i++) xt[i] /= sum;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5">  297</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5">dot_product</a></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;(<span class="keywordtype">int</span> n, <span class="keyword">const</span> <span class="keywordtype">double</span> *x, <span class="keyword">const</span> <span class="keywordtype">double</span> *y)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">double</span> p = 0.0;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; j++) p += x[j]*y[j];</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="pomp_8h.html#a5023cae249633906ec84ddda4bd45a36">  306</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a5023cae249633906ec84ddda4bd45a36">exp2geom_rate_correction</a></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;(<span class="keywordtype">double</span> <a class="code" href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>, <span class="keywordtype">double</span> dt)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">return</span> (dt &gt; 0) ? log1p(<a class="code" href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>*dt)/dt : <a class="code" href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">  313</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;(<span class="keywordtype">double</span> size, <span class="keywordtype">double</span> prob, <span class="keywordtype">double</span> theta)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;{</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">return</span> rbinom(size,rbeta(prob*theta,(1.0-prob)*theta));</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">  320</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> prob, <span class="keywordtype">double</span> theta, <span class="keywordtype">int</span> give_log)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="keywordtype">double</span> a = theta*prob;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordtype">double</span> b = theta*(1.0-prob);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordtype">double</span> f = lchoose(size,x)-lbeta(a,b)+lbeta(a+x,b+size-x);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="keywordflow">return</span> (give_log) ? f : exp(f);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00330"></a><span class="lineno"><a class="line" href="pomp_8h.html#a586276e45f0216dc002a76ff2ff91809">  330</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a586276e45f0216dc002a76ff2ff91809">rbetanbinom</a></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;(<span class="keywordtype">double</span> mu, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> theta)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keywordtype">double</span> p = size/(size+mu);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordflow">return</span> rnbinom(size,rbeta(p*theta,(1.0-p)*theta));</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keyword">static</span> R_INLINE</div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152">  338</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152">dbetanbinom</a></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> mu, <span class="keywordtype">double</span> size, <span class="keywordtype">double</span> theta, <span class="keywordtype">int</span> give_log)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <span class="keywordtype">double</span> p = size/(size+mu);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keywordtype">double</span> a = theta*p;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keywordtype">double</span> b = theta*(1.0-p);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordtype">double</span> f = lchoose(size+x-1,size-1)-lbeta(a,b)+lbeta(a+size,b+x);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordflow">return</span> (give_log) ? f : exp(f);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="agompertz_8c_html_a5c71a5e59a53413cd6c270266d63b031"><div class="ttname"><a href="gompertz_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a></div><div class="ttdeci">#define R</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00008">gompertz.c:8</a></div></div>
 <div class="ttc" id="agompertz_8c_html_a678ef311e74501d7b800f0b47500374a"><div class="ttname"><a href="gompertz_8c.html#a678ef311e74501d7b800f0b47500374a">sigma</a></div><div class="ttdeci">#define sigma</div><div class="ttdef"><b>Definition:</b> <a href="gompertz_8c_source.html#l00093">gompertz.c:93</a></div></div>
-<div class="ttc" id="apomp_8h_html_a0889bd3d52ef231f00f715d2187aa152"><div class="ttname"><a href="pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152">dbetanbinom</a></div><div class="ttdeci">static R_INLINE double dbetanbinom(double x, double mu, double size, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00310">pomp.h:311</a></div></div>
-<div class="ttc" id="apomp_8h_html_a0ed4cc2bf09ba401406d3175da73226c"><div class="ttname"><a href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">deulermultinom</a></div><div class="ttdeci">static R_INLINE double deulermultinom(int m, double size, const double *rate, double dt, double *trans, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00172">pomp.h:173</a></div></div>
+<div class="ttc" id="apomp_8h_html_a0889bd3d52ef231f00f715d2187aa152"><div class="ttname"><a href="pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152">dbetanbinom</a></div><div class="ttdeci">static R_INLINE double dbetanbinom(double x, double mu, double size, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00338">pomp.h:339</a></div></div>
+<div class="ttc" id="apomp_8h_html_a0ed4cc2bf09ba401406d3175da73226c"><div class="ttname"><a href="pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c">deulermultinom</a></div><div class="ttdeci">static R_INLINE double deulermultinom(int m, double size, const double *rate, double dt, double *trans, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00200">pomp.h:201</a></div></div>
 <div class="ttc" id="apomp_8h_html_a1639b4119d90dfdf24b810a759171ff9"><div class="ttname"><a href="pomp_8h.html#a1639b4119d90dfdf24b810a759171ff9">pomp_dinit</a></div><div class="ttdeci">void pomp_dinit(double *lik, const double *x, const double *p, double t0, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00045">pomp.h:46</a></div></div>
 <div class="ttc" id="apomp_8h_html_a1c79f52f1a622f5a59fea40ad9dfe1f4"><div class="ttname"><a href="pomp_8h.html#a1c79f52f1a622f5a59fea40ad9dfe1f4">pomp_skeleton</a></div><div class="ttdeci">void pomp_skeleton(double *f, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00072">pomp.h:73</a></div></div>
-<div class="ttc" id="apomp_8h_html_a27ce90ca6f901016f2745cd1408cbde5"><div class="ttname"><a href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div><div class="ttdeci">static R_INLINE double rbetabinom(double size, double prob, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00285">pomp.h:286</a></div></div>
-<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00259">pomp.h:260</a></div></div>
+<div class="ttc" id="apomp_8h_html_a210a3bacc8d9a585b5237408fbe04ae0"><div class="ttname"><a href="pomp_8h.html#a210a3bacc8d9a585b5237408fbe04ae0">eeulermultinom</a></div><div class="ttdeci">static R_INLINE void eeulermultinom(int m, double size, const double *rate, double dt, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00137">pomp.h:138</a></div></div>
+<div class="ttc" id="apomp_8h_html_a27ce90ca6f901016f2745cd1408cbde5"><div class="ttname"><a href="pomp_8h.html#a27ce90ca6f901016f2745cd1408cbde5">rbetabinom</a></div><div class="ttdeci">static R_INLINE double rbetabinom(double size, double prob, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00313">pomp.h:314</a></div></div>
+<div class="ttc" id="apomp_8h_html_a3e9f93a24377bb00084d9400134fd102"><div class="ttname"><a href="pomp_8h.html#a3e9f93a24377bb00084d9400134fd102">from_log_barycentric</a></div><div class="ttdeci">static R_INLINE void from_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00287">pomp.h:288</a></div></div>
 <div class="ttc" id="apomp_8h_html_a3f0c4a869b9b0e27422e503eaf380bd5"><div class="ttname"><a href="pomp_8h.html#a3f0c4a869b9b0e27422e503eaf380bd5">pomp_emeasure</a></div><div class="ttdeci">void pomp_emeasure(double *f, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00092">pomp.h:93</a></div></div>
 <div class="ttc" id="apomp_8h_html_a3faa3c7fe8f69a8f03b0cf34bb6d66b6"><div class="ttname"><a href="pomp_8h.html#a3faa3c7fe8f69a8f03b0cf34bb6d66b6">pomp_dprior</a></div><div class="ttdeci">void pomp_dprior(double *lik, const double *p, int give_log, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00110">pomp.h:111</a></div></div>
 <div class="ttc" id="apomp_8h_html_a4609ede6ba1edfd09a82649f71b1c536"><div class="ttname"><a href="pomp_8h.html#a4609ede6ba1edfd09a82649f71b1c536">get_userdata_t</a></div><div class="ttdeci">const SEXP get_userdata_t(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00034">pomp.h:34</a></div></div>
 <div class="ttc" id="apomp_8h_html_a4b9004ae67cdf750e5354cf295e91618"><div class="ttname"><a href="pomp_8h.html#a4b9004ae67cdf750e5354cf295e91618">logit</a></div><div class="ttdeci">static R_INLINE double logit(double p)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00118">pomp.h:118</a></div></div>
-<div class="ttc" id="apomp_8h_html_a5023cae249633906ec84ddda4bd45a36"><div class="ttname"><a href="pomp_8h.html#a5023cae249633906ec84ddda4bd45a36">exp2geom_rate_correction</a></div><div class="ttdeci">static R_INLINE double exp2geom_rate_correction(double R, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00278">pomp.h:279</a></div></div>
+<div class="ttc" id="apomp_8h_html_a5023cae249633906ec84ddda4bd45a36"><div class="ttname"><a href="pomp_8h.html#a5023cae249633906ec84ddda4bd45a36">exp2geom_rate_correction</a></div><div class="ttdeci">static R_INLINE double exp2geom_rate_correction(double R, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00306">pomp.h:307</a></div></div>
 <div class="ttc" id="apomp_8h_html_a512b62346ff39e290130b66f0498805a"><div class="ttname"><a href="pomp_8h.html#a512b62346ff39e290130b66f0498805a">pomp_dmeasure</a></div><div class="ttdeci">void pomp_dmeasure(double *lik, const double *y, const double *x, const double *p, int give_log, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00085">pomp.h:86</a></div></div>
 <div class="ttc" id="apomp_8h_html_a52cad6bd7c9be6be2215659798114e0e"><div class="ttname"><a href="pomp_8h.html#a52cad6bd7c9be6be2215659798114e0e">rgammawn</a></div><div class="ttdeci">static R_INLINE double rgammawn(double sigma, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00128">pomp.h:129</a></div></div>
-<div class="ttc" id="apomp_8h_html_a586276e45f0216dc002a76ff2ff91809"><div class="ttname"><a href="pomp_8h.html#a586276e45f0216dc002a76ff2ff91809">rbetanbinom</a></div><div class="ttdeci">static R_INLINE double rbetanbinom(double mu, double size, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00302">pomp.h:303</a></div></div>
+<div class="ttc" id="apomp_8h_html_a586276e45f0216dc002a76ff2ff91809"><div class="ttname"><a href="pomp_8h.html#a586276e45f0216dc002a76ff2ff91809">rbetanbinom</a></div><div class="ttdeci">static R_INLINE double rbetanbinom(double mu, double size, double theta)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00330">pomp.h:331</a></div></div>
 <div class="ttc" id="apomp_8h_html_a590b27418ed53fa7b17d428c7ca96512"><div class="ttname"><a href="pomp_8h.html#a590b27418ed53fa7b17d428c7ca96512">expit</a></div><div class="ttdeci">static R_INLINE double expit(double x)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00123">pomp.h:123</a></div></div>
-<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00249">pomp.h:250</a></div></div>
-<div class="ttc" id="apomp_8h_html_a6c490604aea6eace860456a7a4dc5a8d"><div class="ttname"><a href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div><div class="ttdeci">static R_INLINE double dbetabinom(double x, double size, double prob, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00292">pomp.h:293</a></div></div>
+<div class="ttc" id="apomp_8h_html_a6a5fa3ea6a4ce20374a9d9d761f04c92"><div class="ttname"><a href="pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92">to_log_barycentric</a></div><div class="ttdeci">static R_INLINE void to_log_barycentric(double *xt, const double *x, int n)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00277">pomp.h:278</a></div></div>
+<div class="ttc" id="apomp_8h_html_a6c490604aea6eace860456a7a4dc5a8d"><div class="ttname"><a href="pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d">dbetabinom</a></div><div class="ttdeci">static R_INLINE double dbetabinom(double x, double size, double prob, double theta, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00320">pomp.h:321</a></div></div>
 <div class="ttc" id="apomp_8h_html_a78a7cf897e1bdd58e6834f1cef1e7ffe"><div class="ttname"><a href="pomp_8h.html#a78a7cf897e1bdd58e6834f1cef1e7ffe">get_userdata_double_t</a></div><div class="ttdeci">const double * get_userdata_double_t(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00036">pomp.h:36</a></div></div>
 <div class="ttc" id="apomp_8h_html_a7cbbce02475d974d83e25dc46c4b6f1d"><div class="ttname"><a href="pomp_8h.html#a7cbbce02475d974d83e25dc46c4b6f1d">pomp_ssa_rate_fn</a></div><div class="ttdeci">double pomp_ssa_rate_fn(int event, double t, const double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00051">pomp.h:52</a></div></div>
 <div class="ttc" id="apomp_8h_html_a8224a361dddd2ad59b411982e5ea746f"><div class="ttname"><a href="pomp_8h.html#a8224a361dddd2ad59b411982e5ea746f">warn</a></div><div class="ttdeci">#define warn(...)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00022">pomp.h:22</a></div></div>
@@ -425,14 +454,14 @@ $(document).ready(function(){initNavTree('pomp_8h_source.html',''); initResizabl
 <div class="ttc" id="apomp_8h_html_a972196c9ce996d8da810a48a2ac55b9c"><div class="ttname"><a href="pomp_8h.html#a972196c9ce996d8da810a48a2ac55b9c">get_userdata_int_t</a></div><div class="ttdeci">const int * get_userdata_int_t(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00035">pomp.h:35</a></div></div>
 <div class="ttc" id="apomp_8h_html_a99ae492baeffbc3e7d8e05c58334fae5"><div class="ttname"><a href="pomp_8h.html#a99ae492baeffbc3e7d8e05c58334fae5">bspline_basis_eval_deriv_t</a></div><div class="ttdeci">void bspline_basis_eval_deriv_t(double x, double *knots, int degree, int nbasis, int deriv, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00025">pomp.h:26</a></div></div>
 <div class="ttc" id="apomp_8h_html_ab50f528dfb03feaa03e7846023767637"><div class="ttname"><a href="pomp_8h.html#ab50f528dfb03feaa03e7846023767637">pomp_rmeasure</a></div><div class="ttdeci">void pomp_rmeasure(double *y, const double *x, const double *p, const int *obsindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00078">pomp.h:79</a></div></div>
-<div class="ttc" id="apomp_8h_html_ab6888f4dc8bca4cbc6fb524405fab10e"><div class="ttname"><a href="pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e">dmultinom</a></div><div class="ttdeci">static R_INLINE double dmultinom(int m, const double *prob, double *x, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00214">pomp.h:215</a></div></div>
+<div class="ttc" id="apomp_8h_html_ab6888f4dc8bca4cbc6fb524405fab10e"><div class="ttname"><a href="pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e">dmultinom</a></div><div class="ttdeci">static R_INLINE double dmultinom(int m, const double *prob, double *x, int give_log)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00242">pomp.h:243</a></div></div>
 <div class="ttc" id="apomp_8h_html_ab77fe28863d98e64dec19f9c1b252e66"><div class="ttname"><a href="pomp_8h.html#ab77fe28863d98e64dec19f9c1b252e66">periodic_bspline_basis_eval_deriv_t</a></div><div class="ttdeci">void periodic_bspline_basis_eval_deriv_t(double x, double period, int degree, int nbasis, int deriv, double *y)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00030">pomp.h:31</a></div></div>
 <div class="ttc" id="apomp_8h_html_ab8276b2ef1e3c7803973319319f2988f"><div class="ttname"><a href="pomp_8h.html#ab8276b2ef1e3c7803973319319f2988f">pomp_dprocess</a></div><div class="ttdeci">void pomp_dprocess(double *loglik, const double *x1, const double *x2, double t1, double t2, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00065">pomp.h:66</a></div></div>
-<div class="ttc" id="apomp_8h_html_abc1011c1741c2adb166822ba05f6bfc5"><div class="ttname"><a href="pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5">dot_product</a></div><div class="ttdeci">static R_INLINE double dot_product(int n, const double *x, const double *y)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00269">pomp.h:270</a></div></div>
+<div class="ttc" id="apomp_8h_html_abc1011c1741c2adb166822ba05f6bfc5"><div class="ttname"><a href="pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5">dot_product</a></div><div class="ttdeci">static R_INLINE double dot_product(int n, const double *x, const double *y)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00297">pomp.h:298</a></div></div>
 <div class="ttc" id="apomp_8h_html_abd7cfb2f9064495241ac3474f912d36d"><div class="ttname"><a href="pomp_8h.html#abd7cfb2f9064495241ac3474f912d36d">pomp_onestep_sim</a></div><div class="ttdeci">void pomp_onestep_sim(double *x, const double *p, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t, double dt)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00058">pomp.h:59</a></div></div>
 <div class="ttc" id="apomp_8h_html_ad514ab0a8cca7242600f76a41ac1b45e"><div class="ttname"><a href="pomp_8h.html#ad514ab0a8cca7242600f76a41ac1b45e">pomp_vmeasure</a></div><div class="ttdeci">void pomp_vmeasure(double *f, const double *x, const double *p, const int *vmatindex, const int *stateindex, const int *parindex, const int *covindex, const double *covars, double t)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00099">pomp.h:100</a></div></div>
 <div class="ttc" id="apomp_8h_html_ad6fffa3f10a13bfb8faf085bc4f4c953"><div class="ttname"><a href="pomp_8h.html#ad6fffa3f10a13bfb8faf085bc4f4c953">pomp_transform</a></div><div class="ttdeci">void pomp_transform(double *pt, const double *p, const int *parindex)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00114">pomp.h:115</a></div></div>
-<div class="ttc" id="apomp_8h_html_af728af2cd3b4be45164906d02a3206a9"><div class="ttname"><a href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">reulermultinom</a></div><div class="ttdeci">static R_INLINE void reulermultinom(int m, double size, const double *rate, double dt, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00137">pomp.h:138</a></div></div>
+<div class="ttc" id="apomp_8h_html_af728af2cd3b4be45164906d02a3206a9"><div class="ttname"><a href="pomp_8h.html#af728af2cd3b4be45164906d02a3206a9">reulermultinom</a></div><div class="ttdeci">static R_INLINE void reulermultinom(int m, double size, const double *rate, double dt, double *trans)</div><div class="ttdef"><b>Definition:</b> <a href="pomp_8h_source.html#l00165">pomp.h:166</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

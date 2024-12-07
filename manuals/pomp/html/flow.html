@@ -94,6 +94,15 @@ If <code>x</code> is the returned matrix, <code>x[i,j,k]</code> is the i-th comp
 </p>
 
 
+<h3>Accumulator variables</h3>
+
+<p>When there are accumulator variables (as determined by the <code><a href="../../pomp/help/accumvars.html">accumvars</a></code> argument), their handling in the continuous-time (vectorfield) case differs from that in the discrete-time (map) case.
+In the latter, accumulator variables are set to zero at the beginning of each interval <code class="reqn">(t_k,t_{k+1})</code>, <code class="reqn">k=0,1,2,\dots</code> over which flow computation is required.
+In the former, the flow computation proceeds over the entire set of intervals required, and accumulator variables are then differenced.
+That is, the value <code class="reqn">a_k</code> of accumulator variable <code class="reqn">a</code> at times <code class="reqn">t_k</code>, <code class="reqn">k=1,2,\dots</code> will be <code class="reqn">A_k-A_{k-1}</code>, where <code class="reqn">A_k</code> is the solution of the corresponding differential equation at <code class="reqn">t_k</code>.
+</p>
+
+
 <h3>See Also</h3>
 
 <p>More on <span class="pkg">pomp</span> workhorse functions: 
@@ -119,7 +128,7 @@ If <code>x</code> is the returned matrix, <code>x[i,j,k]</code> is the i-th comp
 <code><a href="../../pomp/help/trajectory.html">trajectory</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

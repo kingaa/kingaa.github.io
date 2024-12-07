@@ -25,6 +25,7 @@ var pomp_8h =
     [ "deulermultinom", "pomp_8h.html#a0ed4cc2bf09ba401406d3175da73226c", null ],
     [ "dmultinom", "pomp_8h.html#ab6888f4dc8bca4cbc6fb524405fab10e", null ],
     [ "dot_product", "pomp_8h.html#abc1011c1741c2adb166822ba05f6bfc5", null ],
+    [ "eeulermultinom", "pomp_8h.html#a210a3bacc8d9a585b5237408fbe04ae0", null ],
     [ "exp2geom_rate_correction", "pomp_8h.html#a5023cae249633906ec84ddda4bd45a36", null ],
     [ "expit", "pomp_8h.html#a590b27418ed53fa7b17d428c7ca96512", null ],
     [ "from_log_barycentric", "pomp_8h.html#a3e9f93a24377bb00084d9400134fd102", null ],

@@ -30,6 +30,7 @@ Markov processes.
 <pre><code class='language-R'>## S4 method for signature 'data.frame'
 spect(
   data,
+  ...,
   vars,
   kernel.width,
   nsim,
@@ -40,38 +41,37 @@ spect(
   rinit,
   rprocess,
   rmeasure,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
 spect(
   data,
+  ...,
   vars,
   kernel.width,
   nsim,
   seed = NULL,
   transform.data = identity,
   detrend = c("none", "mean", "linear", "quadratic"),
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'spectd_pomp'
 spect(
   data,
+  ...,
   vars,
   kernel.width,
   nsim,
   seed = NULL,
   transform.data,
   detrend,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'spect_match_objfun'
-spect(data, seed, ..., verbose = getOption("verbose", FALSE))
+spect(data, ..., seed, verbose = getOption("verbose", FALSE))
 
 ## S4 method for signature 'objfun'
 spect(data, seed = NULL, ...)
@@ -87,6 +87,11 @@ spect(data, seed = NULL, ...)
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="vars">vars</code></td>
 <td>
@@ -144,10 +149,6 @@ For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess 
 <p>simulator of the measurement model, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure_spec.html">rmeasure specification</a>.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -234,7 +235,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

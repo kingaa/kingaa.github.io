@@ -31,6 +31,7 @@ Resampling is performed at each observation.
 pfilter(
   data,
   Np,
+  ...,
   params,
   rinit,
   rprocess,
@@ -40,20 +41,19 @@ pfilter(
   filter.mean = FALSE,
   filter.traj = FALSE,
   save.states = c("no", "weighted", "unweighted", "FALSE", "TRUE"),
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
 pfilter(
   data,
+  ...,
   Np,
   pred.mean = FALSE,
   pred.var = FALSE,
   filter.mean = FALSE,
   filter.traj = FALSE,
   save.states = c("no", "weighted", "unweighted", "FALSE", "TRUE"),
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
@@ -86,6 +86,11 @@ In the latter case, <code>Np(k)</code> must be a single positive integer, repres
 <code>Np(1)</code>, from <code>timezero(object)</code> to <code>time(object)[1]</code>,
 and so on,
 while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number of particles to sample at the end of the time-series.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="params">params</code></td>
 <td>
@@ -136,10 +141,6 @@ If <code>save.states="weighted"</code>, the state-vector for each weighted parti
 If <code>save.states="no"</code>, information on the latent states is not saved.
 <code>"FALSE"</code> is a synonym for <code>"no"</code> and <code>"TRUE"</code> is a synonym for <code>"unweighted"</code>.
 To retrieve the saved states, apply <code><a href="../../pomp/help/saved_states.html">saved_states</a></code> to the result of the <code>pfilter</code> computation.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -260,7 +261,7 @@ ss &lt;- saved_states(pf,format="d") ## the latent-state portion of each particl
 as(pf,"data.frame") |&gt; head()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

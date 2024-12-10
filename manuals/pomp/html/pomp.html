@@ -61,9 +61,9 @@ These comprise:
 
 <pre><code class='language-R'>pomp(
   data,
+  ...,
   times,
   t0,
-  ...,
   rinit,
   dinit,
   rprocess,
@@ -107,6 +107,10 @@ or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments will generate an error.</p>
+</td></tr>
 <tr><td><code id="times">times</code></td>
 <td>
 <p>the sequence of observation times.
@@ -117,11 +121,6 @@ The time vector must be numeric and non-decreasing.</p>
 <td>
 <p>The zero-time, i.e., the time of the initial state.
 This must be no later than the time of the first observation, i.e., <code>t0 &lt;= times[1]</code>.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments will be added to the <code>userdata</code> list, with a warning.
-In a future release, this warning will become an error.</p>
 </td></tr>
 <tr><td><code id="rinit">rinit</code></td>
 <td>
@@ -389,7 +388,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

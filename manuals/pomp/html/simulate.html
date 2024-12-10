@@ -29,8 +29,10 @@ processes.
 
 <pre><code class='language-R'>## S4 method for signature 'missing'
 simulate(
+  object,
   nsim = 1,
   seed = NULL,
+  ...,
   times,
   t0,
   params,
@@ -39,7 +41,6 @@ simulate(
   rmeasure,
   format = c("pomps", "arrays", "data.frame"),
   include.data = FALSE,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
@@ -48,6 +49,7 @@ simulate(
   object,
   nsim = 1,
   seed = NULL,
+  ...,
   times,
   t0,
   params,
@@ -56,7 +58,6 @@ simulate(
   rmeasure,
   format = c("pomps", "arrays", "data.frame"),
   include.data = FALSE,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
@@ -65,9 +66,9 @@ simulate(
   object,
   nsim = 1,
   seed = NULL,
+  ...,
   format = c("pomps", "arrays", "data.frame"),
   include.data = FALSE,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
@@ -79,6 +80,11 @@ simulate(object, nsim = 1, seed = NULL, ...)
 <h3>Arguments</h3>
 
 <table>
+<tr><td><code id="object">object</code></td>
+<td>
+<p>optional;
+if present, it should be a data frame or a &lsquo;pomp&rsquo; object.</p>
+</td></tr>
 <tr><td><code id="nsim">nsim</code></td>
 <td>
 <p>The number of simulations to perform.
@@ -89,6 +95,10 @@ Note that the number of replicates will be <code>nsim</code> times <code>ncol(pa
 <p>optional integer;
 if set, the pseudorandom number generator (RNG) will be initialized with <code>seed</code>.
 The RNG will be restored to its original state afterward.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="times">times</code></td>
 <td>
@@ -149,18 +159,9 @@ An ordered factor variable, &lsquo;.id&rsquo;, distinguishes one simulation from
 <p>if <code>TRUE</code>, the original data and covariates (if any) are included (with <code>.id = "data"</code>).
 This option is ignored unless <code>format = "data.frame"</code>.</p>
 </td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
-</td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
 <p>logical; if <code>TRUE</code>, diagnostic messages will be printed to the console.</p>
-</td></tr>
-<tr><td><code id="object">object</code></td>
-<td>
-<p>optional;
-if present, it should be a data frame or a &lsquo;pomp&rsquo; object.</p>
 </td></tr>
 </table>
 
@@ -214,7 +215,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

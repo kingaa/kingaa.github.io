@@ -32,13 +32,13 @@ deficiency in the effective sample size.
 wpfilter(
   data,
   Np,
+  ...,
   params,
   rinit,
   rprocess,
   dmeasure,
   trigger = 1,
   target = 0.5,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
@@ -46,14 +46,14 @@ wpfilter(
 wpfilter(
   data,
   Np,
+  ...,
   trigger = 1,
   target = 0.5,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'wpfilterd_pomp'
-wpfilter(data, Np, trigger, target, ..., verbose = getOption("verbose", FALSE))
+wpfilter(data, ..., Np, trigger, target, verbose = getOption("verbose", FALSE))
 </code></pre>
 
 
@@ -78,6 +78,11 @@ In the latter case, <code>Np(k)</code> must be a single positive integer, repres
 <code>Np(1)</code>, from <code>timezero(object)</code> to <code>time(object)[1]</code>,
 and so on,
 while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number of particles to sample at the end of the time-series.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="params">params</code></td>
 <td>
@@ -110,10 +115,6 @@ For more information, see <a href="../../pomp/help/dmeasure_spec.html">dmeasure 
 <tr><td><code id="target">target</code></td>
 <td>
 <p>numeric; target power.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -208,7 +209,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/pmcmc.html">pmcmc</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

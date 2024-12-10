@@ -29,6 +29,7 @@ function processMathHTML() {
 <pre><code class='language-R'>## S4 method for signature 'data.frame'
 spect_objfun(
   data,
+  ...,
   est = character(0),
   weights = 1,
   fail.value = NA,
@@ -43,13 +44,13 @@ spect_objfun(
   rprocess,
   rmeasure,
   partrans,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
 spect_objfun(
   data,
+  ...,
   est = character(0),
   weights = 1,
   fail.value = NA,
@@ -59,13 +60,13 @@ spect_objfun(
   seed = NULL,
   transform.data = identity,
   detrend = c("none", "mean", "linear", "quadratic"),
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'spectd_pomp'
 spect_objfun(
   data,
+  ...,
   est = character(0),
   weights = 1,
   fail.value = NA,
@@ -75,18 +76,17 @@ spect_objfun(
   seed = NULL,
   transform.data = identity,
   detrend,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'spect_match_objfun'
 spect_objfun(
   data,
+  ...,
   est,
   weights,
   fail.value,
   seed = NULL,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 </code></pre>
@@ -101,6 +101,11 @@ spect_objfun(
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="est">est</code></td>
 <td>
@@ -187,10 +192,6 @@ When working with such an algorithm and a model for which the parameters are con
 One should supply the <code>partrans</code> argument via a call to <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
 For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -318,7 +319,7 @@ On the other hand, if one retrieves a stored objective function from a file, or 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

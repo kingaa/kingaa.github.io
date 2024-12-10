@@ -30,6 +30,7 @@ and the synthetic likelihood.
 <pre><code class='language-R'>## S4 method for signature 'data.frame'
 probe(
   data,
+  ...,
   probes,
   nsim,
   seed = NULL,
@@ -37,32 +38,31 @@ probe(
   rinit,
   rprocess,
   rmeasure,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
 probe(
   data,
+  ...,
   probes,
   nsim,
   seed = NULL,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'probed_pomp'
 probe(
   data,
+  ...,
   probes,
   nsim,
   seed = NULL,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'probe_match_objfun'
-probe(data, seed, ..., verbose = getOption("verbose", FALSE))
+probe(data, ..., seed, verbose = getOption("verbose", FALSE))
 
 ## S4 method for signature 'objfun'
 probe(data, seed = NULL, ...)
@@ -78,6 +78,11 @@ probe(data, seed = NULL, ...)
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="probes">probes</code></td>
 <td>
@@ -120,10 +125,6 @@ For more information, see <a href="../../pomp/help/rprocess_spec.html">rprocess 
 <p>simulator of the measurement model, specified either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rmeasure=NULL</code> removes the measurement model simulator.
 For more information, see <a href="../../pomp/help/rmeasure_spec.html">rmeasure specification</a>.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -226,7 +227,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/spect_match.html">spect_match</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

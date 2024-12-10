@@ -28,12 +28,12 @@ function processMathHTML() {
 
 <pre><code class='language-R'>## S4 method for signature 'missing'
 trajectory(
+  ...,
   t0,
   times,
   params,
   skeleton,
   rinit,
-  ...,
   ode_control = list(),
   format = c("pomps", "array", "data.frame"),
   verbose = getOption("verbose", FALSE)
@@ -56,8 +56,8 @@ trajectory(
 ## S4 method for signature 'pomp'
 trajectory(
   object,
-  params,
   ...,
+  params,
   skeleton,
   rinit,
   ode_control = list(),
@@ -73,6 +73,10 @@ trajectory(object, ..., verbose = getOption("verbose", FALSE))
 <h3>Arguments</h3>
 
 <table>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
+</td></tr>
 <tr><td><code id="t0">t0</code></td>
 <td>
 <p>The zero-time, i.e., the time of the initial state.
@@ -103,10 +107,6 @@ Setting <code>skeleton=NULL</code> removes the deterministic skeleton.</p>
 This can be furnished either as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>rinit=NULL</code> sets the initial-state simulator to its default.
 For more information, see <a href="../../pomp/help/rinit_spec.html">rinit specification</a>.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="ode_control">ode_control</code></td>
 <td>
@@ -240,7 +240,7 @@ See above for details.
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

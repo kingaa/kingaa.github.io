@@ -29,6 +29,7 @@ function processMathHTML() {
 <pre><code class='language-R'>## S4 method for signature 'data.frame'
 traj_objfun(
   data,
+  ...,
   est = character(0),
   fail.value = NA,
   ode_control = list(),
@@ -37,27 +38,26 @@ traj_objfun(
   skeleton,
   dmeasure,
   partrans,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
 traj_objfun(
   data,
+  ...,
   est = character(0),
   fail.value = NA,
   ode_control = list(),
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'traj_match_objfun'
 traj_objfun(
   data,
+  ...,
   est,
   fail.value,
   ode_control,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 </code></pre>
@@ -72,6 +72,10 @@ traj_objfun(
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments will modify the model structure</p>
 </td></tr>
 <tr><td><code id="est">est</code></td>
 <td>
@@ -123,10 +127,6 @@ When working with such an algorithm and a model for which the parameters are con
 One should supply the <code>partrans</code> argument via a call to <code><a href="../../pomp/help/parameter_trans.html">parameter_trans</a></code>.
 For more information, see <a href="../../pomp/help/parameter_trans.html">parameter_trans</a>.
 Setting <code>partrans=NULL</code> removes the parameter transformations, i.e., sets them to the identity transformation.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments will modify the model structure</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -238,7 +238,7 @@ On the other hand, if one retrieves a stored objective function from a file, or 
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

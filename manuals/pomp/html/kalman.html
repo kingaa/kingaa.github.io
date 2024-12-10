@@ -29,37 +29,37 @@ function processMathHTML() {
 <pre><code class='language-R'>## S4 method for signature 'data.frame'
 enkf(
   data,
+  ...,
   Np,
   params,
   rinit,
   rprocess,
   emeasure,
   vmeasure,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
-enkf(data, Np, ..., verbose = getOption("verbose", FALSE))
+enkf(data, ..., Np, verbose = getOption("verbose", FALSE))
 
 ## S4 method for signature 'kalmand_pomp'
-enkf(data, Np, ..., verbose = getOption("verbose", FALSE))
+enkf(data, ..., Np, verbose = getOption("verbose", FALSE))
 
 ## S4 method for signature 'data.frame'
 eakf(
   data,
+  ...,
   Np,
   params,
   rinit,
   rprocess,
   emeasure,
   vmeasure,
-  ...,
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pomp'
-eakf(data, Np, ..., verbose = getOption("verbose", FALSE))
+eakf(data, ..., Np, verbose = getOption("verbose", FALSE))
 </code></pre>
 
 
@@ -72,6 +72,11 @@ eakf(data, Np, ..., verbose = getOption("verbose", FALSE))
 or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="Np">Np</code></td>
 <td>
@@ -108,10 +113,6 @@ For more information, see <a href="../../pomp/help/emeasure_spec.html">emeasure 
 This can be specified as a C snippet, an <span class="rlang"><b>R</b></span> function, or the name of a pre-compiled native routine available in a dynamically loaded library.
 Setting <code>vmeasure=NULL</code> removes the vmeasure component.
 For more information, see <a href="../../pomp/help/vmeasure_spec.html">vmeasure specification</a>.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -179,7 +180,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/wpfilter.html">wpfilter</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 5.11.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

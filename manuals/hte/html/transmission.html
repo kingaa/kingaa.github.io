@@ -176,8 +176,9 @@ ff |&gt; filter(logLik!=0)
 trans_unit_spec_objfun(
   params=c(
     a=1,
-    b.A=0.1,b.B=0.1,b.C=0.1,b.D=0.1,b.E=0.1,
-    gamma=0.01,p0=0.1,
+    b=c(A=0.1,B=0.2,C=0.1,D=0.1,E=0.1),
+    gamma=0.01,
+    p0=c(out=0,A=0.1,B=0.1,C=0.1,D=0.1,E=0.2),
     lambda.out=0.1,
     iota=0,
     isol_factor=0.2,
@@ -190,7 +191,7 @@ f()
 coef(f)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.19.3 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.20.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

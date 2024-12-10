@@ -157,7 +157,8 @@ theta &lt;- coef(f)
 indep_unit_spec_objfun(
   params=c(
     lambda=setNames(rep.int(theta["lambda"],6),unique(dat$unit)),
-    theta[c("p0","gamma","alpha","beta","isol_factor","eta")]
+    p0=setNames(rep.int(theta["p0"],6),unique(dat$unit)),
+    theta[c("gamma","alpha","beta","isol_factor","eta")]
   ),
   est=c(
     "lambda.A","lambda.B","lambda.C","lambda.D","lambda.E","lambda.out","gamma"
@@ -177,7 +178,7 @@ h(out$par)
 coef(h)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.19.3 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.20.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

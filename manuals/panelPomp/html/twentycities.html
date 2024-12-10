@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><title>R: He et al. 2010 twenty UK cities weekly reported measles data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>twentycities {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>He et al. 2010 twenty UK cities weekly reported measles data</h2>
+
+<h3>Description</h3>
+
+<p>He et al. 2010 twenty UK cities weekly reported measles data
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>twentycities
+</code></pre>
+
+
+<h3>Format</h3>
+
+
+
+<h4><code>twentycities</code></h4>
+
+<p>A list of 3 data frames.
+</p>
+
+
+
+<h4><code>twentycities$measles</code>:</h4>
+
+
+<dl>
+<dt>unit</dt><dd><p>City name</p>
+</dd>
+<dt>data</dt><dd><p>Date of observation</p>
+</dd>
+<dt>cases</dt><dd><p>Number of measles cases reported during the week</p>
+</dd>
+</dl>
+
+
+
+
+<h4><code>twentycities$demog</code>:</h4>
+
+
+<dl>
+<dt>unit</dt><dd><p>City name</p>
+</dd>
+<dt>year</dt><dd><p>Year that demography was recorded</p>
+</dd>
+<dt>pop</dt><dd><p>Population</p>
+</dd>
+<dt>births</dt><dd><p>Births</p>
+</dd>
+</dl>
+
+
+
+
+<h4><code>twentycities$coord</code>:</h4>
+
+
+<dl>
+<dt>unit</dt><dd><p>City name</p>
+</dd>
+<dt>long</dt><dd><p>Longitude of city</p>
+</dd>
+<dt>lat</dt><dd><p>Latitude of city</p>
+</dd>
+</dl>
+
+
+
+
+<h3>Source</h3>
+
+<p><a href="https://kingaa.github.io/pomp/vignettes/twentycities.rda">https://kingaa.github.io/pomp/vignettes/twentycities.rda</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>D. He, E.L. Ionides, and A.A. King. Plug-and-play inference for disease dynamics: measles in large and small populations as a case study.  <em>Journal of the Royal Society Interface</em> <b>7</b>, 271&ndash;283, 2010.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.5.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

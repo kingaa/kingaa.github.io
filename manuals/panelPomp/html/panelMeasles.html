@@ -1,0 +1,113 @@
+<!DOCTYPE html><html><head><title>R: Make a panelPomp model using UK measles data.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>panelMeasles {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Make a panelPomp model using UK measles data.</h2>
+
+<h3>Description</h3>
+
+<p>The model is a modified <a href="../../panelPomp/help/panelPomp.html">panelPomp</a> version of the model of
+He et al. 2010. The model is a stochastic SEIR model that accounts for
+population demographics in the form of births and deaths. Because of the
+increased transmission that results from school-aged children entering the
+susceptible pool once they begin attending classes for the first time, the
+model includes a birth-cohort effect, which moves a specified faction of
+the cohort into the susceptible pool all at once. The model also includes
+a seasonality in transmission rate that is larger during school terms thn
+it is during holidays.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>panelMeasles(
+  units = c("Bedwellty", "Birmingham", "Bradford", "Bristol", "Cardiff", "Consett",
+    "Dalton.in.Furness", "Halesworth", "Hastings", "Hull", "Leeds", "Lees", "Liverpool",
+    "London", "Manchester", "Mold", "Northwich", "Nottingham", "Oswestry", "Sheffield"),
+  starting_pparams = NULL,
+  interp_method = c("shifted_splines", "linear"),
+  first_year = 1950,
+  last_year = 1963,
+  dt = 1/365.25
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table>
+<tr><td><code id="units">units</code></td>
+<td>
+<p>Character vector of units in <a href="../../panelPomp/help/uk_measles.html">uk_measles</a> to be used in the
+panel model.</p>
+</td></tr>
+<tr><td><code id="starting_pparams">starting_pparams</code></td>
+<td>
+<p>Parameters in the list format, having shared and
+specific components. Set to NULL to assign NA values.</p>
+</td></tr>
+<tr><td><code id="interp_method">interp_method</code></td>
+<td>
+<p>Method used to interpolate population and births.
+Possible options are <code>"shifted_splines"</code> and <code>"linear"</code>.</p>
+</td></tr>
+<tr><td><code id="first_year">first_year</code></td>
+<td>
+<p>Integer for the first full year of data desired.</p>
+</td></tr>
+<tr><td><code id="last_year">last_year</code></td>
+<td>
+<p>Integer for the last full year of data desired.</p>
+</td></tr>
+<tr><td><code id="dt">dt</code></td>
+<td>
+<p>Size of the time step.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A panelPomp object.
+</p>
+
+
+<h3>References</h3>
+
+<p>D. He, E.L. Ionides, and A.A. King. Plug-and-play inference for disease dynamics: measles in large and small populations as a case study.  <em>Journal of the Royal Society Interface</em> <b>7</b>, 271&ndash;283, 2010.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>Other panelPomp examples: 
+<code><a href="../../panelPomp/help/contacts.html">contacts</a>()</code>,
+<code><a href="../../panelPomp/help/panelGompertz.html">panelGompertz</a>()</code>,
+<code><a href="../../panelPomp/help/panelRandomWalk.html">panelRandomWalk</a>()</code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>panelMeasles(units = "London")
+
+</code></pre>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.5.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

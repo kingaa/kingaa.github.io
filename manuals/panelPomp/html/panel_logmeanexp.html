@@ -12,7 +12,7 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>panel_logmeanexp {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -20,8 +20,12 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p><code>se = TRUE</code>, the jackknife se's from <code>logmeanexp</code> are
-squared, summed and the squared root is taken.
+<p>This function computes the <code><a href="../../pomp/help/logmeanexp.html">logmeanexp</a></code> for each column
+or row of a numeric matrix and sums the result. Because the loglikelihood
+of a <code>panelPomp</code> object is the sum of the loglikelihoods of its units,
+this function can be used to summarize replicated estimates of the
+<code>panelPomp</code> model likelihood. If <code>se = TRUE</code>, the jackknife SE estimates
+from <code><a href="../../pomp/help/logmeanexp.html">logmeanexp</a></code> are squared, summed and the squared root is taken.
 </p>
 
 
@@ -34,17 +38,17 @@ squared, summed and the squared root is taken.
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>x</code></td>
+<tr><td><code id="x">x</code></td>
 <td>
 <p>Matrix with the same number of replicated estimates for each panel
 unit loglikelihood.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>MARGIN</code></td>
+<tr><td><code id="MARGIN">MARGIN</code></td>
 <td>
 <p>The dimension of the matrix that corresponds to a panel unit
 and over which averaging occurs (1 indicates rows, 2 indicates columns).</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>se</code></td>
+<tr><td><code id="se">se</code></td>
 <td>
 <p>logical; whether to give standard errors.</p>
 </td></tr>
@@ -76,6 +80,7 @@ and over which averaging occurs (1 indicates rows, 2 indicates columns).</p>
 panel_logmeanexp(ulls,MARGIN=2,se=TRUE)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.5.0.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

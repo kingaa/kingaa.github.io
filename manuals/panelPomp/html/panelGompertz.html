@@ -12,7 +12,7 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
 <table style="width: 100%;"><tr><td>panelGompertz {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
@@ -39,19 +39,19 @@ Gompertz model.
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>N</code></td>
+<tr><td><code id="N">N</code></td>
 <td>
 <p>number of observations for each unit.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>U</code></td>
+<tr><td><code id="U">U</code></td>
 <td>
 <p>number of units.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>params</code></td>
+<tr><td><code id="params">params</code></td>
 <td>
 <p>parameter vector, assuming all units have the same parameters.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>seed</code></td>
+<tr><td><code id="seed">seed</code></td>
 <td>
 <p>passed to the random number generator for simulation.</p>
 </td></tr>
@@ -82,6 +82,7 @@ Gompertz model.
 
 <p>Other panelPomp examples: 
 <code><a href="../../panelPomp/help/contacts.html">contacts</a>()</code>,
+<code><a href="../../panelPomp/help/panelMeasles.html">panelMeasles</a>()</code>,
 <code><a href="../../panelPomp/help/panelRandomWalk.html">panelRandomWalk</a>()</code>
 </p>
 
@@ -91,6 +92,7 @@ Gompertz model.
 <pre><code class='language-R'>panelGompertz()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.5.0.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

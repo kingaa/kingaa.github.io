@@ -36,11 +36,12 @@ MD5sum: dacc42b1de8f6ca55ed6b5951eed7139
 NeedsCompilation: yes
 
 Package: panelPomp
-Version: 1.1.0.1
+Version: 1.5.0.0
 Depends: R(>= 4.1.0), pomp(>= 4.5.2)
-Imports: methods
+Imports: lifecycle, methods
+Suggests: knitr, rmarkdown, bookdown
 License: GPL-3
-MD5sum: 591cb8456588a3ca972b4da5671e8cdc
+MD5sum: b51d225c5b2e9ed8978ec2a1ce2549f2
 NeedsCompilation: no
 
 Package: phylopomp

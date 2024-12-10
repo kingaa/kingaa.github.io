@@ -1,0 +1,106 @@
+<!DOCTYPE html><html><head><title>R: Weekly reported measles data for 362 locations in the UK</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>uk_measles {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Weekly reported measles data for 362 locations in the UK</h2>
+
+<h3>Description</h3>
+
+<p>Weekly reported measles data for 362 locations in the UK
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>uk_measles
+</code></pre>
+
+
+<h3>Format</h3>
+
+
+
+<h4><code>uk_measles</code></h4>
+
+<p>A list of 3 data frames Unit names ending in <code>.RD</code> are for rural areas; other
+unit names are for urban areas. NOTE: not all units have coordinates.
+</p>
+
+
+
+<h4><code>uk_measles$measles</code>:</h4>
+
+
+<dl>
+<dt>unit</dt><dd><p>City name</p>
+</dd>
+<dt>data</dt><dd><p>Date of observation</p>
+</dd>
+<dt>cases</dt><dd><p>Number of measles cases reported during the week</p>
+</dd>
+</dl>
+
+
+
+
+<h4><code>uk_measles$demog</code>:</h4>
+
+
+<dl>
+<dt>unit</dt><dd><p>City name</p>
+</dd>
+<dt>year</dt><dd><p>Year that demography was recorded</p>
+</dd>
+<dt>pop</dt><dd><p>Population</p>
+</dd>
+<dt>births</dt><dd><p>Births</p>
+</dd>
+</dl>
+
+
+
+
+<h4><code>uk_measles$coord</code>:</h4>
+
+
+<dl>
+<dt>unit</dt><dd><p>City name</p>
+</dd>
+<dt>long</dt><dd><p>Longitude of city</p>
+</dd>
+<dt>lat</dt><dd><p>Latitude of city</p>
+</dd>
+</dl>
+
+
+
+
+<h3>Source</h3>
+
+<p><a href="https://rs.figshare.com/collections/Supplementary_material_from_Structure_space_and_size_competing_drivers_of_variation_in_urban_and_rural_measles_transmission_/5036567/1">https://rs.figshare.com/collections/Supplementary_material_from_Structure_space_and_size_competing_drivers_of_variation_in_urban_and_rural_measles_transmission_/5036567/1</a>
+</p>
+
+
+<h3>References</h3>
+
+<p>Korevaar H, Metcalf CJ, Grenfell BT. 2020 Structure, space and size: competing drivers of variation in urban and rural measles transmission. J. R. Soc. Interface 17: 20200010. http://dx.doi.org/10.1098/rsif.2020.0010
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.5.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

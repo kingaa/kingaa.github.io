@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Extract log likelihood of units of panel models</title>
+<!DOCTYPE html><html><head><title>R: (Deprecated) Extract log likelihood of units of panel models</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -12,14 +12,18 @@ function processMathHTML() {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
     onload="processMathHTML();"></script>
 <link rel="stylesheet" type="text/css" href="R.css" />
-</head><body><div class="container">
+</head><body><div class="container"><main>
 
-<table style="width: 100%;"><tr><td>unitlogLik {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>unitlogLik-deprecated {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Extract log likelihood of units of panel models</h2>
+<h2>(Deprecated) Extract log likelihood of units of panel models</h2>
 
 <h3>Description</h3>
 
+<p><a href="https://lifecycle.r-lib.org/articles/stages.html#deprecated"><img src="../help/figures/lifecycle-deprecated.svg" alt='[Deprecated]' /></a>
+</p>
+<p>In future versions, this generic is being replaced with <code><a href="../../panelPomp/help/unitLogLik.html">unitLogLik()</a></code>.
+</p>
 <p><code>unitlogLik()</code> is a generic function that extracts the log
 likelihood for each unit of panel objects returned by panel modeling functions.
 While the <code>numeric</code> value with the log likelihood for the entire panel
@@ -37,11 +41,11 @@ by panel units can be implemented via <code>unitlogLik()</code>.
 <h3>Arguments</h3>
 
 <table>
-<tr style="vertical-align: top;"><td><code>object</code></td>
+<tr><td><code id="object">object</code></td>
 <td>
 <p>an object for which log likelihood values for units can be extracted.</p>
 </td></tr>
-<tr style="vertical-align: top;"><td><code>...</code></td>
+<tr><td><code id="...">...</code></td>
 <td>
 <p>additional arguments.</p>
 </td></tr>
@@ -78,10 +82,13 @@ by panel units can be implemented via <code>unitlogLik()</code>.
 
 <pre><code class='language-R'># filter, which generates log likelihoods
 pfrw &lt;- pfilter(panelRandomWalk(),Np=10)
+
 # extract log likelihood for each panel unit
 unitlogLik(pfrw)
+
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.1.0.1 <a href="00Index.html">Index</a>]</div>
+<hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.5.0.0 <a href="00Index.html">Index</a>]</div></main>
+
 </div>
 </body></html>

@@ -429,7 +429,7 @@ $(document).ready(function(){initNavTree('skeleton_8c_source.html',''); initResi
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  dim = INTEGER(GET_DIM(x));</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <a class="code" href="trajectory_8c.html#ae8f6d2fd6490d3153cb4133bf183a404">nvars</a> = dim[0]; nrepx = dim[1];</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <span class="keywordflow">if</span> (ntimes != dim[2])</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;length of &#39;t&#39; and 3rd dimension of &#39;x&#39; do not agree.&quot;</span>);</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <a class="code" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;length of &#39;times&#39; and 3rd dimension of &#39;x&#39; do not agree.&quot;</span>);</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  PROTECT(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a> = <a class="code" href="pomp__defines_8h.html#ad396407a99088c710b270a9c1dc3aa9d">as_matrix</a>(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  dim = INTEGER(GET_DIM(<a class="code" href="trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525">params</a>));</div>

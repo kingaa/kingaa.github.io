@@ -30,8 +30,8 @@ Resampling is performed at each observation.
 <pre><code class='language-R'>## S4 method for signature 'data.frame'
 pfilter(
   data,
-  Np,
   ...,
+  Np,
   params,
   rinit,
   rprocess,
@@ -40,7 +40,8 @@ pfilter(
   pred.var = FALSE,
   filter.mean = FALSE,
   filter.traj = FALSE,
-  save.states = c("no", "weighted", "unweighted", "FALSE", "TRUE"),
+  save.states = c("no", "filter", "prediction", "weighted", "unweighted", "FALSE",
+    "TRUE"),
   verbose = getOption("verbose", FALSE)
 )
 
@@ -53,12 +54,13 @@ pfilter(
   pred.var = FALSE,
   filter.mean = FALSE,
   filter.traj = FALSE,
-  save.states = c("no", "weighted", "unweighted", "FALSE", "TRUE"),
+  save.states = c("no", "filter", "prediction", "weighted", "unweighted", "FALSE",
+    "TRUE"),
   verbose = getOption("verbose", FALSE)
 )
 
 ## S4 method for signature 'pfilterd_pomp'
-pfilter(data, Np, ..., verbose = getOption("verbose", FALSE))
+pfilter(data, ..., Np, verbose = getOption("verbose", FALSE))
 
 ## S4 method for signature 'objfun'
 pfilter(data, ...)
@@ -75,6 +77,11 @@ or an object of class &lsquo;pomp&rsquo;,
 i.e., the output of another <span class="pkg">pomp</span> calculation.
 Internally, <code>data</code> will be coerced to an array with storage-mode <code>double</code>.</p>
 </td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
+This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
+</td></tr>
 <tr><td><code id="Np">Np</code></td>
 <td>
 <p>the number of particles to use.
@@ -86,11 +93,6 @@ In the latter case, <code>Np(k)</code> must be a single positive integer, repres
 <code>Np(1)</code>, from <code>timezero(object)</code> to <code>time(object)[1]</code>,
 and so on,
 while when <code>T=length(time(object))</code>, <code>Np(T)</code> is the number of particles to sample at the end of the time-series.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are passed to <code><a href="../../pomp/help/pomp.html">pomp</a></code>.
-This allows one to set, unset, or modify <a href="../../pomp/help/basic_components.html">basic model components</a> within a call to this function.</p>
 </td></tr>
 <tr><td><code id="params">params</code></td>
 <td>
@@ -136,10 +138,13 @@ See <code><a href="../../pomp/help/filter_traj.html">filter_traj</a></code> for 
 <tr><td><code id="save.states">save.states</code></td>
 <td>
 <p>character;
-If <code>save.states="unweighted"</code>, the state-vector for each unweighted particle at each time is saved.
-If <code>save.states="weighted"</code>, the state-vector for each weighted particle at each time is saved, along with the corresponding weight.
-If <code>save.states="no"</code>, information on the latent states is not saved.
-<code>"FALSE"</code> is a synonym for <code>"no"</code> and <code>"TRUE"</code> is a synonym for <code>"unweighted"</code>.
+If <code>save.states="no"</code> (the default), information on the latent states is not saved.
+If <code>save.states="filter"</code>, the state-vector for each filtered particle <code class="reqn">X_{n,j}^F</code> at each time <code class="reqn">n</code> is saved.
+If <code>save.states="prediction"</code>, the state-vector for each prediction particle <code class="reqn">X_{n,j}^P</code> at each time <code class="reqn">n</code> is saved, along with the corresponding weight <code class="reqn">w_{n,j} = f_{Y_n|X_n}(y^*|X_{n, j}^P;\theta)</code>.
+The options &quot;unweighted&quot;, &quot;weighted&quot;, TRUE, and FALSE are deprecated and will issue a warning if used, mapping to the new values for backward compatibility.
+The option &quot;unweighted&quot; and TRUE are synonymous with &quot;filter&quot;;
+the option &quot;weighted&quot; is synonymous with &quot;prediction&quot;;
+the option FALSE is synonymous with &quot;no&quot;.
 To retrieve the saved states, apply <code><a href="../../pomp/help/saved_states.html">saved_states</a></code> to the result of the <code>pfilter</code> computation.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
@@ -253,7 +258,7 @@ eff_sample_size(pf)             ## effective sample size
 logLik(pfilter(pf))      	## run it again with 1000 particles
 
 ## run it again with 2000 particles
-pf &lt;- pfilter(pf,Np=2000,filter.mean=TRUE,filter.traj=TRUE,save.states="weighted")
+pf &lt;- pfilter(pf,Np=2000,filter.mean=TRUE,filter.traj=TRUE,save.states="filter")
 fm &lt;- filter_mean(pf) ## extract the filtering means
 ft &lt;- filter_traj(pf) ## one draw from the smoothing distribution
 ss &lt;- saved_states(pf,format="d") ## the latent-state portion of each particle
@@ -261,7 +266,7 @@ ss &lt;- saved_states(pf,format="d") ## the latent-state portion of each particl
 as(pf,"data.frame") |&gt; head()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

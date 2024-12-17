@@ -156,7 +156,7 @@ See the example below.
   ## C snippet approach:
 
   simulate(times=1:100,t0=0,
-    phi=as.double(100),
+    userdata=list(phi=as.double(100)),
     params=c(r=3.8,sigma=0.3,N.0=7),
     rprocess=discrete_time(
       step.fun=Csnippet(r"{
@@ -196,7 +196,7 @@ See the example below.
   ## Finally, the R function approach:
 
   simulate(times=1:100,t0=0,
-    phi=100,
+    userdata=list(phi=100),
     params=c(r=3.8,sigma=0.3,N_0=7),
     rprocess=discrete_time(
       step.fun=function (r, N, sigma, ...) {
@@ -213,7 +213,7 @@ See the example below.
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

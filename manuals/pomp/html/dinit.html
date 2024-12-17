@@ -29,11 +29,11 @@ function processMathHTML() {
 <pre><code class='language-R'>## S4 method for signature 'pomp'
 dinit(
   object,
+  ...,
   params = coef(object),
   t0 = timezero(object),
   x,
-  log = FALSE,
-  ...
+  log = FALSE
 )
 </code></pre>
 
@@ -45,6 +45,10 @@ dinit(
 <td>
 <p>an object of class &lsquo;pomp&rsquo;, or of a class that extends &lsquo;pomp&rsquo;.
 This will typically be the output of <code>pomp</code>, <code>simulate</code>, or one of the <span class="pkg">pomp</span> inference algorithms.</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p>additional arguments are ignored.</p>
 </td></tr>
 <tr><td><code id="params">params</code></td>
 <td>
@@ -67,10 +71,6 @@ One can also pass <code>x</code> as a named numeric vector, which is equivalent 
 <tr><td><code id="log">log</code></td>
 <td>
 <p>if TRUE, log probabilities are returned.</p>
-</td></tr>
-<tr><td><code id="...">...</code></td>
-<td>
-<p>additional arguments are ignored.</p>
 </td></tr>
 </table>
 
@@ -103,7 +103,7 @@ By default, <code>t0</code> is the initial time defined when the &lsquo;pomp&rsq
 <code><a href="../../pomp/help/workhorses.html">workhorses</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

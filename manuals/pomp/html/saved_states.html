@@ -55,9 +55,10 @@ format of the returned object (see below).</p>
 
 <h3>Details</h3>
 
-<p>When one calls <code><a href="../../pomp/help/pfilter.html">pfilter</a></code> with <code>save.states=TRUE</code>, the latent state vector associated with each particle is saved.
+<p>When one calls <code><a href="../../pomp/help/pfilter.html">pfilter</a></code> with <code>save.states="filter"</code> or <code>save.states="prediction"</code>, the latent state vector associated with each particle is saved.
 This can be extracted by calling <code>saved_states</code> on the &lsquo;pfilterd.pomp&rsquo; object.
-These are the <em>unweighted</em> particles, saved <em>after</em> resampling.
+If the filtered particles are saved, these particles are <em>unweighted</em>, saved <em>after</em> resampling using their normalized weights.
+If the argument  <code>save.states="prediction"</code> was used, the particles correspond to simulations from <code>rprocess</code>, and their corresponding unnormalized weights are included in the output.
 </p>
 
 
@@ -112,7 +113,7 @@ In particular, it has one element per observation time; each element is the vect
 <code><a href="../../pomp/help/traces.html">traces</a>()</code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.1.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

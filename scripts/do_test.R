@@ -1,6 +1,10 @@
+options(
+  tidyverse.quiet=TRUE
+)
+
 library(foreach,quietly=TRUE)
-suppressMessages(library(aakmisc,quietly=TRUE))
-suppressMessages(library(tidyverse,quietly=TRUE))
+library(aakmisc,quietly=TRUE)
+library(tidyverse,quietly=TRUE)
 library(grid,quietly=TRUE)
 library(digest,quietly=TRUE)
 
@@ -10,19 +14,19 @@ doParallel <- "doParallel"
 doParRNG <- "doParRNG"
 doMPIRNG <- "doMPIRNG"
 doMCRNG <- "doMCRNG"
+doFuture <- "doFuture"
 
 ## set defaults
-njobs <- 2500
+njobs <- 3000
 logrp <- 7
 nnode <- 1
 ncore <- 1
 chunk <- 1
 backend <- doMC
-options.mpi <- list()
+seed <- 1218461302L
 id <- Sys.getpid()
 
-helpmsg <- sprintf("
-
+helpmsg <- sprintf(r"{
 usage:
 Rscript do_test.R backend=<backend> id=<id> njobs=<njobs> nnode=<nnode> ncore=<ncore> chunk=<chunk>
    --or--
@@ -30,98 +34,139 @@ R CMD BATCH --no-save --no-restore '--args backend=<backend> id=<id> njobs=<njob
 
 where  <backend> is one of doMC, doMPI, doMPIRNG, doParallel, doParRNG, doMCRNG
        and the other parameters are positive integers
-       by default, backend = %s, njobs = %d, logrp = %d, nnode = %d, ncore = %d, chunk = %d, id = pid
+       by default, backend = %s, njobs = %d, logrp = %d, nnode = %d, ncore = %d, chunk = %d, id = <pid>
 
-",backend,njobs,logrp,nnode,ncore,chunk)
+Note: with backend=doMC or doMCRNG, chunk = 1 and nnode = 1.
+
+}",
+backend,njobs,logrp,nnode,ncore,chunk
+)
 
 cargs <- commandArgs(trailingOnly=TRUE)
 if (length(cargs)==0) {
-    cat(helpmsg)
-    q(save="no")
+  cat(helpmsg)
+  q(save="no")
 }
 
 ## set njobs, ncore, chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
 
-img <- paste0("do_test_",id,".png")
+options.mpi <- list()
+options.future <- list()
 
-switch(backend,
-       doMC={
-           library(doMC,quietly=TRUE)
-           nnode <- 1
-           chunk <- 1
-           registerDoMC(ncore)
-       },
-       doMCRNG={
-           library(doMC,quietly=TRUE)
-           suppressMessages(library(doRNG,quietly=TRUE))
-           nnode <- 1
-           chunk <- 1
-           registerDoMC(ncore)
-           registerDoRNG(1218461302L)
-       },
-       doMPI={
-           library(doMPI,quietly=TRUE)
-           cl <- startMPIcluster(count=nnode,maxcores=ncore,logdir="/tmp")
-           registerDoMPI(cl)
-           options.mpi <- list(chunkSize=chunk,seed=1218461302L)
-       },
-       doMPIRNG={
-           library(doMPI,quietly=TRUE)
-           suppressMessages(library(doRNG,quietly=TRUE))
-           cl <- startMPIcluster(count=nnode,maxcores=ncore,logdir="/tmp")
-           registerDoMPI(cl)
-           registerDoRNG(1218461302L)
-           options.mpi <- list(chunkSize=chunk)
-       },
-       doParallel={
-           library(doParallel,quietly=TRUE)
-           cl <- makeCluster(type="MPI",spec=nnode)
-           ncore <- 1
-           chunk <- 1
-           registerDoParallel(cl)
-           clusterSetRNGStream(cl,iseed=1218461302L)
-       },
-       doParRNG={
-           library(doParallel,quietly=TRUE)
-           suppressMessages(library(doRNG,quietly=TRUE))
-           cl <- makeCluster(type="MPI",spec=nnode)
-           ncore <- 1
-           chunk <- 1
-           registerDoParallel(cl)
-           registerDoRNG(1218461302L)
-       }
-       )
+img <- paste0("do_test_",as.character(id),".png")
 
-cat(sprintf("Starting computation of size %d, each of size 10^%d, using
-    backend %s on %d nodes, with %d cores/node, and chunksize %d\n",
-  njobs,logrp,backend,nnode,ncore,chunk))
+switch(
+  backend,
+  doMC={
+    library(doMC,quietly=TRUE)
+    nnode <- 1
+    chunk <- 1
+    registerDoMC(ncore)
+  },
+  doMCRNG={
+    library(doMC,quietly=TRUE)
+    suppressMessages(library(doRNG,quietly=TRUE))
+    nnode <- 1
+    chunk <- 1
+    registerDoMC(ncore)
+    registerDoRNG(seed)
+  },
+  doMPI={
+    library(doMPI,quietly=TRUE)
+    cl <- startMPIcluster(count=nnode,maxcores=ncore,logdir="/tmp")
+    registerDoMPI(cl)
+    options.mpi <- list(chunkSize=chunk,seed=seed)
+  },
+  doMPIRNG={
+    library(doMPI,quietly=TRUE)
+    suppressMessages(library(doRNG,quietly=TRUE))
+    cl <- startMPIcluster(count=nnode,maxcores=ncore,logdir="/tmp")
+    registerDoMPI(cl)
+    registerDoRNG(seed)
+    options.mpi <- list(chunkSize=chunk)
+  },
+  doParallel={
+    library(doParallel,quietly=TRUE)
+    cl <- makeCluster(type="MPI",spec=nnode)
+    ncore <- 1
+    chunk <- 1
+    registerDoParallel(cl)
+    clusterSetRNGStream(cl,iseed=seed)
+  },
+  doParRNG={
+    library(doParallel,quietly=TRUE)
+    suppressMessages(library(doRNG,quietly=TRUE))
+    cl <- makeCluster(type="MPI",spec=nnode)
+    ncore <- 1
+    chunk <- 1
+    registerDoParallel(cl)
+    registerDoRNG(seed)
+  },
+  doFuture={
+    library(doFuture,quietly=TRUE)
+    cl <- makeClusterMPI(nnode,autostop=TRUE)
+    options.future <- list(seed=TRUE,chunk.size=chunk)
+    plan(cluster,workers=cl)
+    ncore <- 1
+    set.seed(seed)
+  }
+)
 
-tic <- Sys.time()
-res <- foreach (i = seq_len(njobs),
-                .options.mpi=options.mpi,
-                .combine=rbind,
-                .inorder=FALSE) %dopar% {
-                  t1 <- Sys.time()
-                  h <- system("hostname",intern=TRUE)
-                  pid <- Sys.getpid()
-                  x <- quantile(rnorm(n=round(10^logrp)),prob=0.9)
-                  t2 <- Sys.time()
-                  data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
-                }
-toc <- Sys.time()
+jobsize <- round(10^logrp)
 
-nwork <- getDoParWorkers()
+cat(
+  sprintf("
+    Starting computation of size %d x 10^%d
+     backend %s | %d node | %d core/node | chunksize %d\n",
+    njobs,logrp,backend,nnode,ncore,chunk
+  )
+)
 
-cat(sprintf("%d nodes x %d cores\tchunksize: %d\tnworkers:nwork
-output to image file %s\n",ncore,chunk,nwork,sQuote(img)))
-
-if (backend %in% c("doMPI","doMPIRNG")) {
-#  closeCluster(cl)
-#  invisible(mpi.finalize())
-} else if (backend == "doParallel") {
-  stopCluster(cl)
+if (backend=="doFuture") {
+  tic <- Sys.time()
+  res <- foreach (
+    i = seq_len(njobs),
+    .options.future=options.future,
+    .combine=rbind,
+    .inorder=FALSE
+  ) %dofuture% {
+    t1 <- Sys.time()
+    h <- system("hostname",intern=TRUE)
+    pid <- Sys.getpid()
+    x <- quantile(rnorm(n=jobsize),prob=0.9)
+    t2 <- Sys.time()
+    data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
+  }
+  toc <- Sys.time()
+  nwork <- nbrOfWorkers()
+} else {
+  tic <- Sys.time()
+  res <- foreach (
+    i = seq_len(njobs),
+    .options.mpi=options.mpi,
+    .combine=rbind,
+    .inorder=FALSE
+  ) %dopar% {
+    t1 <- Sys.time()
+    h <- system("hostname",intern=TRUE)
+    pid <- Sys.getpid()
+    x <- quantile(rnorm(n=jobsize),prob=0.9)
+    t2 <- Sys.time()
+    data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
+  }
+  toc <- Sys.time()
+  nwork <- getDoParWorkers()
 }
+
+cat(
+  sprintf("
+    %s backend
+    %d node x %d core | chunksize: %d | jobs/workers: %d/%d
+    output to image file %s\n\n",
+    backend,nnode,ncore,chunk,njobs,nwork,sQuote(img)
+  )
+)
 
 res |>
   mutate(
@@ -133,8 +178,8 @@ res |>
   ) |>
   mutate(
     otime=as.numeric(difftime(toc,tic,units='secs')),
-    ieffic=signif(stime/etime/nnode/ncore,3),
-    oeffic=signif(stime/otime/nnode/ncore,3),
+    ieffic=signif(stime/etime/nwork,3),
+    oeffic=signif(stime/otime/nwork,3),
     njobs=njobs,
     logrp=logrp,
     nnode=nnode,
@@ -147,10 +192,10 @@ res |>
     etime=round(etime,1),
     otime=round(otime,1)
   ) |>
-  gather(variable,value) |>
+  pivot_longer(everything()) |>
   mutate(
-    y=-seq_along(variable),
-    label=paste0(variable,"\t",value)
+    y=-seq_along(name),
+    label=paste0(name,"\t",value)
   ) -> eff
 
 eff |> pull(label) |> cat(sep="\n")
@@ -163,18 +208,22 @@ eff |>
 res |>
   ggplot(aes(x=t1,xend=t2,y=id,yend=id,color=host))+
   geom_segment()+
-  guides(color=FALSE)+
+  guides(color="none")+
   theme_bw()+
-  labs(x='time',y='job id',title=paste("with",backend,"backend"))+
+  labs(
+    x='time',
+    y='job id',
+    title=paste("with",backend,"backend")
+  )+
   annotate("segment",x=tic,xend=toc,y=0,yend=njobs,color='black') -> pl
 
 res |>
   ggplot(aes(x=host,fill=host,color=host))+
   stat_count()+
   labs(x="",y="")+
-  guides(fill=FALSE,color=FALSE)+
+  guides(fill="none",color="none")+
   theme(axis.text.x=element_text(angle=90,vjust=0.5),
-        plot.background=element_rect(fill=NA)) -> pl1
+    plot.background=element_rect(fill=NA)) -> pl1
 
 png(filename=img,width=7,height=8,units='in',res=300)
 print(pl)
@@ -187,5 +236,3 @@ res |>
   arrange(id) |>
   pull(x) |>
   digest()
-
-mpi.quit()

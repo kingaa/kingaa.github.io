@@ -67,27 +67,33 @@ admission, discharge, transfer, or test.
 </td></tr>
 <tr><td><code id="b">b</code></td>
 <td>
-<p>transmission rate</p>
+<p>transmission rate.
+This can be a single rate or can be a vector of unit-specific rates.
+In the latter case, its names should correspond to the various units.</p>
 </td></tr>
 <tr><td><code id="gamma">gamma</code></td>
 <td>
-<p>decolonization rate</p>
+<p>decolonization rate.</p>
 </td></tr>
 <tr><td><code id="lambda0">lambda0</code></td>
 <td>
-<p>background colonization rate</p>
+<p>background colonization rate.
+This can be a single rate or can be a vector of unit-specific rates.
+In the latter case, its names should correspond to the various units.</p>
 </td></tr>
 <tr><td><code id="p0">p0</code></td>
 <td>
-<p>probability of colonization on admission</p>
+<p>probability of colonization on admission.
+This can be a single probability or can be a vector of unit-specific probabilities.
+In the latter case, its names should correspond to the various units.</p>
 </td></tr>
 <tr><td><code id="alpha">alpha</code>, <code id="beta">beta</code></td>
 <td>
-<p>false positive and negative testing error rates</p>
+<p>false positive and negative testing error rates.</p>
 </td></tr>
 <tr><td><code id="adm_eff">adm_eff</code></td>
 <td>
-<p>numeric; efficiency of testing on admission</p>
+<p>numeric; efficiency of testing on admission.</p>
 </td></tr>
 <tr><td><code id="status_changes">status_changes</code></td>
 <td>
@@ -95,7 +101,7 @@ admission, discharge, transfer, or test.
 </td></tr>
 <tr><td><code id="outside">outside</code></td>
 <td>
-<p>character; name of &quot;outside&quot; unit</p>
+<p>character; name of &quot;outside&quot; unit.</p>
 </td></tr>
 <tr><td><code id="verbose">verbose</code></td>
 <td>
@@ -148,11 +154,26 @@ This contains information on the test result, true colonization status, and loca
     arrange(time) |&gt;
     run_abm(verbose=TRUE) -&gt; dat
 
+  b &lt;- set_names(rep(0,40),c(LETTERS,letters[1:14]))
+  p0 &lt;- set_names(rep(0,40),c(LETTERS,letters[1:14]))
+  b["E"] &lt;- 0.5
+  p0["C"] &lt;- 1
+
+  sim_pat_mov |&gt;
+    bind_rows(testsched) |&gt;
+    arrange(time) |&gt;
+    run_abm(
+      b=b,
+      p0=p0,
+      status_changes=TRUE,
+      verbose=TRUE
+    ) -&gt; dat
+
 
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.20.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>hte</em> version 0.0.21.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

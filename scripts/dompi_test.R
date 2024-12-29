@@ -3,9 +3,9 @@
 library(foreach,quietly=TRUE)
 library(doMPI,quietly=TRUE)
 
-njobs <- 1600
+njobs <- 3000
 ncore <- 1
-chunk <- 1
+chunk <- 12
 
 ## set njobs, ncore, chunk from the command line
 invisible(eval(parse(text=commandArgs(trailingOnly=TRUE))))
@@ -30,9 +30,10 @@ res <- foreach (
   t1 <- Sys.time()
   h <- system("hostname",intern=TRUE)
   pid <- Sys.getpid()
-  x <- quantile(rnorm(n=1e8),prob=0.9)
+  x <- replicate(20,quantile(rnorm(n=1e7),prob=0.9))
+  m <- mean(x)
   t2 <- Sys.time()
-  data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=x)
+  data.frame(id=i,host=h,pid=pid,t1=t1,t2=t2,x=m)
 }
 toc <- Sys.time()
 

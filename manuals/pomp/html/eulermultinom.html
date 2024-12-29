@@ -32,6 +32,8 @@ the the Gamma white-noise processes.
 
 deulermultinom(x, size, rate, dt, log = FALSE)
 
+eeulermultinom(size, rate, dt)
+
 rgammawn(n = 1, sigma, dt)
 </code></pre>
 
@@ -136,29 +138,18 @@ see below.
 
 <h3>Value</h3>
 
-<table>
-<tr><td><code>reulermultinom</code></td>
-<td>
-
-<p>Returns a <code>length(rate)</code> by <code>n</code> matrix.
+<p><code>reulermultinom</code> returns a <code>length(rate)</code> by <code>n</code> matrix.
 Each column is a different random draw.
 Each row contains the numbers of individuals that have succumbed to the corresponding process.
 </p>
-</td></tr>
-<tr><td><code>deulermultinom</code></td>
-<td>
-
-<p>Returns a vector (of length equal to the number of columns of <code>x</code>) containing
-the probabilities of observing each column of <code>x</code> given the specified parameters (<code>size</code>, <code>rate</code>, <code>dt</code>).
+<p><code>deulermultinom</code> returns a vector (of length equal to the number of columns of <code>x</code>).
+This contains the probabilities of observing each column of <code>x</code> given the specified parameters (<code>size</code>, <code>rate</code>, <code>dt</code>).
 </p>
-</td></tr>
-<tr><td><code>rgammawn</code></td>
-<td>
-
-<p>Returns a vector of length <code>n</code> containing random increments of the integrated Gamma white noise process with intensity <code>sigma</code>.
+<p><code>eeulermultinom</code> returns a <code>length(rate)</code>-vector
+containing the expected number of individuals to have succumbed to the corresponding process.
 </p>
-</td></tr>
-</table>
+<p><code>rgammawn</code> returns a vector of length <code>n</code> containing random increments of the integrated Gamma white noise process with intensity <code>sigma</code>.
+</p>
 
 
 <h3>C API</h3>
@@ -177,8 +168,7 @@ Visit the package homepage to view the <a href="https://kingaa.github.io/pomp/C_
 <h3>References</h3>
 
 <p>C. Bretó and E. L. Ionides. Compound Markov counting processes and their applications to modeling infinitesimally over-dispersed systems. <em>Stochastic Processes and their Applications</em> <b>121</b>, 2571&ndash;2591, 2011. <a href="https://doi.org/10.1016/j.spa.2011.07.005">doi:10.1016/j.spa.2011.07.005</a>.
-</p>
-<p>D. He, E.L. Ionides, and A.A. King. Plug-and-play inference for disease dynamics: measles in large and small populations as a case study.  <em>Journal of the Royal Society Interface</em> <b>7</b>, 271&ndash;283, 2010. <a href="https://doi.org/10.1098/rsif.2009.0151">doi:10.1098/rsif.2009.0151</a>.
+D. He, E.L. Ionides, and A.A. King. Plug-and-play inference for disease dynamics: measles in large and small populations as a case study.  <em>Journal of the Royal Society Interface</em> <b>7</b>, 271&ndash;283, 2010. <a href="https://doi.org/10.1098/rsif.2009.0151">doi:10.1098/rsif.2009.0151</a>.
 </p>
 
 
@@ -210,17 +200,27 @@ Visit the package homepage to view the <a href="https://kingaa.github.io/pomp/C_
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>
-print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=0.1))
+<pre><code class='language-R'>## Simulate 5 realizations of Euler-multinomial random variable:
+
+dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=0.1)
+dn
+
+## Compute the probability mass function at each of the 5 realizations:
+
 deulermultinom(x=dn,size=100,rate=c(1,2,3),dt=0.1)
-## an Euler-multinomial with overdispersed transitions:
+
+## Compute the expectation of an Euler-multinomial:
+
+eeulermultinom(size=100,rate=c(a=1,b=2,c=3),dt=0.1)
+
+## An Euler-multinomial with overdispersed transitions:
+
 dt &lt;- 0.1
 dW &lt;- rgammawn(sigma=0.1,dt=dt)
-print(dn &lt;- reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW))
-
+reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.4.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

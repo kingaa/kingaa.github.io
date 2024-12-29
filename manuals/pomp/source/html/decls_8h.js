@@ -35,6 +35,7 @@ var decls_8h =
     [ "do_simulate", "decls_8h.html#aa9d3b94c1a9a99e0db90e251f670e853", null ],
     [ "do_skeleton", "decls_8h.html#af1187e52d896c25c1cdb5dd593dbc291", null ],
     [ "do_vmeasure", "decls_8h.html#aa55c56601a4d47af6f8d162ff1aa9503", null ],
+    [ "E_Euler_Multinom", "decls_8h.html#a666ff456fb565a43aac025137ae5b0f0", null ],
     [ "euler_simulator", "decls_8h.html#a19293a3a394b4e0885714f833bc2a96b", null ],
     [ "eval_skeleton_native", "decls_8h.html#a87734543f5fc40ed123f9f1664e3b7a7", null ],
     [ "eval_skeleton_R", "decls_8h.html#a02d94e3819f568bb29c6d5e77f02a3d8", null ],

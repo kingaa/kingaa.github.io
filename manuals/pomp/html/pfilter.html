@@ -142,7 +142,7 @@ If <code>save.states="no"</code> (the default), information on the latent states
 If <code>save.states="filter"</code>, the state-vector for each filtered particle <code class="reqn">X_{n,j}^F</code> at each time <code class="reqn">n</code> is saved.
 If <code>save.states="prediction"</code>, the state-vector for each prediction particle <code class="reqn">X_{n,j}^P</code> at each time <code class="reqn">n</code> is saved, along with the corresponding weight <code class="reqn">w_{n,j} = f_{Y_n|X_n}(y^*|X_{n, j}^P;\theta)</code>.
 The options &quot;unweighted&quot;, &quot;weighted&quot;, TRUE, and FALSE are deprecated and will issue a warning if used, mapping to the new values for backward compatibility.
-The option &quot;unweighted&quot; and TRUE are synonymous with &quot;filter&quot;;
+The options &quot;unweighted&quot; and TRUE are synonymous with &quot;filter&quot;;
 the option &quot;weighted&quot; is synonymous with &quot;prediction&quot;;
 the option FALSE is synonymous with &quot;no&quot;.
 To retrieve the saved states, apply <code><a href="../../pomp/help/saved_states.html">saved_states</a></code> to the result of the <code>pfilter</code> computation.</p>
@@ -266,7 +266,7 @@ ss &lt;- saved_states(pf,format="d") ## the latent-state portion of each particl
 as(pf,"data.frame") |&gt; head()
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.4.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

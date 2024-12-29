@@ -58,6 +58,13 @@ freeze(
   envir = parent.frame(),
   enclos = if (is.list(envir) || is.pairlist(envir)) parent.frame() else baseenv()
 )
+
+append_data(
+  data,
+  file,
+  overwrite = FALSE,
+  dir = getOption("pomp_archive_dir", getwd())
+)
 </code></pre>
 
 
@@ -68,7 +75,8 @@ freeze(
 <td>
 <p>Name of the archive file in which the result will be stored or retrieved, as appropriate.
 For <code>bake</code>, this will contain a single object and hence be an RDS file (extension &lsquo;rds&rsquo;);
-for <code>stew</code>, this will contain one or more named objects and hence be an RDA file (extension &lsquo;rda&rsquo;).</p>
+for <code>stew</code>, this will contain one or more named objects and hence be an RDA file (extension &lsquo;rda&rsquo;);
+for <code>append_data</code>, this will be a CSV file.</p>
 </td></tr>
 <tr><td><code id="expr">expr</code></td>
 <td>
@@ -126,6 +134,15 @@ Specifies the enclosure, i.e., where <span class="rlang"><b>R</b></span> looks f
 in <code>envir</code>.  This can be <code>NULL</code> (interpreted as the base
 package environment, <code><a href="../../base/help/baseenv.html">baseenv</a>()</code>) or an environment.</p>
 </td></tr>
+<tr><td><code id="data">data</code></td>
+<td>
+<p>data frame</p>
+</td></tr>
+<tr><td><code id="overwrite">overwrite</code></td>
+<td>
+<p>logical; if <code>TRUE</code>, <code>data</code> are written to <code>file</code>, replacing any existing contents.
+If <code>FALSE</code>, the <code>data</code> is appended to the existing contents of <code>file</code>.</p>
+</td></tr>
 </table>
 
 
@@ -175,6 +192,8 @@ This information is returned only if <code>info=TRUE</code>.
 <code>bake</code> stores this in the &ldquo;system.time&rdquo; attribute of the archived <span class="rlang"><b>R</b></span> object;
 <code>stew</code> does so in a hidden variable named <code>.system.time</code>.
 The timing is obtained using <code><a href="../../base/html/system.time.html">system.time</a></code>.
+</p>
+<p><code>append_data</code> returns a data frame containing the new contents of <code>file</code>, invisibly.
 </p>
 
 
@@ -249,7 +268,7 @@ However, there will be no loss of information.
 ## End(Not run)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.4.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

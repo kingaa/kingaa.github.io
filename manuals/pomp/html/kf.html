@@ -120,38 +120,35 @@ given <code class="reqn">A</code>, <code class="reqn">C</code>, <code class="req
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'> # takes too long for R CMD check
+<pre><code class='language-R'>if (require(dplyr)) {
 
-  if (require(dplyr)) {
+  gompertz() -&gt; po
 
-    gompertz() -&gt; po
+  po |&gt;
+    as.data.frame() |&gt;
+    mutate(
+      logY=log(Y)
+    ) |&gt;
+    select(time,logY) |&gt;
+    pomp(times="time",t0=0) |&gt;
+    kalmanFilter(
+      X0=c(logX=0),
+      A=matrix(exp(-0.1),1,1),
+      Q=matrix(0.01,1,1),
+      C=matrix(1,1,1),
+      R=matrix(0.01,1,1)
+    ) -&gt; kf
 
-    po |&gt;
-      as.data.frame() |&gt;
-      mutate(
-        logY=log(Y)
-      ) |&gt;
-      select(time,logY) |&gt;
-      pomp(times="time",t0=0) |&gt;
-      kalmanFilter(
-        X0=c(logX=0),
-        A=matrix(exp(-0.1),1,1),
-        Q=matrix(0.01,1,1),
-        C=matrix(1,1,1),
-        R=matrix(0.01,1,1)
-      ) -&gt; kf
+  po |&gt;
+    pfilter(Np=1000) -&gt; pf
 
-    po |&gt;
-      pfilter(Np=1000) -&gt; pf
+  kf$logLik
+  logLik(pf) + sum(log(obs(pf)))
 
-    kf$logLik
-    logLik(pf) + sum(log(obs(pf)))
-    
-  }
-
+}
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.2.2 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.4.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

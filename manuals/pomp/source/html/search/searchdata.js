@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "dpr",
   7: "defgnortu",
   8: "acefkmnrstuvwxy",
-  9: "c"
+  9: "cfps"
 };
 
 var indexSectionNames =

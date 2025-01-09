@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Eulermultinomial and gamma-whitenoise distributions</title>
+<!DOCTYPE html><html><head><title>R: Eulermultinomial and Gamma-whitenoise distributions</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -16,7 +16,7 @@ function processMathHTML() {
 
 <table style="width: 100%;"><tr><td>eulermultinom {pomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Eulermultinomial and gamma-whitenoise distributions</h2>
+<h2>Eulermultinomial and Gamma-whitenoise distributions</h2>
 
 <h3>Description</h3>
 
@@ -147,6 +147,12 @@ This contains the probabilities of observing each column of <code>x</code> given
 </p>
 <p><code>eeulermultinom</code> returns a <code>length(rate)</code>-vector
 containing the expected number of individuals to have succumbed to the corresponding process.
+With the notation above, if
+</p>
+<pre>
+    dn &lt;- eeulermultinom(size=N,rate=r,dt=dt),
+</pre>
+<p>then the <code class="reqn">k</code>-th element of the vector <code>dn</code> will be <code class="reqn">p_k N</code>.
 </p>
 <p><code>rgammawn</code> returns a vector of length <code>n</code> containing random increments of the integrated Gamma white noise process with intensity <code>sigma</code>.
 </p>
@@ -220,7 +226,7 @@ dW &lt;- rgammawn(sigma=0.1,dt=dt)
 reulermultinom(5,size=100,rate=c(a=1,b=2,c=3),dt=dW)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.0.5.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.1.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

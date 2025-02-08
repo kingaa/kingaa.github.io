@@ -202,16 +202,14 @@ These hooks can be useful for avoiding duplication of code that performs calcula
     rprocess = gillespie(rate.fun = f, v, hmax = Inf)
 </pre>
 <p>to <code>pomp</code>, where <code>f</code> gives the rates of the elementary events.
-Here, <code>f</code> may be an <span class="rlang"><b>R</b></span> function of the form
-</p>
-<pre>
-    f(j, x, t, params, ...)
-</pre>
-<p>When <code>f</code> is called,
-the integer <code>j</code> will be the number of the elementary event (corresponding to the column the matrix <code>v</code>, see below),
-<code>x</code> will be a named numeric vector containing the value of the state process at time <code>t</code> and
-<code>params</code> is a named numeric vector containing parameters.
+Here, <code>f</code> may be furnished as an <span class="rlang"><b>R</b></span> function or as a C snippet.
+If <code>f</code> is an <span class="rlang"><b>R</b></span> function, its arguments should come from the state variables, parameters, covariates, and time.
+It must also have the arguments &lsquo;<code>j</code>&rsquo; and &lsquo;<code>...</code>&rsquo;.
+When <code>f</code> is called,
+the integer <code>j</code> will indicate the elementary event (corresponding to the column the matrix <code>v</code>, see below).
 <code>f</code> should return a single numerical value, representing the rate of that elementary event at that point in state space and time.
+If <code>f</code> is supplied as a C snippet, the parameters, latent state variables, covariates, and time will be visible in the context wherein the snippet is executed, as will the integer &lsquo;<code>j</code>&rsquo;.
+The purpose of the C snippet is to fill the double-precision variable &lsquo;<code>rate</code>&rsquo; with the corresponding event rate.
 </p>
 <p>Here, the stoichiometric matrix <code>v</code> specifies the continuous-time Markov process in terms of its elementary events.
 It should have dimensions <code>nvar</code> x <code>nevent</code>, where <code>nvar</code> is the number of state variables and <code>nevent</code> is the number of elementary events.
@@ -220,10 +218,7 @@ it will usually comprise the values 1, -1, and 0 according to whether a state va
 The rows of <code>v</code> should have names corresponding to the state variables.
 If any of the row names of <code>v</code> cannot be found among the state variables or if any row names of <code>v</code> are duplicated, an error will occur.
 </p>
-<p>It is also possible to provide a C snippet via the <code>rate.fun</code> argument to <code>gillespie</code>.
-Such a snippet should assign the correct value to a <code>rate</code> variable depending on the value of <code>j</code>.
-The same variables will be available as for the C code provided to <code>gillespie_hl</code>.
-This lower-level interface may be preferable if it is easier to write code that calculates the correct rate based on <code>j</code> rather than to write a snippet for each possible value of <code>j</code>.
+<p>This lower-level interface may be preferable if it is easier to write code that calculates the correct rate based on <code>j</code> rather than to write a snippet for each possible value of <code>j</code>.
 For example, if the number of possible values of <code>j</code> is large and the rates vary according to a few simple rules, the lower-level interface may provide the easier way of specifying the model.
 </p>
 <p>When the process is non-autonomous (i.e., the event rates depend explicitly on time), it can be useful to set <code>hmax</code> to the maximum step that will be taken.
@@ -273,7 +268,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.1.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.1.0.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

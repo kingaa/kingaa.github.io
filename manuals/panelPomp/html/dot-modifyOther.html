@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title>R: Set shared parameters of a panelPomp object</title>
+<!DOCTYPE html><html><head><title>R: Internal function for modifying pparamArray in Mif2</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
@@ -14,55 +14,42 @@ function processMathHTML() {
 <link rel="stylesheet" type="text/css" href="R.css" />
 </head><body><div class="container"><main>
 
-<table style="width: 100%;"><tr><td>shared&lt;- {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+<table style="width: 100%;"><tr><td>.modifyOther {panelPomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
 
-<h2>Set shared parameters of a panelPomp object</h2>
+<h2>Internal function for modifying pparamArray in Mif2</h2>
 
 <h3>Description</h3>
 
-<p>This function is used to set the shared parameters of a panel pomp object.
+<p>Internal function for modifying pparamArray in Mif2
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>shared(object) &lt;- value
+<pre><code class='language-R'>.modifyOther(x, spnames, indices, unit)
 </code></pre>
 
 
 <h3>Arguments</h3>
 
 <table>
-<tr><td><code id="object">object</code></td>
+<tr><td><code id="x">x</code></td>
 <td>
-<p>an object that contains shared parameters.</p>
+<p>pparamArray in mif2 internal</p>
 </td></tr>
-<tr><td><code id="value">value</code></td>
+<tr><td><code id="spnames">spnames</code></td>
 <td>
-<p>a named numeric vector containing the desired values of the
-shared parameter vector.</p>
+<p>names of parameters to update</p>
+</td></tr>
+<tr><td><code id="indices">indices</code></td>
+<td>
+<p>indices that are the output of a mfi2 call to pomp</p>
+</td></tr>
+<tr><td><code id="unit">unit</code></td>
+<td>
+<p>unit in the unit loop</p>
 </td></tr>
 </table>
-
-
-<h3>Author(s)</h3>
-
-<p>Jesse Wheeler
-</p>
-
-
-<h3>See Also</h3>
-
-<p><a href="../../panelPomp/help/panelPomp_methods.html">panelPomp_methods</a>
-</p>
-
-
-<h3>Examples</h3>
-
-<pre><code class='language-R'>prw &lt;- panelRandomWalk()
-# set parameters in list form
-shared(prw) &lt;- c("sigmaX" = 1, "sigmaY" = 2)
-</code></pre>
 
 <hr /><div style="text-align: center;">[Package <em>panelPomp</em> version 1.6.0.0 <a href="00Index.html">Index</a>]</div></main>
 

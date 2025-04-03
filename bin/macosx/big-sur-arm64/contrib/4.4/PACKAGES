@@ -14,6 +14,14 @@ Suggests: ape
 License: GPL-3
 MD5sum: 138251a138aab76b6e8befb0180d39b0
 
+Package: panelPomp
+Version: 1.6.0.0
+Depends: R(>= 4.1.0), pomp(>= 4.5.2)
+Imports: methods
+Suggests: knitr, rmarkdown, bookdown
+License: GPL-3
+MD5sum: e1642a237c130e4993dd2e69b01b0345
+
 Package: phylopomp
 Version: 0.14.8.0
 Depends: R(>= 4.3)

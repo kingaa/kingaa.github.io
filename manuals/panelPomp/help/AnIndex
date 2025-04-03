@@ -1,4 +1,6 @@
 panelPomp-package	panelPomp-package
+.modifyOther	dot-modifyOther
+.modifySelf	dot-modifySelf
 as	as
 coef,panelPomp-method	panelPomp_methods
 coef<-,panelPomp-method	panelPomp_methods
@@ -53,10 +55,7 @@ traces,mif2d.ppomp-method	mif2
 twentycities	twentycities
 uk_measles	uk_measles
 unitLogLik	unitLogLik
-unitlogLik	unitlogLik-deprecated
 unitLogLik,pfilterd.ppomp-method	pfilter
-unitlogLik,pfilterd.ppomp-method	unitlogLik-pfilterd.ppomp-method
-unitlogLik-deprecated	unitlogLik-deprecated
 unit_objects	unit_objects
 unit_objects,panelPomp-method	panelPomp_methods
 window,panelPomp-method	panelPomp_methods

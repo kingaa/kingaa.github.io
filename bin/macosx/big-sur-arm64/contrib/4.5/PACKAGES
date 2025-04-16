@@ -1,0 +1,8 @@
+Package: pomp
+Version: 6.2.0.0
+Depends: R(>= 4.1.0)
+Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
+        data.table
+Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
+License: GPL-3
+MD5sum: af82cf49b771d67a880d45f43836a886

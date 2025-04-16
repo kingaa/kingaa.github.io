@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('skeleton_8c_source.html',''); initResi
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">for</span> (v = 0; v &lt; ncov; v++, c++, var=CDR(var)) *(REAL(CAR(var))) = *c;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  PROTECT(ob = LCONS(<a class="code hl_variable" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>,<a class="code hl_variable" href="trajectory_8c.html#a94fe754831aa7e8eeb4053fa11b537cd">args</a>));</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  PROTECT(ans = eval(ob,CLOENV(<a class="code hl_variable" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>)));</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  PROTECT(ans = eval(ob,R_ClosureEnv(<a class="code hl_variable" href="trajectory_8c.html#ae1150d665d648766c28508b57a8cb644">fn</a>)));</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  UNPROTECT(2);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordflow">return</span> ans;</div>

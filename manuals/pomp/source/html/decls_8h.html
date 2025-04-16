@@ -1771,7 +1771,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   13</span> </div>
 <div class="line"><span class="lineno">   14</span>  <span class="keywordflow">for</span> (i = 0; i &lt; nprobe; i++) {</div>
 <div class="line"><span class="lineno">   15</span>    SET_ELEMENT(vals,i,eval(PROTECT(lang2(VECTOR_ELT(probes,i),data)),</div>
-<div class="line"><span class="lineno">   16</span>                            CLOENV(VECTOR_ELT(probes,i))));</div>
+<div class="line"><span class="lineno">   16</span>                            R_ClosureEnv(VECTOR_ELT(probes,i))));</div>
 <div class="line"><span class="lineno">   17</span>    <span class="keywordflow">if</span> (!IS_NUMERIC(VECTOR_ELT(vals,i))) {</div>
 <div class="line"><span class="lineno">   18</span>      <a class="code hl_define" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;probe %d returns a non-numeric result&quot;</span>,i+1);</div>
 <div class="line"><span class="lineno">   19</span>    }</div>
@@ -1910,7 +1910,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   82</span> </div>
 <div class="line"><span class="lineno">   83</span>      <span class="comment">// evaluate the probe on the simulated data</span></div>
 <div class="line"><span class="lineno">   84</span>      PROTECT(val = eval(PROTECT(lang2(VECTOR_ELT(probes,p),x)),</div>
-<div class="line"><span class="lineno">   85</span>                         CLOENV(VECTOR_ELT(probes,p))));</div>
+<div class="line"><span class="lineno">   85</span>                         R_ClosureEnv(VECTOR_ELT(probes,p))));</div>
 <div class="line"><span class="lineno">   86</span>      <span class="keywordflow">if</span> (!IS_NUMERIC(val)) {</div>
 <div class="line"><span class="lineno">   87</span>        <a class="code hl_define" href="pomp_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;probe %d returns a non-numeric result.&quot;</span>,p+1);</div>
 <div class="line"><span class="lineno">   88</span>      }</div>

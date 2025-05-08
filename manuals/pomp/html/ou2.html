@@ -38,14 +38,15 @@ function processMathHTML() {
   x1_0 = -3,
   x2_0 = 4,
   times = 1:100,
-  t0 = 0
+  t0 = 0,
+  seed = 787832394L
 )
 </code></pre>
 
 
 <h3>Arguments</h3>
 
-<table>
+<table role = "presentation">
 <tr><td><code id="alpha_1">alpha_1</code>, <code id="alpha_2">alpha_2</code>, <code id="alpha_3">alpha_3</code>, <code id="alpha_4">alpha_4</code></td>
 <td>
 <p>entries of the <code class="reqn">\alpha</code> matrix, in column-major order.
@@ -71,6 +72,10 @@ That is, <code>alpha_2</code> is in the lower-left position.</p>
 <tr><td><code id="t0">t0</code></td>
 <td>
 <p>the zero time</p>
+</td></tr>
+<tr><td><code id="seed">seed</code></td>
+<td>
+<p>seed of the random number generator</p>
 </td></tr>
 </table>
 
@@ -123,7 +128,7 @@ pf &lt;- pfilter(po,Np=1000)
 logLik(pf)
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.2.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.2.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

@@ -33,14 +33,15 @@ function processMathHTML() {
   tau = 0.1,
   X_0 = 1,
   times = 1:100,
-  t0 = 0
+  t0 = 0,
+  seed = 299438676L
 )
 </code></pre>
 
 
 <h3>Arguments</h3>
 
-<table>
+<table role = "presentation">
 <tr><td><code id="K">K</code></td>
 <td>
 <p>carrying capacity</p>
@@ -68,6 +69,10 @@ function processMathHTML() {
 <tr><td><code id="t0">t0</code></td>
 <td>
 <p>zero time</p>
+</td></tr>
+<tr><td><code id="seed">seed</code></td>
+<td>
+<p>seed of the random number generator</p>
 </td></tr>
 </table>
 
@@ -124,7 +129,7 @@ plot(gompertz(K=2,r=0.01))
 
 </code></pre>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.2.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.2.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

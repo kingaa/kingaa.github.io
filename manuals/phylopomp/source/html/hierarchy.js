@@ -3,7 +3,6 @@ var hierarchy =
     [ "ball_order", "structball__order.html", null ],
     [ "ball_t", "classball__t.html", null ],
     [ "inventory_t< NDEME >", "classinventory__t.html", null ],
-    [ "inventory_t< ndeme >", "classinventory__t.html", null ],
     [ "lbdp_parameters_t", "structlbdp__parameters__t.html", null ],
     [ "lbdp_state_t", "structlbdp__state__t.html", null ],
     [ "std::list", null, [
@@ -17,6 +16,30 @@ var hierarchy =
       [ "master_t< POPN, NDEME >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT, NDEME >", "classpopul__proc__t.html", null ],
+    [ "popul_proc_t< lbdp_state_t, lbdp_parameters_t, 3 >", "classpopul__proc__t.html", [
+      [ "master_t< lbdp_proc_t, 1 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< moran_state_t, moran_parameters_t, 2 >", "classpopul__proc__t.html", [
+      [ "master_t< moran_proc_t, 1 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< s2i2r2_state_t, s2i2r2_parameters_t, 19 >", "classpopul__proc__t.html", [
+      [ "master_t< s2i2r2_proc_t, 3 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< seir_state_t, seir_parameters_t, 5 >", "classpopul__proc__t.html", [
+      [ "master_t< seir_proc_t, 2 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< si2r_state_t, si2r_parameters_t, 9 >", "classpopul__proc__t.html", [
+      [ "master_t< si2r_proc_t, 2 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< siir_state_t, siir_parameters_t, 9 >", "classpopul__proc__t.html", [
+      [ "master_t< siir_proc_t, 2 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< sir_state_t, sir_parameters_t, 4 >", "classpopul__proc__t.html", [
+      [ "master_t< sir_proc_t, 1 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< twospecies_state_t, twospecies_parameters_t, 22 >", "classpopul__proc__t.html", [
+      [ "master_t< twospecies_proc_t, 3 >", "classmaster__t.html", null ]
+    ] ],
     [ "s2i2r2_parameters_t", "structs2i2r2__parameters__t.html", null ],
     [ "s2i2r2_state_t", "structs2i2r2__state__t.html", null ],
     [ "seir_parameters_t", "structseir__parameters__t.html", null ],

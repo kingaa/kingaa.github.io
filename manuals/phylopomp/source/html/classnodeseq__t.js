@@ -4,7 +4,7 @@ var classnodeseq__t =
     [ "add", "classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a", null ],
     [ "bytesize", "classnodeseq__t.html#a59269f90e8ac44b94f7610aaea662d0e", null ],
     [ "clean", "classnodeseq__t.html#a165644e4095236a169a47db1a915141f", null ],
-    [ "colored", "classnodeseq__t.html#a851dfe9d4bec36c88864a40e896cd76f", null ],
+    [ "colored", "classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93", null ],
     [ "comb", "classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb", null ],
     [ "compare", "classnodeseq__t.html#a642a9a6799ed5ee49e620a95a3f884b7", null ],
     [ "dawn", "classnodeseq__t.html#a103886080efad3f60cbbd4bc36fb82d8", null ],
@@ -15,8 +15,8 @@ var classnodeseq__t =
     [ "length", "classnodeseq__t.html#a6e3d15ce3489935b81089a55907f9f22", null ],
     [ "newick", "classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da", null ],
     [ "ntime", "classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3", null ],
-    [ "operator+=", "classnodeseq__t.html#a3be4cfd8d7eb4e47f03b64aeedcfe0e4", null ],
-    [ "position", "classnodeseq__t.html#a24c9c173d94073cbac3f078af38afcc5", null ],
+    [ "operator+=", "classnodeseq__t.html#a4c3b0c6475cbabc58cfbfc047513b38e", null ],
+    [ "position", "classnodeseq__t.html#a990ffa0ecf7f2d8f6bd66004e42c0b58", null ],
     [ "repair_owners", "classnodeseq__t.html#a5f978d0d983fff4ffd5fc2ecfab3c289", null ],
     [ "sort", "classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14", null ],
     [ "structure", "classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253", null ],
@@ -24,6 +24,6 @@ var classnodeseq__t =
     [ "trace_lineage", "classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27", null ],
     [ "trace_lineages", "classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce", null ],
     [ "yaml", "classnodeseq__t.html#a1e165e9bd12ca6080c0e5aa2cab0625d", null ],
-    [ "operator>>", "classnodeseq__t.html#aeeb424f6a8d8c31c309725edd406dc2c", null ],
-    [ "operator>>", "classnodeseq__t.html#a627d5d245ccc85583bde2a1b538d505e", null ]
+    [ "operator>>", "classnodeseq__t.html#a378e6e3ebf0a59a3f041227f22eb8ed5", null ],
+    [ "operator>>", "classnodeseq__t.html#a0417f3800a563909ea2bb5dad2a5a792", null ]
 ];

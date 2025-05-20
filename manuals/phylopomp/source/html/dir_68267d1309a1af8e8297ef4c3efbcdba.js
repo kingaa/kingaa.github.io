@@ -9,14 +9,10 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "init.c", "init_8c.html", "init_8c" ],
     [ "init.h", "init_8h.html", "init_8h" ],
     [ "internal.h", "internal_8h.html", "internal_8h" ],
-    [ "inventory.h", "inventory_8h.html", [
-      [ "inventory_t", "classinventory__t.html", "classinventory__t" ]
-    ] ],
+    [ "inventory.h", "inventory_8h.html", "inventory_8h" ],
     [ "lbdp.cc", "lbdp_8cc.html", "lbdp_8cc" ],
     [ "lbdp_pomp.c", "lbdp__pomp_8c.html", "lbdp__pomp_8c" ],
-    [ "master.h", "master_8h.html", [
-      [ "master_t", "classmaster__t.html", "classmaster__t" ]
-    ] ],
+    [ "master.h", "master_8h.html", "master_8h" ],
     [ "moran.cc", "moran_8cc.html", "moran_8cc" ],
     [ "node.h", "node_8h.html", "node_8h" ],
     [ "nodeseq.h", "nodeseq_8h.html", "nodeseq_8h" ],

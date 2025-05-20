@@ -1,6 +1,34 @@
 <map id="genealogy_t::newick" name="genealogy_t::newick">
-<area shape="rect" id="node1" title="put genealogy at current time into Newick format." alt="" coords="5,31,161,57"/>
-<area shape="rect" id="node2" href="$classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da" title="put genealogy at time t into Newick format." alt="" coords="209,5,352,32"/>
-<area shape="rect" id="node4" href="$classgenealogy__t.html#a74cf08072d7a483c2e9551b2046d6a45" title="view/set current time." alt="" coords="211,56,351,83"/>
-<area shape="rect" id="node3" href="$classnodeseq__t.html#a103886080efad3f60cbbd4bc36fb82d8" title="Earliest time in the sequence." alt="" coords="400,5,532,32"/>
+<area shape="rect" id="Node000001" title="put genealogy at current time into Newick format." alt="" coords="5,80,161,105"/>
+<area shape="rect" id="Node000002" href="$classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da" title="put genealogy at time t into Newick format." alt="" coords="209,55,352,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,80,196,76,196,81,162,85"/>
+<area shape="rect" id="Node000015" href="$classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="211,104,351,129"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="162,100,197,104,197,109,161,105"/>
+<area shape="rect" id="Node000003" href="$classnodeseq__t.html#a103886080efad3f60cbbd4bc36fb82d8" title="Earliest time in the sequence." alt="" coords="400,5,532,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,52,403,32,405,37,330,57"/>
+<area shape="rect" id="Node000004" href="$classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="407,55,525,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="352,65,393,65,393,70,352,70"/>
+<area shape="rect" id="Node000006" href="$classnode__t.html#a8fbcbc87b57e6d224e709777caf89609" title="Newick format." alt="" coords="406,179,526,204"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="329,78,353,89,405,127,446,167,442,170,402,131,351,94,326,82"/>
+<area shape="rect" id="Node000005" href="$classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="768,53,911,79"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="525,52,580,45,647,41,715,45,754,49,754,54,714,50,647,46,580,50,526,58"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="475,177,516,132,546,108,579,89,622,74,668,65,754,59,754,64,668,70,624,79,581,94,549,112,520,136,479,180"/>
+<area shape="poly" id="edge15_Node000006_Node000006" title=" " alt="" coords="436,180,430,170,433,161,445,154,466,152,491,156,501,164,498,168,489,160,466,157,447,159,437,164,435,170,440,177"/>
+<area shape="rect" id="Node000007" href="$classball__t.html#af54ab028113130c4760856b06a31ad8b" title="a child is the owner of a green ball" alt="" coords="599,104,696,129"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="493,176,579,138,596,132,598,137,581,143,495,181"/>
+<area shape="rect" id="Node000008" href="$classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="592,153,703,179"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="526,180,578,173,579,178,527,186"/>
+<area shape="rect" id="Node000009" href="$classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="587,203,707,228"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="527,197,574,203,573,208,526,202"/>
+<area shape="rect" id="Node000010" href="$classnode__t.html#af3d818f04a9a0db70752922a54e984be" title="number of descendants" alt="" coords="580,252,715,277"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="497,202,581,237,600,244,598,249,579,242,495,207"/>
+<area shape="rect" id="Node000011" href="$classball__t.html#a6ea0514941c8f2a89306e60065562e83" title="element of a newick representation" alt="" coords="591,301,703,327"/>
+<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="481,203,523,244,581,288,592,294,590,298,579,292,520,248,477,206"/>
+<area shape="rect" id="Node000014" href="$classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="588,351,707,376"/>
+<area shape="poly" id="edge16_Node000006_Node000014" title=" " alt="" coords="476,203,515,267,546,304,582,337,589,342,586,347,578,341,542,308,511,270,472,206"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="692,250,713,237,750,202,781,162,824,90,829,92,786,165,754,206,716,241,694,254"/>
+<area shape="rect" id="Node000012" href="$classball__t.html#a3545dd485a4dfd8364552bf3d360555e" title="machine&#45;readable color symbols" alt="" coords="763,301,916,327"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="703,311,749,311,749,317,703,317"/>
+<area shape="rect" id="Node000013" href="$classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="964,301,1041,327"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="916,311,950,311,950,317,916,317"/>
 </map>

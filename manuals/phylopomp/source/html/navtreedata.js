@@ -35,7 +35,7 @@ var NAVTREE =
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -56,9 +56,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classpopul__proc__t.html#a9253a17f76fa0628b4c8cd5f78298cf3",
-"seirs__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29"
+"classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9",
+"seirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';

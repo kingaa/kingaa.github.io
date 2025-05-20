@@ -1,22 +1,36 @@
 <map id="genealogy_t::unique" name="genealogy_t::unique">
-<area shape="rect" id="node1" title="get the next unique name" alt="" coords="845,224,1000,251"/>
-<area shape="rect" id="node2" href="$classgenealogy__t.html#a144fd502d3af3334ee21b08de6961a3d" title="birth of second or subsequent sibling into deme d" alt="" coords="635,123,775,149"/>
-<area shape="rect" id="node3" href="$classgenealogy__t.html#aa115d7b8b51148da35c947176e7dc454" title=" " alt="" coords="612,173,797,200"/>
-<area shape="rect" id="node16" href="$classgenealogy__t.html#a4982bfdaad4e696569cca349f3bc0459" title="Parse a Newick string and create the indicated genealogy." alt="" coords="410,275,557,301"/>
-<area shape="rect" id="node19" href="$classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="619,275,790,301"/>
-<area shape="rect" id="node20" href="$classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="615,325,794,352"/>
-<area shape="rect" id="node4" href="$classgenealogy__t.html#a0640d5e90a14c0f6cc84e7514bd1a804" title="birth into deme d" alt="" coords="413,123,553,149"/>
-<area shape="rect" id="node7" href="$classgenealogy__t.html#abac90b30ba2947c811f25cc5e38287e3" title="graft a new lineage into deme d" alt="" coords="413,173,554,200"/>
-<area shape="rect" id="node10" href="$classgenealogy__t.html#a98f2a41cf3c11d347d550faded2098f6" title="movement into deme d" alt="" coords="403,224,564,251"/>
-<area shape="rect" id="node12" href="$classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="404,5,563,32"/>
-<area shape="rect" id="node14" href="$classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="404,57,563,98"/>
-<area shape="rect" id="node5" href="$classmaster__t.html#a0e3609f1ba9e693cad576ddbffef068d" title="n births into deme j with parent in deme i" alt="" coords="205,119,324,145"/>
-<area shape="rect" id="node6" href="$classmaster__t.html#a46d190c2e3964b3ba18560e96c1b8ca0" title="makes a jump" alt="" coords="5,64,127,91"/>
-<area shape="rect" id="node8" href="$classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556" title="new root in deme i" alt="" coords="205,173,324,200"/>
-<area shape="rect" id="node9" href="$classmaster__t.html#a4a4fe8b3d947b2f59ca7085fee9f6574" title="initialize the state" alt="" coords="9,173,123,200"/>
-<area shape="rect" id="node11" href="$classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4" title="migration from deme i to deme j" alt="" coords="195,224,334,251"/>
-<area shape="rect" id="node13" href="$classmaster__t.html#a3263012f4a47a8cef2a0e190e62641b4" title="sample in deme i" alt="" coords="197,9,333,36"/>
-<area shape="rect" id="node15" href="$classmaster__t.html#ad70e53025f5be1906ac41e189706267b" title="sample_death in deme i" alt="" coords="175,64,355,91"/>
-<area shape="rect" id="node17" href="$init_8c.html#a888f6a962714e136419f7a5c0d6801bb" title=" " alt="" coords="209,275,320,301"/>
-<area shape="rect" id="node18" href="$classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="178,325,351,352"/>
+<area shape="rect" id="Node000001" title="get the next unique name" alt="" coords="669,260,824,285"/>
+<area shape="rect" id="Node000002" href="$classgenealogy__t.html#a81973e0d258e38573fb227f3d1bb1dbb" title="birth of second or subsequent sibling into deme d" alt="" coords="459,129,599,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="723,252,678,209,650,187,620,168,593,157,595,152,623,164,653,183,682,205,727,248"/>
+<area shape="rect" id="Node000003" href="$classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="436,179,621,204"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="698,258,563,207,565,202,700,253"/>
+<area shape="rect" id="Node000012" href="$classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="234,317,381,343"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="656,279,550,286,436,301,352,320,351,315,436,295,550,281,655,273"/>
+<area shape="rect" id="Node000014" href="$classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="443,311,614,336"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="679,291,585,313,583,308,677,286"/>
+<area shape="rect" id="Node000015" href="$classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="439,360,618,385"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="719,295,675,324,622,351,590,362,588,357,620,346,672,319,716,291"/>
+<area shape="rect" id="Node000004" href="$classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="237,5,377,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="442,174,434,168,421,152,414,136,409,105,405,73,398,59,386,44,370,33,373,28,390,40,403,56,410,72,414,104,419,135,425,149,438,164,445,170"/>
+<area shape="rect" id="Node000005" href="$classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="232,55,383,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="446,175,434,168,417,149,409,130,402,111,386,93,366,82,369,78,390,89,407,108,414,128,422,146,438,164,449,171"/>
+<area shape="rect" id="Node000008" href="$classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447" title="graft a new lineage into deme d" alt="" coords="237,104,377,129"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="460,177,435,168,387,143,355,132,357,127,389,138,437,164,462,172"/>
+<area shape="rect" id="Node000009" href="$classgenealogy__t.html#a516dfee5af2be8f95a578928707816fb" title="movement into deme d" alt="" coords="227,153,388,179"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="422,182,388,178,389,173,423,177"/>
+<area shape="rect" id="Node000010" href="$classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="228,203,387,228"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="423,205,387,209,387,204,422,200"/>
+<area shape="rect" id="Node000011" href="$classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="228,253,387,293"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="482,211,364,255,362,250,480,206"/>
+<area shape="rect" id="Node000006" href="$bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="61,55,123,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="218,70,124,70,124,65,218,65"/>
+<area shape="rect" id="Node000007" href="$parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,185,147,211"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="242,87,228,94,191,116,158,142,108,187,104,183,154,138,188,112,225,89,240,82"/>
+<area shape="poly" id="edge12_Node000012_Node000007" title=" " alt="" coords="243,315,225,307,189,284,155,258,104,213,108,209,158,254,192,280,228,302,245,310"/>
+<area shape="rect" id="Node000013" href="$classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,317,179,343"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="220,342,179,342,179,336,220,336"/>
+<area shape="poly" id="edge14_Node000013_Node000012" title=" " alt="" coords="193,318,233,319,233,324,192,324"/>
+<area shape="poly" id="edge16_Node000014_Node000012" title=" " alt="" coords="429,329,381,330,381,325,429,324"/>
+<area shape="poly" id="edge18_Node000015_Node000012" title=" " alt="" coords="448,360,373,345,374,340,449,355"/>
+<area shape="poly" id="edge19_Node000015_Node000013" title=" " alt="" coords="425,373,329,368,226,358,151,345,152,340,227,353,329,362,426,367"/>
 </map>

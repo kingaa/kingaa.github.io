@@ -7,9 +7,10 @@ var searchData=
   ['t_5fx_5f0_4',['T_X_0',['../gompertz_8c.html#ae51e7437f94eebfb3a19f094cdc7fe0d',1,'gompertz.c']]],
   ['table_5flookup_5',['table_lookup',['../decls_8h.html#ade6439566617e54cb9f4507f7ad2824f',1,'table_lookup(lookup_table_t *, double, double *):&#160;lookup_table.c'],['../lookup__table_8c.html#a036b9fb7cfc62e3984889f95024971a0',1,'table_lookup(lookup_table_t *tab, double x, double *y):&#160;lookup_table.c']]],
   ['table_5flookup_5ft_6',['table_lookup_t',['../pomp__defines_8h.html#a7ff013e34421ef0e9973f1d0b051ca64',1,'pomp_defines.h']]],
-  ['tau_7',['tau',['../gompertz_8c.html#aa7082577997805000f8e8b56846642cd',1,'tau:&#160;gompertz.c'],['../gompertz_8c.html#a3d8c9c145887af5174ba4cc6789862ad',1,'TAU:&#160;gompertz.c'],['../ou2_8c.html#a3d8c9c145887af5174ba4cc6789862ad',1,'TAU:&#160;ou2.c']]],
-  ['to_8',['to',['../partrans_8c.html#ae9ae980041e438eed7a3af43ce4e9f6baf6d5fba6cbb9fe52e4176ef9fe5b1f54',1,'partrans.c']]],
-  ['to_5flog_5fbarycentric_9',['to_log_barycentric',['../pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92',1,'pomp.h']]],
-  ['trajectory_2ec_10',['trajectory.c',['../trajectory_8c.html',1,'']]],
-  ['transformations_2ec_11',['transformations.c',['../transformations_8c.html',1,'']]]
+  ['tau_7',['TAU',['../gompertz_8c.html#a3d8c9c145887af5174ba4cc6789862ad',1,'TAU:&#160;gompertz.c'],['../ou2_8c.html#a3d8c9c145887af5174ba4cc6789862ad',1,'TAU:&#160;ou2.c']]],
+  ['tau_8',['tau',['../gompertz_8c.html#aa7082577997805000f8e8b56846642cd',1,'gompertz.c']]],
+  ['to_9',['to',['../partrans_8c.html#ae9ae980041e438eed7a3af43ce4e9f6baf6d5fba6cbb9fe52e4176ef9fe5b1f54',1,'partrans.c']]],
+  ['to_5flog_5fbarycentric_10',['to_log_barycentric',['../pomp_8h.html#a6a5fa3ea6a4ce20374a9d9d761f04c92',1,'pomp.h']]],
+  ['trajectory_2ec_11',['trajectory.c',['../trajectory_8c.html',1,'']]],
+  ['transformations_2ec_12',['transformations.c',['../transformations_8c.html',1,'']]]
 ];

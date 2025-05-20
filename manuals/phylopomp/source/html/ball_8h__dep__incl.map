@@ -1,20 +1,41 @@
 <map id="src/ball.h" name="src/ball.h">
-<area shape="rect" id="node1" title=" " alt="" coords="363,5,445,32"/>
-<area shape="rect" id="node2" href="$inventory_8h.html" title=" " alt="" coords="283,229,400,256"/>
-<area shape="rect" id="node16" href="$node_8h.html" title=" " alt="" coords="427,155,517,181"/>
-<area shape="rect" id="node18" href="$pocket_8h.html" title=" " alt="" coords="354,80,454,107"/>
-<area shape="rect" id="node3" href="$genealogy_8h.html" title=" " alt="" coords="349,304,472,331"/>
-<area shape="rect" id="node4" href="$bare_8cc.html" title=" " alt="" coords="174,379,266,405"/>
-<area shape="rect" id="node5" href="$getinfo_8cc.html" title=" " alt="" coords="291,379,400,405"/>
-<area shape="rect" id="node6" href="$master_8h.html" title=" " alt="" coords="425,379,527,405"/>
-<area shape="rect" id="node15" href="$parse_8cc.html" title=" " alt="" coords="552,379,651,405"/>
-<area shape="rect" id="node7" href="$lbdp_8cc.html" title=" " alt="" coords="5,453,96,480"/>
-<area shape="rect" id="node8" href="$moran_8cc.html" title=" " alt="" coords="121,453,226,480"/>
-<area shape="rect" id="node9" href="$s2i2r2_8cc.html" title=" " alt="" coords="250,453,353,480"/>
-<area shape="rect" id="node10" href="$seir_8cc.html" title=" " alt="" coords="377,453,463,480"/>
-<area shape="rect" id="node11" href="$si2r_8cc.html" title=" " alt="" coords="487,453,574,480"/>
-<area shape="rect" id="node12" href="$siir_8cc.html" title=" " alt="" coords="599,453,681,480"/>
-<area shape="rect" id="node13" href="$sir_8cc.html" title=" " alt="" coords="706,453,785,480"/>
-<area shape="rect" id="node14" href="$twospecies_8cc.html" title=" " alt="" coords="809,453,945,480"/>
-<area shape="rect" id="node17" href="$nodeseq_8h.html" title=" " alt="" coords="424,229,536,256"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="363,5,445,31"/>
+<area shape="rect" id="Node000002" href="$inventory_8h.html" title=" " alt="" coords="283,225,400,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="376,41,358,58,344,80,333,119,332,160,341,225,336,225,327,161,328,119,339,78,354,55,373,37"/>
+<area shape="rect" id="Node000016" href="$node_8h.html" title=" " alt="" coords="427,152,517,177"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="434,37,453,55,468,77,474,97,477,118,476,152,471,152,472,118,469,98,463,80,449,59,430,41"/>
+<area shape="rect" id="Node000018" href="$pocket_8h.html" title=" " alt="" coords="354,79,454,104"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="407,44,407,79,401,79,401,44"/>
+<area shape="rect" id="Node000003" href="$genealogy_8h.html" title=" " alt="" coords="349,299,472,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,259,401,297,398,300,360,263"/>
+<area shape="rect" id="Node000004" href="$bare_8cc.html" title=" " alt="" coords="174,372,266,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="368,331,252,374,250,369,366,326"/>
+<area shape="rect" id="Node000005" href="$getinfo_8cc.html" title=" " alt="" coords="291,372,400,397"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="393,336,358,374,354,370,389,333"/>
+<area shape="rect" id="Node000006" href="$master_8h.html" title=" " alt="" coords="425,372,527,397"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="433,333,467,370,463,374,429,336"/>
+<area shape="rect" id="Node000015" href="$parse_8cc.html" title=" " alt="" coords="552,372,651,397"/>
+<area shape="poly" id="edge14_Node000003_Node000015" title=" " alt="" coords="455,326,571,369,569,374,453,331"/>
+<area shape="rect" id="Node000007" href="$lbdp_8cc.html" title=" " alt="" coords="5,445,96,471"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="412,400,108,448,97,450,96,445,108,443,411,395"/>
+<area shape="rect" id="Node000008" href="$moran_8cc.html" title=" " alt="" coords="121,445,226,471"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="415,403,223,448,222,443,414,398"/>
+<area shape="rect" id="Node000009" href="$s2i2r2_8cc.html" title=" " alt="" coords="250,445,353,471"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="436,405,331,448,329,443,434,400"/>
+<area shape="rect" id="Node000010" href="$seir_8cc.html" title=" " alt="" coords="377,445,463,471"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="460,410,431,447,427,444,456,407"/>
+<area shape="rect" id="Node000011" href="$si2r_8cc.html" title=" " alt="" coords="487,445,574,471"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="495,407,524,444,520,447,491,410"/>
+<area shape="rect" id="Node000012" href="$siir_8cc.html" title=" " alt="" coords="599,445,681,471"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="516,400,614,443,612,448,514,405"/>
+<area shape="rect" id="Node000013" href="$sir_8cc.html" title=" " alt="" coords="706,445,785,471"/>
+<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="533,398,706,444,705,449,532,403"/>
+<area shape="rect" id="Node000014" href="$twospecies_8cc.html" title=" " alt="" coords="809,445,945,471"/>
+<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="541,395,813,443,812,448,540,400"/>
+<area shape="poly" id="edge16_Node000016_Node000002" title=" " alt="" coords="440,186,364,227,361,223,437,182"/>
+<area shape="rect" id="Node000017" href="$nodeseq_8h.html" title=" " alt="" coords="424,225,536,251"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="477,191,481,225,476,226,472,191"/>
+<area shape="poly" id="edge18_Node000017_Node000003" title=" " alt="" coords="461,263,424,300,420,297,457,259"/>
+<area shape="poly" id="edge20_Node000018_Node000002" title=" " alt="" coords="396,118,349,226,344,224,391,116"/>
+<area shape="poly" id="edge21_Node000018_Node000016" title=" " alt="" coords="426,112,463,150,459,154,423,116"/>
 </map>

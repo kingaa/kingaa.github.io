@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['d_5fbetabinom_0',['d_betabinom',['../distributions_8c.html#a631dafe45b2fd04f5fb99e59c1c4f1cf',1,'D_BetaBinom(SEXP x, SEXP size, SEXP prob, SEXP theta, SEXP log):&#160;distributions.c'],['../decls_8h.html#a7eb19c7180d18dc9f384cea477ee1a83',1,'D_BetaBinom(SEXP, SEXP, SEXP, SEXP, SEXP):&#160;distributions.c']]],
-  ['d_5feuler_5fmultinom_1',['d_euler_multinom',['../distributions_8c.html#aa055d45aa938bf55afe432967292b892',1,'D_Euler_Multinom(SEXP x, SEXP size, SEXP rate, SEXP deltat, SEXP log):&#160;distributions.c'],['../decls_8h.html#aa7cf2dcaaa5333231ed19998fd9dfde6',1,'D_Euler_Multinom(SEXP, SEXP, SEXP, SEXP, SEXP):&#160;distributions.c']]],
+  ['d_5fbetabinom_0',['D_BetaBinom',['../decls_8h.html#a7eb19c7180d18dc9f384cea477ee1a83',1,'D_BetaBinom(SEXP, SEXP, SEXP, SEXP, SEXP):&#160;distributions.c'],['../distributions_8c.html#a631dafe45b2fd04f5fb99e59c1c4f1cf',1,'D_BetaBinom(SEXP x, SEXP size, SEXP prob, SEXP theta, SEXP log):&#160;distributions.c']]],
+  ['d_5feuler_5fmultinom_1',['D_Euler_Multinom',['../decls_8h.html#aa7cf2dcaaa5333231ed19998fd9dfde6',1,'D_Euler_Multinom(SEXP, SEXP, SEXP, SEXP, SEXP):&#160;distributions.c'],['../distributions_8c.html#aa055d45aa938bf55afe432967292b892',1,'D_Euler_Multinom(SEXP x, SEXP size, SEXP rate, SEXP deltat, SEXP log):&#160;distributions.c']]],
   ['dbetabinom_2',['dbetabinom',['../pomp_8h.html#a6c490604aea6eace860456a7a4dc5a8d',1,'pomp.h']]],
   ['dbetanbinom_3',['dbetanbinom',['../pomp_8h.html#a0889bd3d52ef231f00f715d2187aa152',1,'pomp.h']]],
   ['dens_5fou2_4',['dens_ou2',['../ou2_8c.html#a8c409ae997e2b81c3b15dd2f40f78a8a',1,'ou2.c']]],

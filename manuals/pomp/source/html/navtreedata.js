@@ -53,8 +53,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "ou2_8c.html#a30a3d62562a3da42fdc0697719aad10f",
-"trajectory_8c.html#a452b8e5e82f9727dec344956611fbc26"
+"trajectory_8c.html#a58d967e1449ba00d87d2f6d70b50d525"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';

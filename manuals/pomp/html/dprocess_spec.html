@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
 <script type="text/javascript">
-const macros = { "\\R": "\\textsf{R}", "\\code": "\\texttt"};
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
 function processMathHTML() {
     var l = document.getElementsByClassName('reqn');
     for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
@@ -41,7 +41,7 @@ Specifically, <code>f</code> should compute the <em>log</em> probability density
 </p>
 <p>Using a C snippet is much preferred, due to its much greater computational efficiency.
 See <code><a href="../../pomp/help/Csnippet.html">Csnippet</a></code> for general rules on writing C snippets.
-The goal of a <dfn>dprocess</dfn> C snippet is to fill the variable <code>loglik</code> with the log probability density.
+The goal of a <dfn>dprocess</dfn> C snippet is to fill the predefined variable <code>loglik</code> with the log probability density.
 In the context of such a C snippet, the parameters, and covariates will be defined, as will the times <code>t_1</code> and <code>t_2</code>.
 The state variables at time <code>t_1</code> will have their usual name (see <code>statenames</code>) with a &ldquo;<code>_1</code>&rdquo; appended.
 Likewise, the state variables at time <code>t_2</code> will have a &ldquo;<code>_2</code>&rdquo; appended.
@@ -105,7 +105,7 @@ To circumvent this problem, use the <code><a href="../../pomp/help/pomp.html">cd
 <code><a href="../../pomp/help/vmeasure_spec.html">vmeasure_spec</a></code>
 </p>
 
-<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.3.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr /><div style="text-align: center;">[Package <em>pomp</em> version 6.3.0.2 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

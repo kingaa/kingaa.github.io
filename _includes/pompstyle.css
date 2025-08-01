@@ -10,7 +10,6 @@ body {
 
 code {
     font-family: monospace;
-    font-size: 1.125em;
 }
 
 h1, h2, h3, h4 {
@@ -48,10 +47,12 @@ a:link, a:visited {
     color: #0000ff;
     text-decoration: none;
 }
+
 a:hover, a:active {
-    color: #cc3333; 
+    color: #cc3333;
     text-decoration: none;
 }
+
 a.activated {
     text-decoration: underline;
 }
@@ -81,20 +82,24 @@ dt {
 }
 
 .emph {
-    color: #cc3333; 
+    color: #cc3333;
     font-weight: bold;
 }
 
 .emph1 {
-    color: #3333ff; 
+    color: #3333ff;
     font-weight: bold;
 }
 
-.firstcharacter { 
-    float: left; 
-    color: #3333ff; 
+.firstcharacter {
+    float: left;
+    color: #3333ff;
     font-size: 2.5em;
     line-height: 0.8em;
     vertical-align: top;
     padding-right: 5px;
+}
+
+.sourceCode, .language-r, .language-c, .language-sh {
+    color: #000066;
 }

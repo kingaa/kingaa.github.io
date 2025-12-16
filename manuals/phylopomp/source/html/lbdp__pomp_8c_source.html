@@ -239,49 +239,50 @@ $(function(){initNavTree('lbdp__pomp_8c_source.html',''); initResizable(true); }
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">while</span> (t + tstep &lt; tmax) {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <span class="keyword">event</span> = <a class="code hl_function" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a>(event_rate,rate,2);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <span class="keywordflow">switch</span> (event) {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      <span class="keywordflow">case</span> 0:                     <span class="comment">// birth</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> += 1;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      <span class="keywordflow">case</span> 1:                     <span class="comment">// death</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> -= 1;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keywordflow">default</span>:                    <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        assert(0);                <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">break</span>;                    <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      t += tstep;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      event_rate = <a class="code hl_define" href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a>;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      tstep = exp_rand()/event_rate;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    tstep = tmax - t;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> += 1;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      assert(event&gt;=0 &amp;&amp; event&lt;2);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>      <span class="keywordflow">switch</span> (event) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>      <span class="keywordflow">case</span> 0:                     <span class="comment">// birth</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> += 1;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <span class="keywordflow">case</span> 1:                     <span class="comment">// death</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> -= 1;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <span class="keywordflow">default</span>:                    <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        assert(0);                <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">break</span>;                    <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      t += tstep;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      event_rate = <a class="code hl_define" href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      tstep = exp_rand()/event_rate;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    tstep = tmax - t;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> += 1;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
 </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">  159</a></span><span class="preprocessor"># define lik  (__lik[0])</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span></div>
-<div class="foldopen" id="foldopen00162" data-start="{" data-end="}">
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="decls_8h.html#a1a91afb40a7dd236eb379a3f1f992ebe">  162</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="lbdp__pomp_8c.html#ae4e9c32b49282c41f7865fce81a24146">lbdp_dmeas</a></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>(</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> <span class="keywordtype">double</span> *__lik,</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__y,</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__x,</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__p,</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> <span class="keywordtype">int</span> give_log,</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__obsindex,</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__stateindex,</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__parindex,</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__covindex,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__covars,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> <span class="keywordtype">double</span> t</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> ) {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  assert(!ISNAN(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">  160</a></span><span class="preprocessor"># define lik  (__lik[0])</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="decls_8h.html#a1a91afb40a7dd236eb379a3f1f992ebe">  163</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="lbdp__pomp_8c.html#ae4e9c32b49282c41f7865fce81a24146">lbdp_dmeas</a></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>(</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> <span class="keywordtype">double</span> *__lik,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__y,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__x,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__p,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> <span class="keywordtype">int</span> give_log,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__obsindex,</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__stateindex,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__parindex,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__covindex,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__covars,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> <span class="keywordtype">double</span> t</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> ) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  assert(!ISNAN(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
 </div>
 <div class="ttc" id="ainit_8c_html_a950f5be1c4ce64a64de7e8939b87830c"><div class="ttname"><a href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a></div><div class="ttdeci">get_userdata_int_t * get_userdata_int</div><div class="ttdef"><b>Definition</b> <a href="init_8c_source.html#l00007">init.c:7</a></div></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
@@ -292,10 +293,10 @@ $(function(){initNavTree('lbdp__pomp_8c_source.html',''); initResizable(true); }
 <div class="ttc" id="albdp__pomp_8c_html_a6491c973702fb0dd1b39932143df7f84"><div class="ttname"><a href="lbdp__pomp_8c.html#a6491c973702fb0dd1b39932143df7f84">lbdp_gill</a></div><div class="ttdeci">void lbdp_gill(double *__x, const double *__p, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t, double dt)</div><div class="ttdef"><b>Definition</b> <a href="#l00071">lbdp_pomp.c:72</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_a9d0abdf3c5396a2e76b7f6126e755812"><div class="ttname"><a href="lbdp__pomp_8c.html#a9d0abdf3c5396a2e76b7f6126e755812">event_rates</a></div><div class="ttdeci">static double event_rates(double *__x, const double *__p, double t, const int *__stateindex, const int *__parindex, double *rate, double *penalty)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">lbdp_pomp.c:18</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_a9d5bb438b2c23069ed9c406cdf838d7c"><div class="ttname"><a href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a></div><div class="ttdeci">#define ell</div><div class="ttdef"><b>Definition</b> <a href="#l00010">lbdp_pomp.c:10</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition</b> <a href="#l00159">lbdp_pomp.c:159</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition</b> <a href="#l00160">lbdp_pomp.c:160</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition</b> <a href="#l00008">lbdp_pomp.c:8</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_ae1d1ec9482079231e898236e2b23c9ba"><div class="ttname"><a href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a></div><div class="ttdeci">#define ll</div><div class="ttdef"><b>Definition</b> <a href="#l00009">lbdp_pomp.c:9</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_ae4e9c32b49282c41f7865fce81a24146"><div class="ttname"><a href="lbdp__pomp_8c.html#ae4e9c32b49282c41f7865fce81a24146">lbdp_dmeas</a></div><div class="ttdeci">void lbdp_dmeas(double *__lik, const double *__y, const double *__x, const double *__p, int give_log, const int *__obsindex, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t)</div><div class="ttdoc">Measurement model likelihood (dmeasure).</div><div class="ttdef"><b>Definition</b> <a href="#l00162">lbdp_pomp.c:163</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_ae4e9c32b49282c41f7865fce81a24146"><div class="ttname"><a href="lbdp__pomp_8c.html#ae4e9c32b49282c41f7865fce81a24146">lbdp_dmeas</a></div><div class="ttdeci">void lbdp_dmeas(double *__lik, const double *__y, const double *__x, const double *__p, int give_log, const int *__obsindex, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t)</div><div class="ttdoc">Measurement model likelihood (dmeasure).</div><div class="ttdef"><b>Definition</b> <a href="#l00163">lbdp_pomp.c:164</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_ae58c3260bfb1facea39e0aec11acee3a"><div class="ttname"><a href="lbdp__pomp_8c.html#ae58c3260bfb1facea39e0aec11acee3a">lambda</a></div><div class="ttdeci">#define lambda</div><div class="ttdef"><b>Definition</b> <a href="#l00004">lbdp_pomp.c:4</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_aebfab0be95178c0a2497fca46e5eb377"><div class="ttname"><a href="lbdp__pomp_8c.html#aebfab0be95178c0a2497fca46e5eb377">psi</a></div><div class="ttdeci">#define psi</div><div class="ttdef"><b>Definition</b> <a href="#l00006">lbdp_pomp.c:6</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_af0f993f43b1eb97a4c62f2a5c77d2b01"><div class="ttname"><a href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a></div><div class="ttdeci">#define EVENT_RATES</div><div class="ttdef"><b>Definition</b> <a href="#l00013">lbdp_pomp.c:13</a></div></div>

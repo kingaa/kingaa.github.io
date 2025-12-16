@@ -37,8 +37,14 @@ var hierarchy =
     [ "popul_proc_t< sir_state_t, sir_parameters_t, 4 >", "classpopul__proc__t.html", [
       [ "master_t< sir_proc_t, 1 >", "classmaster__t.html", null ]
     ] ],
+    [ "popul_proc_t< strains_state_t, strains_parameters_t, 10 >", "classpopul__proc__t.html", [
+      [ "master_t< strains_proc_t, 3 >", "classmaster__t.html", null ]
+    ] ],
     [ "popul_proc_t< twospecies_state_t, twospecies_parameters_t, 22 >", "classpopul__proc__t.html", [
       [ "master_t< twospecies_proc_t, 3 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< twoundead_state_t, twoundead_parameters_t, 22 >", "classpopul__proc__t.html", [
+      [ "master_t< twoundead_proc_t, 5 >", "classmaster__t.html", null ]
     ] ],
     [ "s2i2r2_parameters_t", "structs2i2r2__parameters__t.html", null ],
     [ "s2i2r2_state_t", "structs2i2r2__state__t.html", null ],
@@ -55,6 +61,10 @@ var hierarchy =
     [ "siir_state_t", "structsiir__state__t.html", null ],
     [ "sir_parameters_t", "structsir__parameters__t.html", null ],
     [ "sir_state_t", "structsir__state__t.html", null ],
+    [ "strains_parameters_t", "structstrains__parameters__t.html", null ],
+    [ "strains_state_t", "structstrains__state__t.html", null ],
     [ "twospecies_parameters_t", "structtwospecies__parameters__t.html", null ],
-    [ "twospecies_state_t", "structtwospecies__state__t.html", null ]
+    [ "twospecies_state_t", "structtwospecies__state__t.html", null ],
+    [ "twoundead_parameters_t", "structtwoundead__parameters__t.html", null ],
+    [ "twoundead_state_t", "structtwoundead__state__t.html", null ]
 ];

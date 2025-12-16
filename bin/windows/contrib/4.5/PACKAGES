@@ -1,3 +1,13 @@
+Package: phylopomp
+Version: 0.15.0.0
+Depends: R(>= 4.5)
+Imports: grid, ggtree(>= 3.16), yaml, ggplot2, scales, ape, dplyr,
+        tibble, foreach, tidyr, pomp(>= 6.1), cowplot
+LinkingTo: pomp
+Suggests: tidyverse, doFuture, broom
+License: GPL-3
+Archs: x64
+
 Package: pomp
 Version: 6.4.0.0
 Depends: R(>= 4.1.0)

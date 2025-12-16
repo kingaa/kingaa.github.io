@@ -1,0 +1,133 @@
+<!DOCTYPE html><html><head><title>R: Three strains compete for a single susceptible pool.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script>
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>strains {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Three strains compete for a single susceptible pool.</h2>
+
+<h3>Description</h3>
+
+<p>The three demes are three distinct pathogen strains that compete for susceptibles.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>runStrains(
+  time,
+  t0 = 0,
+  Beta1 = 5,
+  Beta2 = 5,
+  Beta3 = 5,
+  gamma = 1,
+  omega = 0,
+  psi1 = 1,
+  psi2 = 0,
+  psi3 = 0,
+  S0 = 10000,
+  I1_0 = 10,
+  I2_0 = 10,
+  I3_0 = 10,
+  R0 = 0
+)
+
+continueStrains(
+  object,
+  time,
+  Beta1 = NA,
+  Beta2 = NA,
+  Beta3 = NA,
+  gamma = NA,
+  omega = NA,
+  psi1 = NA,
+  psi2 = NA,
+  psi3 = NA
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table role = "presentation">
+<tr><td><code id="time">time</code></td>
+<td>
+<p>final time</p>
+</td></tr>
+<tr><td><code id="t0">t0</code></td>
+<td>
+<p>initial time</p>
+</td></tr>
+<tr><td><code id="Beta1">Beta1</code>, <code id="Beta2">Beta2</code>, <code id="Beta3">Beta3</code></td>
+<td>
+<p>transmission rate for strains 1, 2, 3, respectively</p>
+</td></tr>
+<tr><td><code id="gamma">gamma</code></td>
+<td>
+<p>recovery rate</p>
+</td></tr>
+<tr><td><code id="omega">omega</code></td>
+<td>
+<p>rate of waning of immunity</p>
+</td></tr>
+<tr><td><code id="psi1">psi1</code>, <code id="psi2">psi2</code>, <code id="psi3">psi3</code></td>
+<td>
+<p>sampling rates</p>
+</td></tr>
+<tr><td><code id="S0">S0</code></td>
+<td>
+<p>initial size of susceptible population</p>
+</td></tr>
+<tr><td><code id="I1_0">I1_0</code>, <code id="I2_0">I2_0</code>, <code id="I3_0">I3_0</code></td>
+<td>
+<p>initial numbers of strain-specific infections</p>
+</td></tr>
+<tr><td><code id="R0">R0</code></td>
+<td>
+<p>initial size of immune population</p>
+</td></tr>
+<tr><td><code id="object">object</code></td>
+<td>
+<p>either the name of the model to simulate
+<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>runStrains</code> and <code>continueStrains</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;Strains&rdquo;.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More example genealogy processes:
+<code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
+<code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/s2i2r2.html">s2i2r2</a></code>,
+<code><a href="../../phylopomp/help/seir.html">seir</a></code>,
+<code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
+<code><a href="../../phylopomp/help/siir.html">siir</a></code>,
+<code><a href="../../phylopomp/help/simulate.html">simulate</a>()</code>,
+<code><a href="../../phylopomp/help/sir.html">sir</a></code>,
+<code><a href="../../phylopomp/help/twospecies.html">twospecies</a></code>,
+<code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
+</p>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.15.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

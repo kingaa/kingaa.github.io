@@ -23,6 +23,7 @@ var classmaster__t =
     [ "rinit", "classmaster__t.html#a860d21dc3e8db995c934c4a11625b65f", null ],
     [ "sample", "classmaster__t.html#a3263012f4a47a8cef2a0e190e62641b4", null ],
     [ "sample_death", "classmaster__t.html#ad70e53025f5be1906ac41e189706267b", null ],
+    [ "sample_migrate", "classmaster__t.html#a014e06a0ae355b6fc907a30caab224c5", null ],
     [ "structure", "classmaster__t.html#ae7718a2fc6afc0852aa784a00c338ba9", null ],
     [ "time", "classmaster__t.html#a08340c5fd9867843fcf1d523c88ea592", null ],
     [ "timezero", "classmaster__t.html#a57d44eab6a012323e2fd076fb8e2c5e4", null ],

@@ -12,5 +12,10 @@ var searchData=
   ['twospecies_5fpomp_2ec_9',['twospecies_pomp.c',['../twospecies__pomp_8c.html',1,'']]],
   ['twospecies_5fproc_5ft_10',['twospecies_proc_t',['../twospecies_8cc.html#a61548b2389651fa51edec1270787d590',1,'twospecies.cc']]],
   ['twospecies_5frinit_11',['twospecies_rinit',['../decls_8h.html#aa5583eb496f68826abc050c24366b34d',1,'twospecies_rinit(double *, const double *, double, const int *, const int *, const int *, const double *):&#160;twospecies_pomp.c'],['../twospecies__pomp_8c.html#a7624edc4e268d58b4b93319dff2acf78',1,'twospecies_rinit(double *__x, const double *__p, double t0, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars):&#160;twospecies_pomp.c']]],
-  ['twospecies_5fstate_5ft_12',['twospecies_state_t',['../structtwospecies__state__t.html',1,'']]]
+  ['twospecies_5fstate_5ft_12',['twospecies_state_t',['../structtwospecies__state__t.html',1,'']]],
+  ['twoundead_2ecc_13',['twoundead.cc',['../twoundead_8cc.html',1,'']]],
+  ['twoundead_5fgenealogy_5ft_14',['twoundead_genealogy_t',['../twoundead_8cc.html#a46f2bfa05ec5d3f99e579e3ef1964c05',1,'twoundead.cc']]],
+  ['twoundead_5fparameters_5ft_15',['twoundead_parameters_t',['../structtwoundead__parameters__t.html',1,'']]],
+  ['twoundead_5fproc_5ft_16',['twoundead_proc_t',['../twoundead_8cc.html#a66ac56689784d96cbadad52a3f475415',1,'twoundead.cc']]],
+  ['twoundead_5fstate_5ft_17',['twoundead_state_t',['../structtwoundead__state__t.html',1,'']]]
 ];

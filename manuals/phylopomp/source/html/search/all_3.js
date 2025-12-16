@@ -1,9 +1,9 @@
 var searchData=
 [
   ['c1_0',['C1',['../twospecies__pomp_8c.html#a44779f18d87e71c78fc9fbf9dc88537d',1,'twospecies_pomp.c']]],
-  ['c1_1',['c1',['../structtwospecies__parameters__t.html#a4da181d8b296a6e3e4d4534e9481f597',1,'twospecies_parameters_t']]],
+  ['c1_1',['c1',['../structtwospecies__parameters__t.html#a4da181d8b296a6e3e4d4534e9481f597',1,'twospecies_parameters_t::c1'],['../structtwoundead__parameters__t.html#a6a38a62ef73b4bfe1cb3bf8bae7425ef',1,'twoundead_parameters_t::c1']]],
   ['c2_2',['C2',['../twospecies__pomp_8c.html#ad6fc13322a4f1c314332ff34aa8b3fa0',1,'twospecies_pomp.c']]],
-  ['c2_3',['c2',['../structtwospecies__parameters__t.html#a26c5c9ab5ceba8e5c3addb7700a4440e',1,'twospecies_parameters_t']]],
+  ['c2_3',['c2',['../structtwospecies__parameters__t.html#a26c5c9ab5ceba8e5c3addb7700a4440e',1,'twospecies_parameters_t::c2'],['../structtwoundead__parameters__t.html#a59e3e304e8efef7f9f9be50764e89fc5',1,'twoundead_parameters_t::c2']]],
   ['callmethods_4',['callMethods',['../init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5',1,'init.c']]],
   ['change_5fcolor_5',['change_color',['../seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;seirs_pomp.c'],['../twospecies__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;twospecies_pomp.c']]],
   ['check_5fcolor_6',['check_color',['../twospecies__pomp_8c.html#a30f06136dc3d562c02154a343e474e29',1,'twospecies_pomp.c']]],

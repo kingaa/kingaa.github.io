@@ -14,7 +14,9 @@ continueSI2R	si2r
 continueSIIR	siir
 continueSIR	sir
 continueSIRS	sir
+continueStrains	strains
 continueTwoSpecies	twospecies
+continueTwoUndead	twoundead
 curtail	curtail
 diagram	diagram
 drawDetails.ballGrob	internals
@@ -64,7 +66,9 @@ runSI2R	si2r
 runSIIR	siir
 runSIR	sir
 runSIRS	sir
+runStrains	strains
 runTwoSpecies	twospecies
+runTwoUndead	twoundead
 S2I2R2	s2i2r2
 s2i2r2	s2i2r2
 SEIR	seir
@@ -84,9 +88,13 @@ SIRS	sir
 sirs_pomp	sir
 sir_pomp	sir
 stew	reexports
+Strains	strains
+strains	strains
 treeplot	treeplot
 TwoSpecies	twospecies
 twospecies	twospecies
 twospecies_pomp	twospecies
+TwoUndead	twoundead
+twoundead	twoundead
 viewport	reexports
 yaml	yaml

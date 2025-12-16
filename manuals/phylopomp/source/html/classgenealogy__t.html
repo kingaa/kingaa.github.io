@@ -234,9 +234,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa31413f824c0b39c7103809607215f21" id="r_aa31413f824c0b39c7103809607215f21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa31413f824c0b39c7103809607215f21">sample_death</a> (<a class="el" href="classball__t.html">ball_t</a> *a, <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t)</td></tr>
 <tr class="memdesc:aa31413f824c0b39c7103809607215f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a sample node and simultaneously terminate the lineage  <br /></td></tr>
 <tr class="separator:aa31413f824c0b39c7103809607215f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a516dfee5af2be8f95a578928707816fb" id="r_a516dfee5af2be8f95a578928707816fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classball__t.html">ball_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a516dfee5af2be8f95a578928707816fb">migrate</a> (<a class="el" href="classball__t.html">ball_t</a> *a, <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t, <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> d=0)</td></tr>
-<tr class="memdesc:a516dfee5af2be8f95a578928707816fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">movement into deme d  <br /></td></tr>
-<tr class="separator:a516dfee5af2be8f95a578928707816fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cee6964e8f756a2edb085d57baf6033" id="r_a7cee6964e8f756a2edb085d57baf6033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cee6964e8f756a2edb085d57baf6033">migrate</a> (<a class="el" href="classball__t.html">ball_t</a> *a, <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t, <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> d=0)</td></tr>
+<tr class="memdesc:a7cee6964e8f756a2edb085d57baf6033"><td class="mdescLeft">&#160;</td><td class="mdescRight">movement into deme d  <br /></td></tr>
+<tr class="separator:a7cee6964e8f756a2edb085d57baf6033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b5058d312f0b06ad06b441233ed10a" id="r_ac1b5058d312f0b06ad06b441233ed10a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1b5058d312f0b06ad06b441233ed10a">sample_migrate</a> (<a class="el" href="classball__t.html">ball_t</a> *a, <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t, <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> d=0)</td></tr>
+<tr class="memdesc:ac1b5058d312f0b06ad06b441233ed10a"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a sample node and simultaneously migrate the lineage  <br /></td></tr>
+<tr class="separator:ac1b5058d312f0b06ad06b441233ed10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab20d6aff547191c1f18dcfe9548025ce" id="r_ab20d6aff547191c1f18dcfe9548025ce"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a>, <a class="el" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20d6aff547191c1f18dcfe9548025ce">extant</a> (void) const</td></tr>
 <tr class="separator:ab20d6aff547191c1f18dcfe9548025ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a434e6e52bbf748439a69a176ecdc45e2" id="r_a434e6e52bbf748439a69a176ecdc45e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenealogy__t.html">genealogy_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434e6e52bbf748439a69a176ecdc45e2">prune</a> (void)</td></tr>
@@ -900,21 +903,23 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_a5b9499dcdff53c78947f7b1df67795db_icgraph.png" border="0" usemap="#aclassgenealogy__t_a5b9499dcdff53c78947f7b1df67795db_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_a5b9499dcdff53c78947f7b1df67795db_icgraph" id="aclassgenealogy__t_a5b9499dcdff53c78947f7b1df67795db_icgraph">
-<area shape="rect" title="check the size of the genealogy (to prevent memory exhaustion)." alt="" coords="607,122,755,162"/>
-<area shape="rect" href="classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="373,129,559,155"/>
-<area shape="poly" title=" " alt="" coords="593,145,559,145,559,139,593,139"/>
+<area shape="rect" title="check the size of the genealogy (to prevent memory exhaustion)." alt="" coords="607,146,755,186"/>
+<area shape="rect" href="classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="373,153,559,179"/>
+<area shape="poly" title=" " alt="" coords="593,169,559,169,559,163,593,163"/>
 <area shape="rect" href="classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="175,5,315,31"/>
-<area shape="poly" title=" " alt="" coords="438,122,387,83,324,44,296,33,298,28,327,40,390,79,442,118"/>
+<area shape="poly" title=" " alt="" coords="443,145,392,94,359,67,324,44,299,33,301,28,327,40,362,63,396,90,447,141"/>
 <area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="169,55,320,80"/>
-<area shape="poly" title=" " alt="" coords="416,127,324,95,286,83,288,78,326,90,418,122"/>
+<area shape="poly" title=" " alt="" coords="430,149,381,122,324,95,290,83,291,78,326,90,383,117,433,144"/>
 <area shape="rect" href="classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447" title="graft a new lineage into deme d" alt="" coords="175,104,315,129"/>
-<area shape="poly" title=" " alt="" coords="360,133,315,127,315,122,360,127"/>
-<area shape="rect" href="classgenealogy__t.html#a516dfee5af2be8f95a578928707816fb" title="movement into deme d" alt="" coords="164,153,325,179"/>
-<area shape="poly" title=" " alt="" coords="360,156,326,160,325,155,359,151"/>
+<area shape="poly" title=" " alt="" coords="394,153,302,132,303,127,396,148"/>
+<area shape="rect" href="classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033" title="movement into deme d" alt="" coords="164,153,325,179"/>
+<area shape="poly" title=" " alt="" coords="360,169,326,169,326,163,360,163"/>
 <area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="165,203,324,228"/>
-<area shape="poly" title=" " alt="" coords="418,162,326,194,290,205,289,200,324,189,416,157"/>
+<area shape="poly" title=" " alt="" coords="396,184,303,205,302,200,394,179"/>
 <area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="165,253,324,293"/>
-<area shape="poly" title=" " alt="" coords="440,165,389,204,327,243,302,255,299,250,324,238,386,199,437,161"/>
+<area shape="poly" title=" " alt="" coords="432,188,326,243,299,255,297,250,324,238,429,183"/>
+<area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="165,317,324,357"/>
+<area shape="poly" title=" " alt="" coords="448,191,397,248,363,279,327,307,305,319,302,314,324,302,360,275,393,244,444,188"/>
 <area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="29,31,92,56"/>
 <area shape="poly" title=" " alt="" coords="155,58,92,50,92,45,156,53"/>
 <area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,80,116,105"/>
@@ -1031,80 +1036,80 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>curtail the genealogy by removing nodes with times later than tnew and/or earlier than troot </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00499">499</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  499</span>                                             {</div>
-<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">if</span> (tnew &lt; troot) troot = tnew;</div>
-<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">if</span> (!empty() &amp;&amp; tnew &lt; <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>()) {</div>
-<div class="line"><span class="lineno">  502</span>      node_t *p = back();</div>
-<div class="line"><span class="lineno">  503</span>      <span class="keywordflow">while</span> (!empty() &amp;&amp; p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &gt; tnew) {</div>
-<div class="line"><span class="lineno">  504</span>        ball_t *b;</div>
-<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">while</span> (p-&gt;size() &gt; 1) {</div>
-<div class="line"><span class="lineno">  506</span>          b = p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>();</div>
-<div class="line"><span class="lineno">  507</span>          <span class="keywordflow">switch</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) {</div>
-<div class="line"><span class="lineno">  508</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>:</div>
-<div class="line"><span class="lineno">  509</span>            p-&gt;erase(b); <span class="keyword">delete</span> b;</div>
-<div class="line"><span class="lineno">  510</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  511</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>: <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>: <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">  512</span>            assert(0);           <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">  513</span>            <span class="keywordflow">break</span>;               <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">  514</span>          }</div>
-<div class="line"><span class="lineno">  515</span>        }</div>
-<div class="line"><span class="lineno">  516</span>        b = p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>();</div>
-<div class="line"><span class="lineno">  517</span>        <span class="keywordflow">switch</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) {</div>
-<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>:</div>
-<div class="line"><span class="lineno">  519</span>          b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>;</div>
-<div class="line"><span class="lineno">  520</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>:</div>
-<div class="line"><span class="lineno">  521</span>          b-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = p-&gt;<a class="code hl_function" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">deme</a>();</div>
-<div class="line"><span class="lineno">  522</span>          <a class="code hl_function" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624">swap</a>(b,p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
-<div class="line"><span class="lineno">  523</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>:</div>
-<div class="line"><span class="lineno">  524</span>          <a class="code hl_function" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
-<div class="line"><span class="lineno">  525</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  526</span>        }</div>
-<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">if</span> (!empty()) p = back();</div>
-<div class="line"><span class="lineno">  528</span>      }</div>
-<div class="line"><span class="lineno">  529</span>    }</div>
-<div class="line"><span class="lineno">  530</span>    <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>() = tnew;</div>
-<div class="line"><span class="lineno">  531</span>    <span class="keywordflow">if</span> (!empty() &amp;&amp; troot &gt; <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()) {</div>
-<div class="line"><span class="lineno">  532</span>      node_t *p = front();</div>
-<div class="line"><span class="lineno">  533</span>      node_t *q;</div>
-<div class="line"><span class="lineno">  534</span>      <span class="keywordflow">while</span> (!empty() &amp;&amp; p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &lt;= troot) {</div>
-<div class="line"><span class="lineno">  535</span>        ball_t *b;</div>
-<div class="line"><span class="lineno">  536</span>        assert(p-&gt;<a class="code hl_function" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6">holds_own</a>());</div>
-<div class="line"><span class="lineno">  537</span>        <span class="keywordflow">while</span> (p-&gt;size() &gt; 1) {</div>
-<div class="line"><span class="lineno">  538</span>          b = p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>();</div>
-<div class="line"><span class="lineno">  539</span>          <span class="keywordflow">switch</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) {</div>
-<div class="line"><span class="lineno">  540</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>:</div>
-<div class="line"><span class="lineno">  541</span>            p-&gt;erase(b); <span class="keyword">delete</span> b;</div>
-<div class="line"><span class="lineno">  542</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  543</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>:</div>
-<div class="line"><span class="lineno">  544</span>            q = <a class="code hl_function" href="#a61f9ef25c465e28b4048f276e80c887c">make_node</a>(b-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
-<div class="line"><span class="lineno">  545</span>            q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = troot;</div>
-<div class="line"><span class="lineno">  546</span>            b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = q;</div>
-<div class="line"><span class="lineno">  547</span>            q-&gt;insert(b); p-&gt;erase(b);</div>
-<div class="line"><span class="lineno">  548</span>            push_back(q);</div>
-<div class="line"><span class="lineno">  549</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  550</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>:</div>
-<div class="line"><span class="lineno">  551</span>            q = b-&gt;<a class="code hl_function" href="classball__t.html#af54ab028113130c4760856b06a31ad8b">child</a>();</div>
-<div class="line"><span class="lineno">  552</span>            <span class="keywordflow">if</span> (q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &lt; troot) {</div>
-<div class="line"><span class="lineno">  553</span>              q-&gt;insert(b); p-&gt;erase(b);</div>
-<div class="line"><span class="lineno">  554</span>              b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = q;</div>
-<div class="line"><span class="lineno">  555</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  556</span>              node_t *pp = <a class="code hl_function" href="#a61f9ef25c465e28b4048f276e80c887c">make_node</a>(b-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
-<div class="line"><span class="lineno">  557</span>              pp-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = troot;</div>
-<div class="line"><span class="lineno">  558</span>              pp-&gt;insert(b); p-&gt;erase(b);</div>
-<div class="line"><span class="lineno">  559</span>              b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = pp;</div>
-<div class="line"><span class="lineno">  560</span>              push_back(pp);</div>
-<div class="line"><span class="lineno">  561</span>            }</div>
-<div class="line"><span class="lineno">  562</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  563</span>          }</div>
-<div class="line"><span class="lineno">  564</span>        }</div>
-<div class="line"><span class="lineno">  565</span>        <a class="code hl_function" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
-<div class="line"><span class="lineno">  566</span>        <span class="keywordflow">if</span> (!empty()) p = front();</div>
-<div class="line"><span class="lineno">  567</span>      }</div>
-<div class="line"><span class="lineno">  568</span>      <a class="code hl_function" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">sort</a>();</div>
-<div class="line"><span class="lineno">  569</span>    }</div>
-<div class="line"><span class="lineno">  570</span>    <span class="keywordflow">if</span> (troot &gt; <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()) <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>() = troot;</div>
-<div class="line"><span class="lineno">  571</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00508">508</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  508</span>                                             {</div>
+<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">if</span> (tnew &lt; troot) troot = tnew;</div>
+<div class="line"><span class="lineno">  510</span>    <span class="keywordflow">if</span> (!empty() &amp;&amp; tnew &lt; <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>()) {</div>
+<div class="line"><span class="lineno">  511</span>      node_t *p = back();</div>
+<div class="line"><span class="lineno">  512</span>      <span class="keywordflow">while</span> (!empty() &amp;&amp; p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &gt; tnew) {</div>
+<div class="line"><span class="lineno">  513</span>        ball_t *b;</div>
+<div class="line"><span class="lineno">  514</span>        <span class="keywordflow">while</span> (p-&gt;size() &gt; 1) {</div>
+<div class="line"><span class="lineno">  515</span>          b = p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>();</div>
+<div class="line"><span class="lineno">  516</span>          <span class="keywordflow">switch</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) {</div>
+<div class="line"><span class="lineno">  517</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>:</div>
+<div class="line"><span class="lineno">  518</span>            p-&gt;erase(b); <span class="keyword">delete</span> b;</div>
+<div class="line"><span class="lineno">  519</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  520</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>: <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>: <span class="comment">// #nocov</span></div>
+<div class="line"><span class="lineno">  521</span>            assert(0);           <span class="comment">// #nocov</span></div>
+<div class="line"><span class="lineno">  522</span>            <span class="keywordflow">break</span>;               <span class="comment">// #nocov</span></div>
+<div class="line"><span class="lineno">  523</span>          }</div>
+<div class="line"><span class="lineno">  524</span>        }</div>
+<div class="line"><span class="lineno">  525</span>        b = p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>();</div>
+<div class="line"><span class="lineno">  526</span>        <span class="keywordflow">switch</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) {</div>
+<div class="line"><span class="lineno">  527</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>:</div>
+<div class="line"><span class="lineno">  528</span>          b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>;</div>
+<div class="line"><span class="lineno">  529</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>:</div>
+<div class="line"><span class="lineno">  530</span>          b-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = p-&gt;<a class="code hl_function" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">deme</a>();</div>
+<div class="line"><span class="lineno">  531</span>          <a class="code hl_function" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624">swap</a>(b,p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
+<div class="line"><span class="lineno">  532</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>:</div>
+<div class="line"><span class="lineno">  533</span>          <a class="code hl_function" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
+<div class="line"><span class="lineno">  534</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  535</span>        }</div>
+<div class="line"><span class="lineno">  536</span>        <span class="keywordflow">if</span> (!empty()) p = back();</div>
+<div class="line"><span class="lineno">  537</span>      }</div>
+<div class="line"><span class="lineno">  538</span>    }</div>
+<div class="line"><span class="lineno">  539</span>    <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>() = tnew;</div>
+<div class="line"><span class="lineno">  540</span>    <span class="keywordflow">if</span> (!empty() &amp;&amp; troot &gt; <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()) {</div>
+<div class="line"><span class="lineno">  541</span>      node_t *p = front();</div>
+<div class="line"><span class="lineno">  542</span>      node_t *q;</div>
+<div class="line"><span class="lineno">  543</span>      <span class="keywordflow">while</span> (!empty() &amp;&amp; p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &lt;= troot) {</div>
+<div class="line"><span class="lineno">  544</span>        ball_t *b;</div>
+<div class="line"><span class="lineno">  545</span>        assert(p-&gt;<a class="code hl_function" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6">holds_own</a>());</div>
+<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">while</span> (p-&gt;size() &gt; 1) {</div>
+<div class="line"><span class="lineno">  547</span>          b = p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>();</div>
+<div class="line"><span class="lineno">  548</span>          <span class="keywordflow">switch</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a>) {</div>
+<div class="line"><span class="lineno">  549</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>:</div>
+<div class="line"><span class="lineno">  550</span>            p-&gt;erase(b); <span class="keyword">delete</span> b;</div>
+<div class="line"><span class="lineno">  551</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  552</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>:</div>
+<div class="line"><span class="lineno">  553</span>            q = <a class="code hl_function" href="#a61f9ef25c465e28b4048f276e80c887c">make_node</a>(b-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
+<div class="line"><span class="lineno">  554</span>            q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = troot;</div>
+<div class="line"><span class="lineno">  555</span>            b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = q;</div>
+<div class="line"><span class="lineno">  556</span>            q-&gt;insert(b); p-&gt;erase(b);</div>
+<div class="line"><span class="lineno">  557</span>            push_back(q);</div>
+<div class="line"><span class="lineno">  558</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  559</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>:</div>
+<div class="line"><span class="lineno">  560</span>            q = b-&gt;<a class="code hl_function" href="classball__t.html#af54ab028113130c4760856b06a31ad8b">child</a>();</div>
+<div class="line"><span class="lineno">  561</span>            <span class="keywordflow">if</span> (q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &lt; troot) {</div>
+<div class="line"><span class="lineno">  562</span>              q-&gt;insert(b); p-&gt;erase(b);</div>
+<div class="line"><span class="lineno">  563</span>              b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = q;</div>
+<div class="line"><span class="lineno">  564</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  565</span>              node_t *pp = <a class="code hl_function" href="#a61f9ef25c465e28b4048f276e80c887c">make_node</a>(b-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
+<div class="line"><span class="lineno">  566</span>              pp-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = troot;</div>
+<div class="line"><span class="lineno">  567</span>              pp-&gt;insert(b); p-&gt;erase(b);</div>
+<div class="line"><span class="lineno">  568</span>              b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = pp;</div>
+<div class="line"><span class="lineno">  569</span>              push_back(pp);</div>
+<div class="line"><span class="lineno">  570</span>            }</div>
+<div class="line"><span class="lineno">  571</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  572</span>          }</div>
+<div class="line"><span class="lineno">  573</span>        }</div>
+<div class="line"><span class="lineno">  574</span>        <a class="code hl_function" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
+<div class="line"><span class="lineno">  575</span>        <span class="keywordflow">if</span> (!empty()) p = front();</div>
+<div class="line"><span class="lineno">  576</span>      }</div>
+<div class="line"><span class="lineno">  577</span>      <a class="code hl_function" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">sort</a>();</div>
+<div class="line"><span class="lineno">  578</span>    }</div>
+<div class="line"><span class="lineno">  579</span>    <span class="keywordflow">if</span> (troot &gt; <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()) <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>() = troot;</div>
+<div class="line"><span class="lineno">  580</span>  };</div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a></div><div class="ttdeci">@ blue</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
 <div class="ttc" id="aclassball__t_html_a7018ea86bba5844d30904e3242ec45c4"><div class="ttname"><a href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">ball_t::holder</a></div><div class="ttdeci">node_t * holder(void) const</div><div class="ttdoc">in whose pocket do I lie?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00109">ball.h:109</a></div></div>
@@ -1327,10 +1332,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>set up for extraction of black balls (see '<a class="el" href="inventory_8h.html">inventory.h</a>') </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00464">464</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  464</span>                                                {</div>
-<div class="line"><span class="lineno">  465</span>    <span class="keywordflow">return</span> std::pair&lt;node_it,node_it&gt;(cbegin(),cend());</div>
-<div class="line"><span class="lineno">  466</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00473">473</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>                                                {</div>
+<div class="line"><span class="lineno">  474</span>    <span class="keywordflow">return</span> std::pair&lt;node_it,node_it&gt;(cbegin(),cend());</div>
+<div class="line"><span class="lineno">  475</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1884,19 +1889,21 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_a61f9ef25c465e28b4048f276e80c887c_icgraph.png" border="0" usemap="#aclassgenealogy__t_a61f9ef25c465e28b4048f276e80c887c_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_a61f9ef25c465e28b4048f276e80c887c_icgraph" id="aclassgenealogy__t_a61f9ef25c465e28b4048f276e80c887c_icgraph">
-<area shape="rect" title=" " alt="" coords="373,129,559,155"/>
+<area shape="rect" title=" " alt="" coords="373,153,559,179"/>
 <area shape="rect" href="classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="175,5,315,31"/>
-<area shape="poly" title=" " alt="" coords="438,122,387,83,324,44,296,33,298,28,327,40,390,79,442,118"/>
+<area shape="poly" title=" " alt="" coords="443,145,392,94,359,67,324,44,299,33,301,28,327,40,362,63,396,90,447,141"/>
 <area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="169,55,320,80"/>
-<area shape="poly" title=" " alt="" coords="416,127,324,95,286,83,288,78,326,90,418,122"/>
+<area shape="poly" title=" " alt="" coords="430,149,381,122,324,95,290,83,291,78,326,90,383,117,433,144"/>
 <area shape="rect" href="classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447" title="graft a new lineage into deme d" alt="" coords="175,104,315,129"/>
-<area shape="poly" title=" " alt="" coords="360,133,315,127,315,122,360,127"/>
-<area shape="rect" href="classgenealogy__t.html#a516dfee5af2be8f95a578928707816fb" title="movement into deme d" alt="" coords="164,153,325,179"/>
-<area shape="poly" title=" " alt="" coords="360,156,326,160,325,155,359,151"/>
+<area shape="poly" title=" " alt="" coords="394,153,302,132,303,127,396,148"/>
+<area shape="rect" href="classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033" title="movement into deme d" alt="" coords="164,153,325,179"/>
+<area shape="poly" title=" " alt="" coords="360,169,326,169,326,163,360,163"/>
 <area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="165,203,324,228"/>
-<area shape="poly" title=" " alt="" coords="418,162,326,194,290,205,289,200,324,189,416,157"/>
+<area shape="poly" title=" " alt="" coords="396,184,303,205,302,200,394,179"/>
 <area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="165,253,324,293"/>
-<area shape="poly" title=" " alt="" coords="440,165,389,204,327,243,302,255,299,250,324,238,386,199,437,161"/>
+<area shape="poly" title=" " alt="" coords="432,188,326,243,299,255,297,250,324,238,429,183"/>
+<area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="165,317,324,357"/>
+<area shape="poly" title=" " alt="" coords="448,191,397,248,363,279,327,307,305,319,302,314,324,302,360,275,393,244,444,188"/>
 <area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="29,31,92,56"/>
 <area shape="poly" title=" " alt="" coords="155,58,92,50,92,45,156,53"/>
 <area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,80,116,105"/>
@@ -1906,8 +1913,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a516dfee5af2be8f95a578928707816fb" name="a516dfee5af2be8f95a578928707816fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a516dfee5af2be8f95a578928707816fb">&#9670;&#160;</a></span>migrate()</h2>
+<a id="a7cee6964e8f756a2edb085d57baf6033" name="a7cee6964e8f756a2edb085d57baf6033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cee6964e8f756a2edb085d57baf6033">&#9670;&#160;</a></span>migrate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1916,7 +1923,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classball__t.html">ball_t</a> * genealogy_t::migrate </td>
+          <td class="memname">void genealogy_t::migrate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classball__t.html">ball_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
@@ -1941,19 +1948,18 @@ Here is the caller graph for this function:</div>
 <p>movement into deme d </p>
 
 <p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00454">454</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  454</span>                                                       {</div>
+<div class="fragment"><div class="line"><span class="lineno">  454</span>                                                    {</div>
 <div class="line"><span class="lineno">  455</span>    <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>() = t;</div>
 <div class="line"><span class="lineno">  456</span>    node_t *p = <a class="code hl_function" href="#a61f9ef25c465e28b4048f276e80c887c">make_node</a>(a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
 <div class="line"><span class="lineno">  457</span>    p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>();</div>
 <div class="line"><span class="lineno">  458</span>    <a class="code hl_function" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a">add</a>(p,a);</div>
 <div class="line"><span class="lineno">  459</span>    a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = d;</div>
-<div class="line"><span class="lineno">  460</span>    <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno">  461</span>  };</div>
+<div class="line"><span class="lineno">  460</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classgenealogy__t_a516dfee5af2be8f95a578928707816fb_cgraph.png" border="0" usemap="#aclassgenealogy__t_a516dfee5af2be8f95a578928707816fb_cgraph" alt=""/></div>
-<map name="aclassgenealogy__t_a516dfee5af2be8f95a578928707816fb_cgraph" id="aclassgenealogy__t_a516dfee5af2be8f95a578928707816fb_cgraph">
+<div class="center"><img src="classgenealogy__t_a7cee6964e8f756a2edb085d57baf6033_cgraph.png" border="0" usemap="#aclassgenealogy__t_a7cee6964e8f756a2edb085d57baf6033_cgraph" alt=""/></div>
+<map name="aclassgenealogy__t_a7cee6964e8f756a2edb085d57baf6033_cgraph" id="aclassgenealogy__t_a7cee6964e8f756a2edb085d57baf6033_cgraph">
 <area shape="rect" title="movement into deme d" alt="" coords="5,129,167,155"/>
 <area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="247,104,368,129"/>
 <area shape="poly" title=" " alt="" coords="167,130,232,122,233,128,167,135"/>
@@ -2210,25 +2216,25 @@ Here is the caller graph for this function:</div>
 
 <p>erase all deme information </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00479">479</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  479</span>                              {</div>
-<div class="line"><span class="lineno">  480</span>    <span class="comment">// erase deme information from black balls.</span></div>
-<div class="line"><span class="lineno">  481</span>    pocket_t *blacks = <a class="code hl_function" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93">colored</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>);</div>
-<div class="line"><span class="lineno">  482</span>    <span class="keywordflow">while</span> (!blacks-&gt;empty()) {</div>
-<div class="line"><span class="lineno">  483</span>      ball_t *a = *(blacks-&gt;begin());</div>
-<div class="line"><span class="lineno">  484</span>      a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = 0;</div>
-<div class="line"><span class="lineno">  485</span>      blacks-&gt;erase(a);</div>
-<div class="line"><span class="lineno">  486</span>    }</div>
-<div class="line"><span class="lineno">  487</span>    <span class="keyword">delete</span> blacks;</div>
-<div class="line"><span class="lineno">  488</span>    <span class="comment">// erase deme information from nodes.</span></div>
-<div class="line"><span class="lineno">  489</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  490</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">deme</a>() = 0;</div>
-<div class="line"><span class="lineno">  491</span>    }</div>
-<div class="line"><span class="lineno">  492</span>    <span class="comment">// drop superfluous nodes (holding just one ball).</span></div>
-<div class="line"><span class="lineno">  493</span>    <a class="code hl_function" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb">comb</a>();</div>
-<div class="line"><span class="lineno">  494</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = 1;</div>
-<div class="line"><span class="lineno">  495</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  496</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00488">488</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  488</span>                              {</div>
+<div class="line"><span class="lineno">  489</span>    <span class="comment">// erase deme information from black balls.</span></div>
+<div class="line"><span class="lineno">  490</span>    pocket_t *blacks = <a class="code hl_function" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93">colored</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>);</div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">while</span> (!blacks-&gt;empty()) {</div>
+<div class="line"><span class="lineno">  492</span>      ball_t *a = *(blacks-&gt;begin());</div>
+<div class="line"><span class="lineno">  493</span>      a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = 0;</div>
+<div class="line"><span class="lineno">  494</span>      blacks-&gt;erase(a);</div>
+<div class="line"><span class="lineno">  495</span>    }</div>
+<div class="line"><span class="lineno">  496</span>    <span class="keyword">delete</span> blacks;</div>
+<div class="line"><span class="lineno">  497</span>    <span class="comment">// erase deme information from nodes.</span></div>
+<div class="line"><span class="lineno">  498</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  499</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">deme</a>() = 0;</div>
+<div class="line"><span class="lineno">  500</span>    }</div>
+<div class="line"><span class="lineno">  501</span>    <span class="comment">// drop superfluous nodes (holding just one ball).</span></div>
+<div class="line"><span class="lineno">  502</span>    <a class="code hl_function" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb">comb</a>();</div>
+<div class="line"><span class="lineno">  503</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = 1;</div>
+<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  505</span>  };</div>
 <div class="ttc" id="aclassnodeseq__t_html_a254feb97445b95db5fe02b3ed1f433bb"><div class="ttname"><a href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb">nodeseq_t::comb</a></div><div class="ttdeci">void comb(void)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00207">nodeseq.h:207</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a79d7f31a5b5bfe6879bd4ed3ac8c8b93"><div class="ttname"><a href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93">nodeseq_t::colored</a></div><div class="ttdeci">pocket_t * colored(color_t col) const</div><div class="ttdoc">Get all balls of a color.</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00128">nodeseq.h:128</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -2306,15 +2312,15 @@ Here is the caller graph for this function:</div>
 <li>the unique-name stack advances as necessary. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00577">577</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  577</span>                                           {</div>
-<div class="line"><span class="lineno">  578</span>    <span class="keyword">reinterpret_cast&lt;</span>nodeseq_t&amp;<span class="keyword">&gt;</span>(*this) += <span class="keyword">reinterpret_cast&lt;</span>nodeseq_t&amp;<span class="keyword">&gt;</span>(G);</div>
-<div class="line"><span class="lineno">  579</span>    <a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a> = (<a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a> &gt; G.<a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a>) ? G.<a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a> : <a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a>;</div>
-<div class="line"><span class="lineno">  580</span>    <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> = (<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> &lt; G.<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>) ? G.<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> : <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>;</div>
-<div class="line"><span class="lineno">  581</span>    <a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a> = (<a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a> &lt; G.<a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a>) ? G.<a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a> : <a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a>;</div>
-<div class="line"><span class="lineno">  582</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = (<a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> &lt; G.<a class="code hl_function" href="#a516254565a8b30fd2ba3306290e1d923">ndeme</a>()) ? G.<a class="code hl_function" href="#a516254565a8b30fd2ba3306290e1d923">ndeme</a>() : <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
-<div class="line"><span class="lineno">  583</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  584</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00586">586</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  586</span>                                           {</div>
+<div class="line"><span class="lineno">  587</span>    <span class="keyword">reinterpret_cast&lt;</span>nodeseq_t&amp;<span class="keyword">&gt;</span>(*this) += <span class="keyword">reinterpret_cast&lt;</span>nodeseq_t&amp;<span class="keyword">&gt;</span>(G);</div>
+<div class="line"><span class="lineno">  588</span>    <a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a> = (<a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a> &gt; G.<a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a>) ? G.<a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a> : <a class="code hl_variable" href="#ad697bb78f7c78a7de642335ba28afd8a">_t0</a>;</div>
+<div class="line"><span class="lineno">  589</span>    <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> = (<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> &lt; G.<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>) ? G.<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> : <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>;</div>
+<div class="line"><span class="lineno">  590</span>    <a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a> = (<a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a> &lt; G.<a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a>) ? G.<a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a> : <a class="code hl_variable" href="#ad97d0f84f97372a052e477fd15f22fa8">_unique</a>;</div>
+<div class="line"><span class="lineno">  591</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = (<a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> &lt; G.<a class="code hl_function" href="#a516254565a8b30fd2ba3306290e1d923">ndeme</a>()) ? G.<a class="code hl_function" href="#a516254565a8b30fd2ba3306290e1d923">ndeme</a>() : <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
+<div class="line"><span class="lineno">  592</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  593</span>  };</div>
 <div class="ttc" id="aclassgenealogy__t_html_a516254565a8b30fd2ba3306290e1d923"><div class="ttname"><a href="#a516254565a8b30fd2ba3306290e1d923">genealogy_t::ndeme</a></div><div class="ttdeci">size_t ndeme(void) const</div><div class="ttdoc">number of demes</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00061">genealogy.h:61</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -2464,54 +2470,54 @@ Here is the call graph for this function:</div>
 
 <p>Parse a Newick string and create the indicated genealogy. </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00737">737</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  737</span>                                                                     {</div>
-<div class="line"><span class="lineno">  738</span>    <span class="keywordtype">size_t</span> i = 0;</div>
-<div class="line"><span class="lineno">  739</span>    <span class="keywordtype">size_t</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
-<div class="line"><span class="lineno">  740</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
-<div class="line"><span class="lineno">  741</span>      <span class="keywordflow">switch</span> (s[i]) {</div>
-<div class="line"><span class="lineno">  742</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
-<div class="line"><span class="lineno">  743</span>        {</div>
-<div class="line"><span class="lineno">  744</span>          <a class="code hl_function" href="#a1a6d8c8dae17cf7508de924e726149fe">genealogy_t</a> G(t0,<a class="code hl_function" href="#aca957d4da38e7377fc3f226cdb9f3dc3">unique</a>());</div>
-<div class="line"><span class="lineno">  745</span>          node_t *q = 0;</div>
-<div class="line"><span class="lineno">  746</span>          i += G.scan_tree(s.substr(i),t0,&amp;q);</div>
-<div class="line"><span class="lineno">  747</span>          *<span class="keyword">this</span> += G;</div>
-<div class="line"><span class="lineno">  748</span>          <span class="keywordflow">if</span> (p != 0) {</div>
-<div class="line"><span class="lineno">  749</span>            ball_t *g = q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>();</div>
-<div class="line"><span class="lineno">  750</span>            q-&gt;erase(g); p-&gt;insert(g); g-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
-<div class="line"><span class="lineno">  751</span>          }</div>
-<div class="line"><span class="lineno">  752</span>        }</div>
-<div class="line"><span class="lineno">  753</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  754</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>:</div>
-<div class="line"><span class="lineno">  755</span>        {</div>
-<div class="line"><span class="lineno">  756</span>          node_t *q = 0;</div>
-<div class="line"><span class="lineno">  757</span>          i += <a class="code hl_function" href="#a7d834a38973835bd77bf8757cfd8bc06">scan_node</a>(s.substr(i),t0,&amp;q);</div>
-<div class="line"><span class="lineno">  758</span>          <span class="keywordflow">if</span> (p != 0) {</div>
-<div class="line"><span class="lineno">  759</span>            ball_t *g = q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>();</div>
-<div class="line"><span class="lineno">  760</span>            q-&gt;erase(g); p-&gt;insert(g); g-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
-<div class="line"><span class="lineno">  761</span>          }</div>
-<div class="line"><span class="lineno">  762</span>        }</div>
-<div class="line"><span class="lineno">  763</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  764</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><span class="lineno">  765</span>        i += <a class="code hl_function" href="#a3c327236d525792de4f186a7ca7e19f0">scan_ball</a>(s.substr(i),t0,p);</div>
-<div class="line"><span class="lineno">  766</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  767</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;,&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
-<div class="line"><span class="lineno">  768</span>        i++;</div>
-<div class="line"><span class="lineno">  769</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  770</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
-<div class="line"><span class="lineno">  771</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick string: unbalanced parentheses.&quot;</span>,__func__);</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00746">746</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  746</span>                                                                     {</div>
+<div class="line"><span class="lineno">  747</span>    <span class="keywordtype">size_t</span> i = 0;</div>
+<div class="line"><span class="lineno">  748</span>    <span class="keywordtype">size_t</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
+<div class="line"><span class="lineno">  749</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
+<div class="line"><span class="lineno">  750</span>      <span class="keywordflow">switch</span> (s[i]) {</div>
+<div class="line"><span class="lineno">  751</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
+<div class="line"><span class="lineno">  752</span>        {</div>
+<div class="line"><span class="lineno">  753</span>          <a class="code hl_function" href="#a1a6d8c8dae17cf7508de924e726149fe">genealogy_t</a> G(t0,<a class="code hl_function" href="#aca957d4da38e7377fc3f226cdb9f3dc3">unique</a>());</div>
+<div class="line"><span class="lineno">  754</span>          node_t *q = 0;</div>
+<div class="line"><span class="lineno">  755</span>          i += G.scan_tree(s.substr(i),t0,&amp;q);</div>
+<div class="line"><span class="lineno">  756</span>          *<span class="keyword">this</span> += G;</div>
+<div class="line"><span class="lineno">  757</span>          <span class="keywordflow">if</span> (p != 0) {</div>
+<div class="line"><span class="lineno">  758</span>            ball_t *g = q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>();</div>
+<div class="line"><span class="lineno">  759</span>            q-&gt;erase(g); p-&gt;insert(g); g-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
+<div class="line"><span class="lineno">  760</span>          }</div>
+<div class="line"><span class="lineno">  761</span>        }</div>
+<div class="line"><span class="lineno">  762</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  763</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>:</div>
+<div class="line"><span class="lineno">  764</span>        {</div>
+<div class="line"><span class="lineno">  765</span>          node_t *q = 0;</div>
+<div class="line"><span class="lineno">  766</span>          i += <a class="code hl_function" href="#a7d834a38973835bd77bf8757cfd8bc06">scan_node</a>(s.substr(i),t0,&amp;q);</div>
+<div class="line"><span class="lineno">  767</span>          <span class="keywordflow">if</span> (p != 0) {</div>
+<div class="line"><span class="lineno">  768</span>            ball_t *g = q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>();</div>
+<div class="line"><span class="lineno">  769</span>            q-&gt;erase(g); p-&gt;insert(g); g-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
+<div class="line"><span class="lineno">  770</span>          }</div>
+<div class="line"><span class="lineno">  771</span>        }</div>
 <div class="line"><span class="lineno">  772</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  773</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  774</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick string.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  773</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
+<div class="line"><span class="lineno">  774</span>        i += <a class="code hl_function" href="#a3c327236d525792de4f186a7ca7e19f0">scan_ball</a>(s.substr(i),t0,p);</div>
 <div class="line"><span class="lineno">  775</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  776</span>      }</div>
-<div class="line"><span class="lineno">  777</span>    }</div>
-<div class="line"><span class="lineno">  778</span>    <a class="code hl_function" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">sort</a>();</div>
-<div class="line"><span class="lineno">  779</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  780</span>  };</div>
+<div class="line"><span class="lineno">  776</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;,&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;\t&#39;</span>:</div>
+<div class="line"><span class="lineno">  777</span>        i++;</div>
+<div class="line"><span class="lineno">  778</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  779</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
+<div class="line"><span class="lineno">  780</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick string: unbalanced parentheses.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  781</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  782</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  783</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick string.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  784</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  785</span>      }</div>
+<div class="line"><span class="lineno">  786</span>    }</div>
+<div class="line"><span class="lineno">  787</span>    <a class="code hl_function" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">sort</a>();</div>
+<div class="line"><span class="lineno">  788</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  789</span>  };</div>
 <div class="ttc" id="aclassgenealogy__t_html_a1a6d8c8dae17cf7508de924e726149fe"><div class="ttname"><a href="#a1a6d8c8dae17cf7508de924e726149fe">genealogy_t::genealogy_t</a></div><div class="ttdeci">genealogy_t(double t0=0, name_t u=0, size_t nd=1)</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00105">genealogy.h:105</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a3c327236d525792de4f186a7ca7e19f0"><div class="ttname"><a href="#a3c327236d525792de4f186a7ca7e19f0">genealogy_t::scan_ball</a></div><div class="ttdeci">size_t scan_ball(const std::string &amp;s, const slate_t t0, node_t *p)</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00666">genealogy.h:666</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a7d834a38973835bd77bf8757cfd8bc06"><div class="ttname"><a href="#a7d834a38973835bd77bf8757cfd8bc06">genealogy_t::scan_node</a></div><div class="ttdeci">size_t scan_node(const std::string &amp;s, const slate_t t0, node_t **q)</div><div class="ttdoc">Scan the Newick string and create the indicated node.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00682">genealogy.h:682</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a3c327236d525792de4f186a7ca7e19f0"><div class="ttname"><a href="#a3c327236d525792de4f186a7ca7e19f0">genealogy_t::scan_ball</a></div><div class="ttdeci">size_t scan_ball(const std::string &amp;s, const slate_t t0, node_t *p)</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00675">genealogy.h:675</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a7d834a38973835bd77bf8757cfd8bc06"><div class="ttname"><a href="#a7d834a38973835bd77bf8757cfd8bc06">genealogy_t::scan_node</a></div><div class="ttdeci">size_t scan_node(const std::string &amp;s, const slate_t t0, node_t **q)</div><div class="ttdoc">Scan the Newick string and create the indicated node.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00691">genealogy.h:691</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2591,17 +2597,17 @@ Here is the caller graph for this function:</div>
 
 <p>prune the tree (drop all black balls) </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00468">468</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  468</span>                            {</div>
-<div class="line"><span class="lineno">  469</span>    pocket_t *blacks = <a class="code hl_function" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93">colored</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>);</div>
-<div class="line"><span class="lineno">  470</span>    <span class="keywordflow">while</span> (!blacks-&gt;empty()) {</div>
-<div class="line"><span class="lineno">  471</span>      ball_t *b = *(blacks-&gt;begin());</div>
-<div class="line"><span class="lineno">  472</span>      blacks-&gt;erase(b);</div>
-<div class="line"><span class="lineno">  473</span>      <a class="code hl_function" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390">drop</a>(b);</div>
-<div class="line"><span class="lineno">  474</span>    }</div>
-<div class="line"><span class="lineno">  475</span>    <span class="keyword">delete</span> blacks;</div>
-<div class="line"><span class="lineno">  476</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  477</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00477">477</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  477</span>                            {</div>
+<div class="line"><span class="lineno">  478</span>    pocket_t *blacks = <a class="code hl_function" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93">colored</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>);</div>
+<div class="line"><span class="lineno">  479</span>    <span class="keywordflow">while</span> (!blacks-&gt;empty()) {</div>
+<div class="line"><span class="lineno">  480</span>      ball_t *b = *(blacks-&gt;begin());</div>
+<div class="line"><span class="lineno">  481</span>      blacks-&gt;erase(b);</div>
+<div class="line"><span class="lineno">  482</span>      <a class="code hl_function" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390">drop</a>(b);</div>
+<div class="line"><span class="lineno">  483</span>    }</div>
+<div class="line"><span class="lineno">  484</span>    <span class="keyword">delete</span> blacks;</div>
+<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  486</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2809,6 +2815,83 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ac1b5058d312f0b06ad06b441233ed10a" name="ac1b5058d312f0b06ad06b441233ed10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b5058d312f0b06ad06b441233ed10a">&#9670;&#160;</a></span>sample_migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void genealogy_t::sample_migrate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classball__t.html">ball_t</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></td>          <td class="paramname"><span class="paramname"><em>d</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>insert a sample node and simultaneously migrate the lineage </p>
+
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00462">462</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  462</span>                                                           {</div>
+<div class="line"><span class="lineno">  463</span>    <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>() = t;</div>
+<div class="line"><span class="lineno">  464</span>    node_t *p = <a class="code hl_function" href="#a61f9ef25c465e28b4048f276e80c887c">make_node</a>(a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
+<div class="line"><span class="lineno">  465</span>    ball_t *b = <span class="keyword">new</span> ball_t (p,p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>,a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>());</div>
+<div class="line"><span class="lineno">  466</span>    p-&gt;insert(b);</div>
+<div class="line"><span class="lineno">  467</span>    p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>();</div>
+<div class="line"><span class="lineno">  468</span>    <a class="code hl_function" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a">add</a>(p,a);</div>
+<div class="line"><span class="lineno">  469</span>    a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>() = d;</div>
+<div class="line"><span class="lineno">  470</span>  };</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgenealogy__t_ac1b5058d312f0b06ad06b441233ed10a_cgraph.png" border="0" usemap="#aclassgenealogy__t_ac1b5058d312f0b06ad06b441233ed10a_cgraph" alt=""/></div>
+<map name="aclassgenealogy__t_ac1b5058d312f0b06ad06b441233ed10a_cgraph" id="aclassgenealogy__t_ac1b5058d312f0b06ad06b441233ed10a_cgraph">
+<area shape="rect" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="5,122,164,162"/>
+<area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="244,104,365,129"/>
+<area shape="poly" title=" " alt="" coords="164,130,230,123,230,128,165,136"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="471,5,574,31"/>
+<area shape="poly" title=" " alt="" coords="131,119,211,89,342,53,457,28,458,33,343,58,213,94,132,124"/>
+<area shape="rect" href="classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="212,153,397,179"/>
+<area shape="poly" title=" " alt="" coords="165,148,199,152,198,157,164,153"/>
+<area shape="rect" href="classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="235,203,375,228"/>
+<area shape="poly" title=" " alt="" coords="136,159,213,187,242,196,240,201,211,193,134,165"/>
+<area shape="poly" title=" " alt="" coords="326,101,379,71,444,40,463,33,464,37,446,44,381,76,328,106"/>
+<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="467,55,578,80"/>
+<area shape="poly" title=" " alt="" coords="361,101,453,80,454,85,362,107"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="451,153,594,179"/>
+<area shape="poly" title=" " alt="" coords="362,127,453,148,452,153,361,132"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="457,104,588,129"/>
+<area shape="poly" title=" " alt="" coords="365,114,444,114,444,119,365,119"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="648,104,755,129"/>
+<area shape="poly" title=" " alt="" coords="588,114,634,114,634,119,588,119"/>
+<area shape="poly" title=" " alt="" coords="398,163,438,163,438,169,398,169"/>
+<area shape="rect" href="classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db" title="check the size of the genealogy (to prevent memory exhaustion)." alt="" coords="449,203,597,243"/>
+<area shape="poly" title=" " alt="" coords="356,176,398,187,436,198,435,203,397,193,354,181"/>
+<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="445,268,600,293"/>
+<area shape="poly" title=" " alt="" coords="377,176,399,188,415,204,424,221,432,238,447,253,458,260,455,265,444,257,428,241,419,223,411,207,396,192,374,181"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a3c327236d525792de4f186a7ca7e19f0" name="a3c327236d525792de4f186a7ca7e19f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c327236d525792de4f186a7ca7e19f0">&#9670;&#160;</a></span>scan_ball()</h2>
 
@@ -2842,24 +2925,24 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Scan the Newick string and put the ball into the indicated pocket, as appropriate. </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00666">666</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  666</span>                                                                     {</div>
-<div class="line"><span class="lineno">  667</span>    <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col;</div>
-<div class="line"><span class="lineno">  668</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>;</div>
-<div class="line"><span class="lineno">  669</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t;</div>
-<div class="line"><span class="lineno">  670</span>    ball_t *b;</div>
-<div class="line"><span class="lineno">  671</span>    <span class="keywordtype">size_t</span> i = <a class="code hl_function" href="#a6204cbcbb8aff88e4b25753dc380a00b">scan_label</a>(s,&amp;col,&amp;<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>,&amp;t);</div>
-<div class="line"><span class="lineno">  672</span>    t += t0;</div>
-<div class="line"><span class="lineno">  673</span>    <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> = (<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> &lt; t) ? t : <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>;</div>
-<div class="line"><span class="lineno">  674</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = (<a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> &lt;= <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>) ? <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>+1 : <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
-<div class="line"><span class="lineno">  675</span>    <span class="keywordflow">if</span> (col != <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>) <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: bad Newick string (1)&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  676</span>    <span class="keywordflow">if</span> (p == 0) <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: bad Newick string (2)&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  677</span>    b = <span class="keyword">new</span> ball_t(p,<a class="code hl_function" href="#aca957d4da38e7377fc3f226cdb9f3dc3">unique</a>(),col,<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>);</div>
-<div class="line"><span class="lineno">  678</span>    p-&gt;insert(b);</div>
-<div class="line"><span class="lineno">  679</span>    <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  680</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00675">675</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  675</span>                                                                     {</div>
+<div class="line"><span class="lineno">  676</span>    <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col;</div>
+<div class="line"><span class="lineno">  677</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>;</div>
+<div class="line"><span class="lineno">  678</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t;</div>
+<div class="line"><span class="lineno">  679</span>    ball_t *b;</div>
+<div class="line"><span class="lineno">  680</span>    <span class="keywordtype">size_t</span> i = <a class="code hl_function" href="#a6204cbcbb8aff88e4b25753dc380a00b">scan_label</a>(s,&amp;col,&amp;<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>,&amp;t);</div>
+<div class="line"><span class="lineno">  681</span>    t += t0;</div>
+<div class="line"><span class="lineno">  682</span>    <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> = (<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> &lt; t) ? t : <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>;</div>
+<div class="line"><span class="lineno">  683</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = (<a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> &lt;= <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>) ? <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>+1 : <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
+<div class="line"><span class="lineno">  684</span>    <span class="keywordflow">if</span> (col != <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>) <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: bad Newick string (1)&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  685</span>    <span class="keywordflow">if</span> (p == 0) <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: bad Newick string (2)&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  686</span>    b = <span class="keyword">new</span> ball_t(p,<a class="code hl_function" href="#aca957d4da38e7377fc3f226cdb9f3dc3">unique</a>(),col,<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>);</div>
+<div class="line"><span class="lineno">  687</span>    p-&gt;insert(b);</div>
+<div class="line"><span class="lineno">  688</span>    <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  689</span>  };</div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></div><div class="ttdeci">color_t</div><div class="ttdoc">BALL COLORS.</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a6204cbcbb8aff88e4b25753dc380a00b"><div class="ttname"><a href="#a6204cbcbb8aff88e4b25753dc380a00b">genealogy_t::scan_label</a></div><div class="ttdeci">size_t scan_label(const std::string &amp;s, color_t *col, name_t *deme, slate_t *time) const</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00593">genealogy.h:593</a></div></div>
+<div class="ttc" id="aclassgenealogy__t_html_a6204cbcbb8aff88e4b25753dc380a00b"><div class="ttname"><a href="#a6204cbcbb8aff88e4b25753dc380a00b">genealogy_t::scan_label</a></div><div class="ttdeci">size_t scan_label(const std::string &amp;s, color_t *col, name_t *deme, slate_t *time) const</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00602">genealogy.h:602</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2919,10 +3002,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00588">588</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  588</span>                                                             {</div>
-<div class="line"><span class="lineno">  589</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  590</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00597">597</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  597</span>                                                             {</div>
+<div class="line"><span class="lineno">  598</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  599</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2964,77 +3047,77 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Scan the Newick-format label string. This has format c_d_d:f </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00593">593</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  594</span>                                                        {</div>
-<div class="line"><span class="lineno">  595</span>    <span class="keywordtype">size_t</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
-<div class="line"><span class="lineno">  596</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &lt; 1)</div>
-<div class="line"><span class="lineno">  597</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick format: empty label.&quot;</span>,__func__,__FILE__,__LINE__);</div>
-<div class="line"><span class="lineno">  598</span>    <span class="keywordtype">size_t</span> sz, i = 1;</div>
-<div class="line"><span class="lineno">  599</span>    <span class="keywordflow">switch</span> (s[0]) {</div>
-<div class="line"><span class="lineno">  600</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><span class="lineno">  601</span>      *col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>;</div>
-<div class="line"><span class="lineno">  602</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  603</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>:</div>
-<div class="line"><span class="lineno">  604</span>      *col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>;</div>
-<div class="line"><span class="lineno">  605</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  606</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;g&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;m&#39;</span>:</div>
-<div class="line"><span class="lineno">  607</span>      *col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>;</div>
-<div class="line"><span class="lineno">  608</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  609</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  610</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick label: expected one of &#39;b&#39;,&#39;g&#39;,&#39;m&#39;, or &#39;o&#39;, got &#39;%c&#39;.&quot;</span>,</div>
-<div class="line"><span class="lineno">  611</span>          __func__,__FILE__,__LINE__,s[0]);</div>
-<div class="line"><span class="lineno">  612</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  613</span>    }</div>
-<div class="line"><span class="lineno">  614</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; s[i] == <span class="charliteral">&#39;_&#39;</span>) i++;</div>
-<div class="line"><span class="lineno">  615</span>    <span class="keywordflow">if</span> (i == <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</div>
-<div class="line"><span class="lineno">  616</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: premature termination.&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  617</span>    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;(&#39;</span> || s[i] == <span class="charliteral">&#39;)&#39;</span> || s[i] == <span class="charliteral">&#39;,&#39;</span> || s[i] == <span class="charliteral">&#39;;&#39;</span>)</div>
-<div class="line"><span class="lineno">  618</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick format.&quot;</span>,__func__,__FILE__,__LINE__);</div>
-<div class="line"><span class="lineno">  619</span>    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;:&#39;</span>) {</div>
-<div class="line"><span class="lineno">  620</span>      *<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a> = 0;</div>
-<div class="line"><span class="lineno">  621</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  622</span>      <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  623</span>        *<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a> = <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>(stoi(s.substr(i),&amp;sz));</div>
-<div class="line"><span class="lineno">  624</span>        i += sz;</div>
-<div class="line"><span class="lineno">  625</span>      }</div>
-<div class="line"><span class="lineno">  626</span>      <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument&amp; e) {</div>
-<div class="line"><span class="lineno">  627</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick format: deme should be indicated with an integer.&quot;</span>,</div>
-<div class="line"><span class="lineno">  628</span>            __func__,__FILE__,__LINE__);</div>
-<div class="line"><span class="lineno">  629</span>      }</div>
-<div class="line"><span class="lineno">  630</span>      <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
-<div class="line"><span class="lineno">  631</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: deme out of range.&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  632</span>      }</div>
-<div class="line"><span class="lineno">  633</span>      <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
-<div class="line"><span class="lineno">  634</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: parsing deme label: %s.&quot;</span>,__func__,e.what());</div>
-<div class="line"><span class="lineno">  635</span>      }</div>
-<div class="line"><span class="lineno">  636</span>      <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><span class="lineno">  637</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other deme-parsing error.&quot;</span>,__func__);</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00602">602</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  603</span>                                                        {</div>
+<div class="line"><span class="lineno">  604</span>    <span class="keywordtype">size_t</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
+<div class="line"><span class="lineno">  605</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &lt; 1)</div>
+<div class="line"><span class="lineno">  606</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick format: empty label.&quot;</span>,__func__,__FILE__,__LINE__);</div>
+<div class="line"><span class="lineno">  607</span>    <span class="keywordtype">size_t</span> sz, i = 1;</div>
+<div class="line"><span class="lineno">  608</span>    <span class="keywordflow">switch</span> (s[0]) {</div>
+<div class="line"><span class="lineno">  609</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
+<div class="line"><span class="lineno">  610</span>      *col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>;</div>
+<div class="line"><span class="lineno">  611</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  612</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>:</div>
+<div class="line"><span class="lineno">  613</span>      *col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>;</div>
+<div class="line"><span class="lineno">  614</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  615</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;g&#39;</span>: <span class="keywordflow">case</span> <span class="charliteral">&#39;m&#39;</span>:</div>
+<div class="line"><span class="lineno">  616</span>      *col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>;</div>
+<div class="line"><span class="lineno">  617</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  618</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  619</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick label: expected one of &#39;b&#39;,&#39;g&#39;,&#39;m&#39;, or &#39;o&#39;, got &#39;%c&#39;.&quot;</span>,</div>
+<div class="line"><span class="lineno">  620</span>          __func__,__FILE__,__LINE__,s[0]);</div>
+<div class="line"><span class="lineno">  621</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  622</span>    }</div>
+<div class="line"><span class="lineno">  623</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; s[i] == <span class="charliteral">&#39;_&#39;</span>) i++;</div>
+<div class="line"><span class="lineno">  624</span>    <span class="keywordflow">if</span> (i == <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</div>
+<div class="line"><span class="lineno">  625</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: premature termination.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  626</span>    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;(&#39;</span> || s[i] == <span class="charliteral">&#39;)&#39;</span> || s[i] == <span class="charliteral">&#39;,&#39;</span> || s[i] == <span class="charliteral">&#39;;&#39;</span>)</div>
+<div class="line"><span class="lineno">  627</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick format.&quot;</span>,__func__,__FILE__,__LINE__);</div>
+<div class="line"><span class="lineno">  628</span>    <span class="keywordflow">if</span> (s[i] == <span class="charliteral">&#39;:&#39;</span>) {</div>
+<div class="line"><span class="lineno">  629</span>      *<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a> = 0;</div>
+<div class="line"><span class="lineno">  630</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  631</span>      <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  632</span>        *<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a> = <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>(stoi(s.substr(i),&amp;sz));</div>
+<div class="line"><span class="lineno">  633</span>        i += sz;</div>
+<div class="line"><span class="lineno">  634</span>      }</div>
+<div class="line"><span class="lineno">  635</span>      <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument&amp; e) {</div>
+<div class="line"><span class="lineno">  636</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): invalid Newick format: deme should be indicated with an integer.&quot;</span>,</div>
+<div class="line"><span class="lineno">  637</span>            __func__,__FILE__,__LINE__);</div>
 <div class="line"><span class="lineno">  638</span>      }</div>
-<div class="line"><span class="lineno">  639</span>    }</div>
-<div class="line"><span class="lineno">  640</span>    <span class="comment">// skip to branch length</span></div>
-<div class="line"><span class="lineno">  641</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; s[i] != <span class="charliteral">&#39;:&#39;</span> &amp;&amp;</div>
-<div class="line"><span class="lineno">  642</span>           s[i] != <span class="charliteral">&#39;(&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;)&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;,&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;;&#39;</span>) i++;</div>
-<div class="line"><span class="lineno">  643</span>    <span class="keywordflow">if</span> (i == <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> || s[i] != <span class="charliteral">&#39;:&#39;</span>)</div>
-<div class="line"><span class="lineno">  644</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: missing or invalid branch length.&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  645</span>    i++;</div>
-<div class="line"><span class="lineno">  646</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">  647</span>      *<a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a> = <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a>(stod(s.substr(i),&amp;sz));</div>
+<div class="line"><span class="lineno">  639</span>      <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
+<div class="line"><span class="lineno">  640</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: deme out of range.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  641</span>      }</div>
+<div class="line"><span class="lineno">  642</span>      <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line"><span class="lineno">  643</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: parsing deme label: %s.&quot;</span>,__func__,e.what());</div>
+<div class="line"><span class="lineno">  644</span>      }</div>
+<div class="line"><span class="lineno">  645</span>      <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">  646</span>        <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other deme-parsing error.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  647</span>      }</div>
 <div class="line"><span class="lineno">  648</span>    }</div>
-<div class="line"><span class="lineno">  649</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument&amp; e) {</div>
-<div class="line"><span class="lineno">  650</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: branch length should be a non-negative decimal number.&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  651</span>    }</div>
-<div class="line"><span class="lineno">  652</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
-<div class="line"><span class="lineno">  653</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: branch length out of range.&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  654</span>    }</div>
-<div class="line"><span class="lineno">  655</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
-<div class="line"><span class="lineno">  656</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: parsing branch-length: %s.&quot;</span>,__func__,e.what());</div>
+<div class="line"><span class="lineno">  649</span>    <span class="comment">// skip to branch length</span></div>
+<div class="line"><span class="lineno">  650</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; s[i] != <span class="charliteral">&#39;:&#39;</span> &amp;&amp;</div>
+<div class="line"><span class="lineno">  651</span>           s[i] != <span class="charliteral">&#39;(&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;)&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;,&#39;</span> &amp;&amp; s[i] != <span class="charliteral">&#39;;&#39;</span>) i++;</div>
+<div class="line"><span class="lineno">  652</span>    <span class="keywordflow">if</span> (i == <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> || s[i] != <span class="charliteral">&#39;:&#39;</span>)</div>
+<div class="line"><span class="lineno">  653</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: missing or invalid branch length.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  654</span>    i++;</div>
+<div class="line"><span class="lineno">  655</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  656</span>      *<a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a> = <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a>(stod(s.substr(i),&amp;sz));</div>
 <div class="line"><span class="lineno">  657</span>    }</div>
-<div class="line"><span class="lineno">  658</span>    <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><span class="lineno">  659</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other branch-length parsing error.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  658</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument&amp; e) {</div>
+<div class="line"><span class="lineno">  659</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: branch length should be a non-negative decimal number.&quot;</span>,__func__);</div>
 <div class="line"><span class="lineno">  660</span>    }</div>
-<div class="line"><span class="lineno">  661</span>    i += sz;</div>
-<div class="line"><span class="lineno">  662</span>    <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  663</span>  };</div>
+<div class="line"><span class="lineno">  661</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
+<div class="line"><span class="lineno">  662</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: branch length out of range.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  663</span>    }</div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line"><span class="lineno">  665</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: parsing branch-length: %s.&quot;</span>,__func__,e.what());</div>
+<div class="line"><span class="lineno">  666</span>    }</div>
+<div class="line"><span class="lineno">  667</span>    <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">  668</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other branch-length parsing error.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  669</span>    }</div>
+<div class="line"><span class="lineno">  670</span>    i += sz;</div>
+<div class="line"><span class="lineno">  671</span>    <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  672</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3103,29 +3186,29 @@ Here is the caller graph for this function:</div>
 
 <p>Scan the Newick string and create the indicated node. </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00682">682</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  682</span>                                                                      {</div>
-<div class="line"><span class="lineno">  683</span>    <span class="keywordtype">size_t</span> i;</div>
-<div class="line"><span class="lineno">  684</span>    <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col;</div>
-<div class="line"><span class="lineno">  685</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>;</div>
-<div class="line"><span class="lineno">  686</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t;</div>
-<div class="line"><span class="lineno">  687</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u = <a class="code hl_function" href="#aca957d4da38e7377fc3f226cdb9f3dc3">unique</a>();</div>
-<div class="line"><span class="lineno">  688</span>    i = <a class="code hl_function" href="#a6204cbcbb8aff88e4b25753dc380a00b">scan_label</a>(s,&amp;col,&amp;<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>,&amp;t);</div>
-<div class="line"><span class="lineno">  689</span>    t += t0;</div>
-<div class="line"><span class="lineno">  690</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = (<a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> &lt;= <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>) ? <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>+1 : <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
-<div class="line"><span class="lineno">  691</span>    <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> = (<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> &lt; t) ? t : <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>;</div>
-<div class="line"><span class="lineno">  692</span>    node_t *p = <span class="keyword">new</span> node_t(u,t);</div>
-<div class="line"><span class="lineno">  693</span>    ball_t *g = <span class="keyword">new</span> ball_t(p,u,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>,<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>);</div>
-<div class="line"><span class="lineno">  694</span>    p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>() = g;</div>
-<div class="line"><span class="lineno">  695</span>    p-&gt;insert(g);</div>
-<div class="line"><span class="lineno">  696</span>    <span class="keywordflow">if</span> (col==<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) {</div>
-<div class="line"><span class="lineno">  697</span>      ball_t *b = <span class="keyword">new</span> ball_t(p,p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>,<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>);</div>
-<div class="line"><span class="lineno">  698</span>      p-&gt;insert(b);</div>
-<div class="line"><span class="lineno">  699</span>    }</div>
-<div class="line"><span class="lineno">  700</span>    push_back(p);</div>
-<div class="line"><span class="lineno">  701</span>    *q = p;</div>
-<div class="line"><span class="lineno">  702</span>    <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  703</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00691">691</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  691</span>                                                                      {</div>
+<div class="line"><span class="lineno">  692</span>    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><span class="lineno">  693</span>    <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col;</div>
+<div class="line"><span class="lineno">  694</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>;</div>
+<div class="line"><span class="lineno">  695</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t;</div>
+<div class="line"><span class="lineno">  696</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u = <a class="code hl_function" href="#aca957d4da38e7377fc3f226cdb9f3dc3">unique</a>();</div>
+<div class="line"><span class="lineno">  697</span>    i = <a class="code hl_function" href="#a6204cbcbb8aff88e4b25753dc380a00b">scan_label</a>(s,&amp;col,&amp;<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>,&amp;t);</div>
+<div class="line"><span class="lineno">  698</span>    t += t0;</div>
+<div class="line"><span class="lineno">  699</span>    <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> = (<a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a> &lt;= <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>) ? <a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>+1 : <a class="code hl_variable" href="#a83db6a45b9eec1f9b9b790dfbad8e321">_ndeme</a>;</div>
+<div class="line"><span class="lineno">  700</span>    <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> = (<a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a> &lt; t) ? t : <a class="code hl_variable" href="#a7d237288f7816ea5c480f9bba9bc9229">_time</a>;</div>
+<div class="line"><span class="lineno">  701</span>    node_t *p = <span class="keyword">new</span> node_t(u,t);</div>
+<div class="line"><span class="lineno">  702</span>    ball_t *g = <span class="keyword">new</span> ball_t(p,u,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>,<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>);</div>
+<div class="line"><span class="lineno">  703</span>    p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>() = g;</div>
+<div class="line"><span class="lineno">  704</span>    p-&gt;insert(g);</div>
+<div class="line"><span class="lineno">  705</span>    <span class="keywordflow">if</span> (col==<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) {</div>
+<div class="line"><span class="lineno">  706</span>      ball_t *b = <span class="keyword">new</span> ball_t(p,p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>,<a class="code hl_variable" href="lbdp_8cc.html#ae241dd82f0d473afd1b39c94f801c127">deme</a>);</div>
+<div class="line"><span class="lineno">  707</span>      p-&gt;insert(b);</div>
+<div class="line"><span class="lineno">  708</span>    }</div>
+<div class="line"><span class="lineno">  709</span>    push_back(p);</div>
+<div class="line"><span class="lineno">  710</span>    *q = p;</div>
+<div class="line"><span class="lineno">  711</span>    <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  712</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3194,34 +3277,34 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Parse a single-root Newick tree. This assumes the string starts with a '('. </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00706">706</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  707</span>                                                     {</div>
-<div class="line"><span class="lineno">  708</span>    <span class="keywordtype">size_t</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
-<div class="line"><span class="lineno">  709</span>    <span class="keywordtype">size_t</span> i = 1, j = 1, k;</div>
-<div class="line"><span class="lineno">  710</span>    <span class="keywordtype">size_t</span> stack = 1;</div>
-<div class="line"><span class="lineno">  711</span>    <span class="keywordflow">while</span> (j &lt; n &amp;&amp; stack &gt; 0) {</div>
-<div class="line"><span class="lineno">  712</span>      <span class="keywordflow">switch</span> (s[j]) {</div>
-<div class="line"><span class="lineno">  713</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
-<div class="line"><span class="lineno">  714</span>        stack++;</div>
-<div class="line"><span class="lineno">  715</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  716</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
-<div class="line"><span class="lineno">  717</span>        stack--;</div>
-<div class="line"><span class="lineno">  718</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  719</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  720</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  721</span>      }</div>
-<div class="line"><span class="lineno">  722</span>      j++;</div>
-<div class="line"><span class="lineno">  723</span>    }</div>
-<div class="line"><span class="lineno">  724</span>    <span class="keywordflow">if</span> (stack &gt; 0)</div>
-<div class="line"><span class="lineno">  725</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: premature end of Newick string.&quot;</span>,__func__);</div>
-<div class="line"><span class="lineno">  726</span>    node_t *p = 0;</div>
-<div class="line"><span class="lineno">  727</span>    k = j;</div>
-<div class="line"><span class="lineno">  728</span>    k += <a class="code hl_function" href="#a7d834a38973835bd77bf8757cfd8bc06">scan_node</a>(s.substr(j),t0,&amp;p);</div>
-<div class="line"><span class="lineno">  729</span>    <a class="code hl_function" href="#ad7adf4e2c9fbc235a659128f98237860">parse</a>(s.substr(i,j-i-1),p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>,p);</div>
-<div class="line"><span class="lineno">  730</span>    *root = p;</div>
-<div class="line"><span class="lineno">  731</span>    <span class="keywordflow">return</span> k;</div>
-<div class="line"><span class="lineno">  732</span>  };</div>
-<div class="ttc" id="aclassgenealogy__t_html_ad7adf4e2c9fbc235a659128f98237860"><div class="ttname"><a href="#ad7adf4e2c9fbc235a659128f98237860">genealogy_t::parse</a></div><div class="ttdeci">genealogy_t &amp; parse(const std::string &amp;s, slate_t t0, node_t *p=0)</div><div class="ttdoc">Parse a Newick string and create the indicated genealogy.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00737">genealogy.h:737</a></div></div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00715">715</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  716</span>                                                     {</div>
+<div class="line"><span class="lineno">  717</span>    <span class="keywordtype">size_t</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = s.size();</div>
+<div class="line"><span class="lineno">  718</span>    <span class="keywordtype">size_t</span> i = 1, j = 1, k;</div>
+<div class="line"><span class="lineno">  719</span>    <span class="keywordtype">size_t</span> stack = 1;</div>
+<div class="line"><span class="lineno">  720</span>    <span class="keywordflow">while</span> (j &lt; n &amp;&amp; stack &gt; 0) {</div>
+<div class="line"><span class="lineno">  721</span>      <span class="keywordflow">switch</span> (s[j]) {</div>
+<div class="line"><span class="lineno">  722</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
+<div class="line"><span class="lineno">  723</span>        stack++;</div>
+<div class="line"><span class="lineno">  724</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  725</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
+<div class="line"><span class="lineno">  726</span>        stack--;</div>
+<div class="line"><span class="lineno">  727</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  728</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  729</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  730</span>      }</div>
+<div class="line"><span class="lineno">  731</span>      j++;</div>
+<div class="line"><span class="lineno">  732</span>    }</div>
+<div class="line"><span class="lineno">  733</span>    <span class="keywordflow">if</span> (stack &gt; 0)</div>
+<div class="line"><span class="lineno">  734</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: premature end of Newick string.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">  735</span>    node_t *p = 0;</div>
+<div class="line"><span class="lineno">  736</span>    k = j;</div>
+<div class="line"><span class="lineno">  737</span>    k += <a class="code hl_function" href="#a7d834a38973835bd77bf8757cfd8bc06">scan_node</a>(s.substr(j),t0,&amp;p);</div>
+<div class="line"><span class="lineno">  738</span>    <a class="code hl_function" href="#ad7adf4e2c9fbc235a659128f98237860">parse</a>(s.substr(i,j-i-1),p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>,p);</div>
+<div class="line"><span class="lineno">  739</span>    *root = p;</div>
+<div class="line"><span class="lineno">  740</span>    <span class="keywordflow">return</span> k;</div>
+<div class="line"><span class="lineno">  741</span>  };</div>
+<div class="ttc" id="aclassgenealogy__t_html_ad7adf4e2c9fbc235a659128f98237860"><div class="ttname"><a href="#ad7adf4e2c9fbc235a659128f98237860">genealogy_t::parse</a></div><div class="ttdeci">genealogy_t &amp; parse(const std::string &amp;s, slate_t t0, node_t *p=0)</div><div class="ttdoc">Parse a Newick string and create the indicated genealogy.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00746">genealogy.h:746</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3379,63 +3462,65 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_ab1bae819d94c8e4d9033d48864818da2_icgraph.png" border="0" usemap="#aclassgenealogy__t_ab1bae819d94c8e4d9033d48864818da2_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_ab1bae819d94c8e4d9033d48864818da2_icgraph" id="aclassgenealogy__t_ab1bae819d94c8e4d9033d48864818da2_icgraph">
-<area shape="rect" title="view/set current time." alt="" coords="883,419,1023,444"/>
+<area shape="rect" title="view/set current time." alt="" coords="883,444,1023,469"/>
 <area shape="rect" href="classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="671,5,811,31"/>
-<area shape="poly" title=" " alt="" coords="948,405,943,336,927,241,912,190,892,140,866,93,833,52,804,33,807,29,836,48,870,90,897,138,917,189,932,240,948,335,954,405"/>
+<area shape="poly" title=" " alt="" coords="949,430,945,356,930,255,915,201,895,147,867,97,833,52,820,41,804,33,807,28,823,37,837,48,872,94,899,145,920,199,935,254,950,356,954,430"/>
 <area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="479,81,542,107"/>
-<area shape="poly" title=" " alt="" coords="949,405,945,339,929,253,914,208,894,166,867,128,833,96,798,77,759,65,719,60,678,60,602,71,543,86,541,81,601,65,678,55,719,55,760,60,800,72,836,92,871,124,899,163,919,206,934,252,950,339,954,405"/>
+<area shape="poly" title=" " alt="" coords="950,430,947,360,942,315,933,267,918,218,897,172,869,130,833,96,798,77,760,65,719,60,678,60,602,70,543,86,542,81,601,65,678,54,720,54,761,60,800,72,836,92,873,127,902,169,923,217,938,266,947,314,953,360,955,430"/>
 <area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="666,107,817,132"/>
-<area shape="poly" title=" " alt="" coords="946,405,936,350,916,280,902,243,883,207,860,174,833,145,815,134,818,130,836,141,864,171,888,205,906,241,921,278,941,349,951,404"/>
+<area shape="poly" title=" " alt="" coords="947,431,939,372,920,294,905,254,886,214,862,177,833,145,815,134,818,129,836,141,866,174,891,211,910,252,925,293,944,371,952,430"/>
 <area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="668,156,815,181"/>
-<area shape="poly" title=" " alt="" coords="944,406,931,360,910,303,877,244,857,218,833,195,814,183,816,179,836,191,861,214,882,241,914,301,936,358,949,405"/>
+<area shape="poly" title=" " alt="" coords="945,431,934,381,913,317,880,251,859,221,833,195,813,183,816,178,836,191,863,217,885,248,918,315,939,379,950,430"/>
 <area shape="rect" href="classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069" title="human&#45;readable info" alt="" coords="659,205,824,231"/>
-<area shape="poly" title=" " alt="" coords="940,407,925,370,902,326,872,281,833,244,813,233,816,229,836,240,876,278,907,323,930,368,945,405"/>
+<area shape="poly" title=" " alt="" coords="942,432,928,390,906,339,875,288,855,264,833,244,814,233,817,228,836,240,859,261,879,284,911,337,933,388,947,430"/>
 <area shape="rect" href="classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49" title="nodelist in data&#45;frame format" alt="" coords="664,255,819,280"/>
-<area shape="poly" title=" " alt="" coords="936,409,895,350,866,319,833,294,810,282,812,278,836,289,870,316,899,347,940,405"/>
+<area shape="poly" title=" " alt="" coords="938,432,922,400,898,363,869,325,833,294,812,283,815,278,836,289,873,321,903,359,926,398,943,430"/>
 <area shape="rect" href="classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447" title="graft a new lineage into deme d" alt="" coords="671,304,811,329"/>
-<area shape="poly" title=" " alt="" coords="927,411,885,377,833,344,801,332,803,327,836,340,888,373,930,407"/>
+<area shape="poly" title=" " alt="" coords="932,435,890,389,863,365,833,344,805,332,807,327,836,340,866,360,894,385,936,431"/>
 <area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="662,354,821,394"/>
-<area shape="poly" title=" " alt="" coords="891,417,815,397,816,391,892,412"/>
-<area shape="rect" href="classgenealogy__t.html#a516dfee5af2be8f95a578928707816fb" title="movement into deme d" alt="" coords="661,419,822,444"/>
-<area shape="poly" title=" " alt="" coords="869,434,822,434,822,429,869,429"/>
+<area shape="poly" title=" " alt="" coords="910,441,834,408,801,397,803,392,836,404,912,436"/>
+<area shape="rect" href="classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033" title="movement into deme d" alt="" coords="661,419,822,444"/>
+<area shape="poly" title=" " alt="" coords="869,449,822,444,823,438,869,444"/>
 <area shape="rect" href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252" title="put genealogy at current time into Newick format." alt="" coords="663,468,819,493"/>
-<area shape="poly" title=" " alt="" coords="885,450,797,471,796,465,884,445"/>
+<area shape="poly" title=" " alt="" coords="869,469,820,474,819,469,869,463"/>
 <area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="648,517,835,543"/>
-<area shape="poly" title=" " alt="" coords="925,454,884,481,836,507,800,520,798,515,834,502,881,477,922,450"/>
+<area shape="poly" title=" " alt="" coords="912,477,836,507,794,520,792,515,834,502,910,472"/>
 <area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="648,567,835,592"/>
-<area shape="poly" title=" " alt="" coords="937,457,895,507,867,534,836,556,808,569,806,564,833,552,864,530,891,504,933,454"/>
+<area shape="poly" title=" " alt="" coords="932,481,890,520,836,556,804,569,802,564,833,552,887,516,928,477"/>
 <area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="662,616,821,641"/>
-<area shape="poly" title=" " alt="" coords="943,458,927,491,904,531,873,571,836,606,812,618,809,614,833,601,869,568,899,528,923,489,939,456"/>
+<area shape="poly" title=" " alt="" coords="940,483,899,545,870,578,836,606,810,618,808,614,833,601,867,574,895,541,936,480"/>
 <area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="662,666,821,706"/>
-<area shape="poly" title=" " alt="" coords="947,458,933,501,910,553,878,607,859,632,836,655,816,668,813,664,833,651,855,629,874,604,905,551,928,499,942,457"/>
-<area shape="rect" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b" title=" " alt="" coords="652,829,831,855"/>
-<area shape="poly" title=" " alt="" coords="954,458,950,530,935,627,920,679,899,730,872,778,836,820,820,831,817,827,833,816,867,775,894,728,915,678,929,626,945,529,949,458"/>
-<area shape="rect" href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59" title="R list description." alt="" coords="657,780,825,805"/>
-<area shape="poly" title=" " alt="" coords="953,458,946,522,928,606,913,651,893,694,868,735,836,771,820,782,817,778,833,767,864,732,889,692,908,649,923,604,941,521,948,458"/>
-<area shape="rect" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45" title="machine&#45;readable info" alt="" coords="670,731,813,756"/>
-<area shape="poly" title=" " alt="" coords="951,459,941,513,921,584,906,621,887,657,864,691,836,720,814,734,812,729,833,716,860,687,883,654,901,619,916,582,936,512,946,458"/>
+<area shape="poly" title=" " alt="" coords="945,484,929,521,906,567,875,614,836,655,816,668,813,664,833,651,871,611,902,564,925,519,940,482"/>
+<area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="662,730,821,770"/>
+<area shape="poly" title=" " alt="" coords="949,483,938,533,916,596,883,662,862,693,836,720,820,732,816,728,833,716,857,690,879,660,911,594,932,532,944,482"/>
+<area shape="rect" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b" title=" " alt="" coords="652,893,831,919"/>
+<area shape="poly" title=" " alt="" coords="950,483,936,573,911,693,878,808,858,853,837,884,821,895,817,891,833,880,853,850,873,806,906,692,930,572,945,483"/>
+<area shape="rect" href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59" title="R list description." alt="" coords="657,844,825,869"/>
+<area shape="poly" title=" " alt="" coords="954,483,950,553,933,648,918,698,898,748,871,794,836,835,820,846,817,842,833,831,867,791,893,745,913,696,928,646,944,552,949,483"/>
+<area shape="rect" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45" title="machine&#45;readable info" alt="" coords="670,795,813,820"/>
+<area shape="poly" title=" " alt="" coords="952,483,945,545,926,626,911,669,892,711,867,750,836,784,814,798,811,794,833,780,863,746,887,708,906,667,921,624,940,544,947,483"/>
 <area shape="poly" title=" " alt="" coords="652,112,542,100,543,95,653,107"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,444,147,469"/>
-<area shape="poly" title=" " alt="" coords="670,138,649,146,565,183,481,224,323,312,194,392,113,446,110,442,191,388,320,308,478,220,562,178,647,141,668,133"/>
-<area shape="rect" href="bare_8cc.html#ad9aacb867dca35703b1e2c3b6bd17bcc" title="data&#45;frame format" alt="" coords="477,467,544,492"/>
-<area shape="poly" title=" " alt="" coords="659,288,650,294,625,313,603,335,565,385,537,433,520,468,515,465,532,430,560,382,599,332,621,309,646,289,656,283"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="266,544,334,569"/>
-<area shape="poly" title=" " alt="" coords="466,498,335,547,333,542,464,493"/>
-<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="425,779,596,804"/>
-<area shape="poly" title=" " alt="" coords="668,829,569,807,570,801,670,824"/>
-<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="421,829,600,855"/>
-<area shape="poly" title=" " alt="" coords="638,845,600,845,600,839,638,839"/>
-<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="227,779,373,804"/>
-<area shape="poly" title=" " alt="" coords="412,794,374,794,374,789,412,789"/>
-<area shape="poly" title=" " alt="" coords="281,768,99,471,103,468,286,766"/>
-<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,779,179,804"/>
-<area shape="poly" title=" " alt="" coords="213,803,179,803,179,798,213,798"/>
-<area shape="poly" title=" " alt="" coords="192,780,226,780,226,785,192,785"/>
-<area shape="poly" title=" " alt="" coords="443,829,353,807,354,801,444,823"/>
-<area shape="poly" title=" " alt="" coords="408,838,226,819,153,807,154,801,227,814,408,833"/>
-<area shape="rect" href="bare_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="483,623,538,648"/>
-<area shape="poly" title=" " alt="" coords="670,729,647,720,580,685,528,650,531,646,583,680,649,716,672,724"/>
-<area shape="poly" title=" " alt="" coords="469,623,333,572,335,567,471,618"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,476,147,501"/>
+<area shape="poly" title=" " alt="" coords="668,139,649,146,563,186,478,232,318,330,190,419,111,478,108,474,187,415,315,326,475,228,560,181,647,141,666,134"/>
+<area shape="rect" href="bare_8cc.html#ad9aacb867dca35703b1e2c3b6bd17bcc" title="data&#45;frame format" alt="" coords="477,499,544,524"/>
+<area shape="poly" title=" " alt="" coords="657,288,650,293,623,317,599,344,561,403,534,459,519,499,514,498,529,457,556,401,595,341,619,313,646,289,654,284"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="266,584,334,609"/>
+<area shape="poly" title=" " alt="" coords="466,532,333,586,331,581,464,527"/>
+<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="425,843,596,868"/>
+<area shape="poly" title=" " alt="" coords="668,893,569,871,570,865,670,888"/>
+<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="421,893,600,919"/>
+<area shape="poly" title=" " alt="" coords="638,909,600,909,600,903,638,903"/>
+<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="227,843,373,868"/>
+<area shape="poly" title=" " alt="" coords="412,858,374,858,374,853,412,853"/>
+<area shape="poly" title=" " alt="" coords="282,832,98,503,103,500,287,829"/>
+<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,843,179,868"/>
+<area shape="poly" title=" " alt="" coords="213,867,179,867,179,862,213,862"/>
+<area shape="poly" title=" " alt="" coords="192,844,226,844,226,849,192,849"/>
+<area shape="poly" title=" " alt="" coords="443,893,353,871,354,865,444,887"/>
+<area shape="poly" title=" " alt="" coords="408,902,226,883,153,871,154,865,227,878,408,897"/>
+<area shape="rect" href="bare_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="483,671,538,696"/>
+<area shape="poly" title=" " alt="" coords="668,793,647,784,610,764,576,740,524,698,528,694,579,736,613,759,649,780,670,788"/>
+<area shape="poly" title=" " alt="" coords="469,670,331,612,333,607,471,665"/>
 </map>
 </div>
 
@@ -3609,40 +3694,42 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_aca957d4da38e7377fc3f226cdb9f3dc3_icgraph.png" border="0" usemap="#aclassgenealogy__t_aca957d4da38e7377fc3f226cdb9f3dc3_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_aca957d4da38e7377fc3f226cdb9f3dc3_icgraph" id="aclassgenealogy__t_aca957d4da38e7377fc3f226cdb9f3dc3_icgraph">
-<area shape="rect" title="get the next unique name" alt="" coords="669,260,824,285"/>
-<area shape="rect" href="classgenealogy__t.html#a81973e0d258e38573fb227f3d1bb1dbb" title="birth of second or subsequent sibling into deme d" alt="" coords="459,129,599,155"/>
-<area shape="poly" title=" " alt="" coords="723,252,678,209,650,187,620,168,593,157,595,152,623,164,653,183,682,205,727,248"/>
-<area shape="rect" href="classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="436,179,621,204"/>
-<area shape="poly" title=" " alt="" coords="698,258,563,207,565,202,700,253"/>
-<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="234,317,381,343"/>
-<area shape="poly" title=" " alt="" coords="656,279,550,286,436,301,352,320,351,315,436,295,550,281,655,273"/>
-<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="443,311,614,336"/>
-<area shape="poly" title=" " alt="" coords="679,291,585,313,583,308,677,286"/>
-<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="439,360,618,385"/>
-<area shape="poly" title=" " alt="" coords="719,295,675,324,622,351,590,362,588,357,620,346,672,319,716,291"/>
+<area shape="rect" title="get the next unique name" alt="" coords="669,307,824,332"/>
+<area shape="rect" href="classgenealogy__t.html#a81973e0d258e38573fb227f3d1bb1dbb" title="birth of second or subsequent sibling into deme d" alt="" coords="459,153,599,179"/>
+<area shape="poly" title=" " alt="" coords="727,297,682,244,653,216,620,192,595,181,597,176,623,188,656,212,686,240,731,293"/>
+<area shape="rect" href="classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="436,203,621,228"/>
+<area shape="poly" title=" " alt="" coords="706,303,555,231,558,226,708,298"/>
+<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="234,381,381,407"/>
+<area shape="poly" title=" " alt="" coords="656,320,550,327,492,335,437,347,413,358,389,371,354,384,352,379,387,366,410,353,435,342,491,329,549,321,655,315"/>
+<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="443,357,614,383"/>
+<area shape="poly" title=" " alt="" coords="679,338,585,360,583,355,677,333"/>
+<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="439,407,618,432"/>
+<area shape="poly" title=" " alt="" coords="719,342,675,371,622,398,590,409,588,404,620,393,672,366,716,338"/>
 <area shape="rect" href="classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="237,5,377,31"/>
-<area shape="poly" title=" " alt="" coords="442,174,434,168,421,152,414,136,409,105,405,73,398,59,386,44,370,33,373,28,390,40,403,56,410,72,414,104,419,135,425,149,438,164,445,170"/>
+<area shape="poly" title=" " alt="" coords="441,197,434,192,419,173,412,154,409,116,407,79,400,62,386,44,371,33,374,29,390,40,405,59,412,78,414,116,417,153,424,171,438,188,444,193"/>
 <area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="232,55,383,80"/>
-<area shape="poly" title=" " alt="" coords="446,175,434,168,417,149,409,130,402,111,386,93,366,82,369,78,390,89,407,108,414,128,422,146,438,164,449,171"/>
+<area shape="poly" title=" " alt="" coords="443,198,434,192,423,180,415,167,409,141,403,117,397,105,386,93,368,82,371,78,390,89,401,102,408,115,414,140,420,165,427,177,438,188,446,194"/>
 <area shape="rect" href="classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447" title="graft a new lineage into deme d" alt="" coords="237,104,377,129"/>
-<area shape="poly" title=" " alt="" coords="460,177,435,168,387,143,355,132,357,127,389,138,437,164,462,172"/>
-<area shape="rect" href="classgenealogy__t.html#a516dfee5af2be8f95a578928707816fb" title="movement into deme d" alt="" coords="227,153,388,179"/>
-<area shape="poly" title=" " alt="" coords="422,182,388,178,389,173,423,177"/>
+<area shape="poly" title=" " alt="" coords="450,200,435,192,419,180,410,167,401,155,387,143,363,132,365,127,389,138,405,151,414,164,423,176,437,188,453,195"/>
+<area shape="rect" href="classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033" title="movement into deme d" alt="" coords="227,153,388,179"/>
+<area shape="poly" title=" " alt="" coords="457,202,365,181,366,176,458,197"/>
 <area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="228,203,387,228"/>
-<area shape="poly" title=" " alt="" coords="423,205,387,209,387,204,422,200"/>
+<area shape="poly" title=" " alt="" coords="422,218,387,218,387,213,422,213"/>
 <area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="228,253,387,293"/>
-<area shape="poly" title=" " alt="" coords="482,211,364,255,362,250,480,206"/>
+<area shape="poly" title=" " alt="" coords="466,234,386,255,384,250,465,229"/>
+<area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="228,317,387,357"/>
+<area shape="poly" title=" " alt="" coords="500,238,450,272,389,307,364,319,361,314,387,302,447,267,497,234"/>
 <area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="61,55,123,80"/>
 <area shape="poly" title=" " alt="" coords="218,70,124,70,124,65,218,65"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,185,147,211"/>
-<area shape="poly" title=" " alt="" coords="242,87,228,94,191,116,158,142,108,187,104,183,154,138,188,112,225,89,240,82"/>
-<area shape="poly" title=" " alt="" coords="243,315,225,307,189,284,155,258,104,213,108,209,158,254,192,280,228,302,245,310"/>
-<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,317,179,343"/>
-<area shape="poly" title=" " alt="" coords="220,342,179,342,179,336,220,336"/>
-<area shape="poly" title=" " alt="" coords="193,318,233,319,233,324,192,324"/>
-<area shape="poly" title=" " alt="" coords="429,329,381,330,381,325,429,324"/>
-<area shape="poly" title=" " alt="" coords="448,360,373,345,374,340,449,355"/>
-<area shape="poly" title=" " alt="" coords="425,373,329,368,226,358,151,345,152,340,227,353,329,362,426,367"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,217,147,243"/>
+<area shape="poly" title=" " alt="" coords="240,88,228,94,188,124,152,159,104,219,100,216,148,155,184,120,225,89,237,83"/>
+<area shape="poly" title=" " alt="" coords="240,378,225,371,185,340,149,305,100,244,104,241,153,301,188,336,228,366,242,374"/>
+<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,381,179,407"/>
+<area shape="poly" title=" " alt="" coords="220,406,179,406,179,400,220,400"/>
+<area shape="poly" title=" " alt="" coords="193,382,233,383,233,388,192,388"/>
+<area shape="poly" title=" " alt="" coords="430,383,381,389,381,383,429,378"/>
+<area shape="poly" title=" " alt="" coords="425,410,381,405,381,400,426,405"/>
+<area shape="poly" title=" " alt="" coords="426,427,329,427,226,422,147,409,148,404,227,417,329,422,426,421"/>
 </map>
 </div>
 

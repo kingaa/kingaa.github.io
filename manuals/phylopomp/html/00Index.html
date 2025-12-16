@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head><title>R: Phylodynamic Inference for POMP Models</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<link rel="stylesheet" type="text/css" href="R.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="R.css">
 </head><body><div class="container">
 <h1> Phylodynamic Inference for POMP Models
 </h1>
-<hr/>
+<hr>
 <div style="text-align: center;">
-</div><h2>Documentation for package &lsquo;phylopomp&rsquo; version 0.14.9.1</h2>
+</div><h2>Documentation for package &lsquo;phylopomp&rsquo; version 0.15.0.0</h2>
 
 <ul>
 <li><a href="NEWS.html" target="_blank">Package NEWS</a>.</li>
@@ -42,8 +42,12 @@
 <td>Classical susceptible-infected-recovered model</td></tr>
 <tr><td style="width: 25%;"><a href="sir.html">continueSIRS</a></td>
 <td>Classical susceptible-infected-recovered model</td></tr>
+<tr><td style="width: 25%;"><a href="strains.html">continueStrains</a></td>
+<td>Three strains compete for a single susceptible pool.</td></tr>
 <tr><td style="width: 25%;"><a href="twospecies.html">continueTwoSpecies</a></td>
 <td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability.</td></tr>
+<tr><td style="width: 25%;"><a href="twoundead.html">continueTwoUndead</a></td>
+<td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability. This is identical to the TwoSpecies model with the exception that dead lineages are not pruned. Instead, they become *ghosts*.</td></tr>
 <tr><td style="width: 25%;"><a href="curtail.html">curtail</a></td>
 <td>Curtail a genealogy to the given time</td></tr>
 <tr><td style="width: 25%;"><a href="diagram.html">diagram</a></td>
@@ -100,8 +104,12 @@
 <td>Classical susceptible-infected-recovered model</td></tr>
 <tr><td style="width: 25%;"><a href="sir.html">runSIRS</a></td>
 <td>Classical susceptible-infected-recovered model</td></tr>
+<tr><td style="width: 25%;"><a href="strains.html">runStrains</a></td>
+<td>Three strains compete for a single susceptible pool.</td></tr>
 <tr><td style="width: 25%;"><a href="twospecies.html">runTwoSpecies</a></td>
 <td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability.</td></tr>
+<tr><td style="width: 25%;"><a href="twoundead.html">runTwoUndead</a></td>
+<td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability. This is identical to the TwoSpecies model with the exception that dead lineages are not pruned. Instead, they become *ghosts*.</td></tr>
 <tr><td style="width: 25%;"><a href="s2i2r2.html">S2I2R2</a></td>
 <td>Two-host infection model with waning, immigration, and demography.</td></tr>
 <tr><td style="width: 25%;"><a href="s2i2r2.html">s2i2r2</a></td>
@@ -138,6 +146,10 @@
 <td>Classical susceptible-infected-recovered model</td></tr>
 <tr><td style="width: 25%;"><a href="sir.html">sir_pomp</a></td>
 <td>Classical susceptible-infected-recovered model</td></tr>
+<tr><td style="width: 25%;"><a href="strains.html">Strains</a></td>
+<td>Three strains compete for a single susceptible pool.</td></tr>
+<tr><td style="width: 25%;"><a href="strains.html">strains</a></td>
+<td>Three strains compete for a single susceptible pool.</td></tr>
 <tr><td style="width: 25%;"><a href="treeplot.html">treeplot</a></td>
 <td>Fancy tree plotter</td></tr>
 <tr><td style="width: 25%;"><a href="twospecies.html">TwoSpecies</a></td>
@@ -146,6 +158,10 @@
 <td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability.</td></tr>
 <tr><td style="width: 25%;"><a href="twospecies.html">twospecies_pomp</a></td>
 <td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability.</td></tr>
+<tr><td style="width: 25%;"><a href="twoundead.html">TwoUndead</a></td>
+<td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability. This is identical to the TwoSpecies model with the exception that dead lineages are not pruned. Instead, they become *ghosts*.</td></tr>
+<tr><td style="width: 25%;"><a href="twoundead.html">twoundead</a></td>
+<td>Two-host infection model with waning, immigration, demography, and spillover. Hosts are culled upon sampling with a given probability. This is identical to the TwoSpecies model with the exception that dead lineages are not pruned. Instead, they become *ghosts*.</td></tr>
 <tr><td style="width: 25%;"><a href="yaml.html">yaml</a></td>
 <td>YAML output</td></tr>
 </table>

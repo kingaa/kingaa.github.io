@@ -9,5 +9,7 @@ var searchData=
   ['siir_5fparameters_5ft_6',['siir_parameters_t',['../structsiir__parameters__t.html',1,'']]],
   ['siir_5fstate_5ft_7',['siir_state_t',['../structsiir__state__t.html',1,'']]],
   ['sir_5fparameters_5ft_8',['sir_parameters_t',['../structsir__parameters__t.html',1,'']]],
-  ['sir_5fstate_5ft_9',['sir_state_t',['../structsir__state__t.html',1,'']]]
+  ['sir_5fstate_5ft_9',['sir_state_t',['../structsir__state__t.html',1,'']]],
+  ['strains_5fparameters_5ft_10',['strains_parameters_t',['../structstrains__parameters__t.html',1,'']]],
+  ['strains_5fstate_5ft_11',['strains_state_t',['../structstrains__state__t.html',1,'']]]
 ];

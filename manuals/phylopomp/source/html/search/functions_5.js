@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['gendat_0',['gendat',['../classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49',1,'genealogy_t::gendat(double *tout, int *anc, int *lin, int *sat, int *type, int *index, int *child) const'],['../classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb',1,'genealogy_t::gendat(void) const'],['../bare_8cc.html#ad9aacb867dca35703b1e2c3b6bd17bcc',1,'gendat(SEXP State):&#160;bare.cc'],['../generics_8h.html#aa04f8a891b3066d0829d45a8d9f69ca2',1,'gendat(const TYPE &amp;G):&#160;generics.h'],['../init_8c.html#a387b11f3f139523611c57cdb2e3ba5e1',1,'gendat(SEXP):&#160;bare.cc']]],
-  ['genealogy_1',['genealogy',['../generics_8h.html#a8ecffbf3ac4fb49c4cd4dbb7a77ad12d',1,'generics.h']]],
-  ['genealogy_5ft_2',['genealogy_t',['../classgenealogy__t.html#a1a6d8c8dae17cf7508de924e726149fe',1,'genealogy_t::genealogy_t(double t0=0, name_t u=0, size_t nd=1)'],['../classgenealogy__t.html#aa93154b5ca448298287c61a4aabef6b9',1,'genealogy_t::genealogy_t(raw_t *o)'],['../classgenealogy__t.html#a2f8bcda3c0c6b90b48ea765c50dfa621',1,'genealogy_t::genealogy_t(SEXP o)'],['../classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab',1,'genealogy_t::genealogy_t(const genealogy_t &amp;G)'],['../classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165',1,'genealogy_t::genealogy_t(genealogy_t &amp;&amp;)=default']]],
-  ['getinfo_3',['getInfo',['../getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7',1,'getInfo(SEXP args):&#160;getinfo.cc'],['../init_8c.html#a9c6f0ea5016932d4927478ff1221a2c3',1,'getInfo(SEXP):&#160;getinfo.cc']]],
-  ['graft_4',['graft',['../classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447',1,'genealogy_t::graft()'],['../classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556',1,'master_t::graft()']]],
-  ['green_5fball_5',['green_ball',['../classnode__t.html#acb3ee337996be158355dd6aaaa9811fa',1,'node_t::green_ball(void) const'],['../classnode__t.html#a1205c0098b7e90120882365d7e86a1fa',1,'node_t::green_ball(void)']]]
+  ['first_5fball_0',['first_ball',['../classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1',1,'pocket_t']]]
 ];

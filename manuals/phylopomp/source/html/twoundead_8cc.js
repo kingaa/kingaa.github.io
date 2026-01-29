@@ -4,9 +4,9 @@ var twoundead_8cc =
     [ "twoundead_parameters_t", "structtwoundead__parameters__t.html", "structtwoundead__parameters__t" ],
     [ "twoundead_genealogy_t", "twoundead_8cc.html#a46f2bfa05ec5d3f99e579e3ef1964c05", null ],
     [ "twoundead_proc_t", "twoundead_8cc.html#a66ac56689784d96cbadad52a3f475415", null ],
-    [ "ghost1", "twoundead_8cc.html#a60af604f053bb84bf56341a51040c80d", null ],
-    [ "ghost2", "twoundead_8cc.html#a3cd3fe7aa10b16420033973899ca42c8", null ],
-    [ "host1", "twoundead_8cc.html#aced07f0302ba21be6499820756fc66ee", null ],
-    [ "host2", "twoundead_8cc.html#a35da5a646660cb5507f50bbb579ada6b", null ],
-    [ "outside", "twoundead_8cc.html#adf4bc48449a98847003387dd7c3add71", null ]
+    [ "ghost1", "twoundead_8cc.html#ad330a9c9e77db8a7227cba88c86230fd", null ],
+    [ "ghost2", "twoundead_8cc.html#ad07fc73f1a3f1a6ba2fdd002ca95cdbb", null ],
+    [ "host1", "twoundead_8cc.html#a09a78cbb76df5f7aaca0dbb897d3442c", null ],
+    [ "host2", "twoundead_8cc.html#a2bb9e597468399b06bb7f0ebcb0651c2", null ],
+    [ "outside", "twoundead_8cc.html#a17a90fbe3dd8abb821637cd7eb276a7f", null ]
 ];

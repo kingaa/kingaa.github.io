@@ -20,7 +20,7 @@ var searchData=
   ['popul_5fproc_5ft_3c_20si2r_5fstate_5ft_2c_20si2r_5fparameters_5ft_2c_209_20_3e_17',['popul_proc_t&lt; si2r_state_t, si2r_parameters_t, 9 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20siir_5fstate_5ft_2c_20siir_5fparameters_5ft_2c_209_20_3e_18',['popul_proc_t&lt; siir_state_t, siir_parameters_t, 9 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20sir_5fstate_5ft_2c_20sir_5fparameters_5ft_2c_204_20_3e_19',['popul_proc_t&lt; sir_state_t, sir_parameters_t, 4 &gt;',['../classpopul__proc__t.html',1,'']]],
-  ['popul_5fproc_5ft_3c_20strains_5fstate_5ft_2c_20strains_5fparameters_5ft_2c_2010_20_3e_20',['popul_proc_t&lt; strains_state_t, strains_parameters_t, 10 &gt;',['../classpopul__proc__t.html',1,'']]],
+  ['popul_5fproc_5ft_3c_20strains_5fstate_5ft_2c_20strains_5fparameters_5ft_2c_209_20_3e_20',['popul_proc_t&lt; strains_state_t, strains_parameters_t, 9 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20twospecies_5fstate_5ft_2c_20twospecies_5fparameters_5ft_2c_2022_20_3e_21',['popul_proc_t&lt; twospecies_state_t, twospecies_parameters_t, 22 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20twoundead_5fstate_5ft_2c_20twoundead_5fparameters_5ft_2c_2022_20_3e_22',['popul_proc_t&lt; twoundead_state_t, twoundead_parameters_t, 22 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5ft_23',['popul_t',['../classmaster__t.html#a63c8b8c3932cd25aad6cb78c03d82ed8',1,'master_t']]],

@@ -13,5 +13,5 @@ var searchData=
   ['slate_5ft_10',['slate_t',['../internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357',1,'internal.h']]],
   ['state_5ft_11',['state_t',['../classpopul__proc__t.html#a74f63f57449373aed0d3f78ae913cb35',1,'popul_proc_t']]],
   ['strains_5fgenealogy_5ft_12',['strains_genealogy_t',['../strains_8cc.html#a4e96714cb3a9d52ca4079f363461cceb',1,'strains.cc']]],
-  ['strains_5fproc_5ft_13',['strains_proc_t',['../strains_8cc.html#a8ee04ad1dfce51904eaac8c2e761c705',1,'strains.cc']]]
+  ['strains_5fproc_5ft_13',['strains_proc_t',['../strains_8cc.html#a3dfed96e23e0953200f35fb8e3de4bd4',1,'strains.cc']]]
 ];

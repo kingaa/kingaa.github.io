@@ -8,6 +8,6 @@ var searchData=
   ['get_5fuserdata_5',['get_userdata',['../init_8c.html#aaebeb1369a763abb5c9d3e85406737f9',1,'get_userdata:&#160;init.c'],['../pomplink_8h.html#aaebeb1369a763abb5c9d3e85406737f9',1,'get_userdata:&#160;init.c']]],
   ['get_5fuserdata_5fdouble_6',['get_userdata_double',['../init_8c.html#ab8c5f92e888b86a4bd87789856c07bbb',1,'get_userdata_double:&#160;init.c'],['../pomplink_8h.html#ab8c5f92e888b86a4bd87789856c07bbb',1,'get_userdata_double:&#160;init.c']]],
   ['get_5fuserdata_5fint_7',['get_userdata_int',['../init_8c.html#a950f5be1c4ce64a64de7e8939b87830c',1,'get_userdata_int:&#160;init.c'],['../pomplink_8h.html#a950f5be1c4ce64a64de7e8939b87830c',1,'get_userdata_int:&#160;init.c']]],
-  ['ghost1_8',['ghost1',['../twoundead_8cc.html#a60af604f053bb84bf56341a51040c80d',1,'twoundead.cc']]],
-  ['ghost2_9',['ghost2',['../twoundead_8cc.html#a3cd3fe7aa10b16420033973899ca42c8',1,'twoundead.cc']]]
+  ['ghost1_8',['ghost1',['../twoundead_8cc.html#ad330a9c9e77db8a7227cba88c86230fd',1,'twoundead.cc']]],
+  ['ghost2_9',['ghost2',['../twoundead_8cc.html#ad07fc73f1a3f1a6ba2fdd002ca95cdbb',1,'twoundead.cc']]]
 ];

@@ -11,8 +11,8 @@ var searchData=
   ['sigma21_8',['sigma21',['../structsi2r__parameters__t.html#ade9ffa1d68142c5d37b62d9012dd1422',1,'si2r_parameters_t::sigma21'],['../structsiir__parameters__t.html#a4466d9c00cf49570b7981381b7a4c379',1,'siir_parameters_t::sigma21']]],
   ['slate_9',['slate',['../classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9',1,'node_t']]],
   ['state_10',['state',['../classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9',1,'popul_proc_t']]],
-  ['strain1_11',['strain1',['../siir_8cc.html#a6b374551f66f788b99d13316b56ac26a',1,'strain1:&#160;siir.cc'],['../strains_8cc.html#a6b374551f66f788b99d13316b56ac26a',1,'strain1:&#160;strains.cc']]],
-  ['strain2_12',['strain2',['../siir_8cc.html#a718f95e76251cc80ec351dc29cab0b82',1,'strain2:&#160;siir.cc'],['../strains_8cc.html#a718f95e76251cc80ec351dc29cab0b82',1,'strain2:&#160;strains.cc']]],
-  ['strain3_13',['strain3',['../strains_8cc.html#af32722964e6505b06bcbac304ad536b7',1,'strains.cc']]],
-  ['superspreader_14',['superspreader',['../si2r_8cc.html#ab8682cda5d7fc412577862223ba83118',1,'si2r.cc']]]
+  ['strain1_11',['strain1',['../siir_8cc.html#a828c3a72ce5b48dbb2ad4b7f9930ad4f',1,'strain1:&#160;siir.cc'],['../strains_8cc.html#a828c3a72ce5b48dbb2ad4b7f9930ad4f',1,'strain1:&#160;strains.cc']]],
+  ['strain2_12',['strain2',['../siir_8cc.html#a300f00e69b61a86ffe42ea631c8922ac',1,'strain2:&#160;siir.cc'],['../strains_8cc.html#a300f00e69b61a86ffe42ea631c8922ac',1,'strain2:&#160;strains.cc']]],
+  ['strain3_13',['strain3',['../strains_8cc.html#aaceea23c71f51e52b8822452760cf48f',1,'strains.cc']]],
+  ['superspreader_14',['superspreader',['../si2r_8cc.html#a3e9e9ebecb4cabcff7ef62ca71a78ea8',1,'si2r.cc']]]
 ];

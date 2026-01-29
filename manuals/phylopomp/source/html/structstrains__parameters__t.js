@@ -7,7 +7,6 @@ var structstrains__parameters__t =
     [ "I1_0", "structstrains__parameters__t.html#ae034ae983911cc5bf3c95654b9cbfd4d", null ],
     [ "I2_0", "structstrains__parameters__t.html#a781cce7941ff585d5e9d5f8239e09747", null ],
     [ "I3_0", "structstrains__parameters__t.html#ae3b6b04602404b219b86eca691aed612", null ],
-    [ "omega", "structstrains__parameters__t.html#a9d62cfb99ea46031cba999cbf9150ee1", null ],
     [ "psi1", "structstrains__parameters__t.html#a4fc5dd2249ef2edfe391a564b56c8c4c", null ],
     [ "psi2", "structstrains__parameters__t.html#a363b941acbfb1cbc107c33e4b56540e4", null ],
     [ "psi3", "structstrains__parameters__t.html#ae2c3debe449d881790ef49416a276f37", null ],

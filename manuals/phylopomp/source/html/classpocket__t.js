@@ -5,6 +5,7 @@ var classpocket__t =
     [ "bytesize", "classpocket__t.html#a8d3ed4fcab81ac0ae7e8cd5d88408cbf", null ],
     [ "clean", "classpocket__t.html#a01bb1db161b45b6770a082ad80d2f07f", null ],
     [ "describe", "classpocket__t.html#a88115eb8cba3f1c075012ffec50621af", null ],
+    [ "first_ball", "classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1", null ],
     [ "holds", "classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6", null ],
     [ "holds", "classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf", null ],
     [ "last_ball", "classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9", null ],

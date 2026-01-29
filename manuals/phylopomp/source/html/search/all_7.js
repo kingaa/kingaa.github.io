@@ -18,8 +18,8 @@ var searchData=
   ['get_5fuserdata_5fint_15',['get_userdata_int',['../init_8c.html#a950f5be1c4ce64a64de7e8939b87830c',1,'get_userdata_int:&#160;init.c'],['../pomplink_8h.html#a950f5be1c4ce64a64de7e8939b87830c',1,'get_userdata_int:&#160;init.c']]],
   ['getinfo_16',['getInfo',['../getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7',1,'getInfo(SEXP args):&#160;getinfo.cc'],['../init_8c.html#a9c6f0ea5016932d4927478ff1221a2c3',1,'getInfo(SEXP):&#160;getinfo.cc']]],
   ['getinfo_2ecc_17',['getinfo.cc',['../getinfo_8cc.html',1,'']]],
-  ['ghost1_18',['ghost1',['../twoundead_8cc.html#a60af604f053bb84bf56341a51040c80d',1,'twoundead.cc']]],
-  ['ghost2_19',['ghost2',['../twoundead_8cc.html#a3cd3fe7aa10b16420033973899ca42c8',1,'twoundead.cc']]],
+  ['ghost1_18',['ghost1',['../twoundead_8cc.html#ad330a9c9e77db8a7227cba88c86230fd',1,'twoundead.cc']]],
+  ['ghost2_19',['ghost2',['../twoundead_8cc.html#ad07fc73f1a3f1a6ba2fdd002ca95cdbb',1,'twoundead.cc']]],
   ['graft_20',['graft',['../classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447',1,'genealogy_t::graft()'],['../classmaster__t.html#a5aa15d06560da90b51d8c8a72df92556',1,'master_t::graft()']]],
   ['green_21',['green',['../ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca',1,'ball.h']]],
   ['green_5fball_22',['green_ball',['../classnode__t.html#acb3ee337996be158355dd6aaaa9811fa',1,'node_t::green_ball(void) const'],['../classnode__t.html#a1205c0098b7e90120882365d7e86a1fa',1,'node_t::green_ball(void)']]]

@@ -4,5 +4,5 @@ var moran_8cc =
     [ "moran_parameters_t", "structmoran__parameters__t.html", "structmoran__parameters__t" ],
     [ "moran_genealogy_t", "moran_8cc.html#a0d148d006807400fc0cf11190b3aa9dc", null ],
     [ "moran_proc_t", "moran_8cc.html#aa0fd6f453ad00a99f9bc79349907cf40", null ],
-    [ "deme", "moran_8cc.html#ae241dd82f0d473afd1b39c94f801c127", null ]
+    [ "deme", "moran_8cc.html#a1ad5d5005b5e6448ae0e58b158a27811", null ]
 ];

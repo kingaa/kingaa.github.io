@@ -31,9 +31,9 @@ with constant-rate sampling.
 
 continueLBDP(object, time, lambda = NA, mu = NA, psi = NA)
 
-lbdp_exact(x, lambda, mu, psi, n0 = 1)
-
 lbdp_pomp(x, lambda, mu, psi, n0 = 1, t0 = 0)
+
+lbdp_exact(x, lambda, mu, psi, n0 = 1)
 </code></pre>
 
 
@@ -54,15 +54,15 @@ lbdp_pomp(x, lambda, mu, psi, n0 = 1, t0 = 0)
 </td></tr>
 <tr><td><code id="mu">mu</code></td>
 <td>
-<p>per capita recovery rate.</p>
+<p>per capita death rate</p>
 </td></tr>
 <tr><td><code id="psi">psi</code></td>
 <td>
-<p>per capita sampling rate.</p>
+<p>per capita sampling rate</p>
 </td></tr>
 <tr><td><code id="n0">n0</code></td>
 <td>
-<p>initial population size</p>
+<p>population size at time t0</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -78,10 +78,9 @@ lbdp_pomp(x, lambda, mu, psi, n0 = 1, t0 = 0)
 
 <h3>Details</h3>
 
-<p><code>lbdp_exact</code> gives the exact log likelihood of a linear birth-death process, conditioned on <code class="reqn">n_0 = 0</code> (Stadler, 2010, Thm 3.5).
-The derivation is also given in comments in the code.
-</p>
 <p><code>lbdp_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and a linear birth-death-sampling process.
+</p>
+<p><code>lbdp_exact</code> gives the exact log likelihood of a linear birth-death process, conditioned on the population size at time 0.
 </p>
 
 
@@ -103,6 +102,8 @@ Note that the time since the most recent sample is informative.
 <p>T. Stadler. Sampling-through-time in birth-death trees. <em>Journal of Theoretical Biology</em> <b>267</b>, 396&ndash;404, 2010. <a href="https://doi.org/10.1016/j.jtbi.2010.09.010">doi:10.1016/j.jtbi.2010.09.010</a>.
 </p>
 <p>T. Stadler. Sampling-through-time in birth-death trees. <em>Journal of Theoretical Biology</em> <b>267</b>, 396&ndash;404, 2010. <a href="https://doi.org/10.1016/j.jtbi.2010.09.010">doi:10.1016/j.jtbi.2010.09.010</a>.
+</p>
+<p>A. A. King, Q. Lin, and E. L. Ionides. Exact phylodynamic likelihood via structured Markov genealogy processes. <em>arXiv</em> 2405.17032, 2024. <a href="https://doi.org/10.48550/arxiv.2405.17032">doi:10.48550/arxiv.2405.17032</a>.
 </p>
 
 
@@ -136,7 +137,7 @@ simulate("LBDP",time=4) |&gt;
 
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.15.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.15.2.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

@@ -195,16 +195,16 @@ $(function(){initNavTree('lbdp__pomp_8c_source.html',''); initResizable(true); }
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  assert(parent&lt;=nnode);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">// singular portion of filter equation</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">switch</span> (nodetype[parent]) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">default</span>:                      <span class="comment">// non-genealogical event</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">case</span> 0:                       <span class="comment">// root</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> += 1;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordflow">case</span> 1:                       <span class="comment">// sample</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="comment">// singular portion of filter equation</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordflow">switch</span> (nodetype[parent]) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">default</span>:                      <span class="comment">// non-genealogical event</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">case</span> 0:                       <span class="comment">// root</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> += 1;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">case</span> 1:                       <span class="comment">// sample</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    assert(<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &gt;= <a class="code hl_define" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>);</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    assert(<a class="code hl_define" href="lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> &gt;= 0);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> (sat[parent] == 1) {     <span class="comment">// s=1</span></div>

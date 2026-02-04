@@ -3,8 +3,11 @@ var searchData=
   ['b1_0',['b1',['../twospecies__pomp_8c.html#a4d46c8a35daf7c9b9e71edfae7eb1bce',1,'twospecies_pomp.c']]],
   ['b2_1',['b2',['../twospecies__pomp_8c.html#acff3bec713fd324f76ac8042293272bf',1,'twospecies_pomp.c']]],
   ['beta_2',['Beta',['../seirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc',1,'Beta:&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc',1,'Beta:&#160;sirs_pomp.c']]],
-  ['beta11_3',['Beta11',['../twospecies__pomp_8c.html#ab259b8a3f1329e1ecd57a8b0b7d86fbd',1,'twospecies_pomp.c']]],
-  ['beta12_4',['Beta12',['../twospecies__pomp_8c.html#a3197e3548c3f880639369be28c7ff4a1',1,'twospecies_pomp.c']]],
-  ['beta21_5',['Beta21',['../twospecies__pomp_8c.html#a21c4ff9ac21dc611c58bef21eefbb8b2',1,'twospecies_pomp.c']]],
-  ['beta22_6',['Beta22',['../twospecies__pomp_8c.html#a4d96dc22273a943b23774ac519154dcc',1,'twospecies_pomp.c']]]
+  ['beta1_3',['Beta1',['../strains__pomp_8c.html#aa605bcb9d71db7f46c589c975b05f5f8',1,'strains_pomp.c']]],
+  ['beta11_4',['Beta11',['../twospecies__pomp_8c.html#ab259b8a3f1329e1ecd57a8b0b7d86fbd',1,'twospecies_pomp.c']]],
+  ['beta12_5',['Beta12',['../twospecies__pomp_8c.html#a3197e3548c3f880639369be28c7ff4a1',1,'twospecies_pomp.c']]],
+  ['beta2_6',['Beta2',['../strains__pomp_8c.html#aa5ac9396a2fed9215055f056b9d81fda',1,'strains_pomp.c']]],
+  ['beta21_7',['Beta21',['../twospecies__pomp_8c.html#a21c4ff9ac21dc611c58bef21eefbb8b2',1,'twospecies_pomp.c']]],
+  ['beta22_8',['Beta22',['../twospecies__pomp_8c.html#a4d96dc22273a943b23774ac519154dcc',1,'twospecies_pomp.c']]],
+  ['beta3_9',['Beta3',['../strains__pomp_8c.html#a1799d6ec4d8af60ad129d8f7bea5bc7b',1,'strains_pomp.c']]]
 ];

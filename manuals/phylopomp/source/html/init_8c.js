@@ -11,7 +11,7 @@ var init_8c =
     [ "DECLARATIONS", "init_8c.html#a7a27737f0b0fc716b65df507055a5920", null ],
     [ "DECLARATIONS", "init_8c.html#a679bd8b9f9093652fabb9a3bfb046b10", null ],
     [ "DECLARATIONS", "init_8c.html#a1c142a8dc567d2276ab351c31eb17510", null ],
-    [ "gendat", "init_8c.html#a387b11f3f139523611c57cdb2e3ba5e1", null ],
+    [ "gendat", "init_8c.html#aa8f574d00e3f725b997106b529e23c6f", null ],
     [ "getInfo", "init_8c.html#a9c6f0ea5016932d4927478ff1221a2c3", null ],
     [ "parse_newick", "init_8c.html#a888f6a962714e136419f7a5c0d6801bb", null ],
     [ "R_init_phylopomp", "init_8c.html#a071d822d4db004b7729f6819ffabbc44", null ],

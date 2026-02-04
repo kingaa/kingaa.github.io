@@ -10,6 +10,9 @@ var decls_8h =
     [ "sirs_dmeas", "decls_8h.html#a7b460433880bdc16debf35bd2bab47c5", null ],
     [ "sirs_gill", "decls_8h.html#a13a5344f6efd51451462b23aeacbf3da", null ],
     [ "sirs_rinit", "decls_8h.html#a2eff16adf4a245bffc7b5ca26f86a443", null ],
+    [ "strains_dmeas", "decls_8h.html#a2c190e811c2e053ebfd154bdec3fc74c", null ],
+    [ "strains_gill", "decls_8h.html#a76c003ed3cb224c6d4d67d8d129710e3", null ],
+    [ "strains_rinit", "decls_8h.html#ab91cccc87fc4f4c7ac32292e4f90188a", null ],
     [ "twospecies_dmeas", "decls_8h.html#ac87c4ec30d753f95a5acdf563a9682a2", null ],
     [ "twospecies_gill", "decls_8h.html#a49e349329002cb6694973af207a0e775", null ],
     [ "twospecies_rinit", "decls_8h.html#aa5583eb496f68826abc050c24366b34d", null ]

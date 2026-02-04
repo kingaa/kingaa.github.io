@@ -7,5 +7,6 @@ var searchData=
   ['siir_2ecc_4',['siir.cc',['../siir_8cc.html',1,'']]],
   ['sir_2ecc_5',['sir.cc',['../sir_8cc.html',1,'']]],
   ['sirs_5fpomp_2ec_6',['sirs_pomp.c',['../sirs__pomp_8c.html',1,'']]],
-  ['strains_2ecc_7',['strains.cc',['../strains_8cc.html',1,'']]]
+  ['strains_2ecc_7',['strains.cc',['../strains_8cc.html',1,'']]],
+  ['strains_5fpomp_2ec_8',['strains_pomp.c',['../strains__pomp_8c.html',1,'']]]
 ];

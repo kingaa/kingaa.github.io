@@ -15,7 +15,7 @@ var classgenealogy__t =
     [ "death", "classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9", null ],
     [ "describe", "classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069", null ],
     [ "extant", "classgenealogy__t.html#ab20d6aff547191c1f18dcfe9548025ce", null ],
-    [ "gendat", "classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49", null ],
+    [ "gendat", "classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc", null ],
     [ "gendat", "classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb", null ],
     [ "graft", "classgenealogy__t.html#a64f9ce261b5ccfb2835051edf7777447", null ],
     [ "lineage_count", "classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a", null ],

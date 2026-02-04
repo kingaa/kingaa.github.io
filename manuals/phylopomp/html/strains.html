@@ -54,6 +54,22 @@ continueStrains(
   psi2 = NA,
   psi3 = NA
 )
+
+strains_pomp(
+  x,
+  Beta1,
+  Beta2,
+  Beta3,
+  gamma,
+  psi1,
+  psi2,
+  psi3,
+  S0,
+  I1_0,
+  I2_0,
+  I3_0,
+  R0
+)
 </code></pre>
 
 
@@ -97,12 +113,24 @@ continueStrains(
 <p>either the name of the model to simulate
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
+<tr><td><code id="x">x</code></td>
+<td>
+<p>genealogy in <span class="pkg">phylopomp</span> format (i.e., an object that inherits from &lsquo;gpgen&rsquo;).</p>
+</td></tr>
 </table>
+
+
+<h3>Details</h3>
+
+<p><code>strains_pomp</code> constructs a &lsquo;pomp&rsquo; object containing a given set of data and the Strains model.
+</p>
 
 
 <h3>Value</h3>
 
 <p><code>runStrains</code> and <code>continueStrains</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;Strains&rdquo;.
+</p>
+<p><code>strains_pomp</code> returns a &lsquo;pomp&rsquo; object.
 </p>
 
 
@@ -121,7 +149,7 @@ continueStrains(
 <code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
 </p>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.15.2.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.16.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

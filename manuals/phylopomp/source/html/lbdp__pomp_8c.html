@@ -562,16 +562,16 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   90</span>  assert(parent&lt;=nnode);</div>
 <div class="line"><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>  <span class="comment">// singular portion of filter equation</span></div>
-<div class="line"><span class="lineno">   94</span>  <span class="keywordflow">switch</span> (nodetype[parent]) {</div>
-<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">default</span>:                      <span class="comment">// non-genealogical event</span></div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">case</span> 0:                       <span class="comment">// root</span></div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_define" href="#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
-<div class="line"><span class="lineno">   99</span>    <a class="code hl_define" href="#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> += 1;</div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">case</span> 1:                       <span class="comment">// sample</span></div>
-<div class="line"><span class="lineno">  102</span>    <a class="code hl_define" href="#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
+<div class="line"><span class="lineno">   93</span>  <a class="code hl_define" href="#ae1d1ec9482079231e898236e2b23c9ba">ll</a> = 0;</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>  <span class="comment">// singular portion of filter equation</span></div>
+<div class="line"><span class="lineno">   96</span>  <span class="keywordflow">switch</span> (nodetype[parent]) {</div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">default</span>:                      <span class="comment">// non-genealogical event</span></div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">case</span> 0:                       <span class="comment">// root</span></div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_define" href="#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> += 1;</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">case</span> 1:                       <span class="comment">// sample</span></div>
 <div class="line"><span class="lineno">  103</span>    assert(<a class="code hl_define" href="#ad5228cd48403ef9d8b632f5c7c124720">n</a> &gt;= <a class="code hl_define" href="#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a>);</div>
 <div class="line"><span class="lineno">  104</span>    assert(<a class="code hl_define" href="#a9d5bb438b2c23069ed9c406cdf838d7c">ell</a> &gt;= 0);</div>
 <div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span> (sat[parent] == 1) {     <span class="comment">// s=1</span></div>

@@ -1,113 +1,117 @@
 <map id="getInfo" name="getInfo">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,483,73,508"/>
-<area shape="rect" id="Node000002" href="$generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c" title="human readable output" alt="" coords="139,105,217,131"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,483,38,425,48,338,57,289,72,240,92,192,119,148,131,136,135,140,123,152,97,195,77,242,63,291,53,339,44,426,43,483"/>
-<area shape="rect" id="Node000003" href="$bare_8cc.html#ad9aacb867dca35703b1e2c3b6bd17bcc" title="data&#45;frame format" alt="" coords="145,257,211,283"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="40,482,49,447,64,400,87,348,119,300,133,288,137,292,123,304,92,351,69,402,54,449,46,483"/>
-<area shape="rect" id="Node000013" href="$classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="298,156,459,181"/>
-<area shape="poly" id="edge46_Node000001_Node000013" title=" " alt="" coords="40,482,49,423,66,339,89,258,104,227,120,205,157,181,198,166,242,159,284,157,284,162,242,164,200,171,159,186,123,209,108,229,94,260,71,341,54,424,45,483"/>
-<area shape="rect" id="Node000024" href="$classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="305,207,452,232"/>
-<area shape="poly" id="edge47_Node000001_Node000024" title=" " alt="" coords="38,482,40,436,50,371,60,336,74,302,94,270,120,244,159,221,203,208,248,203,291,203,291,209,249,208,204,213,161,226,123,248,98,274,79,304,65,338,55,372,45,437,43,482"/>
-<area shape="rect" id="Node000028" href="$classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce" title=" " alt="" coords="283,380,475,405"/>
-<area shape="poly" id="edge53_Node000001_Node000028" title=" " alt="" coords="41,482,48,452,63,414,86,375,102,359,120,345,150,333,176,332,235,345,327,373,326,378,234,350,175,337,151,338,123,350,105,363,91,379,68,416,53,454,46,483"/>
-<area shape="rect" id="Node000030" href="$generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a" title="number of lineages through time" alt="" coords="121,359,235,384"/>
-<area shape="poly" id="edge41_Node000001_Node000030" title=" " alt="" coords="46,481,76,439,96,416,120,395,129,388,132,393,123,399,100,420,80,443,51,484"/>
-<area shape="rect" id="Node000031" href="$getinfo_8cc.html#a8768501322299fac51ad8e69d17bde76" title=" " alt="" coords="133,408,223,433"/>
-<area shape="poly" id="edge42_Node000001_Node000031" title=" " alt="" coords="59,480,120,444,134,437,136,442,123,448,62,485"/>
-<area shape="rect" id="Node000032" href="$generics_8h.html#a0a0c2c08b74c0485d5aed6da45a9971f" title=" " alt="" coords="145,457,211,483"/>
-<area shape="poly" id="edge43_Node000001_Node000032" title=" " alt="" coords="73,487,131,476,132,481,74,492"/>
-<area shape="rect" id="Node000033" href="$generics_8h.html#a80e792583cf9de00235b5935bd3e6a94" title="tree in newick format" alt="" coords="144,507,212,532"/>
-<area shape="poly" id="edge44_Node000001_Node000033" title=" " alt="" coords="74,499,130,508,129,514,73,504"/>
-<area shape="rect" id="Node000034" href="$generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8" title=" " alt="" coords="139,556,217,581"/>
-<area shape="poly" id="edge45_Node000001_Node000034" title=" " alt="" coords="61,506,123,542,134,548,132,553,120,547,59,511"/>
-<area shape="rect" id="Node000035" href="$generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="149,605,207,631"/>
-<area shape="poly" id="edge48_Node000001_Node000035" title=" " alt="" coords="51,507,80,548,100,571,123,592,138,601,135,605,120,596,96,575,75,551,46,510"/>
-<area shape="rect" id="Node000036" href="$internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415" title=" " alt="" coords="123,655,233,680"/>
-<area shape="poly" id="edge49_Node000001_Node000036" title=" " alt="" coords="47,507,73,570,95,608,123,641,128,645,124,649,119,645,90,611,68,573,42,509"/>
-<area shape="rect" id="Node000037" href="$generics_8h.html#a80273a90776cfea19d5014f6489b8648" title="structure in R list format" alt="" coords="138,704,218,729"/>
-<area shape="poly" id="edge50_Node000001_Node000037" title=" " alt="" coords="45,508,52,543,66,592,90,644,105,669,123,691,128,695,125,699,119,695,101,672,85,647,61,594,47,545,40,509"/>
-<area shape="rect" id="Node000038" href="$generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b" title=" " alt="" coords="152,753,204,779"/>
-<area shape="poly" id="edge51_Node000001_Node000038" title=" " alt="" coords="44,508,48,552,61,613,84,680,102,712,123,740,141,753,138,757,119,744,97,715,80,682,56,614,43,552,39,509"/>
-<area shape="rect" id="Node000039" href="$generics_8h.html#a59187003bc5f4f4243c58a5642c512a9" title=" " alt="" coords="138,803,218,828"/>
-<area shape="poly" id="edge52_Node000001_Node000039" title=" " alt="" coords="43,508,45,559,55,634,65,675,79,716,99,755,123,790,128,794,125,798,119,793,94,757,74,718,60,676,50,635,40,560,38,508"/>
-<area shape="rect" id="Node000040" href="$bare_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="151,852,205,877"/>
-<area shape="poly" id="edge54_Node000001_Node000040" title=" " alt="" coords="45,508,54,576,70,675,94,774,108,812,123,839,140,851,136,856,119,842,103,815,89,775,65,676,48,577,39,508"/>
-<area shape="rect" id="Node000004" href="$classgenealogy__t.html#ad8557c4bc55d1bc9233d8862f9547c49" title="nodelist in data&#45;frame format" alt="" coords="777,555,931,580"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="212,276,330,310,404,336,476,366,559,412,619,456,679,498,716,519,762,541,782,548,780,553,760,546,714,524,676,502,616,460,556,417,474,371,402,341,329,315,211,281"/>
-<area shape="poly" id="edge13_Node000003_Node000013" title=" " alt="" coords="192,255,231,224,281,193,306,183,308,188,284,198,234,228,195,259"/>
-<area shape="poly" id="edge25_Node000003_Node000024" title=" " alt="" coords="211,259,314,233,315,238,212,264"/>
-<area shape="poly" id="edge36_Node000003_Node000028" title=" " alt="" coords="207,281,236,300,251,316,260,331,269,345,284,358,311,373,309,377,281,363,265,348,256,334,247,319,233,304,204,285"/>
-<area shape="rect" id="Node000005" href="$classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="1005,604,1125,629"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="910,577,997,598,996,603,908,583"/>
-<area shape="rect" id="Node000006" href="$classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="1005,653,1124,679"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="878,578,931,607,996,640,1012,646,1010,651,994,644,928,612,875,582"/>
-<area shape="rect" id="Node000008" href="$classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="1003,407,1126,432"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="927,552,945,541,956,530,963,518,969,494,975,469,982,456,993,443,1000,437,1004,441,996,447,986,459,980,470,974,495,967,520,960,533,948,545,929,557"/>
-<area shape="rect" id="Node000009" href="$classnode__t.html#af3d818f04a9a0db70752922a54e984be" title="number of descendants" alt="" coords="997,555,1132,580"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="932,565,984,565,984,570,932,570"/>
-<area shape="rect" id="Node000010" href="$classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="1007,456,1123,481"/>
-<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="920,552,945,541,960,530,969,518,978,505,993,492,1006,485,1009,489,996,496,982,508,973,521,964,533,948,546,923,557"/>
-<area shape="rect" id="Node000012" href="$classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="995,703,1135,728"/>
-<area shape="poly" id="edge12_Node000004_Node000012" title=" " alt="" coords="868,578,920,631,957,662,996,689,1007,695,1005,700,993,694,953,666,917,635,864,582"/>
-<area shape="rect" id="Node000007" href="$classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1183,555,1325,580"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1106,651,1134,640,1181,613,1223,586,1226,590,1184,617,1136,644,1108,656"/>
-<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="1132,565,1169,565,1169,570,1132,570"/>
-<area shape="rect" id="Node000011" href="$classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="1195,456,1313,481"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="1123,466,1180,466,1180,471,1123,471"/>
-<area shape="rect" id="Node000014" href="$classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93" title="Get all balls of a color." alt="" coords="545,205,691,231"/>
-<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="441,179,543,200,542,205,440,184"/>
-<area shape="rect" id="Node000015" href="$classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="551,156,685,181"/>
-<area shape="poly" id="edge15_Node000013_Node000015" title=" " alt="" coords="459,166,538,166,538,171,459,171"/>
-<area shape="rect" id="Node000020" href="$classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="567,5,669,31"/>
-<area shape="poly" id="edge21_Node000013_Node000020" title=" " alt="" coords="390,154,444,103,481,74,521,48,555,33,557,38,524,52,484,78,448,107,394,158"/>
-<area shape="rect" id="Node000021" href="$classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="1009,281,1120,307"/>
-<area shape="poly" id="edge22_Node000013_Node000021" title=" " alt="" coords="396,153,450,120,485,104,522,91,617,74,741,61,804,60,862,64,912,74,948,92,967,112,976,133,978,156,977,178,976,224,982,246,997,268,1000,272,997,276,993,272,977,249,970,225,971,178,973,156,971,135,963,115,945,96,910,79,861,69,804,66,741,67,617,79,523,97,487,109,453,125,399,158"/>
-<area shape="rect" id="Node000022" href="$classgenealogy__t.html#a1a6d8c8dae17cf7508de924e726149fe" title=" " alt="" coords="523,107,713,132"/>
-<area shape="poly" id="edge23_Node000013_Node000022" title=" " alt="" coords="440,153,542,132,543,137,441,159"/>
-<area shape="rect" id="Node000016" href="$classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="761,156,947,181"/>
-<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="685,166,747,166,747,171,685,171"/>
-<area shape="rect" id="Node000018" href="$classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="789,205,919,231"/>
-<area shape="poly" id="edge19_Node000015_Node000018" title=" " alt="" coords="680,179,780,200,778,205,679,184"/>
-<area shape="rect" id="Node000017" href="$classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="995,232,1134,257"/>
-<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="907,179,948,191,1026,224,1023,229,946,197,905,184"/>
-<area shape="poly" id="edge18_Node000017_Node000007" title=" " alt="" coords="1121,255,1137,268,1159,304,1167,339,1166,374,1161,407,1156,441,1155,474,1163,508,1185,542,1188,545,1184,548,1181,545,1158,510,1150,475,1150,440,1156,407,1161,373,1162,340,1154,306,1133,272,1117,260"/>
-<area shape="rect" id="Node000019" href="$classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="1011,331,1118,356"/>
-<area shape="poly" id="edge20_Node000018_Node000019" title=" " alt="" coords="872,229,924,271,996,317,1009,323,1007,328,993,322,921,275,868,233"/>
-<area shape="rect" id="Node000023" href="$classgenealogy__t.html#a17f6f8bc2a6469c93d027d3a2f53c714" title="clean up" alt="" coords="781,107,927,132"/>
-<area shape="poly" id="edge24_Node000022_Node000023" title=" " alt="" coords="714,117,767,117,767,122,714,122"/>
-<area shape="poly" id="edge26_Node000024_Node000014" title=" " alt="" coords="452,216,532,216,532,221,452,222"/>
-<area shape="poly" id="edge35_Node000024_Node000022" title=" " alt="" coords="445,204,473,192,488,180,496,167,506,154,521,141,534,135,536,139,524,146,510,157,501,170,492,183,476,196,448,209"/>
-<area shape="rect" id="Node000025" href="$classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="555,279,681,304"/>
-<area shape="poly" id="edge27_Node000024_Node000025" title=" " alt="" coords="423,229,562,272,561,277,421,235"/>
-<area shape="poly" id="edge29_Node000025_Node000016" title=" " alt="" coords="649,276,680,261,712,241,726,228,735,216,744,204,760,192,776,184,778,189,763,196,748,208,739,219,730,232,715,245,683,265,652,281"/>
-<area shape="poly" id="edge28_Node000025_Node000017" title=" " alt="" coords="681,282,981,251,982,256,682,287"/>
-<area shape="poly" id="edge34_Node000025_Node000018" title=" " alt="" coords="659,276,798,232,800,237,661,281"/>
-<area shape="poly" id="edge32_Node000025_Node000019" title=" " alt="" coords="682,296,998,333,997,338,681,301"/>
-<area shape="poly" id="edge30_Node000025_Node000025" title=" " alt="" coords="580,280,572,270,576,260,592,254,618,252,651,256,664,265,660,270,649,261,618,257,593,259,579,264,577,270,584,277"/>
-<area shape="rect" id="Node000026" href="$classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="783,357,925,383"/>
-<area shape="poly" id="edge31_Node000025_Node000026" title=" " alt="" coords="658,302,803,350,801,356,656,307"/>
-<area shape="rect" id="Node000027" href="$classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="815,407,893,432"/>
-<area shape="poly" id="edge33_Node000025_Node000027" title=" " alt="" coords="678,302,715,321,732,340,739,359,747,376,763,393,782,403,803,410,801,415,780,408,760,397,743,379,735,361,727,343,712,325,675,307"/>
-<area shape="rect" id="Node000029" href="$classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27" title=" " alt="" coords="761,456,947,481"/>
-<area shape="poly" id="edge37_Node000028_Node000029" title=" " alt="" coords="460,403,760,451,760,456,459,408"/>
-<area shape="poly" id="edge39_Node000029_Node000008" title=" " alt="" coords="908,453,996,433,997,438,910,459"/>
-<area shape="poly" id="edge40_Node000029_Node000010" title=" " alt="" coords="947,466,993,466,993,471,947,471"/>
-<area shape="poly" id="edge38_Node000029_Node000019" title=" " alt="" coords="920,453,945,442,960,431,970,420,993,393,1032,362,1035,366,997,397,974,424,964,435,948,447,923,458"/>
-<area shape="rect" id="Node000041" href="$classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45" title="machine&#45;readable info" alt="" coords="307,677,450,703"/>
-<area shape="poly" id="edge55_Node000040_Node000041" title=" " alt="" coords="205,853,233,838,271,808,305,774,358,712,362,716,309,778,274,812,236,843,207,858"/>
-<area shape="poly" id="edge56_Node000041_Node000012" title=" " alt="" coords="451,690,981,710,981,715,450,695"/>
-<area shape="rect" id="Node000042" href="$classgenealogy__t.html#a90f523b2b557d1a135851a3fc0999a40" title="view/set zero time." alt="" coords="534,603,702,628"/>
-<area shape="poly" id="edge57_Node000041_Node000042" title=" " alt="" coords="414,675,522,638,553,629,554,634,523,643,416,680"/>
-<area shape="rect" id="Node000043" href="$classnodeseq__t.html#a1e165e9bd12ca6080c0e5aa2cab0625d" title="human&#45; &amp; machine&#45;readable info" alt="" coords="553,652,683,677"/>
-<area shape="poly" id="edge58_Node000041_Node000043" title=" " alt="" coords="450,680,539,670,540,676,451,685"/>
-<area shape="rect" id="Node000044" href="$classnode__t.html#abbf74b4aabeff165285a4f784e7737ba" title="machine&#45;readable info" alt="" coords="801,505,907,531"/>
-<area shape="poly" id="edge59_Node000043_Node000044" title=" " alt="" coords="682,654,712,639,722,627,729,616,735,592,741,566,748,554,760,541,786,526,789,531,763,545,752,557,746,568,740,593,734,618,727,631,715,643,685,659"/>
-<area shape="poly" id="edge61_Node000044_Node000008" title=" " alt="" coords="907,507,945,492,960,480,969,468,978,455,993,442,1006,435,1009,440,996,447,982,459,973,471,964,484,948,496,908,512"/>
-<area shape="poly" id="edge60_Node000044_Node000021" title=" " alt="" coords="907,511,927,504,945,492,961,471,968,451,969,408,970,363,977,340,993,318,998,312,1002,316,997,321,982,343,975,364,974,408,973,452,965,474,949,496,930,509,908,516"/>
-<area shape="rect" id="Node000045" href="$classpocket__t.html#a3ca809ad8482693086202d1ea115fd3b" title="human/machine&#45;readable info" alt="" coords="1005,505,1124,531"/>
-<area shape="poly" id="edge62_Node000044_Node000045" title=" " alt="" coords="908,515,991,515,991,521,908,521"/>
-<area shape="rect" id="Node000046" href="$classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd" title="machine&#45;readable info" alt="" coords="1205,505,1303,531"/>
-<area shape="poly" id="edge63_Node000045_Node000046" title=" " alt="" coords="1124,515,1190,515,1190,521,1124,521"/>
-<area shape="rect" id="Node000047" href="$classball__t.html#ab87d8591dc302fca18a345cbe4c33b0a" title="human&#45;readable colors" alt="" coords="1373,505,1516,531"/>
-<area shape="poly" id="edge64_Node000046_Node000047" title=" " alt="" coords="1304,515,1359,515,1359,521,1304,521"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,600,73,625"/>
+<area shape="rect" id="Node000002" href="$generics_8h.html#a36efa45617897629bf9b3ebbd4a4262c" title="human readable output" alt="" coords="139,223,217,248"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,600,38,543,48,456,57,407,72,357,92,310,119,266,131,254,135,258,123,269,97,312,77,359,63,408,53,456,44,543,43,600"/>
+<area shape="rect" id="Node000003" href="$bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="145,324,211,349"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="39,599,45,557,58,496,82,429,99,397,119,367,132,355,136,359,123,370,103,399,87,431,63,497,50,558,44,600"/>
+<area shape="rect" id="Node000016" href="$classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="298,273,459,299"/>
+<area shape="poly" id="edge49_Node000001_Node000016" title=" " alt="" coords="40,599,48,538,64,450,88,365,103,331,120,309,160,285,206,272,252,268,297,269,296,275,253,273,206,277,162,290,123,313,107,334,93,366,70,451,53,539,45,600"/>
+<area shape="rect" id="Node000025" href="$classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="305,356,452,381"/>
+<area shape="poly" id="edge50_Node000001_Node000025" title=" " alt="" coords="40,599,46,565,60,517,84,468,100,445,120,425,159,400,203,383,248,372,291,367,292,372,249,377,205,388,162,405,123,429,104,448,88,470,65,519,51,566,45,600"/>
+<area shape="rect" id="Node000029" href="$classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce" title=" " alt="" coords="283,425,475,451"/>
+<area shape="poly" id="edge56_Node000001_Node000029" title=" " alt="" coords="41,599,49,570,64,532,87,494,120,463,155,444,192,433,231,427,269,425,269,430,232,432,194,438,157,449,123,467,92,497,69,534,54,571,46,600"/>
+<area shape="rect" id="Node000031" href="$generics_8h.html#aac836aeca3f60d7f55e7917dd56aac9a" title="number of lineages through time" alt="" coords="121,525,235,551"/>
+<area shape="poly" id="edge44_Node000001_Node000031" title=" " alt="" coords="59,598,120,561,134,554,136,559,123,566,62,602"/>
+<area shape="rect" id="Node000032" href="$getinfo_8cc.html#a8768501322299fac51ad8e69d17bde76" title=" " alt="" coords="133,575,223,600"/>
+<area shape="poly" id="edge45_Node000001_Node000032" title=" " alt="" coords="73,604,118,595,119,601,74,609"/>
+<area shape="rect" id="Node000033" href="$generics_8h.html#a0a0c2c08b74c0485d5aed6da45a9971f" title=" " alt="" coords="145,624,211,649"/>
+<area shape="poly" id="edge46_Node000001_Node000033" title=" " alt="" coords="74,616,132,626,131,631,73,621"/>
+<area shape="rect" id="Node000034" href="$generics_8h.html#a80e792583cf9de00235b5935bd3e6a94" title="tree in newick format" alt="" coords="144,673,212,699"/>
+<area shape="poly" id="edge47_Node000001_Node000034" title=" " alt="" coords="61,623,123,660,134,665,132,670,120,664,59,628"/>
+<area shape="rect" id="Node000035" href="$generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8" title=" " alt="" coords="139,723,217,748"/>
+<area shape="poly" id="edge48_Node000001_Node000035" title=" " alt="" coords="51,624,80,666,100,689,123,709,130,714,127,718,120,713,96,692,75,669,46,627"/>
+<area shape="rect" id="Node000036" href="$generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="149,772,207,797"/>
+<area shape="poly" id="edge51_Node000001_Node000036" title=" " alt="" coords="47,625,73,688,95,725,123,759,137,769,134,773,120,763,90,728,68,690,42,627"/>
+<area shape="rect" id="Node000037" href="$internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415" title=" " alt="" coords="123,821,233,847"/>
+<area shape="poly" id="edge52_Node000001_Node000037" title=" " alt="" coords="45,625,52,661,66,709,90,762,105,786,123,808,127,812,123,816,119,812,101,789,85,764,61,711,47,662,40,626"/>
+<area shape="rect" id="Node000038" href="$generics_8h.html#a80273a90776cfea19d5014f6489b8648" title="structure in R list format" alt="" coords="138,871,218,896"/>
+<area shape="poly" id="edge53_Node000001_Node000038" title=" " alt="" coords="44,625,48,669,61,730,84,798,102,829,123,858,128,862,125,866,119,861,97,832,80,800,56,732,43,670,39,626"/>
+<area shape="rect" id="Node000039" href="$generics_8h.html#a76ff6404ca2416a8d7fb42faa09da53b" title=" " alt="" coords="152,920,204,945"/>
+<area shape="poly" id="edge54_Node000001_Node000039" title=" " alt="" coords="43,626,45,676,55,751,65,792,79,833,99,872,123,907,141,920,137,924,119,911,94,875,74,835,60,794,50,752,40,677,38,626"/>
+<area shape="rect" id="Node000040" href="$generics_8h.html#a59187003bc5f4f4243c58a5642c512a9" title=" " alt="" coords="138,969,218,995"/>
+<area shape="poly" id="edge55_Node000001_Node000040" title=" " alt="" coords="45,625,54,693,70,792,94,891,108,930,123,956,128,961,124,965,119,960,103,932,89,892,65,793,48,694,39,626"/>
+<area shape="rect" id="Node000041" href="$bare_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="151,476,205,501"/>
+<area shape="poly" id="edge57_Node000001_Node000041" title=" " alt="" coords="46,598,76,557,96,533,120,512,137,501,140,506,123,516,100,537,80,560,51,601"/>
+<area shape="rect" id="Node000004" href="$classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc" title="genealogy information in list format" alt="" coords="777,104,931,129"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,322,232,291,281,258,346,223,398,198,451,178,522,158,584,144,647,133,762,120,763,125,648,138,585,149,523,163,453,184,400,203,348,228,284,263,235,295,196,326"/>
+<area shape="poly" id="edge16_Node000003_Node000016" title=" " alt="" coords="211,326,314,300,315,305,212,331"/>
+<area shape="poly" id="edge28_Node000003_Node000025" title=" " alt="" coords="212,339,292,352,291,357,211,345"/>
+<area shape="poly" id="edge39_Node000003_Node000029" title=" " alt="" coords="203,347,284,390,339,417,336,422,281,395,201,352"/>
+<area shape="rect" id="Node000005" href="$classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302" title="retrieve the first ball of the specified color." alt="" coords="1010,55,1119,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="908,101,996,81,997,86,910,107"/>
+<area shape="rect" id="Node000006" href="$classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="1013,5,1116,31"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="902,101,945,82,959,72,969,62,978,51,993,40,1005,34,1007,38,996,44,982,55,973,65,963,76,948,87,904,106"/>
+<area shape="rect" id="Node000007" href="$classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="1009,301,1120,327"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="918,127,948,147,962,165,970,183,973,218,977,253,984,270,997,287,1003,292,999,296,993,290,979,272,972,254,968,219,965,184,958,167,945,151,915,132"/>
+<area shape="rect" id="Node000008" href="$classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="1005,203,1125,228"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="903,127,948,146,972,167,996,188,1010,195,1008,200,993,192,969,171,945,151,901,132"/>
+<area shape="rect" id="Node000009" href="$classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="1005,104,1124,129"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="932,114,992,114,992,119,932,119"/>
+<area shape="rect" id="Node000011" href="$classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="1003,608,1126,633"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="881,127,917,153,935,171,949,191,963,221,971,249,977,302,973,353,964,401,956,448,955,495,967,543,979,568,997,594,1001,598,997,602,993,597,974,571,962,545,950,495,950,447,958,400,968,352,972,303,966,250,958,223,944,194,931,174,914,157,878,132"/>
+<area shape="rect" id="Node000012" href="$classnode__t.html#af3d818f04a9a0db70752922a54e984be" title="number of descendants" alt="" coords="997,153,1132,179"/>
+<area shape="poly" id="edge11_Node000004_Node000012" title=" " alt="" coords="910,127,997,148,996,153,908,132"/>
+<area shape="rect" id="Node000013" href="$classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="1007,455,1123,480"/>
+<area shape="poly" id="edge13_Node000004_Node000013" title=" " alt="" coords="879,127,915,154,934,171,949,191,963,218,971,243,976,288,979,334,985,358,997,386,1018,417,1041,444,1037,447,1014,421,992,389,980,360,974,335,970,289,966,244,958,220,944,194,930,175,912,158,876,132"/>
+<area shape="rect" id="Node000015" href="$classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="995,252,1135,277"/>
+<area shape="poly" id="edge15_Node000004_Node000015" title=" " alt="" coords="914,127,948,147,966,170,973,193,980,215,997,237,1004,243,1001,248,993,241,975,218,968,195,962,172,945,151,911,132"/>
+<area shape="rect" id="Node000010" href="$classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1183,153,1325,179"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1115,127,1192,147,1190,152,1113,132"/>
+<area shape="poly" id="edge12_Node000012_Node000010" title=" " alt="" coords="1132,163,1169,163,1169,169,1132,169"/>
+<area shape="rect" id="Node000014" href="$classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="1195,455,1313,480"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="1123,465,1180,465,1180,470,1123,470"/>
+<area shape="poly" id="edge24_Node000016_Node000006" title=" " alt="" coords="389,271,442,217,480,186,521,158,583,128,648,102,780,62,902,37,999,22,1000,27,903,42,782,68,650,107,585,133,524,163,483,190,446,221,393,275"/>
+<area shape="poly" id="edge25_Node000016_Node000007" title=" " alt="" coords="392,271,446,229,482,207,522,190,615,172,738,161,801,161,860,165,910,175,948,190,961,201,969,213,975,238,980,263,986,275,996,287,1004,293,1001,297,993,291,982,278,975,265,970,239,964,215,957,204,945,195,908,180,859,171,801,166,739,167,616,177,523,195,485,211,449,233,395,275"/>
+<area shape="rect" id="Node000017" href="$classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93" title="Get all balls of a color." alt="" coords="545,356,691,381"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="410,296,524,341,553,350,551,355,522,346,408,301"/>
+<area shape="rect" id="Node000018" href="$classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="551,307,685,332"/>
+<area shape="poly" id="edge18_Node000016_Node000018" title=" " alt="" coords="460,295,538,306,538,311,459,300"/>
+<area shape="rect" id="Node000023" href="$classgenealogy__t.html#a1a6d8c8dae17cf7508de924e726149fe" title=" " alt="" coords="523,205,713,231"/>
+<area shape="poly" id="edge26_Node000016_Node000023" title=" " alt="" coords="424,271,559,232,560,237,425,276"/>
+<area shape="rect" id="Node000019" href="$classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="761,307,947,332"/>
+<area shape="poly" id="edge19_Node000018_Node000019" title=" " alt="" coords="685,317,747,317,747,322,685,322"/>
+<area shape="rect" id="Node000021" href="$classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="789,356,919,381"/>
+<area shape="poly" id="edge22_Node000018_Node000021" title=" " alt="" coords="680,329,780,350,778,356,679,335"/>
+<area shape="rect" id="Node000020" href="$classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="995,351,1134,376"/>
+<area shape="poly" id="edge20_Node000019_Node000020" title=" " alt="" coords="916,329,991,345,989,350,915,335"/>
+<area shape="poly" id="edge21_Node000020_Node000010" title=" " alt="" coords="1111,348,1133,336,1169,302,1199,262,1239,190,1244,193,1203,265,1173,305,1136,340,1114,353"/>
+<area shape="rect" id="Node000022" href="$classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="1011,557,1118,583"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="873,380,949,444,1045,545,1041,549,945,448,870,384"/>
+<area shape="rect" id="Node000024" href="$classgenealogy__t.html#a17f6f8bc2a6469c93d027d3a2f53c714" title="clean up" alt="" coords="781,205,927,231"/>
+<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="714,215,767,215,767,221,714,221"/>
+<area shape="poly" id="edge29_Node000025_Node000017" title=" " alt="" coords="452,366,532,366,532,371,452,371"/>
+<area shape="poly" id="edge38_Node000025_Node000023" title=" " alt="" coords="404,354,438,334,473,308,487,292,495,277,505,263,521,248,548,233,550,238,524,252,509,266,500,280,491,295,476,312,441,338,407,358"/>
+<area shape="rect" id="Node000026" href="$classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="555,429,681,455"/>
+<area shape="poly" id="edge30_Node000025_Node000026" title=" " alt="" coords="422,379,564,423,562,428,420,384"/>
+<area shape="poly" id="edge32_Node000026_Node000019" title=" " alt="" coords="648,427,680,411,712,391,725,378,734,365,744,353,760,341,773,335,775,339,763,346,748,357,739,369,729,381,715,395,682,416,650,432"/>
+<area shape="poly" id="edge31_Node000026_Node000020" title=" " alt="" coords="681,432,804,415,946,390,1003,377,1005,382,947,395,805,420,682,437"/>
+<area shape="poly" id="edge37_Node000026_Node000021" title=" " alt="" coords="659,427,798,383,800,388,661,432"/>
+<area shape="poly" id="edge35_Node000026_Node000022" title=" " alt="" coords="677,452,715,472,731,491,739,510,746,527,763,542,791,556,820,566,883,578,944,580,997,577,998,583,944,586,882,583,819,572,789,561,760,547,742,530,734,512,727,493,712,476,675,457"/>
+<area shape="poly" id="edge33_Node000026_Node000026" title=" " alt="" coords="580,431,572,421,576,411,592,405,618,403,651,407,664,416,660,420,649,411,618,408,593,410,579,415,577,420,584,427"/>
+<area shape="rect" id="Node000027" href="$classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="783,507,925,532"/>
+<area shape="poly" id="edge34_Node000026_Node000027" title=" " alt="" coords="660,452,714,472,762,493,786,500,784,505,760,498,712,476,659,457"/>
+<area shape="rect" id="Node000028" href="$classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="815,457,893,483"/>
+<area shape="poly" id="edge36_Node000026_Node000028" title=" " alt="" coords="682,447,802,461,801,467,682,452"/>
+<area shape="rect" id="Node000030" href="$classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27" title=" " alt="" coords="761,608,947,633"/>
+<area shape="poly" id="edge40_Node000029_Node000030" title=" " alt="" coords="443,448,604,484,675,502,715,517,732,534,740,552,748,569,763,585,789,600,787,605,760,589,744,572,735,554,727,537,712,522,673,507,603,489,442,453"/>
+<area shape="poly" id="edge42_Node000030_Node000011" title=" " alt="" coords="947,618,990,618,990,623,947,623"/>
+<area shape="poly" id="edge43_Node000030_Node000013" title=" " alt="" coords="871,606,1033,486,1036,491,874,610"/>
+<area shape="poly" id="edge41_Node000030_Node000022" title=" " alt="" coords="907,605,998,583,999,588,908,610"/>
+<area shape="rect" id="Node000042" href="$classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45" title="machine&#45;readable info" alt="" coords="307,512,450,537"/>
+<area shape="poly" id="edge58_Node000041_Node000042" title=" " alt="" coords="206,491,294,507,293,512,205,496"/>
+<area shape="poly" id="edge59_Node000042_Node000015" title=" " alt="" coords="409,510,443,490,473,462,485,439,491,417,491,373,490,352,493,331,503,311,521,292,556,274,604,261,662,253,728,249,863,249,981,255,981,261,863,255,728,255,663,259,605,267,558,279,524,296,507,314,498,333,496,353,496,373,496,418,490,441,477,465,446,494,412,514"/>
+<area shape="rect" id="Node000043" href="$classgenealogy__t.html#a90f523b2b557d1a135851a3fc0999a40" title="view/set zero time." alt="" coords="534,580,702,605"/>
+<area shape="poly" id="edge60_Node000042_Node000043" title=" " alt="" coords="421,535,523,566,552,574,551,579,522,571,419,540"/>
+<area shape="rect" id="Node000044" href="$classnodeseq__t.html#a1e165e9bd12ca6080c0e5aa2cab0625d" title="human&#45; &amp; machine&#45;readable info" alt="" coords="553,531,683,556"/>
+<area shape="poly" id="edge61_Node000042_Node000044" title=" " alt="" coords="451,528,540,535,539,540,450,533"/>
+<area shape="rect" id="Node000045" href="$classnode__t.html#abbf74b4aabeff165285a4f784e7737ba" title="machine&#45;readable info" alt="" coords="801,657,907,683"/>
+<area shape="poly" id="edge62_Node000044_Node000045" title=" " alt="" coords="685,551,715,567,732,586,740,606,747,626,763,644,789,657,786,662,760,648,742,629,735,608,728,589,712,571,682,556"/>
+<area shape="poly" id="edge63_Node000045_Node000007" title=" " alt="" coords="907,664,928,657,945,644,959,625,969,607,978,569,977,532,970,494,962,455,960,416,968,377,978,357,993,336,996,333,1000,336,997,340,983,359,973,378,965,417,968,455,975,493,982,531,984,570,974,609,964,628,949,648,930,662,909,669"/>
+<area shape="poly" id="edge64_Node000045_Node000011" title=" " alt="" coords="907,655,996,634,997,639,908,660"/>
+<area shape="rect" id="Node000046" href="$classpocket__t.html#a3ca809ad8482693086202d1ea115fd3b" title="human/machine&#45;readable info" alt="" coords="1005,657,1124,683"/>
+<area shape="poly" id="edge65_Node000045_Node000046" title=" " alt="" coords="908,667,991,667,991,673,908,673"/>
+<area shape="rect" id="Node000047" href="$classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd" title="machine&#45;readable info" alt="" coords="1205,657,1303,683"/>
+<area shape="poly" id="edge66_Node000046_Node000047" title=" " alt="" coords="1124,667,1190,667,1190,673,1124,673"/>
+<area shape="rect" id="Node000048" href="$classball__t.html#ab87d8591dc302fca18a345cbe4c33b0a" title="human&#45;readable colors" alt="" coords="1373,657,1516,683"/>
+<area shape="poly" id="edge67_Node000047_Node000048" title=" " alt="" coords="1304,667,1359,667,1359,673,1304,673"/>
 </map>

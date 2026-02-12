@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"structtwospecies__parameters__t.html#a2170a853517d1b3ed6ec8fcb00bf3252":[1,0,25,22],
+"structtwospecies__parameters__t.html#a26c5c9ab5ceba8e5c3addb7700a4440e":[1,0,25,7],
 "structtwospecies__parameters__t.html#a2e00abbe8dbb289c20073bac56d7d5fd":[1,0,25,5],
 "structtwospecies__parameters__t.html#a31df423445a3841e11df83dab1d2976b":[1,0,25,8],
 "structtwospecies__parameters__t.html#a3d10d68891615762df976fa936258326":[1,0,25,4],

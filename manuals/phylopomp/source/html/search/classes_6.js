@@ -2,7 +2,7 @@ var searchData=
 [
   ['pocket_5ft_0',['pocket_t',['../classpocket__t.html',1,'']]],
   ['popul_5fproc_5ft_1',['popul_proc_t',['../classpopul__proc__t.html',1,'']]],
-  ['popul_5fproc_5ft_3c_20lbdp_5fstate_5ft_2c_20lbdp_5fparameters_5ft_2c_203_20_3e_2',['popul_proc_t&lt; lbdp_state_t, lbdp_parameters_t, 3 &gt;',['../classpopul__proc__t.html',1,'']]],
+  ['popul_5fproc_5ft_3c_20lbdp_5fstate_5ft_2c_20lbdp_5fparameters_5ft_2c_204_20_3e_2',['popul_proc_t&lt; lbdp_state_t, lbdp_parameters_t, 4 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20moran_5fstate_5ft_2c_20moran_5fparameters_5ft_2c_202_20_3e_3',['popul_proc_t&lt; moran_state_t, moran_parameters_t, 2 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20s2i2r2_5fstate_5ft_2c_20s2i2r2_5fparameters_5ft_2c_2019_20_3e_4',['popul_proc_t&lt; s2i2r2_state_t, s2i2r2_parameters_t, 19 &gt;',['../classpopul__proc__t.html',1,'']]],
   ['popul_5fproc_5ft_3c_20seir_5fstate_5ft_2c_20seir_5fparameters_5ft_2c_205_20_3e_5',['popul_proc_t&lt; seir_state_t, seir_parameters_t, 5 &gt;',['../classpopul__proc__t.html',1,'']]],

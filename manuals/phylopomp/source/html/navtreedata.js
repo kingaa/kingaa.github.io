@@ -57,8 +57,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classpopul__proc__t.html#a83abd6b9190b648f6fd34604f5aa3a56",
-"seirs__pomp_8c.html#a064e65664252647026c892fdf367316f",
-"structtwospecies__parameters__t.html#a2e00abbe8dbb289c20073bac56d7d5fd"
+"seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4",
+"structtwospecies__parameters__t.html#a2170a853517d1b3ed6ec8fcb00bf3252"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

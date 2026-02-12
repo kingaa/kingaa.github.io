@@ -20,20 +20,19 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>The genealogy process induced by a simple linear birth-death process
-with constant-rate sampling.
+<p>The genealogy process induced by a simple linear birth-death process with constant-rate sampling.
 </p>
 
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>runLBDP(time, t0 = 0, lambda = 2, mu = 1, psi = 1, n0 = 5)
+<pre><code class='language-R'>runLBDP(time, t0 = 0, lambda = 2, mu = 1, psi = 1, chi = 0, n0 = 5)
 
-continueLBDP(object, time, lambda = NA, mu = NA, psi = NA)
+continueLBDP(object, time, lambda = NA, mu = NA, psi = NA, chi = NA)
 
-lbdp_pomp(x, lambda, mu, psi, n0 = 1, t0 = 0)
+lbdp_pomp(x, lambda, mu, psi, chi = 0, n0 = 1, t0 = 0)
 
-lbdp_exact(x, lambda, mu, psi, n0 = 1)
+lbdp_exact(x, lambda, mu, psi, chi = 0, n0 = 1)
 </code></pre>
 
 
@@ -58,7 +57,11 @@ lbdp_exact(x, lambda, mu, psi, n0 = 1)
 </td></tr>
 <tr><td><code id="psi">psi</code></td>
 <td>
-<p>per capita sampling rate</p>
+<p>per capita non-destructive sampling rate</p>
+</td></tr>
+<tr><td><code id="chi">chi</code></td>
+<td>
+<p>per capita destructive sampling rate</p>
 </td></tr>
 <tr><td><code id="n0">n0</code></td>
 <td>
@@ -80,7 +83,7 @@ lbdp_exact(x, lambda, mu, psi, n0 = 1)
 
 <p><code>lbdp_pomp</code> constructs a <span class="pkg">pomp</span> object containing a given set of data and a linear birth-death-sampling process.
 </p>
-<p><code>lbdp_exact</code> gives the exact log likelihood of a linear birth-death process, conditioned on the population size at time 0.
+<p><code>lbdp_exact</code> gives the exact log likelihood of a linear birth-death process with (optionally destructive) sampling, conditioned on the population size at time 0.
 </p>
 
 
@@ -137,7 +140,7 @@ simulate("LBDP",time=4) |&gt;
 
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.16.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.16.2.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

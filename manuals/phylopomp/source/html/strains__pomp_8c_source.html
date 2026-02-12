@@ -270,8 +270,8 @@ $(function(){initNavTree('strains__pomp_8c_source.html',''); initResizable(true)
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="comment">// singular portion of filter equation</span></div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">switch</span> (nodetype[parent]) {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keywordflow">default</span>:                      <span class="comment">// non-genealogical event</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keywordflow">default</span>:                      <span class="comment">// non-genealogical event #nocov</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">break</span>;                      <span class="comment">// #nocov</span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordflow">case</span> 0:                       <span class="comment">// root</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="lbdp_8cc.html#a1ad5d5005b5e6448ae0e58b158a27811">deme</a>[parent]) {</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="strains__pomp_8c.html#a89cb3e3778296363f51abf355c8db86d">STRAIN1</a>:</div>
@@ -280,8 +280,8 @@ $(function(){initNavTree('strains__pomp_8c_source.html',''); initResizable(true)
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <a class="code hl_define" href="strains__pomp_8c.html#a6306906977b46dd9df8d03cf41060eef">ellI2</a> += 1; <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">case</span> <a class="code hl_define" href="strains__pomp_8c.html#a37dc712a42f89ba02aeb9e55ddc4d66d">STRAIN3</a>:</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <a class="code hl_define" href="strains__pomp_8c.html#a81540f1e0e86b3360047e35ee29db7c1">ellI3</a> += 1; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      assert(0); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">default</span>:                    <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      assert(0); <span class="keywordflow">break</span>;         <span class="comment">// #nocov</span></div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordflow">case</span> 1:                       <span class="comment">// sample</span></div>
@@ -305,8 +305,8 @@ $(function(){initNavTree('strains__pomp_8c_source.html',''); initResizable(true)
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <a class="code hl_define" href="strains__pomp_8c.html#a81540f1e0e86b3360047e35ee29db7c1">ellI3</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a> -= 1;</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> += log(<a class="code hl_define" href="strains__pomp_8c.html#a2323f4fcf41ca87d29f49b717bfcf66b">psi3</a>);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      assert(0); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">default</span>:                    <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      assert(0); <span class="keywordflow">break</span>;         <span class="comment">// #nocov</span></div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keywordflow">case</span> 2:                       <span class="comment">// branch point s=(1,1)</span></div>
@@ -334,91 +334,89 @@ $(function(){initNavTree('strains__pomp_8c_source.html',''); initResizable(true)
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a> += 1; <a class="code hl_define" href="strains__pomp_8c.html#a81540f1e0e86b3360047e35ee29db7c1">ellI3</a> += 1;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= log(<a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a>*(<a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a>-1)/2);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      assert(0);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = (<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> &gt; 0) ? <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> : 0;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  }</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keywordflow">if</span> (tmax &gt; t) {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="comment">// take Gillespie steps to the end of the interval:</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordtype">int</span> event;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordtype">double</span> penalty = 0;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordtype">double</span> rate[<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>];</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordtype">double</span> event_rate = <a class="code hl_define" href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a>;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    tstep = exp_rand()/event_rate;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">while</span> (t + tstep &lt; tmax) {</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <span class="keyword">event</span> = <a class="code hl_function" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a>(event_rate,rate,<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      assert(event&gt;=0 &amp;&amp; event&lt;<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keywordflow">switch</span> (event) {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">case</span> 0:                     <span class="comment">// strain-1 transmission</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a> += 1;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <span class="keywordflow">case</span> 1:                     <span class="comment">// strain-1 recovery</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <a class="code hl_define" href="strains__pomp_8c.html#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a> -= 1; <a class="code hl_define" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      <span class="keywordflow">case</span> 2:                     <span class="comment">// strain-2 transmission</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#a964f933e75944a909cc698a3997c8f14">I2</a> += 1;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="keywordflow">case</span> 3:                     <span class="comment">// strain-2 recovery</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <a class="code hl_define" href="strains__pomp_8c.html#a964f933e75944a909cc698a3997c8f14">I2</a> -= 1; <a class="code hl_define" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <span class="keywordflow">case</span> 4:                     <span class="comment">// strain-3 transmission</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a> += 1;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordflow">case</span> 5:                     <span class="comment">// strain-3 recovery</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a> -= 1; <a class="code hl_define" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <span class="keywordflow">default</span>:                    <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        assert(0);                <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keywordflow">break</span>;                    <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      t += tstep;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      event_rate = <a class="code hl_define" href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a>;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      tstep = exp_rand()/event_rate;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    }</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    tstep = tmax - t;</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  }</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> += 1;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>}</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">default</span>:                    <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      assert(0); <span class="keywordflow">break</span>;         <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    }</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = (<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> &gt; 0) ? <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> : 0;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="keywordflow">if</span> (tmax &gt; t) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="comment">// take Gillespie steps to the end of the interval:</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordtype">int</span> event;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordtype">double</span> penalty = 0;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordtype">double</span> rate[<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>];</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordtype">double</span> event_rate = <a class="code hl_define" href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a>;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    tstep = exp_rand()/event_rate;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordflow">while</span> (t + tstep &lt; tmax) {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <span class="keyword">event</span> = <a class="code hl_function" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a>(event_rate,rate,<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      assert(event&gt;=0 &amp;&amp; event&lt;<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keywordflow">switch</span> (event) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keywordflow">case</span> 0:                     <span class="comment">// strain-1 transmission</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a> += 1;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <span class="keywordflow">case</span> 1:                     <span class="comment">// strain-1 recovery</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        <a class="code hl_define" href="strains__pomp_8c.html#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a> -= 1; <a class="code hl_define" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <span class="keywordflow">case</span> 2:                     <span class="comment">// strain-2 transmission</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#a964f933e75944a909cc698a3997c8f14">I2</a> += 1;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keywordflow">case</span> 3:                     <span class="comment">// strain-2 recovery</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <a class="code hl_define" href="strains__pomp_8c.html#a964f933e75944a909cc698a3997c8f14">I2</a> -= 1; <a class="code hl_define" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      <span class="keywordflow">case</span> 4:                     <span class="comment">// strain-3 transmission</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> -= 1; <a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a> += 1;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <span class="keywordflow">case</span> 5:                     <span class="comment">// strain-3 recovery</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <a class="code hl_define" href="strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396">I3</a> -= 1; <a class="code hl_define" href="seirs__pomp_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a> += 1;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">default</span>:                  <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        assert(0); <span class="keywordflow">break</span>;       <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      }</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      t += tstep;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      event_rate = <a class="code hl_define" href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      tstep = exp_rand()/event_rate;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    }</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    tstep = tmax - t;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> -= penalty*tstep;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a> += 1;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
 </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="strains__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">  287</a></span><span class="preprocessor"># define lik  (__lik[0])</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span></div>
-<div class="foldopen" id="foldopen00290" data-start="{" data-end="}">
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="decls_8h.html#a2c190e811c2e053ebfd154bdec3fc74c">  290</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="strains__pomp_8c.html#a4cf227d1c27ea1be34423ab4ce82113b">strains_dmeas</a></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>(</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> <span class="keywordtype">double</span> *__lik,</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__y,</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__x,</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__p,</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> <span class="keywordtype">int</span> give_log,</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__obsindex,</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__stateindex,</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__parindex,</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__covindex,</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__covars,</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> <span class="keywordtype">double</span> t</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> ){</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  assert(!ISNAN(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="strains__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">  285</a></span><span class="preprocessor"># define lik  (__lik[0])</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span></div>
+<div class="foldopen" id="foldopen00288" data-start="{" data-end="}">
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="decls_8h.html#a2c190e811c2e053ebfd154bdec3fc74c">  288</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="strains__pomp_8c.html#a4cf227d1c27ea1be34423ab4ce82113b">strains_dmeas</a></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>(</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> <span class="keywordtype">double</span> *__lik,</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__y,</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__x,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__p,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> <span class="keywordtype">int</span> give_log,</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__obsindex,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__stateindex,</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__parindex,</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> <span class="keyword">const</span> <span class="keywordtype">int</span> *__covindex,</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> <span class="keyword">const</span> <span class="keywordtype">double</span> *__covars,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> <span class="keywordtype">double</span> t</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> ){</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  assert(!ISNAN(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>));</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <a class="code hl_define" href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a> = (give_log) ? <a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a> : exp(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>}</div>
 </div>
 <div class="ttc" id="ainit_8c_html_a950f5be1c4ce64a64de7e8939b87830c"><div class="ttname"><a href="init_8c.html#a950f5be1c4ce64a64de7e8939b87830c">get_userdata_int</a></div><div class="ttdeci">get_userdata_int_t * get_userdata_int</div><div class="ttdef"><b>Definition</b> <a href="init_8c_source.html#l00007">init.c:7</a></div></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
 <div class="ttc" id="ainternal_8h_html_a4a6b554c46520e890bcd30a914b65988"><div class="ttname"><a href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a></div><div class="ttdeci">static int rcateg(double erate, double *rate, int nrate)</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00076">internal.h:76</a></div></div>
 <div class="ttc" id="albdp_8cc_html_a1ad5d5005b5e6448ae0e58b158a27811"><div class="ttname"><a href="lbdp_8cc.html#a1ad5d5005b5e6448ae0e58b158a27811">deme</a></div><div class="ttdeci">static const int deme</div><div class="ttdef"><b>Definition</b> <a href="lbdp_8cc_source.html#l00007">lbdp.cc:7</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00160">lbdp_pomp.c:160</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_ae1d1ec9482079231e898236e2b23c9ba"><div class="ttname"><a href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a></div><div class="ttdeci">#define ll</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00009">lbdp_pomp.c:9</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_af0f993f43b1eb97a4c62f2a5c77d2b01"><div class="ttname"><a href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a></div><div class="ttdeci">#define EVENT_RATES</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00013">lbdp_pomp.c:13</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_af4f12397387d83cd9c47b663c74f1f29"><div class="ttname"><a href="lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a></div><div class="ttdeci">#define node</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00011">lbdp_pomp.c:11</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_aad91cdbfd6d164f4f7c8b573b4784311"><div class="ttname"><a href="lbdp__pomp_8c.html#aad91cdbfd6d164f4f7c8b573b4784311">lik</a></div><div class="ttdeci">#define lik</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00164">lbdp_pomp.c:164</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_ae1d1ec9482079231e898236e2b23c9ba"><div class="ttname"><a href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a></div><div class="ttdeci">#define ll</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00010">lbdp_pomp.c:10</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_af0f993f43b1eb97a4c62f2a5c77d2b01"><div class="ttname"><a href="lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01">EVENT_RATES</a></div><div class="ttdeci">#define EVENT_RATES</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00014">lbdp_pomp.c:14</a></div></div>
+<div class="ttc" id="albdp__pomp_8c_html_af4f12397387d83cd9c47b663c74f1f29"><div class="ttname"><a href="lbdp__pomp_8c.html#af4f12397387d83cd9c47b663c74f1f29">node</a></div><div class="ttdeci">#define node</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00012">lbdp_pomp.c:12</a></div></div>
 <div class="ttc" id="apomplink_8h_html"><div class="ttname"><a href="pomplink_8h.html">pomplink.h</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00032">seirs_pomp.c:32</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_a42e729077189bab1dae844253dd2ad1d"><div class="ttname"><a href="seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a></div><div class="ttdeci">#define gamma</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00025">seirs_pomp.c:25</a></div></div>
@@ -433,7 +431,7 @@ $(function(){initNavTree('strains__pomp_8c_source.html',''); initResizable(true)
 <div class="ttc" id="astrains__pomp_8c_html_a234d667306c9b99b08b5d6d60283bac9"><div class="ttname"><a href="strains__pomp_8c.html#a234d667306c9b99b08b5d6d60283bac9">strains_gill</a></div><div class="ttdeci">void strains_gill(double *__x, const double *__p, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t, double dt)</div><div class="ttdef"><b>Definition</b> <a href="#l00140">strains_pomp.c:141</a></div></div>
 <div class="ttc" id="astrains__pomp_8c_html_a37dc712a42f89ba02aeb9e55ddc4d66d"><div class="ttname"><a href="strains__pomp_8c.html#a37dc712a42f89ba02aeb9e55ddc4d66d">STRAIN3</a></div><div class="ttdeci">#define STRAIN3</div><div class="ttdef"><b>Definition</b> <a href="#l00008">strains_pomp.c:8</a></div></div>
 <div class="ttc" id="astrains__pomp_8c_html_a4b1c7e400cc8131658568ab8d5a8cfce"><div class="ttname"><a href="strains__pomp_8c.html#a4b1c7e400cc8131658568ab8d5a8cfce">S_0</a></div><div class="ttdeci">#define S_0</div><div class="ttdef"><b>Definition</b> <a href="#l00017">strains_pomp.c:17</a></div></div>
-<div class="ttc" id="astrains__pomp_8c_html_a4cf227d1c27ea1be34423ab4ce82113b"><div class="ttname"><a href="strains__pomp_8c.html#a4cf227d1c27ea1be34423ab4ce82113b">strains_dmeas</a></div><div class="ttdeci">void strains_dmeas(double *__lik, const double *__y, const double *__x, const double *__p, int give_log, const int *__obsindex, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t)</div><div class="ttdoc">Measurement model likelihood (dmeasure).</div><div class="ttdef"><b>Definition</b> <a href="#l00290">strains_pomp.c:291</a></div></div>
+<div class="ttc" id="astrains__pomp_8c_html_a4cf227d1c27ea1be34423ab4ce82113b"><div class="ttname"><a href="strains__pomp_8c.html#a4cf227d1c27ea1be34423ab4ce82113b">strains_dmeas</a></div><div class="ttdeci">void strains_dmeas(double *__lik, const double *__y, const double *__x, const double *__p, int give_log, const int *__obsindex, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t)</div><div class="ttdoc">Measurement model likelihood (dmeasure).</div><div class="ttdef"><b>Definition</b> <a href="#l00288">strains_pomp.c:289</a></div></div>
 <div class="ttc" id="astrains__pomp_8c_html_a53cc32bafc7f1b49a400c3f6fee7c1aa"><div class="ttname"><a href="strains__pomp_8c.html#a53cc32bafc7f1b49a400c3f6fee7c1aa">ellI1</a></div><div class="ttdeci">#define ellI1</div><div class="ttdef"><b>Definition</b> <a href="#l00029">strains_pomp.c:29</a></div></div>
 <div class="ttc" id="astrains__pomp_8c_html_a6306906977b46dd9df8d03cf41060eef"><div class="ttname"><a href="strains__pomp_8c.html#a6306906977b46dd9df8d03cf41060eef">ellI2</a></div><div class="ttdeci">#define ellI2</div><div class="ttdef"><b>Definition</b> <a href="#l00030">strains_pomp.c:30</a></div></div>
 <div class="ttc" id="astrains__pomp_8c_html_a81540f1e0e86b3360047e35ee29db7c1"><div class="ttname"><a href="strains__pomp_8c.html#a81540f1e0e86b3360047e35ee29db7c1">ellI3</a></div><div class="ttdeci">#define ellI3</div><div class="ttdef"><b>Definition</b> <a href="#l00031">strains_pomp.c:31</a></div></div>

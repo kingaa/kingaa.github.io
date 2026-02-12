@@ -1,5 +1,6 @@
 var lbdp__pomp_8c =
 [
+    [ "chi", "lbdp__pomp_8c.html#a92286de75fdd3d75889360b4e91a5d1a", null ],
     [ "ell", "lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c", null ],
     [ "EVENT_RATES", "lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01", null ],
     [ "lambda", "lbdp__pomp_8c.html#ae58c3260bfb1facea39e0aec11acee3a", null ],

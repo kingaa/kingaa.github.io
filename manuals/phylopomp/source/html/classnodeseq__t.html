@@ -99,8 +99,8 @@ $(function(){initNavTree('classnodeseq__t.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle"><div class="title">nodeseq_t Class Reference</div></div>
 </div><!--header-->
@@ -141,9 +141,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a59269f90e8ac44b94f7610aaea662d0e" id="r_a59269f90e8ac44b94f7610aaea662d0e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59269f90e8ac44b94f7610aaea662d0e">bytesize</a> (void) const</td></tr>
 <tr class="memdesc:a59269f90e8ac44b94f7610aaea662d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of serialized binary form  <br /></td></tr>
 <tr class="separator:a59269f90e8ac44b94f7610aaea662d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3b0c6475cbabc58cfbfc047513b38e" id="r_a4c3b0c6475cbabc58cfbfc047513b38e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnodeseq__t.html">nodeseq_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c3b0c6475cbabc58cfbfc047513b38e">operator+=</a> (<a class="el" href="classnodeseq__t.html">nodeseq_t</a> &amp;other)</td></tr>
-<tr class="memdesc:a4c3b0c6475cbabc58cfbfc047513b38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">merge two node sequences  <br /></td></tr>
-<tr class="separator:a4c3b0c6475cbabc58cfbfc047513b38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2787893286ac607ed0ad06686c2aee14" id="r_a2787893286ac607ed0ad06686c2aee14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2787893286ac607ed0ad06686c2aee14">sort</a> (void)</td></tr>
 <tr class="memdesc:a2787893286ac607ed0ad06686c2aee14"><td class="mdescLeft">&#160;</td><td class="mdescRight">order nodes in order of increasing time  <br /></td></tr>
 <tr class="separator:a2787893286ac607ed0ad06686c2aee14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,9 +156,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a990ffa0ecf7f2d8f6bd66004e42c0b58" id="r_a990ffa0ecf7f2d8f6bd66004e42c0b58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnode__t.html">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a990ffa0ecf7f2d8f6bd66004e42c0b58">position</a> (int <a class="el" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</td></tr>
 <tr class="memdesc:a990ffa0ecf7f2d8f6bd66004e42c0b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">traverse to nth node, retrieve pointer  <br /></td></tr>
 <tr class="separator:a990ffa0ecf7f2d8f6bd66004e42c0b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73dff058ff34687a7e869d2483635a9d" id="r_a73dff058ff34687a7e869d2483635a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73dff058ff34687a7e869d2483635a9d">move</a> (<a class="el" href="classball__t.html">ball_t</a> *b, <a class="el" href="classnode__t.html">node_t</a> *p, <a class="el" href="classnode__t.html">node_t</a> *q)</td></tr>
+<tr class="memdesc:a73dff058ff34687a7e869d2483635a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">move ball b from p to q  <br /></td></tr>
+<tr class="separator:a73dff058ff34687a7e869d2483635a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69dc328641a94b6a0494d645fcf8c624" id="r_a69dc328641a94b6a0494d645fcf8c624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a> (<a class="el" href="classball__t.html">ball_t</a> *a, <a class="el" href="classball__t.html">ball_t</a> *b)</td></tr>
 <tr class="memdesc:a69dc328641a94b6a0494d645fcf8c624"><td class="mdescLeft">&#160;</td><td class="mdescRight">swap balls a and b, wherever they lie  <br /></td></tr>
 <tr class="separator:a69dc328641a94b6a0494d645fcf8c624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6308f6fb71abd427e28129d8a5c146" id="r_a3c6308f6fb71abd427e28129d8a5c146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c6308f6fb71abd427e28129d8a5c146">attach</a> (<a class="el" href="classnode__t.html">node_t</a> *p, <a class="el" href="classnode__t.html">node_t</a> *q)</td></tr>
+<tr class="separator:a3c6308f6fb71abd427e28129d8a5c146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125256a336ee2dceb0747bea92dffc78" id="r_a125256a336ee2dceb0747bea92dffc78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a125256a336ee2dceb0747bea92dffc78">detach</a> (<a class="el" href="classnode__t.html">node_t</a> *p)</td></tr>
+<tr class="separator:a125256a336ee2dceb0747bea92dffc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d930181fb02e5bdb9de48eea19e54a" id="r_ae8d930181fb02e5bdb9de48eea19e54a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8d930181fb02e5bdb9de48eea19e54a">add</a> (<a class="el" href="classnode__t.html">node_t</a> *p, <a class="el" href="classball__t.html">ball_t</a> *a)</td></tr>
 <tr class="separator:ae8d930181fb02e5bdb9de48eea19e54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b3576542f04b82beb2cd9bf89279390" id="r_a5b3576542f04b82beb2cd9bf89279390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b3576542f04b82beb2cd9bf89279390">drop</a> (<a class="el" href="classball__t.html">ball_t</a> *a)</td></tr>
@@ -169,22 +173,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c1a1fecd87741fbd9b5d4844c4e4276" id="r_a3c1a1fecd87741fbd9b5d4844c4e4276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a> (<a class="el" href="classnode__t.html">node_t</a> *p)</td></tr>
 <tr class="memdesc:a3c1a1fecd87741fbd9b5d4844c4e4276"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a dead root node  <br /></td></tr>
 <tr class="separator:a3c1a1fecd87741fbd9b5d4844c4e4276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02549bd0fd1a66ee1045d3e41c31c394" id="r_a02549bd0fd1a66ee1045d3e41c31c394"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02549bd0fd1a66ee1045d3e41c31c394">weed</a> (void)</td></tr>
+<tr class="memdesc:a02549bd0fd1a66ee1045d3e41c31c394"><td class="mdescLeft">&#160;</td><td class="mdescRight">drop all dead roots  <br /></td></tr>
+<tr class="separator:a02549bd0fd1a66ee1045d3e41c31c394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a254feb97445b95db5fe02b3ed1f433bb" id="r_a254feb97445b95db5fe02b3ed1f433bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a254feb97445b95db5fe02b3ed1f433bb">comb</a> (void)</td></tr>
 <tr class="separator:a254feb97445b95db5fe02b3ed1f433bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d003899b6bbc529699e1a02858de8ce" id="r_a7d003899b6bbc529699e1a02858de8ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d003899b6bbc529699e1a02858de8ce">trace_lineages</a> (void)</td></tr>
 <tr class="separator:a7d003899b6bbc529699e1a02858de8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1499d26fc7f9d8e287c3e5b3c7e98699" id="r_a1499d26fc7f9d8e287c3e5b3c7e98699"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1499d26fc7f9d8e287c3e5b3c7e98699">describe</a> (void) const</td></tr>
-<tr class="memdesc:a1499d26fc7f9d8e287c3e5b3c7e98699"><td class="mdescLeft">&#160;</td><td class="mdescRight">human-readable info  <br /></td></tr>
-<tr class="separator:a1499d26fc7f9d8e287c3e5b3c7e98699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e165e9bd12ca6080c0e5aa2cab0625d" id="r_a1e165e9bd12ca6080c0e5aa2cab0625d"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e165e9bd12ca6080c0e5aa2cab0625d">yaml</a> (std::string tab=&quot;&quot;) const</td></tr>
-<tr class="memdesc:a1e165e9bd12ca6080c0e5aa2cab0625d"><td class="mdescLeft">&#160;</td><td class="mdescRight">human- &amp; machine-readable info  <br /></td></tr>
-<tr class="separator:a1e165e9bd12ca6080c0e5aa2cab0625d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee4aa52a55d7a6f7062168b2936c80a" id="r_a5ee4aa52a55d7a6f7062168b2936c80a"><td class="memItemLeft" align="right" valign="top">string_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ee4aa52a55d7a6f7062168b2936c80a">yaml</a> (string_t tab=&quot;&quot;) const</td></tr>
+<tr class="memdesc:a5ee4aa52a55d7a6f7062168b2936c80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">human/machine-readable info  <br /></td></tr>
+<tr class="separator:a5ee4aa52a55d7a6f7062168b2936c80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a572f5e5f6d038618a3d97faa5a962253" id="r_a572f5e5f6d038618a3d97faa5a962253"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a572f5e5f6d038618a3d97faa5a962253">structure</a> (void) const</td></tr>
 <tr class="memdesc:a572f5e5f6d038618a3d97faa5a962253"><td class="mdescLeft">&#160;</td><td class="mdescRight">R list description.  <br /></td></tr>
 <tr class="separator:a572f5e5f6d038618a3d97faa5a962253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf09dd4bc265ecb0819f0f2741f180da" id="r_acf09dd4bc265ecb0819f0f2741f180da"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf09dd4bc265ecb0819f0f2741f180da">newick</a> (<a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t) const</td></tr>
-<tr class="memdesc:acf09dd4bc265ecb0819f0f2741f180da"><td class="mdescLeft">&#160;</td><td class="mdescRight">put genealogy at time <code>t</code> into Newick format.  <br /></td></tr>
-<tr class="separator:acf09dd4bc265ecb0819f0f2741f180da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb5b7cdfc8d4277fd0039e3d442fd1a6" id="r_afb5b7cdfc8d4277fd0039e3d442fd1a6"><td class="memItemLeft" align="right" valign="top">string_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb5b7cdfc8d4277fd0039e3d442fd1a6">newick</a> (<a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t, bool showdeme, bool extended) const</td></tr>
+<tr class="memdesc:afb5b7cdfc8d4277fd0039e3d442fd1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">put genealogy at time <code>t</code> into Newick format.  <br /></td></tr>
+<tr class="separator:afb5b7cdfc8d4277fd0039e3d442fd1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a642a9a6799ed5ee49e620a95a3f884b7" id="r_a642a9a6799ed5ee49e620a95a3f884b7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642a9a6799ed5ee49e620a95a3f884b7">compare</a> (<a class="el" href="classnode__t.html">node_t</a> *p, <a class="el" href="classnode__t.html">node_t</a> *q)</td></tr>
+<tr class="separator:a642a9a6799ed5ee49e620a95a3f884b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -202,11 +211,6 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a16b0cf23fe151c5ce4696041da8c2a27" id="r_a16b0cf23fe151c5ce4696041da8c2a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a> (<a class="el" href="classball__t.html">ball_t</a> *b, <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u)</td></tr>
 <tr class="separator:a16b0cf23fe151c5ce4696041da8c2a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a642a9a6799ed5ee49e620a95a3f884b7" id="r_a642a9a6799ed5ee49e620a95a3f884b7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642a9a6799ed5ee49e620a95a3f884b7">compare</a> (<a class="el" href="classnode__t.html">node_t</a> *p, <a class="el" href="classnode__t.html">node_t</a> *q)</td></tr>
-<tr class="separator:a642a9a6799ed5ee49e620a95a3f884b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a378e6e3ebf0a59a3f041227f22eb8ed5" id="r_a378e6e3ebf0a59a3f041227f22eb8ed5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a378e6e3ebf0a59a3f041227f22eb8ed5">operator&gt;&gt;</a> (const <a class="el" href="classnodeseq__t.html">nodeseq_t</a> &amp;G, <a class="el" href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a> *o)</td></tr>
@@ -219,7 +223,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A sequence of nodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00019">19</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00017">17</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abdea5d655fdc954c93db77e6fecd5957" name="abdea5d655fdc954c93db77e6fecd5957"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abdea5d655fdc954c93db77e6fecd5957">&#9670;&#160;</a></span>~nodeseq_t()</h2>
@@ -246,11 +250,11 @@ Friends</h2></td></tr>
 
 <p>destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00032">32</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                    {</div>
-<div class="line"><span class="lineno">   33</span>    <a class="code hl_function" href="#a165644e4095236a169a47db1a915141f">clean</a>();</div>
-<div class="line"><span class="lineno">   34</span>  };</div>
-<div class="ttc" id="aclassnodeseq__t_html_a165644e4095236a169a47db1a915141f"><div class="ttname"><a href="#a165644e4095236a169a47db1a915141f">nodeseq_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">clean up: delete all nodes, reset globals</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00024">nodeseq.h:24</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00030">30</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                    {</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_function" href="#a165644e4095236a169a47db1a915141f">clean</a>();</div>
+<div class="line"><span class="lineno">   32</span>  };</div>
+<div class="ttc" id="aclassnodeseq__t_html_a165644e4095236a169a47db1a915141f"><div class="ttname"><a href="#a165644e4095236a169a47db1a915141f">nodeseq_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">clean up: delete all nodes, reset globals</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00022">nodeseq.h:22</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -293,16 +297,16 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>add node p; take as parent the node holding ball a. the deme of p is changed to match that of a </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00179">179</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                  {</div>
-<div class="line"><span class="lineno">  180</span>    <a class="code hl_function" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a>(a,p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
-<div class="line"><span class="lineno">  181</span>    p-&gt;<a class="code hl_function" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">deme</a>() = a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>();</div>
-<div class="line"><span class="lineno">  182</span>    push_back(p);</div>
-<div class="line"><span class="lineno">  183</span>  };</div>
-<div class="ttc" id="aclassball__t_html_a29e8d8205e8f323bf69767ab5bc9809d"><div class="ttname"><a href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">ball_t::deme</a></div><div class="ttdeci">name_t deme(void) const</div><div class="ttdoc">view deme</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00086">ball.h:86</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00184">184</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  184</span>                                  {</div>
+<div class="line"><span class="lineno">  185</span>    <a class="code hl_function" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a>(a,p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
+<div class="line"><span class="lineno">  186</span>    p-&gt;<a class="code hl_function" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">deme</a>() = a-&gt;<a class="code hl_function" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">deme</a>();</div>
+<div class="line"><span class="lineno">  187</span>    push_back(p);</div>
+<div class="line"><span class="lineno">  188</span>  };</div>
+<div class="ttc" id="aclassball__t_html_a29e8d8205e8f323bf69767ab5bc9809d"><div class="ttname"><a href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d">ball_t::deme</a></div><div class="ttdeci">name_t deme(void) const</div><div class="ttdoc">view deme</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00084">ball.h:84</a></div></div>
 <div class="ttc" id="aclassnode__t_html_ac62ba8de67c9449790e5e9c5132032ad"><div class="ttname"><a href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad">node_t::deme</a></div><div class="ttdeci">name_t deme(void) const</div><div class="ttdoc">view deme</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00096">node.h:96</a></div></div>
 <div class="ttc" id="aclassnode__t_html_acb3ee337996be158355dd6aaaa9811fa"><div class="ttname"><a href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">node_t::green_ball</a></div><div class="ttdeci">ball_t * green_ball(void) const</div><div class="ttdoc">pointer to my green ball</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00088">node.h:88</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a69dc328641a94b6a0494d645fcf8c624"><div class="ttname"><a href="#a69dc328641a94b6a0494d645fcf8c624">nodeseq_t::swap</a></div><div class="ttdeci">void swap(ball_t *a, ball_t *b)</div><div class="ttdoc">swap balls a and b, wherever they lie</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00169">nodeseq.h:169</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a69dc328641a94b6a0494d645fcf8c624"><div class="ttname"><a href="#a69dc328641a94b6a0494d645fcf8c624">nodeseq_t::swap</a></div><div class="ttdeci">void swap(ball_t *a, ball_t *b)</div><div class="ttdoc">swap balls a and b, wherever they lie</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00164">nodeseq.h:164</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -317,8 +321,11 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="127,98,161,103,161,108,127,103"/>
 <area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="181,153,311,179"/>
 <area shape="poly" title=" " alt="" coords="96,103,176,138,196,146,194,151,174,143,93,108"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="365,153,472,179"/>
-<area shape="poly" title=" " alt="" coords="312,163,352,163,352,169,312,169"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="524,153,631,179"/>
+<area shape="poly" title=" " alt="" coords="311,163,511,163,511,169,311,169"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="365,179,476,204"/>
+<area shape="poly" title=" " alt="" coords="312,173,352,179,351,184,311,178"/>
+<area shape="poly" title=" " alt="" coords="476,180,510,174,511,179,477,185"/>
 </map>
 </div>
 <div class="dynheader">
@@ -337,6 +344,73 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="220,136,153,157,152,151,219,131"/>
 <area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="7,218,165,258"/>
 <area shape="poly" title=" " alt="" coords="253,141,215,175,168,208,145,220,142,216,165,204,212,171,250,137"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c6308f6fb71abd427e28129d8a5c146" name="a3c6308f6fb71abd427e28129d8a5c146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6308f6fb71abd427e28129d8a5c146">&#9670;&#160;</a></span>attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nodeseq_t::attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnode__t.html">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classnode__t.html">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>q</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>attach node q as descendant of node p. note that this does not push q into the nodeseq. </p>
+
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00174">174</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>                                     {</div>
+<div class="line"><span class="lineno">  175</span>    <a class="code hl_function" href="#a73dff058ff34687a7e869d2483635a9d">move</a>(q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>(),q,p);</div>
+<div class="line"><span class="lineno">  176</span>  };</div>
+<div class="ttc" id="aclassnodeseq__t_html_a73dff058ff34687a7e869d2483635a9d"><div class="ttname"><a href="#a73dff058ff34687a7e869d2483635a9d">nodeseq_t::move</a></div><div class="ttdeci">void move(ball_t *b, node_t *p, node_t *q)</div><div class="ttdoc">move ball b from p to q</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00159">nodeseq.h:159</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_cgraph.png" border="0" usemap="#aclassnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_cgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_cgraph" id="aclassnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,144,56"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="192,5,335,31"/>
+<area shape="poly" title=" " alt="" coords="144,31,178,27,179,32,145,37"/>
+<area shape="rect" href="classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d" title="move ball b from p to q" alt="" coords="196,55,331,80"/>
+<area shape="poly" title=" " alt="" coords="145,49,182,54,182,60,144,55"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="541,55,648,80"/>
+<area shape="poly" title=" " alt="" coords="331,65,527,65,527,70,331,70"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="383,80,493,105"/>
+<area shape="poly" title=" " alt="" coords="331,74,369,80,369,85,330,80"/>
+<area shape="poly" title=" " alt="" coords="493,81,527,75,528,81,494,86"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_icgraph.png" border="0" usemap="#aclassnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_icgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_icgraph" id="aclassnodeseq__t_a3c6308f6fb71abd427e28129d8a5c146_icgraph">
+<area shape="rect" title=" " alt="" coords="360,35,499,60"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="165,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="346,37,311,32,312,27,347,32"/>
+<area shape="rect" href="classgenealogy__t.html#a01ba075a207cff3816a326991b9de346" title="roots are added at zero time if needed" alt="" coords="164,55,312,95"/>
+<area shape="poly" title=" " alt="" coords="347,62,313,67,312,62,346,57"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,5,116,31"/>
+<area shape="poly" title=" " alt="" coords="151,21,116,21,116,15,151,15"/>
 </map>
 </div>
 
@@ -367,14 +441,14 @@ Here is the caller graph for this function:</div>
 
 <p>size of serialized binary form </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00040">40</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                               {</div>
-<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">size_t</span> s = <span class="keyword">sizeof</span>(size_t);</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>)</div>
-<div class="line"><span class="lineno">   43</span>      s += p-&gt;<a class="code hl_function" href="classnode__t.html#a33991dff8295aa9f2f93393d934ec517">bytesize</a>();</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> s;</div>
-<div class="line"><span class="lineno">   45</span>  };</div>
-<div class="ttc" id="aclassnode__t_html_a33991dff8295aa9f2f93393d934ec517"><div class="ttname"><a href="classnode__t.html#a33991dff8295aa9f2f93393d934ec517">node_t::bytesize</a></div><div class="ttdeci">size_t bytesize(void) const</div><div class="ttdoc">size of binary serialization</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00040">node.h:40</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00038">38</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                               {</div>
+<div class="line"><span class="lineno">   39</span>    <span class="keywordtype">size_t</span> s = <span class="keyword">sizeof</span>(size_t);</div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   41</span>      s += p-&gt;<a class="code hl_function" href="classnode__t.html#a33991dff8295aa9f2f93393d934ec517">bytesize</a>();</div>
+<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">return</span> s;</div>
+<div class="line"><span class="lineno">   43</span>  };</div>
+<div class="ttc" id="aclassnode__t_html_a33991dff8295aa9f2f93393d934ec517"><div class="ttname"><a href="classnode__t.html#a33991dff8295aa9f2f93393d934ec517">node_t::bytesize</a></div><div class="ttdeci">size_t bytesize(void) const</div><div class="ttdoc">size of binary serialization</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00038">node.h:38</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -429,11 +503,11 @@ Here is the caller graph for this function:</div>
 
 <p>clean up: delete all nodes, reset globals </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00024">24</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                    {</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) <span class="keyword">delete</span> p;</div>
-<div class="line"><span class="lineno">   26</span>    clear();</div>
-<div class="line"><span class="lineno">   27</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00022">22</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                    {</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) <span class="keyword">delete</span> p;</div>
+<div class="line"><span class="lineno">   24</span>    clear();</div>
+<div class="line"><span class="lineno">   25</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -474,16 +548,16 @@ Here is the caller graph for this function:</div>
 
 <p>Get all balls of a color. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00131">131</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>                                        {</div>
-<div class="line"><span class="lineno">  132</span>    pocket_t *p = <span class="keyword">new</span> pocket_t;</div>
-<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">for</span> (node_t *q : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  134</span>      <span class="keywordflow">for</span> (ball_t *b : *q ) {</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">if</span> (b-&gt;is(col)) p-&gt;insert(b);</div>
-<div class="line"><span class="lineno">  136</span>      }</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> p;</div>
-<div class="line"><span class="lineno">  139</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00121">121</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                        {</div>
+<div class="line"><span class="lineno">  122</span>    pocket_t *p = <span class="keyword">new</span> pocket_t;</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">for</span> (node_t *q : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  124</span>      <span class="keywordflow">for</span> (ball_t *b : *q ) {</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">if</span> (b-&gt;is(col)) p-&gt;insert(b);</div>
+<div class="line"><span class="lineno">  126</span>      }</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> p;</div>
+<div class="line"><span class="lineno">  129</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -494,7 +568,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="431,35,397,31,398,25,432,30"/>
 <area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="243,55,390,80"/>
 <area shape="poly" title=" " alt="" coords="432,56,391,61,390,56,431,51"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,29,188,55"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,29,188,55"/>
 <area shape="poly" title=" " alt="" coords="223,35,189,40,188,35,222,29"/>
 <area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,29,73,55"/>
 <area shape="poly" title=" " alt="" coords="222,14,172,15,122,19,74,32,73,27,121,14,172,9,222,9"/>
@@ -528,44 +602,48 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>pass through the sequence, dropping superfluous nodes i.e., those holding just one ball that is green. </p>
+<p>drop all inline nodes i.e., those holding just one ball that is green. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00210">210</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  210</span>                   {</div>
-<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="nodeseq_8h.html#aad238a41b86a76a7556679da5f7a819e">node_rev_it</a> i = crbegin(); i != crend(); i++) {</div>
-<div class="line"><span class="lineno">  212</span>      <span class="keywordflow">if</span> ((*i)-&gt;size() == 1 &amp;&amp; (*i)-&gt;holds(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
-<div class="line"><span class="lineno">  213</span>        <a class="code hl_function" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a>((*i)-&gt;last_ball(),(*i)-&gt;green_ball());</div>
-<div class="line"><span class="lineno">  214</span>      }</div>
-<div class="line"><span class="lineno">  215</span>    }</div>
-<div class="line"><span class="lineno">  216</span>    <a class="code hl_typedef" href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a> j = begin();</div>
-<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">while</span> (j != end()) {</div>
-<div class="line"><span class="lineno">  218</span>      <span class="keywordflow">if</span> ((*j)-&gt;dead_root()) {</div>
-<div class="line"><span class="lineno">  219</span>        <a class="code hl_function" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
-<div class="line"><span class="lineno">  220</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  221</span>        j++;</div>
-<div class="line"><span class="lineno">  222</span>      }</div>
-<div class="line"><span class="lineno">  223</span>    }</div>
-<div class="line"><span class="lineno">  224</span>  };</div>
-<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a3c1a1fecd87741fbd9b5d4844c4e4276"><div class="ttname"><a href="#a3c1a1fecd87741fbd9b5d4844c4e4276">nodeseq_t::destroy_node</a></div><div class="ttdeci">void destroy_node(node_t *p)</div><div class="ttdoc">remove a dead root node</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00203">nodeseq.h:203</a></div></div>
-<div class="ttc" id="anodeseq_8h_html_aad238a41b86a76a7556679da5f7a819e"><div class="ttname"><a href="nodeseq_8h.html#aad238a41b86a76a7556679da5f7a819e">node_rev_it</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::const_reverse_iterator node_rev_it</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00016">nodeseq.h:16</a></div></div>
-<div class="ttc" id="anodeseq_8h_html_afdd200c13cb7754d81aaa5deeff703ed"><div class="ttname"><a href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::iterator node_nit</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00015">nodeseq.h:15</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00226">226</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>                   {</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  228</span>      <span class="keywordflow">if</span> (p-&gt;size() == 1 &amp;&amp; p-&gt;<a class="code hl_function" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_function" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a>(p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>(),p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
+<div class="line"><span class="lineno">  230</span>      }</div>
+<div class="line"><span class="lineno">  231</span>    }</div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_function" href="#a02549bd0fd1a66ee1045d3e41c31c394">weed</a>();</div>
+<div class="line"><span class="lineno">  233</span>  };</div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a02549bd0fd1a66ee1045d3e41c31c394"><div class="ttname"><a href="#a02549bd0fd1a66ee1045d3e41c31c394">nodeseq_t::weed</a></div><div class="ttdeci">void weed(void)</div><div class="ttdoc">drop all dead roots</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00214">nodeseq.h:214</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_a778485d19ff278c7fbe70c92fec904e9"><div class="ttname"><a href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">pocket_t::last_ball</a></div><div class="ttdeci">ball_t * last_ball(void) const</div><div class="ttdoc">retrieve the last ball</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00126">pocket.h:126</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_affc2fde2447d03aaf5c8990525c23bf6"><div class="ttname"><a href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">pocket_t::holds</a></div><div class="ttdeci">bool holds(ball_t *b) const</div><div class="ttdoc">does this node hold the given ball?</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00109">pocket.h:109</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a254feb97445b95db5fe02b3ed1f433bb_cgraph.png" border="0" usemap="#aclassnodeseq__t_a254feb97445b95db5fe02b3ed1f433bb_cgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a254feb97445b95db5fe02b3ed1f433bb_cgraph" id="aclassnodeseq__t_a254feb97445b95db5fe02b3ed1f433bb_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,139,56"/>
-<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="187,5,372,31"/>
-<area shape="poly" title=" " alt="" coords="139,33,173,28,173,34,140,38"/>
-<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="214,55,345,80"/>
-<area shape="poly" title=" " alt="" coords="140,48,201,56,200,61,139,54"/>
-<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="420,5,559,31"/>
-<area shape="poly" title=" " alt="" coords="372,15,406,15,406,21,372,21"/>
-<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="607,5,749,31"/>
-<area shape="poly" title=" " alt="" coords="559,15,593,15,593,21,559,21"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="436,55,543,80"/>
-<area shape="poly" title=" " alt="" coords="345,65,422,65,422,70,345,70"/>
+<area shape="rect" title=" " alt="" coords="5,104,139,129"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="187,5,329,31"/>
+<area shape="poly" title=" " alt="" coords="88,102,131,71,185,40,200,33,202,38,188,44,134,76,91,106"/>
+<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="198,55,318,80"/>
+<area shape="poly" title=" " alt="" coords="120,101,195,81,196,86,121,107"/>
+<area shape="rect" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9" title="retrieve the last ball" alt="" coords="188,104,328,129"/>
+<area shape="poly" title=" " alt="" coords="139,114,174,114,174,119,139,119"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="193,153,323,179"/>
+<area shape="poly" title=" " alt="" coords="121,127,196,147,195,152,120,132"/>
+<area shape="rect" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394" title="drop all dead roots" alt="" coords="192,203,324,228"/>
+<area shape="poly" title=" " alt="" coords="91,127,134,157,188,189,202,195,200,200,185,194,131,162,88,132"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="627,128,733,153"/>
+<area shape="poly" title=" " alt="" coords="307,151,377,138,502,132,613,134,612,139,502,137,378,143,308,156"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="415,153,525,179"/>
+<area shape="poly" title=" " alt="" coords="324,163,401,163,401,169,324,169"/>
+<area shape="poly" title=" " alt="" coords="525,157,613,146,613,151,526,162"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="377,203,563,228"/>
+<area shape="poly" title=" " alt="" coords="324,213,364,213,364,218,324,218"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="611,203,749,228"/>
+<area shape="poly" title=" " alt="" coords="563,213,597,213,597,218,563,218"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="797,203,940,228"/>
+<area shape="poly" title=" " alt="" coords="750,213,784,213,784,218,750,218"/>
 </map>
 </div>
 <div class="dynheader">
@@ -576,7 +654,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="445,31,579,56"/>
 <area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="236,31,397,56"/>
 <area shape="poly" title=" " alt="" coords="431,46,397,46,397,41,431,41"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,5,188,31"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,5,188,31"/>
 <area shape="poly" title=" " alt="" coords="222,31,188,26,189,20,223,26"/>
 <area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,31,73,56"/>
 <area shape="poly" title=" " alt="" coords="222,46,73,46,73,41,222,41"/>
@@ -608,22 +686,22 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Order relation among nodes. An ancestor node should always come before its descendants. Nodes should be ordered by time, then arbitrarily. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00097">97</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>                                             {</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">return</span> (p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &lt; q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>) ||</div>
-<div class="line"><span class="lineno">   99</span>      ((p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> == q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno">  100</span>       ((p==q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>()-&gt;holder()) ||</div>
-<div class="line"><span class="lineno">  101</span>    ((q!=p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>()-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>()) &amp;&amp; (p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a> &lt; q-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>))));</div>
-<div class="line"><span class="lineno">  102</span>  };</div>
-<div class="ttc" id="aclassball__t_html_a7018ea86bba5844d30904e3242ec45c4"><div class="ttname"><a href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">ball_t::holder</a></div><div class="ttdeci">node_t * holder(void) const</div><div class="ttdoc">in whose pocket do I lie?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00109">ball.h:109</a></div></div>
-<div class="ttc" id="aclassnode__t_html_acaa19616699522ec853e82c3923b0ce7"><div class="ttname"><a href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">node_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00034">node.h:34</a></div></div>
-<div class="ttc" id="aclassnode__t_html_ae75443c0b7626aac23b3633f5c1011e9"><div class="ttname"><a href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">node_t::slate</a></div><div class="ttdeci">slate_t slate</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00035">node.h:35</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00095">95</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>                                             {</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> (p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> &lt; q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>) ||</div>
+<div class="line"><span class="lineno">   97</span>      ((p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> == q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno">   98</span>       ((p==q-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>()-&gt;holder()) ||</div>
+<div class="line"><span class="lineno">   99</span>        ((q!=p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>()-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>()) &amp;&amp; (p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a> &lt; q-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>))));</div>
+<div class="line"><span class="lineno">  100</span>  };</div>
+<div class="ttc" id="aclassball__t_html_a7018ea86bba5844d30904e3242ec45c4"><div class="ttname"><a href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">ball_t::holder</a></div><div class="ttdeci">node_t * holder(void) const</div><div class="ttdoc">in whose pocket do I lie?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00107">ball.h:107</a></div></div>
+<div class="ttc" id="aclassnode__t_html_acaa19616699522ec853e82c3923b0ce7"><div class="ttname"><a href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">node_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00032">node.h:32</a></div></div>
+<div class="ttc" id="aclassnode__t_html_ae75443c0b7626aac23b3633f5c1011e9"><div class="ttname"><a href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">node_t::slate</a></div><div class="ttdeci">slate_t slate</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00033">node.h:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -641,23 +719,27 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a642a9a6799ed5ee49e620a95a3f884b7_icgraph.png" border="0" usemap="#aclassnodeseq__t_a642a9a6799ed5ee49e620a95a3f884b7_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a642a9a6799ed5ee49e620a95a3f884b7_icgraph" id="aclassnodeseq__t_a642a9a6799ed5ee49e620a95a3f884b7_icgraph">
-<area shape="rect" title=" " alt="" coords="648,56,803,81"/>
-<area shape="rect" href="classnodeseq__t.html#a4c3b0c6475cbabc58cfbfc047513b38e" title="merge two node sequences" alt="" coords="425,31,600,56"/>
-<area shape="poly" title=" " alt="" coords="634,60,600,56,601,51,634,55"/>
-<area shape="rect" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14" title="order nodes in order of increasing time" alt="" coords="451,80,574,105"/>
-<area shape="poly" title=" " alt="" coords="634,82,575,88,574,83,634,76"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="227,55,377,80"/>
-<area shape="poly" title=" " alt="" coords="438,86,377,79,378,74,438,81"/>
-<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="229,104,375,129"/>
-<area shape="poly" title=" " alt="" coords="438,104,376,111,375,106,437,99"/>
-<area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="61,5,123,31"/>
-<area shape="poly" title=" " alt="" coords="233,54,123,28,124,23,235,49"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,55,147,80"/>
-<area shape="poly" title=" " alt="" coords="213,70,148,70,148,65,213,65"/>
-<area shape="poly" title=" " alt="" coords="234,103,146,83,148,77,235,98"/>
-<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,104,179,129"/>
-<area shape="poly" title=" " alt="" coords="215,128,179,128,179,123,215,123"/>
-<area shape="poly" title=" " alt="" coords="193,105,228,105,228,111,192,110"/>
+<area shape="rect" title=" " alt="" coords="791,31,945,56"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="5,5,192,31"/>
+<area shape="poly" title=" " alt="" coords="777,36,572,21,368,17,192,18,192,13,368,11,572,15,777,31"/>
+<area shape="rect" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14" title="order nodes in order of increasing time" alt="" coords="620,80,743,105"/>
+<area shape="poly" title=" " alt="" coords="807,62,731,82,730,77,806,57"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="410,31,561,56"/>
+<area shape="poly" title=" " alt="" coords="616,79,536,59,537,53,618,74"/>
+<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="399,129,572,155"/>
+<area shape="poly" title=" " alt="" coords="618,111,537,132,536,127,616,106"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="412,80,559,105"/>
+<area shape="poly" title=" " alt="" coords="606,95,559,95,559,90,606,90"/>
+<area shape="rect" href="classgenealogy__t.html#a01ba075a207cff3816a326991b9de346" title="roots are added at zero time if needed" alt="" coords="411,179,559,219"/>
+<area shape="poly" title=" " alt="" coords="654,116,617,142,573,168,545,182,542,177,571,164,614,138,651,111"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="264,31,327,56"/>
+<area shape="poly" title=" " alt="" coords="397,46,327,46,327,41,397,41"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="240,80,351,105"/>
+<area shape="poly" title=" " alt="" coords="423,62,346,82,345,77,422,57"/>
+<area shape="poly" title=" " alt="" coords="250,40,192,33,193,27,250,35"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="261,129,329,155"/>
+<area shape="poly" title=" " alt="" coords="385,145,330,145,330,139,385,139"/>
+<area shape="poly" title=" " alt="" coords="398,95,351,95,351,90,398,90"/>
 </map>
 </div>
 
@@ -688,83 +770,22 @@ Here is the caller graph for this function:</div>
 
 <p>Earliest time in the sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00120">120</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>                            {</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> (empty()) ? R_NaReal : front()-&gt;slate;</div>
-<div class="line"><span class="lineno">  122</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00110">110</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  110</span>                            {</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> (empty()) ? R_NaReal : front()-&gt;slate;</div>
+<div class="line"><span class="lineno">  112</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a103886080efad3f60cbbd4bc36fb82d8_icgraph.png" border="0" usemap="#aclassnodeseq__t_a103886080efad3f60cbbd4bc36fb82d8_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a103886080efad3f60cbbd4bc36fb82d8_icgraph" id="aclassnodeseq__t_a103886080efad3f60cbbd4bc36fb82d8_icgraph">
-<area shape="rect" title="Earliest time in the sequence." alt="" coords="400,5,532,31"/>
-<area shape="rect" href="classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da" title="put genealogy at time t into Newick format." alt="" coords="209,5,352,31"/>
-<area shape="poly" title=" " alt="" coords="386,21,352,21,352,15,386,15"/>
-<area shape="rect" href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252" title="put genealogy at current time into Newick format." alt="" coords="5,5,161,31"/>
-<area shape="poly" title=" " alt="" coords="195,21,161,21,161,15,195,15"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1499d26fc7f9d8e287c3e5b3c7e98699" name="a1499d26fc7f9d8e287c3e5b3c7e98699"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1499d26fc7f9d8e287c3e5b3c7e98699">&#9670;&#160;</a></span>describe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string nodeseq_t::describe </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>human-readable info </p>
-
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00262">262</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  262</span>                                  {</div>
-<div class="line"><span class="lineno">  263</span>    std::string o = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  265</span>      o += p-&gt;<a class="code hl_function" href="classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae">describe</a>();</div>
-<div class="line"><span class="lineno">  266</span>    }</div>
-<div class="line"><span class="lineno">  267</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">  268</span>  };</div>
-<div class="ttc" id="aclassnode__t_html_aa6f1f374cc27fdf7c9c624ebdd4983ae"><div class="ttname"><a href="classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae">node_t::describe</a></div><div class="ttdeci">std::string describe(void) const</div><div class="ttdoc">human-readable info</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00177">node.h:177</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_cgraph.png" border="0" usemap="#aclassnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_cgraph" alt=""/></div>
-<map name="aclassnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_cgraph" id="aclassnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_cgraph">
-<area shape="rect" title="human&#45;readable info" alt="" coords="5,55,157,80"/>
-<area shape="rect" href="classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae" title="human&#45;readable info" alt="" coords="205,55,335,80"/>
-<area shape="poly" title=" " alt="" coords="158,65,192,65,192,70,158,70"/>
-<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="397,5,508,31"/>
-<area shape="poly" title=" " alt="" coords="317,52,391,32,392,37,318,57"/>
-<area shape="rect" href="classpocket__t.html#a88115eb8cba3f1c075012ffec50621af" title="human&#45;readable info" alt="" coords="383,55,523,80"/>
-<area shape="poly" title=" " alt="" coords="335,65,369,65,369,70,335,70"/>
-<area shape="rect" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="391,104,514,129"/>
-<area shape="poly" title=" " alt="" coords="318,77,392,98,391,103,317,83"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_icgraph.png" border="0" usemap="#aclassnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_icgraph" alt=""/></div>
-<map name="aclassnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_icgraph" id="aclassnodeseq__t_a1499d26fc7f9d8e287c3e5b3c7e98699_icgraph">
-<area shape="rect" title="human&#45;readable info" alt="" coords="219,5,371,31"/>
-<area shape="rect" href="classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069" title="human&#45;readable info" alt="" coords="5,5,171,31"/>
-<area shape="poly" title=" " alt="" coords="205,21,171,21,171,15,205,15"/>
+<area shape="rect" title="Earliest time in the sequence." alt="" coords="516,5,648,31"/>
+<area shape="rect" href="classnodeseq__t.html#afb5b7cdfc8d4277fd0039e3d442fd1a6" title="put genealogy at time t into Newick format." alt="" coords="325,5,468,31"/>
+<area shape="poly" title=" " alt="" coords="502,21,468,21,468,15,502,15"/>
+<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="121,5,277,31"/>
+<area shape="poly" title=" " alt="" coords="311,21,277,21,277,15,311,15"/>
+<area shape="rect" href="newick_8cc.html#a39c40010381542226dd4696bda48c335" title="tree in newick format" alt="" coords="5,5,73,31"/>
+<area shape="poly" title=" " alt="" coords="108,21,73,21,73,15,108,15"/>
 </map>
 </div>
 
@@ -795,12 +816,12 @@ Here is the caller graph for this function:</div>
 
 <p>remove a dead root node </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00203">203</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                {</div>
-<div class="line"><span class="lineno">  204</span>    assert(p-&gt;<a class="code hl_function" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>());</div>
-<div class="line"><span class="lineno">  205</span>    remove(p);</div>
-<div class="line"><span class="lineno">  206</span>    <span class="keyword">delete</span> p;</div>
-<div class="line"><span class="lineno">  207</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00208">208</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>                                {</div>
+<div class="line"><span class="lineno">  209</span>    assert(p-&gt;<a class="code hl_function" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>());</div>
+<div class="line"><span class="lineno">  210</span>    remove(p);</div>
+<div class="line"><span class="lineno">  211</span>    <span class="keyword">delete</span> p;</div>
+<div class="line"><span class="lineno">  212</span>  };</div>
 <div class="ttc" id="aclassnode__t_html_a6547c79c813d3ccb319b1bc818fe4746"><div class="ttname"><a href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">node_t::dead_root</a></div><div class="ttdeci">bool dead_root(void) const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00124">node.h:124</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -819,33 +840,107 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph.png" border="0" usemap="#aclassnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph" id="aclassnodeseq__t_a3c1a1fecd87741fbd9b5d4844c4e4276_icgraph">
-<area shape="rect" title="remove a dead root node" alt="" coords="644,92,829,117"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="454,19,587,44"/>
-<area shape="poly" title=" " alt="" coords="684,90,558,47,560,42,686,85"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="445,92,596,117"/>
-<area shape="poly" title=" " alt="" coords="630,107,596,107,596,102,630,102"/>
-<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="457,177,584,203"/>
-<area shape="poly" title=" " alt="" coords="692,125,555,180,553,175,690,120"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="236,5,397,31"/>
-<area shape="poly" title=" " alt="" coords="440,29,397,26,398,21,441,23"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,80,188,105"/>
-<area shape="poly" title=" " alt="" coords="254,38,237,44,203,63,174,82,172,78,200,58,235,40,252,33"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,80,73,105"/>
-<area shape="poly" title=" " alt="" coords="249,37,122,70,74,84,73,79,121,65,248,31"/>
-<area shape="poly" title=" " alt="" coords="107,95,74,95,74,90,107,90"/>
-<area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="285,55,348,80"/>
-<area shape="poly" title=" " alt="" coords="437,92,348,76,349,70,438,87"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="261,104,372,129"/>
-<area shape="poly" title=" " alt="" coords="431,113,373,116,372,111,431,107"/>
-<area shape="poly" title=" " alt="" coords="557,168,547,159,521,156,499,158,488,163,485,168,492,176,487,179,480,169,484,159,498,153,521,151,549,154,560,164"/>
-<area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="243,153,390,179"/>
-<area shape="poly" title=" " alt="" coords="444,184,390,177,390,172,444,178"/>
-<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="243,203,390,228"/>
-<area shape="poly" title=" " alt="" coords="444,202,390,209,390,204,444,197"/>
-<area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="237,253,396,293"/>
-<area shape="poly" title=" " alt="" coords="477,211,398,243,369,255,367,250,396,238,475,206"/>
-<area shape="poly" title=" " alt="" coords="245,200,234,194,210,173,189,149,161,107,165,104,193,146,214,169,238,189,247,195"/>
-<area shape="poly" title=" " alt="" coords="255,201,235,194,137,149,62,108,64,103,140,144,237,189,256,196"/>
+<area shape="rect" title="remove a dead root node" alt="" coords="864,132,1049,157"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="665,56,816,81"/>
+<area shape="poly" title=" " alt="" coords="906,130,777,84,779,79,908,125"/>
+<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="481,236,607,261"/>
+<area shape="poly" title=" " alt="" coords="893,163,596,239,595,233,891,158"/>
+<area shape="rect" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394" title="drop all dead roots" alt="" coords="675,132,807,157"/>
+<area shape="poly" title=" " alt="" coords="850,147,807,147,807,142,850,142"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="513,5,575,31"/>
+<area shape="poly" title=" " alt="" coords="677,55,575,28,576,23,678,50"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="274,77,385,103"/>
+<area shape="poly" title=" " alt="" coords="652,76,385,90,385,84,652,71"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="236,5,423,31"/>
+<area shape="poly" title=" " alt="" coords="499,21,423,21,423,15,499,15"/>
+<area shape="poly" title=" " alt="" coords="579,226,569,218,544,215,523,217,512,221,510,227,516,234,512,237,505,228,509,218,522,212,544,209,571,213,582,222"/>
+<area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="256,199,403,224"/>
+<area shape="poly" title=" " alt="" coords="466,238,402,227,403,221,467,233"/>
+<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="256,248,403,273"/>
+<area shape="poly" title=" " alt="" coords="467,256,403,259,403,254,467,250"/>
+<area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="250,298,409,338"/>
+<area shape="poly" title=" " alt="" coords="492,268,393,300,391,295,490,263"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,199,188,224"/>
+<area shape="poly" title=" " alt="" coords="263,247,235,239,187,224,189,219,237,234,264,242"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,199,73,224"/>
+<area shape="poly" title=" " alt="" coords="242,257,121,239,73,226,74,221,122,234,243,252"/>
+<area shape="poly" title=" " alt="" coords="107,214,74,214,74,209,107,209"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="477,156,611,181"/>
+<area shape="poly" title=" " alt="" coords="661,157,612,163,611,158,660,152"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="471,107,617,132"/>
+<area shape="poly" title=" " alt="" coords="660,137,617,131,618,126,661,132"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="249,149,410,175"/>
+<area shape="poly" title=" " alt="" coords="464,169,410,167,410,162,464,164"/>
+<area shape="poly" title=" " alt="" coords="264,181,237,189,189,203,187,198,235,183,263,176"/>
+<area shape="poly" title=" " alt="" coords="235,172,122,189,74,202,73,197,121,183,235,166"/>
+<area shape="poly" title=" " alt="" coords="457,110,385,100,386,95,457,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a125256a336ee2dceb0747bea92dffc78" name="a125256a336ee2dceb0747bea92dffc78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125256a336ee2dceb0747bea92dffc78">&#9670;&#160;</a></span>detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nodeseq_t::detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnode__t.html">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>detach node p from its parent. note that this does not remove q from the nodeseq. </p>
+
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00179">179</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  179</span>                          {</div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_function" href="#a73dff058ff34687a7e869d2483635a9d">move</a>(p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>(),p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>(),p);</div>
+<div class="line"><span class="lineno">  181</span>  };</div>
+<div class="ttc" id="aclassnode__t_html_a144e254a1b8b22ce1f905f0e80cf55fb"><div class="ttname"><a href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">node_t::parent</a></div><div class="ttdeci">node_t * parent(void) const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00115">node.h:115</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a125256a336ee2dceb0747bea92dffc78_cgraph.png" border="0" usemap="#aclassnodeseq__t_a125256a336ee2dceb0747bea92dffc78_cgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a125256a336ee2dceb0747bea92dffc78_cgraph" id="aclassnodeseq__t_a125256a336ee2dceb0747bea92dffc78_cgraph">
+<area shape="rect" title=" " alt="" coords="5,55,147,80"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="195,5,337,31"/>
+<area shape="poly" title=" " alt="" coords="125,52,202,32,203,37,126,57"/>
+<area shape="rect" href="classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d" title="move ball b from p to q" alt="" coords="199,55,333,80"/>
+<area shape="poly" title=" " alt="" coords="147,65,185,65,185,70,147,70"/>
+<area shape="rect" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="208,104,324,129"/>
+<area shape="poly" title=" " alt="" coords="126,77,203,98,202,103,125,83"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="552,29,659,55"/>
+<area shape="poly" title=" " alt="" coords="315,52,385,39,465,35,538,36,538,41,465,40,386,45,316,57"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="389,55,500,80"/>
+<area shape="poly" title=" " alt="" coords="333,65,375,65,375,70,333,70"/>
+<area shape="poly" title=" " alt="" coords="500,56,538,50,539,55,501,61"/>
+<area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="385,104,504,129"/>
+<area shape="poly" title=" " alt="" coords="324,114,372,114,372,119,324,119"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a125256a336ee2dceb0747bea92dffc78_icgraph.png" border="0" usemap="#aclassnodeseq__t_a125256a336ee2dceb0747bea92dffc78_icgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a125256a336ee2dceb0747bea92dffc78_icgraph" id="aclassnodeseq__t_a125256a336ee2dceb0747bea92dffc78_icgraph">
+<area shape="rect" title=" " alt="" coords="572,5,713,31"/>
+<area shape="rect" href="classgenealogy__t.html#a18c0ea2e2b6b24cb4a690677de9f2903" title="drop all zero&#45;length branches" alt="" coords="359,5,524,31"/>
+<area shape="poly" title=" " alt="" coords="558,21,524,21,524,15,558,15"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="164,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="345,21,311,21,311,15,345,15"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,5,116,31"/>
+<area shape="poly" title=" " alt="" coords="150,21,116,21,116,15,150,15"/>
 </map>
 </div>
 
@@ -875,25 +970,26 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>drop the black ball 'a' and the node if either (1) the node becomes thereby a dead root, or (2) the node's pocket becomes thereby empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00187">187</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                        {</div>
-<div class="line"><span class="lineno">  188</span>    assert(a-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>));</div>
-<div class="line"><span class="lineno">  189</span>    node_t *p = a-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">if</span> (p-&gt;size() &gt; 1) {</div>
-<div class="line"><span class="lineno">  191</span>      p-&gt;erase(a);</div>
-<div class="line"><span class="lineno">  192</span>      <span class="keyword">delete</span> a;</div>
-<div class="line"><span class="lineno">  193</span>      <span class="keywordflow">if</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>()) {     <span class="comment">// remove isolated root</span></div>
-<div class="line"><span class="lineno">  194</span>        <a class="code hl_function" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
-<div class="line"><span class="lineno">  195</span>      }</div>
-<div class="line"><span class="lineno">  196</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  197</span>      <a class="code hl_function" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a>(a,p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
-<div class="line"><span class="lineno">  198</span>      <a class="code hl_function" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
-<div class="line"><span class="lineno">  199</span>      <a class="code hl_function" href="#a5b3576542f04b82beb2cd9bf89279390">drop</a>(a);                  <span class="comment">// recurse</span></div>
-<div class="line"><span class="lineno">  200</span>    }</div>
-<div class="line"><span class="lineno">  201</span>  };</div>
-<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a></div><div class="ttdeci">@ black</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
-<div class="ttc" id="aclassball__t_html_a8a9297a7f3f8874f86462d34dede1d5f"><div class="ttname"><a href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">ball_t::is</a></div><div class="ttdeci">bool is(color_t c) const</div><div class="ttdoc">is a given ball of the given color?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00117">ball.h:117</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a5b3576542f04b82beb2cd9bf89279390"><div class="ttname"><a href="#a5b3576542f04b82beb2cd9bf89279390">nodeseq_t::drop</a></div><div class="ttdeci">void drop(ball_t *a)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00187">nodeseq.h:187</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00192">192</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  192</span>                        {</div>
+<div class="line"><span class="lineno">  193</span>    assert(a-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>));</div>
+<div class="line"><span class="lineno">  194</span>    node_t *p = a-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (p-&gt;size() &gt; 1) {</div>
+<div class="line"><span class="lineno">  196</span>      p-&gt;erase(a);</div>
+<div class="line"><span class="lineno">  197</span>      <span class="keyword">delete</span> a;</div>
+<div class="line"><span class="lineno">  198</span>      <span class="keywordflow">if</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746">dead_root</a>()) {     <span class="comment">// remove isolated root</span></div>
+<div class="line"><span class="lineno">  199</span>        <a class="code hl_function" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
+<div class="line"><span class="lineno">  200</span>      }</div>
+<div class="line"><span class="lineno">  201</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  202</span>      <a class="code hl_function" href="#a69dc328641a94b6a0494d645fcf8c624">swap</a>(a,p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
+<div class="line"><span class="lineno">  203</span>      <a class="code hl_function" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(p);</div>
+<div class="line"><span class="lineno">  204</span>      <a class="code hl_function" href="#a5b3576542f04b82beb2cd9bf89279390">drop</a>(a);                  <span class="comment">// recurse</span></div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="line"><span class="lineno">  206</span>  };</div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a></div><div class="ttdeci">@ black</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aclassball__t_html_a8a9297a7f3f8874f86462d34dede1d5f"><div class="ttname"><a href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">ball_t::is</a></div><div class="ttdeci">bool is(color_t c) const</div><div class="ttdoc">is a given ball of the given color?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00115">ball.h:115</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a3c1a1fecd87741fbd9b5d4844c4e4276"><div class="ttname"><a href="#a3c1a1fecd87741fbd9b5d4844c4e4276">nodeseq_t::destroy_node</a></div><div class="ttdeci">void destroy_node(node_t *p)</div><div class="ttdoc">remove a dead root node</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00208">nodeseq.h:208</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a5b3576542f04b82beb2cd9bf89279390"><div class="ttname"><a href="#a5b3576542f04b82beb2cd9bf89279390">nodeseq_t::drop</a></div><div class="ttdeci">void drop(ball_t *a)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00192">nodeseq.h:192</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -907,8 +1003,8 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="93,112,179,74,203,66,204,71,181,79,95,117"/>
 <area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="201,89,344,114"/>
 <area shape="poly" title=" " alt="" coords="132,117,187,110,188,115,132,122"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="429,189,536,214"/>
-<area shape="poly" title=" " alt="" coords="133,135,366,175,416,185,415,190,365,180,132,140"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="618,190,725,216"/>
+<area shape="poly" title=" " alt="" coords="133,132,605,192,604,197,132,138"/>
 <area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="234,190,311,216"/>
 <area shape="poly" title=" " alt="" coords="102,137,181,169,222,183,220,188,179,174,100,142"/>
 <area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="207,240,338,265"/>
@@ -916,7 +1012,10 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="600,14,743,40"/>
 <area shape="poly" title=" " alt="" coords="552,24,587,24,587,30,552,30"/>
 <area shape="poly" title=" " alt="" coords="365,39,399,34,400,40,366,44"/>
-<area shape="poly" title=" " alt="" coords="326,237,416,215,417,220,327,242"/>
+<area shape="poly" title=" " alt="" coords="338,239,413,227,604,206,605,212,414,232,338,244"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="427,241,538,266"/>
+<area shape="poly" title=" " alt="" coords="338,250,414,251,414,256,338,256"/>
+<area shape="poly" title=" " alt="" coords="530,238,609,217,611,222,532,244"/>
 </map>
 </div>
 <div class="dynheader">
@@ -932,7 +1031,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="429,70,389,70,389,65,429,65"/>
 <area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="236,105,395,145"/>
 <area shape="poly" title=" " alt="" coords="450,87,383,107,381,102,449,82"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,29,188,55"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,29,188,55"/>
 <area shape="poly" title=" " alt="" coords="228,56,188,50,188,45,229,51"/>
 <area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,55,73,80"/>
 <area shape="poly" title=" " alt="" coords="228,70,73,70,73,65,228,65"/>
@@ -967,10 +1066,10 @@ Here is the caller graph for this function:</div>
 
 <p>Latest time in the sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00124">124</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                            {</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> (empty()) ? R_NaReal : back()-&gt;slate;</div>
-<div class="line"><span class="lineno">  126</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00114">114</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                            {</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">return</span> (empty()) ? R_NaReal : back()-&gt;slate;</div>
+<div class="line"><span class="lineno">  116</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -999,10 +1098,10 @@ Here is the caller graph for this function:</div>
 
 <p>Number of nodes in the sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00152">152</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>                             {</div>
-<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">return</span> this-&gt;size();</div>
-<div class="line"><span class="lineno">  154</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00142">142</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  142</span>                             {</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">return</span> this-&gt;size();</div>
+<div class="line"><span class="lineno">  144</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1017,8 +1116,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="acf09dd4bc265ecb0819f0f2741f180da" name="acf09dd4bc265ecb0819f0f2741f180da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf09dd4bc265ecb0819f0f2741f180da">&#9670;&#160;</a></span>newick()</h2>
+<a id="a73dff058ff34687a7e869d2483635a9d" name="a73dff058ff34687a7e869d2483635a9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73dff058ff34687a7e869d2483635a9d">&#9670;&#160;</a></span>move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1027,10 +1126,19 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string nodeseq_t::newick </td>
+          <td class="memname">void nodeseq_t::move </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="classball__t.html">ball_t</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classnode__t.html">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classnode__t.html">node_t</a> *</td>          <td class="paramname"><span class="paramname"><em>q</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1040,38 +1148,114 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>put genealogy at time <code>t</code> into Newick format. </p>
+<p>move ball b from p to q </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00290">290</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  290</span>                                     {</div>
-<div class="line"><span class="lineno">  291</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> te = <a class="code hl_function" href="#a103886080efad3f60cbbd4bc36fb82d8">dawn</a>();</div>
-<div class="line"><span class="lineno">  292</span>    std::string o = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  293</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  294</span>      <span class="keywordflow">if</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) {</div>
-<div class="line"><span class="lineno">  295</span>        o += p-&gt;<a class="code hl_function" href="classnode__t.html#a8fbcbc87b57e6d224e709777caf89609">newick</a>(t,te) + <span class="stringliteral">&quot;;&quot;</span>;</div>
-<div class="line"><span class="lineno">  296</span>      }</div>
-<div class="line"><span class="lineno">  297</span>    }</div>
-<div class="line"><span class="lineno">  298</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">  299</span>  };</div>
-<div class="ttc" id="aclassnode__t_html_a7b42edef9d30827acaef62beff27582f"><div class="ttname"><a href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">node_t::is_root</a></div><div class="ttdeci">bool is_root(void) const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00121">node.h:121</a></div></div>
-<div class="ttc" id="aclassnode__t_html_a8fbcbc87b57e6d224e709777caf89609"><div class="ttname"><a href="classnode__t.html#a8fbcbc87b57e6d224e709777caf89609">node_t::newick</a></div><div class="ttdeci">std::string newick(const slate_t &amp;tnow, const slate_t &amp;tpar) const</div><div class="ttdoc">Newick format.</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00214">node.h:214</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a103886080efad3f60cbbd4bc36fb82d8"><div class="ttname"><a href="#a103886080efad3f60cbbd4bc36fb82d8">nodeseq_t::dawn</a></div><div class="ttdeci">slate_t dawn(void) const</div><div class="ttdoc">Earliest time in the sequence.</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00120">nodeseq.h:120</a></div></div>
-<div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00044">internal.h:44</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00159">159</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                                              {</div>
+<div class="line"><span class="lineno">  160</span>    assert(b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() == p);</div>
+<div class="line"><span class="lineno">  161</span>    p-&gt;erase(b); q-&gt;<a class="code hl_function" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">insert</a>(b);</div>
+<div class="line"><span class="lineno">  162</span>  };</div>
+<div class="ttc" id="aclassnode__t_html_ad2d4cc004ae4fe2149206c5cb44310b4"><div class="ttname"><a href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">node_t::insert</a></div><div class="ttdeci">void insert(ball_t *a)</div><div class="ttdoc">insert a ball into the pocket of a node</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00156">node.h:156</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_cgraph.png" border="0" usemap="#aclassnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_cgraph" alt=""/></div>
-<map name="aclassnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_cgraph" id="aclassnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_cgraph">
+<div class="center"><img src="classnodeseq__t_a73dff058ff34687a7e869d2483635a9d_cgraph.png" border="0" usemap="#aclassnodeseq__t_a73dff058ff34687a7e869d2483635a9d_cgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a73dff058ff34687a7e869d2483635a9d_cgraph" id="aclassnodeseq__t_a73dff058ff34687a7e869d2483635a9d_cgraph">
+<area shape="rect" title="move ball b from p to q" alt="" coords="5,5,140,31"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="347,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="140,15,333,15,333,21,140,21"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="188,31,299,56"/>
+<area shape="poly" title=" " alt="" coords="141,25,175,31,174,36,140,31"/>
+<area shape="poly" title=" " alt="" coords="299,32,333,26,334,31,299,37"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a73dff058ff34687a7e869d2483635a9d_icgraph.png" border="0" usemap="#aclassnodeseq__t_a73dff058ff34687a7e869d2483635a9d_icgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a73dff058ff34687a7e869d2483635a9d_icgraph" id="aclassnodeseq__t_a73dff058ff34687a7e869d2483635a9d_icgraph">
+<area shape="rect" title="move ball b from p to q" alt="" coords="811,143,945,168"/>
+<area shape="rect" href="classnodeseq__t.html#a3c6308f6fb71abd427e28129d8a5c146" title=" " alt="" coords="618,143,757,168"/>
+<area shape="poly" title=" " alt="" coords="797,158,757,158,757,153,797,153"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="612,56,763,81"/>
+<area shape="poly" title=" " alt="" coords="835,139,715,84,718,79,838,134"/>
+<area shape="rect" href="classnodeseq__t.html#a125256a336ee2dceb0747bea92dffc78" title=" " alt="" coords="617,192,758,217"/>
+<area shape="poly" title=" " alt="" coords="816,174,738,194,737,189,814,169"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="184,171,331,196"/>
+<area shape="poly" title=" " alt="" coords="605,163,331,181,331,176,604,158"/>
+<area shape="rect" href="classgenealogy__t.html#a01ba075a207cff3816a326991b9de346" title="roots are added at zero time if needed" alt="" coords="407,106,555,146"/>
+<area shape="poly" title=" " alt="" coords="604,146,555,139,556,134,605,141"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,113,116,139"/>
+<area shape="poly" title=" " alt="" coords="199,169,104,141,106,136,201,164"/>
+<area shape="poly" title=" " alt="" coords="598,79,399,97,116,123,116,118,398,91,598,74"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="450,5,513,31"/>
+<area shape="poly" title=" " alt="" coords="621,55,512,28,514,23,622,50"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="164,5,351,31"/>
+<area shape="poly" title=" " alt="" coords="436,21,351,21,351,15,436,15"/>
+<area shape="rect" href="classgenealogy__t.html#a18c0ea2e2b6b24cb4a690677de9f2903" title="drop all zero&#45;length branches" alt="" coords="399,221,564,247"/>
+<area shape="poly" title=" " alt="" coords="604,219,564,225,564,220,603,214"/>
+<area shape="poly" title=" " alt="" coords="411,221,314,199,315,193,412,216"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb5b7cdfc8d4277fd0039e3d442fd1a6" name="afb5b7cdfc8d4277fd0039e3d442fd1a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb5b7cdfc8d4277fd0039e3d442fd1a6">&#9670;&#160;</a></span>newick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string_t nodeseq_t::newick </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>showdeme</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>extended</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>put genealogy at time <code>t</code> into Newick format. </p>
+
+<p class="definition">Definition at line <a class="el" href="newick_8cc_source.html#l00078">78</a> of file <a class="el" href="newick_8cc_source.html">newick.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>{</div>
+<div class="line"><span class="lineno">   81</span>  <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> te = <a class="code hl_function" href="#a103886080efad3f60cbbd4bc36fb82d8">dawn</a>();</div>
+<div class="line"><span class="lineno">   82</span>  string_t o = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   83</span>  <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) {</div>
+<div class="line"><span class="lineno">   85</span>      o += p-&gt;<a class="code hl_function" href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8">newick</a>(t,te,showdeme,extended) + <span class="stringliteral">&quot;;&quot;</span>;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
+<div class="ttc" id="aclassnode__t_html_a7b42edef9d30827acaef62beff27582f"><div class="ttname"><a href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">node_t::is_root</a></div><div class="ttdeci">bool is_root(void) const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00121">node.h:121</a></div></div>
+<div class="ttc" id="aclassnode__t_html_ae3821a3c68f3e710e1caf578087117a8"><div class="ttname"><a href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8">node_t::newick</a></div><div class="ttdeci">string_t newick(const slate_t &amp;tnow, const slate_t &amp;tpar, bool showdeme, bool extended) const</div><div class="ttdoc">Newick-format output.</div><div class="ttdef"><b>Definition</b> <a href="newick_8cc_source.html#l00030">newick.cc:31</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a103886080efad3f60cbbd4bc36fb82d8"><div class="ttname"><a href="#a103886080efad3f60cbbd4bc36fb82d8">nodeseq_t::dawn</a></div><div class="ttdeci">slate_t dawn(void) const</div><div class="ttdoc">Earliest time in the sequence.</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00110">nodeseq.h:110</a></div></div>
+<div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00053">internal.h:53</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_cgraph.png" border="0" usemap="#aclassnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_cgraph" alt=""/></div>
+<map name="aclassnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_cgraph" id="aclassnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_cgraph">
 <area shape="rect" title="put genealogy at time t into Newick format." alt="" coords="5,55,148,80"/>
 <area shape="rect" href="classnodeseq__t.html#a103886080efad3f60cbbd4bc36fb82d8" title="Earliest time in the sequence." alt="" coords="196,5,328,31"/>
 <area shape="poly" title=" " alt="" coords="124,52,199,32,201,37,126,57"/>
 <area shape="rect" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="203,55,321,80"/>
 <area shape="poly" title=" " alt="" coords="148,65,189,65,189,70,148,70"/>
-<area shape="rect" href="classnode__t.html#a8fbcbc87b57e6d224e709777caf89609" title="Newick format." alt="" coords="202,179,322,204"/>
+<area shape="rect" href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8" title="Newick&#45;format output." alt="" coords="202,179,322,204"/>
 <area shape="poly" title=" " alt="" coords="98,78,232,169,229,173,95,82"/>
-<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="564,53,707,79"/>
-<area shape="poly" title=" " alt="" coords="321,52,376,45,443,41,511,45,550,49,550,54,510,50,443,46,376,50,322,58"/>
-<area shape="poly" title=" " alt="" coords="271,177,312,132,342,108,375,89,418,74,464,65,550,59,550,64,464,70,420,79,377,94,345,112,316,136,275,180"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="559,53,701,79"/>
+<area shape="poly" title=" " alt="" coords="321,52,376,45,443,41,511,45,547,49,546,54,510,50,443,46,376,50,322,58"/>
+<area shape="poly" title=" " alt="" coords="271,177,312,132,342,108,375,89,417,74,461,65,544,59,544,64,461,71,418,80,377,94,345,112,316,136,275,180"/>
 <area shape="poly" title=" " alt="" coords="232,180,226,170,229,161,241,154,262,152,287,156,297,164,294,168,285,160,262,157,243,159,233,164,231,170,236,177"/>
 <area shape="rect" href="classball__t.html#af54ab028113130c4760856b06a31ad8b" title="a child is the owner of a green ball" alt="" coords="395,104,492,129"/>
 <area shape="poly" title=" " alt="" coords="289,176,375,138,392,132,394,137,377,143,291,181"/>
@@ -1081,25 +1265,25 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="323,197,370,203,369,208,322,202"/>
 <area shape="rect" href="classnode__t.html#af3d818f04a9a0db70752922a54e984be" title="number of descendants" alt="" coords="376,252,511,277"/>
 <area shape="poly" title=" " alt="" coords="293,202,377,237,396,244,394,249,375,242,291,207"/>
-<area shape="rect" href="classball__t.html#a6ea0514941c8f2a89306e60065562e83" title="element of a newick representation" alt="" coords="387,301,499,327"/>
+<area shape="rect" href="classball__t.html#a7636ccfa9e2237634745726cc3d05dec" title=" " alt="" coords="387,301,499,327"/>
 <area shape="poly" title=" " alt="" coords="277,203,319,244,377,288,388,294,386,298,375,292,316,248,273,206"/>
 <area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="384,351,503,376"/>
 <area shape="poly" title=" " alt="" coords="272,203,311,267,342,304,378,337,385,342,382,347,374,341,338,308,307,270,268,206"/>
-<area shape="poly" title=" " alt="" coords="488,250,509,237,546,202,577,162,620,90,625,92,582,165,550,206,512,241,490,254"/>
-<area shape="rect" href="classball__t.html#a3545dd485a4dfd8364552bf3d360555e" title="machine&#45;readable color symbols" alt="" coords="559,301,712,327"/>
-<area shape="poly" title=" " alt="" coords="499,311,545,311,545,317,499,317"/>
-<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="760,301,837,327"/>
-<area shape="poly" title=" " alt="" coords="712,311,746,311,746,317,712,317"/>
+<area shape="poly" title=" " alt="" coords="488,250,509,237,545,202,575,163,615,90,620,93,579,166,549,206,512,241,490,254"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="579,301,681,327"/>
+<area shape="poly" title=" " alt="" coords="499,311,565,311,565,317,499,317"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_icgraph.png" border="0" usemap="#aclassnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_icgraph" alt=""/></div>
-<map name="aclassnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_icgraph" id="aclassnodeseq__t_acf09dd4bc265ecb0819f0f2741f180da_icgraph">
-<area shape="rect" title="put genealogy at time t into Newick format." alt="" coords="209,5,352,31"/>
-<area shape="rect" href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252" title="put genealogy at current time into Newick format." alt="" coords="5,5,161,31"/>
-<area shape="poly" title=" " alt="" coords="195,21,161,21,161,15,195,15"/>
+<div class="center"><img src="classnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_icgraph.png" border="0" usemap="#aclassnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_icgraph" alt=""/></div>
+<map name="aclassnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_icgraph" id="aclassnodeseq__t_afb5b7cdfc8d4277fd0039e3d442fd1a6_icgraph">
+<area shape="rect" title="put genealogy at time t into Newick format." alt="" coords="325,5,468,31"/>
+<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="121,5,277,31"/>
+<area shape="poly" title=" " alt="" coords="311,21,277,21,277,15,311,15"/>
+<area shape="rect" href="newick_8cc.html#a39c40010381542226dd4696bda48c335" title="tree in newick format" alt="" coords="5,5,73,31"/>
+<area shape="poly" title=" " alt="" coords="108,21,73,21,73,15,108,15"/>
 </map>
 </div>
 
@@ -1130,17 +1314,17 @@ Here is the caller graph for this function:</div>
 
 <p>Number of distinct timepoints. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00141">141</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                 {</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordtype">size_t</span> count = 1;</div>
-<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  144</span>      <span class="keywordflow">if</span> (t &lt; p-&gt;slate) {</div>
-<div class="line"><span class="lineno">  145</span>        t = p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
-<div class="line"><span class="lineno">  146</span>        count++;</div>
-<div class="line"><span class="lineno">  147</span>      }</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  150</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00131">131</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                 {</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordtype">size_t</span> count = 1;</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  134</span>      <span class="keywordflow">if</span> (t &lt; p-&gt;slate) {</div>
+<div class="line"><span class="lineno">  135</span>        t = p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
+<div class="line"><span class="lineno">  136</span>        count++;</div>
+<div class="line"><span class="lineno">  137</span>      }</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  140</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1150,54 +1334,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed" title="lineage count and saturation" alt="" coords="5,29,164,69"/>
 <area shape="poly" title=" " alt="" coords="198,52,164,52,164,47,198,47"/>
 <area shape="poly" title=" " alt="" coords="117,17,106,11,85,8,66,10,55,15,51,21,53,28,48,30,46,20,52,11,65,5,85,3,108,6,120,13"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a4c3b0c6475cbabc58cfbfc047513b38e" name="a4c3b0c6475cbabc58cfbfc047513b38e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c3b0c6475cbabc58cfbfc047513b38e">&#9670;&#160;</a></span>operator+=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnodeseq__t.html">nodeseq_t</a> &amp; nodeseq_t::operator+= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnodeseq__t.html">nodeseq_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>merge two node sequences </p>
-
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00107">107</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>                                           {</div>
-<div class="line"><span class="lineno">  108</span>    merge(other,<a class="code hl_function" href="#a642a9a6799ed5ee49e620a95a3f884b7">compare</a>);</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><span class="lineno">  110</span>  };</div>
-<div class="ttc" id="aclassnodeseq__t_html_a642a9a6799ed5ee49e620a95a3f884b7"><div class="ttname"><a href="#a642a9a6799ed5ee49e620a95a3f884b7">nodeseq_t::compare</a></div><div class="ttdeci">static bool compare(node_t *p, node_t *q)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00097">nodeseq.h:97</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_a4c3b0c6475cbabc58cfbfc047513b38e_cgraph.png" border="0" usemap="#aclassnodeseq__t_a4c3b0c6475cbabc58cfbfc047513b38e_cgraph" alt=""/></div>
-<map name="aclassnodeseq__t_a4c3b0c6475cbabc58cfbfc047513b38e_cgraph" id="aclassnodeseq__t_a4c3b0c6475cbabc58cfbfc047513b38e_cgraph">
-<area shape="rect" title="merge two node sequences" alt="" coords="5,31,180,56"/>
-<area shape="rect" href="classnodeseq__t.html#a642a9a6799ed5ee49e620a95a3f884b7" title=" " alt="" coords="228,31,383,56"/>
-<area shape="poly" title=" " alt="" coords="180,41,214,41,214,46,180,46"/>
-<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="431,5,573,31"/>
-<area shape="poly" title=" " alt="" coords="382,31,417,26,418,32,383,36"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="449,55,555,80"/>
-<area shape="poly" title=" " alt="" coords="383,50,435,57,434,62,382,55"/>
 </map>
 </div>
 
@@ -1228,18 +1364,18 @@ Here is the call graph for this function:</div>
 
 <p>traverse to nth node, retrieve pointer </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00156">156</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>                           {</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><span class="lineno">  158</span>    <a class="code hl_typedef" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> k = cbegin();</div>
-<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k != cend()) {</div>
-<div class="line"><span class="lineno">  160</span>      i++; k++;</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-<div class="line"><span class="lineno">  162</span>    assert(k != cend());</div>
-<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">return</span> *k;</div>
-<div class="line"><span class="lineno">  164</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00146">146</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>                           {</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  148</span>    <a class="code hl_typedef" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> k = cbegin();</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k != cend()) {</div>
+<div class="line"><span class="lineno">  150</span>      i++; k++;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="line"><span class="lineno">  152</span>    assert(k != cend());</div>
+<div class="line"><span class="lineno">  153</span>    <span class="keywordflow">return</span> *k;</div>
+<div class="line"><span class="lineno">  154</span>  };</div>
 <div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00009">lbdp_pomp.c:9</a></div></div>
-<div class="ttc" id="anodeseq_8h_html_ab7cf8c23ad3ad8416142396f5600e3e9"><div class="ttname"><a href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::const_iterator node_it</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00014">nodeseq.h:14</a></div></div>
+<div class="ttc" id="anodeseq_8h_html_ab7cf8c23ad3ad8416142396f5600e3e9"><div class="ttname"><a href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::const_iterator node_it</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00012">nodeseq.h:12</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1267,16 +1403,16 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Needed in deserialization. This function repairs the links green balls and their names. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00082">82</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                               {</div>
-<div class="line"><span class="lineno">   83</span>    std::unordered_map&lt;name_t,ball_t*&gt;::const_iterator <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">   85</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = names.find(p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>);</div>
-<div class="line"><span class="lineno">   86</span>      assert(<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> != names.end());</div>
-<div class="line"><span class="lineno">   87</span>      ball_t *b = <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-&gt;second;</div>
-<div class="line"><span class="lineno">   88</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>() = b;</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="line"><span class="lineno">   90</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00080">80</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                                                               {</div>
+<div class="line"><span class="lineno">   81</span>    std::unordered_map&lt;name_t,ball_t*&gt;::const_iterator <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   83</span>      <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = names.find(p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>);</div>
+<div class="line"><span class="lineno">   84</span>      assert(<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> != names.end());</div>
+<div class="line"><span class="lineno">   85</span>      ball_t *b = <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-&gt;second;</div>
+<div class="line"><span class="lineno">   86</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>() = b;</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="line"><span class="lineno">   88</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1325,10 +1461,11 @@ Here is the caller graph for this function:</div>
 
 <p>order nodes in order of increasing time </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00113">113</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>                   {</div>
-<div class="line"><span class="lineno">  114</span>    std::list&lt;node_t*&gt;::sort(<a class="code hl_function" href="#a642a9a6799ed5ee49e620a95a3f884b7">compare</a>);</div>
-<div class="line"><span class="lineno">  115</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00103">103</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                   {</div>
+<div class="line"><span class="lineno">  104</span>    std::list&lt;node_t*&gt;::sort(<a class="code hl_function" href="#a642a9a6799ed5ee49e620a95a3f884b7">compare</a>);</div>
+<div class="line"><span class="lineno">  105</span>  };</div>
+<div class="ttc" id="aclassnodeseq__t_html_a642a9a6799ed5ee49e620a95a3f884b7"><div class="ttname"><a href="#a642a9a6799ed5ee49e620a95a3f884b7">nodeseq_t::compare</a></div><div class="ttdeci">static bool compare(node_t *p, node_t *q)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00095">nodeseq.h:95</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1348,19 +1485,24 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a2787893286ac607ed0ad06686c2aee14_icgraph.png" border="0" usemap="#aclassnodeseq__t_a2787893286ac607ed0ad06686c2aee14_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a2787893286ac607ed0ad06686c2aee14_icgraph" id="aclassnodeseq__t_a2787893286ac607ed0ad06686c2aee14_icgraph">
-<area shape="rect" title="order nodes in order of increasing time" alt="" coords="425,80,548,105"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="227,55,377,80"/>
-<area shape="poly" title=" " alt="" coords="411,85,378,80,378,75,412,80"/>
-<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="229,104,375,129"/>
-<area shape="poly" title=" " alt="" coords="412,105,376,110,375,105,412,100"/>
-<area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="61,5,123,31"/>
-<area shape="poly" title=" " alt="" coords="233,54,123,28,124,23,235,49"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="37,55,147,80"/>
-<area shape="poly" title=" " alt="" coords="213,70,148,70,148,65,213,65"/>
-<area shape="poly" title=" " alt="" coords="234,103,146,83,148,77,235,98"/>
-<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="5,104,179,129"/>
-<area shape="poly" title=" " alt="" coords="215,128,179,128,179,123,215,123"/>
-<area shape="poly" title=" " alt="" coords="193,105,228,105,228,111,192,110"/>
+<area shape="rect" title="order nodes in order of increasing time" alt="" coords="620,80,743,105"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="410,5,561,31"/>
+<area shape="poly" title=" " alt="" coords="643,76,571,44,536,33,538,28,573,40,645,71"/>
+<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="399,104,572,129"/>
+<area shape="poly" title=" " alt="" coords="607,104,573,109,572,103,606,99"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="412,55,559,80"/>
+<area shape="poly" title=" " alt="" coords="606,86,559,79,559,74,607,80"/>
+<area shape="rect" href="classgenealogy__t.html#a01ba075a207cff3816a326991b9de346" title="roots are added at zero time if needed" alt="" coords="411,154,559,194"/>
+<area shape="poly" title=" " alt="" coords="642,114,573,144,543,156,541,151,571,140,640,109"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="264,5,327,31"/>
+<area shape="poly" title=" " alt="" coords="397,21,327,21,327,15,397,15"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="240,55,351,80"/>
+<area shape="poly" title=" " alt="" coords="423,37,346,57,345,52,422,32"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="5,5,192,31"/>
+<area shape="poly" title=" " alt="" coords="250,21,192,21,192,15,250,15"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="261,104,329,129"/>
+<area shape="poly" title=" " alt="" coords="385,119,330,119,330,114,385,114"/>
+<area shape="poly" title=" " alt="" coords="398,70,351,70,351,65,398,65"/>
 </map>
 </div>
 
@@ -1371,9 +1513,6 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SEXP nodeseq_t::structure </td>
@@ -1382,27 +1521,22 @@ Here is the caller graph for this function:</div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>R list description. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00279">279</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>                              {</div>
-<div class="line"><span class="lineno">  280</span>    SEXP Nodes;</div>
-<div class="line"><span class="lineno">  281</span>    PROTECT(Nodes = NEW_LIST(size()));</div>
-<div class="line"><span class="lineno">  282</span>    <span class="keywordtype">int</span> k = 0;</div>
-<div class="line"><span class="lineno">  283</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  284</span>      SET_ELEMENT(Nodes,k++,p-&gt;<a class="code hl_function" href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52">structure</a>());</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
-<div class="line"><span class="lineno">  286</span>    UNPROTECT(1);</div>
-<div class="line"><span class="lineno">  287</span>    <span class="keywordflow">return</span> Nodes;</div>
-<div class="line"><span class="lineno">  288</span>  };</div>
-<div class="ttc" id="aclassnode__t_html_a9c15c4499803de500c11d3b6dc63fd52"><div class="ttname"><a href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52">node_t::structure</a></div><div class="ttdeci">SEXP structure(void) const</div><div class="ttdoc">R list description.</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00201">node.h:201</a></div></div>
+<p class="definition">Definition at line <a class="el" href="structure_8cc_source.html#l00070">70</a> of file <a class="el" href="structure_8cc_source.html">structure.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>{</div>
+<div class="line"><span class="lineno">   73</span>  SEXP Nodes;</div>
+<div class="line"><span class="lineno">   74</span>  PROTECT(Nodes = NEW_LIST(size()));</div>
+<div class="line"><span class="lineno">   75</span>  <span class="keywordtype">int</span> k = 0;</div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   77</span>    SET_ELEMENT(Nodes,k++,p-&gt;<a class="code hl_function" href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52">structure</a>());</div>
+<div class="line"><span class="lineno">   78</span>  }</div>
+<div class="line"><span class="lineno">   79</span>  UNPROTECT(1);</div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> Nodes;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+<div class="ttc" id="aclassnode__t_html_a9c15c4499803de500c11d3b6dc63fd52"><div class="ttname"><a href="classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52">node_t::structure</a></div><div class="ttdeci">SEXP structure(void) const</div><div class="ttdoc">R list description.</div><div class="ttdef"><b>Definition</b> <a href="structure_8cc_source.html#l00054">structure.cc:55</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1461,23 +1595,26 @@ Here is the caller graph for this function:</div>
 
 <p>swap balls a and b, wherever they lie </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00169">169</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  169</span>                                   {</div>
-<div class="line"><span class="lineno">  170</span>    node_t *p = a-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
-<div class="line"><span class="lineno">  171</span>    node_t *q = b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
-<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">if</span> (p != q) {</div>
-<div class="line"><span class="lineno">  173</span>      p-&gt;erase(a); q-&gt;insert(a); a-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = q;</div>
-<div class="line"><span class="lineno">  174</span>      q-&gt;erase(b); p-&gt;insert(b); b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
-<div class="line"><span class="lineno">  175</span>    }</div>
-<div class="line"><span class="lineno">  176</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00164">164</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>                                   {</div>
+<div class="line"><span class="lineno">  165</span>    node_t *p = a-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
+<div class="line"><span class="lineno">  166</span>    node_t *q = b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">if</span> (p != q) {</div>
+<div class="line"><span class="lineno">  168</span>      p-&gt;erase(a); q-&gt;<a class="code hl_function" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">insert</a>(a);</div>
+<div class="line"><span class="lineno">  169</span>      q-&gt;erase(b); p-&gt;<a class="code hl_function" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">insert</a>(b);</div>
+<div class="line"><span class="lineno">  170</span>    }</div>
+<div class="line"><span class="lineno">  171</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_cgraph.png" border="0" usemap="#aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_cgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_cgraph" id="aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_cgraph">
 <area shape="rect" title="swap balls a and b, wherever they lie" alt="" coords="5,5,136,31"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="184,5,291,31"/>
-<area shape="poly" title=" " alt="" coords="136,15,171,15,171,21,136,21"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="343,5,449,31"/>
+<area shape="poly" title=" " alt="" coords="136,15,329,15,329,21,136,21"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="184,31,295,56"/>
+<area shape="poly" title=" " alt="" coords="137,25,171,30,170,36,136,30"/>
+<area shape="poly" title=" " alt="" coords="295,32,329,26,330,31,295,37"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1485,44 +1622,54 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph.png" border="0" usemap="#aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph" id="aclassnodeseq__t_a69dc328641a94b6a0494d645fcf8c624_icgraph">
-<area shape="rect" title="swap balls a and b, wherever they lie" alt="" coords="644,309,775,335"/>
-<area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="460,145,581,171"/>
-<area shape="poly" title=" " alt="" coords="682,302,535,173,538,169,685,298"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="454,359,587,384"/>
-<area shape="poly" title=" " alt="" coords="648,341,571,361,570,356,646,336"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="445,432,596,457"/>
-<area shape="poly" title=" " alt="" coords="678,345,543,434,540,430,675,340"/>
-<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="457,296,584,321"/>
-<area shape="poly" title=" " alt="" coords="630,319,584,316,584,310,631,314"/>
-<area shape="rect" href="classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="247,120,387,145"/>
-<area shape="poly" title=" " alt="" coords="445,151,386,144,387,139,446,146"/>
-<area shape="rect" href="classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033" title="movement into deme d" alt="" coords="236,169,397,195"/>
-<area shape="poly" title=" " alt="" coords="446,169,398,175,397,170,446,164"/>
-<area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="237,5,396,31"/>
-<area shape="poly" title=" " alt="" coords="498,137,454,90,426,66,396,46,368,33,370,28,399,41,430,62,458,87,502,133"/>
-<area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="237,219,396,259"/>
-<area shape="poly" title=" " alt="" coords="476,178,369,222,367,217,474,173"/>
-<area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="237,55,396,95"/>
-<area shape="poly" title=" " alt="" coords="475,142,396,110,367,98,369,93,398,105,477,137"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="236,383,397,408"/>
-<area shape="poly" title=" " alt="" coords="441,383,398,389,397,383,440,378"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,359,188,384"/>
-<area shape="poly" title=" " alt="" coords="222,384,188,379,189,374,223,379"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,359,73,384"/>
-<area shape="poly" title=" " alt="" coords="222,403,172,403,121,398,73,386,74,381,122,393,172,397,222,398"/>
-<area shape="poly" title=" " alt="" coords="107,374,74,374,74,369,107,369"/>
-<area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="285,432,348,457"/>
-<area shape="poly" title=" " alt="" coords="431,447,348,447,348,442,431,442"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="261,481,372,507"/>
-<area shape="poly" title=" " alt="" coords="455,463,371,484,369,479,454,458"/>
-<area shape="poly" title=" " alt="" coords="469,294,376,262,377,257,470,289"/>
-<area shape="poly" title=" " alt="" coords="554,286,544,278,521,275,501,277,491,281,488,287,494,294,490,297,483,288,487,278,499,272,521,269,546,273,557,282"/>
-<area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="243,284,390,309"/>
-<area shape="poly" title=" " alt="" coords="443,307,390,304,390,298,444,301"/>
-<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="243,333,390,359"/>
-<area shape="poly" title=" " alt="" coords="444,325,387,336,386,331,443,320"/>
-<area shape="poly" title=" " alt="" coords="230,362,189,369,188,364,229,357"/>
-<area shape="poly" title=" " alt="" coords="229,343,176,344,122,349,74,361,73,356,121,343,176,338,229,338"/>
+<area shape="rect" title="swap balls a and b, wherever they lie" alt="" coords="792,407,923,432"/>
+<area shape="rect" href="classnodeseq__t.html#ae8d930181fb02e5bdb9de48eea19e54a" title=" " alt="" coords="594,133,715,159"/>
+<area shape="poly" title=" " alt="" coords="837,397,663,161,668,158,841,394"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="588,381,721,407"/>
+<area shape="poly" title=" " alt="" coords="778,412,721,405,722,400,779,407"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="579,483,730,508"/>
+<area shape="poly" title=" " alt="" coords="812,440,745,466,693,485,691,480,743,461,810,435"/>
+<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="591,307,718,332"/>
+<area shape="poly" title=" " alt="" coords="817,403,680,335,683,330,819,398"/>
+<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="128,433,301,459"/>
+<area shape="poly" title=" " alt="" coords="778,425,302,445,301,440,778,420"/>
+<area shape="rect" href="classgenealogy__t.html#afa7511c258badddff38a349d0610aeda" title=" " alt="" coords="565,557,744,583"/>
+<area shape="poly" title=" " alt="" coords="836,444,795,482,746,522,683,560,680,555,742,517,791,478,832,440"/>
+<area shape="rect" href="classgenealogy__t.html#ae3cebd2ae4228726354158ed9219cddf" title="birth into deme d" alt="" coords="367,5,507,31"/>
+<area shape="poly" title=" " alt="" coords="629,126,579,85,516,44,489,33,491,28,519,40,582,81,632,122"/>
+<area shape="rect" href="classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033" title="movement into deme d" alt="" coords="356,55,517,80"/>
+<area shape="poly" title=" " alt="" coords="611,131,516,94,482,83,484,78,518,89,613,126"/>
+<area shape="rect" href="classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b" title="insert a sample node" alt="" coords="357,104,516,129"/>
+<area shape="poly" title=" " alt="" coords="580,139,516,130,517,125,581,133"/>
+<area shape="rect" href="classgenealogy__t.html#aa31413f824c0b39c7103809607215f21" title="insert a sample node and simultaneously terminate the lineage" alt="" coords="357,218,516,258"/>
+<area shape="poly" title=" " alt="" coords="614,167,518,208,489,220,487,215,516,204,612,162"/>
+<area shape="rect" href="classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a" title="insert a sample node and simultaneously migrate the lineage" alt="" coords="357,154,516,194"/>
+<area shape="poly" title=" " alt="" coords="581,158,517,166,516,161,580,153"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="356,381,517,407"/>
+<area shape="poly" title=" " alt="" coords="574,397,517,397,517,391,574,391"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="181,332,248,357"/>
+<area shape="poly" title=" " alt="" coords="365,381,248,355,249,349,366,376"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,357,73,383"/>
+<area shape="poly" title=" " alt="" coords="342,391,74,375,74,369,343,386"/>
+<area shape="poly" title=" " alt="" coords="168,354,74,368,73,363,168,349"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="405,483,468,508"/>
+<area shape="poly" title=" " alt="" coords="566,498,468,498,468,493,566,493"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="159,559,270,584"/>
+<area shape="poly" title=" " alt="" coords="569,513,518,522,271,565,270,559,517,517,568,508"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="121,483,308,508"/>
+<area shape="poly" title=" " alt="" coords="392,498,308,498,308,493,392,493"/>
+<area shape="poly" title=" " alt="" coords="606,304,490,261,492,256,608,299"/>
+<area shape="poly" title=" " alt="" coords="691,297,681,289,655,285,633,287,622,292,619,298,626,305,621,308,614,298,618,288,632,282,655,280,683,284,694,293"/>
+<area shape="rect" href="classgenealogy__t.html#a3bf64c56b1178233f0fcc81b7f9b72d9" title="death" alt="" coords="363,283,510,308"/>
+<area shape="poly" title=" " alt="" coords="577,314,510,306,510,301,578,308"/>
+<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="363,332,510,357"/>
+<area shape="poly" title=" " alt="" coords="578,331,510,339,510,334,577,326"/>
+<area shape="poly" title=" " alt="" coords="350,347,248,347,248,342,350,342"/>
+<area shape="poly" title=" " alt="" coords="379,331,325,319,260,311,190,311,122,322,86,339,57,359,54,355,83,334,121,317,190,305,260,306,325,314,381,326"/>
+<area shape="poly" title=" " alt="" coords="158,431,120,416,61,385,63,380,122,412,160,426"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="363,584,510,609"/>
+<area shape="poly" title=" " alt="" coords="552,585,511,590,510,585,551,580"/>
+<area shape="poly" title=" " alt="" coords="349,589,270,580,271,575,350,584"/>
 </map>
 </div>
 
@@ -1556,17 +1703,16 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>trace back a single lineage. this results in the deme slot for all green balls along the lineage of 'b' begin replaced by the lineage of 'b'. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00231">231</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  231</span>                                           {</div>
-<div class="line"><span class="lineno">  232</span>    node_t *p = b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
-<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">while</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() == <a class="code hl_variable" href="node_8h.html#affb5e86666af08d682543f786e480f13">null_lineage</a>) {</div>
-<div class="line"><span class="lineno">  234</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() = u;</div>
-<div class="line"><span class="lineno">  235</span>      p = p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>();</div>
-<div class="line"><span class="lineno">  236</span>    }</div>
-<div class="line"><span class="lineno">  237</span>  };</div>
-<div class="ttc" id="aclassnode__t_html_a144e254a1b8b22ce1f905f0e80cf55fb"><div class="ttname"><a href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">node_t::parent</a></div><div class="ttdeci">node_t * parent(void) const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00115">node.h:115</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00240">240</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  240</span>                                           {</div>
+<div class="line"><span class="lineno">  241</span>    node_t *p = b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
+<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">while</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() == <a class="code hl_variable" href="node_8h.html#affb5e86666af08d682543f786e480f13">null_lineage</a>) {</div>
+<div class="line"><span class="lineno">  243</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() = u;</div>
+<div class="line"><span class="lineno">  244</span>      p = p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>();</div>
+<div class="line"><span class="lineno">  245</span>    }</div>
+<div class="line"><span class="lineno">  246</span>  };</div>
 <div class="ttc" id="aclassnode__t_html_a230f2503e7d244fb24ee145ecf6dd651"><div class="ttname"><a href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">node_t::lineage</a></div><div class="ttdeci">name_t lineage(void) const</div><div class="ttdoc">view lineage</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00104">node.h:104</a></div></div>
-<div class="ttc" id="anode_8h_html_affb5e86666af08d682543f786e480f13"><div class="ttname"><a href="node_8h.html#affb5e86666af08d682543f786e480f13">null_lineage</a></div><div class="ttdeci">static const name_t null_lineage</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00013">node.h:13</a></div></div>
+<div class="ttc" id="anode_8h_html_affb5e86666af08d682543f786e480f13"><div class="ttname"><a href="node_8h.html#affb5e86666af08d682543f786e480f13">null_lineage</a></div><div class="ttdeci">static const name_t null_lineage</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00011">node.h:11</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1591,7 +1737,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="584,81,769,107"/>
 <area shape="rect" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce" title=" " alt="" coords="344,81,536,107"/>
 <area shape="poly" title=" " alt="" coords="570,97,536,97,536,91,570,91"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,5,242,31"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,5,242,31"/>
 <area shape="poly" title=" " alt="" coords="386,79,241,31,243,26,388,74"/>
 <area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,31,73,56"/>
 <area shape="poly" title=" " alt="" coords="330,83,73,50,74,45,331,78"/>
@@ -1629,24 +1775,24 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>trace back all sample lineages. this results in the deme slots of all green balls being replaced by the unique names of the lineages they trace. </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00244">244</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  244</span>                             {</div>
-<div class="line"><span class="lineno">  245</span>    <span class="comment">// we trace each lineage in turn.</span></div>
-<div class="line"><span class="lineno">  246</span>    <span class="comment">// because we move from early to late,</span></div>
-<div class="line"><span class="lineno">  247</span>    <span class="comment">// the order is guaranteed to be valid.</span></div>
-<div class="line"><span class="lineno">  248</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u = 0;</div>
-<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span> ) {</div>
-<div class="line"><span class="lineno">  250</span>      <span class="keywordflow">for</span> (ball_t *b : *p) {</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">if</span> (b-&gt;color==<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) {</div>
-<div class="line"><span class="lineno">  252</span>          <a class="code hl_function" href="#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a>(b,u);</div>
-<div class="line"><span class="lineno">  253</span>          u++;</div>
-<div class="line"><span class="lineno">  254</span>        }</div>
-<div class="line"><span class="lineno">  255</span>      }</div>
-<div class="line"><span class="lineno">  256</span>    }</div>
-<div class="line"><span class="lineno">  257</span>  };</div>
-<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a></div><div class="ttdeci">@ blue</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a16b0cf23fe151c5ce4696041da8c2a27"><div class="ttname"><a href="#a16b0cf23fe151c5ce4696041da8c2a27">nodeseq_t::trace_lineage</a></div><div class="ttdeci">void trace_lineage(ball_t *b, name_t u)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00231">nodeseq.h:231</a></div></div>
-<div class="ttc" id="ainternal_8h_html_a5c08bbb85c89413f5e8af55c20429103"><div class="ttname"><a href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></div><div class="ttdeci">size_t name_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00045">internal.h:45</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00253">253</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>                             {</div>
+<div class="line"><span class="lineno">  254</span>    <span class="comment">// we trace each lineage in turn.</span></div>
+<div class="line"><span class="lineno">  255</span>    <span class="comment">// because we move from early to late,</span></div>
+<div class="line"><span class="lineno">  256</span>    <span class="comment">// the order is guaranteed to be valid.</span></div>
+<div class="line"><span class="lineno">  257</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u = 0;</div>
+<div class="line"><span class="lineno">  258</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span> ) {</div>
+<div class="line"><span class="lineno">  259</span>      <span class="keywordflow">for</span> (ball_t *b : *p) {</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keywordflow">if</span> (b-&gt;color==<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) {</div>
+<div class="line"><span class="lineno">  261</span>          <a class="code hl_function" href="#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a>(b,u);</div>
+<div class="line"><span class="lineno">  262</span>          u++;</div>
+<div class="line"><span class="lineno">  263</span>        }</div>
+<div class="line"><span class="lineno">  264</span>      }</div>
+<div class="line"><span class="lineno">  265</span>    }</div>
+<div class="line"><span class="lineno">  266</span>  };</div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a></div><div class="ttdeci">@ blue</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a16b0cf23fe151c5ce4696041da8c2a27"><div class="ttname"><a href="#a16b0cf23fe151c5ce4696041da8c2a27">nodeseq_t::trace_lineage</a></div><div class="ttdeci">void trace_lineage(ball_t *b, name_t u)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00240">nodeseq.h:240</a></div></div>
+<div class="ttc" id="ainternal_8h_html_a5c08bbb85c89413f5e8af55c20429103"><div class="ttname"><a href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></div><div class="ttdeci">size_t name_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00054">internal.h:54</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1671,7 +1817,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classnodeseq__t_a7d003899b6bbc529699e1a02858de8ce_icgraph.png" border="0" usemap="#aclassnodeseq__t_a7d003899b6bbc529699e1a02858de8ce_icgraph" alt=""/></div>
 <map name="aclassnodeseq__t_a7d003899b6bbc529699e1a02858de8ce_icgraph" id="aclassnodeseq__t_a7d003899b6bbc529699e1a02858de8ce_icgraph">
 <area shape="rect" title=" " alt="" coords="344,81,536,107"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,5,242,31"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,5,242,31"/>
 <area shape="poly" title=" " alt="" coords="386,79,241,31,243,26,388,74"/>
 <area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,31,73,56"/>
 <area shape="poly" title=" " alt="" coords="330,83,73,50,74,45,331,78"/>
@@ -1685,8 +1831,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a1e165e9bd12ca6080c0e5aa2cab0625d" name="a1e165e9bd12ca6080c0e5aa2cab0625d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e165e9bd12ca6080c0e5aa2cab0625d">&#9670;&#160;</a></span>yaml()</h2>
+<a id="a02549bd0fd1a66ee1045d3e41c31c394" name="a02549bd0fd1a66ee1045d3e41c31c394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02549bd0fd1a66ee1045d3e41c31c394">&#9670;&#160;</a></span>weed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1695,65 +1841,130 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string nodeseq_t::yaml </td>
+          <td class="memname">void nodeseq_t::weed </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>tab</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel virtual">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>human- &amp; machine-readable info </p>
+<p>drop all dead roots </p>
 
-<p>Reimplemented in <a class="el" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45">genealogy_t</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00270">270</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                    {</div>
-<div class="line"><span class="lineno">  271</span>    std::string o = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  272</span>    std::string t = tab + <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  274</span>      o += tab + <span class="stringliteral">&quot;- &quot;</span> + p-&gt;<a class="code hl_function" href="classnode__t.html#abbf74b4aabeff165285a4f784e7737ba">yaml</a>(t);</div>
-<div class="line"><span class="lineno">  275</span>    }</div>
-<div class="line"><span class="lineno">  276</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">  277</span>  };</div>
-<div class="ttc" id="aclassnode__t_html_abbf74b4aabeff165285a4f784e7737ba"><div class="ttname"><a href="classnode__t.html#abbf74b4aabeff165285a4f784e7737ba">node_t::yaml</a></div><div class="ttdeci">std::string yaml(std::string tab=&quot;&quot;) const</div><div class="ttdoc">machine-readable info</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00189">node.h:189</a></div></div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00214">214</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  214</span>                   {</div>
+<div class="line"><span class="lineno">  215</span>    <a class="code hl_typedef" href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a> j = begin();</div>
+<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">while</span> (j != end()) {</div>
+<div class="line"><span class="lineno">  217</span>      <span class="keywordflow">if</span> ((*j)-&gt;dead_root()) {</div>
+<div class="line"><span class="lineno">  218</span>        <a class="code hl_function" href="#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
+<div class="line"><span class="lineno">  219</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  220</span>        j++;</div>
+<div class="line"><span class="lineno">  221</span>      }</div>
+<div class="line"><span class="lineno">  222</span>    }</div>
+<div class="line"><span class="lineno">  223</span>  };</div>
+<div class="ttc" id="anodeseq_8h_html_afdd200c13cb7754d81aaa5deeff703ed"><div class="ttname"><a href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::iterator node_nit</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00013">nodeseq.h:13</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_cgraph.png" border="0" usemap="#aclassnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_cgraph" alt=""/></div>
-<map name="aclassnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_cgraph" id="aclassnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_cgraph">
-<area shape="rect" title="human&#45; &amp; machine&#45;readable info" alt="" coords="5,55,136,80"/>
-<area shape="rect" href="classnode__t.html#abbf74b4aabeff165285a4f784e7737ba" title="machine&#45;readable info" alt="" coords="184,55,291,80"/>
-<area shape="poly" title=" " alt="" coords="136,65,171,65,171,70,136,70"/>
-<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="345,5,455,31"/>
-<area shape="poly" title=" " alt="" coords="279,52,343,32,345,37,281,57"/>
-<area shape="rect" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="339,55,461,80"/>
-<area shape="poly" title=" " alt="" coords="291,65,325,65,325,70,291,70"/>
-<area shape="rect" href="classpocket__t.html#a3ca809ad8482693086202d1ea115fd3b" title="human/machine&#45;readable info" alt="" coords="341,104,459,129"/>
-<area shape="poly" title=" " alt="" coords="281,77,345,97,343,102,279,83"/>
-<area shape="rect" href="classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd" title="machine&#45;readable info" alt="" coords="509,104,608,129"/>
-<area shape="poly" title=" " alt="" coords="459,114,495,114,495,119,459,119"/>
-<area shape="rect" href="classball__t.html#ab87d8591dc302fca18a345cbe4c33b0a" title="human&#45;readable colors" alt="" coords="656,104,799,129"/>
-<area shape="poly" title=" " alt="" coords="608,114,642,114,642,119,608,119"/>
+<div class="center"><img src="classnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_cgraph.png" border="0" usemap="#aclassnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_cgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_cgraph" id="aclassnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_cgraph">
+<area shape="rect" title="drop all dead roots" alt="" coords="5,5,137,31"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="185,5,371,31"/>
+<area shape="poly" title=" " alt="" coords="138,15,172,15,172,21,138,21"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="419,5,557,31"/>
+<area shape="poly" title=" " alt="" coords="371,15,405,15,405,21,371,21"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="605,5,748,31"/>
+<area shape="poly" title=" " alt="" coords="558,15,592,15,592,21,558,21"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_icgraph.png" border="0" usemap="#aclassnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_icgraph" alt=""/></div>
-<map name="aclassnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_icgraph" id="aclassnodeseq__t_a1e165e9bd12ca6080c0e5aa2cab0625d_icgraph">
-<area shape="rect" title="human&#45; &amp; machine&#45;readable info" alt="" coords="415,5,545,31"/>
-<area shape="rect" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45" title="machine&#45;readable info" alt="" coords="224,5,367,31"/>
-<area shape="poly" title=" " alt="" coords="401,21,367,21,367,15,401,15"/>
-<area shape="rect" href="bare_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="121,5,176,31"/>
-<area shape="poly" title=" " alt="" coords="210,21,176,21,176,15,210,15"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,5,73,31"/>
-<area shape="poly" title=" " alt="" coords="107,21,74,21,74,15,107,15"/>
+<div class="center"><img src="classnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_icgraph.png" border="0" usemap="#aclassnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_icgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_icgraph" id="aclassnodeseq__t_a02549bd0fd1a66ee1045d3e41c31c394_icgraph">
+<area shape="rect" title="drop all dead roots" alt="" coords="640,56,772,81"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="452,31,585,56"/>
+<area shape="poly" title=" " alt="" coords="626,61,585,55,586,50,627,55"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="445,80,592,105"/>
+<area shape="poly" title=" " alt="" coords="626,82,592,86,592,81,626,76"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="236,31,397,56"/>
+<area shape="poly" title=" " alt="" coords="438,46,398,46,398,41,438,41"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,5,188,31"/>
+<area shape="poly" title=" " alt="" coords="222,31,188,26,189,20,223,26"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,31,73,56"/>
+<area shape="poly" title=" " alt="" coords="222,46,73,46,73,41,222,41"/>
+<area shape="poly" title=" " alt="" coords="108,31,74,39,73,33,107,26"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="261,80,372,105"/>
+<area shape="poly" title=" " alt="" coords="431,95,372,95,372,90,431,90"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5ee4aa52a55d7a6f7062168b2936c80a" name="a5ee4aa52a55d7a6f7062168b2936c80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee4aa52a55d7a6f7062168b2936c80a">&#9670;&#160;</a></span>yaml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string_t nodeseq_t::yaml </td>
+          <td>(</td>
+          <td class="paramtype">string_t</td>          <td class="paramname"><span class="paramname"><em>tab</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>human/machine-readable info </p>
+
+<p class="definition">Definition at line <a class="el" href="yaml_8cc_source.html#l00051">51</a> of file <a class="el" href="yaml_8cc_source.html">yaml.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>{</div>
+<div class="line"><span class="lineno">   54</span>  string_t o = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   55</span>  string_t t = tab + <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   57</span>    o += tab + <span class="stringliteral">&quot;- &quot;</span> + p-&gt;<a class="code hl_function" href="classnode__t.html#a08867bb2ccff20e0740077eb6be755c6">yaml</a>(t);</div>
+<div class="line"><span class="lineno">   58</span>  }</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="aclassnode__t_html_a08867bb2ccff20e0740077eb6be755c6"><div class="ttname"><a href="classnode__t.html#a08867bb2ccff20e0740077eb6be755c6">node_t::yaml</a></div><div class="ttdeci">string_t yaml(string_t tab=&quot;&quot;) const</div><div class="ttdoc">human/machine-readable info</div><div class="ttdef"><b>Definition</b> <a href="yaml_8cc_source.html#l00036">yaml.cc:37</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_cgraph.png" border="0" usemap="#aclassnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_cgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_cgraph" id="aclassnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_cgraph">
+<area shape="rect" title="human/machine&#45;readable info" alt="" coords="5,55,136,80"/>
+<area shape="rect" href="classnode__t.html#a08867bb2ccff20e0740077eb6be755c6" title="human/machine&#45;readable info" alt="" coords="184,55,291,80"/>
+<area shape="poly" title=" " alt="" coords="136,65,171,65,171,70,136,70"/>
+<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="345,5,455,31"/>
+<area shape="poly" title=" " alt="" coords="279,52,343,32,345,37,281,57"/>
+<area shape="rect" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="339,55,461,80"/>
+<area shape="poly" title=" " alt="" coords="291,65,325,65,325,70,291,70"/>
+<area shape="rect" href="classpocket__t.html#a9706f3e00ee062a443ac00bdb9d99177" title="human/machine&#45;readable info" alt="" coords="341,104,459,129"/>
+<area shape="poly" title=" " alt="" coords="281,77,345,97,343,102,279,83"/>
+<area shape="rect" href="classball__t.html#ac0512b70a0fe4ea5449bc81514b6a3af" title="human/machine&#45;readable info" alt="" coords="509,104,608,129"/>
+<area shape="poly" title=" " alt="" coords="459,114,495,114,495,119,459,119"/>
+<area shape="rect" href="classball__t.html#ab61a9bf80d97ab9320383fe226ccbc64" title="human&#45;readable colors" alt="" coords="656,79,799,104"/>
+<area shape="poly" title=" " alt="" coords="608,107,642,101,643,107,608,112"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="676,128,779,153"/>
+<area shape="poly" title=" " alt="" coords="608,121,663,129,662,134,608,126"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_icgraph.png" border="0" usemap="#aclassnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_icgraph" alt=""/></div>
+<map name="aclassnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_icgraph" id="aclassnodeseq__t_a5ee4aa52a55d7a6f7062168b2936c80a_icgraph">
+<area shape="rect" title="human/machine&#45;readable info" alt="" coords="299,5,429,31"/>
+<area shape="rect" href="classgenealogy__t.html#a50faf5dc61268d35c3b4aa5070d2854d" title="human/machine&#45;readable info" alt="" coords="108,5,251,31"/>
+<area shape="poly" title=" " alt="" coords="285,21,251,21,251,15,285,15"/>
+<area shape="rect" href="yaml_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
 
@@ -1789,15 +2000,15 @@ Here is the caller graph for this function:</div>
 
 <p>binary serialization </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00047">47</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   47</span>                                                          {</div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordtype">size_t</span> nnode = G.size();</div>
-<div class="line"><span class="lineno">   49</span>    memcpy(o,&amp;nnode,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">for</span> (node_t *p : G) {</div>
-<div class="line"><span class="lineno">   51</span>      o = (*p &gt;&gt; o);</div>
-<div class="line"><span class="lineno">   52</span>    }</div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">   54</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00045">45</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                          {</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordtype">size_t</span> nnode = G.size();</div>
+<div class="line"><span class="lineno">   47</span>    memcpy(o,&amp;nnode,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">for</span> (node_t *p : G) {</div>
+<div class="line"><span class="lineno">   49</span>      o = (*p &gt;&gt; o);</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   52</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1830,33 +2041,36 @@ Here is the caller graph for this function:</div>
 
 <p>binary deserialization </p>
 
-<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00056">56</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                    {</div>
-<div class="line"><span class="lineno">   57</span>    G.<a class="code hl_function" href="#a165644e4095236a169a47db1a915141f">clean</a>();</div>
-<div class="line"><span class="lineno">   58</span>    std::unordered_map&lt;name_t,node_t*&gt; node_names;</div>
-<div class="line"><span class="lineno">   59</span>    std::unordered_map&lt;name_t,ball_t*&gt; ball_names;</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordtype">size_t</span> nnode = 0;</div>
-<div class="line"><span class="lineno">   61</span>    memcpy(&amp;nnode,o,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
-<div class="line"><span class="lineno">   62</span>    node_names.reserve(nnode);</div>
-<div class="line"><span class="lineno">   63</span>    ball_names.reserve(nnode);</div>
-<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; nnode; i++) {</div>
-<div class="line"><span class="lineno">   65</span>      node_t *p = <span class="keyword">new</span> node_t();</div>
-<div class="line"><span class="lineno">   66</span>      o = (o &gt;&gt; *p);</div>
-<div class="line"><span class="lineno">   67</span>      G.push_back(p);</div>
-<div class="line"><span class="lineno">   68</span>      node_names.insert({p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>,p});</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">for</span> (node_t *q : G) {</div>
-<div class="line"><span class="lineno">   71</span>      q-&gt;repair_owners(node_names,&amp;ball_names);</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="line"><span class="lineno">   73</span>    G.repair_owners(ball_names);</div>
-<div class="line"><span class="lineno">   74</span>    G.trace_lineages();</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">   76</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="nodeseq_8h_source.html#l00054">54</a> of file <a class="el" href="nodeseq_8h_source.html">nodeseq.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                    {</div>
+<div class="line"><span class="lineno">   55</span>    G.<a class="code hl_function" href="#a165644e4095236a169a47db1a915141f">clean</a>();</div>
+<div class="line"><span class="lineno">   56</span>    std::unordered_map&lt;name_t,node_t*&gt; node_names;</div>
+<div class="line"><span class="lineno">   57</span>    std::unordered_map&lt;name_t,ball_t*&gt; ball_names;</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordtype">size_t</span> nnode = 0;</div>
+<div class="line"><span class="lineno">   59</span>    memcpy(&amp;nnode,o,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
+<div class="line"><span class="lineno">   60</span>    node_names.reserve(nnode);</div>
+<div class="line"><span class="lineno">   61</span>    ball_names.reserve(nnode);</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; nnode; i++) {</div>
+<div class="line"><span class="lineno">   63</span>      node_t *p = <span class="keyword">new</span> node_t();</div>
+<div class="line"><span class="lineno">   64</span>      o = (o &gt;&gt; *p);</div>
+<div class="line"><span class="lineno">   65</span>      G.push_back(p);</div>
+<div class="line"><span class="lineno">   66</span>      node_names.insert({p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>,p});</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">for</span> (node_t *q : G) {</div>
+<div class="line"><span class="lineno">   69</span>      q-&gt;repair_owners(node_names,&amp;ball_names);</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
+<div class="line"><span class="lineno">   71</span>    G.repair_owners(ball_names);</div>
+<div class="line"><span class="lineno">   72</span>    G.trace_lineages();</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   74</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="nodeseq_8h_source.html">nodeseq.h</a></li>
+<li>src/<a class="el" href="newick_8cc_source.html">newick.cc</a></li>
+<li>src/<a class="el" href="structure_8cc_source.html">structure.cc</a></li>
+<li>src/<a class="el" href="yaml_8cc_source.html">yaml.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -133,80 +133,89 @@ $(function(){initNavTree('internal_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define mkChar Rf_mkChar</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define mkString Rf_mkString</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define ScalarInteger Rf_ScalarInteger</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define ScalarReal Rf_ScalarReal</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define install Rf_install</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define isNull Rf_isNull</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">typedef</span> std::string string_t;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">   43</a></span><span class="keyword">typedef</span> Rbyte <a class="code hl_typedef" href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">   44</a></span><span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">   45</a></span><span class="keyword">typedef</span> <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// interface with R&#39;s integer RNG</span></div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">   48</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a> (<span class="keywordtype">int</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) floor(R_unif_index((<span class="keywordtype">double</span>) <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
-</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define mkChar Rf_mkChar</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define mkString Rf_mkString</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define ScalarInteger Rf_ScalarInteger</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define ScalarReal Rf_ScalarReal</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define install Rf_install</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define isNull Rf_isNull</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">// select n of the first N integers at random</span></div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">   53</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">random_sample_wo_repl</a> (<span class="keywordtype">int</span> *samples, <span class="keywordtype">int</span> <a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, <span class="keywordtype">int</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">int</span> k = 0; <span class="comment">// total input records dealt with</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">int</span> m = 0; <span class="comment">// number of items selected so far</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">while</span> (m &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k &lt; <a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">int</span> u = <a class="code hl_function" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a>(<a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-k);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (u &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-m) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      samples[m++] = k;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    k++;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">   52</a></span><span class="keyword">typedef</span> Rbyte <a class="code hl_typedef" href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">   53</a></span><span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">   54</a></span><span class="keyword">typedef</span> <span class="keywordtype">size_t</span> <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// interface with R&#39;s integer RNG</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">   57</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a> (<span class="keywordtype">int</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) floor(R_unif_index((<span class="keywordtype">double</span>) <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// helper function for filling a return list</span></div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">   66</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>(</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> SEXP list, SEXP names, SEXP element,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> pos</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> ) {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  SET_ELEMENT(list,pos,element);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  SET_STRING_ELT(names,pos,Rf_mkChar(name));</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">return</span> ++pos;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// select n of the first N integers at random</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">   62</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">random_sample_wo_repl</a> (<span class="keywordtype">int</span> *samples, <span class="keywordtype">int</span> <a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, <span class="keywordtype">int</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">int</span> k = 0; <span class="comment">// total input records dealt with</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">int</span> m = 0; <span class="comment">// number of items selected so far</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">while</span> (m &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k &lt; <a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> u = <a class="code hl_function" href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a>(<a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-k);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (u &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-m) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      samples[m++] = k;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    k++;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
 </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">   76</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a> (<span class="keywordtype">double</span> erate, <span class="keywordtype">double</span> *rate, <span class="keywordtype">int</span> <a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">double</span> u = erate*unif_rand();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">int</span> e = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; <a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> (rate[e] &lt; 0)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate rate[%d]=%lg&quot;</span>,__func__,e,rate[e]); <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    u -= rate[e++];</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  assert(e!=<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);             <span class="comment">// #nocov</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">return</span> e;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// helper function for filling a return list</span></div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">   75</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> SEXP list, SEXP names, SEXP element,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">int</span> pos</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> ) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  SET_ELEMENT(list,pos,element);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  SET_STRING_ELT(names,pos,Rf_mkChar(name));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">return</span> ++pos;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="ainternal_8h_html_a41dc1dd0917b4ee9721f1d14b9c59946"><div class="ttname"><a href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a></div><div class="ttdeci">Rbyte raw_t</div><div class="ttdef"><b>Definition</b> <a href="#l00043">internal.h:43</a></div></div>
-<div class="ttc" id="ainternal_8h_html_a4a6b554c46520e890bcd30a914b65988"><div class="ttname"><a href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a></div><div class="ttdeci">static int rcateg(double erate, double *rate, int nrate)</div><div class="ttdef"><b>Definition</b> <a href="#l00076">internal.h:76</a></div></div>
-<div class="ttc" id="ainternal_8h_html_a5a3fde3ea6d48d04abc86836027e2415"><div class="ttname"><a href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a></div><div class="ttdeci">static int set_list_elem(SEXP list, SEXP names, SEXP element, const char *name, int pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">internal.h:67</a></div></div>
-<div class="ttc" id="ainternal_8h_html_a5c08bbb85c89413f5e8af55c20429103"><div class="ttname"><a href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></div><div class="ttdeci">size_t name_t</div><div class="ttdef"><b>Definition</b> <a href="#l00045">internal.h:45</a></div></div>
-<div class="ttc" id="ainternal_8h_html_a9da99d294700810dfb7c0a621d0c1f78"><div class="ttname"><a href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a></div><div class="ttdeci">static int random_integer(int n)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">internal.h:48</a></div></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">   85</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a> (<span class="keywordtype">double</span> erate, <span class="keywordtype">double</span> *rate, <span class="keywordtype">int</span> <a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">double</span> u = erate*unif_rand();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">int</span> e = 0;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordflow">while</span> (u &gt; rate[e] &amp;&amp; e &lt; <a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (rate[e] &lt; 0)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid rate rate[%d]=%lg&quot;</span>,__func__,e,rate[e]); <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    u -= rate[e++];</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  assert(e!=<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>);             <span class="comment">// #nocov</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">return</span> e;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="ainternal_8h_html_a41dc1dd0917b4ee9721f1d14b9c59946"><div class="ttname"><a href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a></div><div class="ttdeci">Rbyte raw_t</div><div class="ttdef"><b>Definition</b> <a href="#l00052">internal.h:52</a></div></div>
+<div class="ttc" id="ainternal_8h_html_a4a6b554c46520e890bcd30a914b65988"><div class="ttname"><a href="internal_8h.html#a4a6b554c46520e890bcd30a914b65988">rcateg</a></div><div class="ttdeci">static int rcateg(double erate, double *rate, int nrate)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">internal.h:85</a></div></div>
+<div class="ttc" id="ainternal_8h_html_a5a3fde3ea6d48d04abc86836027e2415"><div class="ttname"><a href="internal_8h.html#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a></div><div class="ttdeci">static int set_list_elem(SEXP list, SEXP names, SEXP element, const char *name, int pos)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">internal.h:76</a></div></div>
+<div class="ttc" id="ainternal_8h_html_a5c08bbb85c89413f5e8af55c20429103"><div class="ttname"><a href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></div><div class="ttdeci">size_t name_t</div><div class="ttdef"><b>Definition</b> <a href="#l00054">internal.h:54</a></div></div>
+<div class="ttc" id="ainternal_8h_html_a9da99d294700810dfb7c0a621d0c1f78"><div class="ttname"><a href="internal_8h.html#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a></div><div class="ttdeci">static int random_integer(int n)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">internal.h:57</a></div></div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">internal.h:18</a></div></div>
-<div class="ttc" id="ainternal_8h_html_ae15e7aa4dc430c8e9e4fbcbdd35bcb09"><div class="ttname"><a href="internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">random_sample_wo_repl</a></div><div class="ttdeci">static void random_sample_wo_repl(int *samples, int N, int n)</div><div class="ttdef"><b>Definition</b> <a href="#l00053">internal.h:53</a></div></div>
-<div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition</b> <a href="#l00044">internal.h:44</a></div></div>
+<div class="ttc" id="ainternal_8h_html_ae15e7aa4dc430c8e9e4fbcbdd35bcb09"><div class="ttname"><a href="internal_8h.html#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">random_sample_wo_repl</a></div><div class="ttdeci">static void random_sample_wo_repl(int *samples, int N, int n)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">internal.h:62</a></div></div>
+<div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition</b> <a href="#l00053">internal.h:53</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00009">lbdp_pomp.c:9</a></div></div>
-<div class="ttc" id="aseirs__pomp_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00032">seirs_pomp.c:32</a></div></div>
-<div class="ttc" id="aseirs__pomp_8c_html_a9f9327a16fb80b77d8d1f9459655ff52"><div class="ttname"><a href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a></div><div class="ttdeci">static const int nrate</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00004">seirs_pomp.c:4</a></div></div>
+<div class="ttc" id="aseirs__pomp_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00036">seirs_pomp.c:36</a></div></div>
+<div class="ttc" id="aseirs__pomp_8c_html_a9f9327a16fb80b77d8d1f9459655ff52"><div class="ttname"><a href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a></div><div class="ttdeci">static const int nrate</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00007">seirs_pomp.c:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

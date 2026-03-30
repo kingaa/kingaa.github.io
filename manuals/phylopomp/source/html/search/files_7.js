@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['parse_2ecc_0',['parse.cc',['../parse_8cc.html',1,'']]],
-  ['pocket_2eh_1',['pocket.h',['../pocket_8h.html',1,'']]],
-  ['pomplink_2eh_2',['pomplink.h',['../pomplink_8h.html',1,'']]],
-  ['popul_5fproc_2eh_3',['popul_proc.h',['../popul__proc_8h.html',1,'']]]
+  ['newick_2ecc_0',['newick.cc',['../newick_8cc.html',1,'']]],
+  ['node_2eh_1',['node.h',['../node_8h.html',1,'']]],
+  ['nodeseq_2eh_2',['nodeseq.h',['../nodeseq_8h.html',1,'']]]
 ];

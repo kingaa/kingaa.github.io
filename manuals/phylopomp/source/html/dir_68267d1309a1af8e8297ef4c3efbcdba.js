@@ -1,8 +1,10 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "ball.h", "ball_8h.html", "ball_8h" ],
-    [ "bare.cc", "bare_8cc.html", "bare_8cc" ],
+    [ "curtail.cc", "curtail_8cc.html", "curtail_8cc" ],
     [ "decls.h", "decls_8h.html", "decls_8h" ],
+    [ "gendat.cc", "gendat_8cc.html", "gendat_8cc" ],
+    [ "geneal.cc", "geneal_8cc.html", "geneal_8cc" ],
     [ "genealogy.h", "genealogy_8h.html", "genealogy_8h" ],
     [ "generics.h", "generics_8h.html", "generics_8h" ],
     [ "getinfo.cc", "getinfo_8cc.html", "getinfo_8cc" ],
@@ -12,8 +14,10 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "inventory.h", "inventory_8h.html", "inventory_8h" ],
     [ "lbdp.cc", "lbdp_8cc.html", "lbdp_8cc" ],
     [ "lbdp_pomp.c", "lbdp__pomp_8c.html", "lbdp__pomp_8c" ],
+    [ "lineages.cc", "lineages_8cc.html", null ],
     [ "master.h", "master_8h.html", "master_8h" ],
     [ "moran.cc", "moran_8cc.html", "moran_8cc" ],
+    [ "newick.cc", "newick_8cc.html", "newick_8cc" ],
     [ "node.h", "node_8h.html", "node_8h" ],
     [ "nodeseq.h", "nodeseq_8h.html", "nodeseq_8h" ],
     [ "parse.cc", "parse_8cc.html", "parse_8cc" ],
@@ -29,7 +33,10 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "sirs_pomp.c", "sirs__pomp_8c.html", "sirs__pomp_8c" ],
     [ "strains.cc", "strains_8cc.html", "strains_8cc" ],
     [ "strains_pomp.c", "strains__pomp_8c.html", "strains__pomp_8c" ],
+    [ "structure.cc", "structure_8cc.html", null ],
+    [ "sum.cc", "sum_8cc.html", "sum_8cc" ],
     [ "twospecies.cc", "twospecies_8cc.html", "twospecies_8cc" ],
     [ "twospecies_pomp.c", "twospecies__pomp_8c.html", "twospecies__pomp_8c" ],
-    [ "twoundead.cc", "twoundead_8cc.html", "twoundead_8cc" ]
+    [ "twoundead.cc", "twoundead_8cc.html", "twoundead_8cc" ],
+    [ "yaml.cc", "yaml_8cc.html", "yaml_8cc" ]
 ];

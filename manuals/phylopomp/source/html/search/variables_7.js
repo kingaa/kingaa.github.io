@@ -10,7 +10,7 @@ var searchData=
   ['i3_5f0_7',['I3_0',['../structstrains__parameters__t.html#ae3b6b04602404b219b86eca691aed612',1,'strains_parameters_t']]],
   ['infected_8',['Infected',['../sir_8cc.html#af09c3b130f56ed772b1ab757ce2cbe78',1,'sir.cc']]],
   ['infectious_9',['Infectious',['../seir_8cc.html#a521aed031056c3c933fcc22ebee124ad',1,'seir.cc']]],
-  ['inventory_10',['inventory',['../classmaster__t.html#a959f3370b5dc9a5da9e44f3fcfc320dc',1,'master_t']]],
+  ['inventory_10',['inventory',['../classmaster__t.html#a8264f1737a3858fd69739c3ecee0f911',1,'master_t']]],
   ['iota1_11',['iota1',['../structs2i2r2__parameters__t.html#a2900603e30f16df84824c9c153e6fbd3',1,'s2i2r2_parameters_t::iota1'],['../structtwospecies__parameters__t.html#a90ae8c5aea8cf73a25fefe9884e9fb5c',1,'twospecies_parameters_t::iota1'],['../structtwoundead__parameters__t.html#a429727c9c8695531d71cb50a2ebd4aac',1,'twoundead_parameters_t::iota1']]],
   ['iota2_12',['iota2',['../structs2i2r2__parameters__t.html#ad31f6d5953ab11b68f0c8ae8c036f367',1,'s2i2r2_parameters_t::iota2'],['../structtwospecies__parameters__t.html#af0b63e4260a24bedce6f0e20bbf90a9c',1,'twospecies_parameters_t::iota2'],['../structtwoundead__parameters__t.html#a1d9d01378e34f96fe15dc1bbe90ae9e1',1,'twoundead_parameters_t::iota2']]]
 ];

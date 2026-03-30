@@ -1,0 +1,96 @@
+<!DOCTYPE html><html><head><title>R: Combine genealogies</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script>
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>geneal_sum {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Combine genealogies</h2>
+
+<h3>Description</h3>
+
+<p>A summing operator for genealogies.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S3 method for class 'gpgen'
+x + y
+
+geneal_sum(...)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table role = "presentation">
+<tr><td><code id="x">x</code>, <code id="y">y</code>, <code id="...">...</code></td>
+<td>
+<p>genealogies or lists of genealogies to be summed.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The sum of genealogies is defined to be the union of all the lineages,
+restricted to the common time-interval, i.e., the intersection of all the individual time-intervals.
+</p>
+
+
+<h3>Value</h3>
+
+<p>combined genealogy.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>library(ggplot2)
+
+runSEIR(t0=-1,time=2,E0=0,I0=3) -&gt; x
+runSEIR(t0=0,time=3,E0=2,I0=0) -&gt; y
+runSEIR(t0=1,time=4,E0=3,I0=2) -&gt; z
+
+plot_grid(
+  plot_grid(
+    plotlist=lapply(
+      list(x,y,z),
+      plot,
+      points=TRUE,ladderize=FALSE,
+      legend.position="none"
+    ) |&gt;
+      lapply(\(.).+geom_vline(xintercept=c(-1,0,1,2,3,4))),
+    ncol=1,align="v",axis="bltr"
+  ),
+  plot_grid(
+    plotlist=lapply(
+      list(x+y,y+z,x+y+z),
+      plot,
+      points=TRUE,ladderize=FALSE,
+      legend.position="none"
+    ) |&gt;
+      lapply(\(.).+geom_vline(xintercept=c(-1,0,1,2,3,4))),
+    ncol=1,align="h",axis="bltr"
+  )+
+    geom_vline(xintercept=c(0,1,2,3,4)),
+  nrow=1
+)
+</code></pre>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

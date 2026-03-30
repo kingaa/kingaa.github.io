@@ -30,15 +30,16 @@ function processMathHTML() {
   object,
   prune = TRUE,
   obscure = TRUE,
+  extended = TRUE,
   t0 = FALSE,
   time = FALSE,
-  description = FALSE,
   structure = FALSE,
   yaml = FALSE,
   ndeme = FALSE,
   lineages = FALSE,
   newick = FALSE,
   nsample = FALSE,
+  nroot = FALSE,
   genealogy = FALSE,
   gendat = FALSE
 )
@@ -60,6 +61,10 @@ function processMathHTML() {
 <td>
 <p>logical; obscure the demes?</p>
 </td></tr>
+<tr><td><code id="extended">extended</code></td>
+<td>
+<p>logical; return extended-Newick format?</p>
+</td></tr>
 <tr><td><code id="t0">t0</code></td>
 <td>
 <p>logical; return the zero-time?</p>
@@ -67,10 +72,6 @@ function processMathHTML() {
 <tr><td><code id="time">time</code></td>
 <td>
 <p>logical; return the current time?</p>
-</td></tr>
-<tr><td><code id="description">description</code></td>
-<td>
-<p>logical; return the description?</p>
 </td></tr>
 <tr><td><code id="structure">structure</code></td>
 <td>
@@ -95,6 +96,10 @@ function processMathHTML() {
 <tr><td><code id="nsample">nsample</code></td>
 <td>
 <p>logical; return the number of samples?</p>
+</td></tr>
+<tr><td><code id="nroot">nroot</code></td>
+<td>
+<p>logical; return the number of roots?</p>
 </td></tr>
 <tr><td><code id="genealogy">genealogy</code></td>
 <td>
@@ -121,9 +126,9 @@ function processMathHTML() {
 </dd>
 <dt>nsample</dt><dd><p>the number of samples (an integer)</p>
 </dd>
-<dt>newick</dt><dd><p>the genealogical tree, in Newick format</p>
+<dt>nroot</dt><dd><p>the number of roots (an integer)</p>
 </dd>
-<dt>description</dt><dd><p>a human readable description of the state of the genealogy process</p>
+<dt>newick</dt><dd><p>the genealogical tree, in Newick format (extended-Newick if <code>extended=TRUE</code>)</p>
 </dd>
 <dt>yaml</dt><dd><p>the state of the genealogy process in YAML format</p>
 </dd>
@@ -156,7 +161,7 @@ simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
   plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.16.2.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

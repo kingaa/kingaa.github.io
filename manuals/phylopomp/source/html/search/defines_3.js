@@ -11,5 +11,6 @@ var searchData=
   ['elli2_8',['ellI2',['../strains__pomp_8c.html#a6306906977b46dd9df8d03cf41060eef',1,'strains_pomp.c']]],
   ['elli3_9',['ellI3',['../strains__pomp_8c.html#a81540f1e0e86b3360047e35ee29db7c1',1,'strains_pomp.c']]],
   ['err_10',['err',['../internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024',1,'internal.h']]],
-  ['event_5frates_11',['EVENT_RATES',['../lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;lbdp_pomp.c'],['../seirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;sirs_pomp.c'],['../strains__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;strains_pomp.c'],['../twospecies__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;twospecies_pomp.c']]]
+  ['event_5frates_11',['EVENT_RATES',['../lbdp__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;lbdp_pomp.c'],['../seirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;sirs_pomp.c'],['../strains__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;strains_pomp.c'],['../twospecies__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01',1,'EVENT_RATES:&#160;twospecies_pomp.c']]],
+  ['exposed_12',['Exposed',['../seirs__pomp_8c.html#ae8510b1d7ae724c2d5628a35dc090990',1,'seirs_pomp.c']]]
 ];

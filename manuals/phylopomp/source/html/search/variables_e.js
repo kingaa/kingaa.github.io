@@ -10,7 +10,7 @@ var searchData=
   ['sigma12_7',['sigma12',['../structsi2r__parameters__t.html#af3be8d987f540133619b9f234c602f58',1,'si2r_parameters_t::sigma12'],['../structsiir__parameters__t.html#a933e8598d7bb86abcb82c6c5450a4e56',1,'siir_parameters_t::sigma12']]],
   ['sigma21_8',['sigma21',['../structsi2r__parameters__t.html#ade9ffa1d68142c5d37b62d9012dd1422',1,'si2r_parameters_t::sigma21'],['../structsiir__parameters__t.html#a4466d9c00cf49570b7981381b7a4c379',1,'siir_parameters_t::sigma21']]],
   ['slate_9',['slate',['../classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9',1,'node_t']]],
-  ['state_10',['state',['../classpopul__proc__t.html#a989ef80c5a2190312c83f843763213d9',1,'popul_proc_t']]],
+  ['state_10',['state',['../classpopul__proc__t.html#ab28269ed10fad452ca5c3b8d52ebd19b',1,'popul_proc_t']]],
   ['strain1_11',['strain1',['../siir_8cc.html#a828c3a72ce5b48dbb2ad4b7f9930ad4f',1,'strain1:&#160;siir.cc'],['../strains_8cc.html#a828c3a72ce5b48dbb2ad4b7f9930ad4f',1,'strain1:&#160;strains.cc']]],
   ['strain2_12',['strain2',['../siir_8cc.html#a300f00e69b61a86ffe42ea631c8922ac',1,'strain2:&#160;siir.cc'],['../strains_8cc.html#a300f00e69b61a86ffe42ea631c8922ac',1,'strain2:&#160;strains.cc']]],
   ['strain3_13',['strain3',['../strains_8cc.html#aaceea23c71f51e52b8822452760cf48f',1,'strains.cc']]],

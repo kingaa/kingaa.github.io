@@ -15,7 +15,7 @@ var hierarchy =
     [ "POPN", null, [
       [ "master_t< POPN, NDEME >", "classmaster__t.html", null ]
     ] ],
-    [ "popul_proc_t< STATE, PARAMETERS, NEVENT, NDEME >", "classpopul__proc__t.html", null ],
+    [ "popul_proc_t< STATE, PARAMETERS, NEVENT >", "classpopul__proc__t.html", null ],
     [ "popul_proc_t< lbdp_state_t, lbdp_parameters_t, 4 >", "classpopul__proc__t.html", [
       [ "master_t< lbdp_proc_t, 1 >", "classmaster__t.html", null ]
     ] ],

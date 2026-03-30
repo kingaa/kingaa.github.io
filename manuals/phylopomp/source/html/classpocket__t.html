@@ -161,15 +161,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed4bf5e427670be617dd2a955f22eb93" id="r_aed4bf5e427670be617dd2a955f22eb93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classball__t.html">ball_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed4bf5e427670be617dd2a955f22eb93">other</a> (const <a class="el" href="classball__t.html">ball_t</a> *b) const</td></tr>
 <tr class="memdesc:aed4bf5e427670be617dd2a955f22eb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a pointer to another ball  <br /></td></tr>
 <tr class="separator:aed4bf5e427670be617dd2a955f22eb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88115eb8cba3f1c075012ffec50621af" id="r_a88115eb8cba3f1c075012ffec50621af"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88115eb8cba3f1c075012ffec50621af">describe</a> (void) const</td></tr>
-<tr class="memdesc:a88115eb8cba3f1c075012ffec50621af"><td class="mdescLeft">&#160;</td><td class="mdescRight">human-readable info  <br /></td></tr>
-<tr class="separator:a88115eb8cba3f1c075012ffec50621af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9706f3e00ee062a443ac00bdb9d99177" id="r_a9706f3e00ee062a443ac00bdb9d99177"><td class="memItemLeft" align="right" valign="top">string_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9706f3e00ee062a443ac00bdb9d99177">yaml</a> (string_t tab=&quot;&quot;) const</td></tr>
+<tr class="memdesc:a9706f3e00ee062a443ac00bdb9d99177"><td class="mdescLeft">&#160;</td><td class="mdescRight">human/machine-readable info  <br /></td></tr>
+<tr class="separator:a9706f3e00ee062a443ac00bdb9d99177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e91db606900cc3766fdab1a2cfc2ae" id="r_a34e91db606900cc3766fdab1a2cfc2ae"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34e91db606900cc3766fdab1a2cfc2ae">structure</a> (void) const</td></tr>
 <tr class="memdesc:a34e91db606900cc3766fdab1a2cfc2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">R list description.  <br /></td></tr>
 <tr class="separator:a34e91db606900cc3766fdab1a2cfc2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ca809ad8482693086202d1ea115fd3b" id="r_a3ca809ad8482693086202d1ea115fd3b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ca809ad8482693086202d1ea115fd3b">yaml</a> (std::string tab=&quot;&quot;) const</td></tr>
-<tr class="memdesc:a3ca809ad8482693086202d1ea115fd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">human/machine-readable info  <br /></td></tr>
-<tr class="separator:a3ca809ad8482693086202d1ea115fd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -194,7 +191,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>A pocket is a set of balls. </p>
 <p>An order relation among balls ensures the uniqueness of the internal representation. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00032">32</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00030">30</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a88117aee1417a45775cb961551f95964" name="a88117aee1417a45775cb961551f95964"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88117aee1417a45775cb961551f95964">&#9670;&#160;</a></span>~pocket_t()</h2>
@@ -221,11 +218,11 @@ Friends</h2></td></tr>
 
 <p>destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00104">104</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  104</span>                   {</div>
-<div class="line"><span class="lineno">  105</span>    <a class="code hl_function" href="#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
-<div class="line"><span class="lineno">  106</span>  };</div>
-<div class="ttc" id="aclasspocket__t_html_a01bb1db161b45b6770a082ad80d2f07f"><div class="ttname"><a href="#a01bb1db161b45b6770a082ad80d2f07f">pocket_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">delete balls and clear pocket</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00037">pocket.h:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00102">102</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>                   {</div>
+<div class="line"><span class="lineno">  103</span>    <a class="code hl_function" href="#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
+<div class="line"><span class="lineno">  104</span>  };</div>
+<div class="ttc" id="aclasspocket__t_html_a01bb1db161b45b6770a082ad80d2f07f"><div class="ttname"><a href="#a01bb1db161b45b6770a082ad80d2f07f">pocket_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">delete balls and clear pocket</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00035">pocket.h:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -265,17 +262,17 @@ Here is the call graph for this function:</div>
 
 <p>retrieve the first ball of the specified color. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00132">132</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  132</span>                                       {</div>
-<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  134</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == c) <span class="keywordflow">return</span> b;</div>
-<div class="line"><span class="lineno">  135</span>    }</div>
-<div class="line"><span class="lineno">  136</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): no ball of color %s&quot;</span>, <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  137</span>        __func__,__FILE__,__LINE__,<a class="code hl_variable" href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a>[c]);      <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  139</span>  };</div>
-<div class="ttc" id="aball_8h_html_ae1b3a1cfe5f04d6d859f2443d77b09c8"><div class="ttname"><a href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a></div><div class="ttdeci">static const char * colores[]</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00015">ball.h:15</a></div></div>
-<div class="ttc" id="aclassball__t_html_ada6b9e789dc34806789eb6f41892dd46"><div class="ttname"><a href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">ball_t::color</a></div><div class="ttdeci">color_t color</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00038">ball.h:38</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00130">130</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>                                       {</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  132</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == c) <span class="keywordflow">return</span> b;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): no ball of color %s&quot;</span>, <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  135</span>        __func__,__FILE__,__LINE__,<a class="code hl_variable" href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a>[c]);      <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  137</span>  };</div>
+<div class="ttc" id="aball_8h_html_ae1b3a1cfe5f04d6d859f2443d77b09c8"><div class="ttname"><a href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a></div><div class="ttdeci">static const char * colores[]</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00013">ball.h:13</a></div></div>
+<div class="ttc" id="aclassball__t_html_ada6b9e789dc34806789eb6f41892dd46"><div class="ttname"><a href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">ball_t::color</a></div><div class="ttdeci">color_t color</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00036">ball.h:36</a></div></div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -285,7 +282,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="retrieve the first ball of the specified color." alt="" coords="439,5,548,31"/>
 <area shape="rect" href="classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc" title="genealogy information in list format" alt="" coords="236,5,391,31"/>
 <area shape="poly" title=" " alt="" coords="425,21,391,21,391,15,425,15"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,5,188,31"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="121,5,188,31"/>
 <area shape="poly" title=" " alt="" coords="222,21,188,21,188,15,222,15"/>
 <area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,5,73,31"/>
 <area shape="poly" title=" " alt="" coords="107,21,74,21,74,15,107,15"/>
@@ -319,11 +316,11 @@ Here is the caller graph for this function:</div>
 
 <p>size of binary serialization </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00046">46</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                               {</div>
-<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(size_t) + size()*(<a class="code hl_variable" href="classball__t.html#a4bba3277085b3623254524797250b6bc">ball_t::bytesize</a>);</div>
-<div class="line"><span class="lineno">   48</span>  };</div>
-<div class="ttc" id="aclassball__t_html_a4bba3277085b3623254524797250b6bc"><div class="ttname"><a href="classball__t.html#a4bba3277085b3623254524797250b6bc">ball_t::bytesize</a></div><div class="ttdeci">static const size_t bytesize</div><div class="ttdoc">size of binary serialization</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00043">ball.h:43</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00044">44</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                               {</div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(size_t) + size()*(<a class="code hl_variable" href="classball__t.html#a4bba3277085b3623254524797250b6bc">ball_t::bytesize</a>);</div>
+<div class="line"><span class="lineno">   46</span>  };</div>
+<div class="ttc" id="aclassball__t_html_a4bba3277085b3623254524797250b6bc"><div class="ttname"><a href="classball__t.html#a4bba3277085b3623254524797250b6bc">ball_t::bytesize</a></div><div class="ttdeci">static const size_t bytesize</div><div class="ttdoc">size of binary serialization</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00041">ball.h:41</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -370,11 +367,11 @@ Here is the caller graph for this function:</div>
 
 <p>delete balls and clear pocket </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00037">37</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                    {</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) <span class="keyword">delete</span> b;</div>
-<div class="line"><span class="lineno">   39</span>    clear();</div>
-<div class="line"><span class="lineno">   40</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00035">35</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                    {</div>
+<div class="line"><span class="lineno">   36</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) <span class="keyword">delete</span> b;</div>
+<div class="line"><span class="lineno">   37</span>    clear();</div>
+<div class="line"><span class="lineno">   38</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -385,60 +382,6 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="202,36,168,32,169,26,203,31"/>
 <area shape="rect" href="classpocket__t.html#a88117aee1417a45775cb961551f95964" title="destructor" alt="" coords="11,55,162,80"/>
 <area shape="poly" title=" " alt="" coords="203,55,162,60,162,55,202,50"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a88115eb8cba3f1c075012ffec50621af" name="a88115eb8cba3f1c075012ffec50621af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88115eb8cba3f1c075012ffec50621af">&#9670;&#160;</a></span>describe()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string pocket_t::describe </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>human-readable info </p>
-
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00150">150</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>                                  {</div>
-<div class="line"><span class="lineno">  151</span>    std::string s = <span class="stringliteral">&quot;{&quot;</span>;</div>
-<div class="line"><span class="lineno">  152</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin();</div>
-<div class="line"><span class="lineno">  153</span>    s += (*i)-&gt;describe(); ++i;</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">while</span> (i != end()) {</div>
-<div class="line"><span class="lineno">  155</span>      s += <span class="stringliteral">&quot;, &quot;</span> + (*i)-&gt;describe(); ++i;</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-<div class="line"><span class="lineno">  157</span>    s += <span class="stringliteral">&quot;}&quot;</span>;</div>
-<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">return</span> s;</div>
-<div class="line"><span class="lineno">  159</span>  };</div>
-<div class="ttc" id="apocket_8h_html_ac6103e4aa84ad86bbfa30c7f21164c31"><div class="ttname"><a href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_iterator ball_it</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00026">pocket.h:26</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classpocket__t_a88115eb8cba3f1c075012ffec50621af_icgraph.png" border="0" usemap="#aclasspocket__t_a88115eb8cba3f1c075012ffec50621af_icgraph" alt=""/></div>
-<map name="aclasspocket__t_a88115eb8cba3f1c075012ffec50621af_icgraph" id="aclasspocket__t_a88115eb8cba3f1c075012ffec50621af_icgraph">
-<area shape="rect" title="human&#45;readable info" alt="" coords="596,5,736,31"/>
-<area shape="rect" href="classnode__t.html#aa6f1f374cc27fdf7c9c624ebdd4983ae" title="human&#45;readable info" alt="" coords="419,5,548,31"/>
-<area shape="poly" title=" " alt="" coords="582,21,549,21,549,15,582,15"/>
-<area shape="rect" href="classnodeseq__t.html#a1499d26fc7f9d8e287c3e5b3c7e98699" title="human&#45;readable info" alt="" coords="219,5,371,31"/>
-<area shape="poly" title=" " alt="" coords="405,21,371,21,371,15,405,15"/>
-<area shape="rect" href="classgenealogy__t.html#a4de4b5d5a737f8fcce67928384f2a069" title="human&#45;readable info" alt="" coords="5,5,171,31"/>
-<area shape="poly" title=" " alt="" coords="205,21,171,21,171,15,205,15"/>
 </map>
 </div>
 
@@ -469,22 +412,24 @@ Here is the caller graph for this function:</div>
 
 <p>retrieve the first ball </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00124">124</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                  {</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> *cbegin();</div>
-<div class="line"><span class="lineno">  126</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00122">122</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  122</span>                                  {</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> *cbegin();</div>
+<div class="line"><span class="lineno">  124</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_ab29e201dc695f04de9518f3a50cd8cf1_icgraph.png" border="0" usemap="#aclasspocket__t_ab29e201dc695f04de9518f3a50cd8cf1_icgraph" alt=""/></div>
 <map name="aclasspocket__t_ab29e201dc695f04de9518f3a50cd8cf1_icgraph" id="aclasspocket__t_ab29e201dc695f04de9518f3a50cd8cf1_icgraph">
-<area shape="rect" title="retrieve the first ball" alt="" coords="363,31,504,56"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="164,31,315,56"/>
-<area shape="poly" title=" " alt="" coords="349,46,315,46,315,41,349,41"/>
-<area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="29,5,92,31"/>
-<area shape="poly" title=" " alt="" coords="150,33,92,25,93,20,151,28"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,55,116,80"/>
-<area shape="poly" title=" " alt="" coords="151,58,117,63,116,57,150,53"/>
+<area shape="rect" title="retrieve the first ball" alt="" coords="597,31,739,56"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="399,31,549,56"/>
+<area shape="poly" title=" " alt="" coords="584,46,550,46,550,41,584,41"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="264,5,327,31"/>
+<area shape="poly" title=" " alt="" coords="384,33,326,25,327,20,385,28"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="240,55,351,80"/>
+<area shape="poly" title=" " alt="" coords="385,58,351,63,351,57,385,53"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="5,5,192,31"/>
+<area shape="poly" title=" " alt="" coords="250,21,192,21,192,15,250,15"/>
 </map>
 </div>
 
@@ -515,39 +460,57 @@ Here is the caller graph for this function:</div>
 
 <p>does this node hold the given ball? </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00111">111</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                               {</div>
-<div class="line"><span class="lineno">  112</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">return</span> (i != end());</div>
-<div class="line"><span class="lineno">  114</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00109">109</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                               {</div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> (i != end());</div>
+<div class="line"><span class="lineno">  112</span>  };</div>
+<div class="ttc" id="apocket_8h_html_ac6103e4aa84ad86bbfa30c7f21164c31"><div class="ttname"><a href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_iterator ball_it</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00024">pocket.h:24</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph.png" border="0" usemap="#aclasspocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph" alt=""/></div>
 <map name="aclasspocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph" id="aclasspocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph">
-<area shape="rect" title="does this node hold the given ball?" alt="" coords="631,99,751,124"/>
-<area shape="rect" href="classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc" title="genealogy information in list format" alt="" coords="422,8,577,33"/>
-<area shape="poly" title=" " alt="" coords="658,94,582,51,542,36,544,31,584,46,660,89"/>
-<area shape="rect" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4" title=" " alt="" coords="423,61,576,87"/>
-<area shape="poly" title=" " alt="" coords="616,100,564,89,565,84,617,94"/>
-<area shape="rect" href="classnode__t.html#a8fbcbc87b57e6d224e709777caf89609" title="Newick format." alt="" coords="439,135,559,160"/>
-<area shape="poly" title=" " alt="" coords="617,128,560,139,559,133,616,123"/>
-<area shape="rect" href="classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7" title="number of samples" alt="" coords="416,188,583,213"/>
-<area shape="poly" title=" " alt="" coords="660,133,584,175,544,190,542,185,582,170,657,129"/>
-<area shape="rect" href="bare_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="255,5,322,31"/>
-<area shape="poly" title=" " alt="" coords="408,22,322,21,322,16,408,17"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="49,5,117,31"/>
-<area shape="poly" title=" " alt="" coords="242,21,118,21,118,15,242,15"/>
-<area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="209,55,368,95"/>
-<area shape="poly" title=" " alt="" coords="409,77,368,77,368,72,409,72"/>
-<area shape="poly" title=" " alt="" coords="533,124,523,116,499,113,479,115,469,120,467,126,472,133,468,136,461,126,465,116,478,110,499,108,525,112,536,120"/>
-<area shape="rect" href="classnodeseq__t.html#acf09dd4bc265ecb0819f0f2741f180da" title="put genealogy at time t into Newick format." alt="" coords="217,128,360,153"/>
-<area shape="poly" title=" " alt="" coords="425,148,360,146,360,140,425,142"/>
-<area shape="rect" href="classgenealogy__t.html#a187eb5eb32d745fe88e740b621cee252" title="put genealogy at current time into Newick format." alt="" coords="5,128,161,153"/>
-<area shape="poly" title=" " alt="" coords="203,143,161,143,161,138,203,138"/>
-<area shape="rect" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb" title="genealogy information in list format" alt="" coords="211,201,366,227"/>
-<area shape="poly" title=" " alt="" coords="402,209,366,212,366,206,402,204"/>
-<area shape="poly" title=" " alt="" coords="325,192,315,183,289,180,267,182,255,187,253,192,259,200,255,203,248,193,251,183,265,177,289,175,317,178,329,187"/>
+<area shape="rect" title="does this node hold the given ball?" alt="" coords="779,157,899,183"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="575,5,708,31"/>
+<area shape="poly" title=" " alt="" coords="820,148,782,100,757,74,729,52,690,33,692,28,732,48,760,70,786,96,824,145"/>
+<area shape="rect" href="classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc" title="genealogy information in list format" alt="" coords="346,56,501,81"/>
+<area shape="poly" title=" " alt="" coords="810,151,774,125,730,103,671,87,611,77,501,70,501,64,612,71,673,82,732,98,776,120,813,146"/>
+<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="121,105,295,131"/>
+<area shape="poly" title=" " alt="" coords="778,157,730,147,613,134,494,126,295,120,295,115,494,121,613,129,731,142,779,151"/>
+<area shape="rect" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4" title=" " alt="" coords="565,157,718,183"/>
+<area shape="poly" title=" " alt="" coords="765,173,718,173,718,167,765,167"/>
+<area shape="rect" href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8" title="Newick&#45;format output." alt="" coords="581,231,701,256"/>
+<area shape="poly" title=" " alt="" coords="792,190,678,233,676,228,790,185"/>
+<area shape="rect" href="classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7" title="number of samples" alt="" coords="558,284,725,309"/>
+<area shape="poly" title=" " alt="" coords="819,195,781,233,732,270,694,286,692,281,729,265,777,229,815,192"/>
+<area shape="rect" href="classgenealogy__t.html#afa7511c258badddff38a349d0610aeda" title=" " alt="" coords="552,340,731,365"/>
+<area shape="poly" title=" " alt="" coords="828,197,791,260,764,294,732,324,698,342,695,337,729,320,760,291,787,257,823,194"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="343,5,504,31"/>
+<area shape="poly" title=" " alt="" coords="560,21,504,21,504,15,560,15"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,56,241,81"/>
+<area shape="poly" title=" " alt="" coords="356,36,242,64,241,58,355,31"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,56,73,81"/>
+<area shape="poly" title=" " alt="" coords="329,23,229,31,122,46,74,59,73,54,121,41,228,25,328,18"/>
+<area shape="poly" title=" " alt="" coords="161,71,74,71,74,66,161,66"/>
+<area shape="poly" title=" " alt="" coords="332,71,242,71,242,66,332,66"/>
+<area shape="poly" title=" " alt="" coords="150,104,121,95,73,81,74,76,122,90,151,99"/>
+<area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="344,157,503,197"/>
+<area shape="poly" title=" " alt="" coords="550,175,503,177,503,172,550,170"/>
+<area shape="poly" title=" " alt="" coords="676,221,666,212,641,209,620,211,609,216,607,222,613,229,609,232,602,222,605,212,619,206,641,204,668,208,680,216"/>
+<area shape="rect" href="classnodeseq__t.html#afb5b7cdfc8d4277fd0039e3d442fd1a6" title="put genealogy at time t into Newick format." alt="" coords="352,221,495,247"/>
+<area shape="poly" title=" " alt="" coords="568,243,495,240,495,234,568,238"/>
+<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="130,221,286,247"/>
+<area shape="poly" title=" " alt="" coords="338,237,286,237,286,231,338,231"/>
+<area shape="rect" href="newick_8cc.html#a39c40010381542226dd4696bda48c335" title="tree in newick format" alt="" coords="5,221,73,247"/>
+<area shape="poly" title=" " alt="" coords="116,237,73,237,73,231,116,231"/>
+<area shape="rect" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb" title="genealogy information in list format" alt="" coords="346,295,501,320"/>
+<area shape="poly" title=" " alt="" coords="545,304,501,306,501,301,544,299"/>
+<area shape="poly" title=" " alt="" coords="462,285,451,277,423,273,401,275,389,280,386,286,393,293,388,296,381,286,385,276,399,270,423,268,453,272,465,281"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="350,344,497,369"/>
+<area shape="poly" title=" " alt="" coords="538,357,497,358,497,353,538,352"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="153,344,263,369"/>
+<area shape="poly" title=" " alt="" coords="336,359,263,359,263,354,336,354"/>
 </map>
 </div>
 
@@ -578,14 +541,14 @@ Here is the caller graph for this function:</div>
 
 <p>does this node hold a ball of this color? </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00116">116</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>                               {</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
-<div class="line"><span class="lineno">  119</span>      result = ((*i)-&gt;color == c);</div>
-<div class="line"><span class="lineno">  120</span>    }</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  122</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00114">114</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>                               {</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
+<div class="line"><span class="lineno">  117</span>      result = ((*i)-&gt;color == c);</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  120</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -614,22 +577,44 @@ Here is the caller graph for this function:</div>
 
 <p>retrieve the last ball </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00128">128</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                 {</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> *crbegin();</div>
-<div class="line"><span class="lineno">  130</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00126">126</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>                                 {</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span> *crbegin();</div>
+<div class="line"><span class="lineno">  128</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph.png" border="0" usemap="#aclasspocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph" alt=""/></div>
 <map name="aclasspocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph" id="aclasspocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph">
-<area shape="rect" title="retrieve the last ball" alt="" coords="363,31,503,56"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="164,31,315,56"/>
-<area shape="poly" title=" " alt="" coords="349,46,315,46,315,41,349,41"/>
-<area shape="rect" href="bare_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="29,5,92,31"/>
-<area shape="poly" title=" " alt="" coords="150,33,92,25,93,20,151,28"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,55,116,80"/>
-<area shape="poly" title=" " alt="" coords="151,58,117,63,116,57,150,53"/>
+<area shape="rect" title="retrieve the last ball" alt="" coords="804,149,944,175"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="600,51,733,76"/>
+<area shape="poly" title=" " alt="" coords="844,143,803,116,755,90,724,79,726,74,757,85,806,111,847,139"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="591,100,742,125"/>
+<area shape="poly" title=" " alt="" coords="806,149,720,128,722,123,807,144"/>
+<area shape="rect" href="classgenealogy__t.html#a18c0ea2e2b6b24cb4a690677de9f2903" title="drop all zero&#45;length branches" alt="" coords="584,149,749,175"/>
+<area shape="poly" title=" " alt="" coords="790,165,750,165,750,159,790,159"/>
+<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="356,249,529,275"/>
+<area shape="poly" title=" " alt="" coords="849,186,808,215,757,239,699,254,639,263,530,269,530,263,639,258,698,249,755,234,805,210,846,181"/>
+<area shape="rect" href="classgenealogy__t.html#afa7511c258badddff38a349d0610aeda" title=" " alt="" coords="577,199,756,224"/>
+<area shape="poly" title=" " alt="" coords="807,180,722,201,720,196,806,175"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="362,49,523,75"/>
+<area shape="poly" title=" " alt="" coords="586,66,524,65,524,60,586,60"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="181,5,248,31"/>
+<area shape="poly" title=" " alt="" coords="362,49,248,27,249,22,363,44"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,56,73,81"/>
+<area shape="poly" title=" " alt="" coords="348,66,73,71,73,65,348,61"/>
+<area shape="poly" title=" " alt="" coords="169,34,74,62,73,56,168,29"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="411,99,474,124"/>
+<area shape="poly" title=" " alt="" coords="577,115,474,114,474,109,577,109"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="159,163,270,188"/>
+<area shape="poly" title=" " alt="" coords="579,130,530,138,271,172,270,166,529,133,578,125"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="121,107,308,132"/>
+<area shape="poly" title=" " alt="" coords="397,116,308,119,308,113,397,110"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="369,200,516,225"/>
+<area shape="poly" title=" " alt="" coords="597,180,500,203,499,197,596,175"/>
+<area shape="poly" title=" " alt="" coords="355,201,270,187,271,182,356,196"/>
+<area shape="poly" title=" " alt="" coords="342,265,288,260,230,249,172,230,120,201,90,174,68,141,42,83,47,80,73,138,94,170,123,197,175,225,231,244,288,255,342,260"/>
+<area shape="poly" title=" " alt="" coords="564,215,516,215,516,210,564,209"/>
 </map>
 </div>
 
@@ -660,15 +645,15 @@ Here is the caller graph for this function:</div>
 
 <p>return a pointer to another ball </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00141">141</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                        {</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">for</span> (ball_t *a : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  143</span>      <span class="keywordflow">if</span> (a != b) <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;error in &#39;%s&#39; (%s line %d): there is no other.&quot;</span>, <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  146</span>        __func__,__FILE__,__LINE__);                      <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  148</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00139">139</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>                                        {</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">for</span> (ball_t *a : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  141</span>      <span class="keywordflow">if</span> (a != b) <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  142</span>    }</div>
+<div class="line"><span class="lineno">  143</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;error in &#39;%s&#39; (%s line %d): there is no other.&quot;</span>, <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  144</span>        __func__,__FILE__,__LINE__);                      <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  146</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -696,13 +681,13 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Needed in deserialization. Inform all balls as to their holder. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00074">74</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                 {</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">   76</span>      b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
-<div class="line"><span class="lineno">   77</span>    }</div>
-<div class="line"><span class="lineno">   78</span>  };</div>
-<div class="ttc" id="aclassball__t_html_a7018ea86bba5844d30904e3242ec45c4"><div class="ttname"><a href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">ball_t::holder</a></div><div class="ttdeci">node_t * holder(void) const</div><div class="ttdoc">in whose pocket do I lie?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00109">ball.h:109</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00072">72</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                 {</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   74</span>      b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>() = p;</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="line"><span class="lineno">   76</span>  };</div>
+<div class="ttc" id="aclassball__t_html_a7018ea86bba5844d30904e3242ec45c4"><div class="ttname"><a href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">ball_t::holder</a></div><div class="ttdeci">node_t * holder(void) const</div><div class="ttdoc">in whose pocket do I lie?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00107">ball.h:107</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -754,38 +739,43 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Needed in deserialization. This function repairs the links green balls and their names. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00083">83</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                                   {</div>
-<div class="line"><span class="lineno">   85</span>    std::unordered_map&lt;name_t,node_t*&gt;::const_iterator <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">   87</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
-<div class="line"><span class="lineno">   88</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = node_name.find(b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> != node_name.end()) {</div>
-<div class="line"><span class="lineno">   90</span>          node_t *p = <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-&gt;second;</div>
-<div class="line"><span class="lineno">   91</span>          b-&gt;<a class="code hl_function" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">owner</a>() = p;</div>
-<div class="line"><span class="lineno">   92</span>          ball_name-&gt;insert({b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>,b});</div>
-<div class="line"><span class="lineno">   93</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   94</span>          <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): cannot find ball %zd&quot;</span>, <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">   95</span>              __func__,__FILE__,__LINE__,b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);          <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">   96</span>        }</div>
-<div class="line"><span class="lineno">   97</span>      }</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="line"><span class="lineno">   99</span>  };</div>
-<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00014">ball.h:14</a></div></div>
-<div class="ttc" id="aclassball__t_html_a1d377630b5d22bce8cc315d9a2feaa15"><div class="ttname"><a href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">ball_t::owner</a></div><div class="ttdeci">node_t * owner(void) const</div><div class="ttdoc">view owner of a green ball</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00094">ball.h:94</a></div></div>
-<div class="ttc" id="aclassball__t_html_a2c9aacc8dae1325e7ff3b8e22dd88675"><div class="ttname"><a href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">ball_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00037">ball.h:37</a></div></div>
-<div class="ttc" id="aclassball__t_html_a8a9297a7f3f8874f86462d34dede1d5f"><div class="ttname"><a href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">ball_t::is</a></div><div class="ttdeci">bool is(color_t c) const</div><div class="ttdoc">is a given ball of the given color?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00117">ball.h:117</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00081">81</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                   {</div>
+<div class="line"><span class="lineno">   83</span>    std::unordered_map&lt;name_t,node_t*&gt;::const_iterator <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   85</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
+<div class="line"><span class="lineno">   86</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = node_name.find(b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
+<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> != node_name.end()) {</div>
+<div class="line"><span class="lineno">   88</span>          node_t *p = <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-&gt;second;</div>
+<div class="line"><span class="lineno">   89</span>          b-&gt;<a class="code hl_function" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">owner</a>() = p;</div>
+<div class="line"><span class="lineno">   90</span>          ball_name-&gt;<a class="code hl_function" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">insert</a>({b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>,b});</div>
+<div class="line"><span class="lineno">   91</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   92</span>          <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): cannot find ball %zd&quot;</span>, <span class="comment">// #nocov</span></div>
+<div class="line"><span class="lineno">   93</span>              __func__,__FILE__,__LINE__,b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);          <span class="comment">// #nocov</span></div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>      }</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span>  };</div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aclassball__t_html_a1d377630b5d22bce8cc315d9a2feaa15"><div class="ttname"><a href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">ball_t::owner</a></div><div class="ttdeci">node_t * owner(void) const</div><div class="ttdoc">view owner of a green ball</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00092">ball.h:92</a></div></div>
+<div class="ttc" id="aclassball__t_html_a2c9aacc8dae1325e7ff3b8e22dd88675"><div class="ttname"><a href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">ball_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00035">ball.h:35</a></div></div>
+<div class="ttc" id="aclassball__t_html_a8a9297a7f3f8874f86462d34dede1d5f"><div class="ttname"><a href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">ball_t::is</a></div><div class="ttdeci">bool is(color_t c) const</div><div class="ttdoc">is a given ball of the given color?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00115">ball.h:115</a></div></div>
+<div class="ttc" id="aclassnode__t_html_ad2d4cc004ae4fe2149206c5cb44310b4"><div class="ttname"><a href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">node_t::insert</a></div><div class="ttdeci">void insert(ball_t *a)</div><div class="ttdoc">insert a ball into the pocket of a node</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00156">node.h:156</a></div></div>
 <div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00009">lbdp_pomp.c:9</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph.png" border="0" usemap="#aclasspocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph" alt=""/></div>
 <map name="aclasspocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph" id="aclasspocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,183,56"/>
-<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="245,5,323,31"/>
-<area shape="poly" title=" " alt="" coords="183,29,232,22,232,28,183,34"/>
-<area shape="rect" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15" title="view owner of a green ball" alt="" coords="231,55,337,80"/>
-<area shape="poly" title=" " alt="" coords="183,52,217,56,216,62,183,57"/>
+<area shape="rect" title=" " alt="" coords="5,55,183,80"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="231,5,341,31"/>
+<area shape="poly" title=" " alt="" coords="143,52,222,32,223,37,145,57"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="247,55,325,80"/>
+<area shape="poly" title=" " alt="" coords="183,65,233,65,233,70,183,70"/>
+<area shape="rect" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15" title="view owner of a green ball" alt="" coords="233,104,339,129"/>
+<area shape="poly" title=" " alt="" coords="145,77,223,98,222,103,143,83"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="389,5,496,31"/>
+<area shape="poly" title=" " alt="" coords="342,15,376,15,376,21,342,21"/>
 </map>
 </div>
 
@@ -796,9 +786,6 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SEXP pocket_t::structure </td>
@@ -807,27 +794,22 @@ Here is the call graph for this function:</div>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>R list description. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00161">161</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  161</span>                              {</div>
-<div class="line"><span class="lineno">  162</span>    SEXP o;</div>
-<div class="line"><span class="lineno">  163</span>    PROTECT(o = NEW_LIST(size()));</div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordtype">int</span> k = 0;</div>
-<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a> i = crbegin(); i != crend(); i++) {</div>
-<div class="line"><span class="lineno">  166</span>      SET_ELEMENT(o,k++,(*i)-&gt;structure());</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="line"><span class="lineno">  168</span>    UNPROTECT(1);</div>
-<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">  170</span>  };</div>
-<div class="ttc" id="apocket_8h_html_a0d112f9f3e6fc7daa1c4f579bcda917a"><div class="ttname"><a href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_reverse_iterator ball_rev_it</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00027">pocket.h:27</a></div></div>
+<p class="definition">Definition at line <a class="el" href="structure_8cc_source.html#l00040">40</a> of file <a class="el" href="structure_8cc_source.html">structure.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
+<div class="line"><span class="lineno">   43</span>  SEXP o;</div>
+<div class="line"><span class="lineno">   44</span>  PROTECT(o = NEW_LIST(size()));</div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordtype">int</span> k = 0;</div>
+<div class="line"><span class="lineno">   46</span>  <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a> i = crbegin(); i != crend(); i++) {</div>
+<div class="line"><span class="lineno">   47</span>    SET_ELEMENT(o,k++,(*i)-&gt;structure());</div>
+<div class="line"><span class="lineno">   48</span>  }</div>
+<div class="line"><span class="lineno">   49</span>  UNPROTECT(1);</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+<div class="ttc" id="apocket_8h_html_a0d112f9f3e6fc7daa1c4f579bcda917a"><div class="ttname"><a href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_reverse_iterator ball_rev_it</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00025">pocket.h:25</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -845,69 +827,61 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a3ca809ad8482693086202d1ea115fd3b" name="a3ca809ad8482693086202d1ea115fd3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ca809ad8482693086202d1ea115fd3b">&#9670;&#160;</a></span>yaml()</h2>
+<a id="a9706f3e00ee062a443ac00bdb9d99177" name="a9706f3e00ee062a443ac00bdb9d99177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9706f3e00ee062a443ac00bdb9d99177">&#9670;&#160;</a></span>yaml()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string pocket_t::yaml </td>
+          <td class="memname">string_t pocket_t::yaml </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>tab</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
+          <td class="paramtype">string_t</td>          <td class="paramname"><span class="paramname"><em>tab</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>human/machine-readable info </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00172">172</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                                            {</div>
-<div class="line"><span class="lineno">  173</span>    std::string o = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  174</span>    std::string t = tab + <span class="stringliteral">&quot;  &quot;</span>;</div>
-<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  176</span>      o += tab + <span class="stringliteral">&quot;- &quot;</span> + b-&gt;<a class="code hl_function" href="classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd">yaml</a>(t);</div>
-<div class="line"><span class="lineno">  177</span>    }</div>
-<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">  179</span>  };</div>
-<div class="ttc" id="aclassball__t_html_a2b9c23adf58246281a3c3b8ebe2028bd"><div class="ttname"><a href="classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd">ball_t::yaml</a></div><div class="ttdeci">std::string yaml(std::string tab=&quot;&quot;) const</div><div class="ttdoc">machine-readable info</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00145">ball.h:145</a></div></div>
+<p class="definition">Definition at line <a class="el" href="yaml_8cc_source.html#l00024">24</a> of file <a class="el" href="yaml_8cc_source.html">yaml.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
+<div class="line"><span class="lineno">   27</span>  string_t o = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">   28</span>  string_t t = tab + <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   30</span>    o += tab + <span class="stringliteral">&quot;- &quot;</span> + b-&gt;<a class="code hl_function" href="classball__t.html#ac0512b70a0fe4ea5449bc81514b6a3af">yaml</a>(t);</div>
+<div class="line"><span class="lineno">   31</span>  }</div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   33</span>}</div>
+<div class="ttc" id="aclassball__t_html_ac0512b70a0fe4ea5449bc81514b6a3af"><div class="ttname"><a href="classball__t.html#ac0512b70a0fe4ea5449bc81514b6a3af">ball_t::yaml</a></div><div class="ttdeci">string_t yaml(string_t tab=&quot;&quot;) const</div><div class="ttdoc">human/machine-readable info</div><div class="ttdef"><b>Definition</b> <a href="yaml_8cc_source.html#l00011">yaml.cc:12</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classpocket__t_a3ca809ad8482693086202d1ea115fd3b_cgraph.png" border="0" usemap="#aclasspocket__t_a3ca809ad8482693086202d1ea115fd3b_cgraph" alt=""/></div>
-<map name="aclasspocket__t_a3ca809ad8482693086202d1ea115fd3b_cgraph" id="aclasspocket__t_a3ca809ad8482693086202d1ea115fd3b_cgraph">
-<area shape="rect" title="human/machine&#45;readable info" alt="" coords="5,5,124,31"/>
-<area shape="rect" href="classball__t.html#a2b9c23adf58246281a3c3b8ebe2028bd" title="machine&#45;readable info" alt="" coords="172,5,271,31"/>
-<area shape="poly" title=" " alt="" coords="124,15,158,15,158,21,124,21"/>
-<area shape="rect" href="classball__t.html#ab87d8591dc302fca18a345cbe4c33b0a" title="human&#45;readable colors" alt="" coords="319,5,461,31"/>
-<area shape="poly" title=" " alt="" coords="271,15,305,15,305,21,271,21"/>
+<div class="center"><img src="classpocket__t_a9706f3e00ee062a443ac00bdb9d99177_cgraph.png" border="0" usemap="#aclasspocket__t_a9706f3e00ee062a443ac00bdb9d99177_cgraph" alt=""/></div>
+<map name="aclasspocket__t_a9706f3e00ee062a443ac00bdb9d99177_cgraph" id="aclasspocket__t_a9706f3e00ee062a443ac00bdb9d99177_cgraph">
+<area shape="rect" title="human/machine&#45;readable info" alt="" coords="5,31,124,56"/>
+<area shape="rect" href="classball__t.html#ac0512b70a0fe4ea5449bc81514b6a3af" title="human/machine&#45;readable info" alt="" coords="172,31,271,56"/>
+<area shape="poly" title=" " alt="" coords="124,41,158,41,158,46,124,46"/>
+<area shape="rect" href="classball__t.html#ab61a9bf80d97ab9320383fe226ccbc64" title="human&#45;readable colors" alt="" coords="319,5,461,31"/>
+<area shape="poly" title=" " alt="" coords="270,33,305,28,306,33,271,39"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="339,55,441,80"/>
+<area shape="poly" title=" " alt="" coords="271,48,325,55,325,61,270,53"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classpocket__t_a3ca809ad8482693086202d1ea115fd3b_icgraph.png" border="0" usemap="#aclasspocket__t_a3ca809ad8482693086202d1ea115fd3b_icgraph" alt=""/></div>
-<map name="aclasspocket__t_a3ca809ad8482693086202d1ea115fd3b_icgraph" id="aclasspocket__t_a3ca809ad8482693086202d1ea115fd3b_icgraph">
-<area shape="rect" title="human/machine&#45;readable info" alt="" coords="748,5,867,31"/>
-<area shape="rect" href="classnode__t.html#abbf74b4aabeff165285a4f784e7737ba" title="machine&#45;readable info" alt="" coords="593,5,700,31"/>
-<area shape="poly" title=" " alt="" coords="734,21,700,21,700,15,734,15"/>
-<area shape="rect" href="classnodeseq__t.html#a1e165e9bd12ca6080c0e5aa2cab0625d" title="human&#45; &amp; machine&#45;readable info" alt="" coords="415,5,545,31"/>
-<area shape="poly" title=" " alt="" coords="579,21,546,21,546,15,579,15"/>
-<area shape="rect" href="classgenealogy__t.html#a199104f51028c884cf9751fcbfa7ff45" title="machine&#45;readable info" alt="" coords="224,5,367,31"/>
-<area shape="poly" title=" " alt="" coords="401,21,367,21,367,15,401,15"/>
-<area shape="rect" href="bare_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="121,5,176,31"/>
-<area shape="poly" title=" " alt="" coords="210,21,176,21,176,15,210,15"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,5,73,31"/>
-<area shape="poly" title=" " alt="" coords="107,21,74,21,74,15,107,15"/>
+<div class="center"><img src="classpocket__t_a9706f3e00ee062a443ac00bdb9d99177_icgraph.png" border="0" usemap="#aclasspocket__t_a9706f3e00ee062a443ac00bdb9d99177_icgraph" alt=""/></div>
+<map name="aclasspocket__t_a9706f3e00ee062a443ac00bdb9d99177_icgraph" id="aclasspocket__t_a9706f3e00ee062a443ac00bdb9d99177_icgraph">
+<area shape="rect" title="human/machine&#45;readable info" alt="" coords="632,5,751,31"/>
+<area shape="rect" href="classnode__t.html#a08867bb2ccff20e0740077eb6be755c6" title="human/machine&#45;readable info" alt="" coords="477,5,584,31"/>
+<area shape="poly" title=" " alt="" coords="618,21,584,21,584,15,618,15"/>
+<area shape="rect" href="classnodeseq__t.html#a5ee4aa52a55d7a6f7062168b2936c80a" title="human/machine&#45;readable info" alt="" coords="299,5,429,31"/>
+<area shape="poly" title=" " alt="" coords="463,21,430,21,430,15,463,15"/>
+<area shape="rect" href="classgenealogy__t.html#a50faf5dc61268d35c3b4aa5070d2854d" title="human/machine&#45;readable info" alt="" coords="108,5,251,31"/>
+<area shape="poly" title=" " alt="" coords="285,21,251,21,251,15,285,15"/>
+<area shape="rect" href="yaml_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
 
@@ -943,14 +917,14 @@ Here is the caller graph for this function:</div>
 
 <p>binary serialization </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00050">50</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                         {</div>
-<div class="line"><span class="lineno">   51</span>    <span class="keywordtype">size_t</span> psize = p.size();</div>
-<div class="line"><span class="lineno">   52</span>    memcpy(o,&amp;psize,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">for</span> (ball_t *i : p)</div>
-<div class="line"><span class="lineno">   54</span>      o = (*i &gt;&gt; o);</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">   56</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00048">48</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                                         {</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordtype">size_t</span> psize = p.size();</div>
+<div class="line"><span class="lineno">   50</span>    memcpy(o,&amp;psize,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">for</span> (ball_t *i : p)</div>
+<div class="line"><span class="lineno">   52</span>      o = (*i &gt;&gt; o);</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   54</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -982,23 +956,25 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>binary deserialization. this leaves the balls without knowledge of their holder. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00059">59</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                   {</div>
-<div class="line"><span class="lineno">   60</span>    p.<a class="code hl_function" href="#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordtype">size_t</span> psize;</div>
-<div class="line"><span class="lineno">   62</span>    memcpy(&amp;psize,o,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; psize; i++) {</div>
-<div class="line"><span class="lineno">   64</span>      ball_t *b = <span class="keyword">new</span> ball_t();</div>
-<div class="line"><span class="lineno">   65</span>      o = (o &gt;&gt; *b);</div>
-<div class="line"><span class="lineno">   66</span>      p.insert(b);</div>
-<div class="line"><span class="lineno">   67</span>    }</div>
-<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> o;</div>
-<div class="line"><span class="lineno">   69</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00057">57</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                   {</div>
+<div class="line"><span class="lineno">   58</span>    p.<a class="code hl_function" href="#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordtype">size_t</span> psize;</div>
+<div class="line"><span class="lineno">   60</span>    memcpy(&amp;psize,o,<span class="keyword">sizeof</span>(<span class="keywordtype">size_t</span>)); o += <span class="keyword">sizeof</span>(size_t);</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; psize; i++) {</div>
+<div class="line"><span class="lineno">   62</span>      ball_t *b = <span class="keyword">new</span> ball_t();</div>
+<div class="line"><span class="lineno">   63</span>      o = (o &gt;&gt; *b);</div>
+<div class="line"><span class="lineno">   64</span>      p.insert(b);</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span> o;</div>
+<div class="line"><span class="lineno">   67</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="pocket_8h_source.html">pocket.h</a></li>
+<li>src/<a class="el" href="structure_8cc_source.html">structure.cc</a></li>
+<li>src/<a class="el" href="yaml_8cc_source.html">yaml.cc</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

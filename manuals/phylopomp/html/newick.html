@@ -26,7 +26,7 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>newick(object, prune = TRUE, obscure = TRUE)
+<pre><code class='language-R'>newick(object, prune = TRUE, obscure = TRUE, extended = TRUE)
 </code></pre>
 
 
@@ -45,21 +45,76 @@ function processMathHTML() {
 <td>
 <p>logical; obscure the demes?</p>
 </td></tr>
+<tr><td><code id="extended">extended</code></td>
+<td>
+<p>logical; if TRUE, an extended-Newick format is used.
+See Details.</p>
+</td></tr>
 </table>
+
+
+<h3>Details</h3>
+
+<p>In the extended-Newick format, metadata tags of the form <code>[&amp;&amp;PhyloPOMP ...]</code> are inserted.
+These contain information regarding node-type and deme.
+See below for more information.
+</p>
+<p>If <code>extended = FALSE</code>, then the string returned is in ordinary Newick format.
+Deme and node-type information is discarded.
+Every sample becomes a tip (inline samples lie on the ends of branches of zero length).
+Note that <code>extended = FALSE</code> implies both <code>prune = TRUE</code> and <code>obscure = TRUE</code>.
+</p>
 
 
 <h3>Value</h3>
 
-<p>A string in Newick format.
+<p>A string in (possibly extended) Newick format.
+</p>
+
+
+<h3>Metadata tags</h3>
+
+<p>Metadata tags are of the form
+</p>
+<pre>[&amp;&amp;PhyloPOMP type={node|sample|extant|root|migration|branch} deme=&lt;integer&gt;].</pre>
+<p>Types &lsquo;branch&rsquo;, &lsquo;node&rsquo;, &lsquo;migration&rsquo;, and &lsquo;root&rsquo; are equivalent on input to <code><a href="../../phylopomp/help/parse_newick.html">parse_newick</a></code>;
+&lsquo;type=node&rsquo; is used in output of <code><a href="../../phylopomp/help/newick.html">newick</a></code>.
+Note that <code>0</code> is reserved for the &ldquo;undeme&rdquo;, i.e., unspecified or unknown deme.
 </p>
 
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>simulate("SIIR",time=1) |&gt; newick()
+<pre><code class='language-R'>simulate("SIIR",time=0.3,sigma12=1) -&gt; x
+
+x |&gt; plot(prune=FALSE,obscure=FALSE)
+
+x |&gt; newick(prune=FALSE,obscure=FALSE)
+
+x |&gt; newick()
+
+x |&gt; newick(extended=FALSE)
+
+x |&gt;
+  newick() |&gt;
+  parse_newick(t0=0)
+
+x |&gt;
+  newick(prune=FALSE,obscure=FALSE) |&gt;
+  parse_newick(t0=0)
+
+x |&gt;
+  newick(extended=FALSE) |&gt;
+  parse_newick(t0=0)
+
+"" |&gt; parse_newick() |&gt; newick()
+
+";" |&gt; parse_newick() |&gt; newick()
+
+"((:1,:1):1,:1):1;" |&gt; parse_newick() |&gt; newick()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.16.2.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

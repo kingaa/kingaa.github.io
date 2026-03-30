@@ -103,29 +103,23 @@ $(function(){initNavTree('popul__proc_8h.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">popul_proc.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for popul_proc.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="popul__proc_8h__incl.png" border="0" usemap="#asrc_2popul__proc_8h" alt=""/></div>
 <map name="asrc_2popul__proc_8h" id="asrc_2popul__proc_8h">
-<area shape="rect" title=" " alt="" coords="57,5,185,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,64,104"/>
-<area shape="poly" title=" " alt="" coords="109,33,61,72,58,68,106,29"/>
-<area shape="rect" title=" " alt="" coords="88,79,155,104"/>
-<area shape="poly" title=" " alt="" coords="124,31,124,65,119,65,119,31"/>
-<area shape="rect" href="internal_8h.html" title=" " alt="" coords="179,79,263,104"/>
-<area shape="poly" title=" " alt="" coords="139,29,195,68,192,73,136,33"/>
-<area shape="rect" title=" " alt="" coords="61,152,104,177"/>
-<area shape="poly" title=" " alt="" coords="200,106,118,148,115,144,198,102"/>
-<area shape="rect" title=" " alt="" coords="128,152,205,177"/>
-<area shape="poly" title=" " alt="" coords="214,106,186,143,182,140,210,103"/>
-<area shape="rect" title=" " alt="" coords="229,152,320,177"/>
-<area shape="poly" title=" " alt="" coords="232,103,260,140,256,143,228,106"/>
-<area shape="rect" title=" " alt="" coords="344,152,419,177"/>
-<area shape="poly" title=" " alt="" coords="248,102,344,144,342,149,246,106"/>
+<area shape="rect" title=" " alt="" coords="100,5,228,31"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="122,79,206,104"/>
+<area shape="poly" title=" " alt="" coords="167,31,167,65,161,65,161,31"/>
+<area shape="rect" title=" " alt="" coords="5,152,48,177"/>
+<area shape="poly" title=" " alt="" coords="143,106,61,148,59,144,141,102"/>
+<area shape="rect" title=" " alt="" coords="72,152,149,177"/>
+<area shape="poly" title=" " alt="" coords="157,106,130,143,125,140,153,103"/>
+<area shape="rect" title=" " alt="" coords="173,152,264,177"/>
+<area shape="poly" title=" " alt="" coords="175,103,204,140,199,143,171,106"/>
+<area shape="rect" title=" " alt="" coords="288,152,363,177"/>
+<area shape="poly" title=" " alt="" coords="191,102,288,144,285,149,189,106"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -173,7 +167,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpopul__proc__t.html">popul_proc_t&lt; STATE, PARAMETERS, NEVENT, NDEME &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpopul__proc__t.html">popul_proc_t&lt; STATE, PARAMETERS, NEVENT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Population process class.  <a href="classpopul__proc__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -203,13 +197,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (!ISNA(p[m])) params.X = p[m];  \</div>
-<div class="line">  m++;</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!ISNA(p[m])) params.X = p[m]; m++;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00187">187</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span><span class="preprocessor">#define PARAM_SET(X) if (!ISNA(p[m])) params.X = p[m];  \</span></div>
-<div class="line"><span class="lineno">  188</span><span class="preprocessor">  m++;</span></div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00134">134</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
+
 </div>
 </div>
 <a id="a456320e2c4ca160f5d1c86b03322a96f" name="a456320e2c4ca160f5d1c86b03322a96f"></a>
@@ -228,7 +219,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">total += rate[m++] = (X);</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00189">189</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00135">135</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
 
 </div>
 </div>
@@ -248,7 +239,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(t + #X + <span class="stringliteral">&quot;: &quot;</span> + std::to_string(params.X) + <span class="stringliteral">&quot;\n&quot;</span>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00190">190</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00136">136</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +259,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">(t + #X + <span class="stringliteral">&quot;: &quot;</span> + std::to_string(state.X) + <span class="stringliteral">&quot;\n&quot;</span>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00191">191</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="popul__proc_8h_source.html#l00137">137</a> of file <a class="el" href="popul__proc_8h_source.html">popul_proc.h</a>.</p>
 
 </div>
 </div>

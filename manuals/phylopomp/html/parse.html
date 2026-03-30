@@ -51,39 +51,13 @@ See Details for specifics.</p>
 
 <h3>Details</h3>
 
-<p><code>parse_newick</code> can only handle a subset of the full Newick specification.
-In particular, labels are assumed to be of the form &lt;TYPE&gt;_&lt;DEME&gt;_&lt;LABEL&gt;,
-i.e., each label has three parts, separated by underscores (&lsquo;_&rsquo;).
-The parts are as follows.
+<p><code>parse_newick</code> parses a string containing information in a (possibly extended) Newick format and returns a <span class="pkg">phylopomp</span> genealogy.
 </p>
-
-<ul>
-<li><p> TYPE must be a single character from among the following: &lsquo;b&rsquo;, &lsquo;g&rsquo;, &lsquo;m&rsquo;, &lsquo;o&rsquo;.
+<p>The extension allows metadata (enclosed by square brackets).
+It ignores metadata unless they are specifically flagged as PhyloPOMP metadata, i.e.: <code>[&amp;&amp;PhyloPOMP ...]</code>.
+PhyloPOMP metadata can be used to encode the node type (i.e., <code>type=sample</code>, <code>type=extant</code>, <code>type=node</code>) and/or the deme (given as an integer, e.g., <code>deme=1</code>).
+See below for more information.
 </p>
-
-<ul>
-<li> <p>&lsquo;b&rsquo; signifies a sample.
-</p>
-</li>
-<li> <p>&lsquo;g&rsquo; signifies an internal node.
-</p>
-</li>
-<li> <p>&lsquo;m&rsquo; signifies a root.
-</p>
-</li>
-<li> <p>&lsquo;o&rsquo; indicates an extant lineage.
-</p>
-</li></ul>
-
-</li>
-<li><p> DEME must be a non-negative integer, specifying the deme in which the branch resides.
-If deme information is not present, use 0.
-</p>
-</li>
-<li><p> LABEL is ignored and may be left out.
-</p>
-</li></ul>
-
 
 
 <h3>Value</h3>
@@ -91,7 +65,50 @@ If deme information is not present, use 0.
 <p>An object of class &ldquo;gpgen&rdquo;.
 </p>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.16.2.0 <a href="00Index.html">Index</a>]</div></main>
+
+<h3>Metadata tags</h3>
+
+<p>Metadata tags are of the form
+</p>
+<pre>[&amp;&amp;PhyloPOMP type={node|sample|extant|root|migration|branch} deme=&lt;integer&gt;].</pre>
+<p>Types &lsquo;branch&rsquo;, &lsquo;node&rsquo;, &lsquo;migration&rsquo;, and &lsquo;root&rsquo; are equivalent on input to <code><a href="../../phylopomp/help/parse_newick.html">parse_newick</a></code>;
+&lsquo;type=node&rsquo; is used in output of <code><a href="../../phylopomp/help/newick.html">newick</a></code>.
+Note that <code>0</code> is reserved for the &ldquo;undeme&rdquo;, i.e., unspecified or unknown deme.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>simulate("SIIR",time=0.3,sigma12=1) -&gt; x
+
+x |&gt; plot(prune=FALSE,obscure=FALSE)
+
+x |&gt; newick(prune=FALSE,obscure=FALSE)
+
+x |&gt; newick()
+
+x |&gt; newick(extended=FALSE)
+
+x |&gt;
+  newick() |&gt;
+  parse_newick(t0=0)
+
+x |&gt;
+  newick(prune=FALSE,obscure=FALSE) |&gt;
+  parse_newick(t0=0)
+
+x |&gt;
+  newick(extended=FALSE) |&gt;
+  parse_newick(t0=0)
+
+"" |&gt; parse_newick() |&gt; newick()
+
+";" |&gt; parse_newick() |&gt; newick()
+
+"((:1,:1):1,:1):1;" |&gt; parse_newick() |&gt; newick()
+</code></pre>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

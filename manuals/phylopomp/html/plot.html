@@ -1,0 +1,223 @@
+<!DOCTYPE html><html><head><title>R: Fancy tree plotter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script>
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>plot {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Fancy tree plotter</h2>
+
+<h3>Description</h3>
+
+<p>Plots a genealogical tree.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>## S3 method for class 'gpgen'
+plot(
+  x,
+  ...,
+  prune = TRUE,
+  obscure = TRUE,
+  points = FALSE,
+  ladderize = TRUE,
+  palette = scales::hue_pal(l = 30, h = c(220, 580))
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table role = "presentation">
+<tr><td><code id="x">x</code></td>
+<td>
+<p>object of class &lsquo;gpgen&rsquo;</p>
+</td></tr>
+<tr><td><code id="...">...</code></td>
+<td>
+<p><code>plot</code> passes extra arguments to <code><a href="../../ggplot2/help/theme.html">theme</a></code>.</p>
+</td></tr>
+<tr><td><code id="prune">prune</code></td>
+<td>
+<p>logical; prune the genealogy?</p>
+</td></tr>
+<tr><td><code id="obscure">obscure</code></td>
+<td>
+<p>logical; obscure the demes?</p>
+</td></tr>
+<tr><td><code id="points">points</code></td>
+<td>
+<p>logical; show nodes and tips?</p>
+</td></tr>
+<tr><td><code id="ladderize">ladderize</code></td>
+<td>
+<p>logical; ladderize?</p>
+</td></tr>
+<tr><td><code id="palette">palette</code></td>
+<td>
+<p>color palette for indicating demes.
+This can be furnished either as a function or a vector of colors.
+If this is a function, it should take a single integer argument, the number of colors required.
+If it is a vector, it should have at least as many elements as there are demes in the genealogy.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Tree-plotting in <span class="pkg">phylopomp</span> depends on the <span class="pkg">ggtree</span> package.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A printable <code>ggplot</code> object.
+</p>
+
+
+<h3>References</h3>
+
+<p>G. Yu, D. K. Smith, H. Zhu, Y. Guan, T. T. Y. Lam. <span class="pkg">ggtree</span>: an <span class="rlang"><b>R</b></span> package for visualization and annotation of phylogenetic trees with their covariates and other associated data. <em>Methods in Ecology and Evolution</em> <b>8</b>, 28&ndash;36, 2017. <a href="https://doi.org/10.1111/2041-210X.12628">doi:10.1111/2041-210X.12628</a>.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>simulate("SEIR",Beta=2,sigma=2,gamma=1,psi=2,S0=1000,I0=5,time=5) |&gt;
+  simulate(Beta=5,gamma=2,time=10,psi=3) |&gt;
+  plot()
+
+runSEIR(Beta=3,gamma=1,psi=2,S0=20,I0=5,R0=0,time=5,t0=-1) |&gt;
+  plot(points=TRUE,obscure=FALSE)
+
+runSEIR(Beta=3,gamma=0.1,psi=0.2,S0=100,I0=5,R0=0,time=2,t0=0) -&gt; x
+plot_grid(plotlist=list(plot(x,points=TRUE),diagram(x)),
+  ncol=1,rel_heights=c(4,1))
+
+simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt; plot(obscure=FALSE)
+
+simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt;
+  lineages(obscure=FALSE) |&gt;
+  plot()
+simulate("LBDP",time=4) |&gt; plot(points=TRUE)
+
+simulate("LBDP",lambda=2,mu=1,psi=3,n0=1,time=1) |&gt;
+  simulate(time=10,lambda=1) |&gt;
+  plot()
+
+simulate("LBDP",time=4) |&gt;
+  lineages() |&gt;
+  plot()
+
+runS2I2R2(
+  time=30,
+  iota2=0.01,Beta12=0.1,
+  I1_0=0,I2_0=0,
+  psi1=10,psi2=10,
+  omega1=0.2,
+  b2=0.02,d2=0.02
+) |&gt;
+  freeze(seed=847110120) -&gt; x
+
+plot_grid(
+  x |&gt;
+    plot(
+      obscure=FALSE,
+      palette=c("#000000ff","#440154ff","#21908cff","#ccccccff"),
+      legend.position="inside",
+      legend.position.inside=c(0.7,0.7)
+    ),
+  x |&gt;
+    lineages(obscure=FALSE) |&gt;
+    plot(
+      palette=c("#000000ff","#440154ff","#21908cff","#ccccccff"),
+      legend.position="none"
+    ),
+  ncol=1,
+  align="hv",
+  axis="b"
+)
+## Not run: 
+
+  library(ggplot2)
+  library(phylopomp)
+  times &lt;- seq(from=0,to=8,by=0.1)[-1]
+
+  png_files &lt;- sprintf(
+    file.path(tempdir(),"frame%05d.png"),
+    seq_len(2*length(times))
+  )
+
+  pb &lt;- utils::txtProgressBar(0,2*length(times),0,style=3)
+  x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,omega=0.5,
+    psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,S0=200,I1_0=3,I2_0=2)
+
+  img &lt;- 1
+  for (k in seq.int(from=1,to=length(times),by=1)) {
+    x &lt;- simulate(x,time=times[k])
+    ggsave(
+      filename=png_files[img],
+      plot=plot(
+        x, t0=0, time=max(times),
+        points=FALSE, prune=FALSE, obscure=FALSE,
+        palette=c("#ffcb05","#dddddd"),
+        axis.line=element_line(color="white"),
+        axis.ticks=element_line(color="white"),
+        axis.text=element_blank(),
+        plot.background=element_rect(fill=NA,color=NA),
+        panel.background=element_rect(fill=NA,color=NA)
+      ),
+      device="png",dpi=300,
+      height=2,width=3,units="in"
+    )
+    setTxtProgressBar(pb,img)
+    img &lt;- img+1
+  }
+
+  for (k in seq.int(from=length(times),to=1,by=-1)) {
+    x &lt;- curtail(x,time=times[k])
+    ggsave(
+      filename=png_files[img],
+      plot=plot(
+        x, t0=0, time=max(times),
+        points=FALSE, prune=FALSE, obscure=FALSE,
+        palette=c("#ffcb05","#dddddd"),
+        axis.line=element_line(color="white"),
+        axis.ticks=element_line(color="white"),
+        axis.text=element_blank(),
+        plot.background=element_rect(fill=NA,color=NA),
+        panel.background=element_rect(fill=NA,color=NA)
+      ),
+      device="png",dpi=300,
+      height=2,width=3,units="in"
+    )
+    setTxtProgressBar(pb,img)
+    img &lt;- img+1
+  }
+
+  library(gifski)
+  gif_file &lt;- "movie1.gif"
+  gifski(png_files,gif_file,delay=0.08,loop=TRUE)
+  unlink(png_files)
+
+
+## End(Not run)
+</code></pre>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

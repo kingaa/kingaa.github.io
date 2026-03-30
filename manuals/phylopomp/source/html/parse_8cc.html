@@ -105,71 +105,57 @@ $(function(){initNavTree('parse_8cc.html',''); initResizable(true); });
 <div class="textblock"><code>#include &quot;<a class="el" href="genealogy_8h_source.html">genealogy.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="generics_8h_source.html">generics.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="internal_8h_source.html">internal.h</a>&quot;</code><br />
+<code>#include &lt;regex&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for parse.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse_8cc__incl.png" border="0" usemap="#asrc_2parse_8cc" alt=""/></div>
 <map name="asrc_2parse_8cc" id="asrc_2parse_8cc">
-<area shape="rect" title=" " alt="" coords="999,5,1097,31"/>
-<area shape="rect" href="genealogy_8h.html" title=" " alt="" coords="741,79,841,104"/>
-<area shape="poly" title=" " alt="" coords="1007,33,846,78,845,72,1006,28"/>
-<area shape="rect" href="internal_8h.html" title=" " alt="" coords="794,445,878,471"/>
-<area shape="poly" title=" " alt="" coords="1051,31,1051,163,1051,313,1046,340,1035,364,1017,385,995,403,944,430,893,447,891,442,942,425,992,398,1013,381,1030,361,1041,339,1045,312,1045,163,1045,31"/>
-<area shape="rect" href="generics_8h.html" title=" " alt="" coords="1086,299,1175,324"/>
-<area shape="poly" title=" " alt="" coords="1054,30,1069,78,1127,285,1122,286,1064,79,1049,31"/>
-<area shape="rect" title=" " alt="" coords="396,445,455,471"/>
-<area shape="poly" title=" " alt="" coords="740,96,623,99,474,107,332,125,276,138,235,154,214,169,202,184,181,227,156,274,140,316,138,336,141,356,149,375,165,396,188,417,212,429,235,436,260,438,315,437,347,438,383,443,382,448,347,443,315,442,259,443,234,441,210,434,185,421,161,399,145,378,135,357,132,336,135,315,151,272,176,224,198,181,211,165,232,150,274,133,331,120,474,102,622,93,740,90"/>
-<area shape="rect" title=" " alt="" coords="305,445,372,471"/>
-<area shape="poly" title=" " alt="" coords="741,95,640,98,505,106,352,124,274,137,199,155,130,165,68,171,44,177,25,189,12,208,8,237,8,313,10,334,16,353,39,385,73,409,115,428,161,440,208,448,291,454,291,460,207,453,160,445,113,433,70,414,35,389,11,355,5,335,3,313,3,236,7,206,21,185,42,172,67,165,130,159,198,149,273,132,351,119,504,101,640,92,741,90"/>
-<area shape="rect" title=" " alt="" coords="899,225,959,251"/>
-<area shape="poly" title=" " alt="" coords="829,102,869,121,888,134,905,150,921,180,929,211,924,212,916,182,901,154,885,138,866,125,827,107"/>
-<area shape="rect" title=" " alt="" coords="805,152,891,177"/>
-<area shape="poly" title=" " alt="" coords="802,103,832,139,828,143,798,106"/>
-<area shape="rect" href="nodeseq_8h.html" title=" " alt="" coords="246,152,335,177"/>
-<area shape="poly" title=" " alt="" coords="741,102,349,158,348,152,740,97"/>
-<area shape="poly" title=" " alt="" coords="842,102,892,119,943,146,966,164,984,185,996,209,1000,236,1000,313,997,336,988,357,975,377,958,394,920,422,881,442,879,437,917,417,955,390,971,373,983,355,992,335,995,312,995,237,991,211,979,188,962,168,940,151,890,124,840,107"/>
-<area shape="rect" href="inventory_8h.html" title=" " alt="" coords="686,152,781,177"/>
-<area shape="poly" title=" " alt="" coords="783,106,753,143,749,139,779,103"/>
-<area shape="poly" title=" " alt="" coords="261,180,228,199,213,211,201,227,175,272,160,314,159,334,162,354,170,374,185,396,205,416,225,429,246,435,268,437,320,437,383,443,382,448,320,442,268,443,245,440,223,434,201,420,181,399,166,377,157,355,154,334,155,313,170,270,196,224,209,208,225,194,259,175"/>
-<area shape="poly" title=" " alt="" coords="246,173,218,179,189,189,162,205,141,227,117,271,108,312,110,332,116,352,141,396,155,411,172,424,211,442,253,451,291,455,291,460,252,456,209,447,169,429,152,415,137,399,111,355,105,333,103,312,112,269,137,224,159,201,187,184,217,174,245,168"/>
-<area shape="rect" title=" " alt="" coords="211,225,253,251"/>
-<area shape="poly" title=" " alt="" coords="283,179,252,217,248,213,279,176"/>
-<area shape="rect" title=" " alt="" coords="195,372,319,397"/>
-<area shape="poly" title=" " alt="" coords="292,178,264,359,259,358,286,177"/>
-<area shape="rect" href="node_8h.html" title=" " alt="" coords="533,225,600,251"/>
-<area shape="poly" title=" " alt="" coords="336,175,521,222,520,227,334,180"/>
-<area shape="poly" title=" " alt="" coords="336,164,394,167,465,177,541,194,613,223,649,244,684,270,744,328,792,386,824,432,819,435,787,390,740,332,680,274,646,249,611,228,539,200,464,182,393,173,336,169"/>
-<area shape="poly" title=" " alt="" coords="558,253,518,300,473,372,440,434,435,432,468,370,514,297,553,249"/>
-<area shape="poly" title=" " alt="" coords="554,253,498,301,421,375,360,437,357,434,417,371,494,297,551,249"/>
-<area shape="rect" href="ball_8h.html" title=" " alt="" coords="613,372,672,397"/>
-<area shape="poly" title=" " alt="" coords="581,249,601,270,620,297,633,328,641,358,635,359,628,330,615,300,597,274,577,253"/>
-<area shape="poly" title=" " alt="" coords="584,249,644,297,813,434,810,438,641,301,580,253"/>
-<area shape="rect" href="pocket_8h.html" title=" " alt="" coords="528,299,605,324"/>
-<area shape="poly" title=" " alt="" coords="569,251,569,285,564,285,564,251"/>
-<area shape="poly" title=" " alt="" coords="614,398,469,445,467,440,612,393"/>
-<area shape="poly" title=" " alt="" coords="614,397,602,400,386,448,385,442,601,395,612,392"/>
-<area shape="poly" title=" " alt="" coords="673,394,793,438,791,443,671,399"/>
-<area shape="rect" title=" " alt="" coords="676,519,719,544"/>
-<area shape="poly" title=" " alt="" coords="815,473,732,515,730,510,813,468"/>
-<area shape="rect" title=" " alt="" coords="743,519,820,544"/>
-<area shape="poly" title=" " alt="" coords="829,473,801,509,796,506,825,469"/>
-<area shape="rect" title=" " alt="" coords="844,519,935,544"/>
-<area shape="poly" title=" " alt="" coords="847,469,875,506,870,509,843,473"/>
-<area shape="rect" title=" " alt="" coords="959,519,1033,544"/>
-<area shape="poly" title=" " alt="" coords="863,468,958,511,956,515,861,473"/>
-<area shape="poly" title=" " alt="" coords="557,326,448,437,444,434,553,323"/>
-<area shape="poly" title=" " alt="" coords="550,326,370,440,367,435,547,322"/>
-<area shape="poly" title=" " alt="" coords="528,324,321,371,320,366,527,319"/>
-<area shape="poly" title=" " alt="" coords="581,322,622,361,618,364,577,326"/>
-<area shape="poly" title=" " alt="" coords="591,322,685,370,806,436,803,441,683,374,589,327"/>
-<area shape="rect" title=" " alt="" coords="547,372,589,397"/>
-<area shape="poly" title=" " alt="" coords="570,324,570,358,565,359,564,324"/>
-<area shape="poly" title=" " alt="" coords="766,175,887,219,886,224,764,180"/>
-<area shape="poly" title=" " alt="" coords="708,180,607,222,605,217,706,175"/>
-<area shape="poly" title=" " alt="" coords="731,179,655,360,650,358,726,177"/>
-<area shape="poly" title=" " alt="" coords="743,176,787,255,812,312,832,371,837,402,839,431,834,431,832,403,827,373,807,314,782,258,738,179"/>
-<area shape="poly" title=" " alt="" coords="721,180,592,292,589,287,718,176"/>
-<area shape="poly" title=" " alt="" coords="1127,326,1105,362,1088,383,1068,400,1025,423,978,439,933,449,892,455,891,450,932,444,977,434,1023,418,1065,395,1084,379,1101,359,1123,323"/>
+<area shape="rect" title=" " alt="" coords="457,5,556,31"/>
+<area shape="rect" href="genealogy_8h.html" title=" " alt="" coords="177,79,277,104"/>
+<area shape="poly" title=" " alt="" coords="462,33,286,78,285,73,461,28"/>
+<area shape="rect" title=" " alt="" coords="345,372,469,397"/>
+<area shape="poly" title=" " alt="" coords="500,32,467,87,453,124,447,164,447,239,444,273,437,306,419,360,414,358,432,304,439,272,441,239,441,163,447,123,462,85,495,30"/>
+<area shape="rect" href="internal_8h.html" title=" " alt="" coords="182,445,266,471"/>
+<area shape="poly" title=" " alt="" coords="509,31,509,163,509,313,507,360,499,380,482,399,447,418,394,433,280,453,279,448,393,428,445,413,478,395,494,377,502,359,504,313,504,163,504,31"/>
+<area shape="rect" href="generics_8h.html" title=" " alt="" coords="545,299,634,324"/>
+<area shape="poly" title=" " alt="" coords="513,30,528,78,585,285,580,286,523,79,508,31"/>
+<area shape="rect" title=" " alt="" coords="595,79,653,104"/>
+<area shape="poly" title=" " alt="" coords="527,28,594,69,592,74,524,33"/>
+<area shape="rect" title=" " alt="" coords="98,152,158,177"/>
+<area shape="poly" title=" " alt="" coords="212,106,157,146,154,142,209,102"/>
+<area shape="rect" title=" " alt="" coords="295,152,382,177"/>
+<area shape="poly" title=" " alt="" coords="246,102,310,142,307,147,243,106"/>
+<area shape="rect" href="nodeseq_8h.html" title=" " alt="" coords="182,152,271,177"/>
+<area shape="poly" title=" " alt="" coords="229,104,229,138,224,138,224,104"/>
+<area shape="poly" title=" " alt="" coords="177,105,123,121,68,147,44,165,25,185,13,209,8,237,8,312,12,339,24,363,42,383,64,400,117,426,169,443,168,448,115,431,61,404,38,387,20,366,7,341,3,313,3,236,7,207,21,182,40,161,65,143,121,116,176,100"/>
+<area shape="rect" title=" " alt="" coords="276,225,319,251"/>
+<area shape="poly" title=" " alt="" coords="240,176,278,214,274,218,236,180"/>
+<area shape="poly" title=" " alt="" coords="258,175,296,195,333,223,358,257,378,293,402,358,397,360,373,295,353,260,329,227,293,199,256,180"/>
+<area shape="rect" href="node_8h.html" title=" " alt="" coords="185,225,252,251"/>
+<area shape="poly" title=" " alt="" coords="228,178,224,212,219,212,223,177"/>
+<area shape="poly" title=" " alt="" coords="217,179,175,227,151,264,136,295,128,328,123,372,120,385,122,396,144,420,173,438,170,442,141,425,118,399,115,385,117,372,123,327,131,293,147,261,171,224,213,176"/>
+<area shape="rect" href="ball_8h.html" title=" " alt="" coords="261,372,320,397"/>
+<area shape="poly" title=" " alt="" coords="233,249,253,270,272,297,283,328,290,358,285,359,278,330,267,300,249,274,229,253"/>
+<area shape="poly" title=" " alt="" coords="206,253,177,279,147,315,136,335,129,355,128,376,134,396,154,420,181,437,178,441,151,424,130,399,123,377,123,354,131,333,142,312,173,275,202,249"/>
+<area shape="rect" href="pocket_8h.html" title=" " alt="" coords="180,299,257,324"/>
+<area shape="poly" title=" " alt="" coords="221,251,221,285,216,285,216,251"/>
+<area shape="poly" title=" " alt="" coords="282,399,246,437,242,433,278,396"/>
+<area shape="rect" title=" " alt="" coords="65,519,108,544"/>
+<area shape="poly" title=" " alt="" coords="203,473,121,515,119,510,201,468"/>
+<area shape="rect" title=" " alt="" coords="132,519,209,544"/>
+<area shape="poly" title=" " alt="" coords="217,473,190,509,185,506,213,469"/>
+<area shape="rect" title=" " alt="" coords="233,519,324,544"/>
+<area shape="poly" title=" " alt="" coords="235,469,264,506,259,509,231,473"/>
+<area shape="rect" title=" " alt="" coords="348,519,423,544"/>
+<area shape="poly" title=" " alt="" coords="251,468,348,511,345,515,249,473"/>
+<area shape="poly" title=" " alt="" coords="250,322,364,364,362,369,248,327"/>
+<area shape="poly" title=" " alt="" coords="232,322,271,360,267,364,229,326"/>
+<area shape="poly" title=" " alt="" coords="222,324,226,432,220,432,216,325"/>
+<area shape="rect" title=" " alt="" coords="144,372,187,397"/>
+<area shape="poly" title=" " alt="" coords="212,326,184,363,180,360,208,323"/>
+<area shape="poly" title=" " alt="" coords="586,325,564,362,547,383,527,400,465,429,399,447,335,456,280,460,280,455,334,451,398,442,463,424,524,395,544,379,560,359,582,323"/>
 </map>
 </div>
 </div>
@@ -177,6 +163,13 @@ Include dependency graph for parse.cc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:af9f4412e2034dac7481726600a73ad83" id="r_af9f4412e2034dac7481726600a73ad83"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9f4412e2034dac7481726600a73ad83">scan_slate</a> (const string_t &amp;s)</td></tr>
+<tr class="separator:af9f4412e2034dac7481726600a73ad83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f57e6bcf7a8592adad68e9bc8d27c64" id="r_a4f57e6bcf7a8592adad68e9bc8d27c64"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f57e6bcf7a8592adad68e9bc8d27c64">scan_name</a> (const string_t &amp;s)</td></tr>
+<tr class="separator:a4f57e6bcf7a8592adad68e9bc8d27c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c75a1a964eb598db181b5148f979e7" id="r_a01c75a1a964eb598db181b5148f979e7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01c75a1a964eb598db181b5148f979e7">scan_color</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a01c75a1a964eb598db181b5148f979e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">simple function for scanning the color  <br /></td></tr>
+<tr class="separator:a01c75a1a964eb598db181b5148f979e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a755d1a27c545574819d2e2cdfd0cdca1" id="r_a755d1a27c545574819d2e2cdfd0cdca1"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a755d1a27c545574819d2e2cdfd0cdca1">parse_newick</a> (SEXP X, SEXP T0, SEXP Tf)</td></tr>
 <tr class="separator:a755d1a27c545574819d2e2cdfd0cdca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -206,113 +199,333 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>A parser for Newick code. Returns a genealogy in the phylopomp format. </p>
 
-<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00010">10</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                               {</div>
-<div class="line"><span class="lineno">   11</span>    PROTECT(X = AS_CHARACTER(X));</div>
-<div class="line"><span class="lineno">   12</span>    PROTECT(T0 = AS_NUMERIC(T0));</div>
-<div class="line"><span class="lineno">   13</span>    PROTECT(Tf = AS_NUMERIC(Tf));</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordtype">double</span> t0 = *REAL(T0);</div>
-<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">double</span> tf = *REAL(Tf);</div>
-<div class="line"><span class="lineno">   16</span>    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
-<div class="line"><span class="lineno">   17</span>    std::string x = CHAR(STRING_ELT(X,0));</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> G(t0);</div>
-<div class="line"><span class="lineno">   19</span>    G.parse(x,t0);</div>
-<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">if</span> (!ISNA(tf)) {</div>
-<div class="line"><span class="lineno">   21</span>      G.curtail(tf,t0);</div>
-<div class="line"><span class="lineno">   22</span>    }</div>
-<div class="line"><span class="lineno">   23</span>    G.trace_lineages();</div>
-<div class="line"><span class="lineno">   24</span>    UNPROTECT(3);</div>
-<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(G);</div>
-<div class="line"><span class="lineno">   26</span>  }</div>
-<div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00022">genealogy.h:22</a></div></div>
-<div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition</b> <a href="generics_8h_source.html#l00028">generics.h:28</a></div></div>
+<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00236">236</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>                                               {</div>
+<div class="line"><span class="lineno">  237</span>    PROTECT(X = AS_CHARACTER(X));</div>
+<div class="line"><span class="lineno">  238</span>    PROTECT(T0 = AS_NUMERIC(T0));</div>
+<div class="line"><span class="lineno">  239</span>    PROTECT(Tf = AS_NUMERIC(Tf));</div>
+<div class="line"><span class="lineno">  240</span>    <span class="keywordtype">double</span> t0 = *REAL(T0);</div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordtype">double</span> tf = *REAL(Tf);</div>
+<div class="line"><span class="lineno">  242</span>    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
+<div class="line"><span class="lineno">  243</span>    string_t x = CHAR(STRING_ELT(X,0));</div>
+<div class="line"><span class="lineno">  244</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> G(t0);</div>
+<div class="line"><span class="lineno">  245</span>    G.parse(x);</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">if</span> (!ISNA(tf)) {</div>
+<div class="line"><span class="lineno">  247</span>      G.curtail(tf,t0);</div>
+<div class="line"><span class="lineno">  248</span>    }</div>
+<div class="line"><span class="lineno">  249</span>    G.trace_lineages();</div>
+<div class="line"><span class="lineno">  250</span>    UNPROTECT(3);</div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(G);</div>
+<div class="line"><span class="lineno">  252</span>  }</div>
+<div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00019">genealogy.h:19</a></div></div>
+<div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition</b> <a href="generics_8h_source.html#l00033">generics.h:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="parse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph.png" border="0" usemap="#aparse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph" alt=""/></div>
 <map name="aparse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph" id="aparse_8cc_a755d1a27c545574819d2e2cdfd0cdca1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,887,116,912"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="185,356,335,381"/>
-<area shape="poly" title=" " alt="" coords="64,885,247,394,252,395,69,887"/>
-<area shape="rect" href="classgenealogy__t.html#ad7adf4e2c9fbc235a659128f98237860" title="Parse a Newick string and create the indicated genealogy." alt="" coords="187,861,333,887"/>
-<area shape="poly" title=" " alt="" coords="116,890,173,882,174,888,117,895"/>
-<area shape="rect" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="231,960,289,985"/>
-<area shape="poly" title=" " alt="" coords="86,910,165,946,218,961,216,967,163,951,84,914"/>
-<area shape="rect" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce" title=" " alt="" coords="164,911,356,936"/>
-<area shape="poly" title=" " alt="" coords="117,903,151,907,150,913,116,909"/>
-<area shape="rect" href="classball__t.html#af54ab028113130c4760856b06a31ad8b" title="a child is the owner of a green ball" alt="" coords="451,5,548,31"/>
-<area shape="poly" title=" " alt="" coords="260,355,271,298,295,212,313,166,337,120,367,77,402,40,419,29,437,22,438,27,421,34,406,44,371,80,342,122,318,168,300,214,276,299,266,356"/>
-<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="448,55,551,80"/>
-<area shape="poly" title=" " alt="" coords="261,355,275,305,301,233,320,194,343,156,370,120,402,89,433,73,436,78,406,94,374,124,347,159,324,197,306,235,280,307,267,356"/>
-<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="444,104,555,129"/>
-<area shape="poly" title=" " alt="" coords="264,355,281,314,310,259,351,199,375,171,402,147,429,131,432,136,406,151,379,175,355,202,315,261,286,317,269,357"/>
-<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="407,305,592,331"/>
-<area shape="poly" title=" " alt="" coords="320,353,425,331,426,336,322,358"/>
-<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="894,241,1037,267"/>
-<area shape="poly" title=" " alt="" coords="269,354,289,328,320,296,359,265,403,241,469,221,538,209,608,205,677,205,803,217,902,236,901,241,802,223,676,210,608,210,539,215,470,226,405,246,362,269,324,300,293,332,273,358"/>
-<area shape="rect" href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1" title="retrieve the first ball" alt="" coords="429,256,570,281"/>
-<area shape="poly" title=" " alt="" coords="280,354,334,322,403,290,425,283,427,288,405,295,337,327,283,358"/>
-<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="894,659,1037,684"/>
-<area shape="poly" title=" " alt="" coords="336,377,439,398,566,432,634,455,701,482,767,513,829,549,894,599,944,647,941,651,891,603,827,554,765,518,699,486,632,460,564,437,438,403,335,382"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="912,709,1019,735"/>
-<area shape="poly" title=" " alt="" coords="270,380,288,414,318,459,357,504,380,524,405,541,435,555,464,565,519,572,570,568,620,560,670,552,720,551,773,563,801,575,830,593,842,605,850,618,856,644,861,669,867,681,878,693,901,707,898,712,874,697,863,685,856,671,850,645,845,620,838,608,826,597,798,580,771,568,720,556,670,557,621,565,571,574,519,577,463,570,433,560,403,546,377,529,353,508,313,462,284,417,265,383"/>
-<area shape="rect" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9" title="retrieve the last ball" alt="" coords="429,457,569,483"/>
-<area shape="poly" title=" " alt="" coords="286,379,405,436,445,450,443,455,403,440,284,384"/>
-<area shape="rect" href="classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c" title=" " alt="" coords="643,356,828,381"/>
-<area shape="poly" title=" " alt="" coords="336,366,629,366,629,371,336,371"/>
-<area shape="rect" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14" title="order nodes in order of increasing time" alt="" coords="438,709,561,735"/>
-<area shape="poly" title=" " alt="" coords="269,380,317,491,357,566,406,638,438,671,471,699,467,703,434,675,402,641,353,569,312,493,264,383"/>
-<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="670,608,801,633"/>
-<area shape="poly" title=" " alt="" coords="268,381,283,422,311,480,351,539,377,565,405,586,435,602,466,613,533,627,598,631,656,629,656,634,598,636,532,632,465,618,433,606,403,591,373,569,347,542,306,482,278,424,263,382"/>
-<area shape="rect" href="classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="1103,533,1243,559"/>
-<area shape="poly" title=" " alt="" coords="266,355,284,322,314,280,354,238,377,220,403,205,464,184,545,169,637,160,736,158,834,163,924,176,1001,197,1032,210,1056,227,1088,258,1113,295,1133,336,1148,378,1166,458,1173,519,1168,520,1161,459,1143,379,1128,338,1109,298,1084,262,1053,231,1029,215,999,202,923,181,833,168,736,163,638,165,545,174,465,189,405,210,380,224,358,242,318,284,289,325,270,357"/>
-<area shape="rect" href="classgenealogy__t.html#a90f523b2b557d1a135851a3fc0999a40" title="view/set zero time." alt="" coords="415,507,583,532"/>
-<area shape="poly" title=" " alt="" coords="274,380,327,434,364,465,405,492,423,500,421,505,403,496,361,469,323,438,270,383"/>
-<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="666,277,805,303"/>
-<area shape="poly" title=" " alt="" coords="592,304,652,297,652,302,593,310"/>
-<area shape="poly" title=" " alt="" coords="804,277,880,265,881,270,805,282"/>
-<area shape="poly" title=" " alt="" coords="796,379,830,399,857,427,881,459,919,527,945,593,961,645,955,646,940,595,915,530,877,462,853,430,826,403,793,384"/>
-<area shape="rect" href="classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db" title="check the size of the genealogy (to prevent memory exhaustion)." alt="" coords="891,349,1039,389"/>
-<area shape="poly" title=" " alt="" coords="828,366,877,366,877,371,828,371"/>
-<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="888,861,1043,887"/>
-<area shape="poly" title=" " alt="" coords="745,381,782,470,831,594,852,671,861,704,878,745,912,802,947,849,943,852,908,805,874,747,856,706,847,673,825,596,777,472,740,383"/>
-<area shape="rect" href="classnodeseq__t.html#a642a9a6799ed5ee49e620a95a3f884b7" title=" " alt="" coords="658,709,813,735"/>
-<area shape="poly" title=" " alt="" coords="561,719,644,719,644,725,561,725"/>
-<area shape="poly" title=" " alt="" coords="793,707,893,684,894,690,795,712"/>
-<area shape="poly" title=" " alt="" coords="813,719,898,719,898,725,813,725"/>
-<area shape="poly" title=" " alt="" coords="759,631,811,661,877,693,904,703,902,708,875,698,809,666,756,636"/>
-<area shape="poly" title=" " alt="" coords="265,860,282,825,312,778,352,731,376,711,403,694,441,681,493,671,622,661,760,661,880,664,880,669,760,666,622,667,494,677,443,686,405,699,379,715,356,735,316,781,287,827,269,862"/>
-<area shape="poly" title=" " alt="" coords="278,859,333,826,367,809,403,795,466,778,520,767,613,758,708,755,828,743,898,732,899,737,828,749,708,761,614,764,521,772,467,783,405,801,369,814,335,831,281,864"/>
-<area shape="poly" title=" " alt="" coords="329,884,357,897,373,910,382,925,390,937,405,948,446,957,502,959,568,954,640,944,785,916,903,887,904,893,786,921,641,949,568,959,502,964,446,962,403,952,386,941,377,927,369,914,355,902,327,889"/>
-<area shape="poly" title=" " alt="" coords="272,859,325,808,362,778,403,752,435,737,437,742,405,756,366,782,329,812,275,863"/>
-<area shape="rect" href="classgenealogy__t.html#a1a6d8c8dae17cf7508de924e726149fe" title=" " alt="" coords="404,811,595,836"/>
-<area shape="poly" title=" " alt="" coords="320,859,425,836,426,842,322,864"/>
-<area shape="rect" href="classgenealogy__t.html#a3c327236d525792de4f186a7ca7e19f0" title=" " alt="" coords="650,1013,821,1039"/>
-<area shape="poly" title=" " alt="" coords="335,884,358,897,369,909,376,922,382,947,388,971,394,982,406,992,432,1007,461,1019,521,1034,582,1039,639,1037,639,1042,582,1044,520,1039,459,1024,430,1012,402,996,390,985,383,973,377,948,371,924,365,912,354,901,332,889"/>
-<area shape="rect" href="classgenealogy__t.html#a7d834a38973835bd77bf8757cfd8bc06" title="Scan the Newick string and create the indicated node." alt="" coords="646,861,825,887"/>
-<area shape="poly" title=" " alt="" coords="334,871,632,871,632,877,334,877"/>
-<area shape="rect" href="classgenealogy__t.html#abdf617682e279581591183a9530aa2cd" title=" " alt="" coords="413,912,586,937"/>
-<area shape="poly" title=" " alt="" coords="292,884,399,910,398,915,291,889"/>
-<area shape="rect" href="classgenealogy__t.html#a17f6f8bc2a6469c93d027d3a2f53c714" title="clean up" alt="" coords="663,811,808,836"/>
-<area shape="poly" title=" " alt="" coords="595,821,649,821,649,826,595,826"/>
-<area shape="poly" title=" " alt="" coords="793,1011,826,992,843,969,849,946,856,921,874,897,883,891,886,895,878,901,861,924,854,947,848,971,830,996,796,1016"/>
-<area shape="rect" href="classgenealogy__t.html#a6204cbcbb8aff88e4b25753dc380a00b" title=" " alt="" coords="876,911,1055,936"/>
-<area shape="poly" title=" " alt="" coords="776,1011,827,992,929,940,931,945,829,996,778,1016"/>
-<area shape="poly" title=" " alt="" coords="1037,908,1053,897,1085,860,1110,818,1130,772,1145,726,1162,638,1168,572,1173,573,1167,639,1150,727,1135,774,1115,820,1089,863,1056,901,1040,913"/>
-<area shape="poly" title=" " alt="" coords="806,859,826,845,840,827,847,809,849,772,852,733,859,714,874,695,881,689,885,693,878,699,864,717,857,735,855,772,852,811,845,830,830,849,809,863"/>
-<area shape="poly" title=" " alt="" coords="825,871,874,871,874,877,825,877"/>
-<area shape="poly" title=" " alt="" coords="796,884,893,905,892,910,795,889"/>
-<area shape="poly" title=" " alt="" coords="467,914,346,886,348,881,468,909"/>
-<area shape="poly" title=" " alt="" coords="559,909,662,887,663,892,560,914"/>
-<area shape="rect" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27" title=" " alt="" coords="407,1064,592,1089"/>
-<area shape="poly" title=" " alt="" coords="336,934,358,947,369,959,377,971,383,996,389,1020,406,1043,427,1056,424,1061,402,1047,384,1022,378,997,372,973,365,962,354,951,333,938"/>
-<area shape="poly" title=" " alt="" coords="524,1061,698,969,826,897,852,870,885,828,945,745,949,748,889,832,856,873,830,901,701,973,526,1066"/>
-<area shape="rect" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="674,1063,797,1088"/>
-<area shape="poly" title=" " alt="" coords="592,1073,660,1073,660,1078,592,1079"/>
-<area shape="rect" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="677,1112,793,1137"/>
-<area shape="poly" title=" " alt="" coords="563,1087,664,1108,663,1113,562,1092"/>
-<area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="906,1112,1025,1137"/>
-<area shape="poly" title=" " alt="" coords="793,1122,893,1122,893,1127,793,1127"/>
+<area shape="rect" title=" " alt="" coords="5,755,116,781"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="185,378,335,403"/>
+<area shape="poly" title=" " alt="" coords="66,754,243,414,248,417,71,756"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="187,730,333,755"/>
+<area shape="poly" title=" " alt="" coords="116,758,173,751,174,756,117,764"/>
+<area shape="rect" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="231,829,289,854"/>
+<area shape="poly" title=" " alt="" coords="86,778,165,815,218,830,216,835,163,820,84,783"/>
+<area shape="rect" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce" title=" " alt="" coords="164,779,356,805"/>
+<area shape="poly" title=" " alt="" coords="117,772,151,776,150,782,116,777"/>
+<area shape="rect" href="classball__t.html#af54ab028113130c4760856b06a31ad8b" title="a child is the owner of a green ball" alt="" coords="451,126,548,151"/>
+<area shape="poly" title=" " alt="" coords="263,377,279,335,307,276,348,214,374,185,403,161,436,145,438,150,405,165,378,189,353,217,312,279,284,337,268,379"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="448,175,551,201"/>
+<area shape="poly" title=" " alt="" coords="266,377,317,302,356,257,403,218,434,202,436,207,405,222,360,261,321,306,271,380"/>
+<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="680,527,791,553"/>
+<area shape="poly" title=" " alt="" coords="283,401,337,432,405,463,473,485,543,503,667,527,666,533,542,508,472,490,403,468,335,437,280,406"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="643,175,828,201"/>
+<area shape="poly" title=" " alt="" coords="271,376,324,324,361,294,403,268,449,251,514,233,655,201,656,206,516,238,451,256,405,273,365,298,327,328,274,380"/>
+<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="1079,175,1221,201"/>
+<area shape="poly" title=" " alt="" coords="260,378,267,318,289,229,308,182,332,136,363,95,402,62,449,37,497,19,548,8,600,3,652,4,705,9,809,31,906,64,993,100,1066,137,1118,166,1115,171,1063,141,991,105,904,69,807,36,704,15,652,9,600,9,549,13,499,24,451,42,406,66,367,99,337,139,313,184,294,231,273,319,265,378"/>
+<area shape="rect" href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1" title="retrieve the first ball" alt="" coords="429,77,570,102"/>
+<area shape="poly" title=" " alt="" coords="261,377,275,327,301,255,320,216,343,178,370,142,402,111,415,103,418,108,406,116,374,146,347,181,324,219,306,257,280,329,267,379"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="882,577,1025,602"/>
+<area shape="poly" title=" " alt="" coords="319,375,404,363,500,358,625,361,688,367,746,378,795,393,830,414,845,433,853,452,855,490,858,527,864,546,878,564,882,568,879,572,874,567,860,548,852,529,850,490,848,453,841,435,826,418,792,398,745,383,688,373,625,366,500,364,404,368,320,381"/>
+<area shape="rect" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9" title="retrieve the last ball" alt="" coords="665,478,805,503"/>
+<area shape="poly" title=" " alt="" coords="322,401,661,473,660,478,321,406"/>
+<area shape="rect" href="classgenealogy__t.html#ab6f2400db5d56680a51ae9eae32a203f" title=" " alt="" coords="643,931,828,957"/>
+<area shape="poly" title=" " alt="" coords="268,403,359,718,367,769,369,811,378,848,388,866,406,885,421,895,442,904,498,918,563,928,629,935,629,941,563,934,497,923,440,909,418,899,402,889,384,869,373,850,364,812,362,770,353,719,263,405"/>
+<area shape="rect" href="classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d" title="move ball b from p to q" alt="" coords="886,527,1021,553"/>
+<area shape="poly" title=" " alt="" coords="279,376,333,345,368,330,403,319,497,302,620,289,682,287,741,290,791,298,829,312,856,332,878,356,913,411,936,467,949,513,944,515,931,469,908,413,874,359,852,336,827,317,790,303,740,295,682,293,620,294,498,307,405,324,370,335,336,350,282,380"/>
+<area shape="rect" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14" title="order nodes in order of increasing time" alt="" coords="438,378,561,403"/>
+<area shape="poly" title=" " alt="" coords="336,388,424,388,424,393,336,393"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="888,769,1019,794"/>
+<area shape="poly" title=" " alt="" coords="267,403,330,626,372,750,391,794,406,816,436,834,468,848,537,866,608,870,680,864,749,851,813,833,911,797,913,802,815,839,751,856,681,869,608,875,536,871,466,853,433,839,402,819,386,796,367,752,325,627,262,404"/>
+<area shape="rect" href="classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="429,530,569,555"/>
+<area shape="poly" title=" " alt="" coords="275,402,329,453,366,482,405,508,437,523,435,528,403,513,362,487,325,457,272,406"/>
+<area shape="rect" href="classgenealogy__t.html#a90f523b2b557d1a135851a3fc0999a40" title="view/set zero time." alt="" coords="415,579,583,605"/>
+<area shape="poly" title=" " alt="" coords="270,403,289,436,319,480,358,527,406,566,416,572,414,576,402,570,355,531,315,484,285,439,266,405"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="884,175,1023,201"/>
+<area shape="poly" title=" " alt="" coords="829,185,870,185,870,191,829,191"/>
+<area shape="poly" title=" " alt="" coords="1023,185,1065,185,1065,191,1023,191"/>
+<area shape="poly" title=" " alt="" coords="742,930,935,613,939,615,747,932"/>
+<area shape="rect" href="classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db" title="check the size of the genealogy (to prevent memory exhaustion)." alt="" coords="879,920,1027,960"/>
+<area shape="poly" title=" " alt="" coords="829,940,866,939,866,944,829,945"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="1095,794,1205,819"/>
+<area shape="poly" title=" " alt="" coords="778,929,1030,848,1102,822,1104,827,1032,853,780,934"/>
+<area shape="rect" href="classgenealogy__t.html#aca957d4da38e7377fc3f226cdb9f3dc3" title="get the next unique name" alt="" coords="876,985,1031,1010"/>
+<area shape="poly" title=" " alt="" coords="789,954,888,979,887,984,788,959"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="1269,743,1376,769"/>
+<area shape="poly" title=" " alt="" coords="1193,791,1265,770,1266,775,1195,797"/>
+<area shape="poly" title=" " alt="" coords="1012,551,1033,564,1053,596,1083,656,1140,780,1135,782,1079,658,1049,599,1029,567,1009,555"/>
+<area shape="poly" title=" " alt="" coords="1000,550,1032,563,1110,605,1184,653,1296,733,1293,737,1181,657,1107,610,1030,568,998,555"/>
+<area shape="rect" href="classnodeseq__t.html#a642a9a6799ed5ee49e620a95a3f884b7" title=" " alt="" coords="658,327,813,353"/>
+<area shape="poly" title=" " alt="" coords="559,375,662,353,663,358,560,381"/>
+<area shape="poly" title=" " alt="" coords="801,351,816,359,830,370,847,395,855,420,856,445,854,469,853,493,854,517,861,540,878,564,882,567,878,571,874,567,857,543,849,518,847,493,849,469,851,445,849,421,842,398,826,374,813,363,798,355"/>
+<area shape="poly" title=" " alt="" coords="780,350,829,370,948,425,1039,472,1124,528,1223,613,1250,642,1274,673,1310,730,1306,733,1270,676,1246,645,1219,617,1121,532,1037,476,945,430,827,375,778,355"/>
+<area shape="poly" title=" " alt="" coords="1019,787,1081,795,1080,801,1018,792"/>
+<area shape="poly" title=" " alt="" coords="1019,774,1256,758,1256,763,1019,780"/>
+<area shape="poly" title=" " alt="" coords="335,751,358,766,374,788,381,811,380,856,379,877,381,898,389,917,406,935,437,955,472,967,509,974,546,976,619,971,681,958,682,963,620,976,546,982,508,979,471,972,435,959,402,940,384,920,376,899,374,877,375,855,376,811,369,790,354,770,332,756"/>
+<area shape="poly" title=" " alt="" coords="267,729,322,640,402,517,478,413,482,416,406,520,326,642,271,731"/>
+<area shape="poly" title=" " alt="" coords="266,729,285,696,315,652,355,605,403,566,416,558,419,563,405,570,359,609,319,655,289,699,270,731"/>
+<area shape="poly" title=" " alt="" coords="270,728,323,674,361,642,403,615,421,607,423,612,405,620,364,646,327,678,274,732"/>
+<area shape="rect" href="classnodeseq__t.html#a3c6308f6fb71abd427e28129d8a5c146" title=" " alt="" coords="666,429,805,454"/>
+<area shape="poly" title=" " alt="" coords="333,728,491,697,558,680,593,665,610,641,618,617,619,593,617,568,614,542,615,516,623,490,641,465,652,456,655,460,645,469,627,493,620,517,619,542,622,567,624,593,623,618,615,644,596,669,560,685,492,702,334,733"/>
+<area shape="rect" href="classgenealogy__t.html#a18c0ea2e2b6b24cb4a690677de9f2903" title="drop all zero&#45;length branches" alt="" coords="417,730,582,755"/>
+<area shape="poly" title=" " alt="" coords="334,740,403,740,403,745,334,745"/>
+<area shape="rect" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="895,1110,1011,1135"/>
+<area shape="poly" title=" " alt="" coords="335,750,358,766,374,788,386,810,396,852,394,894,387,935,378,977,375,1019,383,1062,392,1084,406,1107,450,1159,495,1199,542,1227,591,1244,644,1251,700,1249,761,1237,827,1218,858,1203,886,1184,930,1143,934,1147,889,1188,860,1208,829,1223,762,1243,701,1254,643,1257,590,1249,539,1232,492,1203,446,1162,402,1110,387,1087,377,1064,370,1019,373,976,381,934,389,893,391,852,381,811,370,791,354,770,332,755"/>
+<area shape="rect" href="classgenealogy__t.html#a516254565a8b30fd2ba3306290e1d923" title="number of demes" alt="" coords="422,1007,577,1033"/>
+<area shape="poly" title=" " alt="" coords="335,751,358,766,378,794,386,822,387,850,384,878,380,905,381,932,388,959,406,986,422,999,418,1003,402,990,383,961,375,933,375,905,378,877,381,850,381,823,373,796,354,770,332,755"/>
+<area shape="rect" href="classgenealogy__t.html#afa7511c258badddff38a349d0610aeda" title=" " alt="" coords="410,779,589,805"/>
+<area shape="poly" title=" " alt="" coords="323,753,424,774,423,779,322,758"/>
+<area shape="rect" href="classgenealogy__t.html#afdea11503802dd59ebd336de6ce13b7f" title=" " alt="" coords="404,1070,595,1095"/>
+<area shape="poly" title=" " alt="" coords="335,750,358,766,381,801,391,836,390,871,385,905,379,940,378,974,385,1008,406,1044,429,1062,425,1066,402,1047,380,1010,372,974,374,939,379,905,385,871,385,837,377,804,354,770,332,755"/>
+<area shape="rect" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394" title="drop all dead roots" alt="" coords="433,629,565,654"/>
+<area shape="poly" title=" " alt="" coords="284,728,403,671,443,656,445,661,405,676,286,732"/>
+<area shape="poly" title=" " alt="" coords="806,451,830,465,841,477,849,490,855,515,861,540,867,552,878,563,883,568,880,572,874,567,863,555,856,542,850,517,844,492,837,480,826,469,803,456"/>
+<area shape="poly" title=" " alt="" coords="792,452,829,464,880,490,924,517,921,522,878,495,827,469,791,457"/>
+<area shape="poly" title=" " alt="" coords="563,728,593,709,606,691,613,674,615,637,619,601,626,582,641,563,665,548,668,553,644,567,631,585,624,602,621,638,618,675,611,694,596,713,566,732"/>
+<area shape="poly" title=" " alt="" coords="524,728,560,702,578,685,592,666,612,616,617,570,613,526,606,484,599,442,599,400,611,357,623,335,641,313,697,292,814,262,1077,201,1078,206,815,267,699,297,644,317,628,338,616,359,604,400,604,441,611,483,619,526,623,570,617,618,597,668,582,689,564,706,527,732"/>
+<area shape="poly" title=" " alt="" coords="565,728,593,709,609,685,616,661,617,637,615,613,613,589,615,564,623,539,641,514,651,505,655,510,645,518,628,541,620,565,619,588,621,613,623,637,621,662,614,687,597,713,568,732"/>
+<area shape="poly" title=" " alt="" coords="558,727,642,715,753,708,840,710,925,725,1032,755,1111,786,1109,791,1030,760,924,730,839,715,753,713,643,720,559,733"/>
+<area shape="rect" href="classnodeseq__t.html#a125256a336ee2dceb0747bea92dffc78" title=" " alt="" coords="665,577,806,602"/>
+<area shape="poly" title=" " alt="" coords="559,728,593,709,609,687,616,665,623,642,641,619,663,605,666,610,644,623,628,645,621,667,614,690,596,713,562,732"/>
+<area shape="poly" title=" " alt="" coords="579,753,597,766,615,792,624,817,626,842,624,867,623,917,629,942,645,968,682,993,754,1030,911,1102,909,1107,752,1035,680,998,641,971,624,944,617,917,619,866,620,842,619,818,610,794,593,770,576,758"/>
+<area shape="poly" title=" " alt="" coords="807,587,868,587,868,592,807,592"/>
+<area shape="poly" title=" " alt="" coords="792,574,883,553,884,558,793,579"/>
+<area shape="poly" title=" " alt="" coords="751,601,791,649,813,681,830,716,845,761,852,801,854,870,856,939,863,978,878,1022,903,1064,931,1098,927,1102,899,1067,874,1024,858,979,850,940,849,870,847,801,840,763,826,718,808,684,787,652,747,604"/>
+<area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="1091,1110,1209,1135"/>
+<area shape="poly" title=" " alt="" coords="1012,1120,1077,1120,1077,1125,1012,1125"/>
+<area shape="poly" title=" " alt="" coords="578,777,593,766,610,742,618,718,619,693,616,667,614,642,615,616,622,589,641,564,666,547,668,552,645,567,627,592,620,616,619,641,622,667,624,692,623,718,615,744,597,770,581,781"/>
+<area shape="poly" title=" " alt="" coords="569,777,593,766,608,754,617,742,626,729,641,715,704,678,771,646,891,604,893,609,774,651,707,682,644,720,630,732,621,745,612,758,596,770,571,782"/>
+<area shape="poly" title=" " alt="" coords="578,777,593,766,614,736,622,705,621,674,616,643,611,611,611,579,619,547,641,514,652,505,655,509,645,518,624,549,616,580,617,611,622,642,626,674,627,706,618,738,597,770,582,782"/>
+<area shape="poly" title=" " alt="" coords="589,794,876,804,1081,805,1081,810,876,809,589,799"/>
+<area shape="poly" title=" " alt="" coords="589,787,874,781,874,786,589,793"/>
+<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="675,729,795,754"/>
+<area shape="poly" title=" " alt="" coords="559,777,662,754,663,760,560,782"/>
+<area shape="poly" title=" " alt="" coords="538,1068,593,1043,656,1003,707,964,710,968,659,1007,596,1048,540,1072"/>
+<area shape="poly" title=" " alt="" coords="595,1072,861,1045,975,1031,1030,1020,1053,1002,1073,979,1105,927,1127,875,1140,832,1145,834,1132,877,1110,930,1077,982,1056,1005,1032,1025,976,1037,862,1051,595,1077"/>
+<area shape="rect" href="parse_8cc.html#a01c75a1a964eb598db181b5148f979e7" title="simple function for scanning the color" alt="" coords="690,1133,781,1158"/>
+<area shape="poly" title=" " alt="" coords="548,1093,643,1119,678,1128,676,1133,642,1124,547,1098"/>
+<area shape="rect" href="parse_8cc.html#a4f57e6bcf7a8592adad68e9bc8d27c64" title=" " alt="" coords="687,1182,783,1207"/>
+<area shape="poly" title=" " alt="" coords="519,1093,573,1130,644,1168,675,1179,673,1184,642,1173,570,1135,516,1098"/>
+<area shape="rect" href="parse_8cc.html#af9f4412e2034dac7481726600a73ad83" title=" " alt="" coords="690,1083,781,1109"/>
+<area shape="poly" title=" " alt="" coords="595,1086,677,1090,676,1096,595,1091"/>
+<area shape="poly" title=" " alt="" coords="564,633,580,626,593,616,611,591,623,567,631,543,633,518,629,470,618,421,607,372,602,322,604,296,611,271,623,245,641,218,655,206,658,210,645,222,627,247,616,272,610,297,607,322,612,371,623,420,635,469,639,519,636,544,628,569,616,594,597,619,583,631,567,638"/>
+<area shape="rect" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27" title=" " alt="" coords="643,1283,828,1309"/>
+<area shape="poly" title=" " alt="" coords="342,803,358,816,369,833,376,855,384,909,384,974,380,1043,377,1112,378,1175,387,1227,395,1247,406,1262,434,1284,465,1300,499,1310,534,1316,605,1317,669,1309,669,1314,606,1322,534,1321,498,1315,463,1305,431,1289,402,1266,390,1250,382,1229,373,1176,372,1112,375,1043,378,974,378,910,371,856,364,835,354,819,339,807"/>
+<area shape="poly" title=" " alt="" coords="807,1281,914,1258,1037,1227,1148,1189,1191,1168,1219,1146,1237,1119,1254,1078,1282,974,1303,865,1315,782,1321,783,1308,866,1288,975,1259,1080,1242,1121,1223,1150,1193,1173,1150,1194,1038,1232,915,1264,808,1286"/>
+<area shape="poly" title=" " alt="" coords="788,1281,827,1262,842,1248,852,1235,874,1202,928,1144,932,1148,878,1206,856,1238,846,1252,829,1266,790,1286"/>
+<area shape="rect" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651" title="view lineage" alt="" coords="892,1283,1015,1309"/>
+<area shape="poly" title=" " alt="" coords="829,1293,878,1293,878,1299,829,1299"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a01c75a1a964eb598db181b5148f979e7" name="a01c75a1a964eb598db181b5148f979e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01c75a1a964eb598db181b5148f979e7">&#9670;&#160;</a></span>scan_color()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> scan_color </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>simple function for scanning the color </p>
+
+<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00077">77</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>{</div>
+<div class="line"><span class="lineno">   80</span>  std::string copy(s);</div>
+<div class="line"><span class="lineno">   81</span>  <span class="keyword">const</span> std::unordered_map&lt;string_t,color_t&gt; options({</div>
+<div class="line"><span class="lineno">   82</span>      {<span class="stringliteral">&quot;sample&quot;</span>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>},{<span class="stringliteral">&quot;extant&quot;</span>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a>},{<span class="stringliteral">&quot;migration&quot;</span>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>},</div>
+<div class="line"><span class="lineno">   83</span>      {<span class="stringliteral">&quot;node&quot;</span>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>},{<span class="stringliteral">&quot;branch&quot;</span>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>},{<span class="stringliteral">&quot;root&quot;</span>,<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>}</div>
+<div class="line"><span class="lineno">   84</span>    });</div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> col = <a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>;</div>
+<div class="line"><span class="lineno">   86</span>  std::transform(copy.begin(),copy.end(),copy.begin(),</div>
+<div class="line"><span class="lineno">   87</span>                 [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c){return std::tolower(c);});</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   89</span>    col = options.at(copy);</div>
+<div class="line"><span class="lineno">   90</span>  }</div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
+<div class="line"><span class="lineno">   92</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in %s: invalid metadata: type &#39;%s&#39; not recognized.&quot;</span>,__func__,s.c_str());</div>
+<div class="line"><span class="lineno">   93</span>  }</div>
+<div class="line"><span class="lineno">   94</span>  <span class="keywordflow">return</span> col;</div>
+<div class="line"><span class="lineno">   95</span>}</div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></div><div class="ttdeci">color_t</div><div class="ttdoc">BALL COLORS.</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a></div><div class="ttdeci">@ black</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a></div><div class="ttdeci">@ blue</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
+<div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parse_8cc_a01c75a1a964eb598db181b5148f979e7_icgraph.png" border="0" usemap="#aparse_8cc_a01c75a1a964eb598db181b5148f979e7_icgraph" alt=""/></div>
+<map name="aparse_8cc_a01c75a1a964eb598db181b5148f979e7_icgraph" id="aparse_8cc_a01c75a1a964eb598db181b5148f979e7_icgraph">
+<area shape="rect" title="simple function for scanning the color" alt="" coords="597,5,688,31"/>
+<area shape="rect" href="classgenealogy__t.html#afdea11503802dd59ebd336de6ce13b7f" title=" " alt="" coords="359,5,549,31"/>
+<area shape="poly" title=" " alt="" coords="584,21,550,21,550,15,584,15"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="164,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="345,21,311,21,311,15,345,15"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,5,116,31"/>
+<area shape="poly" title=" " alt="" coords="150,21,116,21,116,15,150,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f57e6bcf7a8592adad68e9bc8d27c64" name="a4f57e6bcf7a8592adad68e9bc8d27c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f57e6bcf7a8592adad68e9bc8d27c64">&#9670;&#160;</a></span>scan_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> scan_name </td>
+          <td>(</td>
+          <td class="paramtype">const string_t &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>simple function for scanning a <a class="el" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> from a string (with error trapping) </p>
+
+<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00051">51</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>{</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordtype">int</span> d;</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   56</span>    d = stoi(s);</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (d &lt; 0) <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: negative deme number detected.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   58</span>  }</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument&amp; e) {</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: deme should be indicated with an integer.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   61</span>  }</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: deme out of range.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: parsing deme label: %s.&quot;</span>,__func__,e.what());</div>
+<div class="line"><span class="lineno">   67</span>  }</div>
+<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">   69</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other deme-parsing error.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   70</span>  }</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>(d);</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+<div class="ttc" id="ainternal_8h_html_a5c08bbb85c89413f5e8af55c20429103"><div class="ttname"><a href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a></div><div class="ttdeci">size_t name_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00054">internal.h:54</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parse_8cc_a4f57e6bcf7a8592adad68e9bc8d27c64_icgraph.png" border="0" usemap="#aparse_8cc_a4f57e6bcf7a8592adad68e9bc8d27c64_icgraph" alt=""/></div>
+<map name="aparse_8cc_a4f57e6bcf7a8592adad68e9bc8d27c64_icgraph" id="aparse_8cc_a4f57e6bcf7a8592adad68e9bc8d27c64_icgraph">
+<area shape="rect" title=" " alt="" coords="597,5,693,31"/>
+<area shape="rect" href="classgenealogy__t.html#afdea11503802dd59ebd336de6ce13b7f" title=" " alt="" coords="359,5,549,31"/>
+<area shape="poly" title=" " alt="" coords="583,21,550,21,550,15,583,15"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="164,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="345,21,311,21,311,15,345,15"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,5,116,31"/>
+<area shape="poly" title=" " alt="" coords="150,21,116,21,116,15,150,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9f4412e2034dac7481726600a73ad83" name="af9f4412e2034dac7481726600a73ad83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f4412e2034dac7481726600a73ad83">&#9670;&#160;</a></span>scan_slate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> scan_slate </td>
+          <td>(</td>
+          <td class="paramtype">const string_t &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>simple function for scanning a <a class="el" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> from a string (with error trapping) </p>
+
+<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00024">24</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
+<div class="line"><span class="lineno">   27</span>  <span class="keywordtype">double</span> bl;</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   29</span>    bl = (s.empty()) ? 0.0 : stod(s);</div>
+<div class="line"><span class="lineno">   30</span>  }</div>
+<div class="line"><span class="lineno">   31</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::invalid_argument&amp; e) {</div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: branch length should be a non-negative decimal number.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   33</span>  }</div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp; e) {</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: invalid Newick format: branch length out of range.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   36</span>  }</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: parsing branch-length: %s.&quot;</span>,__func__,e.what());</div>
+<div class="line"><span class="lineno">   39</span>  }</div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: other branch-length parsing error.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   42</span>  }</div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">if</span> (bl &lt; 0.0) <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39;: negative branch length detected.&quot;</span>,__func__);</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">return</span> <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a>(bl);</div>
+<div class="line"><span class="lineno">   45</span>}</div>
+<div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00053">internal.h:53</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="parse_8cc_af9f4412e2034dac7481726600a73ad83_icgraph.png" border="0" usemap="#aparse_8cc_af9f4412e2034dac7481726600a73ad83_icgraph" alt=""/></div>
+<map name="aparse_8cc_af9f4412e2034dac7481726600a73ad83_icgraph" id="aparse_8cc_af9f4412e2034dac7481726600a73ad83_icgraph">
+<area shape="rect" title=" " alt="" coords="597,5,688,31"/>
+<area shape="rect" href="classgenealogy__t.html#afdea11503802dd59ebd336de6ce13b7f" title=" " alt="" coords="359,5,549,31"/>
+<area shape="poly" title=" " alt="" coords="584,21,550,21,550,15,584,15"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="164,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="345,21,311,21,311,15,345,15"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="5,5,116,31"/>
+<area shape="poly" title=" " alt="" coords="150,21,116,21,116,15,150,15"/>
 </map>
 </div>
 

@@ -3,7 +3,7 @@ var searchData=
   ['m_0',['m',['../structmoran__state__t.html#a26e5d30c9d8a4c87c844841369426940',1,'moran_state_t']]],
   ['magic_1',['magic',['../classgenealogy__t.html#aca82b47418a937a0788748b9b757c0a6',1,'genealogy_t']]],
   ['make_2',['make',['../generics_8h.html#ac2d5d2f1938d48ca0dc500a47d8130a1',1,'generics.h']]],
-  ['make_5fnode_3',['make_node',['../classgenealogy__t.html#a61f9ef25c465e28b4048f276e80c887c',1,'genealogy_t']]],
+  ['make_5fnode_3',['make_node',['../classgenealogy__t.html#ab6f2400db5d56680a51ae9eae32a203f',1,'genealogy_t']]],
   ['makefn_4',['MAKEFN',['../generics_8h.html#ab5553bb581629a90c1654e17490555fe',1,'generics.h']]],
   ['markov_20genealogy_20process_20simulators_5',['Source code for Markov genealogy process simulators',['../index.html',1,'']]],
   ['master_2eh_6',['master.h',['../master_8h.html',1,'']]],
@@ -21,11 +21,12 @@ var searchData=
   ['matchargs_18',['matchargs',['../getinfo_8cc.html#a8768501322299fac51ad8e69d17bde76',1,'getinfo.cc']]],
   ['memory_5fmax_19',['MEMORY_MAX',['../genealogy_8h.html#a3689f6c3c7b97099618baf1af0df9ae7',1,'genealogy.h']]],
   ['methods_20',['METHODS',['../init_8h.html#a06d5e17211e44605874f59f330a17c5b',1,'init.h']]],
-  ['migrate_21',['migrate',['../classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033',1,'genealogy_t::migrate()'],['../classmaster__t.html#acf3f98270ade9b0fef7a538b83887ec4',1,'master_t::migrate()']]],
+  ['migrate_21',['migrate',['../classgenealogy__t.html#a7cee6964e8f756a2edb085d57baf6033',1,'genealogy_t::migrate()'],['../classmaster__t.html#afcb5ead59df0b1f201945b07b308995a',1,'master_t::migrate()']]],
   ['moran_2ecc_22',['moran.cc',['../moran_8cc.html',1,'']]],
   ['moran_5fgenealogy_5ft_23',['moran_genealogy_t',['../moran_8cc.html#a0d148d006807400fc0cf11190b3aa9dc',1,'moran.cc']]],
   ['moran_5fparameters_5ft_24',['moran_parameters_t',['../structmoran__parameters__t.html',1,'']]],
   ['moran_5fproc_5ft_25',['moran_proc_t',['../moran_8cc.html#aa0fd6f453ad00a99f9bc79349907cf40',1,'moran.cc']]],
   ['moran_5fstate_5ft_26',['moran_state_t',['../structmoran__state__t.html',1,'']]],
-  ['mu_27',['mu',['../structlbdp__parameters__t.html#a5d37bff4b65b041a712c577e77fadc43',1,'lbdp_parameters_t::mu'],['../structmoran__parameters__t.html#a96a1ec50a5744870196ae1980ff72902',1,'moran_parameters_t::mu'],['../structsi2r__parameters__t.html#a964bb7e1b300478f9eeca7847bb329d4',1,'si2r_parameters_t::mu'],['../lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144',1,'mu:&#160;lbdp_pomp.c']]]
+  ['move_27',['move',['../classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d',1,'nodeseq_t']]],
+  ['mu_28',['mu',['../structlbdp__parameters__t.html#a5d37bff4b65b041a712c577e77fadc43',1,'lbdp_parameters_t::mu'],['../structmoran__parameters__t.html#a96a1ec50a5744870196ae1980ff72902',1,'moran_parameters_t::mu'],['../structsi2r__parameters__t.html#a964bb7e1b300478f9eeca7847bb329d4',1,'si2r_parameters_t::mu'],['../lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144',1,'mu:&#160;lbdp_pomp.c']]]
 ];

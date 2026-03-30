@@ -1,6 +1,14 @@
 var searchData=
 [
-  ['twospecies_2ecc_0',['twospecies.cc',['../twospecies_8cc.html',1,'']]],
-  ['twospecies_5fpomp_2ec_1',['twospecies_pomp.c',['../twospecies__pomp_8c.html',1,'']]],
-  ['twoundead_2ecc_2',['twoundead.cc',['../twoundead_8cc.html',1,'']]]
+  ['s2i2r2_2ecc_0',['s2i2r2.cc',['../s2i2r2_8cc.html',1,'']]],
+  ['seir_2ecc_1',['seir.cc',['../seir_8cc.html',1,'']]],
+  ['seirs_5fpomp_2ec_2',['seirs_pomp.c',['../seirs__pomp_8c.html',1,'']]],
+  ['si2r_2ecc_3',['si2r.cc',['../si2r_8cc.html',1,'']]],
+  ['siir_2ecc_4',['siir.cc',['../siir_8cc.html',1,'']]],
+  ['sir_2ecc_5',['sir.cc',['../sir_8cc.html',1,'']]],
+  ['sirs_5fpomp_2ec_6',['sirs_pomp.c',['../sirs__pomp_8c.html',1,'']]],
+  ['strains_2ecc_7',['strains.cc',['../strains_8cc.html',1,'']]],
+  ['strains_5fpomp_2ec_8',['strains_pomp.c',['../strains__pomp_8c.html',1,'']]],
+  ['structure_2ecc_9',['structure.cc',['../structure_8cc.html',1,'']]],
+  ['sum_2ecc_10',['sum.cc',['../sum_8cc.html',1,'']]]
 ];

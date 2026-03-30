@@ -1,5 +1,6 @@
 phylopomp-package	phylopomp
 %dopar%	reexports
++.gpgen	geneal_sum
 as.data.frame	as_data_frame
 as.data.frame.gplin	as_data_frame
 as.yaml	reexports
@@ -27,6 +28,7 @@ gendat	gendat
 geneal	geneal
 genealogy diagram internals	internals
 genealogyGrob	internals
+geneal_sum	geneal_sum
 getInfo	getinfo
 LBDP	lbdp
 lbdp	lbdp
@@ -41,7 +43,8 @@ nodeGrob	internals
 parse_newick	parse
 phylopomp	phylopomp
 phylopomp,package	phylopomp
-plot.gpgen	treeplot
+plot	plot
+plot.gpgen	plot
 plot.gplin	lineages
 plot_grid	reexports
 pocketGrob	internals
@@ -91,7 +94,6 @@ stew	reexports
 Strains	strains
 strains	strains
 strains_pomp	strains
-treeplot	treeplot
 TwoSpecies	twospecies
 twospecies	twospecies
 twospecies_pomp	twospecies

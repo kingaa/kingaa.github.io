@@ -36,11 +36,12 @@ function processMathHTML() {
   psi1 = 1,
   psi2 = 0,
   psi3 = 0,
-  S0 = 10000,
-  I1_0 = 10,
-  I2_0 = 10,
-  I3_0 = 10,
-  R0 = 0
+  S0 = 1,
+  I1_0 = 0.01,
+  I2_0 = 0.01,
+  I3_0 = 0.01,
+  R0 = 0,
+  pop = 10000
 )
 
 continueStrains(
@@ -64,6 +65,7 @@ strains_pomp(
   psi1,
   psi2,
   psi3,
+  pop,
   S0,
   I1_0,
   I2_0,
@@ -96,17 +98,13 @@ strains_pomp(
 <td>
 <p>sampling rates</p>
 </td></tr>
-<tr><td><code id="S0">S0</code></td>
+<tr><td><code id="S0">S0</code>, <code id="I1_0">I1_0</code>, <code id="I2_0">I2_0</code>, <code id="I3_0">I3_0</code>, <code id="R0">R0</code></td>
 <td>
-<p>initial size of susceptible population</p>
+<p>initial conditions; non-negative numbers that specify the relative occupancies of the compartments at the inital time.</p>
 </td></tr>
-<tr><td><code id="I1_0">I1_0</code>, <code id="I2_0">I2_0</code>, <code id="I3_0">I3_0</code></td>
+<tr><td><code id="pop">pop</code></td>
 <td>
-<p>initial numbers of strain-specific infections</p>
-</td></tr>
-<tr><td><code id="R0">R0</code></td>
-<td>
-<p>initial size of immune population</p>
+<p>host population size</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -149,7 +147,7 @@ strains_pomp(
 <code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
 </p>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

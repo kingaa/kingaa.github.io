@@ -34,10 +34,11 @@ function processMathHTML() {
   gamma = 1,
   psi = 1,
   omega = 0,
-  S0 = 100,
-  E0 = 5,
-  I0 = 5,
-  R0 = 0
+  S0 = 0.9,
+  E0 = 0.05,
+  I0 = 0.05,
+  R0 = 0,
+  pop = 100
 )
 
 runSEIRS(
@@ -48,10 +49,11 @@ runSEIRS(
   gamma = 1,
   psi = 1,
   omega = 0,
-  S0 = 100,
-  E0 = 5,
-  I0 = 5,
-  R0 = 0
+  S0 = 0.9,
+  E0 = 0.05,
+  I0 = 0.05,
+  R0 = 0,
+  pop = 100
 )
 
 continueSEIR(
@@ -74,7 +76,7 @@ continueSEIRS(
   omega = NA
 )
 
-seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0)
+seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0, pop)
 </code></pre>
 
 
@@ -111,7 +113,12 @@ seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0)
 </td></tr>
 <tr><td><code id="S0">S0</code>, <code id="E0">E0</code>, <code id="I0">I0</code>, <code id="R0">R0</code></td>
 <td>
-<p>initial sizes of S, E, I, R compartments, respectively.</p>
+<p>initial conditions;
+non-negative numbers that specify the relative occupancies of the compartments at the inital time.</p>
+</td></tr>
+<tr><td><code id="pop">pop</code></td>
+<td>
+<p>host population size</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -181,7 +188,7 @@ simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt;
   plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

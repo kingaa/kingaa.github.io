@@ -35,7 +35,8 @@ function processMathHTML() {
   omega = 0,
   S0 = 100,
   I0 = 2,
-  R0 = 0
+  R0 = 0,
+  pop = 102
 )
 
 runSIRS(
@@ -47,7 +48,8 @@ runSIRS(
   omega = 0,
   S0 = 100,
   I0 = 2,
-  R0 = 0
+  R0 = 0,
+  pop = 102
 )
 
 continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
@@ -61,14 +63,15 @@ runSIRS(
   omega = 0,
   S0 = 100,
   I0 = 2,
-  R0 = 0
+  R0 = 0,
+  pop = 102
 )
 
 continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
 
-sir_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0)
+sir_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, pop)
 
-sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0)
+sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, pop)
 </code></pre>
 
 
@@ -101,7 +104,12 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0)
 </td></tr>
 <tr><td><code id="S0">S0</code>, <code id="I0">I0</code>, <code id="R0">R0</code></td>
 <td>
-<p>initial sizes of susceptible, infected, and recovered populations, respectively.</p>
+<p>initial conditions;
+non-negative numbers that specify the relative occupancies of the compartments at the inital time.</p>
+</td></tr>
+<tr><td><code id="pop">pop</code></td>
+<td>
+<p>host population size</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -170,7 +178,7 @@ simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
 simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

@@ -26,7 +26,7 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>curtail(object, time = NA, troot = NA)
+<pre><code class='language-R'>curtail(object, time = NA, t0 = NA)
 </code></pre>
 
 
@@ -37,20 +37,16 @@ function processMathHTML() {
 <td>
 <p><code>gpsim</code> object.</p>
 </td></tr>
-<tr><td><code id="time">time</code></td>
+<tr><td><code id="t0">t0</code>, <code id="time">time</code></td>
 <td>
-<p>logical; return the current time?</p>
-</td></tr>
-<tr><td><code id="troot">troot</code></td>
-<td>
-<p>new root time for curtailed genealogy</p>
+<p>numeric scalars; determine the time interval for curtailed genealogy</p>
 </td></tr>
 </table>
 
 
 <h3>Value</h3>
 
-<p>A curtailed genealogy object.
+<p>a genealogy object: the curtailed version of the input genealogy.
 </p>
 
 
@@ -82,7 +78,7 @@ plot_grid(
 )
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.17.1.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

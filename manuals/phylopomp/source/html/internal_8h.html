@@ -301,7 +301,7 @@ Typedefs</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a9da99d294700810dfb7c0a621d0c1f78" id="r_a9da99d294700810dfb7c0a621d0c1f78"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a> (int <a class="el" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</td></tr>
 <tr class="separator:a9da99d294700810dfb7c0a621d0c1f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae15e7aa4dc430c8e9e4fbcbdd35bcb09" id="r_ae15e7aa4dc430c8e9e4fbcbdd35bcb09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">random_sample_wo_repl</a> (int *samples, int <a class="el" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>, int <a class="el" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</td></tr>
+<tr class="memitem:ae15e7aa4dc430c8e9e4fbcbdd35bcb09" id="r_ae15e7aa4dc430c8e9e4fbcbdd35bcb09"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15e7aa4dc430c8e9e4fbcbdd35bcb09">random_sample_wo_repl</a> (int *samples, int N, int <a class="el" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>)</td></tr>
 <tr class="separator:ae15e7aa4dc430c8e9e4fbcbdd35bcb09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3fde3ea6d48d04abc86836027e2415" id="r_a5a3fde3ea6d48d04abc86836027e2415"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a3fde3ea6d48d04abc86836027e2415">set_list_elem</a> (SEXP list, SEXP names, SEXP element, const char *name, int pos)</td></tr>
 <tr class="separator:a5a3fde3ea6d48d04abc86836027e2415"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,8 +518,8 @@ Here is the caller graph for this function:</div>
 <div class="fragment"><div class="line"><span class="lineno">   62</span>                                                                      {</div>
 <div class="line"><span class="lineno">   63</span>  <span class="keywordtype">int</span> k = 0; <span class="comment">// total input records dealt with</span></div>
 <div class="line"><span class="lineno">   64</span>  <span class="keywordtype">int</span> m = 0; <span class="comment">// number of items selected so far</span></div>
-<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">while</span> (m &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k &lt; <a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>) {</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordtype">int</span> u = <a class="code hl_function" href="#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a>(<a class="code hl_define" href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>-k);</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">while</span> (m &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k &lt; N) {</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordtype">int</span> u = <a class="code hl_function" href="#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a>(N-k);</div>
 <div class="line"><span class="lineno">   67</span>    <span class="keywordflow">if</span> (u &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-m) {</div>
 <div class="line"><span class="lineno">   68</span>      samples[m++] = k;</div>
 <div class="line"><span class="lineno">   69</span>    }</div>
@@ -527,7 +527,6 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   71</span>  }</div>
 <div class="line"><span class="lineno">   72</span>}</div>
 <div class="ttc" id="ainternal_8h_html_a9da99d294700810dfb7c0a621d0c1f78"><div class="ttname"><a href="#a9da99d294700810dfb7c0a621d0c1f78">random_integer</a></div><div class="ttdeci">static int random_integer(int n)</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00057">internal.h:57</a></div></div>
-<div class="ttc" id="aseirs__pomp_8c_html_a0240ac851181b84ac374872dc5434ee4"><div class="ttname"><a href="seirs__pomp_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a></div><div class="ttdeci">#define N</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00036">seirs_pomp.c:36</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

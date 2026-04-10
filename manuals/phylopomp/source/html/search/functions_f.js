@@ -9,10 +9,8 @@ var searchData=
   ['rcateg_6',['rcateg',['../internal_8h.html#a4a6b554c46520e890bcd30a914b65988',1,'internal.h']]],
   ['repair_5fholder_7',['repair_holder',['../classpocket__t.html#a80133bf9e65cbf626193a6995a6245d4',1,'pocket_t']]],
   ['repair_5fowners_8',['repair_owners',['../classnodeseq__t.html#a5f978d0d983fff4ffd5fc2ecfab3c289',1,'nodeseq_t::repair_owners()'],['../classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953',1,'pocket_t::repair_owners()']]],
-  ['repair_5froots_9',['repair_roots',['../classgenealogy__t.html#a01ba075a207cff3816a326991b9de346',1,'genealogy_t']]],
-  ['repair_5ftips_10',['repair_tips',['../classgenealogy__t.html#afa7511c258badddff38a349d0610aeda',1,'genealogy_t']]],
-  ['reuniqify_11',['reuniqify',['../classgenealogy__t.html#a1ed3cc314e9d9f00190cb3d71d34851c',1,'genealogy_t::reuniqify()'],['../classnode__t.html#a949b75117131f30959f1cca1d48bf353',1,'node_t::reuniqify()']]],
-  ['revive_12',['revive',['../generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373',1,'generics.h']]],
-  ['rinit_13',['rinit',['../classmaster__t.html#a860d21dc3e8db995c934c4a11625b65f',1,'master_t::rinit()'],['../classpopul__proc__t.html#a5ff1c90dd7e2c3cee22f818630cbc087',1,'popul_proc_t::rinit()']]],
-  ['run_14',['run',['../generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe',1,'generics.h']]]
+  ['reuniqify_9',['reuniqify',['../classgenealogy__t.html#a1ed3cc314e9d9f00190cb3d71d34851c',1,'genealogy_t::reuniqify()'],['../classnode__t.html#a949b75117131f30959f1cca1d48bf353',1,'node_t::reuniqify()']]],
+  ['revive_10',['revive',['../generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373',1,'generics.h']]],
+  ['rinit_11',['rinit',['../classmaster__t.html#a860d21dc3e8db995c934c4a11625b65f',1,'master_t::rinit()'],['../classpopul__proc__t.html#a5ff1c90dd7e2c3cee22f818630cbc087',1,'popul_proc_t::rinit()']]],
+  ['run_12',['run',['../generics_8h.html#a2a1306a52d2fb7322440ecd1f0754dbe',1,'generics.h']]]
 ];

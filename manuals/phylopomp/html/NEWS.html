@@ -54,6 +54,9 @@ The deme-number 0 is reserved for the &lsquo;undeme&rsquo;, i.e., nodes or branc
 </li>
 <li> <p><code>sir_pomp</code>, <code>seirs_pomp</code>, and <code>strains_pomp</code> now expect initial conditions expressed as fractions of a specified host population size (<code>pop</code>).
 </p>
+</li>
+<li><p> When times or branch-lengths are converted to decimal representation (e.g., by <code>newick()</code> or <code>yaml()</code>), more care is taken to preserve precision.
+</p>
 </li></ul>
 
 

@@ -16,6 +16,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "lbdp_pomp.c", "lbdp__pomp_8c.html", "lbdp__pomp_8c" ],
     [ "lineages.cc", "lineages_8cc.html", null ],
     [ "master.h", "master_8h.html", "master_8h" ],
+    [ "mers.cc", "mers_8cc.html", "mers_8cc" ],
     [ "moran.cc", "moran_8cc.html", "moran_8cc" ],
     [ "newick.cc", "newick_8cc.html", "newick_8cc" ],
     [ "node.h", "node_8h.html", "node_8h" ],

@@ -20,8 +20,10 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>Deme 2 consists of &quot;superspreaders&quot; who engender clusters
-of infection in &quot;superspreading events&quot;.
+<p>Deme L consists of &quot;low-rate spreaders&quot; that transmit at rate <code>Beta</code>.
+Deme H consists of &quot;superspreaders&quot; who transmit at a higher rate
+<code>kappa*Beta</code>.
+Sampling is destructive.
 </p>
 
 
@@ -31,15 +33,16 @@ of infection in &quot;superspreading events&quot;.
   time,
   t0 = 0,
   Beta = 5,
-  mu = 5,
+  kappa = 2,
   gamma = 1,
   omega = 0,
-  psi1 = 1,
-  psi2 = 0,
-  sigma12 = 1,
-  sigma21 = 3,
-  S0 = 500,
-  I0 = 10,
+  chi = 1,
+  etaL = 1,
+  etaH = 3,
+  pop = 500,
+  S0 = 0.98,
+  IL0 = 0.02,
+  IH0 = 0,
   R0 = 0
 )
 
@@ -47,13 +50,12 @@ continueSI2R(
   object,
   time,
   Beta = NA,
-  mu = NA,
+  kappa = NA,
   gamma = NA,
   omega = NA,
-  psi1 = NA,
-  psi2 = NA,
-  sigma12 = NA,
-  sigma21 = NA
+  chi = NA,
+  etaL = NA,
+  etaH = NA
 )
 </code></pre>
 
@@ -73,9 +75,9 @@ continueSI2R(
 <td>
 <p>transmission rate</p>
 </td></tr>
-<tr><td><code id="mu">mu</code></td>
+<tr><td><code id="kappa">kappa</code></td>
 <td>
-<p>mean superspreading-event cluster size</p>
+<p>super-spreading transmission factor</p>
 </td></tr>
 <tr><td><code id="gamma">gamma</code></td>
 <td>
@@ -85,25 +87,37 @@ continueSI2R(
 <td>
 <p>rate of waning of immunity</p>
 </td></tr>
-<tr><td><code id="psi1">psi1</code>, <code id="psi2">psi2</code></td>
+<tr><td><code id="chi">chi</code></td>
 <td>
-<p>sampling rates for demes 1 and 2, respectively</p>
+<p>(destructive) sampling rate</p>
 </td></tr>
-<tr><td><code id="sigma12">sigma12</code>, <code id="sigma21">sigma21</code></td>
+<tr><td><code id="etaL">etaL</code></td>
 <td>
-<p>movement rates from deme 1 to 2 and 2 to 1, respectively</p>
+<p>rate of transition from low-spreading to super-spreading behavior</p>
+</td></tr>
+<tr><td><code id="etaH">etaH</code></td>
+<td>
+<p>rate of transition from super-spreading to low-spreading behavior</p>
+</td></tr>
+<tr><td><code id="pop">pop</code></td>
+<td>
+<p>population size</p>
 </td></tr>
 <tr><td><code id="S0">S0</code></td>
 <td>
 <p>initial size of susceptible population</p>
 </td></tr>
-<tr><td><code id="I0">I0</code></td>
+<tr><td><code id="IL0">IL0</code></td>
 <td>
-<p>initial size of I1 population (I2 = 0 at t = 0)</p>
+<p>initial size of low-spreading population</p>
+</td></tr>
+<tr><td><code id="IH0">IH0</code></td>
+<td>
+<p>initial size of super-spreading population</p>
 </td></tr>
 <tr><td><code id="R0">R0</code></td>
 <td>
-<p>initial size of recovered population</p>
+<p>initial size of immune population</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -111,24 +125,6 @@ continueSI2R(
 <em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
 </td></tr>
 </table>
-
-
-<h3>Details</h3>
-
-<p>Superspreaders (deme 2) behave differently than ordinary infections:
-transmission events occur at the same rate (<code>Beta</code>), but at each event,
-a superspreader infects <code class="reqn">N</code> individuals, where
-</p>
-<p style="text-align: center;"><code class="reqn">N\sim1+\mathrm{Geometric}(1/\mu).</code>
-</p>
-
-<p>Thus, assuming susceptibles are not limiting, the mean number of infections
-resulting from a superspreading event is <code class="reqn">\mu</code>
-and the variance in this number is <code class="reqn">\mu^2-\mu</code>.
-If susceptibles are limiting,
-i.e., if the number of susceptibles is not greater than <code class="reqn">N</code>,
-then all remaining susceptibles are infected.
-</p>
 
 
 <h3>Value</h3>
@@ -141,6 +137,7 @@ then all remaining susceptibles are infected.
 
 <p>More example genealogy processes:
 <code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
+<code><a href="../../phylopomp/help/mers.html">mers</a></code>,
 <code><a href="../../phylopomp/help/moran.html">moran</a></code>,
 <code><a href="../../phylopomp/help/s2i2r2.html">s2i2r2</a></code>,
 <code><a href="../../phylopomp/help/seir.html">seir</a></code>,
@@ -152,33 +149,7 @@ then all remaining susceptibles are infected.
 <code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
 </p>
 
-
-<h3>Examples</h3>
-
-<pre><code class='language-R'>simulate("SI2R",time=1) |&gt;
-  plot(obscure=FALSE)
-
-runSI2R(Beta=10,S0=2000,time=1,psi1=0) |&gt;
-  simulate(time=2,psi1=1) |&gt;
-  plot(points=TRUE,obscure=FALSE)
-
-simulate("SI2R",time=5) |&gt;
-  lineages() |&gt;
-  plot()
-
-simulate("SI2R",time=2) |&gt;
-  diagram(m=30)
-
-simulate("SI2R",time=20,omega=0.2,mu=20) -&gt; x
-plot_grid(
-  x |&gt; plot(obscure=FALSE),
-  x |&gt; lineages(obscure=FALSE) |&gt; plot(),
-  ncol=1,
-  align="v",axis="b"
-)
-</code></pre>
-
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.0.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

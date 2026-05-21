@@ -2,6 +2,7 @@ var init_8c =
 [
     [ "curtail", "init_8c.html#a01140b551ed796005522e975acd665dc", null ],
     [ "DECLARATIONS", "init_8c.html#a97afe9dda4bc53cce88a8915998b2d75", null ],
+    [ "DECLARATIONS", "init_8c.html#ac4b458bab259f7d3e14d74052917d6c4", null ],
     [ "DECLARATIONS", "init_8c.html#ac03760d5eec0a5363bfd8112c3706ac8", null ],
     [ "DECLARATIONS", "init_8c.html#a291df47fba24f56f8ae24a4d09482729", null ],
     [ "DECLARATIONS", "init_8c.html#a4655ca8afa587fc3cbc0187922ff70a8", null ],

@@ -7,6 +7,8 @@ var annotated_dup =
     [ "lbdp_parameters_t", "structlbdp__parameters__t.html", "structlbdp__parameters__t" ],
     [ "lbdp_state_t", "structlbdp__state__t.html", "structlbdp__state__t" ],
     [ "master_t", "classmaster__t.html", "classmaster__t" ],
+    [ "mers_parameters_t", "structmers__parameters__t.html", "structmers__parameters__t" ],
+    [ "mers_state_t", "structmers__state__t.html", "structmers__state__t" ],
     [ "moran_parameters_t", "structmoran__parameters__t.html", "structmoran__parameters__t" ],
     [ "moran_state_t", "structmoran__state__t.html", "structmoran__state__t" ],
     [ "node_t", "classnode__t.html", "classnode__t" ],

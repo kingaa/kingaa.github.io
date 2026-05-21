@@ -7,6 +7,7 @@ as.yaml	reexports
 bake	reexports
 ballGrob	internals
 continueLBDP	lbdp
+continueMERS	mers
 continueMoran	moran
 continueS2I2R2	s2i2r2
 continueSEIR	seir
@@ -35,6 +36,8 @@ lbdp	lbdp
 lbdp_exact	lbdp
 lbdp_pomp	lbdp
 lineages	lineages
+MERS	mers
+mers	mers
 Moran	moran
 moran	moran
 moran_exact	moran
@@ -61,6 +64,7 @@ reexports	reexports
 registerDoSEQ	reexports
 resizingTextGrob	internals
 runLBDP	lbdp
+runMERS	mers
 runMoran	moran
 runS2I2R2	s2i2r2
 runSEIR	seir

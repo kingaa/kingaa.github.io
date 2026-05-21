@@ -1,0 +1,177 @@
+<!DOCTYPE html><html><head><title>R: Two-host infection model with spillover and demography. Hosts...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script>
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>mers {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Two-host infection model with spillover and demography.
+Hosts are culled upon sampling.</h2>
+
+<h3>Description</h3>
+
+<p>The population is structured by infection progression
+and host species.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>runMERS(
+  time,
+  t0 = 0,
+  Beta_cc = 4,
+  Beta_ch = 0,
+  Beta_hc = 0,
+  Beta_hh = 4,
+  gamma_c = 1,
+  gamma_h = 1,
+  chi_c = 1,
+  chi_h = 0,
+  Bc = 0,
+  Bh = 0,
+  Sc0 = 1,
+  Sh0 = 1,
+  Ic0 = 0.01,
+  Ih0 = 0,
+  Nc = 10000,
+  Nh = 10000
+)
+
+continueMERS(
+  object,
+  time,
+  Beta_cc = NA,
+  Beta_ch = NA,
+  Beta_hc = NA,
+  Beta_hh = NA,
+  gamma_c = NA,
+  gamma_h = NA,
+  chi_c = NA,
+  chi_h = NA,
+  Bc = NA,
+  Bh = NA
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table role = "presentation">
+<tr><td><code id="time">time</code></td>
+<td>
+<p>final time</p>
+</td></tr>
+<tr><td><code id="t0">t0</code></td>
+<td>
+<p>initial time</p>
+</td></tr>
+<tr><td><code id="Beta_cc">Beta_cc</code></td>
+<td>
+<p>transmission rate within camels</p>
+</td></tr>
+<tr><td><code id="Beta_ch">Beta_ch</code></td>
+<td>
+<p>transmission from human to camel</p>
+</td></tr>
+<tr><td><code id="Beta_hc">Beta_hc</code></td>
+<td>
+<p>transmission from camel to human</p>
+</td></tr>
+<tr><td><code id="Beta_hh">Beta_hh</code></td>
+<td>
+<p>transmission rate within humans</p>
+</td></tr>
+<tr><td><code id="gamma_c">gamma_c</code></td>
+<td>
+<p>removal rate in camels</p>
+</td></tr>
+<tr><td><code id="gamma_h">gamma_h</code></td>
+<td>
+<p>removal rate in humans</p>
+</td></tr>
+<tr><td><code id="chi_c">chi_c</code></td>
+<td>
+<p>per capita destructive sampling rate for camels</p>
+</td></tr>
+<tr><td><code id="chi_h">chi_h</code></td>
+<td>
+<p>per capita destructive sampling rate for humans</p>
+</td></tr>
+<tr><td><code id="Bc">Bc</code></td>
+<td>
+<p>gross birth rate for camels</p>
+</td></tr>
+<tr><td><code id="Bh">Bh</code></td>
+<td>
+<p>gross birth rate for humans</p>
+</td></tr>
+<tr><td><code id="Sc0">Sc0</code></td>
+<td>
+<p>initial susceptible fraction of camel population</p>
+</td></tr>
+<tr><td><code id="Sh0">Sh0</code></td>
+<td>
+<p>initial susceptible fraction of human population</p>
+</td></tr>
+<tr><td><code id="Ic0">Ic0</code></td>
+<td>
+<p>initial infected fraction of camel population</p>
+</td></tr>
+<tr><td><code id="Ih0">Ih0</code></td>
+<td>
+<p>initial infected fraction of human population</p>
+</td></tr>
+<tr><td><code id="Nc">Nc</code></td>
+<td>
+<p>camel population size</p>
+</td></tr>
+<tr><td><code id="Nh">Nh</code></td>
+<td>
+<p>human population size</p>
+</td></tr>
+<tr><td><code id="object">object</code></td>
+<td>
+<p>either the name of the model to simulate
+<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>runMERS</code> and <code>continueMERS</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;MERS&rdquo;.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More example genealogy processes:
+<code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
+<code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/s2i2r2.html">s2i2r2</a></code>,
+<code><a href="../../phylopomp/help/seir.html">seir</a></code>,
+<code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
+<code><a href="../../phylopomp/help/siir.html">siir</a></code>,
+<code><a href="../../phylopomp/help/simulate.html">simulate()</a></code>,
+<code><a href="../../phylopomp/help/sir.html">sir</a></code>,
+<code><a href="../../phylopomp/help/strains.html">strains</a></code>,
+<code><a href="../../phylopomp/help/twospecies.html">twospecies</a></code>,
+<code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
+</p>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

@@ -10,6 +10,8 @@ var hierarchy =
         [ "genealogy_t", "classgenealogy__t.html", null ]
       ] ]
     ] ],
+    [ "mers_parameters_t", "structmers__parameters__t.html", null ],
+    [ "mers_state_t", "structmers__state__t.html", null ],
     [ "moran_parameters_t", "structmoran__parameters__t.html", null ],
     [ "moran_state_t", "structmoran__state__t.html", null ],
     [ "POPN", null, [
@@ -18,6 +20,9 @@ var hierarchy =
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT >", "classpopul__proc__t.html", null ],
     [ "popul_proc_t< lbdp_state_t, lbdp_parameters_t, 4 >", "classpopul__proc__t.html", [
       [ "master_t< lbdp_proc_t, 1 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< mers_state_t, mers_parameters_t, 12 >", "classpopul__proc__t.html", [
+      [ "master_t< mers_proc_t, 2 >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< moran_state_t, moran_parameters_t, 2 >", "classpopul__proc__t.html", [
       [ "master_t< moran_proc_t, 1 >", "classmaster__t.html", null ]

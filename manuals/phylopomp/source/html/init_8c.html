@@ -142,9 +142,6 @@ Include dependency graph for init.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a888f6a962714e136419f7a5c0d6801bb" id="r_a888f6a962714e136419f7a5c0d6801bb"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888f6a962714e136419f7a5c0d6801bb">parse_newick</a> (SEXP, SEXP, SEXP)</td></tr>
 <tr class="separator:a888f6a962714e136419f7a5c0d6801bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93a0db6261e1745bbe36657127e7496f" id="r_a93a0db6261e1745bbe36657127e7496f"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93a0db6261e1745bbe36657127e7496f">newick</a> (SEXP, SEXP)</td></tr>
-<tr class="memdesc:a93a0db6261e1745bbe36657127e7496f"><td class="mdescLeft">&#160;</td><td class="mdescRight">tree in newick format  <br /></td></tr>
-<tr class="separator:a93a0db6261e1745bbe36657127e7496f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c6f0ea5016932d4927478ff1221a2c3" id="r_a9c6f0ea5016932d4927478ff1221a2c3"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6f0ea5016932d4927478ff1221a2c3">getInfo</a> (SEXP)</td></tr>
 <tr class="separator:a9c6f0ea5016932d4927478ff1221a2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53cc3c75e3f3d8b98487b7ffc21be4d2" id="r_a53cc3c75e3f3d8b98487b7ffc21be4d2"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53cc3c75e3f3d8b98487b7ffc21be4d2">genealSum</a> (SEXP)</td></tr>
@@ -162,6 +159,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acda54ddefdca73d032306849c9ec5f50" id="r_acda54ddefdca73d032306849c9ec5f50"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda54ddefdca73d032306849c9ec5f50">geneal</a> (SEXP)</td></tr>
 <tr class="memdesc:acda54ddefdca73d032306849c9ec5f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the bare genealogy  <br /></td></tr>
 <tr class="separator:acda54ddefdca73d032306849c9ec5f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c50b27c477770eba486e295240622f" id="r_aa6c50b27c477770eba486e295240622f"><td class="memItemLeft" align="right" valign="top">SEXP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6c50b27c477770eba486e295240622f">genealScaleShift</a> (SEXP, SEXP, SEXP)</td></tr>
+<tr class="memdesc:aa6c50b27c477770eba486e295240622f"><td class="mdescLeft">&#160;</td><td class="mdescRight">rescale and/or reset origin  <br /></td></tr>
+<tr class="separator:aa6c50b27c477770eba486e295240622f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97afe9dda4bc53cce88a8915998b2d75" id="r_a97afe9dda4bc53cce88a8915998b2d75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97afe9dda4bc53cce88a8915998b2d75">DECLARATIONS</a> (LBDP)</td></tr>
 <tr class="separator:a97afe9dda4bc53cce88a8915998b2d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4b458bab259f7d3e14d74052917d6c4" id="r_ac4b458bab259f7d3e14d74052917d6c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b458bab259f7d3e14d74052917d6c4">DECLARATIONS</a> (MERS)</td></tr>
@@ -307,16 +307,6 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="681,380,704,393,740,426,770,464,811,533,807,536,766,467,736,430,701,398,678,385"/>
 <area shape="poly" title=" " alt="" coords="473,520,556,526,556,532,472,525"/>
 <area shape="poly" title=" " alt="" coords="474,527,502,540,518,556,526,573,534,588,549,601,579,612,611,616,643,616,675,612,735,596,784,576,786,580,737,601,676,617,643,621,610,622,578,617,547,606,529,592,521,575,513,559,498,544,472,532"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="init_8c_a01140b551ed796005522e975acd665dc_icgraph.png" border="0" usemap="#ainit_8c_a01140b551ed796005522e975acd665dc_icgraph" alt=""/></div>
-<map name="ainit_8c_a01140b551ed796005522e975acd665dc_icgraph" id="ainit_8c_a01140b551ed796005522e975acd665dc_icgraph">
-<area shape="rect" title="curtail the given genealogy" alt="" coords="240,5,303,31"/>
-<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="5,5,192,31"/>
-<area shape="poly" title=" " alt="" coords="226,21,192,21,192,15,226,15"/>
 </map>
 </div>
 
@@ -660,14 +650,14 @@ Here is the caller graph for this function:</div>
 
 <p>extract the bare genealogy </p>
 
-<p class="definition">Definition at line <a class="el" href="geneal_8cc_source.html#l00012">12</a> of file <a class="el" href="geneal_8cc_source.html">geneal.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                           {</div>
-<div class="line"><span class="lineno">   13</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
-<div class="line"><span class="lineno">   14</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(<a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a>(State)));</div>
-<div class="line"><span class="lineno">   15</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
-<div class="line"><span class="lineno">   16</span>    UNPROTECT(1);</div>
-<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
-<div class="line"><span class="lineno">   18</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="geneal_8cc_source.html#l00011">11</a> of file <a class="el" href="geneal_8cc_source.html">geneal.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                           {</div>
+<div class="line"><span class="lineno">   12</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   13</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(<a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a>(State)));</div>
+<div class="line"><span class="lineno">   14</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
+<div class="line"><span class="lineno">   15</span>    UNPROTECT(1);</div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   17</span>  }</div>
 <div class="ttc" id="aseirs__pomp_8c_html_af933676109efed7ab34cea71d748a517"><div class="ttname"><a href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a></div><div class="ttdeci">#define S</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00037">seirs_pomp.c:37</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -677,6 +667,64 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="extract the bare genealogy" alt="" coords="5,5,72,31"/>
 <area shape="rect" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="120,5,179,31"/>
 <area shape="poly" title=" " alt="" coords="72,15,106,15,106,21,72,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6c50b27c477770eba486e295240622f" name="aa6c50b27c477770eba486e295240622f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c50b27c477770eba486e295240622f">&#9670;&#160;</a></span>genealScaleShift()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SEXP genealScaleShift </td>
+          <td>(</td>
+          <td class="paramtype">SEXP</td>          <td class="paramname"><span class="paramname"><em>State</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SEXP</td>          <td class="paramname"><span class="paramname"><em>Scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SEXP</td>          <td class="paramname"><span class="paramname"><em>Origin</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>rescale and/or reset origin </p>
+
+<p class="definition">Definition at line <a class="el" href="scale_8cc_source.html#l00011">11</a> of file <a class="el" href="scale_8cc_source.html">scale.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                              {</div>
+<div class="line"><span class="lineno">   12</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> A(State);</div>
+<div class="line"><span class="lineno">   13</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> scale = *REAL(AS_NUMERIC(Scale));</div>
+<div class="line"><span class="lineno">   14</span>    <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> origin = *REAL(AS_NUMERIC(Origin));</div>
+<div class="line"><span class="lineno">   15</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   16</span>    A.time_rescale(scale,origin);</div>
+<div class="line"><span class="lineno">   17</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A));</div>
+<div class="line"><span class="lineno">   18</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
+<div class="line"><span class="lineno">   19</span>    UNPROTECT(1);</div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   21</span>  }</div>
+<div class="ttc" id="ainternal_8h_html_af450b2ac2081b900cfe5a2e5b5530357"><div class="ttname"><a href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a></div><div class="ttdeci">double slate_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00053">internal.h:53</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="init_8c_aa6c50b27c477770eba486e295240622f_cgraph.png" border="0" usemap="#ainit_8c_aa6c50b27c477770eba486e295240622f_cgraph" alt=""/></div>
+<map name="ainit_8c_aa6c50b27c477770eba486e295240622f_cgraph" id="ainit_8c_aa6c50b27c477770eba486e295240622f_cgraph">
+<area shape="rect" title="rescale and/or reset origin" alt="" coords="5,31,136,56"/>
+<area shape="rect" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc" title="binary serialization" alt="" coords="252,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="136,33,238,20,239,26,136,38"/>
+<area shape="rect" href="classgenealogy__t.html#a07f3ff67bfcf61c7681d538cb870d5eb" title=" " alt="" coords="184,55,379,80"/>
+<area shape="poly" title=" " alt="" coords="136,48,171,52,170,57,136,53"/>
+<area shape="rect" href="classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="441,29,581,55"/>
+<area shape="poly" title=" " alt="" coords="378,54,427,49,427,54,379,59"/>
+<area shape="rect" href="classgenealogy__t.html#a90f523b2b557d1a135851a3fc0999a40" title="view/set zero time." alt="" coords="427,79,595,104"/>
+<area shape="poly" title=" " alt="" coords="379,75,413,78,412,84,379,80"/>
 </map>
 </div>
 
@@ -699,21 +747,21 @@ Here is the call graph for this function:</div>
 
 <p>combine genealogies </p>
 
-<p class="definition">Definition at line <a class="el" href="sum_8cc_source.html#l00050">50</a> of file <a class="el" href="sum_8cc_source.html">sum.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                             {</div>
-<div class="line"><span class="lineno">   51</span>    args = CDR(args);</div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> A(R_NegInf); <span class="comment">// a &quot;null&quot; genealogy on [-inf,inf]</span></div>
-<div class="line"><span class="lineno">   53</span>    A.time() = R_PosInf;</div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">while</span> (args != R_NilValue) {</div>
-<div class="line"><span class="lineno">   55</span>      A += CAR(args);</div>
-<div class="line"><span class="lineno">   56</span>      args = CDR(args);</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="line"><span class="lineno">   58</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
-<div class="line"><span class="lineno">   59</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A));</div>
-<div class="line"><span class="lineno">   60</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
-<div class="line"><span class="lineno">   61</span>    UNPROTECT(1);</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
-<div class="line"><span class="lineno">   63</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="sum_8cc_source.html#l00049">49</a> of file <a class="el" href="sum_8cc_source.html">sum.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                             {</div>
+<div class="line"><span class="lineno">   50</span>    args = CDR(args);</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> A(R_PosInf); <span class="comment">// a &quot;null&quot; genealogy</span></div>
+<div class="line"><span class="lineno">   52</span>    A.time() = R_NegInf;</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">while</span> (args != R_NilValue) {</div>
+<div class="line"><span class="lineno">   54</span>      A += CAR(args);</div>
+<div class="line"><span class="lineno">   55</span>      args = CDR(args);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   58</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A));</div>
+<div class="line"><span class="lineno">   59</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
+<div class="line"><span class="lineno">   60</span>    UNPROTECT(1);</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -988,82 +1036,6 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="911,656,1016,632,1017,638,912,661"/>
 <area shape="poly" title=" " alt="" coords="1141,604,1232,582,1233,587,1142,609"/>
 <area shape="poly" title=" " alt="" coords="1165,617,1232,617,1232,622,1165,622"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a93a0db6261e1745bbe36657127e7496f" name="a93a0db6261e1745bbe36657127e7496f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93a0db6261e1745bbe36657127e7496f">&#9670;&#160;</a></span>newick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SEXP newick </td>
-          <td>(</td>
-          <td class="paramtype">SEXP</td>          <td class="paramname"><span class="paramname"><em>State</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SEXP</td>          <td class="paramname"><span class="paramname"><em>Extended</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>tree in newick format </p>
-
-<p class="definition">Definition at line <a class="el" href="newick_8cc_source.html#l00118">118</a> of file <a class="el" href="newick_8cc_source.html">newick.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  118</span>                                          {</div>
-<div class="line"><span class="lineno">  119</span>    PROTECT(Extended = AS_LOGICAL(Extended));</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordtype">bool</span> extended = *LOGICAL(Extended);</div>
-<div class="line"><span class="lineno">  121</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> A(State);</div>
-<div class="line"><span class="lineno">  122</span>    UNPROTECT(1);</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> mkString(A.newick(extended).c_str());</div>
-<div class="line"><span class="lineno">  124</span>  }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="init_8c_a93a0db6261e1745bbe36657127e7496f_cgraph.png" border="0" usemap="#ainit_8c_a93a0db6261e1745bbe36657127e7496f_cgraph" alt=""/></div>
-<map name="ainit_8c_a93a0db6261e1745bbe36657127e7496f_cgraph" id="ainit_8c_a93a0db6261e1745bbe36657127e7496f_cgraph">
-<area shape="rect" title="tree in newick format" alt="" coords="5,135,73,161"/>
-<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="121,135,277,161"/>
-<area shape="poly" title=" " alt="" coords="74,145,107,145,107,151,74,151"/>
-<area shape="rect" href="classgenealogy__t.html#a516254565a8b30fd2ba3306290e1d923" title="number of demes" alt="" coords="332,61,487,86"/>
-<area shape="poly" title=" " alt="" coords="229,133,324,95,347,87,349,92,326,100,231,138"/>
-<area shape="rect" href="classnodeseq__t.html#a1cc5a9d9c0e36bccad0cbf98867b90d2" title="put genealogy at time t into Newick format." alt="" coords="338,110,481,135"/>
-<area shape="poly" title=" " alt="" coords="278,136,324,130,325,135,278,141"/>
-<area shape="rect" href="classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2" title="view/set current time." alt="" coords="339,159,479,185"/>
-<area shape="poly" title=" " alt="" coords="278,154,326,160,325,165,278,160"/>
-<area shape="rect" href="classgenealogy__t.html#a90f523b2b557d1a135851a3fc0999a40" title="view/set zero time." alt="" coords="325,209,493,234"/>
-<area shape="poly" title=" " alt="" coords="233,158,326,193,353,202,351,207,324,198,231,163"/>
-<area shape="rect" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="542,42,661,67"/>
-<area shape="poly" title=" " alt="" coords="454,107,492,95,556,70,558,75,494,100,455,112"/>
-<area shape="rect" href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8" title="Newick&#45;format output." alt="" coords="541,179,661,205"/>
-<area shape="poly" title=" " alt="" coords="459,133,494,144,561,171,559,176,492,149,457,138"/>
-<area shape="rect" href="classnode__t.html#af2f3244314d00462007ba1853d60f3c6" title=" " alt="" coords="892,79,1035,105"/>
-<area shape="poly" title=" " alt="" coords="629,39,666,25,709,13,777,3,807,5,845,13,872,24,897,38,939,68,936,72,894,42,869,29,843,19,807,10,777,8,710,19,668,30,631,44"/>
-<area shape="poly" title=" " alt="" coords="614,177,654,145,680,128,708,115,751,102,795,94,878,87,878,92,795,99,752,107,710,120,683,133,657,149,618,181"/>
-<area shape="poly" title=" " alt="" coords="572,181,566,171,570,161,582,155,601,153,625,156,635,165,632,169,623,161,601,158,583,160,574,165,572,170,577,178"/>
-<area shape="rect" href="classball__t.html#af54ab028113130c4760856b06a31ad8b" title="a child is the owner of a green ball" alt="" coords="728,130,825,155"/>
-<area shape="poly" title=" " alt="" coords="646,177,717,157,718,162,648,182"/>
-<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="721,179,832,205"/>
-<area shape="poly" title=" " alt="" coords="662,189,708,189,708,195,662,195"/>
-<area shape="rect" href="newick_8cc.html#a3d2deed05263df7619aee7b61b9f31f1" title=" " alt="" coords="908,329,1019,354"/>
-<area shape="poly" title=" " alt="" coords="612,203,648,258,677,288,711,312,756,330,804,340,851,344,895,345,895,350,851,350,803,345,754,335,708,317,673,292,644,262,607,206"/>
-<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="717,278,837,303"/>
-<area shape="poly" title=" " alt="" coords="620,203,660,232,711,263,726,270,724,275,708,268,657,236,617,207"/>
-<area shape="rect" href="classnode__t.html#af3d818f04a9a0db70752922a54e984be" title="number of descendants" alt="" coords="709,229,844,254"/>
-<area shape="poly" title=" " alt="" coords="648,202,718,222,717,227,646,207"/>
-<area shape="rect" href="classball__t.html#a7636ccfa9e2237634745726cc3d05dec" title=" " alt="" coords="721,379,833,405"/>
-<area shape="poly" title=" " alt="" coords="610,204,646,275,675,319,711,358,729,371,726,375,708,362,671,322,642,278,606,206"/>
-<area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="717,29,836,54"/>
-<area shape="poly" title=" " alt="" coords="610,177,649,128,677,98,708,71,729,58,732,62,711,75,680,102,653,131,614,181"/>
-<area shape="poly" title=" " alt="" coords="818,226,843,214,873,190,900,164,942,114,947,118,904,168,876,195,845,218,821,231"/>
-<area shape="poly" title=" " alt="" coords="824,377,902,355,903,360,825,382"/>
-<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="912,379,1015,405"/>
-<area shape="poly" title=" " alt="" coords="833,389,898,389,898,395,833,395"/>
 </map>
 </div>
 
@@ -1362,16 +1334,17 @@ Here is the call graph for this function:</div>
 <div class="line">  <a class="code hl_define" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(TwoSpecies),</div>
 <div class="line">  <a class="code hl_define" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(TwoUndead),</div>
 <div class="line">  {<span class="stringliteral">&quot;parse_newick&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="#a888f6a962714e136419f7a5c0d6801bb">parse_newick</a>, 3},</div>
-<div class="line">  {<span class="stringliteral">&quot;newick&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="generics_8h.html#aef6b5ca9d2f62092475f6f42dc3cb887">newick</a>, 2},</div>
 <div class="line">  {<span class="stringliteral">&quot;curtail&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5">curtail</a>, 3},</div>
 <div class="line">  {<span class="stringliteral">&quot;yaml&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a>, 1},</div>
 <div class="line">  {<span class="stringliteral">&quot;gendat&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6">gendat</a>, 2},</div>
 <div class="line">  {<span class="stringliteral">&quot;geneal&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="geneal_8cc.html#a199e9712832f618a14fa704dcb5c9e17">geneal</a>, 1},</div>
+<div class="line">  {<span class="stringliteral">&quot;geneal_scale&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="#aa6c50b27c477770eba486e295240622f">genealScaleShift</a>, 3},</div>
 <div class="line">  {NULL, NULL, 0}</div>
 <div class="line">}</div>
 <div class="ttc" id="acurtail_8cc_html_a1c9f6df5019f0b67b46a17498a26cdf5"><div class="ttname"><a href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5">curtail</a></div><div class="ttdeci">SEXP curtail(SEXP State, SEXP Time, SEXP Troot)</div><div class="ttdoc">curtail the given genealogy</div><div class="ttdef"><b>Definition</b> <a href="curtail_8cc_source.html#l00089">curtail.cc:89</a></div></div>
-<div class="ttc" id="ageneal_8cc_html_a199e9712832f618a14fa704dcb5c9e17"><div class="ttname"><a href="geneal_8cc.html#a199e9712832f618a14fa704dcb5c9e17">geneal</a></div><div class="ttdeci">SEXP geneal(SEXP State)</div><div class="ttdoc">extract the bare genealogy</div><div class="ttdef"><b>Definition</b> <a href="geneal_8cc_source.html#l00012">geneal.cc:12</a></div></div>
+<div class="ttc" id="ageneal_8cc_html_a199e9712832f618a14fa704dcb5c9e17"><div class="ttname"><a href="geneal_8cc.html#a199e9712832f618a14fa704dcb5c9e17">geneal</a></div><div class="ttdeci">SEXP geneal(SEXP State)</div><div class="ttdoc">extract the bare genealogy</div><div class="ttdef"><b>Definition</b> <a href="geneal_8cc_source.html#l00011">geneal.cc:11</a></div></div>
 <div class="ttc" id="ainit_8c_html_a888f6a962714e136419f7a5c0d6801bb"><div class="ttname"><a href="#a888f6a962714e136419f7a5c0d6801bb">parse_newick</a></div><div class="ttdeci">SEXP parse_newick(SEXP, SEXP, SEXP)</div><div class="ttdef"><b>Definition</b> <a href="parse_8cc_source.html#l00259">parse.cc:259</a></div></div>
+<div class="ttc" id="ainit_8c_html_aa6c50b27c477770eba486e295240622f"><div class="ttname"><a href="#aa6c50b27c477770eba486e295240622f">genealScaleShift</a></div><div class="ttdeci">SEXP genealScaleShift(SEXP, SEXP, SEXP)</div><div class="ttdoc">rescale and/or reset origin</div><div class="ttdef"><b>Definition</b> <a href="scale_8cc_source.html#l00011">scale.cc:11</a></div></div>
 <div class="ttc" id="ainit_8h_html_a06d5e17211e44605874f59f330a17c5b"><div class="ttname"><a href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a></div><div class="ttdeci">#define METHODS(X)</div><div class="ttdef"><b>Definition</b> <a href="init_8h_source.html#l00013">init.h:13</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00033">33</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
@@ -1388,11 +1361,11 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   43</span>  <a class="code hl_define" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(TwoSpecies),</div>
 <div class="line"><span class="lineno">   44</span>  <a class="code hl_define" href="init_8h.html#a06d5e17211e44605874f59f330a17c5b">METHODS</a>(TwoUndead),</div>
 <div class="line"><span class="lineno">   45</span>  {<span class="stringliteral">&quot;parse_newick&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="#a888f6a962714e136419f7a5c0d6801bb">parse_newick</a>, 3},</div>
-<div class="line"><span class="lineno">   46</span>  {<span class="stringliteral">&quot;newick&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="generics_8h.html#aef6b5ca9d2f62092475f6f42dc3cb887">newick</a>, 2},</div>
-<div class="line"><span class="lineno">   47</span>  {<span class="stringliteral">&quot;curtail&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5">curtail</a>, 3},</div>
-<div class="line"><span class="lineno">   48</span>  {<span class="stringliteral">&quot;yaml&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a>, 1},</div>
-<div class="line"><span class="lineno">   49</span>  {<span class="stringliteral">&quot;gendat&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6">gendat</a>, 2},</div>
-<div class="line"><span class="lineno">   50</span>  {<span class="stringliteral">&quot;geneal&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="geneal_8cc.html#a199e9712832f618a14fa704dcb5c9e17">geneal</a>, 1},</div>
+<div class="line"><span class="lineno">   46</span>  {<span class="stringliteral">&quot;curtail&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5">curtail</a>, 3},</div>
+<div class="line"><span class="lineno">   47</span>  {<span class="stringliteral">&quot;yaml&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="generics_8h.html#aa0dc1a38b4f1568720c53ba3fb48f693">yaml</a>, 1},</div>
+<div class="line"><span class="lineno">   48</span>  {<span class="stringliteral">&quot;gendat&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6">gendat</a>, 2},</div>
+<div class="line"><span class="lineno">   49</span>  {<span class="stringliteral">&quot;geneal&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="geneal_8cc.html#a199e9712832f618a14fa704dcb5c9e17">geneal</a>, 1},</div>
+<div class="line"><span class="lineno">   50</span>  {<span class="stringliteral">&quot;geneal_scale&quot;</span>, (DL_FUNC) &amp;<a class="code hl_function" href="#aa6c50b27c477770eba486e295240622f">genealScaleShift</a>, 3},</div>
 <div class="line"><span class="lineno">   51</span>  {NULL, NULL, 0}</div>
 <div class="line"><span class="lineno">   52</span>};</div>
 </div><!-- fragment -->
@@ -1423,7 +1396,7 @@ Here is the call graph for this function:</div>
 <div class="line">  {NULL, NULL, 0}</div>
 <div class="line">}</div>
 <div class="ttc" id="agetinfo_8cc_html_a8ff1a282de677306937f9bf16df322d7"><div class="ttname"><a href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7">getInfo</a></div><div class="ttdeci">SEXP getInfo(SEXP args)</div><div class="ttdef"><b>Definition</b> <a href="getinfo_8cc_source.html#l00019">getinfo.cc:19</a></div></div>
-<div class="ttc" id="ainit_8c_html_a53cc3c75e3f3d8b98487b7ffc21be4d2"><div class="ttname"><a href="#a53cc3c75e3f3d8b98487b7ffc21be4d2">genealSum</a></div><div class="ttdeci">SEXP genealSum(SEXP)</div><div class="ttdoc">combine genealogies</div><div class="ttdef"><b>Definition</b> <a href="sum_8cc_source.html#l00050">sum.cc:50</a></div></div>
+<div class="ttc" id="ainit_8c_html_a53cc3c75e3f3d8b98487b7ffc21be4d2"><div class="ttname"><a href="#a53cc3c75e3f3d8b98487b7ffc21be4d2">genealSum</a></div><div class="ttdeci">SEXP genealSum(SEXP)</div><div class="ttdoc">combine genealogies</div><div class="ttdef"><b>Definition</b> <a href="sum_8cc_source.html#l00049">sum.cc:49</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00054">54</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   54</span>                                            {</div>

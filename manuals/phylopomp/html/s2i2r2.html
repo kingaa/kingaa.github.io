@@ -79,60 +79,99 @@ continueS2I2R2(
 <table role = "presentation">
 <tr><td><code id="time">time</code></td>
 <td>
-<p>final time</p>
+<p>end timepoint of simulation</p>
 </td></tr>
 <tr><td><code id="t0">t0</code></td>
 <td>
-<p>initial time</p>
+<p>beginning timepoint of simulation</p>
 </td></tr>
-<tr><td><code id="Beta11">Beta11</code>, <code id="Beta22">Beta22</code></td>
+<tr><td><code id="Beta11">Beta11</code></td>
 <td>
-<p>transmission rates within species 1 and 2, respectively</p>
+<p>transmission rate within species 1</p>
 </td></tr>
 <tr><td><code id="Beta12">Beta12</code></td>
 <td>
 <p>transmission from species 2 to species 1</p>
 </td></tr>
-<tr><td><code id="gamma1">gamma1</code>, <code id="gamma2">gamma2</code></td>
+<tr><td><code id="Beta22">Beta22</code></td>
 <td>
-<p>recovery rates for species 1 and 2, respectively</p>
+<p>transmission rate within species 2</p>
 </td></tr>
-<tr><td><code id="psi1">psi1</code>, <code id="psi2">psi2</code></td>
+<tr><td><code id="gamma1">gamma1</code></td>
 <td>
-<p>per capita sampling rates</p>
+<p>species 1 recovery rate</p>
 </td></tr>
-<tr><td><code id="omega1">omega1</code>, <code id="omega2">omega2</code></td>
+<tr><td><code id="gamma2">gamma2</code></td>
 <td>
-<p>rates of waning of immunity</p>
+<p>species 2 recovery rate</p>
 </td></tr>
-<tr><td><code id="b1">b1</code>, <code id="b2">b2</code></td>
+<tr><td><code id="psi1">psi1</code></td>
 <td>
-<p>per capita birth rates</p>
+<p>per capita sampling rate for species 1</p>
 </td></tr>
-<tr><td><code id="d1">d1</code>, <code id="d2">d2</code></td>
+<tr><td><code id="psi2">psi2</code></td>
 <td>
-<p>per capita death rates</p>
+<p>per capita sampling rate for species 2</p>
 </td></tr>
-<tr><td><code id="iota1">iota1</code>, <code id="iota2">iota2</code></td>
+<tr><td><code id="omega1">omega1</code></td>
 <td>
-<p>infection importation rates</p>
+<p>rate of waning of immunity for species 1</p>
 </td></tr>
-<tr><td><code id="S1_0">S1_0</code>, <code id="S2_0">S2_0</code></td>
+<tr><td><code id="omega2">omega2</code></td>
 <td>
-<p>initial sizes of susceptible populations</p>
+<p>rate of waning of immunity for species 2</p>
 </td></tr>
-<tr><td><code id="I1_0">I1_0</code>, <code id="I2_0">I2_0</code></td>
+<tr><td><code id="b1">b1</code></td>
 <td>
-<p>initial sizes of infected populations</p>
+<p>per capita birth rate for species 1</p>
 </td></tr>
-<tr><td><code id="R1_0">R1_0</code>, <code id="R2_0">R2_0</code></td>
+<tr><td><code id="b2">b2</code></td>
 <td>
-<p>initial sizes of immune populations</p>
+<p>per capita birth rate for species 2</p>
+</td></tr>
+<tr><td><code id="d1">d1</code></td>
+<td>
+<p>per capita death rate for species 1</p>
+</td></tr>
+<tr><td><code id="d2">d2</code></td>
+<td>
+<p>per capita death rate for species 2</p>
+</td></tr>
+<tr><td><code id="iota1">iota1</code></td>
+<td>
+<p>imported infections for species 1</p>
+</td></tr>
+<tr><td><code id="iota2">iota2</code></td>
+<td>
+<p>imported infections for species 2</p>
+</td></tr>
+<tr><td><code id="S1_0">S1_0</code></td>
+<td>
+<p>initial size of species 1 susceptible population</p>
+</td></tr>
+<tr><td><code id="S2_0">S2_0</code></td>
+<td>
+<p>initial size of species 2 susceptible population</p>
+</td></tr>
+<tr><td><code id="I1_0">I1_0</code></td>
+<td>
+<p>initial size of species 1 infected population</p>
+</td></tr>
+<tr><td><code id="I2_0">I2_0</code></td>
+<td>
+<p>initial size of species 2 infected population</p>
+</td></tr>
+<tr><td><code id="R1_0">R1_0</code></td>
+<td>
+<p>initial size of species 1 immune population</p>
+</td></tr>
+<tr><td><code id="R2_0">R2_0</code></td>
+<td>
+<p>initial size of species 2 immune population</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
-<p>either the name of the model to simulate
-<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+<p>a previously computed simulation</p>
 </td></tr>
 </table>
 
@@ -159,40 +198,7 @@ continueS2I2R2(
 <code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
 </p>
 
-
-<h3>Examples</h3>
-
-<pre><code class='language-R'>runS2I2R2(
-  time=30,
-  iota2=0.01,Beta12=0.1,
-  I1_0=0,I2_0=0,
-  psi1=10,psi2=10,
-  omega1=0.2,
-  b2=0.02,d2=0.02
-) |&gt;
-  freeze(seed=847110120) -&gt; x
-
-plot_grid(
-  x |&gt;
-    plot(
-      obscure=FALSE,
-      palette=c("#000000ff","#440154ff","#21908cff","#ccccccff"),
-      legend.position="inside",
-      legend.position.inside=c(0.7,0.7)
-    ),
-  x |&gt;
-    lineages(obscure=FALSE) |&gt;
-    plot(
-      palette=c("#000000ff","#440154ff","#21908cff","#ccccccff"),
-      legend.position="none"
-    ),
-  ncol=1,
-  align="hv",
-  axis="b"
-)
-</code></pre>
-
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

@@ -51,7 +51,7 @@ library(cowplot)
 library(gifski)
 stopifnot(getRversion() >= "4.5")
 stopifnot(packageVersion("pomp")>="6.4")
-stopifnot(packageVersion("phylopomp")>="0.17.1")
+stopifnot(packageVersion("phylopomp")>="0.19")
 theme_set(theme_bw(base_family="serif"))
 options(dplyr.summarise.inform=FALSE)
 set.seed(1159254136)
@@ -79,7 +79,7 @@ for (k in seq_len(length(times))) {
   ggsave(
     filename=png_files[k],
     plot=plot(
-      x, t0=0, time=max(times),
+      x,
       points=TRUE, prune=FALSE, obscure=FALSE,
       palette=c(`0`="#000000",`1`="#ffcb05",`2`="#dddddd"),
       axis.line=element_line(color="white"),
@@ -89,7 +89,7 @@ for (k in seq_len(length(times))) {
       plot.background=element_rect(fill=NA,color=NA),
       panel.background=element_rect(fill=NA,color=NA)
     )+
-      expand_limits(x=times),
+      expand_limits(x=c(0,times)),
     device="png",dpi=100,
     height=4,width=6,units="in"
   )
@@ -129,7 +129,7 @@ for (k in seq_len(length(times))) {
   ggsave(
     filename=png_files[k],
     plot=plot(
-      x, t0=0, time=max(times),
+      x,
       points=TRUE, prune=FALSE, obscure=FALSE,
       palette=c(`0`="#000000",`1`="#ffcb05",`2`="#dddddd"),
       axis.line=element_line(color="white"),
@@ -139,7 +139,7 @@ for (k in seq_len(length(times))) {
       plot.background=element_rect(fill=NA,color=NA),
       panel.background=element_rect(fill=NA,color=NA)
     )+
-      expand_limits(x=times),
+      expand_limits(x=c(0,times)),
     device="png",dpi=100,
     height=4,width=6,units="in"
   )

@@ -151,17 +151,17 @@ function processMathHTML() {
   plot()
 
 runSIIR(Beta1=10,Beta2=8,
-  S0=200,I1_0=10,I2_0=8,R0=0,time=0,t0=-1) |&gt;
+  pop=220,S_0=200,I1_0=10,I2_0=8,R_0=0,time=0,t0=-1) |&gt;
   simulate(psi1=10,time=2) |&gt;
   plot(points=TRUE,obscure=FALSE)
 
 simulate("SIIR",Beta1=2,Beta2=50,gamma=1,psi1=2,
-  S0=300,I1_0=20,I2_0=2,time=5) |&gt;
+  pop=322,S_0=300,I1_0=20,I2_0=2,time=5) |&gt;
   lineages() |&gt;
   plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

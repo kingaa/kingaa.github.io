@@ -26,6 +26,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "pomplink.h", "pomplink_8h.html", "pomplink_8h" ],
     [ "popul_proc.h", "popul__proc_8h.html", "popul__proc_8h" ],
     [ "s2i2r2.cc", "s2i2r2_8cc.html", "s2i2r2_8cc" ],
+    [ "scale.cc", "scale_8cc.html", "scale_8cc" ],
     [ "seir.cc", "seir_8cc.html", "seir_8cc" ],
     [ "seirs_pomp.c", "seirs__pomp_8c.html", "seirs__pomp_8c" ],
     [ "si2r.cc", "si2r_8cc.html", "si2r_8cc" ],

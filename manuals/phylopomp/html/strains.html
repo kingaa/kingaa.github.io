@@ -20,7 +20,9 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>The three demes are three distinct pathogen strains that compete for susceptibles.
+<p>The three demes are three distinct pathogen strains that
+compete for susceptibles. Sampling is assumed destructive,
+i.e., sampled individuals are removed from the infectious pool.
 </p>
 
 
@@ -33,15 +35,15 @@ function processMathHTML() {
   Beta2 = 5,
   Beta3 = 5,
   gamma = 1,
-  psi1 = 1,
-  psi2 = 0,
-  psi3 = 0,
-  S0 = 1,
+  chi1 = 1,
+  chi2 = 0,
+  chi3 = 0,
+  pop = 1e+05,
+  S_0 = 0.8,
   I1_0 = 0.01,
   I2_0 = 0.01,
   I3_0 = 0.01,
-  R0 = 0,
-  pop = 10000
+  R_0 = 0.2
 )
 
 continueStrains(
@@ -51,9 +53,9 @@ continueStrains(
   Beta2 = NA,
   Beta3 = NA,
   gamma = NA,
-  psi1 = NA,
-  psi2 = NA,
-  psi3 = NA
+  chi1 = NA,
+  chi2 = NA,
+  chi3 = NA
 )
 
 strains_pomp(
@@ -62,15 +64,15 @@ strains_pomp(
   Beta2,
   Beta3,
   gamma,
-  psi1,
-  psi2,
-  psi3,
+  chi1,
+  chi2,
+  chi3,
   pop,
-  S0,
+  S_0,
   I1_0,
   I2_0,
   I3_0,
-  R0
+  R_0
 )
 </code></pre>
 
@@ -80,36 +82,67 @@ strains_pomp(
 <table role = "presentation">
 <tr><td><code id="time">time</code></td>
 <td>
-<p>final time</p>
+<p>end timepoint of simulation</p>
 </td></tr>
 <tr><td><code id="t0">t0</code></td>
 <td>
-<p>initial time</p>
+<p>beginning timepoint of simulation</p>
 </td></tr>
-<tr><td><code id="Beta1">Beta1</code>, <code id="Beta2">Beta2</code>, <code id="Beta3">Beta3</code></td>
+<tr><td><code id="Beta1">Beta1</code></td>
 <td>
-<p>transmission rate for strains 1, 2, 3, respectively</p>
+<p>transmission rate for strain 1</p>
+</td></tr>
+<tr><td><code id="Beta2">Beta2</code></td>
+<td>
+<p>transmission rate for strain 2</p>
+</td></tr>
+<tr><td><code id="Beta3">Beta3</code></td>
+<td>
+<p>transmission rate for strain 3</p>
 </td></tr>
 <tr><td><code id="gamma">gamma</code></td>
 <td>
 <p>recovery rate</p>
 </td></tr>
-<tr><td><code id="psi1">psi1</code>, <code id="psi2">psi2</code>, <code id="psi3">psi3</code></td>
+<tr><td><code id="chi1">chi1</code></td>
 <td>
-<p>sampling rates</p>
+<p>(destructive) sampling rate for strain 1</p>
 </td></tr>
-<tr><td><code id="S0">S0</code>, <code id="I1_0">I1_0</code>, <code id="I2_0">I2_0</code>, <code id="I3_0">I3_0</code>, <code id="R0">R0</code></td>
+<tr><td><code id="chi2">chi2</code></td>
 <td>
-<p>initial conditions; non-negative numbers that specify the relative occupancies of the compartments at the inital time.</p>
+<p>(destructive) sampling rate for strain 2</p>
+</td></tr>
+<tr><td><code id="chi3">chi3</code></td>
+<td>
+<p>(destructive) sampling rate for strain 3</p>
 </td></tr>
 <tr><td><code id="pop">pop</code></td>
 <td>
-<p>host population size</p>
+<p>population size</p>
+</td></tr>
+<tr><td><code id="S_0">S_0</code></td>
+<td>
+<p>initial susceptible fraction</p>
+</td></tr>
+<tr><td><code id="I1_0">I1_0</code></td>
+<td>
+<p>initial fraction of population infected by strain 1</p>
+</td></tr>
+<tr><td><code id="I2_0">I2_0</code></td>
+<td>
+<p>initial fraction of population infected by strain 2</p>
+</td></tr>
+<tr><td><code id="I3_0">I3_0</code></td>
+<td>
+<p>initial fraction of population infected by strain 2</p>
+</td></tr>
+<tr><td><code id="R_0">R_0</code></td>
+<td>
+<p>initial fraction of population immune</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
-<p>either the name of the model to simulate
-<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+<p>a previously computed simulation</p>
 </td></tr>
 <tr><td><code id="x">x</code></td>
 <td>
@@ -148,7 +181,7 @@ strains_pomp(
 <code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
 </p>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

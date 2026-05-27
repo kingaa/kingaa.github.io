@@ -185,21 +185,21 @@ Functions</h2></td></tr>
 
 <p>combine genealogies </p>
 
-<p class="definition">Definition at line <a class="el" href="sum_8cc_source.html#l00050">50</a> of file <a class="el" href="sum_8cc_source.html">sum.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>                             {</div>
-<div class="line"><span class="lineno">   51</span>    args = CDR(args);</div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> A(R_NegInf); <span class="comment">// a &quot;null&quot; genealogy on [-inf,inf]</span></div>
-<div class="line"><span class="lineno">   53</span>    A.time() = R_PosInf;</div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">while</span> (args != R_NilValue) {</div>
-<div class="line"><span class="lineno">   55</span>      A += CAR(args);</div>
-<div class="line"><span class="lineno">   56</span>      args = CDR(args);</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
-<div class="line"><span class="lineno">   58</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
-<div class="line"><span class="lineno">   59</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A));</div>
-<div class="line"><span class="lineno">   60</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
-<div class="line"><span class="lineno">   61</span>    UNPROTECT(1);</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
-<div class="line"><span class="lineno">   63</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="sum_8cc_source.html#l00049">49</a> of file <a class="el" href="sum_8cc_source.html">sum.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                             {</div>
+<div class="line"><span class="lineno">   50</span>    args = CDR(args);</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> A(R_PosInf); <span class="comment">// a &quot;null&quot; genealogy</span></div>
+<div class="line"><span class="lineno">   52</span>    A.time() = R_NegInf;</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">while</span> (args != R_NilValue) {</div>
+<div class="line"><span class="lineno">   54</span>      A += CAR(args);</div>
+<div class="line"><span class="lineno">   55</span>      args = CDR(args);</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+<div class="line"><span class="lineno">   57</span>    SEXP <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   58</span>    PROTECT(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a> = <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(A));</div>
+<div class="line"><span class="lineno">   59</span>    SET_ATTR(<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>,install(<span class="stringliteral">&quot;class&quot;</span>),mkString(<span class="stringliteral">&quot;gpgen&quot;</span>));</div>
+<div class="line"><span class="lineno">   60</span>    UNPROTECT(1);</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
 <div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00019">genealogy.h:19</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition</b> <a href="generics_8h_source.html#l00033">generics.h:33</a></div></div>
 <div class="ttc" id="aseirs__pomp_8c_html_af933676109efed7ab34cea71d748a517"><div class="ttname"><a href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a></div><div class="ttdeci">#define S</div><div class="ttdef"><b>Definition</b> <a href="seirs__pomp_8c_source.html#l00037">seirs_pomp.c:37</a></div></div>

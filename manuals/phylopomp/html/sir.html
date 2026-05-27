@@ -29,27 +29,14 @@ function processMathHTML() {
 <pre><code class='language-R'>runSIR(
   time,
   t0 = 0,
-  Beta = 2,
+  Beta = 4,
   gamma = 1,
   psi = 1,
   omega = 0,
-  S0 = 100,
-  I0 = 2,
-  R0 = 0,
-  pop = 102
-)
-
-runSIRS(
-  time,
-  t0 = 0,
-  Beta = 2,
-  gamma = 1,
-  psi = 1,
-  omega = 0,
-  S0 = 100,
-  I0 = 2,
-  R0 = 0,
-  pop = 102
+  pop = 100,
+  S0 = 0.95,
+  I0 = 0.05,
+  R0 = 0
 )
 
 continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
@@ -57,14 +44,14 @@ continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
 runSIRS(
   time,
   t0 = 0,
-  Beta = 2,
+  Beta = 4,
   gamma = 1,
   psi = 1,
   omega = 0,
-  S0 = 100,
-  I0 = 2,
-  R0 = 0,
-  pop = 102
+  pop = 100,
+  S0 = 0.95,
+  I0 = 0.05,
+  R0 = 0
 )
 
 continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
@@ -80,41 +67,47 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, pop)
 <table role = "presentation">
 <tr><td><code id="time">time</code></td>
 <td>
-<p>final time</p>
+<p>end timepoint of simulation</p>
 </td></tr>
 <tr><td><code id="t0">t0</code></td>
 <td>
-<p>initial time</p>
+<p>beginning timepoint of simulation</p>
 </td></tr>
 <tr><td><code id="Beta">Beta</code></td>
 <td>
-<p>transmission rate.</p>
+<p>transmission rate</p>
 </td></tr>
 <tr><td><code id="gamma">gamma</code></td>
 <td>
-<p>recovery rate.</p>
+<p>recovery rate</p>
 </td></tr>
 <tr><td><code id="psi">psi</code></td>
 <td>
-<p>sampling rate.</p>
+<p>per capita (nondestructive) sampling rate</p>
 </td></tr>
 <tr><td><code id="omega">omega</code></td>
 <td>
-<p>immunity waning rate</p>
-</td></tr>
-<tr><td><code id="S0">S0</code>, <code id="I0">I0</code>, <code id="R0">R0</code></td>
-<td>
-<p>initial conditions;
-non-negative numbers that specify the relative occupancies of the compartments at the inital time.</p>
+<p>rate of waning of immunity</p>
 </td></tr>
 <tr><td><code id="pop">pop</code></td>
 <td>
-<p>host population size</p>
+<p>size of population</p>
+</td></tr>
+<tr><td><code id="S0">S0</code></td>
+<td>
+<p>initial size of susceptible population</p>
+</td></tr>
+<tr><td><code id="I0">I0</code></td>
+<td>
+<p>initial size of infected population</p>
+</td></tr>
+<tr><td><code id="R0">R0</code></td>
+<td>
+<p>initial size of immune population</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
-<p>either the name of the model to simulate
-<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+<p>a previously computed simulation</p>
 </td></tr>
 <tr><td><code id="x">x</code></td>
 <td>
@@ -164,22 +157,22 @@ non-negative numbers that specify the relative occupancies of the compartments a
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>simulate("SIR",Beta=2,gamma=1,psi=2,S0=1000,I0=5,time=5) |&gt;
+<pre><code class='language-R'>simulate("SIR",Beta=2,gamma=1,psi=2,pop=1000,I0=0.005,time=5) |&gt;
   simulate(Beta=5,gamma=2,time=10,psi=3) |&gt;
   plot()
 
-runSIR(Beta=3,gamma=1,psi=2,S0=20,I0=5,R0=0,time=5,t0=-1) |&gt;
+runSIR(Beta=3,gamma=1,psi=2,pop=25,S0=0.8,I0=0.2,R0=0,time=5,t0=-1) |&gt;
   plot(points=TRUE)
 
-runSIR(Beta=3,gamma=0.1,psi=0.2,S0=100,I0=5,R0=0,time=2,t0=0) -&gt; x
+runSIR(Beta=3,gamma=0.1,psi=0.2,pop=100,S0=1,I0=0.05,R0=0,time=2,t0=0) -&gt; x
 plot_grid(plotlist=list(plot(x,points=TRUE),diagram(x)),
   ncol=1,rel_heights=c(4,1))
 
-simulate("SIRS",omega=1,time=20,I0=4) |&gt; plot()
-simulate("SIRS",omega=1,time=20,I0=4) |&gt; lineages() |&gt; plot()
+simulate("SIRS",omega=1,time=20,I0=0.05) |&gt; plot()
+simulate("SIRS",omega=1,time=20,I0=0.05) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

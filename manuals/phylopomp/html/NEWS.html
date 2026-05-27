@@ -18,11 +18,28 @@ function processMathHTML() {
 
 <h2>News for package &lsquo;phylopomp&rsquo;</h2>
 
-<h3>Changes in <span class="pkg">phylopomp</span> version 0.18.2</h3>
+<h3>Changes in <span class="pkg">phylopomp</span> version 0.19</h3>
 
 
 <ul>
+<li><p> Breaking changes in the parameterizations of the <code>SEIR</code>, <code>SIIR</code>, <code>SIR</code>, and <code>Strains</code> models.
+See the manual pages for details.
+</p>
+</li>
+<li><p> The new function <code>geneal_scale</code> allows rescaling and/or shifting of a genealogy's time-scale.
+</p>
+</li>
+<li><p> The behavior of the <code>geneal_sum</code> function and the genealogy-addition operator (<code>+</code>) have changed.
+The sum is now inclusive rather than exclusive:
+it expands the time-interval as needed.
+<strong>NB:</strong> this can have unintended consequences.
+</p>
+</li>
 <li><p> There is a new model, <code>MERS</code>.
+</p>
+</li>
+<li><p> The <code>SI2R</code> model has been completely changed.
+It now features two demes, one of which transmits at a rate that is a multiple of the other.
 </p>
 </li>
 <li><p> In the <code>SI2R</code> model, the sampling is assumed to be destructive.
@@ -32,17 +49,6 @@ function processMathHTML() {
 </p>
 </li>
 <li><p> Improvements to unit testing.
-</p>
-</li></ul>
-
-
-
-<h3>Changes in <span class="pkg">phylopomp</span> version 0.18.1</h3>
-
-
-<ul>
-<li><p> The <code>SI2R</code> model has been completely changed.
-It now features two demes, one of which transmits at a rate that is a multiple of the other.
 </p>
 </li></ul>
 

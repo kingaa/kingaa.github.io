@@ -1,7 +1,7 @@
 var searchData=
 [
   ['e_0',['E',['../structseir__state__t.html#afcae6a186f661183467c78387fccf594',1,'seir_state_t::E'],['../seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d',1,'E:&#160;seirs_pomp.c']]],
-  ['e0_1',['E0',['../structseir__parameters__t.html#a7f388c708b04d3e6969bef7a4e67ff1c',1,'seir_parameters_t::E0'],['../seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e',1,'E0:&#160;seirs_pomp.c']]],
+  ['e0_1',['E0',['../structseir__parameters__t.html#a7e7c414ef890c50a9cd34e0a503f476c',1,'seir_parameters_t::E0'],['../seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e',1,'E0:&#160;seirs_pomp.c']]],
   ['ell_2',['ell',['../lbdp__pomp_8c.html#a9d5bb438b2c23069ed9c406cdf838d7c',1,'lbdp_pomp.c']]],
   ['ell1_3',['ell1',['../twospecies__pomp_8c.html#a0f3b6232d0c923c0a983b94ca83312f2',1,'twospecies_pomp.c']]],
   ['ell2_4',['ell2',['../twospecies__pomp_8c.html#ae8105487113b8b3c420017ca337fc805',1,'twospecies_pomp.c']]],

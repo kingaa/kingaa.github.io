@@ -1,0 +1,74 @@
+<!DOCTYPE html><html><head><title>R: Rescale and/or shift time.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script>
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>geneal_scale {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Rescale and/or shift time.</h2>
+
+<h3>Description</h3>
+
+<p>Time-rescaling and/or shifting.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>geneal_scale(x, scale, origin = 0)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table role = "presentation">
+<tr><td><code id="x">x</code></td>
+<td>
+<p>genealogy to be scaled</p>
+</td></tr>
+<tr><td><code id="scale">scale</code>, <code id="origin">origin</code></td>
+<td>
+<p>scalars</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>A linear transformation is applied to the genealogy's time-scale.
+Specifically, if <code class="reqn">t</code> is the old time and <code class="reqn">t'</code> the new time,
+then <code class="reqn">t' = a (t - b)</code> where <code class="reqn">a=</code><code>scale</code> and
+<code class="reqn">b=</code><code>origin</code>.
+</p>
+
+
+<h3>Value</h3>
+
+<p>modified genealogy
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>library(ggplot2)
+
+runSEIR(t0=0,time=3,pop=200,E0=0.02,I0=0) -&gt; x
+geneal_scale(x,365,3) -&gt; y
+plot_grid(plot(x),plot(y),ncol=1)
+</code></pre>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

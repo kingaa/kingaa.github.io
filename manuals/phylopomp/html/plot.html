@@ -96,20 +96,20 @@ If it is a vector, it should have at least as many elements as there are demes i
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>simulate("SEIR",Beta=2,sigma=2,gamma=1,psi=2,S0=1000,I0=5,time=5) |&gt;
+<pre><code class='language-R'>simulate("SEIR",Beta=2,sigma=2,gamma=1,psi=2,S0=1,I0=0.01,time=5) |&gt;
   simulate(Beta=5,gamma=2,time=10,psi=3) |&gt;
   plot()
 
-runSEIR(Beta=3,gamma=1,psi=2,S0=20,I0=5,R0=0,time=5,t0=-1) |&gt;
+runSEIR(Beta=3,gamma=1,psi=2,S0=1,I0=0.2,R0=0,time=5,t0=-1) |&gt;
   plot(points=TRUE,obscure=FALSE)
 
-runSEIR(Beta=3,gamma=0.1,psi=0.2,S0=100,I0=5,R0=0,time=2,t0=0) -&gt; x
+runSEIR(Beta=3,gamma=0.1,psi=0.2,S0=1,I0=0.05,R0=0,time=2,t0=0) -&gt; x
 plot_grid(plotlist=list(plot(x,points=TRUE),diagram(x)),
   ncol=1,rel_heights=c(4,1))
 
-simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt; plot(obscure=FALSE)
+simulate("SEIR",sigma=1,omega=1,time=20,I0=0.04) |&gt; plot(obscure=FALSE)
 
-simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt;
+simulate("SEIR",sigma=1,omega=1,time=20,I0=0.04) |&gt;
   lineages(obscure=FALSE) |&gt;
   plot()
 simulate("LBDP",time=4) |&gt; plot(points=TRUE)
@@ -163,7 +163,7 @@ plot_grid(
 
   pb &lt;- utils::txtProgressBar(0,2*length(times),0,style=3)
   x &lt;- simulate("SIIR",time=0,Beta1=5,Beta2=10,gamma=1,omega=0.5,
-    psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,S0=200,I1_0=3,I2_0=2)
+    psi1=0.2,psi2=0.1,sigma12=1,sigma21=1,pop=205,S_0=200,I1_0=3,I2_0=2)
 
   img &lt;- 1
   for (k in seq.int(from=1,to=length(times),by=1)) {
@@ -171,15 +171,18 @@ plot_grid(
     ggsave(
       filename=png_files[img],
       plot=plot(
-        x, t0=0, time=max(times),
+        x,
         points=FALSE, prune=FALSE, obscure=FALSE,
-        palette=c("#ffcb05","#dddddd"),
+        ladderize=FALSE,
+        palette=c("#000000","#ffcb05","#dddddd"),
         axis.line=element_line(color="white"),
         axis.ticks=element_line(color="white"),
         axis.text=element_blank(),
         plot.background=element_rect(fill=NA,color=NA),
-        panel.background=element_rect(fill=NA,color=NA)
-      ),
+        panel.background=element_rect(fill=NA,color=NA),
+        legend.position="none"
+      )+
+        expand_limits(x=c(0,range(times))),
       device="png",dpi=300,
       height=2,width=3,units="in"
     )
@@ -192,15 +195,18 @@ plot_grid(
     ggsave(
       filename=png_files[img],
       plot=plot(
-        x, t0=0, time=max(times),
+        x,
         points=FALSE, prune=FALSE, obscure=FALSE,
-        palette=c("#ffcb05","#dddddd"),
+        ladderize=FALSE,
+        palette=c("#000000","#ffcb05","#dddddd"),
         axis.line=element_line(color="white"),
         axis.ticks=element_line(color="white"),
         axis.text=element_blank(),
         plot.background=element_rect(fill=NA,color=NA),
-        panel.background=element_rect(fill=NA,color=NA)
-      ),
+        panel.background=element_rect(fill=NA,color=NA),
+        legend.position="none"
+      )+
+        expand_limits(x=c(0,range(times))),
       device="png",dpi=300,
       height=2,width=3,units="in"
     )
@@ -217,7 +223,7 @@ plot_grid(
 ## End(Not run)
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

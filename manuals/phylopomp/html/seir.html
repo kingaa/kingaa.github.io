@@ -21,6 +21,9 @@ function processMathHTML() {
 <h3>Description</h3>
 
 <p>The population is structured by infection progression.
+There is an incubation period that must pass before an infected
+host becomes infectious. The duration of this period is <code class="reqn">1/\sigma</code>.
+The infectious period is <code class="reqn">1/\gamma</code>.
 </p>
 
 
@@ -34,11 +37,11 @@ function processMathHTML() {
   gamma = 1,
   psi = 1,
   omega = 0,
+  pop = 100,
   S0 = 0.9,
   E0 = 0.05,
   I0 = 0.05,
-  R0 = 0,
-  pop = 100
+  R0 = 0
 )
 
 runSEIRS(
@@ -49,11 +52,11 @@ runSEIRS(
   gamma = 1,
   psi = 1,
   omega = 0,
+  pop = 100,
   S0 = 0.9,
   E0 = 0.05,
   I0 = 0.05,
-  R0 = 0,
-  pop = 100
+  R0 = 0
 )
 
 continueSEIR(
@@ -85,11 +88,11 @@ seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0, pop)
 <table role = "presentation">
 <tr><td><code id="time">time</code></td>
 <td>
-<p>final time</p>
+<p>end timepoint of simulation</p>
 </td></tr>
 <tr><td><code id="t0">t0</code></td>
 <td>
-<p>initial time</p>
+<p>beginning timepoint of simulation</p>
 </td></tr>
 <tr><td><code id="Beta">Beta</code></td>
 <td>
@@ -111,19 +114,29 @@ seirs_pomp(x, Beta, sigma, gamma, psi, omega = 0, S0, E0, I0, R0, pop)
 <td>
 <p>rate of waning of immunity</p>
 </td></tr>
-<tr><td><code id="S0">S0</code>, <code id="E0">E0</code>, <code id="I0">I0</code>, <code id="R0">R0</code></td>
-<td>
-<p>initial conditions;
-non-negative numbers that specify the relative occupancies of the compartments at the inital time.</p>
-</td></tr>
 <tr><td><code id="pop">pop</code></td>
 <td>
 <p>host population size</p>
 </td></tr>
+<tr><td><code id="S0">S0</code></td>
+<td>
+<p>initial fraction of population susceptible to infection</p>
+</td></tr>
+<tr><td><code id="E0">E0</code></td>
+<td>
+<p>initial fraction of population in exposed class</p>
+</td></tr>
+<tr><td><code id="I0">I0</code></td>
+<td>
+<p>initial fraction of population in infectious class</p>
+</td></tr>
+<tr><td><code id="R0">R0</code></td>
+<td>
+<p>initial fraction of population immune to infection</p>
+</td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
-<p>either the name of the model to simulate
-<em>or</em> a previously computed &lsquo;gpsim&rsquo; object</p>
+<p>a previously computed simulation</p>
 </td></tr>
 <tr><td><code id="x">x</code></td>
 <td>
@@ -171,25 +184,25 @@ non-negative numbers that specify the relative occupancies of the compartments a
 
 <h3>Examples</h3>
 
-<pre><code class='language-R'>simulate("SEIR",Beta=2,sigma=2,gamma=1,psi=2,S0=1000,I0=5,time=5) |&gt;
+<pre><code class='language-R'>simulate("SEIR",Beta=2,sigma=2,gamma=1,psi=2,S0=1,I0=0.01,time=5) |&gt;
   simulate(Beta=5,gamma=2,time=10,psi=3) |&gt;
   plot()
 
-runSEIR(Beta=3,gamma=1,psi=2,S0=20,I0=5,R0=0,time=5,t0=-1) |&gt;
+runSEIR(Beta=3,gamma=1,psi=2,S0=1,I0=0.2,R0=0,time=5,t0=-1) |&gt;
   plot(points=TRUE,obscure=FALSE)
 
-runSEIR(Beta=3,gamma=0.1,psi=0.2,S0=100,I0=5,R0=0,time=2,t0=0) -&gt; x
+runSEIR(Beta=3,gamma=0.1,psi=0.2,S0=1,I0=0.05,R0=0,time=2,t0=0) -&gt; x
 plot_grid(plotlist=list(plot(x,points=TRUE),diagram(x)),
   ncol=1,rel_heights=c(4,1))
 
-simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt; plot(obscure=FALSE)
+simulate("SEIR",sigma=1,omega=1,time=20,I0=0.04) |&gt; plot(obscure=FALSE)
 
-simulate("SEIR",sigma=1,omega=1,time=20,I0=4) |&gt;
+simulate("SEIR",sigma=1,omega=1,time=20,I0=0.04) |&gt;
   lineages(obscure=FALSE) |&gt;
   plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.18.2.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.0.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

@@ -38,7 +38,7 @@ library(pomp)
 library(phylopomp)
 stopifnot(getRversion() >= "4.5")
 stopifnot(packageVersion("pomp") >= "6.4")
-stopifnot(packageVersion("phylopomp") >= "0.17.1")
+stopifnot(packageVersion("phylopomp") >= "0.19")
 theme_set(theme_bw(base_family = "serif"))
 options(
   dplyr.summarise.inform = FALSE,
@@ -100,8 +100,8 @@ The following solves the filter equation at each point of a grid.
     psi = 1,
     omega = seq(0.5, 2, by = 0.05),
     pop = 100,
-    S0 = 97,
-    I0 = 3,
+    S0 = 0.97,
+    I0 = 0.03,
     R0 = 0,
     t0 = 0,
     rep = 1:16,
@@ -171,3 +171,6 @@ plot_grid(
 ```
 
 ## References
+
+::: {#refs}
+:::

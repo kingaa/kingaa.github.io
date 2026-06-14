@@ -4,7 +4,7 @@ var searchData=
   ['c2_1',['c2',['../structtwospecies__parameters__t.html#a26c5c9ab5ceba8e5c3addb7700a4440e',1,'twospecies_parameters_t::c2'],['../structtwoundead__parameters__t.html#a59e3e304e8efef7f9f9be50764e89fc5',1,'twoundead_parameters_t::c2']]],
   ['callmethods_2',['callMethods',['../init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5',1,'init.c']]],
   ['camel_3',['camel',['../mers_8cc.html#af25baf02a2d160a10826d161667afcdc',1,'mers.cc']]],
-  ['chi_4',['chi',['../structlbdp__parameters__t.html#abdc07527fab50cb39cb458a02e95e3ba',1,'lbdp_parameters_t::chi'],['../structsi2r__parameters__t.html#a4444238fcd8cf6b0aff0467c84092ce5',1,'si2r_parameters_t::chi']]],
+  ['chi_4',['chi',['../structbdei__parameters__t.html#a3c22920ecc4eb172b2990f1d806eaf7a',1,'bdei_parameters_t::chi'],['../structbdss__parameters__t.html#ac34803a883d9dd61a382a9fefbd6ec9d',1,'bdss_parameters_t::chi'],['../structlbdp__parameters__t.html#abdc07527fab50cb39cb458a02e95e3ba',1,'lbdp_parameters_t::chi'],['../structsi2r__parameters__t.html#a4444238fcd8cf6b0aff0467c84092ce5',1,'si2r_parameters_t::chi']]],
   ['chi1_5',['chi1',['../structstrains__parameters__t.html#afbaa9f7e7ae08c23e3094b292db63404',1,'strains_parameters_t']]],
   ['chi2_6',['chi2',['../structstrains__parameters__t.html#a319d3b707fed9b43ea4f3b9f3eb452c7',1,'strains_parameters_t']]],
   ['chi3_7',['chi3',['../structstrains__parameters__t.html#a188fe052610d250c6fb796a3f1448d2a',1,'strains_parameters_t']]],

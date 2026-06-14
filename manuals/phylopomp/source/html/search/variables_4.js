@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['e_0',['E',['../structseir__state__t.html#afcae6a186f661183467c78387fccf594',1,'seir_state_t']]],
-  ['e0_1',['E0',['../structseir__parameters__t.html#a7e7c414ef890c50a9cd34e0a503f476c',1,'seir_parameters_t']]],
+  ['e_0',['E',['../structbdei__state__t.html#ac5d40a192194f45bc83d9fae1030f057',1,'bdei_state_t::E'],['../structseir__state__t.html#afcae6a186f661183467c78387fccf594',1,'seir_state_t::E']]],
+  ['e0_1',['E0',['../structbdei__parameters__t.html#a6f3fbed6b81a0926e2868e01feac924d',1,'bdei_parameters_t::E0'],['../structseir__parameters__t.html#a7e7c414ef890c50a9cd34e0a503f476c',1,'seir_parameters_t::E0']]],
   ['etah_2',['etaH',['../structsi2r__parameters__t.html#a6246f619e949e700c7a4eb9aa7fac39b',1,'si2r_parameters_t']]],
   ['etal_3',['etaL',['../structsi2r__parameters__t.html#ad1f09ac52c784783a6e1ea72ef8730d3',1,'si2r_parameters_t']]],
   ['event_4',['event',['../classpopul__proc__t.html#a3f3e217100d675925bea8c1c01d3c138',1,'popul_proc_t']]],
   ['exposed_5',['Exposed',['../seir_8cc.html#a3fc142b0e3a75a404934743871af9c03',1,'seir.cc']]],
-  ['extmethods_6',['extMethods',['../init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae',1,'init.c']]]
+  ['exposed_6',['exposed',['../bdei_8cc.html#a03ab66fa0b359e28e3f82302e1c619dc',1,'bdei.cc']]],
+  ['extmethods_7',['extMethods',['../init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae',1,'init.c']]]
 ];

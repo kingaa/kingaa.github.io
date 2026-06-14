@@ -6,6 +6,12 @@ as.data.frame.gplin	as_data_frame
 as.yaml	reexports
 bake	reexports
 ballGrob	internals
+BDEI	bdei
+bdei	bdei
+BDSS	bdss
+bdss	bdss
+continueBDEI	bdei
+continueBDSS	bdss
 continueLBDP	lbdp
 continueMERS	mers
 continueMoran	moran
@@ -64,6 +70,8 @@ read_yaml	reexports
 reexports	reexports
 registerDoSEQ	reexports
 resizingTextGrob	internals
+runBDEI	bdei
+runBDSS	bdss
 runLBDP	lbdp
 runMERS	mers
 runMoran	moran

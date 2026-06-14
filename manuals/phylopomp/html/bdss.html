@@ -1,0 +1,138 @@
+<!DOCTYPE html><html><head><title>R: Linear birth-death with superspreading</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script>
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>bdss {phylopomp}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Linear birth-death with superspreading</h2>
+
+<h3>Description</h3>
+
+<p>Two-deme linear birth-death process with heterogeneous per-lineage transmission rates.
+Identical to the BDSS model of Voznica et al. (2022, https://doi.org/10.1038/s41467-022-31511-0), though the parameterization differs.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>runBDSS(
+  time,
+  t0 = 0,
+  lambda_nn = 0.875,
+  lambda_ns = 0.125,
+  lambda_sn = 5.5,
+  lambda_ss = 0.75,
+  mu = 0.5,
+  chi = 0.5,
+  pop = 1,
+  N0 = 1,
+  S0 = 0
+)
+
+continueBDSS(
+  object,
+  time,
+  lambda_nn = NA,
+  lambda_ns = NA,
+  lambda_sn = NA,
+  lambda_ss = NA,
+  mu = NA,
+  chi = NA
+)
+</code></pre>
+
+
+<h3>Arguments</h3>
+
+<table role = "presentation">
+<tr><td><code id="time">time</code></td>
+<td>
+<p>end timepoint of simulation</p>
+</td></tr>
+<tr><td><code id="t0">t0</code></td>
+<td>
+<p>beginning timepoint of simulation</p>
+</td></tr>
+<tr><td><code id="lambda_nn">lambda_nn</code></td>
+<td>
+<p>normal-to-normal transmission rate</p>
+</td></tr>
+<tr><td><code id="lambda_ns">lambda_ns</code></td>
+<td>
+<p>normal-to-superspreader transmission rate</p>
+</td></tr>
+<tr><td><code id="lambda_sn">lambda_sn</code></td>
+<td>
+<p>superspreader-to-normal transmission rate</p>
+</td></tr>
+<tr><td><code id="lambda_ss">lambda_ss</code></td>
+<td>
+<p>superspreader-to-superspreader transmission rate</p>
+</td></tr>
+<tr><td><code id="mu">mu</code></td>
+<td>
+<p>per capita removal (death or recovery) rate</p>
+</td></tr>
+<tr><td><code id="chi">chi</code></td>
+<td>
+<p>per capita destructive sampling rate</p>
+</td></tr>
+<tr><td><code id="pop">pop</code></td>
+<td>
+<p>initial population size</p>
+</td></tr>
+<tr><td><code id="N0">N0</code></td>
+<td>
+<p>initial fraction of normal spreaders</p>
+</td></tr>
+<tr><td><code id="S0">S0</code></td>
+<td>
+<p>initial fraction of superspreaders</p>
+</td></tr>
+<tr><td><code id="object">object</code></td>
+<td>
+<p>a previously computed simulation</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p><code>runBDSS</code> and <code>continueBDSS</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;BDSS&rdquo;.
+</p>
+
+
+<h3>See Also</h3>
+
+<p>More example genealogy processes:
+<code><a href="../../phylopomp/help/bdei.html">bdei</a></code>,
+<code><a href="../../phylopomp/help/lbdp.html">lbdp</a></code>,
+<code><a href="../../phylopomp/help/mers.html">mers</a></code>,
+<code><a href="../../phylopomp/help/moran.html">moran</a></code>,
+<code><a href="../../phylopomp/help/s2i2r2.html">s2i2r2</a></code>,
+<code><a href="../../phylopomp/help/seir.html">seir</a></code>,
+<code><a href="../../phylopomp/help/si2r.html">si2r</a></code>,
+<code><a href="../../phylopomp/help/siir.html">siir</a></code>,
+<code><a href="../../phylopomp/help/simulate.html">simulate()</a></code>,
+<code><a href="../../phylopomp/help/sir.html">sir</a></code>,
+<code><a href="../../phylopomp/help/strains.html">strains</a></code>,
+<code><a href="../../phylopomp/help/twospecies.html">twospecies</a></code>,
+<code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
+</p>
+
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.2.0 <a href="00Index.html">Index</a>]</div></main>
+
+</div>
+</body></html>

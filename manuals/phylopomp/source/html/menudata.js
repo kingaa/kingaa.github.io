@@ -146,7 +146,14 @@ var menudata={children:[
 {text:"o",url:"globals_vars.html#index_o"},
 {text:"s",url:"globals_vars.html#index_s"},
 {text:"u",url:"globals_vars.html#index_u"}]},
-{text:"Typedefs",url:"globals_type.html"},
+{text:"Typedefs",url:"globals_type.html",children:[
+{text:"b",url:"globals_type.html#index_b"},
+{text:"l",url:"globals_type.html#index_l"},
+{text:"m",url:"globals_type.html#index_m"},
+{text:"n",url:"globals_type.html#index_n"},
+{text:"r",url:"globals_type.html#index_r"},
+{text:"s",url:"globals_type.html#index_s"},
+{text:"t",url:"globals_type.html#index_t"}]},
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html"},
 {text:"Macros",url:"globals_defs.html",children:[

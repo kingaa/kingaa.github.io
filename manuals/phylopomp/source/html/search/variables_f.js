@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['s_0',['S',['../structseir__state__t.html#a6199fbd50fd9cb8f7216b47d4c44250a',1,'seir_state_t::S'],['../structsi2r__state__t.html#ad27e7e21b3c5221b60f830a3531fc67e',1,'si2r_state_t::S'],['../structsiir__state__t.html#a603187e07d3eca3e5ac1f63dd5b938ca',1,'siir_state_t::S'],['../structsir__state__t.html#a034d559808a108c4dc695645acb8211a',1,'sir_state_t::S'],['../structstrains__state__t.html#ad2f53a2046a6a3ce6d7bb28774a56694',1,'strains_state_t::S']]],
-  ['s0_1',['S0',['../structseir__parameters__t.html#a82c77c43e155356003d4e4d553a54bcf',1,'seir_parameters_t::S0'],['../structsi2r__parameters__t.html#acc38653fdc726b2095b026ddcc8731a5',1,'si2r_parameters_t::S0'],['../structsir__parameters__t.html#ad415bd49b4160d89188a460d5b90ae0d',1,'sir_parameters_t::S0']]],
+  ['s_0',['S',['../structbdss__state__t.html#a90eb4c34cb6806b12df50b80f4a17128',1,'bdss_state_t::S'],['../structseir__state__t.html#a6199fbd50fd9cb8f7216b47d4c44250a',1,'seir_state_t::S'],['../structsi2r__state__t.html#ad27e7e21b3c5221b60f830a3531fc67e',1,'si2r_state_t::S'],['../structsiir__state__t.html#a603187e07d3eca3e5ac1f63dd5b938ca',1,'siir_state_t::S'],['../structsir__state__t.html#a034d559808a108c4dc695645acb8211a',1,'sir_state_t::S'],['../structstrains__state__t.html#ad2f53a2046a6a3ce6d7bb28774a56694',1,'strains_state_t::S']]],
+  ['s0_1',['S0',['../structbdss__parameters__t.html#ae9410c36ca188e4bc46408e3451f4775',1,'bdss_parameters_t::S0'],['../structseir__parameters__t.html#a82c77c43e155356003d4e4d553a54bcf',1,'seir_parameters_t::S0'],['../structsi2r__parameters__t.html#acc38653fdc726b2095b026ddcc8731a5',1,'si2r_parameters_t::S0'],['../structsir__parameters__t.html#ad415bd49b4160d89188a460d5b90ae0d',1,'sir_parameters_t::S0']]],
   ['s1_2',['S1',['../structs2i2r2__state__t.html#a38da888712dee377b6e4ff0f2050ce8f',1,'s2i2r2_state_t::S1'],['../structtwospecies__state__t.html#a4231634e55d3aa9e83575f6bcce5fd66',1,'twospecies_state_t::S1'],['../structtwoundead__state__t.html#a17ea370ee884987e1d66b37633bd002e',1,'twoundead_state_t::S1']]],
   ['s1_5f0_3',['S1_0',['../structs2i2r2__parameters__t.html#a505a486e2d1808b43dec93809bfda68f',1,'s2i2r2_parameters_t::S1_0'],['../structtwospecies__parameters__t.html#a2170a853517d1b3ed6ec8fcb00bf3252',1,'twospecies_parameters_t::S1_0'],['../structtwoundead__parameters__t.html#af3d4d8caedc8bd7b3365a1772a3482be',1,'twoundead_parameters_t::S1_0']]],
   ['s2_4',['S2',['../structs2i2r2__state__t.html#a4cd7e272490408c9ab26820bbfb0c693',1,'s2i2r2_state_t::S2'],['../structtwospecies__state__t.html#a6832d80910ce8d332ff7c06004da2511',1,'twospecies_state_t::S2'],['../structtwoundead__state__t.html#af1d145564c979c901f0264649adcc487',1,'twoundead_state_t::S2']]],
@@ -11,12 +11,13 @@ var searchData=
   ['sc0_8',['Sc0',['../structmers__parameters__t.html#a668d8cd7b211e07d7d33a97fe695f6aa',1,'mers_parameters_t']]],
   ['sh_9',['Sh',['../structmers__state__t.html#ae821a1d5a40492f88c80bf7f5f772d70',1,'mers_state_t']]],
   ['sh0_10',['Sh0',['../structmers__parameters__t.html#a0ad2f8c8586ec0009040a74fcf7986f1',1,'mers_parameters_t']]],
-  ['sigma_11',['sigma',['../structseir__parameters__t.html#a92fd44edd72554f773e322b2a257340e',1,'seir_parameters_t']]],
+  ['sigma_11',['sigma',['../structbdei__parameters__t.html#a8725440f47fb8903f48a58d58fde6619',1,'bdei_parameters_t::sigma'],['../structseir__parameters__t.html#a92fd44edd72554f773e322b2a257340e',1,'seir_parameters_t::sigma']]],
   ['sigma12_12',['sigma12',['../structsiir__parameters__t.html#a933e8598d7bb86abcb82c6c5450a4e56',1,'siir_parameters_t']]],
   ['sigma21_13',['sigma21',['../structsiir__parameters__t.html#a4466d9c00cf49570b7981381b7a4c379',1,'siir_parameters_t']]],
   ['slate_14',['slate',['../classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9',1,'node_t']]],
   ['state_15',['state',['../classpopul__proc__t.html#ab28269ed10fad452ca5c3b8d52ebd19b',1,'popul_proc_t']]],
   ['strain1_16',['strain1',['../siir_8cc.html#a828c3a72ce5b48dbb2ad4b7f9930ad4f',1,'strain1:&#160;siir.cc'],['../strains_8cc.html#a828c3a72ce5b48dbb2ad4b7f9930ad4f',1,'strain1:&#160;strains.cc']]],
   ['strain2_17',['strain2',['../siir_8cc.html#a300f00e69b61a86ffe42ea631c8922ac',1,'strain2:&#160;siir.cc'],['../strains_8cc.html#a300f00e69b61a86ffe42ea631c8922ac',1,'strain2:&#160;strains.cc']]],
-  ['strain3_18',['strain3',['../strains_8cc.html#aaceea23c71f51e52b8822452760cf48f',1,'strains.cc']]]
+  ['strain3_18',['strain3',['../strains_8cc.html#aaceea23c71f51e52b8822452760cf48f',1,'strains.cc']]],
+  ['superspreader_19',['superspreader',['../bdss_8cc.html#a3e9e9ebecb4cabcff7ef62ca71a78ea8',1,'bdss.cc']]]
 ];

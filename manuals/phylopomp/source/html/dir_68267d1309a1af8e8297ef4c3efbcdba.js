@@ -1,6 +1,8 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "ball.h", "ball_8h.html", "ball_8h" ],
+    [ "bdei.cc", "bdei_8cc.html", "bdei_8cc" ],
+    [ "bdss.cc", "bdss_8cc.html", "bdss_8cc" ],
     [ "curtail.cc", "curtail_8cc.html", "curtail_8cc" ],
     [ "decls.h", "decls_8h.html", "decls_8h" ],
     [ "gendat.cc", "gendat_8cc.html", "gendat_8cc" ],

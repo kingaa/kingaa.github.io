@@ -2,6 +2,10 @@ var hierarchy =
 [
     [ "ball_order", "structball__order.html", null ],
     [ "ball_t", "classball__t.html", null ],
+    [ "bdei_parameters_t", "structbdei__parameters__t.html", null ],
+    [ "bdei_state_t", "structbdei__state__t.html", null ],
+    [ "bdss_parameters_t", "structbdss__parameters__t.html", null ],
+    [ "bdss_state_t", "structbdss__state__t.html", null ],
     [ "inventory_t< NDEME >", "classinventory__t.html", null ],
     [ "lbdp_parameters_t", "structlbdp__parameters__t.html", null ],
     [ "lbdp_state_t", "structlbdp__state__t.html", null ],
@@ -18,6 +22,12 @@ var hierarchy =
       [ "master_t< POPN, NDEME >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< STATE, PARAMETERS, NEVENT >", "classpopul__proc__t.html", null ],
+    [ "popul_proc_t< bdei_state_t, bdei_parameters_t, 4 >", "classpopul__proc__t.html", [
+      [ "master_t< bdei_proc_t, 2 >", "classmaster__t.html", null ]
+    ] ],
+    [ "popul_proc_t< bdss_state_t, bdss_parameters_t, 8 >", "classpopul__proc__t.html", [
+      [ "master_t< bdss_proc_t, 2 >", "classmaster__t.html", null ]
+    ] ],
     [ "popul_proc_t< lbdp_state_t, lbdp_parameters_t, 4 >", "classpopul__proc__t.html", [
       [ "master_t< lbdp_proc_t, 1 >", "classmaster__t.html", null ]
     ] ],

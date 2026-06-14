@@ -2,6 +2,10 @@ var annotated_dup =
 [
     [ "ball_order", "structball__order.html", "structball__order" ],
     [ "ball_t", "classball__t.html", "classball__t" ],
+    [ "bdei_parameters_t", "structbdei__parameters__t.html", "structbdei__parameters__t" ],
+    [ "bdei_state_t", "structbdei__state__t.html", "structbdei__state__t" ],
+    [ "bdss_parameters_t", "structbdss__parameters__t.html", "structbdss__parameters__t" ],
+    [ "bdss_state_t", "structbdss__state__t.html", "structbdss__state__t" ],
     [ "genealogy_t", "classgenealogy__t.html", "classgenealogy__t" ],
     [ "inventory_t", "classinventory__t.html", "classinventory__t" ],
     [ "lbdp_parameters_t", "structlbdp__parameters__t.html", "structlbdp__parameters__t" ],

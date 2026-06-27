@@ -1,5 +1,5 @@
 Package: phylopomp
-Version: 0.19.2.0
+Version: 0.19.3.1
 Depends: R(>= 4.5)
 Imports: grid, ggtree(>= 3.16), yaml, ggplot2, scales, ape, dplyr,
         tibble, foreach, tidyr, pomp(>= 6.1), cowplot
@@ -7,3 +7,4 @@ LinkingTo: pomp
 Suggests: tidyverse, doFuture, broom, gifski
 License: GPL-3
 Archs: x64
+Built: R 4.6.0; x86_64-w64-mingw32; 2026-06-26 21:37:29 UTC; windows

@@ -1,6 +1,7 @@
 var seirs__pomp_8c =
 [
     [ "Beta", "seirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc", null ],
+    [ "chi", "seirs__pomp_8c.html#a92286de75fdd3d75889360b4e91a5d1a", null ],
     [ "COLOR", "seirs__pomp_8c.html#a4b5014034c9aac136ab8c82c2d16dc82", null ],
     [ "E", "seirs__pomp_8c.html#a07484107e6d9fdf38b53edf631d6511d", null ],
     [ "E0", "seirs__pomp_8c.html#a73f0647950b85591fbe61fff44d45c2e", null ],

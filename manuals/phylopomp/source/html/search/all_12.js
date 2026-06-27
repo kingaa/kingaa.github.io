@@ -25,7 +25,7 @@ var searchData=
   ['seir_2ecc_22',['seir.cc',['../seir_8cc.html',1,'']]],
   ['seir_5fgenealogy_5ft_23',['seir_genealogy_t',['../seir_8cc.html#aa85bdb72e15262e19332778d62ed4581',1,'seir.cc']]],
   ['seir_5fparameters_5ft_24',['seir_parameters_t',['../structseir__parameters__t.html',1,'']]],
-  ['seir_5fproc_5ft_25',['seir_proc_t',['../seir_8cc.html#acded8c783b4b23700d49ebd6109e0c16',1,'seir.cc']]],
+  ['seir_5fproc_5ft_25',['seir_proc_t',['../seir_8cc.html#a1b7ed07336273d5a68e4b7096f64604e',1,'seir.cc']]],
   ['seir_5fstate_5ft_26',['seir_state_t',['../structseir__state__t.html',1,'']]],
   ['seirs_5fdmeas_27',['seirs_dmeas',['../decls_8h.html#a6fc30998bc55528242599e10535fa97b',1,'seirs_dmeas(double *, const double *, const double *, const double *, int, const int *, const int *, const int *, const int *, const double *, double):&#160;seirs_pomp.c'],['../seirs__pomp_8c.html#a95d1405823ab8f7e52d6b686cb3b035a',1,'seirs_dmeas(double *__lik, const double *__y, const double *__x, const double *__p, int give_log, const int *__obsindex, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t):&#160;seirs_pomp.c']]],
   ['seirs_5fgill_28',['seirs_gill',['../decls_8h.html#ab8fb5cd6961d565e75bc2c17c7603205',1,'seirs_gill(double *, const double *, const int *, const int *, const int *, const double *, double, double):&#160;seirs_pomp.c'],['../seirs__pomp_8c.html#a80b87c0e9d16875de84f321356e66a11',1,'seirs_gill(double *__x, const double *__p, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t, double dt):&#160;seirs_pomp.c']]],

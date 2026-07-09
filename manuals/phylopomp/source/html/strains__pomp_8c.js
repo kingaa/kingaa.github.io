@@ -26,7 +26,7 @@ var strains__pomp_8c =
     [ "STRAIN1", "strains__pomp_8c.html#a89cb3e3778296363f51abf355c8db86d", null ],
     [ "STRAIN2", "strains__pomp_8c.html#a950b1a0505a38d9bc27f36366d36afcb", null ],
     [ "STRAIN3", "strains__pomp_8c.html#a37dc712a42f89ba02aeb9e55ddc4d66d", null ],
-    [ "event_rates", "strains__pomp_8c.html#a00f022696c1e56408f5af7156887e2e0", null ],
+    [ "event_rates", "strains__pomp_8c.html#a54dfb3fa4f46d022acec5343c825b04a", null ],
     [ "strains_dmeas", "strains__pomp_8c.html#a4cf227d1c27ea1be34423ab4ce82113b", null ],
     [ "strains_gill", "strains__pomp_8c.html#a234d667306c9b99b08b5d6d60283bac9", null ],
     [ "strains_rinit", "strains__pomp_8c.html#add1987e5f72b4e0d37c0fde8e717a80a", null ],

@@ -12,6 +12,6 @@ var searchData=
   ['next_9',['next',['../classpopul__proc__t.html#a66e9c68124c7c2881483cc42ebd77138',1,'popul_proc_t']]],
   ['nh_10',['Nh',['../structmers__parameters__t.html#a2f5d6143381f625b80a570d41a87f19e',1,'mers_parameters_t']]],
   ['normal_11',['normal',['../bdss_8cc.html#a252fd4bd9e3abf726220fb9710d9358f',1,'bdss.cc']]],
-  ['nrate_12',['nrate',['../seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;seirs_pomp.c'],['../sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;sirs_pomp.c'],['../strains__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;strains_pomp.c'],['../twospecies__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;twospecies_pomp.c']]],
+  ['nrate_12',['nrate',['../seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;seirs_pomp.c'],['../si2r__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;si2r_pomp.c'],['../sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;sirs_pomp.c'],['../strains__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;strains_pomp.c'],['../twospecies__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;twospecies_pomp.c']]],
   ['null_5flineage_13',['null_lineage',['../node_8h.html#affb5e86666af08d682543f786e480f13',1,'node.h']]]
 ];

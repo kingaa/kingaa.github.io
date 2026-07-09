@@ -371,7 +371,7 @@ $(function(){initNavTree('seirs__pomp_8c_source.html',''); initResizable(true); 
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="comment">// continuous portion of filter equation:</span></div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="comment">// take Gillespie steps to the end of the interval</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">if</span> (tmax &gt; t) {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  <span class="keywordflow">if</span> (tmax &gt; t &amp;&amp; R_FINITE(<a class="code hl_define" href="lbdp__pomp_8c.html#ae1d1ec9482079231e898236e2b23c9ba">ll</a>)) {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">double</span> rate[<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>], logpi[<a class="code hl_variable" href="seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52">nrate</a>];</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordtype">int</span> event;</div>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['cap_5froots_0',['cap_roots',['../classgenealogy__t.html#a9ec140c24687ad0c08c57336c6fa95a0',1,'genealogy_t']]],
   ['cap_5ftips_1',['cap_tips',['../classgenealogy__t.html#a6b83b277209172cf4e65f4f22cb3ed03',1,'genealogy_t']]],
-  ['change_5fcolor_2',['change_color',['../seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;seirs_pomp.c'],['../twospecies__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;twospecies_pomp.c']]],
+  ['change_5fcolor_2',['change_color',['../seirs__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;seirs_pomp.c'],['../si2r__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;si2r_pomp.c'],['../twospecies__pomp_8c.html#a1ee828473e2fb81fac0b893e19cee15a',1,'change_color(double *color, int nsample, int n, int from, int to):&#160;twospecies_pomp.c']]],
   ['check_5fcolor_3',['check_color',['../twospecies__pomp_8c.html#a30f06136dc3d562c02154a343e474e29',1,'twospecies_pomp.c']]],
   ['check_5fgenealogy_5fsize_4',['check_genealogy_size',['../classgenealogy__t.html#a5b9499dcdff53c78947f7b1df67795db',1,'genealogy_t']]],
   ['child_5',['child',['../classball__t.html#af54ab028113130c4760856b06a31ad8b',1,'ball_t']]],

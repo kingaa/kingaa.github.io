@@ -57,6 +57,22 @@ continueSI2R(
   etaL = NA,
   etaH = NA
 )
+
+si2rs_pomp(
+  x,
+  Beta,
+  kappa,
+  gamma,
+  omega,
+  chi,
+  etaL,
+  etaH,
+  S0,
+  IL0,
+  IH0,
+  R0,
+  pop
+)
 </code></pre>
 
 
@@ -123,12 +139,24 @@ continueSI2R(
 <td>
 <p>a previously computed simulation</p>
 </td></tr>
+<tr><td><code id="x">x</code></td>
+<td>
+<p>genealogy in <span class="pkg">phylopomp</span> format.</p>
+</td></tr>
 </table>
+
+
+<h3>Details</h3>
+
+<p><code>si2rs_pomp</code> constructs a &lsquo;pomp&rsquo; object containing a given set of data and an SI2RS model.
+</p>
 
 
 <h3>Value</h3>
 
 <p><code>runSI2R</code> and <code>continueSI2R</code> return objects of class &lsquo;gpsim&rsquo; with &lsquo;model&rsquo; attribute &ldquo;SI2R&rdquo;.
+</p>
+<p><code>si2rs_pomp</code> returns a &lsquo;pomp&rsquo; object.
 </p>
 
 
@@ -150,7 +178,7 @@ continueSI2R(
 <code><a href="../../phylopomp/help/twoundead.html">twoundead</a></code>
 </p>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.3.1 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.4.1 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

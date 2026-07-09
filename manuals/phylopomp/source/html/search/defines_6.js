@@ -8,5 +8,9 @@ var searchData=
   ['i2_5f0_5',['I2_0',['../strains__pomp_8c.html#a0acbd3b84b07cfe49dcf3458442e9b96',1,'I2_0:&#160;strains_pomp.c'],['../twospecies__pomp_8c.html#a0acbd3b84b07cfe49dcf3458442e9b96',1,'I2_0:&#160;twospecies_pomp.c']]],
   ['i3_6',['I3',['../strains__pomp_8c.html#ae1f8da67f009f45f621d8fdad22b0396',1,'strains_pomp.c']]],
   ['i3_5f0_7',['I3_0',['../strains__pomp_8c.html#a859ca9a7aaa232a88148d7afe45d1bb8',1,'strains_pomp.c']]],
-  ['infected_8',['Infected',['../seirs__pomp_8c.html#ac13c6aaa83a50a5fb256188be37c4ead',1,'seirs_pomp.c']]]
+  ['ih_8',['IH',['../si2r__pomp_8c.html#a46b06050272e9d90534e5637f690247a',1,'si2r_pomp.c']]],
+  ['ih0_9',['IH0',['../si2r__pomp_8c.html#adfab15c5b76e586e256a924bf6a7f573',1,'si2r_pomp.c']]],
+  ['il_10',['IL',['../si2r__pomp_8c.html#aa897a1a84f3d28807d788a018373469e',1,'si2r_pomp.c']]],
+  ['il0_11',['IL0',['../si2r__pomp_8c.html#a26bb57ff38dcb4bb3a6e689083a015ef',1,'si2r_pomp.c']]],
+  ['infected_12',['Infected',['../seirs__pomp_8c.html#ac13c6aaa83a50a5fb256188be37c4ead',1,'seirs_pomp.c']]]
 ];

@@ -32,6 +32,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "seir.cc", "seir_8cc.html", "seir_8cc" ],
     [ "seirs_pomp.c", "seirs__pomp_8c.html", "seirs__pomp_8c" ],
     [ "si2r.cc", "si2r_8cc.html", "si2r_8cc" ],
+    [ "si2r_pomp.c", "si2r__pomp_8c.html", "si2r__pomp_8c" ],
     [ "siir.cc", "siir_8cc.html", "siir_8cc" ],
     [ "sir.cc", "sir_8cc.html", "sir_8cc" ],
     [ "sirs_pomp.c", "sirs__pomp_8c.html", "sirs__pomp_8c" ],

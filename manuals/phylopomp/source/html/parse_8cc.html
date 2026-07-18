@@ -200,24 +200,24 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>A parser for Newick code. Returns a genealogy in the phylopomp format. </p>
 
-<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00259">259</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  259</span>                                               {</div>
-<div class="line"><span class="lineno">  260</span>    PROTECT(X = AS_CHARACTER(X));</div>
-<div class="line"><span class="lineno">  261</span>    PROTECT(T0 = AS_NUMERIC(T0));</div>
-<div class="line"><span class="lineno">  262</span>    PROTECT(Tf = AS_NUMERIC(Tf));</div>
-<div class="line"><span class="lineno">  263</span>    <span class="keywordtype">double</span> t0 = *REAL(T0);</div>
-<div class="line"><span class="lineno">  264</span>    <span class="keywordtype">double</span> tf = *REAL(Tf);</div>
-<div class="line"><span class="lineno">  265</span>    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
-<div class="line"><span class="lineno">  266</span>    string_t x = CHAR(STRING_ELT(X,0));</div>
-<div class="line"><span class="lineno">  267</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> G(t0);</div>
-<div class="line"><span class="lineno">  268</span>    G.parse(x);</div>
-<div class="line"><span class="lineno">  269</span>    <span class="keywordflow">if</span> (!ISNA(tf)) {</div>
-<div class="line"><span class="lineno">  270</span>      G.curtail(tf,t0);</div>
-<div class="line"><span class="lineno">  271</span>    }</div>
-<div class="line"><span class="lineno">  272</span>    G.trace_lineages();</div>
-<div class="line"><span class="lineno">  273</span>    UNPROTECT(3);</div>
-<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(G);</div>
-<div class="line"><span class="lineno">  275</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="parse_8cc_source.html#l00264">264</a> of file <a class="el" href="parse_8cc_source.html">parse.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  264</span>                                               {</div>
+<div class="line"><span class="lineno">  265</span>    PROTECT(X = AS_CHARACTER(X));</div>
+<div class="line"><span class="lineno">  266</span>    PROTECT(T0 = AS_NUMERIC(T0));</div>
+<div class="line"><span class="lineno">  267</span>    PROTECT(Tf = AS_NUMERIC(Tf));</div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordtype">double</span> t0 = *REAL(T0);</div>
+<div class="line"><span class="lineno">  269</span>    <span class="keywordtype">double</span> tf = *REAL(Tf);</div>
+<div class="line"><span class="lineno">  270</span>    <span class="comment">// parse the Newick representation into a genealogy:</span></div>
+<div class="line"><span class="lineno">  271</span>    string_t x = CHAR(STRING_ELT(X,0));</div>
+<div class="line"><span class="lineno">  272</span>    <a class="code hl_class" href="classgenealogy__t.html">genealogy_t</a> G(t0);</div>
+<div class="line"><span class="lineno">  273</span>    G.parse(x);</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">if</span> (!ISNA(tf)) {</div>
+<div class="line"><span class="lineno">  275</span>      G.curtail(tf,t0);</div>
+<div class="line"><span class="lineno">  276</span>    }</div>
+<div class="line"><span class="lineno">  277</span>    G.trace_lineages();</div>
+<div class="line"><span class="lineno">  278</span>    UNPROTECT(3);</div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a>(G);</div>
+<div class="line"><span class="lineno">  280</span>  }</div>
 <div class="ttc" id="aclassgenealogy__t_html"><div class="ttname"><a href="classgenealogy__t.html">genealogy_t</a></div><div class="ttdoc">Encodes a genealogy.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00019">genealogy.h:19</a></div></div>
 <div class="ttc" id="agenerics_8h_html_a89c0c7ab20cafedb8793dfe9236ebbcc"><div class="ttname"><a href="generics_8h.html#a89c0c7ab20cafedb8793dfe9236ebbcc">serial</a></div><div class="ttdeci">SEXP serial(const TYPE &amp;X)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition</b> <a href="generics_8h_source.html#l00033">generics.h:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">

@@ -18,7 +18,7 @@ var searchData=
   ['raw_5ft_15',['raw_t',['../internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946',1,'internal.h']]],
   ['rcateg_16',['rcateg',['../internal_8h.html#a4a6b554c46520e890bcd30a914b65988',1,'internal.h']]],
   ['repair_5fholder_17',['repair_holder',['../classpocket__t.html#a80133bf9e65cbf626193a6995a6245d4',1,'pocket_t']]],
-  ['repair_5fowners_18',['repair_owners',['../classnodeseq__t.html#a5f978d0d983fff4ffd5fc2ecfab3c289',1,'nodeseq_t::repair_owners()'],['../classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953',1,'pocket_t::repair_owners()']]],
+  ['repair_5fowners_18',['repair_owners',['../classnodeseq__t.html#aa348d670f5f37837d2baaec31eb63ecc',1,'nodeseq_t::repair_owners()'],['../classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953',1,'pocket_t::repair_owners()']]],
   ['reuniqify_19',['reuniqify',['../classgenealogy__t.html#a1ed3cc314e9d9f00190cb3d71d34851c',1,'genealogy_t::reuniqify()'],['../classnode__t.html#a949b75117131f30959f1cca1d48bf353',1,'node_t::reuniqify()']]],
   ['revive_20',['revive',['../generics_8h.html#a2bfed015514f5a852e1fb7cf5c776373',1,'generics.h']]],
   ['revivefn_21',['REVIVEFN',['../generics_8h.html#af39875085676ef6b9342e125665b3834',1,'generics.h']]],

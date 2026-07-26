@@ -218,10 +218,10 @@ Friends</h2></td></tr>
 
 <p>destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00102">102</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>                   {</div>
-<div class="line"><span class="lineno">  103</span>    <a class="code hl_function" href="#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
-<div class="line"><span class="lineno">  104</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00096">96</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>                   {</div>
+<div class="line"><span class="lineno">   97</span>    <a class="code hl_function" href="#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
+<div class="line"><span class="lineno">   98</span>  };</div>
 <div class="ttc" id="aclasspocket__t_html_a01bb1db161b45b6770a082ad80d2f07f"><div class="ttname"><a href="#a01bb1db161b45b6770a082ad80d2f07f">pocket_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">delete balls and clear pocket</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00035">pocket.h:35</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -262,15 +262,15 @@ Here is the call graph for this function:</div>
 
 <p>retrieve the first ball of the specified color. </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00130">130</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                                       {</div>
-<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  132</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == c) <span class="keywordflow">return</span> b;</div>
-<div class="line"><span class="lineno">  133</span>    }</div>
-<div class="line"><span class="lineno">  134</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): no ball of color %s&quot;</span>, <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  135</span>        __func__,__FILE__,__LINE__,<a class="code hl_variable" href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a>[c]);      <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  137</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00124">124</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                       {</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  126</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == c) <span class="keywordflow">return</span> b;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): no ball of color %s&quot;</span>, <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  129</span>        __func__,__FILE__,__LINE__,<a class="code hl_variable" href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a>[c]);      <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  131</span>  };</div>
 <div class="ttc" id="aball_8h_html_ae1b3a1cfe5f04d6d859f2443d77b09c8"><div class="ttname"><a href="ball_8h.html#ae1b3a1cfe5f04d6d859f2443d77b09c8">colores</a></div><div class="ttdeci">static const char * colores[]</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00013">ball.h:13</a></div></div>
 <div class="ttc" id="aclassball__t_html_ada6b9e789dc34806789eb6f41892dd46"><div class="ttname"><a href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">ball_t::color</a></div><div class="ttdeci">color_t color</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00036">ball.h:36</a></div></div>
 <div class="ttc" id="ainternal_8h_html_ad25a1c617278c25cbcbb9b9a3a6b8024"><div class="ttname"><a href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a></div><div class="ttdeci">#define err(...)</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00018">internal.h:18</a></div></div>
@@ -412,10 +412,10 @@ Here is the caller graph for this function:</div>
 
 <p>retrieve the first ball </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00122">122</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  122</span>                                  {</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> *cbegin();</div>
-<div class="line"><span class="lineno">  124</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00116">116</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                  {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> *cbegin();</div>
+<div class="line"><span class="lineno">  118</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -458,55 +458,64 @@ Here is the caller graph for this function:</div>
 
 <p>does this node hold the given ball? </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00109">109</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>                               {</div>
-<div class="line"><span class="lineno">  110</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> (i != end());</div>
-<div class="line"><span class="lineno">  112</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00103">103</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                               {</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> (i != end());</div>
+<div class="line"><span class="lineno">  106</span>  };</div>
 <div class="ttc" id="apocket_8h_html_ac6103e4aa84ad86bbfa30c7f21164c31"><div class="ttname"><a href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_iterator ball_it</div><div class="ttdef"><b>Definition</b> <a href="pocket_8h_source.html#l00024">pocket.h:24</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph.png" border="0" usemap="#aclasspocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph" alt=""/></div>
 <map name="aclasspocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph" id="aclasspocket__t_affc2fde2447d03aaf5c8990525c23bf6_icgraph">
-<area shape="rect" title="does this node hold the given ball?" alt="" coords="767,156,887,181"/>
-<area shape="rect" href="classgenealogy__t.html#a6b83b277209172cf4e65f4f22cb3ed03" title=" " alt="" coords="553,5,717,31"/>
-<area shape="poly" title=" " alt="" coords="809,146,771,94,746,67,717,44,695,33,697,28,720,40,750,63,775,90,813,142"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="569,55,702,80"/>
-<area shape="poly" title=" " alt="" coords="796,150,717,102,673,83,675,78,720,97,798,146"/>
-<area shape="rect" href="classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc" title="genealogy information in list format" alt="" coords="346,105,501,131"/>
-<area shape="poly" title=" " alt="" coords="753,158,718,153,501,128,501,122,719,147,753,153"/>
-<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="121,156,295,181"/>
-<area shape="poly" title=" " alt="" coords="753,171,295,171,295,166,753,166"/>
-<area shape="rect" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4" title=" " alt="" coords="559,207,712,232"/>
-<area shape="poly" title=" " alt="" coords="765,188,685,209,684,204,764,182"/>
-<area shape="rect" href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8" title="Newick&#45;format output." alt="" coords="575,280,695,305"/>
-<area shape="poly" title=" " alt="" coords="799,191,720,246,660,282,657,278,717,241,795,187"/>
-<area shape="rect" href="classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7" title="number of samples" alt="" coords="552,336,719,361"/>
-<area shape="poly" title=" " alt="" coords="816,195,779,257,752,291,720,320,686,338,684,334,717,316,748,287,774,254,811,192"/>
-<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="350,5,497,31"/>
-<area shape="poly" title=" " alt="" coords="539,21,497,21,497,15,539,15"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="153,5,263,31"/>
-<area shape="poly" title=" " alt="" coords="336,21,263,21,263,15,336,15"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="343,56,504,81"/>
-<area shape="poly" title=" " alt="" coords="555,71,504,71,504,65,555,65"/>
-<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,107,241,132"/>
-<area shape="poly" title=" " alt="" coords="356,87,242,114,241,109,355,82"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,107,73,132"/>
-<area shape="poly" title=" " alt="" coords="329,74,229,81,122,97,74,110,73,105,121,91,228,76,328,69"/>
-<area shape="poly" title=" " alt="" coords="161,122,74,122,74,117,161,117"/>
-<area shape="poly" title=" " alt="" coords="332,121,242,122,242,116,332,116"/>
-<area shape="poly" title=" " alt="" coords="150,155,121,146,73,132,74,127,122,141,151,149"/>
-<area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="344,206,503,246"/>
-<area shape="poly" title=" " alt="" coords="545,225,503,226,503,221,545,220"/>
-<area shape="poly" title=" " alt="" coords="669,270,659,262,635,259,615,261,605,265,603,271,608,278,604,281,597,272,601,262,614,256,635,253,661,257,672,266"/>
-<area shape="rect" href="classnodeseq__t.html#a1cc5a9d9c0e36bccad0cbf98867b90d2" title="put genealogy at time t into Newick format." alt="" coords="352,275,495,300"/>
-<area shape="poly" title=" " alt="" coords="561,293,495,292,495,286,561,288"/>
-<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="130,275,286,300"/>
-<area shape="poly" title=" " alt="" coords="338,290,286,290,286,285,338,285"/>
-<area shape="rect" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb" title="genealogy information in list format" alt="" coords="346,348,501,373"/>
-<area shape="poly" title=" " alt="" coords="538,357,501,359,501,354,538,351"/>
-<area shape="poly" title=" " alt="" coords="461,338,451,330,423,327,401,329,389,333,387,339,393,346,389,350,381,340,385,330,400,324,423,321,453,325,464,334"/>
+<area shape="rect" title="does this node hold the given ball?" alt="" coords="761,157,881,183"/>
+<area shape="rect" href="classgenealogy__t.html#a6b83b277209172cf4e65f4f22cb3ed03" title=" " alt="" coords="548,7,712,32"/>
+<area shape="poly" title=" " alt="" coords="803,147,766,96,740,70,712,47,686,34,689,30,715,42,744,66,770,93,808,144"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="563,57,697,83"/>
+<area shape="poly" title=" " alt="" coords="793,151,756,123,712,96,683,85,685,80,715,92,759,118,797,146"/>
+<area shape="rect" href="classgenealogy__t.html#a8aa2fc9427a1d51fd0ba3d909a7fa8dc" title="genealogy information in list format" alt="" coords="553,107,707,132"/>
+<area shape="poly" title=" " alt="" coords="759,156,678,135,680,130,760,151"/>
+<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="325,157,499,183"/>
+<area shape="poly" title=" " alt="" coords="748,173,499,173,499,167,748,167"/>
+<area shape="rect" href="classnode__t.html#aeff498179c62b4187fe325d0a972f4f4" title=" " alt="" coords="553,212,707,237"/>
+<area shape="poly" title=" " alt="" coords="764,189,676,214,675,209,763,184"/>
+<area shape="rect" href="classnode__t.html#ae3821a3c68f3e710e1caf578087117a8" title="Newick&#45;format output." alt="" coords="570,369,690,395"/>
+<area shape="poly" title=" " alt="" coords="806,196,766,251,715,312,650,371,646,367,711,308,762,247,801,193"/>
+<area shape="rect" href="classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7" title="number of samples" alt="" coords="547,272,713,297"/>
+<area shape="poly" title=" " alt="" coords="796,194,758,222,715,251,666,274,664,270,712,246,755,218,793,189"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="339,5,485,31"/>
+<area shape="poly" title=" " alt="" coords="534,21,485,21,485,16,534,16"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="144,5,255,31"/>
+<area shape="poly" title=" " alt="" coords="325,21,255,21,255,15,325,15"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="331,56,493,81"/>
+<area shape="poly" title=" " alt="" coords="549,72,493,72,493,66,549,67"/>
+<area shape="rect" href="cblv_8cc.html#ac0c582df009aea1c1ea7267fd2f4933a" title=" " alt="" coords="175,208,224,233"/>
+<area shape="poly" title=" " alt="" coords="383,92,220,210,217,206,380,87"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,132,73,157"/>
+<area shape="poly" title=" " alt="" coords="318,68,222,75,171,83,122,96,87,114,58,134,55,130,84,109,120,92,170,78,221,70,318,63"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="166,107,233,132"/>
+<area shape="poly" title=" " alt="" coords="345,87,233,114,232,109,344,82"/>
+<area shape="rect" href="cblv_8cc.html#ab1965a6ad8b699a855f505cea5e73473" title="construct CBLV representation as a matrix" alt="" coords="15,208,64,233"/>
+<area shape="poly" title=" " alt="" coords="161,223,64,223,64,218,161,218"/>
+<area shape="poly" title=" " alt="" coords="161,209,120,191,61,160,64,155,122,186,163,204"/>
+<area shape="poly" title=" " alt="" coords="153,129,74,142,73,137,152,124"/>
+<area shape="poly" title=" " alt="" coords="539,122,233,122,233,117,539,117"/>
+<area shape="poly" title=" " alt="" coords="345,189,225,218,223,212,344,183"/>
+<area shape="poly" title=" " alt="" coords="312,166,74,150,74,144,312,161"/>
+<area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="333,207,491,247"/>
+<area shape="poly" title=" " alt="" coords="539,228,492,229,491,224,539,223"/>
+<area shape="poly" title=" " alt="" coords="664,359,654,351,630,348,610,350,599,355,597,360,603,368,599,371,592,361,596,351,609,345,630,343,656,346,667,355"/>
+<area shape="rect" href="classnodeseq__t.html#a1cc5a9d9c0e36bccad0cbf98867b90d2" title="put genealogy at time t into Newick format." alt="" coords="341,395,483,420"/>
+<area shape="poly" title=" " alt="" coords="557,393,484,402,483,396,556,388"/>
+<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="121,395,277,420"/>
+<area shape="poly" title=" " alt="" coords="327,410,277,410,277,405,327,405"/>
+<area shape="rect" href="classgenealogy__t.html#a9382505e7758992b5285dfeca2e7c1de" title=" " alt="" coords="343,272,481,297"/>
+<area shape="poly" title=" " alt="" coords="533,287,481,287,481,282,533,282"/>
+<area shape="rect" href="classgenealogy__t.html#a80a779524dc7fefe6672f3a2d6c4c0cb" title="genealogy information in list format" alt="" coords="335,345,489,371"/>
+<area shape="poly" title=" " alt="" coords="579,304,452,348,450,343,578,299"/>
+<area shape="poly" title=" " alt="" coords="354,271,325,262,223,231,225,225,326,257,355,265"/>
+<area shape="poly" title=" " alt="" coords="450,336,439,327,412,324,390,326,378,331,375,336,382,344,377,347,370,337,374,327,388,321,412,319,441,322,453,331"/>
 </map>
 </div>
 
@@ -537,14 +546,14 @@ Here is the caller graph for this function:</div>
 
 <p>does this node hold a ball of this color? </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00114">114</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  114</span>                               {</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
-<div class="line"><span class="lineno">  117</span>      result = ((*i)-&gt;color == c);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><span class="lineno">  120</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00108">108</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                               {</div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
+<div class="line"><span class="lineno">  111</span>      result = ((*i)-&gt;color == c);</div>
+<div class="line"><span class="lineno">  112</span>    }</div>
+<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">  114</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -573,42 +582,48 @@ Here is the caller graph for this function:</div>
 
 <p>retrieve the last ball </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00126">126</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  126</span>                                 {</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span> *crbegin();</div>
-<div class="line"><span class="lineno">  128</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00120">120</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>                                 {</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> *crbegin();</div>
+<div class="line"><span class="lineno">  122</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph.png" border="0" usemap="#aclasspocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph" alt=""/></div>
 <map name="aclasspocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph" id="aclasspocket__t_a778485d19ff278c7fbe70c92fec904e9_icgraph">
-<area shape="rect" title="retrieve the last ball" alt="" coords="764,101,904,126"/>
-<area shape="rect" href="classgenealogy__t.html#a6b83b277209172cf4e65f4f22cb3ed03" title=" " alt="" coords="552,51,716,77"/>
-<area shape="poly" title=" " alt="" coords="768,100,686,79,687,74,769,95"/>
-<area shape="rect" href="classgenealogy__t.html#a6ebd9e12a714f3b412532f274113f198" title="clip out all zero&#45;length branches" alt="" coords="555,101,713,126"/>
-<area shape="poly" title=" " alt="" coords="750,116,713,116,713,111,750,111"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="567,201,701,226"/>
-<area shape="poly" title=" " alt="" coords="806,136,765,164,717,190,684,203,682,198,715,186,762,159,803,132"/>
-<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="559,150,709,175"/>
-<area shape="poly" title=" " alt="" coords="769,132,687,152,686,147,768,127"/>
-<area shape="rect" href="classgenealogy__t.html#a8580706f2eeb00c6938db0e92864c536" title="insert zero&#45;length branches for samples where needed" alt="" coords="121,14,295,39"/>
-<area shape="poly" title=" " alt="" coords="806,94,765,65,715,41,661,27,604,18,490,9,384,10,295,18,295,12,384,5,491,4,605,12,662,22,717,36,768,60,810,90"/>
-<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="350,51,497,77"/>
-<area shape="poly" title=" " alt="" coords="538,67,497,67,497,61,538,61"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="153,77,263,102"/>
-<area shape="poly" title=" " alt="" coords="336,77,264,85,263,80,336,72"/>
-<area shape="poly" title=" " alt="" coords="565,100,478,79,479,74,567,95"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="343,202,504,227"/>
-<area shape="poly" title=" " alt="" coords="553,216,504,217,504,211,553,211"/>
-<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="175,202,241,227"/>
-<area shape="poly" title=" " alt="" coords="329,217,242,217,242,212,329,212"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,151,73,177"/>
-<area shape="poly" title=" " alt="" coords="346,202,294,193,172,178,73,169,74,164,173,173,295,188,347,197"/>
-<area shape="poly" title=" " alt="" coords="161,203,73,177,74,171,162,198"/>
-<area shape="poly" title=" " alt="" coords="546,150,263,101,264,96,547,145"/>
-<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="392,153,455,178"/>
-<area shape="poly" title=" " alt="" coords="545,166,455,168,455,162,545,161"/>
-<area shape="poly" title=" " alt="" coords="158,47,123,67,100,88,80,111,51,152,46,149,76,108,96,84,120,63,155,42"/>
+<area shape="rect" title="retrieve the last ball" alt="" coords="713,104,853,129"/>
+<area shape="rect" href="classgenealogy__t.html#a6b83b277209172cf4e65f4f22cb3ed03" title=" " alt="" coords="501,55,665,80"/>
+<area shape="poly" title=" " alt="" coords="717,103,635,83,636,77,719,98"/>
+<area shape="rect" href="classgenealogy__t.html#a6ebd9e12a714f3b412532f274113f198" title="clip out all zero&#45;length branches" alt="" coords="504,5,663,31"/>
+<area shape="poly" title=" " alt="" coords="753,98,712,71,664,44,634,33,636,28,666,40,715,66,756,94"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="517,205,650,231"/>
+<area shape="poly" title=" " alt="" coords="752,139,667,188,621,208,619,203,664,184,750,135"/>
+<area shape="rect" href="classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="508,104,659,129"/>
+<area shape="poly" title=" " alt="" coords="700,119,659,119,659,114,700,114"/>
+<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="280,156,453,181"/>
+<area shape="poly" title=" " alt="" coords="713,135,666,143,555,157,454,166,453,160,555,152,665,138,713,130"/>
+<area shape="rect" href="classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="293,5,440,31"/>
+<area shape="poly" title=" " alt="" coords="513,54,423,33,424,28,514,49"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="121,29,232,55"/>
+<area shape="poly" title=" " alt="" coords="280,32,233,38,232,32,279,26"/>
+<area shape="poly" title=" " alt="" coords="490,21,440,21,440,15,490,15"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="286,205,447,231"/>
+<area shape="poly" title=" " alt="" coords="503,221,448,221,448,215,503,215"/>
+<area shape="rect" href="cblv_8cc.html#ac0c582df009aea1c1ea7267fd2f4933a" title=" " alt="" coords="152,156,201,181"/>
+<area shape="poly" title=" " alt="" coords="303,204,201,177,202,172,305,199"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,205,73,231"/>
+<area shape="poly" title=" " alt="" coords="302,236,216,248,168,250,121,246,73,233,74,228,122,241,168,244,216,243,301,231"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="143,205,210,231"/>
+<area shape="poly" title=" " alt="" coords="272,221,210,221,210,215,272,215"/>
+<area shape="rect" href="cblv_8cc.html#ab1965a6ad8b699a855f505cea5e73473" title="construct CBLV representation as a matrix" alt="" coords="15,156,64,181"/>
+<area shape="poly" title=" " alt="" coords="138,171,64,171,64,166,138,166"/>
+<area shape="poly" title=" " alt="" coords="140,184,74,208,73,203,138,179"/>
+<area shape="poly" title=" " alt="" coords="130,221,74,221,74,215,130,215"/>
+<area shape="poly" title=" " alt="" coords="499,104,232,55,233,49,500,99"/>
+<area shape="rect" href="curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="335,107,398,132"/>
+<area shape="poly" title=" " alt="" coords="494,120,398,122,398,116,494,115"/>
+<area shape="poly" title=" " alt="" coords="266,171,201,171,201,166,266,166"/>
+<area shape="poly" title=" " alt="" coords="297,156,232,146,175,137,151,137,122,146,107,156,98,167,89,181,75,196,61,207,58,203,72,192,85,178,93,164,103,152,120,141,150,132,175,132,232,141,298,151"/>
 </map>
 </div>
 
@@ -639,15 +654,15 @@ Here is the caller graph for this function:</div>
 
 <p>return a pointer to another ball </p>
 
-<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00139">139</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  139</span>                                        {</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">for</span> (ball_t *a : *<span class="keyword">this</span>) {</div>
-<div class="line"><span class="lineno">  141</span>      <span class="keywordflow">if</span> (a != b) <span class="keywordflow">return</span> a;</div>
-<div class="line"><span class="lineno">  142</span>    }</div>
-<div class="line"><span class="lineno">  143</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;error in &#39;%s&#39; (%s line %d): there is no other.&quot;</span>, <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  144</span>        __func__,__FILE__,__LINE__);                      <span class="comment">// # nocov</span></div>
-<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  146</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00133">133</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>                                        {</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">for</span> (ball_t *a : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">  135</span>      <span class="keywordflow">if</span> (a != b) <span class="keywordflow">return</span> a;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span>    <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;error in &#39;%s&#39; (%s line %d): there is no other.&quot;</span>, <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  138</span>        __func__,__FILE__,__LINE__);                      <span class="comment">// # nocov</span></div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  140</span>  };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -731,45 +746,33 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Needed in deserialization. This function repairs the links green balls and their names. </p>
+<p>Repairs the links green balls and their names. Needed in deserialization. </p>
 
 <p class="definition">Definition at line <a class="el" href="pocket_8h_source.html#l00081">81</a> of file <a class="el" href="pocket_8h_source.html">pocket.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   82</span>                                                                   {</div>
-<div class="line"><span class="lineno">   83</span>    std::unordered_map&lt;name_t,node_t*&gt;::const_iterator <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>;</div>
+<div class="line"><span class="lineno">   83</span>    node_t *p;</div>
 <div class="line"><span class="lineno">   84</span>    <span class="keywordflow">for</span> (ball_t *b : *<span class="keyword">this</span>) {</div>
 <div class="line"><span class="lineno">   85</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
-<div class="line"><span class="lineno">   86</span>        <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> = node_name.find(b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
-<div class="line"><span class="lineno">   87</span>        <span class="keywordflow">if</span> (<a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> != node_name.end()) {</div>
-<div class="line"><span class="lineno">   88</span>          node_t *p = <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>-&gt;second;</div>
-<div class="line"><span class="lineno">   89</span>          b-&gt;<a class="code hl_function" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">owner</a>() = p;</div>
-<div class="line"><span class="lineno">   90</span>          ball_name-&gt;<a class="code hl_function" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">insert</a>({b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>,b});</div>
-<div class="line"><span class="lineno">   91</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   92</span>          <a class="code hl_define" href="internal_8h.html#ad25a1c617278c25cbcbb9b9a3a6b8024">err</a>(<span class="stringliteral">&quot;in &#39;%s&#39; (%s line %d): cannot find ball %zd&quot;</span>, <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">   93</span>              __func__,__FILE__,__LINE__,b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);          <span class="comment">// #nocov</span></div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>      }</div>
-<div class="line"><span class="lineno">   96</span>    }</div>
-<div class="line"><span class="lineno">   97</span>  };</div>
+<div class="line"><span class="lineno">   86</span>    p = node_name.at(b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
+<div class="line"><span class="lineno">   87</span>    b-&gt;<a class="code hl_function" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">owner</a>() = p;</div>
+<div class="line"><span class="lineno">   88</span>    (*ball_name)[b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>] = b;</div>
+<div class="line"><span class="lineno">   89</span>      }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>  };</div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
 <div class="ttc" id="aclassball__t_html_a1d377630b5d22bce8cc315d9a2feaa15"><div class="ttname"><a href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">ball_t::owner</a></div><div class="ttdeci">node_t * owner(void) const</div><div class="ttdoc">view owner of a green ball</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00092">ball.h:92</a></div></div>
 <div class="ttc" id="aclassball__t_html_a2c9aacc8dae1325e7ff3b8e22dd88675"><div class="ttname"><a href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">ball_t::uniq</a></div><div class="ttdeci">name_t uniq</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00035">ball.h:35</a></div></div>
 <div class="ttc" id="aclassball__t_html_a8a9297a7f3f8874f86462d34dede1d5f"><div class="ttname"><a href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">ball_t::is</a></div><div class="ttdeci">bool is(color_t c) const</div><div class="ttdoc">is a given ball of the given color?</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00115">ball.h:115</a></div></div>
-<div class="ttc" id="aclassnode__t_html_ad2d4cc004ae4fe2149206c5cb44310b4"><div class="ttname"><a href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4">node_t::insert</a></div><div class="ttdeci">void insert(ball_t *a)</div><div class="ttdoc">insert a ball into the pocket of a node</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00156">node.h:156</a></div></div>
-<div class="ttc" id="albdp__pomp_8c_html_ad5228cd48403ef9d8b632f5c7c124720"><div class="ttname"><a href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a></div><div class="ttdeci">#define n</div><div class="ttdef"><b>Definition</b> <a href="lbdp__pomp_8c_source.html#l00009">lbdp_pomp.c:9</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph.png" border="0" usemap="#aclasspocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph" alt=""/></div>
 <map name="aclasspocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph" id="aclasspocket__t_a022ca8ce5e2453bd2a3d76f1c0430953_cgraph">
-<area shape="rect" title=" " alt="" coords="5,55,183,80"/>
-<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="231,5,341,31"/>
-<area shape="poly" title=" " alt="" coords="143,52,222,32,223,37,145,57"/>
-<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="247,55,325,80"/>
-<area shape="poly" title=" " alt="" coords="183,65,233,65,233,70,183,70"/>
-<area shape="rect" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15" title="view owner of a green ball" alt="" coords="233,104,339,129"/>
-<area shape="poly" title=" " alt="" coords="145,77,223,98,222,103,143,83"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="389,5,496,31"/>
-<area shape="poly" title=" " alt="" coords="342,15,376,15,376,21,342,21"/>
+<area shape="rect" title=" " alt="" coords="5,31,183,56"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="245,5,323,31"/>
+<area shape="poly" title=" " alt="" coords="183,29,232,22,232,28,183,34"/>
+<area shape="rect" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15" title="view owner of a green ball" alt="" coords="231,55,337,80"/>
+<area shape="poly" title=" " alt="" coords="183,52,217,56,216,62,183,57"/>
 </map>
 </div>
 

@@ -1,5 +1,6 @@
 var init_8c =
 [
+    [ "cblv", "init_8c.html#a75b3cc58d6338f8dc2a647694f2b439e", null ],
     [ "curtail", "init_8c.html#a01140b551ed796005522e975acd665dc", null ],
     [ "DECLARATIONS", "init_8c.html#a6a88ea262eb4d10a02ea624136e8498f", null ],
     [ "DECLARATIONS", "init_8c.html#a8975bf54d299a6014eeea4e12193e5a7", null ],

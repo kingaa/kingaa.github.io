@@ -4,7 +4,7 @@ var searchData=
   ['parameters_5ft_1',['parameters_t',['../classpopul__proc__t.html#a4f27dd489cfb5e3806a85179c826e39c',1,'popul_proc_t']]],
   ['params_2',['params',['../classpopul__proc__t.html#ae988b71325ac01728361bb340c62aad5',1,'popul_proc_t']]],
   ['parent_3',['parent',['../classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb',1,'node_t']]],
-  ['parse_4',['parse',['../classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a',1,'genealogy_t']]],
+  ['parse_4',['parse',['../classgenealogy__t.html#a693014c6aa2e88f6a650e05cee599d91',1,'genealogy_t']]],
   ['parse_2ecc_5',['parse.cc',['../parse_8cc.html',1,'']]],
   ['parse_5fnewick_6',['parse_newick',['../init_8c.html#a888f6a962714e136419f7a5c0d6801bb',1,'parse_newick(SEXP, SEXP, SEXP):&#160;parse.cc'],['../parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1',1,'parse_newick(SEXP X, SEXP T0, SEXP Tf):&#160;parse.cc']]],
   ['play_7',['play',['../classmaster__t.html#a192af9a2412fb7fe97fade765da8393a',1,'master_t::play()'],['../classpopul__proc__t.html#abcbfe5ad2506d228139407c232f90e39',1,'popul_proc_t::play()']]],

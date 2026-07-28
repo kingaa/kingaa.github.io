@@ -1,23 +1,21 @@
 <map id="nodeseq_t::sort" name="nodeseq_t::sort">
-<area shape="rect" id="Node000001" title="order nodes in order of increasing time" alt="" coords="501,80,624,105"/>
-<area shape="rect" id="Node000002" href="$classgenealogy__t.html#a9ec140c24687ad0c08c57336c6fa95a0" title="roots are added at zero time if needed" alt="" coords="280,5,453,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="524,76,452,44,418,33,419,28,454,40,526,71"/>
-<area shape="rect" id="Node000003" href="$classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="291,55,442,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="487,86,442,80,442,74,488,80"/>
-<area shape="rect" id="Node000006" href="$classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="280,153,453,179"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="524,114,454,143,416,156,414,151,452,138,522,109"/>
-<area shape="rect" id="Node000010" href="$classgenealogy__t.html#ab1c92c1672aba62792b85078722b198a" title="Parse a Newick string and create the indicated genealogy." alt="" coords="293,104,440,129"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="488,104,441,110,440,105,487,99"/>
-<area shape="rect" id="Node000004" href="$curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="145,55,208,80"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="278,70,208,70,208,65,278,65"/>
-<area shape="rect" id="Node000005" href="$parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="121,104,232,129"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="305,86,227,106,226,101,303,81"/>
-<area shape="rect" id="Node000007" href="$cblv_8cc.html#ac0c582df009aea1c1ea7267fd2f4933a" title=" " alt="" coords="152,153,201,179"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="266,169,201,169,201,163,266,163"/>
-<area shape="rect" id="Node000009" href="$getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,203,73,228"/>
-<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="290,184,232,194,74,214,73,209,232,189,289,179"/>
-<area shape="rect" id="Node000008" href="$cblv_8cc.html#ab1965a6ad8b699a855f505cea5e73473" title="construct CBLV representation as a matrix" alt="" coords="15,153,64,179"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="138,169,64,169,64,163,138,163"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="140,182,74,206,73,201,138,177"/>
-<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="280,119,232,119,232,114,280,114"/>
+<area shape="rect" id="Node000001" title="order nodes in order of increasing time" alt="" coords="412,80,535,105"/>
+<area shape="rect" id="Node000002" href="$classgenealogy__t.html#a9ec140c24687ad0c08c57336c6fa95a0" title="roots are added at zero time if needed" alt="" coords="191,5,364,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="435,76,363,44,328,33,330,28,365,40,437,71"/>
+<area shape="rect" id="Node000003" href="$classgenealogy__t.html#ab98657fbc24362a1c951cb7a3b40ba92" title=" " alt="" coords="202,55,353,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="398,86,352,80,353,74,399,80"/>
+<area shape="rect" id="Node000006" href="$classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="191,165,364,191"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="432,113,365,143,309,168,307,163,363,138,430,108"/>
+<area shape="rect" id="Node000009" href="$classgenealogy__t.html#a693014c6aa2e88f6a650e05cee599d91" title="Parse a Newick string and create the indicated genealogy." alt="" coords="204,104,351,129"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="399,104,351,110,351,105,398,99"/>
+<area shape="rect" id="Node000004" href="$curtail_8cc.html#a1c9f6df5019f0b67b46a17498a26cdf5" title="curtail the given genealogy" alt="" coords="43,43,105,68"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="188,65,106,60,106,54,189,59"/>
+<area shape="rect" id="Node000005" href="$parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="19,92,129,117"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="195,85,130,97,129,92,194,80"/>
+<area shape="rect" id="Node000007" href="$classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="5,165,143,191"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="177,181,143,181,143,175,177,175"/>
+<area shape="rect" id="Node000008" href="$getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="40,215,108,240"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="212,197,109,222,108,217,210,191"/>
+<area shape="poly" id="edge7_Node000007_Node000007" title=" " alt="" coords="110,156,100,147,74,144,52,146,41,151,39,156,45,164,41,167,34,157,37,147,51,141,74,139,102,142,114,152"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="190,114,129,111,130,105,190,109"/>
 </map>

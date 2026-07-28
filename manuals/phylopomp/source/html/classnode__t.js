@@ -12,7 +12,6 @@ var classnode__t =
     [ "deme", "classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad", null ],
     [ "green_ball", "classnode__t.html#a1205c0098b7e90120882365d7e86a1fa", null ],
     [ "green_ball", "classnode__t.html#acb3ee337996be158355dd6aaaa9811fa", null ],
-    [ "holds_own", "classnode__t.html#af2f3244314d00462007ba1853d60f3c6", null ],
     [ "insert", "classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4", null ],
     [ "is_root", "classnode__t.html#a7b42edef9d30827acaef62beff27582f", null ],
     [ "joining_branch_length", "classnode__t.html#a74a46eec242a40845b3792b2257530b0", null ],

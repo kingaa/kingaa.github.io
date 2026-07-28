@@ -57,9 +57,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "classpocket__t.html#a80133bf9e65cbf626193a6995a6245d4",
-"lbdp__pomp_8c.html",
-"structbdss__parameters__t.html#ae9410c36ca188e4bc46408e3451f4775",
-"twospecies__pomp_8c.html#a4d46c8a35daf7c9b9e71edfae7eb1bce"
+"lbdp__pomp_8c.html#a16e1e5ba474fcf3e45ade32acf66c144",
+"structbdss__state__t.html",
+"twospecies__pomp_8c.html#a4d96dc22273a943b23774ac519154dcc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

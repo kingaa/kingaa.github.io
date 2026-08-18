@@ -185,82 +185,71 @@ $(function(){initNavTree('pocket_8h_source.html',''); initResizable(true); });
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953">   81</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953">repair_owners</a> (<span class="keyword">const</span> std::unordered_map&lt;name_t,node_t*&gt;&amp; node_name,</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                      std::unordered_map&lt;name_t,ball_t*&gt; *ball_name) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classnode__t.html">node_t</a> *p;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    p = node_name.at(b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    b-&gt;<a class="code hl_function" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">owner</a>() = p;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    (*ball_name)[b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>] = b;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  };</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_function" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f">is</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        b-&gt;<a class="code hl_function" href="classball__t.html#a1d377630b5d22bce8cc315d9a2feaa15">owner</a>() = node_name.at(b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        (*ball_name)[b-&gt;<a class="code hl_variable" href="classball__t.html#a2c9aacc8dae1325e7ff3b8e22dd88675">uniq</a>] = b;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  };</div>
 </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classpocket__t.html#a88117aee1417a45775cb961551f95964">   96</a></span>  <a class="code hl_function" href="classpocket__t.html#a88117aee1417a45775cb961551f95964">~pocket_t</a> (<span class="keywordtype">void</span>) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_function" href="classpocket__t.html#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  };</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classpocket__t.html#a88117aee1417a45775cb961551f95964">   94</a></span>  <a class="code hl_function" href="classpocket__t.html#a88117aee1417a45775cb961551f95964">~pocket_t</a> (<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="classpocket__t.html#a01bb1db161b45b6770a082ad80d2f07f">clean</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  };</div>
 </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
-<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">  103</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> (i != end());</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  };</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">  101</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = find(b);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> (i != end());</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  };</div>
 </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf">  108</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf">holds</a> (<a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> c)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      result = ((*i)-&gt;color == c);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf">  106</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf">holds</a> (<a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> c)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="pocket_8h.html#ac6103e4aa84ad86bbfa30c7f21164c31">ball_it</a> i = begin(); !result &amp;&amp; i != end(); i++) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      result = ((*i)-&gt;color == c);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  };</div>
 </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
-<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1">  116</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1">first_ball</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">return</span> *cbegin();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  };</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span></div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1">  114</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1">first_ball</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> *cbegin();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  };</div>
 </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
-<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">  120</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">return</span> *crbegin();</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  };</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">  118</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> *crbegin();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  };</div>
 </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
-<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302">  124</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302">ball</a> (<span class="keyword">const</span> <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> c)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == c) <span class="keywordflow">return</span> b;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    assert(0);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  };</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span></div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302">  122</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302">ball</a> (<span class="keyword">const</span> <a class="code hl_enumeration" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a> c)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_class" href="classball__t.html">ball_t</a> *a = 0;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="classball__t.html#ada6b9e789dc34806789eb6f41892dd46">color</a> == c) a = b;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    assert(a != 0);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">return</span> a;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  };</div>
 </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
-<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classpocket__t.html#aed4bf5e427670be617dd2a955f22eb93">  132</a></span>  <a class="code hl_class" href="classball__t.html">ball_t</a>* <a class="code hl_function" href="classpocket__t.html#aed4bf5e427670be617dd2a955f22eb93">other</a> (<span class="keyword">const</span> <a class="code hl_class" href="classball__t.html">ball_t</a> *b)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *a : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      <span class="keywordflow">if</span> (a != b) <span class="keywordflow">return</span> a;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    assert(0);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  };</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  string_t <a class="code hl_function" href="classpocket__t.html#a9706f3e00ee062a443ac00bdb9d99177">yaml</a> (string_t tab = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  SEXP <a class="code hl_function" href="classpocket__t.html#a34e91db606900cc3766fdab1a2cfc2ae">structure</a> (<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>};</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  string_t <a class="code hl_function" href="classpocket__t.html#a9706f3e00ee062a443ac00bdb9d99177">yaml</a> (string_t tab = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  SEXP <a class="code hl_function" href="classpocket__t.html#a34e91db606900cc3766fdab1a2cfc2ae">structure</a> (<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>};</div>
-</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aball_8h_html"><div class="ttname"><a href="ball_8h.html">ball.h</a></div></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></div><div class="ttdeci">color_t</div><div class="ttdoc">BALL COLORS.</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
@@ -276,17 +265,16 @@ $(function(){initNavTree('pocket_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclasspocket__t_html_a0020ea91d3d4b5b42a47da0412334961"><div class="ttname"><a href="classpocket__t.html#a0020ea91d3d4b5b42a47da0412334961">pocket_t::operator&gt;&gt;</a></div><div class="ttdeci">friend raw_t * operator&gt;&gt;(const pocket_t &amp;p, raw_t *o)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition</b> <a href="#l00048">pocket.h:48</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a01bb1db161b45b6770a082ad80d2f07f"><div class="ttname"><a href="classpocket__t.html#a01bb1db161b45b6770a082ad80d2f07f">pocket_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">delete balls and clear pocket</div><div class="ttdef"><b>Definition</b> <a href="#l00035">pocket.h:35</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a022ca8ce5e2453bd2a3d76f1c0430953"><div class="ttname"><a href="classpocket__t.html#a022ca8ce5e2453bd2a3d76f1c0430953">pocket_t::repair_owners</a></div><div class="ttdeci">void repair_owners(const std::unordered_map&lt; name_t, node_t * &gt; &amp;node_name, std::unordered_map&lt; name_t, ball_t * &gt; *ball_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">pocket.h:81</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_a06d4f17e5cb054aefbfaaf77f498c302"><div class="ttname"><a href="classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302">pocket_t::ball</a></div><div class="ttdeci">ball_t * ball(const color_t c) const</div><div class="ttdoc">retrieve the first ball of the specified color.</div><div class="ttdef"><b>Definition</b> <a href="#l00124">pocket.h:124</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_a06d4f17e5cb054aefbfaaf77f498c302"><div class="ttname"><a href="classpocket__t.html#a06d4f17e5cb054aefbfaaf77f498c302">pocket_t::ball</a></div><div class="ttdeci">ball_t * ball(const color_t c) const</div><div class="ttdoc">retrieve the first ball of the specified color.</div><div class="ttdef"><b>Definition</b> <a href="#l00122">pocket.h:122</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a34e91db606900cc3766fdab1a2cfc2ae"><div class="ttname"><a href="classpocket__t.html#a34e91db606900cc3766fdab1a2cfc2ae">pocket_t::structure</a></div><div class="ttdeci">SEXP structure(void) const</div><div class="ttdoc">R list description.</div><div class="ttdef"><b>Definition</b> <a href="structure_8cc_source.html#l00040">structure.cc:41</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_a4e88c4d11f40bbb43691aac3c6c363cf"><div class="ttname"><a href="classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf">pocket_t::holds</a></div><div class="ttdeci">bool holds(color_t c) const</div><div class="ttdoc">does this node hold a ball of this color?</div><div class="ttdef"><b>Definition</b> <a href="#l00108">pocket.h:108</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_a778485d19ff278c7fbe70c92fec904e9"><div class="ttname"><a href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">pocket_t::last_ball</a></div><div class="ttdeci">ball_t * last_ball(void) const</div><div class="ttdoc">retrieve the last ball</div><div class="ttdef"><b>Definition</b> <a href="#l00120">pocket.h:120</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_a4e88c4d11f40bbb43691aac3c6c363cf"><div class="ttname"><a href="classpocket__t.html#a4e88c4d11f40bbb43691aac3c6c363cf">pocket_t::holds</a></div><div class="ttdeci">bool holds(color_t c) const</div><div class="ttdoc">does this node hold a ball of this color?</div><div class="ttdef"><b>Definition</b> <a href="#l00106">pocket.h:106</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_a778485d19ff278c7fbe70c92fec904e9"><div class="ttname"><a href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">pocket_t::last_ball</a></div><div class="ttdeci">ball_t * last_ball(void) const</div><div class="ttdoc">retrieve the last ball</div><div class="ttdef"><b>Definition</b> <a href="#l00118">pocket.h:118</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a80133bf9e65cbf626193a6995a6245d4"><div class="ttname"><a href="classpocket__t.html#a80133bf9e65cbf626193a6995a6245d4">pocket_t::repair_holder</a></div><div class="ttdeci">void repair_holder(node_t *p)</div><div class="ttdef"><b>Definition</b> <a href="#l00072">pocket.h:72</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_a88117aee1417a45775cb961551f95964"><div class="ttname"><a href="classpocket__t.html#a88117aee1417a45775cb961551f95964">pocket_t::~pocket_t</a></div><div class="ttdeci">~pocket_t(void)</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition</b> <a href="#l00096">pocket.h:96</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_a88117aee1417a45775cb961551f95964"><div class="ttname"><a href="classpocket__t.html#a88117aee1417a45775cb961551f95964">pocket_t::~pocket_t</a></div><div class="ttdeci">~pocket_t(void)</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition</b> <a href="#l00094">pocket.h:94</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a8d3ed4fcab81ac0ae7e8cd5d88408cbf"><div class="ttname"><a href="classpocket__t.html#a8d3ed4fcab81ac0ae7e8cd5d88408cbf">pocket_t::bytesize</a></div><div class="ttdeci">size_t bytesize(void) const</div><div class="ttdoc">size of binary serialization</div><div class="ttdef"><b>Definition</b> <a href="#l00044">pocket.h:44</a></div></div>
 <div class="ttc" id="aclasspocket__t_html_a9706f3e00ee062a443ac00bdb9d99177"><div class="ttname"><a href="classpocket__t.html#a9706f3e00ee062a443ac00bdb9d99177">pocket_t::yaml</a></div><div class="ttdeci">string_t yaml(string_t tab=&quot;&quot;) const</div><div class="ttdoc">human/machine-readable info</div><div class="ttdef"><b>Definition</b> <a href="yaml_8cc_source.html#l00024">yaml.cc:25</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_ab29e201dc695f04de9518f3a50cd8cf1"><div class="ttname"><a href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1">pocket_t::first_ball</a></div><div class="ttdeci">ball_t * first_ball(void) const</div><div class="ttdoc">retrieve the first ball</div><div class="ttdef"><b>Definition</b> <a href="#l00116">pocket.h:116</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_aed4bf5e427670be617dd2a955f22eb93"><div class="ttname"><a href="classpocket__t.html#aed4bf5e427670be617dd2a955f22eb93">pocket_t::other</a></div><div class="ttdeci">ball_t * other(const ball_t *b) const</div><div class="ttdoc">return a pointer to another ball</div><div class="ttdef"><b>Definition</b> <a href="#l00132">pocket.h:132</a></div></div>
-<div class="ttc" id="aclasspocket__t_html_affc2fde2447d03aaf5c8990525c23bf6"><div class="ttname"><a href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">pocket_t::holds</a></div><div class="ttdeci">bool holds(ball_t *b) const</div><div class="ttdoc">does this node hold the given ball?</div><div class="ttdef"><b>Definition</b> <a href="#l00103">pocket.h:103</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_ab29e201dc695f04de9518f3a50cd8cf1"><div class="ttname"><a href="classpocket__t.html#ab29e201dc695f04de9518f3a50cd8cf1">pocket_t::first_ball</a></div><div class="ttdeci">ball_t * first_ball(void) const</div><div class="ttdoc">retrieve the first ball</div><div class="ttdef"><b>Definition</b> <a href="#l00114">pocket.h:114</a></div></div>
+<div class="ttc" id="aclasspocket__t_html_affc2fde2447d03aaf5c8990525c23bf6"><div class="ttname"><a href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">pocket_t::holds</a></div><div class="ttdeci">bool holds(ball_t *b) const</div><div class="ttdoc">does this node hold the given ball?</div><div class="ttdef"><b>Definition</b> <a href="#l00101">pocket.h:101</a></div></div>
 <div class="ttc" id="ainternal_8h_html"><div class="ttname"><a href="internal_8h.html">internal.h</a></div></div>
 <div class="ttc" id="ainternal_8h_html_a41dc1dd0917b4ee9721f1d14b9c59946"><div class="ttname"><a href="internal_8h.html#a41dc1dd0917b4ee9721f1d14b9c59946">raw_t</a></div><div class="ttdeci">Rbyte raw_t</div><div class="ttdef"><b>Definition</b> <a href="internal_8h_source.html#l00052">internal.h:52</a></div></div>
 <div class="ttc" id="apocket_8h_html_a0d112f9f3e6fc7daa1c4f579bcda917a"><div class="ttname"><a href="pocket_8h.html#a0d112f9f3e6fc7daa1c4f579bcda917a">ball_rev_it</a></div><div class="ttdeci">std::set&lt; ball_t *, ball_order &gt;::const_reverse_iterator ball_rev_it</div><div class="ttdef"><b>Definition</b> <a href="#l00025">pocket.h:25</a></div></div>

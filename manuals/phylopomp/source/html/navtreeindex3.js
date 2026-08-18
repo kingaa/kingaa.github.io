@@ -1,15 +1,19 @@
 var NAVTREEINDEX3 =
 {
+"structbdss__parameters__t.html#ad45b686d9aa30890f449aab92645d6d4":[1,0,4,4],
+"structbdss__parameters__t.html#ae9410c36ca188e4bc46408e3451f4775":[1,0,4,8],
 "structbdss__state__t.html":[1,0,5],
 "structbdss__state__t.html#a4b792e70a29c6677914cd9a5c60b42b7":[1,0,5,0],
 "structbdss__state__t.html#a90eb4c34cb6806b12df50b80f4a17128":[1,0,5,1],
 "structlbdp__parameters__t.html":[1,0,8],
-"structlbdp__parameters__t.html#a5d37bff4b65b041a712c577e77fadc43":[1,0,8,2],
-"structlbdp__parameters__t.html#ab7aaded0bb02f027d0774772805748aa":[1,0,8,3],
+"structlbdp__parameters__t.html#a1dd82de1d5008dba7045744bd3742a7f":[1,0,8,2],
+"structlbdp__parameters__t.html#a5d37bff4b65b041a712c577e77fadc43":[1,0,8,3],
+"structlbdp__parameters__t.html#ab7aaded0bb02f027d0774772805748aa":[1,0,8,4],
 "structlbdp__parameters__t.html#abdc07527fab50cb39cb458a02e95e3ba":[1,0,8,0],
 "structlbdp__parameters__t.html#ac97175142eaf003e60eeedd79fe06a21":[1,0,8,1],
-"structlbdp__parameters__t.html#aea8aaa84faa50d712405b772d2a76413":[1,0,8,4],
+"structlbdp__parameters__t.html#aea8aaa84faa50d712405b772d2a76413":[1,0,8,5],
 "structlbdp__state__t.html":[1,0,9],
+"structlbdp__state__t.html#a5f465d52f816d7a1f45927bead4770b0":[1,0,9,1],
 "structlbdp__state__t.html#a95ed79b0aac0de0e4f94275544bcf023":[1,0,9,0],
 "structmers__parameters__t.html":[1,0,11],
 "structmers__parameters__t.html#a0ad2f8c8586ec0009040a74fcf7986f1":[1,0,11,15],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "twospecies__pomp_8c.html#a1fe17aa2ff1722c937379044a27da68a":[2,0,0,42,9],
 "twospecies__pomp_8c.html#a21c4ff9ac21dc611c58bef21eefbb8b2":[2,0,0,42,4],
 "twospecies__pomp_8c.html#a30f06136dc3d562c02154a343e474e29":[2,0,0,42,40],
-"twospecies__pomp_8c.html#a3197e3548c3f880639369be28c7ff4a1":[2,0,0,42,3],
-"twospecies__pomp_8c.html#a3938e50f09555da169aed14aa1b1f39e":[2,0,0,42,36],
-"twospecies__pomp_8c.html#a44779f18d87e71c78fc9fbf9dc88537d":[2,0,0,42,6],
-"twospecies__pomp_8c.html#a4b5014034c9aac136ab8c82c2d16dc82":[2,0,0,42,8],
-"twospecies__pomp_8c.html#a4d46c8a35daf7c9b9e71edfae7eb1bce":[2,0,0,42,0]
+"twospecies__pomp_8c.html#a3197e3548c3f880639369be28c7ff4a1":[2,0,0,42,3]
 };

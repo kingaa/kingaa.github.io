@@ -716,7 +716,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   61</span>  alpha = <a class="code hl_define" href="#aa605bcb9d71db7f46c589c975b05f5f8">Beta1</a>*<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>*<a class="code hl_define" href="#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a>/<a class="code hl_define" href="seirs__pomp_8c.html#a0b06d6d6f5a540a62659a417de0ad69d">POP</a>;</div>
 <div class="line"><span class="lineno">   62</span>  pi = (<a class="code hl_define" href="#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a> &gt; 0) ? 1-<a class="code hl_define" href="#a53cc32bafc7f1b49a400c3f6fee7c1aa">ellI1</a>*(<a class="code hl_define" href="#a53cc32bafc7f1b49a400c3f6fee7c1aa">ellI1</a>-1)/<a class="code hl_define" href="#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a>/(<a class="code hl_define" href="#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a>+1) : 0;</div>
 <div class="line"><span class="lineno">   63</span>  event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><span class="lineno">   64</span>  *logpi = 0; logpi++;      <span class="comment">// this cancels the boost exactly</span></div>
+<div class="line"><span class="lineno">   64</span>  *logpi = 0; logpi++;          <span class="comment">// this cancels the boost exactly</span></div>
 <div class="line"><span class="lineno">   65</span>  *penalty += alpha*(1-pi);</div>
 <div class="line"><span class="lineno">   66</span>  <span class="comment">// 1: strain 1 recovery</span></div>
 <div class="line"><span class="lineno">   67</span>  alpha = <a class="code hl_define" href="seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code hl_define" href="#ae7dee1f3e548d0fefe0f67c994de03e4">I1</a>;</div>
@@ -731,7 +731,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   76</span>  alpha = <a class="code hl_define" href="#aa5ac9396a2fed9215055f056b9d81fda">Beta2</a>*<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>*<a class="code hl_define" href="#a964f933e75944a909cc698a3997c8f14">I2</a>/<a class="code hl_define" href="seirs__pomp_8c.html#a0b06d6d6f5a540a62659a417de0ad69d">POP</a>;</div>
 <div class="line"><span class="lineno">   77</span>  pi = (<a class="code hl_define" href="#a964f933e75944a909cc698a3997c8f14">I2</a> &gt; 0) ? 1-<a class="code hl_define" href="#a6306906977b46dd9df8d03cf41060eef">ellI2</a>*(<a class="code hl_define" href="#a6306906977b46dd9df8d03cf41060eef">ellI2</a>-1)/<a class="code hl_define" href="#a964f933e75944a909cc698a3997c8f14">I2</a>/(<a class="code hl_define" href="#a964f933e75944a909cc698a3997c8f14">I2</a>+1) : 0;</div>
 <div class="line"><span class="lineno">   78</span>  event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><span class="lineno">   79</span>  *logpi = 0; logpi++;      <span class="comment">// this cancels the boost exactly</span></div>
+<div class="line"><span class="lineno">   79</span>  *logpi = 0; logpi++;          <span class="comment">// this cancels the boost exactly</span></div>
 <div class="line"><span class="lineno">   80</span>  *penalty += alpha*(1-pi);</div>
 <div class="line"><span class="lineno">   81</span>  <span class="comment">// 3: strain 2 recovery</span></div>
 <div class="line"><span class="lineno">   82</span>  alpha = <a class="code hl_define" href="seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code hl_define" href="#a964f933e75944a909cc698a3997c8f14">I2</a>;</div>
@@ -746,7 +746,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>  alpha = <a class="code hl_define" href="#a1799d6ec4d8af60ad129d8f7bea5bc7b">Beta3</a>*<a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>*<a class="code hl_define" href="#ae1f8da67f009f45f621d8fdad22b0396">I3</a>/<a class="code hl_define" href="seirs__pomp_8c.html#a0b06d6d6f5a540a62659a417de0ad69d">POP</a>;</div>
 <div class="line"><span class="lineno">   92</span>  pi = (<a class="code hl_define" href="#ae1f8da67f009f45f621d8fdad22b0396">I3</a> &gt; 0) ? 1-<a class="code hl_define" href="#a81540f1e0e86b3360047e35ee29db7c1">ellI3</a>*(<a class="code hl_define" href="#a81540f1e0e86b3360047e35ee29db7c1">ellI3</a>-1)/<a class="code hl_define" href="#ae1f8da67f009f45f621d8fdad22b0396">I3</a>/(<a class="code hl_define" href="#ae1f8da67f009f45f621d8fdad22b0396">I3</a>+1) : 0;</div>
 <div class="line"><span class="lineno">   93</span>  event_rate += (*rate = alpha*pi); rate++;</div>
-<div class="line"><span class="lineno">   94</span>  *logpi = 0; logpi++;      <span class="comment">// this cancels the boost exactly</span></div>
+<div class="line"><span class="lineno">   94</span>  *logpi = 0; logpi++;          <span class="comment">// this cancels the boost exactly</span></div>
 <div class="line"><span class="lineno">   95</span>  *penalty += alpha*(1-pi);</div>
 <div class="line"><span class="lineno">   96</span>  <span class="comment">// 5: strain 3 recovery</span></div>
 <div class="line"><span class="lineno">   97</span>  alpha = <a class="code hl_define" href="seirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d">gamma</a>*<a class="code hl_define" href="#ae1f8da67f009f45f621d8fdad22b0396">I3</a>;</div>

@@ -27,7 +27,7 @@ var searchData=
   ['normal_24',['normal',['../bdss_8cc.html#a252fd4bd9e3abf726220fb9710d9358f',1,'bdss.cc']]],
   ['nrate_25',['nrate',['../seirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;seirs_pomp.c'],['../si2r__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;si2r_pomp.c'],['../sirs__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;sirs_pomp.c'],['../strains__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;strains_pomp.c'],['../twospecies__pomp_8c.html#a9f9327a16fb80b77d8d1f9459655ff52',1,'nrate:&#160;twospecies_pomp.c']]],
   ['nroot_26',['nroot',['../classgenealogy__t.html#ad9ce6476ab463bf965c166538d4fd2b8',1,'genealogy_t::nroot()'],['../generics_8h.html#a35749bc7f7ea7b3687d1be8123452e53',1,'nroot():&#160;generics.h']]],
-  ['nsample_27',['nsample',['../classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7',1,'genealogy_t::nsample()'],['../generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8',1,'nsample():&#160;generics.h']]],
+  ['nsample_27',['nsample',['../structlbdp__state__t.html#a5f465d52f816d7a1f45927bead4770b0',1,'lbdp_state_t::nsample'],['../classgenealogy__t.html#a0dc6e86edc5d8227c6c6a4bffd5a54e7',1,'genealogy_t::nsample()'],['../generics_8h.html#adcf8ea15d650a3c74806cf20b353d8e8',1,'nsample():&#160;generics.h']]],
   ['ntime_28',['ntime',['../classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3',1,'nodeseq_t']]],
   ['null_5flineage_29',['null_lineage',['../node_8h.html#affb5e86666af08d682543f786e480f13',1,'node.h']]]
 ];

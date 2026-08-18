@@ -20,6 +20,7 @@ var init_8c =
     [ "genealScaleShift", "init_8c.html#aa6c50b27c477770eba486e295240622f", null ],
     [ "genealSum", "init_8c.html#a53cc3c75e3f3d8b98487b7ffc21be4d2", null ],
     [ "getInfo", "init_8c.html#a9c6f0ea5016932d4927478ff1221a2c3", null ],
+    [ "parse_cblv", "init_8c.html#a534e06996ff35fe22c51c4b9e7726058", null ],
     [ "parse_newick", "init_8c.html#a888f6a962714e136419f7a5c0d6801bb", null ],
     [ "R_init_phylopomp", "init_8c.html#a071d822d4db004b7729f6819ffabbc44", null ],
     [ "yaml", "init_8c.html#abf29b98fcd9084af45fcf434e788ac32", null ],

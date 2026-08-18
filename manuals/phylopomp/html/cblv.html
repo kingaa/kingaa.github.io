@@ -20,13 +20,15 @@ function processMathHTML() {
 
 <h3>Description</h3>
 
-<p>Computes the CBLV representation.
+<p>Puts a genealogy into its CBLV representation and vice-versa.
 </p>
 
 
 <h3>Usage</h3>
 
 <pre><code class='language-R'>cblv(object)
+
+parse_cblv(xy, t0, time)
 </code></pre>
 
 
@@ -37,15 +39,29 @@ function processMathHTML() {
 <td>
 <p>a &lsquo;gpgen&rsquo; object, possibly with &lsquo;model&rsquo; attribute.</p>
 </td></tr>
+<tr><td><code id="xy">xy</code></td>
+<td>
+<p>CBLV representation, as a 2-column matrix</p>
+</td></tr>
+<tr><td><code id="t0">t0</code></td>
+<td>
+<p>root-time</p>
+</td></tr>
+<tr><td><code id="time">time</code></td>
+<td>
+<p>genealogy time</p>
+</td></tr>
 </table>
 
 
 <h3>Value</h3>
 
-<p>A matrix with two columns.
+<p><code>cblv</code> returns a matrix with two columns.
+</p>
+<p><code>parse_cblv</code> returns a &lsquo;gpgen&rsquo; object.
 </p>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.5.2 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.6.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

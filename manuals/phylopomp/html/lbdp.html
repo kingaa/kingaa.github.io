@@ -26,7 +26,16 @@ function processMathHTML() {
 
 <h3>Usage</h3>
 
-<pre><code class='language-R'>runLBDP(time, t0 = 0, lambda = 2, mu = 1, psi = 1, chi = 0, n0 = 5)
+<pre><code class='language-R'>runLBDP(
+  time,
+  t0 = 0,
+  lambda = 2,
+  mu = 1,
+  psi = 1,
+  chi = 0,
+  n0 = 5,
+  max_sample = 10000
+)
 
 continueLBDP(object, time, lambda = NA, mu = NA, psi = NA, chi = NA)
 
@@ -66,6 +75,10 @@ lbdp_exact(x, lambda, mu, psi, chi = 0, n0 = 1)
 <tr><td><code id="n0">n0</code></td>
 <td>
 <p>population size at time t0</p>
+</td></tr>
+<tr><td><code id="max_sample">max_sample</code></td>
+<td>
+<p>maximum number of samples</p>
 </td></tr>
 <tr><td><code id="object">object</code></td>
 <td>
@@ -143,7 +156,7 @@ simulate("LBDP",time=4) |&gt;
 
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.5.2 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.6.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

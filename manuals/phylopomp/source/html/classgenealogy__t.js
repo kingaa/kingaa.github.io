@@ -35,6 +35,7 @@ var classgenealogy__t =
     [ "operator=", "classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3", null ],
     [ "operator=", "classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94", null ],
     [ "parse", "classgenealogy__t.html#a693014c6aa2e88f6a650e05cee599d91", null ],
+    [ "parse_cblv", "classgenealogy__t.html#a56c148494e1a9174ad506ebde8bfa162", null ],
     [ "prune", "classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2", null ],
     [ "reuniqify", "classgenealogy__t.html#a1ed3cc314e9d9f00190cb3d71d34851c", null ],
     [ "sample", "classgenealogy__t.html#ad4fdb13d22bd0ba91153466eb8fe371b", null ],

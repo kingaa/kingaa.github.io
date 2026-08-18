@@ -8,3 +8,15 @@ Suggests: tidyverse, doFuture, broom, gifski
 License: GPL-3
 Archs: x64
 Built: R 4.6.1; x86_64-w64-mingw32; 2026-07-26 17:26:46 UTC; windows
+File: phylopomp_0.19.5.0.zip
+
+Package: pomp
+Version: 6.4.0.3
+Depends: R(>= 4.1.0)
+Imports: methods, stats, graphics, digest, mvtnorm, deSolve, coda,
+        data.table
+Suggests: ggplot2, knitr, dplyr, tidyr, subplex, nloptr
+License: GPL-3
+Archs: x64
+Built: R 4.6.1; x86_64-w64-mingw32; 2026-08-18 11:40:16 UTC; windows
+File: pomp_6.4.0.3.zip

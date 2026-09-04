@@ -1,6 +1,7 @@
 var structsir__parameters__t =
 [
     [ "Beta", "structsir__parameters__t.html#a7273e292749e1861a646d34ea7fb32f9", null ],
+    [ "chi", "structsir__parameters__t.html#a0116142d90ff740cfc4882570cbcf513", null ],
     [ "gamma", "structsir__parameters__t.html#aaa8f925e0bdbf85034adf951855a5906", null ],
     [ "I0", "structsir__parameters__t.html#a3945c8a6f671726158bd50e3784b1a68", null ],
     [ "omega", "structsir__parameters__t.html#a3904e7a6c76ceefae06f326e81ed115c", null ],

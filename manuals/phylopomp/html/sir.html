@@ -32,6 +32,7 @@ function processMathHTML() {
   Beta = 4,
   gamma = 1,
   psi = 1,
+  chi = 0,
   omega = 0,
   pop = 100,
   S0 = 0.95,
@@ -39,7 +40,15 @@ function processMathHTML() {
   R0 = 0
 )
 
-continueSIR(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
+continueSIR(
+  object,
+  time,
+  Beta = NA,
+  gamma = NA,
+  psi = NA,
+  chi = NA,
+  omega = NA
+)
 
 runSIRS(
   time,
@@ -47,6 +56,7 @@ runSIRS(
   Beta = 4,
   gamma = 1,
   psi = 1,
+  chi = 0,
   omega = 0,
   pop = 100,
   S0 = 0.95,
@@ -54,11 +64,19 @@ runSIRS(
   R0 = 0
 )
 
-continueSIRS(object, time, Beta = NA, gamma = NA, psi = NA, omega = NA)
+continueSIRS(
+  object,
+  time,
+  Beta = NA,
+  gamma = NA,
+  psi = NA,
+  chi = NA,
+  omega = NA
+)
 
-sir_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, pop)
+sir_pomp(x, Beta, gamma, psi, chi = 0, omega = 0, S0, I0, R0, pop)
 
-sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, pop)
+sirs_pomp(x, Beta, gamma, psi, chi = 0, omega = 0, S0, I0, R0, pop)
 </code></pre>
 
 
@@ -84,6 +102,10 @@ sirs_pomp(x, Beta, gamma, psi, omega = 0, S0, I0, R0, pop)
 <tr><td><code id="psi">psi</code></td>
 <td>
 <p>per capita (nondestructive) sampling rate</p>
+</td></tr>
+<tr><td><code id="chi">chi</code></td>
+<td>
+<p>per capita (destructive) sampling rate</p>
 </td></tr>
 <tr><td><code id="omega">omega</code></td>
 <td>
@@ -174,7 +196,7 @@ simulate("SIRS",omega=1,time=20,I0=0.05) |&gt; plot()
 simulate("SIRS",omega=1,time=20,I0=0.05) |&gt; lineages() |&gt; plot()
 </code></pre>
 
-<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.6.0 <a href="00Index.html">Index</a>]</div></main>
+<hr><div style="text-align: center;">[Package <em>phylopomp</em> version 0.19.7.0 <a href="00Index.html">Index</a>]</div></main>
 
 </div>
 </body></html>

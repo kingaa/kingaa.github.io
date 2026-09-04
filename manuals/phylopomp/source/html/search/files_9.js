@@ -12,5 +12,6 @@ var searchData=
   ['strains_2ecc_9',['strains.cc',['../strains_8cc.html',1,'']]],
   ['strains_5fpomp_2ec_10',['strains_pomp.c',['../strains__pomp_8c.html',1,'']]],
   ['structure_2ecc_11',['structure.cc',['../structure_8cc.html',1,'']]],
-  ['sum_2ecc_12',['sum.cc',['../sum_8cc.html',1,'']]]
+  ['subsample_2ecc_12',['subsample.cc',['../subsample_8cc.html',1,'']]],
+  ['sum_2ecc_13',['sum.cc',['../sum_8cc.html',1,'']]]
 ];

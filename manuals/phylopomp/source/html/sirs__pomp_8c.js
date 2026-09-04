@@ -1,6 +1,7 @@
 var sirs__pomp_8c =
 [
     [ "Beta", "sirs__pomp_8c.html#a69481325cd251d42dac1c62fb459cddc", null ],
+    [ "chi", "sirs__pomp_8c.html#a92286de75fdd3d75889360b4e91a5d1a", null ],
     [ "ellI", "sirs__pomp_8c.html#a7c28f16555b06bfc9321c6f007542ad1", null ],
     [ "EVENT_RATES", "sirs__pomp_8c.html#af0f993f43b1eb97a4c62f2a5c77d2b01", null ],
     [ "gamma", "sirs__pomp_8c.html#a42e729077189bab1dae844253dd2ad1d", null ],

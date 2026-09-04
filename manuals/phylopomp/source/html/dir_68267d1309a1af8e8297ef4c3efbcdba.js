@@ -40,6 +40,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "strains.cc", "strains_8cc.html", "strains_8cc" ],
     [ "strains_pomp.c", "strains__pomp_8c.html", "strains__pomp_8c" ],
     [ "structure.cc", "structure_8cc.html", null ],
+    [ "subsample.cc", "subsample_8cc.html", "subsample_8cc" ],
     [ "sum.cc", "sum_8cc.html", "sum_8cc" ],
     [ "twospecies.cc", "twospecies_8cc.html", "twospecies_8cc" ],
     [ "twospecies_pomp.c", "twospecies__pomp_8c.html", "twospecies__pomp_8c" ],

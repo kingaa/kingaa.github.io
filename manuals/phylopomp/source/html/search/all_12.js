@@ -56,7 +56,7 @@ var searchData=
   ['sir_2ecc_53',['sir.cc',['../sir_8cc.html',1,'']]],
   ['sir_5fgenealogy_5ft_54',['sir_genealogy_t',['../sir_8cc.html#a75d5acee0ecb0e32e9865fa7e6242c5d',1,'sir.cc']]],
   ['sir_5fparameters_5ft_55',['sir_parameters_t',['../structsir__parameters__t.html',1,'']]],
-  ['sir_5fproc_5ft_56',['sir_proc_t',['../sir_8cc.html#ac83319d7eb362a2ee68f617c711debc5',1,'sir.cc']]],
+  ['sir_5fproc_5ft_56',['sir_proc_t',['../sir_8cc.html#aa468d667a42067c205ca7022ec3eb467',1,'sir.cc']]],
   ['sir_5fstate_5ft_57',['sir_state_t',['../structsir__state__t.html',1,'']]],
   ['sirs_5fdmeas_58',['sirs_dmeas',['../decls_8h.html#a7b460433880bdc16debf35bd2bab47c5',1,'sirs_dmeas(double *, const double *, const double *, const double *, int, const int *, const int *, const int *, const int *, const double *, double):&#160;sirs_pomp.c'],['../sirs__pomp_8c.html#a00471ac3cb48272a152e2e8c44bb0aa5',1,'sirs_dmeas(double *__lik, const double *__y, const double *__x, const double *__p, int give_log, const int *__obsindex, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t):&#160;sirs_pomp.c']]],
   ['sirs_5fgill_59',['sirs_gill',['../decls_8h.html#a13a5344f6efd51451462b23aeacbf3da',1,'sirs_gill(double *, const double *, const int *, const int *, const int *, const double *, double, double):&#160;sirs_pomp.c'],['../sirs__pomp_8c.html#aaa3cb1ab4cc8009c9ea74a3475d89655',1,'sirs_gill(double *__x, const double *__p, const int *__stateindex, const int *__parindex, const int *__covindex, const double *__covars, double t, double dt):&#160;sirs_pomp.c']]],
@@ -87,7 +87,9 @@ var searchData=
   ['strains_5fstate_5ft_84',['strains_state_t',['../structstrains__state__t.html',1,'']]],
   ['structure_85',['structure',['../classball__t.html#a7624737bc15d3d74fad0d4faa71f488c',1,'ball_t::structure()'],['../classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59',1,'genealogy_t::structure()'],['../classmaster__t.html#ae7718a2fc6afc0852aa784a00c338ba9',1,'master_t::structure()'],['../classnode__t.html#a9c15c4499803de500c11d3b6dc63fd52',1,'node_t::structure()'],['../classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253',1,'nodeseq_t::structure()'],['../classpocket__t.html#a34e91db606900cc3766fdab1a2cfc2ae',1,'pocket_t::structure()'],['../generics_8h.html#a80273a90776cfea19d5014f6489b8648',1,'structure(const TYPE &amp;X):&#160;generics.h']]],
   ['structure_2ecc_86',['structure.cc',['../structure_8cc.html',1,'']]],
-  ['sum_2ecc_87',['sum.cc',['../sum_8cc.html',1,'']]],
-  ['superspreader_88',['superspreader',['../bdss_8cc.html#a3e9e9ebecb4cabcff7ef62ca71a78ea8',1,'bdss.cc']]],
-  ['swap_89',['swap',['../classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624',1,'nodeseq_t']]]
+  ['subsample_87',['subsample',['../classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d',1,'genealogy_t::subsample()'],['../init_8c.html#a0a913146fb53ff9d9312b0eee8eb36f7',1,'subsample(SEXP, SEXP):&#160;subsample.cc'],['../subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b',1,'subsample(SEXP State, SEXP Frac):&#160;subsample.cc']]],
+  ['subsample_2ecc_88',['subsample.cc',['../subsample_8cc.html',1,'']]],
+  ['sum_2ecc_89',['sum.cc',['../sum_8cc.html',1,'']]],
+  ['superspreader_90',['superspreader',['../bdss_8cc.html#a3e9e9ebecb4cabcff7ef62ca71a78ea8',1,'bdss.cc']]],
+  ['swap_91',['swap',['../classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624',1,'nodeseq_t']]]
 ];

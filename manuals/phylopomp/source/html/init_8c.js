@@ -23,6 +23,7 @@ var init_8c =
     [ "parse_cblv", "init_8c.html#a534e06996ff35fe22c51c4b9e7726058", null ],
     [ "parse_newick", "init_8c.html#a888f6a962714e136419f7a5c0d6801bb", null ],
     [ "R_init_phylopomp", "init_8c.html#a071d822d4db004b7729f6819ffabbc44", null ],
+    [ "subsample", "init_8c.html#a0a913146fb53ff9d9312b0eee8eb36f7", null ],
     [ "yaml", "init_8c.html#abf29b98fcd9084af45fcf434e788ac32", null ],
     [ "callMethods", "init_8c.html#aa5ecd2cda6339e38a7040278a02baaa5", null ],
     [ "extMethods", "init_8c.html#a446ed3b3877d86ba01ac24d6501e25ae", null ],

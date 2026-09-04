@@ -252,6 +252,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af9b62fa58a340fda8969cc011b392c87" id="r_af9b62fa58a340fda8969cc011b392c87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenealogy__t.html">genealogy_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b62fa58a340fda8969cc011b392c87">insert_zlb</a> (void)</td></tr>
 <tr class="memdesc:af9b62fa58a340fda8969cc011b392c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert zero-length branches for samples where needed  <br /></td></tr>
 <tr class="separator:af9b62fa58a340fda8969cc011b392c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac0bda906ceae47ff593ac3c53f527d" id="r_a6ac0bda906ceae47ff593ac3c53f527d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenealogy__t.html">genealogy_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ac0bda906ceae47ff593ac3c53f527d">subsample</a> (double frac)</td></tr>
+<tr class="separator:a6ac0bda906ceae47ff593ac3c53f527d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a693014c6aa2e88f6a650e05cee599d91" id="r_a693014c6aa2e88f6a650e05cee599d91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgenealogy__t.html">genealogy_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a693014c6aa2e88f6a650e05cee599d91">parse</a> (const string_t &amp;)</td></tr>
 <tr class="memdesc:a693014c6aa2e88f6a650e05cee599d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Newick string and create the indicated genealogy.  <br /></td></tr>
 <tr class="separator:a693014c6aa2e88f6a650e05cee599d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -454,41 +456,45 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_a4eadff4b427283fd2f7d0319a56b4386_icgraph.png" border="0" usemap="#aclassgenealogy__t_a4eadff4b427283fd2f7d0319a56b4386_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_a4eadff4b427283fd2f7d0319a56b4386_icgraph" id="aclassgenealogy__t_a4eadff4b427283fd2f7d0319a56b4386_icgraph">
-<area shape="rect" title=" " alt="" coords="545,278,736,304"/>
-<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="121,153,259,178"/>
-<area shape="poly" title=" " alt="" coords="619,269,568,216,534,190,496,171,436,155,373,149,312,151,259,156,259,151,312,145,373,144,437,150,498,166,537,186,572,212,623,266"/>
-<area shape="rect" href="classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="307,229,497,254"/>
-<area shape="poly" title=" " alt="" coords="565,278,464,257,465,252,566,273"/>
-<area shape="rect" href="classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="307,278,497,304"/>
-<area shape="poly" title=" " alt="" coords="531,294,497,294,497,288,531,288"/>
-<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="315,180,489,205"/>
-<area shape="poly" title=" " alt="" coords="605,274,555,247,496,220,458,208,459,203,498,215,557,242,608,269"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="321,28,483,53"/>
-<area shape="poly" title=" " alt="" coords="628,266,609,223,581,170,543,115,521,91,496,69,470,56,473,51,499,65,524,87,547,112,586,167,614,221,633,264"/>
-<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="309,328,495,353"/>
-<area shape="poly" title=" " alt="" coords="566,309,465,330,464,325,565,304"/>
-<area shape="rect" href="classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="314,377,490,402"/>
-<area shape="poly" title=" " alt="" coords="609,313,558,341,498,368,463,380,461,374,496,363,555,336,606,308"/>
-<area shape="rect" href="classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="314,426,490,452"/>
-<area shape="poly" title=" " alt="" coords="622,316,569,367,535,394,499,417,471,429,469,424,496,413,532,390,566,363,618,312"/>
-<area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="309,476,495,501"/>
-<area shape="poly" title=" " alt="" coords="628,317,607,351,578,392,542,432,499,467,475,478,473,473,496,462,538,428,574,388,603,348,624,314"/>
-<area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="309,525,495,550"/>
-<area shape="poly" title=" " alt="" coords="633,318,614,361,586,415,548,470,525,494,499,516,478,527,475,523,496,512,521,491,543,466,582,412,610,359,628,316"/>
-<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="329,78,475,104"/>
-<area shape="poly" title=" " alt="" coords="623,268,572,198,536,159,496,125,456,106,458,101,499,121,540,155,576,194,627,265"/>
-<area shape="poly" title=" " alt="" coords="216,142,208,135,190,132,175,134,166,138,165,144,169,152,165,154,159,145,162,135,173,129,190,126,211,130,220,138"/>
-<area shape="poly" title=" " alt="" coords="301,182,258,177,259,172,302,177"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,53,73,78"/>
-<area shape="poly" title=" " alt="" coords="340,211,290,218,234,221,175,214,147,205,120,193,90,169,67,137,51,105,42,80,47,78,56,103,72,134,94,165,123,189,149,200,176,208,234,215,290,213,340,205"/>
-<area shape="poly" title=" " alt="" coords="329,60,308,69,276,89,248,113,205,155,201,151,244,109,273,85,305,65,327,55"/>
-<area shape="poly" title=" " alt="" coords="345,27,297,17,240,10,180,9,122,19,86,35,58,55,55,50,84,30,121,14,180,4,241,4,298,12,346,22"/>
-<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="157,28,223,53"/>
-<area shape="poly" title=" " alt="" coords="307,43,223,43,223,38,307,38"/>
-<area shape="poly" title=" " alt="" coords="144,51,74,63,73,57,143,46"/>
-<area shape="poly" title=" " alt="" coords="351,111,308,126,226,156,224,151,306,121,349,106"/>
-<area shape="poly" title=" " alt="" coords="314,88,73,71,74,65,315,82"/>
-<area shape="poly" title=" " alt="" coords="334,78,223,51,225,46,335,73"/>
+<area shape="rect" title=" " alt="" coords="615,271,805,296"/>
+<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="169,71,306,96"/>
+<area shape="poly" title=" " alt="" coords="694,259,674,224,646,184,609,144,565,112,534,99,501,88,432,76,365,74,306,77,306,72,365,69,432,71,502,83,536,94,568,108,613,140,650,180,679,222,699,257"/>
+<area shape="rect" href="classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="376,222,567,247"/>
+<area shape="poly" title=" " alt="" coords="634,271,533,250,534,244,635,265"/>
+<area shape="rect" href="classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="376,271,567,296"/>
+<area shape="poly" title=" " alt="" coords="601,286,567,286,567,281,601,281"/>
+<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="385,22,558,47"/>
+<area shape="poly" title=" " alt="" coords="696,259,677,217,649,166,611,114,565,68,529,49,531,45,568,64,615,110,653,163,682,215,701,257"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="391,123,552,148"/>
+<area shape="poly" title=" " alt="" coords="687,263,635,211,602,185,565,162,538,151,540,146,568,157,605,180,639,207,691,259"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="378,320,565,346"/>
+<area shape="poly" title=" " alt="" coords="635,302,534,323,533,317,634,296"/>
+<area shape="rect" href="classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="383,370,559,395"/>
+<area shape="poly" title=" " alt="" coords="678,305,627,334,568,361,532,372,531,367,566,356,625,329,675,301"/>
+<area shape="rect" href="classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="383,419,559,444"/>
+<area shape="poly" title=" " alt="" coords="691,308,639,360,605,387,568,410,540,421,538,416,565,405,602,382,635,356,687,304"/>
+<area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="378,468,565,494"/>
+<area shape="poly" title=" " alt="" coords="698,310,677,344,648,384,611,425,568,459,545,470,542,466,565,455,607,421,643,381,672,341,693,307"/>
+<area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="378,518,565,543"/>
+<area shape="poly" title=" " alt="" coords="702,310,684,354,655,407,617,462,594,487,568,508,547,520,545,515,565,504,590,483,613,459,651,405,679,351,697,308"/>
+<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="398,172,545,198"/>
+<area shape="poly" title=" " alt="" coords="675,266,625,238,566,211,531,200,532,195,568,206,627,233,678,262"/>
+<area shape="poly" title=" " alt="" coords="270,61,261,53,237,50,218,52,208,56,206,62,211,69,207,72,200,62,204,53,216,46,237,44,263,48,273,57"/>
+<area shape="poly" title=" " alt="" coords="398,52,299,73,298,68,397,47"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="18,147,86,172"/>
+<area shape="poly" title=" " alt="" coords="408,21,350,12,283,8,214,15,180,24,148,37,116,60,91,91,72,123,61,148,56,146,67,120,86,88,112,56,145,32,178,18,213,10,283,3,351,7,409,16"/>
+<area shape="poly" title=" " alt="" coords="400,122,294,99,296,94,401,117"/>
+<area shape="poly" title=" " alt="" coords="377,144,87,160,86,155,377,138"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="204,172,271,198"/>
+<area shape="poly" title=" " alt="" coords="398,154,272,181,270,175,396,148"/>
+<area shape="poly" title=" " alt="" coords="190,181,86,167,87,161,191,176"/>
+<area shape="poly" title=" " alt="" coords="400,171,375,162,309,130,257,99,260,94,312,125,377,157,402,166"/>
+<area shape="poly" title=" " alt="" coords="410,203,353,214,287,221,216,222,146,211,104,195,70,175,73,170,106,190,147,206,216,216,287,216,353,208,409,198"/>
+<area shape="poly" title=" " alt="" coords="384,188,271,188,271,182,384,182"/>
+<area shape="rect" href="classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d" title=" " alt="" coords="147,274,328,299"/>
+<area shape="poly" title=" " alt="" coords="391,205,377,211,363,222,354,233,344,245,329,256,287,276,285,271,327,252,341,241,350,229,359,218,375,207,389,200"/>
+<area shape="rect" href="subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b" title="extract the bare genealogy" alt="" coords="5,274,99,299"/>
+<area shape="poly" title=" " alt="" coords="133,289,99,289,99,284,133,284"/>
 </map>
 </div>
 
@@ -935,24 +941,23 @@ Here is the caller graph for this function:</div>
 
 <p>roots are added at zero time if needed </p>
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00382">382</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  382</span>                        {</div>
-<div class="line"><span class="lineno">  383</span>    <a class="code hl_typedef" href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a> j = begin();</div>
-<div class="line"><span class="lineno">  384</span>    <span class="keywordflow">while</span> (j != end()) {</div>
-<div class="line"><span class="lineno">  385</span>      <span class="keywordflow">if</span> ((*j)-&gt;is_root() &amp;&amp; (*j)-&gt;slate &gt; <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()) {</div>
-<div class="line"><span class="lineno">  386</span>        node_t *q = <a class="code hl_function" href="#ab6f2400db5d56680a51ae9eae32a203f">make_node</a>();</div>
-<div class="line"><span class="lineno">  387</span>        q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>();</div>
-<div class="line"><span class="lineno">  388</span>        <a class="code hl_function" href="classnodeseq__t.html#a3c6308f6fb71abd427e28129d8a5c146">attach</a>(q,*j);</div>
-<div class="line"><span class="lineno">  389</span>        push_front(q);</div>
-<div class="line"><span class="lineno">  390</span>      }</div>
-<div class="line"><span class="lineno">  391</span>      j++;</div>
-<div class="line"><span class="lineno">  392</span>    }</div>
-<div class="line"><span class="lineno">  393</span>    <a class="code hl_function" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">sort</a>();</div>
-<div class="line"><span class="lineno">  394</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00386">386</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  386</span>                        {</div>
+<div class="line"><span class="lineno">  387</span>    <span class="keyword">auto</span> j = begin();</div>
+<div class="line"><span class="lineno">  388</span>    <span class="keywordflow">while</span> (j != end()) {</div>
+<div class="line"><span class="lineno">  389</span>      <span class="keywordflow">if</span> ((*j)-&gt;is_root() &amp;&amp; (*j)-&gt;slate &gt; <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()) {</div>
+<div class="line"><span class="lineno">  390</span>        node_t *q = <a class="code hl_function" href="#ab6f2400db5d56680a51ae9eae32a203f">make_node</a>();</div>
+<div class="line"><span class="lineno">  391</span>        q-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>();</div>
+<div class="line"><span class="lineno">  392</span>        <a class="code hl_function" href="classnodeseq__t.html#a3c6308f6fb71abd427e28129d8a5c146">attach</a>(q,*j);</div>
+<div class="line"><span class="lineno">  393</span>        push_front(q);</div>
+<div class="line"><span class="lineno">  394</span>      }</div>
+<div class="line"><span class="lineno">  395</span>      j++;</div>
+<div class="line"><span class="lineno">  396</span>    }</div>
+<div class="line"><span class="lineno">  397</span>    <a class="code hl_function" href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">sort</a>();</div>
+<div class="line"><span class="lineno">  398</span>  };</div>
 <div class="ttc" id="aclassgenealogy__t_html_a90f523b2b557d1a135851a3fc0999a40"><div class="ttname"><a href="#a90f523b2b557d1a135851a3fc0999a40">genealogy_t::timezero</a></div><div class="ttdeci">slate_t &amp; timezero(void)</div><div class="ttdoc">view/set zero time.</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00154">genealogy.h:154</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a2787893286ac607ed0ad06686c2aee14"><div class="ttname"><a href="classnodeseq__t.html#a2787893286ac607ed0ad06686c2aee14">nodeseq_t::sort</a></div><div class="ttdeci">void sort(void)</div><div class="ttdoc">order nodes in order of increasing time</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00111">nodeseq.h:111</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a3c6308f6fb71abd427e28129d8a5c146"><div class="ttname"><a href="classnodeseq__t.html#a3c6308f6fb71abd427e28129d8a5c146">nodeseq_t::attach</a></div><div class="ttdeci">void attach(node_t *p, node_t *q)</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00171">nodeseq.h:171</a></div></div>
-<div class="ttc" id="anodeseq_8h_html_afdd200c13cb7754d81aaa5deeff703ed"><div class="ttname"><a href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a></div><div class="ttdeci">std::list&lt; node_t * &gt;::iterator node_nit</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00015">nodeseq.h:15</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1126,8 +1131,8 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   90</span>}</div>
 <div class="ttc" id="aclassgenealogy__t_html_a0dc6e86edc5d8227c6c6a4bffd5a54e7"><div class="ttname"><a href="#a0dc6e86edc5d8227c6c6a4bffd5a54e7">genealogy_t::nsample</a></div><div class="ttdeci">size_t nsample(void) const</div><div class="ttdoc">number of samples</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00184">genealogy.h:184</a></div></div>
 <div class="ttc" id="aclassnode__t_html_a160bcfd3c03f0b210730e6142e24275b"><div class="ttname"><a href="classnode__t.html#a160bcfd3c03f0b210730e6142e24275b">node_t::cblv</a></div><div class="ttdeci">void cblv(std::vector&lt; slate_t &gt; &amp;, std::vector&lt; slate_t &gt; &amp;, std::unordered_map&lt; name_t, bool &gt; &amp;, const std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; &amp;, slate_t) const</div><div class="ttdef"><b>Definition</b> <a href="cblv_8cc_source.html#l00043">cblv.cc:44</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a054513b50a1efa636b620e4f2743a0c1"><div class="ttname"><a href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">nodeseq_t::children_map</a></div><div class="ttdeci">std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; children_map(void) const</div><div class="ttdoc">map nodes onto vector of children</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00249">nodeseq.h:249</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a51e47d09293e266450a15cb5d29008eb"><div class="ttname"><a href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">nodeseq_t::ladderize</a></div><div class="ttdeci">std::vector&lt; node_t * &gt; ladderize(std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; &amp;children) const</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00282">nodeseq.h:283</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a054513b50a1efa636b620e4f2743a0c1"><div class="ttname"><a href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">nodeseq_t::children_map</a></div><div class="ttdeci">std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; children_map(void) const</div><div class="ttdoc">map nodes onto vector of children</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00252">nodeseq.h:252</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a51e47d09293e266450a15cb5d29008eb"><div class="ttname"><a href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">nodeseq_t::ladderize</a></div><div class="ttdeci">std::vector&lt; node_t * &gt; ladderize(std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; &amp;children) const</div><div class="ttdef"><b>Definition</b> <a href="nodeseq_8h_source.html#l00285">nodeseq.h:286</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1289,47 +1294,51 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_a17f6f8bc2a6469c93d027d3a2f53c714_icgraph.png" border="0" usemap="#aclassgenealogy__t_a17f6f8bc2a6469c93d027d3a2f53c714_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_a17f6f8bc2a6469c93d027d3a2f53c714_icgraph" id="aclassgenealogy__t_a17f6f8bc2a6469c93d027d3a2f53c714_icgraph">
-<area shape="rect" title="clean up" alt="" coords="795,476,940,501"/>
-<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="551,277,741,303"/>
-<area shape="poly" title=" " alt="" coords="840,469,660,305,663,301,843,465"/>
-<area shape="rect" href="classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="314,452,490,477"/>
-<area shape="poly" title=" " alt="" coords="781,487,490,472,490,467,781,482"/>
-<area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="309,501,495,527"/>
-<area shape="poly" title=" " alt="" coords="781,496,496,512,495,506,780,491"/>
-<area shape="rect" href="classgenealogy__t.html#a133124a0202aea8216be20b602faad1e" title="destructor" alt="" coords="545,552,747,577"/>
-<area shape="poly" title=" " alt="" coords="821,509,748,535,689,555,687,549,746,530,819,504"/>
-<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="121,301,259,327"/>
-<area shape="poly" title=" " alt="" coords="537,298,259,313,259,308,536,293"/>
-<area shape="rect" href="classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="307,55,497,80"/>
-<area shape="poly" title=" " alt="" coords="631,266,610,227,580,180,542,133,496,94,474,82,476,78,499,89,546,130,585,177,615,225,635,263"/>
-<area shape="rect" href="classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="307,104,497,129"/>
-<area shape="poly" title=" " alt="" coords="626,268,573,205,536,171,496,143,471,132,473,127,499,138,540,167,577,201,630,265"/>
-<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="315,5,489,31"/>
-<area shape="poly" title=" " alt="" coords="634,264,616,217,587,157,547,96,523,68,496,44,476,33,479,28,499,40,527,64,552,92,592,154,621,215,639,263"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="321,353,483,379"/>
-<area shape="poly" title=" " alt="" coords="592,309,445,356,443,351,590,304"/>
-<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="309,153,495,179"/>
-<area shape="poly" title=" " alt="" coords="618,271,564,231,496,192,465,181,467,176,498,188,567,226,621,267"/>
-<area shape="poly" title=" " alt="" coords="630,316,576,379,540,413,499,442,469,454,467,450,496,437,536,409,572,375,626,312"/>
-<area shape="rect" href="classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="314,203,490,228"/>
-<area shape="poly" title=" " alt="" coords="597,275,497,242,456,231,457,225,498,237,599,270"/>
-<area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="309,252,495,277"/>
-<area shape="poly" title=" " alt="" coords="536,281,495,277,496,272,537,276"/>
-<area shape="poly" title=" " alt="" coords="635,317,615,356,585,403,546,452,499,492,477,504,474,499,496,488,542,448,580,400,610,353,631,314"/>
-<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="329,403,475,428"/>
-<area shape="poly" title=" " alt="" coords="620,314,566,354,498,392,463,405,462,400,496,388,563,349,617,309"/>
-<area shape="poly" title=" " alt="" coords="216,291,208,283,190,280,175,282,166,287,165,292,169,300,165,303,159,293,162,283,173,277,190,275,211,278,220,287"/>
-<area shape="poly" title=" " alt="" coords="314,40,309,44,260,154,199,302,194,300,255,152,305,40,311,36"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,377,73,403"/>
-<area shape="poly" title=" " alt="" coords="319,38,308,44,257,82,211,127,170,176,134,225,79,317,49,378,44,376,74,315,130,223,166,172,207,123,254,78,305,40,316,34"/>
-<area shape="poly" title=" " alt="" coords="336,353,242,329,243,324,337,347"/>
-<area shape="poly" title=" " alt="" coords="308,375,74,390,73,385,308,370"/>
-<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="157,403,223,428"/>
-<area shape="poly" title=" " alt="" coords="334,384,224,410,223,405,333,379"/>
-<area shape="poly" title=" " alt="" coords="143,410,73,398,74,393,144,405"/>
-<area shape="poly" title=" " alt="" coords="328,401,306,392,249,360,206,329,209,325,252,356,308,388,330,396"/>
-<area shape="poly" title=" " alt="" coords="326,433,259,442,189,450,159,450,121,442,84,425,55,405,58,401,86,421,122,437,159,444,189,445,258,437,326,428"/>
-<area shape="poly" title=" " alt="" coords="315,418,224,418,224,413,315,413"/>
+<area shape="rect" title="clean up" alt="" coords="864,476,1009,501"/>
+<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="620,277,811,303"/>
+<area shape="poly" title=" " alt="" coords="909,469,729,305,733,301,913,465"/>
+<area shape="rect" href="classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="383,452,559,477"/>
+<area shape="poly" title=" " alt="" coords="850,487,559,472,560,467,850,482"/>
+<area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="378,501,565,527"/>
+<area shape="poly" title=" " alt="" coords="850,496,565,512,565,506,850,491"/>
+<area shape="rect" href="classgenealogy__t.html#a133124a0202aea8216be20b602faad1e" title="destructor" alt="" coords="615,552,816,577"/>
+<area shape="poly" title=" " alt="" coords="890,509,817,535,758,555,757,549,815,530,888,504"/>
+<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="169,352,306,377"/>
+<area shape="poly" title=" " alt="" coords="671,310,622,327,567,342,498,353,429,361,307,367,306,362,428,355,498,348,566,337,620,322,670,305"/>
+<area shape="rect" href="classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="376,55,567,80"/>
+<area shape="poly" title=" " alt="" coords="700,266,680,227,650,180,611,133,565,94,543,82,545,78,568,89,615,130,654,177,684,225,705,263"/>
+<area shape="rect" href="classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="376,104,567,129"/>
+<area shape="poly" title=" " alt="" coords="695,268,642,205,606,171,565,143,540,132,542,127,568,138,609,167,646,201,699,265"/>
+<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="385,403,558,428"/>
+<area shape="poly" title=" " alt="" coords="687,313,633,349,568,386,518,405,516,400,566,381,630,345,684,309"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="391,301,552,327"/>
+<area shape="poly" title=" " alt="" coords="606,303,552,309,552,303,606,298"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="378,153,565,179"/>
+<area shape="poly" title=" " alt="" coords="687,271,633,232,566,194,531,181,533,176,568,189,635,227,690,267"/>
+<area shape="poly" title=" " alt="" coords="699,316,646,379,609,414,568,443,542,454,540,449,565,438,606,410,642,376,695,312"/>
+<area shape="rect" href="classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="383,203,559,228"/>
+<area shape="poly" title=" " alt="" coords="664,275,566,243,521,231,523,225,567,238,666,270"/>
+<area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="378,252,565,277"/>
+<area shape="poly" title=" " alt="" coords="606,281,565,277,565,272,606,276"/>
+<area shape="poly" title=" " alt="" coords="705,317,684,356,654,403,615,452,568,492,546,504,544,499,565,488,611,448,650,400,680,353,700,314"/>
+<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="398,5,545,31"/>
+<area shape="poly" title=" " alt="" coords="703,264,685,217,657,157,617,96,592,68,565,44,543,32,546,28,568,40,596,64,621,92,661,154,690,215,708,263"/>
+<area shape="poly" title=" " alt="" coords="270,342,261,334,237,331,218,333,208,337,206,343,211,350,207,353,200,344,204,334,216,328,237,325,263,329,273,338"/>
+<area shape="poly" title=" " alt="" coords="398,402,296,380,297,375,399,397"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="18,252,86,277"/>
+<area shape="poly" title=" " alt="" coords="371,431,317,432,259,427,200,415,145,392,113,367,87,335,56,279,61,276,91,332,117,363,148,388,202,410,259,422,317,426,371,425"/>
+<area shape="poly" title=" " alt="" coords="399,332,297,355,296,349,398,327"/>
+<area shape="poly" title=" " alt="" coords="377,306,86,271,87,266,378,300"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="204,227,271,252"/>
+<area shape="poly" title=" " alt="" coords="402,300,375,293,327,274,270,253,272,248,329,269,377,287,403,295"/>
+<area shape="poly" title=" " alt="" coords="191,248,87,263,86,257,190,243"/>
+<area shape="poly" title=" " alt="" coords="387,36,378,44,358,70,348,96,345,121,346,147,348,202,343,233,330,266,314,293,294,317,256,354,252,350,290,314,309,290,326,263,338,232,342,202,340,147,339,121,343,94,353,67,374,40,384,32"/>
+<area shape="poly" title=" " alt="" coords="395,37,377,44,280,97,191,157,117,214,69,254,66,250,114,209,187,153,277,92,375,40,393,32"/>
+<area shape="poly" title=" " alt="" coords="387,37,378,44,358,68,351,92,345,118,330,149,292,194,256,228,252,224,288,191,326,146,340,117,346,90,354,65,374,40,384,33"/>
+<area shape="rect" href="classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d" title=" " alt="" coords="147,5,328,31"/>
+<area shape="poly" title=" " alt="" coords="384,21,328,21,328,15,384,15"/>
+<area shape="rect" href="subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b" title="extract the bare genealogy" alt="" coords="5,5,99,31"/>
+<area shape="poly" title=" " alt="" coords="133,21,99,21,99,15,133,15"/>
 </map>
 </div>
 
@@ -2507,70 +2516,74 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_a516254565a8b30fd2ba3306290e1d923_icgraph.png" border="0" usemap="#aclassgenealogy__t_a516254565a8b30fd2ba3306290e1d923_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_a516254565a8b30fd2ba3306290e1d923_icgraph" id="aclassgenealogy__t_a516254565a8b30fd2ba3306290e1d923_icgraph">
-<area shape="rect" title="number of demes" alt="" coords="784,609,939,635"/>
-<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="545,279,736,304"/>
-<area shape="poly" title=" " alt="" coords="846,598,801,506,769,450,734,396,692,345,654,306,658,302,696,341,738,392,774,447,806,504,851,595"/>
-<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="321,5,483,31"/>
-<area shape="poly" title=" " alt="" coords="853,596,839,535,816,450,781,357,759,311,734,267,681,191,633,136,576,92,496,44,470,33,472,28,499,40,579,87,637,133,685,188,738,265,764,308,786,355,821,449,844,533,858,595"/>
-<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="309,403,495,428"/>
-<area shape="poly" title=" " alt="" coords="845,598,827,568,803,532,771,498,735,470,676,444,614,427,552,418,495,415,496,410,553,413,615,422,678,439,737,465,775,494,807,529,832,565,850,596"/>
-<area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="309,452,495,477"/>
-<area shape="poly" title=" " alt="" coords="840,600,796,552,767,528,735,508,675,487,613,473,551,466,495,464,496,458,552,461,614,468,677,482,737,504,770,523,800,548,844,596"/>
-<area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="309,501,495,527"/>
-<area shape="poly" title=" " alt="" coords="834,602,790,570,763,554,735,542,675,526,612,516,551,512,495,511,496,506,551,507,612,511,676,520,737,537,766,549,793,565,837,598"/>
-<area shape="rect" href="classinventory__t.html#a5125d25ca481529165b04d192d6d78ad" title="constructs an inventory from a genealogy" alt="" coords="551,552,730,577"/>
-<area shape="poly" title=" " alt="" coords="798,608,690,580,691,575,799,603"/>
-<area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="561,602,720,642"/>
-<area shape="poly" title=" " alt="" coords="770,625,720,625,720,619,770,619"/>
-<area shape="rect" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed" title="lineage count and saturation" alt="" coords="561,690,720,730"/>
-<area shape="poly" title=" " alt="" coords="817,642,693,692,691,687,815,637"/>
-<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="563,755,719,780"/>
-<area shape="poly" title=" " alt="" coords="844,647,799,697,770,722,737,744,707,757,705,752,735,740,766,718,795,693,840,644"/>
-<area shape="rect" href="classinventory__t.html#a050e3f40bea6e3855c8b6a99232c0815" title="copy an inventory from a genealogy" alt="" coords="555,804,726,829"/>
-<area shape="poly" title=" " alt="" coords="851,648,833,681,808,721,776,760,737,794,712,806,710,801,735,789,772,756,804,718,829,679,846,646"/>
-<area shape="rect" href="classgenealogy__t.html#aeb5e39433971ba80ea2c87c811e9858b" title=" " alt="" coords="545,854,736,894"/>
-<area shape="poly" title=" " alt="" coords="855,649,839,691,814,743,781,796,738,843,717,856,714,852,734,839,777,793,810,740,834,689,850,647"/>
-<area shape="rect" href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59" title="R list description." alt="" coords="557,919,725,944"/>
-<area shape="poly" title=" " alt="" coords="859,649,847,703,825,773,809,810,790,846,766,879,738,908,717,921,714,916,734,904,762,876,785,843,805,808,820,771,842,702,854,648"/>
-<area shape="rect" href="classgenealogy__t.html#a50faf5dc61268d35c3b4aa5070d2854d" title="human/machine&#45;readable info" alt="" coords="569,968,712,993"/>
-<area shape="poly" title=" " alt="" coords="861,649,853,712,833,796,817,840,796,883,770,924,738,959,713,973,711,969,734,955,766,920,791,881,812,838,827,794,847,711,856,648"/>
-<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="121,199,259,224"/>
-<area shape="poly" title=" " alt="" coords="531,279,306,242,239,227,241,221,307,237,532,274"/>
-<area shape="rect" href="classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="307,104,497,129"/>
-<area shape="poly" title=" " alt="" coords="621,269,570,206,535,172,496,143,471,132,474,127,499,138,539,168,574,202,626,266"/>
-<area shape="rect" href="classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="307,153,497,179"/>
-<area shape="poly" title=" " alt="" coords="613,272,561,231,496,192,466,181,468,176,498,188,564,227,616,267"/>
-<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="315,304,489,329"/>
-<area shape="poly" title=" " alt="" coords="532,306,489,310,488,305,531,300"/>
-<area shape="poly" title=" " alt="" coords="620,269,583,215,543,149,530,117,524,91,516,67,496,44,478,33,481,28,499,40,520,65,529,89,535,116,548,146,588,212,624,266"/>
-<area shape="poly" title=" " alt="" coords="616,315,564,354,498,392,464,405,462,400,496,388,561,350,613,311"/>
-<area shape="rect" href="classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="314,203,490,228"/>
-<area shape="poly" title=" " alt="" coords="586,277,442,231,444,226,588,272"/>
-<area shape="rect" href="classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="314,353,490,379"/>
-<area shape="poly" title=" " alt="" coords="593,311,498,343,454,356,453,351,497,338,591,306"/>
-<area shape="poly" title=" " alt="" coords="625,317,573,380,538,413,499,442,470,454,468,450,496,437,535,409,570,376,621,314"/>
-<area shape="poly" title=" " alt="" coords="630,318,611,357,582,403,544,451,499,491,474,504,471,499,496,486,540,447,577,400,606,354,626,316"/>
-<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="329,55,475,80"/>
-<area shape="poly" title=" " alt="" coords="621,269,552,166,518,118,496,93,474,82,477,78,499,89,522,115,557,163,626,266"/>
-<area shape="poly" title=" " alt="" coords="216,188,208,180,190,177,175,179,166,184,165,190,169,197,165,200,159,190,162,181,173,174,190,172,211,176,220,184"/>
-<area shape="poly" title=" " alt="" coords="343,302,306,287,251,256,207,226,210,222,253,251,308,282,345,297"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,80,73,105"/>
-<area shape="poly" title=" " alt="" coords="301,309,256,299,208,285,162,265,120,237,90,206,67,169,42,107,47,105,72,167,94,203,123,233,164,260,210,280,257,294,302,304"/>
-<area shape="poly" title=" " alt="" coords="317,39,308,44,282,72,251,116,201,200,196,197,246,113,278,69,305,40,314,34"/>
-<area shape="poly" title=" " alt="" coords="308,18,216,24,168,32,122,44,87,62,58,82,55,78,84,57,120,40,167,27,216,19,307,12"/>
-<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="157,55,223,80"/>
-<area shape="poly" title=" " alt="" coords="334,36,224,62,223,57,333,31"/>
-<area shape="poly" title=" " alt="" coords="144,78,74,90,73,84,143,72"/>
-<area shape="poly" title=" " alt="" coords="321,87,308,94,262,139,205,200,201,197,258,135,305,89,318,83"/>
-<area shape="poly" title=" " alt="" coords="325,85,259,94,158,98,74,97,74,91,158,93,258,89,325,80"/>
-<area shape="poly" title=" " alt="" coords="315,70,224,70,224,65,315,65"/>
-<area shape="poly" title=" " alt="" coords="678,678,665,671,641,669,620,671,607,675,602,681,605,689,600,690,597,680,604,671,618,665,641,663,666,666,680,674"/>
-<area shape="rect" href="classgenealogy__t.html#a693014c6aa2e88f6a650e05cee599d91" title="Parse a Newick string and create the indicated genealogy." alt="" coords="329,861,475,887"/>
-<area shape="poly" title=" " alt="" coords="531,877,476,877,476,871,531,871"/>
-<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="135,861,245,887"/>
-<area shape="poly" title=" " alt="" coords="315,877,246,877,246,871,315,871"/>
-<area shape="rect" href="yaml_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="375,968,429,993"/>
-<area shape="poly" title=" " alt="" coords="556,983,430,983,430,978,556,978"/>
+<area shape="rect" title="number of demes" alt="" coords="853,609,1008,635"/>
+<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="615,277,805,303"/>
+<area shape="poly" title=" " alt="" coords="916,598,870,506,838,450,803,396,761,344,723,305,727,301,765,341,807,392,843,447,875,504,920,596"/>
+<area shape="rect" href="classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="391,5,552,31"/>
+<area shape="poly" title=" " alt="" coords="922,597,909,535,885,450,850,356,828,310,803,266,750,190,702,136,645,91,565,44,539,33,541,28,568,40,648,87,706,132,755,187,808,263,833,307,855,354,890,448,914,533,927,596"/>
+<area shape="rect" href="classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="378,403,565,428"/>
+<area shape="poly" title=" " alt="" coords="915,598,897,568,872,532,841,498,804,470,746,444,683,427,621,418,565,415,565,410,622,413,684,422,748,439,807,465,844,494,876,529,901,565,919,596"/>
+<area shape="rect" href="classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="378,452,565,477"/>
+<area shape="poly" title=" " alt="" coords="910,600,865,552,836,528,804,508,745,487,682,473,621,466,565,464,565,458,621,461,683,468,746,482,806,504,839,523,869,548,914,596"/>
+<area shape="rect" href="classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="378,501,565,527"/>
+<area shape="poly" title=" " alt="" coords="903,602,859,570,833,554,804,542,744,526,681,516,620,512,565,511,565,506,620,507,682,511,745,520,806,537,835,549,862,565,907,598"/>
+<area shape="rect" href="classinventory__t.html#a5125d25ca481529165b04d192d6d78ad" title="constructs an inventory from a genealogy" alt="" coords="621,552,799,577"/>
+<area shape="poly" title=" " alt="" coords="867,608,759,580,760,575,868,603"/>
+<area shape="rect" href="classgenealogy__t.html#ad5cd7aaa7d0951fee011919027a78d2a" title=" " alt="" coords="631,602,789,642"/>
+<area shape="poly" title=" " alt="" coords="839,625,789,625,789,619,839,619"/>
+<area shape="rect" href="classgenealogy__t.html#a3d4047498bfe3d4a56a46482f7bfd4ed" title="lineage count and saturation" alt="" coords="631,690,789,730"/>
+<area shape="poly" title=" " alt="" coords="886,642,762,692,760,687,884,637"/>
+<area shape="rect" href="classgenealogy__t.html#af458ed650e37ed5c4674b92a65cf3405" title="put genealogy at current time into Newick format." alt="" coords="632,755,788,780"/>
+<area shape="poly" title=" " alt="" coords="913,647,868,697,839,722,807,744,777,757,775,752,804,740,836,718,865,693,909,644"/>
+<area shape="rect" href="classinventory__t.html#a050e3f40bea6e3855c8b6a99232c0815" title="copy an inventory from a genealogy" alt="" coords="625,804,795,829"/>
+<area shape="poly" title=" " alt="" coords="920,648,903,681,877,721,845,760,807,794,782,806,779,801,804,789,841,756,873,718,898,679,916,646"/>
+<area shape="rect" href="classgenealogy__t.html#aeb5e39433971ba80ea2c87c811e9858b" title=" " alt="" coords="615,854,805,894"/>
+<area shape="poly" title=" " alt="" coords="924,649,908,691,884,743,850,796,807,843,786,856,784,852,804,839,846,793,879,740,903,689,919,647"/>
+<area shape="rect" href="classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59" title="R list description." alt="" coords="626,919,794,944"/>
+<area shape="poly" title=" " alt="" coords="928,649,917,703,895,773,879,810,859,846,835,879,807,908,786,921,784,916,804,904,831,876,855,843,874,808,890,771,912,702,923,648"/>
+<area shape="rect" href="classgenealogy__t.html#a50faf5dc61268d35c3b4aa5070d2854d" title="human/machine&#45;readable info" alt="" coords="639,968,781,993"/>
+<area shape="poly" title=" " alt="" coords="930,649,922,712,902,796,886,840,865,883,839,924,807,959,783,973,780,969,804,955,835,920,861,881,881,838,897,794,917,711,925,648"/>
+<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="169,303,306,328"/>
+<area shape="poly" title=" " alt="" coords="601,298,306,314,306,309,600,293"/>
+<area shape="rect" href="classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="376,104,567,129"/>
+<area shape="poly" title=" " alt="" coords="690,268,639,205,605,171,565,143,541,132,543,127,568,138,608,167,643,201,695,264"/>
+<area shape="rect" href="classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="376,153,567,179"/>
+<area shape="poly" title=" " alt="" coords="682,271,631,231,566,192,535,181,537,176,568,188,634,226,686,266"/>
+<area shape="rect" href="classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="385,353,558,379"/>
+<area shape="poly" title=" " alt="" coords="657,309,513,356,511,351,655,304"/>
+<area shape="poly" title=" " alt="" coords="689,268,652,214,612,149,600,117,594,91,585,67,565,44,547,33,550,28,568,40,590,65,599,89,605,116,617,146,657,211,693,265"/>
+<area shape="poly" title=" " alt="" coords="685,314,633,354,568,392,533,405,532,400,566,388,630,349,682,310"/>
+<area shape="rect" href="classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="383,203,559,228"/>
+<area shape="poly" title=" " alt="" coords="662,275,566,242,525,231,527,225,567,237,664,270"/>
+<area shape="rect" href="classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="383,55,559,80"/>
+<area shape="poly" title=" " alt="" coords="690,267,621,165,587,118,565,93,544,82,546,78,568,89,591,115,626,162,695,264"/>
+<area shape="poly" title=" " alt="" coords="695,316,643,379,608,413,568,442,539,454,537,450,565,437,604,409,639,375,690,312"/>
+<area shape="poly" title=" " alt="" coords="700,316,680,355,651,402,614,450,568,491,543,504,541,499,565,486,610,447,647,399,676,353,695,314"/>
+<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="398,252,545,277"/>
+<area shape="poly" title=" " alt="" coords="600,281,545,275,545,270,601,276"/>
+<area shape="poly" title=" " alt="" coords="270,292,261,284,237,281,218,283,208,288,206,294,211,301,207,304,200,294,204,285,216,278,237,276,263,280,273,288"/>
+<area shape="poly" title=" " alt="" coords="398,353,296,331,297,325,399,348"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="18,153,86,179"/>
+<area shape="poly" title=" " alt="" coords="396,383,337,388,271,386,205,372,174,359,145,341,130,328,121,313,114,284,110,253,96,218,65,180,69,177,101,215,115,251,119,283,126,311,134,324,148,337,176,354,206,367,271,381,336,383,395,378"/>
+<area shape="poly" title=" " alt="" coords="382,40,378,44,359,71,350,97,348,124,351,151,354,178,354,207,347,237,330,268,306,290,279,305,276,300,303,286,326,264,342,235,349,207,349,179,346,151,343,124,345,96,354,68,374,40,378,36"/>
+<area shape="poly" title=" " alt="" coords="402,37,282,70,214,92,148,118,76,156,73,151,146,113,212,87,280,65,400,31"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="204,128,271,153"/>
+<area shape="poly" title=" " alt="" coords="395,37,377,44,319,83,256,130,253,126,316,78,375,40,393,32"/>
+<area shape="poly" title=" " alt="" coords="191,150,87,164,86,159,190,144"/>
+<area shape="poly" title=" " alt="" coords="399,283,297,305,296,300,398,278"/>
+<area shape="poly" title=" " alt="" coords="402,251,375,242,351,230,327,219,261,201,194,188,86,172,87,167,195,182,262,196,329,214,353,225,377,237,404,246"/>
+<area shape="poly" title=" " alt="" coords="387,249,374,241,358,225,349,208,341,191,326,175,299,159,270,150,272,145,301,155,330,171,346,188,354,205,362,222,378,237,390,244"/>
+<area shape="rect" href="classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d" title=" " alt="" coords="147,229,328,255"/>
+<area shape="poly" title=" " alt="" coords="384,259,328,253,328,248,384,254"/>
+<area shape="rect" href="subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b" title="extract the bare genealogy" alt="" coords="5,229,99,255"/>
+<area shape="poly" title=" " alt="" coords="133,245,99,245,99,239,133,239"/>
+<area shape="poly" title=" " alt="" coords="747,678,734,671,710,669,689,671,676,675,672,681,674,689,669,690,667,680,673,671,688,665,710,663,736,666,750,674"/>
+<area shape="rect" href="classgenealogy__t.html#a693014c6aa2e88f6a650e05cee599d91" title="Parse a Newick string and create the indicated genealogy." alt="" coords="398,861,545,887"/>
+<area shape="poly" title=" " alt="" coords="601,877,545,877,545,871,601,871"/>
+<area shape="rect" href="parse_8cc.html#a755d1a27c545574819d2e2cdfd0cdca1" title=" " alt="" coords="182,861,293,887"/>
+<area shape="poly" title=" " alt="" coords="384,877,293,877,293,871,384,871"/>
+<area shape="rect" href="yaml_8cc.html#a8158e143efd87cb657d01da7e41cae96" title="extract a YAML description" alt="" coords="444,968,499,993"/>
+<area shape="poly" title=" " alt="" coords="625,983,499,983,499,978,625,978"/>
 </map>
 </div>
 
@@ -2809,43 +2822,54 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_ae3e9f670c3d98d5878787ae6d374fc4e_cgraph.png" border="0" usemap="#aclassgenealogy__t_ae3e9f670c3d98d5878787ae6d374fc4e_cgraph" alt=""/></div>
 <map name="aclassgenealogy__t_ae3e9f670c3d98d5878787ae6d374fc4e_cgraph" id="aclassgenealogy__t_ae3e9f670c3d98d5878787ae6d374fc4e_cgraph">
-<area shape="rect" title="erase all deme information" alt="" coords="5,179,167,204"/>
-<area shape="rect" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93" title="Get all balls of a color." alt="" coords="237,55,383,80"/>
-<area shape="poly" title=" " alt="" coords="98,177,146,134,178,110,213,89,230,82,232,87,216,94,181,114,149,138,102,181"/>
-<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="243,104,377,129"/>
-<area shape="poly" title=" " alt="" coords="115,176,214,138,239,130,241,136,216,143,117,181"/>
-<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="259,153,361,179"/>
-<area shape="poly" title=" " alt="" coords="167,180,245,171,245,176,168,185"/>
-<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="255,203,365,228"/>
-<area shape="poly" title=" " alt="" coords="168,197,241,205,241,211,167,203"/>
-<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="215,252,405,277"/>
-<area shape="poly" title=" " alt="" coords="119,202,216,237,245,246,244,251,214,242,118,207"/>
-<area shape="rect" href="classgenealogy__t.html#a516254565a8b30fd2ba3306290e1d923" title="number of demes" alt="" coords="453,301,608,327"/>
-<area shape="poly" title=" " alt="" coords="101,202,148,246,180,269,216,288,272,304,330,314,387,318,440,318,439,323,387,323,330,319,271,309,214,292,177,274,144,250,97,206"/>
-<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="459,5,602,31"/>
-<area shape="poly" title=" " alt="" coords="376,101,404,89,418,77,427,65,437,52,452,40,463,34,466,38,455,44,441,56,432,68,422,81,407,94,378,106"/>
-<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="471,55,591,80"/>
-<area shape="poly" title=" " alt="" coords="367,101,459,80,460,86,368,107"/>
-<area shape="rect" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9" title="retrieve the last ball" alt="" coords="461,104,601,129"/>
-<area shape="poly" title=" " alt="" coords="377,114,447,114,447,119,377,119"/>
-<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="465,153,596,179"/>
-<area shape="poly" title=" " alt="" coords="368,127,460,148,459,153,367,132"/>
-<area shape="rect" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394" title="drop all dead roots" alt="" coords="465,203,597,228"/>
-<area shape="poly" title=" " alt="" coords="378,126,407,138,422,151,432,163,441,176,455,188,468,195,466,200,452,192,437,179,427,167,418,154,404,143,376,131"/>
-<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="905,128,1012,153"/>
-<area shape="poly" title=" " alt="" coords="582,151,656,138,781,132,891,134,891,140,781,137,656,143,583,156"/>
-<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="693,153,804,179"/>
-<area shape="poly" title=" " alt="" coords="596,163,679,163,679,169,596,169"/>
-<area shape="poly" title=" " alt="" coords="804,157,891,146,892,151,805,162"/>
-<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="656,203,841,228"/>
-<area shape="poly" title=" " alt="" coords="597,213,642,213,642,218,597,218"/>
-<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="889,203,1028,228"/>
-<area shape="poly" title=" " alt="" coords="842,213,876,213,876,218,842,218"/>
-<area shape="rect" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="1076,203,1195,228"/>
-<area shape="poly" title=" " alt="" coords="1028,213,1062,213,1062,218,1028,218"/>
-<area shape="rect" href="classgenealogy__t.html#a17f6f8bc2a6469c93d027d3a2f53c714" title="clean up" alt="" coords="458,252,603,277"/>
-<area shape="poly" title=" " alt="" coords="406,262,444,262,444,267,406,267"/>
-<area shape="poly" title=" " alt="" coords="368,275,460,296,459,301,367,280"/>
+<area shape="rect" title="erase all deme information" alt="" coords="5,232,167,257"/>
+<area shape="rect" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93" title="Get all balls of a color." alt="" coords="237,108,383,133"/>
+<area shape="poly" title=" " alt="" coords="98,230,146,187,178,163,213,142,230,135,232,140,216,147,181,167,149,191,102,234"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="243,157,377,183"/>
+<area shape="poly" title=" " alt="" coords="115,229,214,191,239,184,241,189,216,197,117,234"/>
+<area shape="rect" href="classball__t.html#a29e8d8205e8f323bf69767ab5bc9809d" title="view deme" alt="" coords="259,207,361,232"/>
+<area shape="poly" title=" " alt="" coords="167,233,245,224,245,229,168,238"/>
+<area shape="rect" href="classnode__t.html#ac62ba8de67c9449790e5e9c5132032ad" title="view deme" alt="" coords="255,256,365,281"/>
+<area shape="poly" title=" " alt="" coords="168,251,241,259,241,264,167,256"/>
+<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="215,305,405,331"/>
+<area shape="poly" title=" " alt="" coords="119,255,216,290,245,299,244,304,214,295,118,260"/>
+<area shape="rect" href="classgenealogy__t.html#a516254565a8b30fd2ba3306290e1d923" title="number of demes" alt="" coords="453,355,608,380"/>
+<area shape="poly" title=" " alt="" coords="101,256,148,300,180,323,216,341,272,357,330,367,387,371,440,371,439,377,387,376,330,372,271,363,214,346,177,327,144,304,97,259"/>
+<area shape="rect" href="classnodeseq__t.html#a125256a336ee2dceb0747bea92dffc78" title=" " alt="" coords="460,157,601,183"/>
+<area shape="poly" title=" " alt="" coords="377,167,446,167,446,173,377,173"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="677,107,820,132"/>
+<area shape="poly" title=" " alt="" coords="375,155,453,142,663,122,664,127,454,147,376,160"/>
+<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="471,207,591,232"/>
+<area shape="poly" title=" " alt="" coords="368,180,460,201,459,206,367,185"/>
+<area shape="rect" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9" title="retrieve the last ball" alt="" coords="461,256,601,281"/>
+<area shape="poly" title=" " alt="" coords="378,179,407,192,422,204,432,217,441,229,455,241,468,248,466,253,452,246,437,233,427,220,418,208,404,196,376,184"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="683,56,814,81"/>
+<area shape="poly" title=" " alt="" coords="366,155,404,142,428,129,452,117,508,101,565,88,669,73,670,78,566,93,509,106,454,122,430,134,406,147,368,160"/>
+<area shape="rect" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394" title="drop all dead roots" alt="" coords="465,5,597,31"/>
+<area shape="poly" title=" " alt="" coords="376,158,404,143,421,121,428,98,434,73,451,48,470,35,474,39,455,52,439,75,433,99,426,123,407,147,378,162"/>
+<area shape="poly" title=" " alt="" coords="586,155,680,133,681,138,587,160"/>
+<area shape="rect" href="classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d" title="move ball b from p to q" alt="" coords="681,157,816,183"/>
+<area shape="poly" title=" " alt="" coords="602,167,667,167,667,173,602,173"/>
+<area shape="rect" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="691,207,807,232"/>
+<area shape="poly" title=" " alt="" coords="588,180,679,201,678,206,587,185"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="1082,107,1189,132"/>
+<area shape="poly" title=" " alt="" coords="816,163,916,155,1028,141,1070,132,1071,138,1028,146,916,160,816,169"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="903,107,1014,132"/>
+<area shape="poly" title=" " alt="" coords="802,155,892,133,893,138,803,160"/>
+<area shape="poly" title=" " alt="" coords="1014,117,1068,117,1068,122,1014,122"/>
+<area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="899,208,1018,233"/>
+<area shape="poly" title=" " alt="" coords="807,217,886,218,886,223,807,222"/>
+<area shape="poly" title=" " alt="" coords="815,69,915,77,1028,91,1075,101,1073,106,1028,97,915,82,814,75"/>
+<area shape="poly" title=" " alt="" coords="803,79,893,101,892,106,802,84"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="656,5,841,31"/>
+<area shape="poly" title=" " alt="" coords="597,15,642,15,642,21,597,21"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="889,5,1028,31"/>
+<area shape="poly" title=" " alt="" coords="842,15,876,15,876,21,842,21"/>
+<area shape="rect" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="1076,5,1195,31"/>
+<area shape="poly" title=" " alt="" coords="1028,15,1062,15,1062,21,1028,21"/>
+<area shape="rect" href="classgenealogy__t.html#a17f6f8bc2a6469c93d027d3a2f53c714" title="clean up" alt="" coords="458,305,603,331"/>
+<area shape="poly" title=" " alt="" coords="406,315,444,315,444,321,406,321"/>
+<area shape="poly" title=" " alt="" coords="368,328,460,349,459,354,367,333"/>
 </map>
 </div>
 <div class="dynheader">
@@ -3523,15 +3547,19 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgenealogy__t_a434e6e52bbf748439a69a176ecdc45e2_icgraph.png" border="0" usemap="#aclassgenealogy__t_a434e6e52bbf748439a69a176ecdc45e2_icgraph" alt=""/></div>
 <map name="aclassgenealogy__t_a434e6e52bbf748439a69a176ecdc45e2_icgraph" id="aclassgenealogy__t_a434e6e52bbf748439a69a176ecdc45e2_icgraph">
-<area shape="rect" title="prune the tree (drop all black balls)" alt="" coords="307,79,453,104"/>
-<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="121,29,259,55"/>
-<area shape="poly" title=" " alt="" coords="317,78,239,57,241,52,318,73"/>
-<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="157,79,223,104"/>
-<area shape="poly" title=" " alt="" coords="293,94,223,94,223,89,293,89"/>
-<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,104,73,129"/>
-<area shape="poly" title=" " alt="" coords="314,109,259,118,158,123,74,121,74,116,158,117,258,113,313,104"/>
-<area shape="poly" title=" " alt="" coords="216,19,208,11,190,8,175,10,166,15,165,20,169,28,165,31,159,21,162,11,173,5,190,3,211,6,220,15"/>
-<area shape="poly" title=" " alt="" coords="144,102,74,114,73,108,143,96"/>
+<area shape="rect" title="prune the tree (drop all black balls)" alt="" coords="376,104,523,129"/>
+<area shape="rect" href="classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="169,29,306,55"/>
+<area shape="poly" title=" " alt="" coords="407,101,327,69,290,57,292,52,329,63,409,96"/>
+<area shape="rect" href="gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="204,79,271,104"/>
+<area shape="poly" title=" " alt="" coords="362,109,271,98,271,93,363,104"/>
+<area shape="rect" href="getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="18,104,86,129"/>
+<area shape="poly" title=" " alt="" coords="362,119,86,119,86,114,362,114"/>
+<area shape="rect" href="classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d" title=" " alt="" coords="147,180,328,205"/>
+<area shape="poly" title=" " alt="" coords="401,137,329,163,275,182,273,177,327,158,399,132"/>
+<area shape="poly" title=" " alt="" coords="270,19,261,11,237,8,218,10,208,15,206,20,211,28,207,31,200,21,204,11,216,5,237,3,263,6,273,15"/>
+<area shape="poly" title=" " alt="" coords="191,100,87,115,86,109,190,95"/>
+<area shape="rect" href="subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b" title="extract the bare genealogy" alt="" coords="5,180,99,205"/>
+<area shape="poly" title=" " alt="" coords="133,195,99,195,99,190,133,190"/>
 </map>
 </div>
 
@@ -4022,6 +4050,115 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a6ac0bda906ceae47ff593ac3c53f527d" name="a6ac0bda906ceae47ff593ac3c53f527d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac0bda906ceae47ff593ac3c53f527d">&#9670;&#160;</a></span>subsample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgenealogy__t.html">genealogy_t</a> &amp; genealogy_t::subsample </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>frac</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>randomly discard samples on a genealogy. NB: this prunes the genealogy. </p>
+
+<p class="definition">Definition at line <a class="el" href="subsample_8cc_source.html#l00009">9</a> of file <a class="el" href="subsample_8cc_source.html">subsample.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>{</div>
+<div class="line"><span class="lineno">   12</span>  <a class="code hl_function" href="#a434e6e52bbf748439a69a176ecdc45e2">prune</a>();</div>
+<div class="line"><span class="lineno">   13</span>  <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = p-&gt;begin(); it != p-&gt;end(); ) {</div>
+<div class="line"><span class="lineno">   15</span>      <span class="keywordflow">if</span> ((*it)-&gt;is(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) &amp;&amp; unif_rand() &gt; frac) {</div>
+<div class="line"><span class="lineno">   16</span>        ball_t *b = *it;</div>
+<div class="line"><span class="lineno">   17</span>        it = p-&gt;erase(it);</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keyword">delete</span> b;</div>
+<div class="line"><span class="lineno">   19</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   20</span>        ++it;</div>
+<div class="line"><span class="lineno">   21</span>      }</div>
+<div class="line"><span class="lineno">   22</span>    }</div>
+<div class="line"><span class="lineno">   23</span>  }</div>
+<div class="line"><span class="lineno">   24</span>  <a class="code hl_function" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb">comb</a>();</div>
+<div class="line"><span class="lineno">   25</span>  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   26</span>}</div>
+<div class="ttc" id="aclassgenealogy__t_html_a434e6e52bbf748439a69a176ecdc45e2"><div class="ttname"><a href="#a434e6e52bbf748439a69a176ecdc45e2">genealogy_t::prune</a></div><div class="ttdeci">genealogy_t &amp; prune(void)</div><div class="ttdoc">prune the tree (drop all black balls)</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00311">genealogy.h:311</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_cgraph.png" border="0" usemap="#aclassgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_cgraph" alt=""/></div>
+<map name="aclassgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_cgraph" id="aclassgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,245,187,271"/>
+<area shape="rect" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb" title=" " alt="" coords="241,159,375,184"/>
+<area shape="poly" title=" " alt="" coords="127,243,263,187,265,192,129,248"/>
+<area shape="rect" href="classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="235,332,381,357"/>
+<area shape="poly" title=" " alt="" coords="129,268,265,324,263,329,127,273"/>
+<area shape="rect" href="classnodeseq__t.html#a125256a336ee2dceb0747bea92dffc78" title=" " alt="" coords="454,57,595,83"/>
+<area shape="poly" title=" " alt="" coords="327,156,373,129,428,100,466,85,468,90,430,104,375,133,330,161"/>
+<area shape="rect" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa" title="pointer to my green ball" alt="" coords="689,108,832,133"/>
+<area shape="poly" title=" " alt="" coords="375,158,429,150,675,125,676,130,430,155,376,163"/>
+<area shape="rect" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6" title="does this node hold the given ball?" alt="" coords="465,209,585,235"/>
+<area shape="poly" title=" " alt="" coords="364,182,457,204,456,209,363,187"/>
+<area shape="rect" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9" title="retrieve the last ball" alt="" coords="455,8,595,33"/>
+<area shape="poly" title=" " alt="" coords="316,157,359,101,391,69,428,42,441,36,443,41,431,47,395,73,363,105,320,160"/>
+<area shape="rect" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624" title="swap balls a and b, wherever they lie" alt="" coords="695,157,826,183"/>
+<area shape="poly" title=" " alt="" coords="375,168,682,168,682,173,375,174"/>
+<area shape="rect" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394" title="drop all dead roots" alt="" coords="459,339,591,364"/>
+<area shape="poly" title=" " alt="" coords="318,183,360,247,393,286,431,318,455,331,452,336,428,323,389,289,356,251,314,186"/>
+<area shape="poly" title=" " alt="" coords="585,80,688,102,687,108,584,85"/>
+<area shape="rect" href="classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d" title="move ball b from p to q" alt="" coords="693,57,828,83"/>
+<area shape="poly" title=" " alt="" coords="595,67,679,67,679,73,595,73"/>
+<area shape="rect" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb" title=" " alt="" coords="703,7,819,32"/>
+<area shape="poly" title=" " alt="" coords="584,55,689,32,690,37,585,60"/>
+<area shape="rect" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4" title="in whose pocket do I lie?" alt="" coords="1094,132,1201,157"/>
+<area shape="poly" title=" " alt="" coords="828,66,929,72,986,79,1041,91,1080,106,1114,123,1112,128,1078,111,1039,97,985,85,929,77,828,72"/>
+<area shape="rect" href="classnode__t.html#ad2d4cc004ae4fe2149206c5cb44310b4" title="insert a ball into the pocket of a node" alt="" coords="915,107,1026,132"/>
+<area shape="poly" title=" " alt="" coords="816,80,903,101,902,106,815,85"/>
+<area shape="poly" title=" " alt="" coords="1026,125,1081,132,1080,138,1026,130"/>
+<area shape="rect" href="classnode__t.html#ac4b7d5294084c480f8c8a9d962cd8b09" title="basic constructor for node class" alt="" coords="911,5,1030,31"/>
+<area shape="poly" title=" " alt="" coords="819,16,898,16,898,21,819,22"/>
+<area shape="poly" title=" " alt="" coords="826,163,1080,146,1080,152,826,168"/>
+<area shape="poly" title=" " alt="" coords="814,155,904,133,905,138,815,160"/>
+<area shape="rect" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276" title="remove a dead root node" alt="" coords="668,360,853,385"/>
+<area shape="poly" title=" " alt="" coords="591,355,655,360,654,366,591,360"/>
+<area shape="rect" href="classnode__t.html#a6547c79c813d3ccb319b1bc818fe4746" title=" " alt="" coords="901,335,1040,360"/>
+<area shape="poly" title=" " alt="" coords="853,359,887,355,888,360,854,364"/>
+<area shape="rect" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f" title=" " alt="" coords="1088,335,1207,360"/>
+<area shape="poly" title=" " alt="" coords="1040,345,1074,345,1074,350,1040,350"/>
+<area shape="rect" href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93" title="Get all balls of a color." alt="" coords="452,451,597,476"/>
+<area shape="poly" title=" " alt="" coords="324,356,369,396,398,418,431,437,446,444,444,449,428,442,396,423,365,400,320,360"/>
+<area shape="rect" href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390" title=" " alt="" coords="461,283,588,308"/>
+<area shape="poly" title=" " alt="" coords="364,329,454,308,456,314,365,335"/>
+<area shape="rect" href="classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="429,401,620,427"/>
+<area shape="poly" title=" " alt="" coords="349,355,472,395,470,400,348,360"/>
+<area shape="poly" title=" " alt="" coords="561,280,591,265,618,244,634,218,640,193,647,168,654,155,666,143,675,136,678,141,670,147,658,158,652,170,645,194,639,220,622,248,594,270,564,285"/>
+<area shape="poly" title=" " alt="" coords="558,280,667,243,1080,155,1081,161,669,249,560,285"/>
+<area shape="poly" title=" " alt="" coords="554,280,618,244,642,221,667,200,697,185,700,190,669,204,645,225,622,248,556,285"/>
+<area shape="poly" title=" " alt="" coords="565,306,709,353,707,358,564,311"/>
+<area shape="poly" title=" " alt="" coords="588,300,888,335,887,340,588,305"/>
+<area shape="poly" title=" " alt="" coords="489,284,482,274,486,264,500,258,525,256,555,260,567,269,563,273,553,265,525,261,502,263,489,268,487,274,493,281"/>
+<area shape="rect" href="classball__t.html#a8a9297a7f3f8874f86462d34dede1d5f" title="is a given ball of the given color?" alt="" coords="722,259,799,284"/>
+<area shape="poly" title=" " alt="" coords="588,286,708,274,709,279,589,292"/>
+<area shape="rect" href="classgenealogy__t.html#a17f6f8bc2a6469c93d027d3a2f53c714" title="clean up" alt="" coords="688,409,833,435"/>
+<area shape="poly" title=" " alt="" coords="620,415,674,416,674,422,620,420"/>
+<area shape="rect" href="classgenealogy__t.html#a516254565a8b30fd2ba3306290e1d923" title="number of demes" alt="" coords="683,459,838,484"/>
+<area shape="poly" title=" " alt="" coords="578,424,695,453,694,458,577,429"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_icgraph.png" border="0" usemap="#aclassgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_icgraph" alt=""/></div>
+<map name="aclassgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_icgraph" id="aclassgenealogy__t_a6ac0bda906ceae47ff593ac3c53f527d_icgraph">
+<area shape="rect" title=" " alt="" coords="147,5,328,31"/>
+<area shape="rect" href="subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b" title="extract the bare genealogy" alt="" coords="5,5,99,31"/>
+<area shape="poly" title=" " alt="" coords="133,21,99,21,99,15,133,15"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab1bae819d94c8e4d9033d48864818da2" name="ab1bae819d94c8e4d9033d48864818da2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1bae819d94c8e4d9033d48864818da2">&#9670;&#160;</a></span>time() <span class="overload">[1/2]</span></h2>
 
@@ -4177,14 +4314,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00405">405</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  405</span>                                                        {</div>
-<div class="line"><span class="lineno">  406</span>    <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>() = scale*(<a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()-origin);</div>
-<div class="line"><span class="lineno">  407</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span> ) {</div>
-<div class="line"><span class="lineno">  408</span>      p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = scale*(p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>-origin);</div>
-<div class="line"><span class="lineno">  409</span>    }</div>
-<div class="line"><span class="lineno">  410</span>    <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>() = scale*(<a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>()-origin);</div>
-<div class="line"><span class="lineno">  411</span>  };</div>
+<p class="definition">Definition at line <a class="el" href="genealogy_8h_source.html#l00409">409</a> of file <a class="el" href="genealogy_8h_source.html">genealogy.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>                                                        {</div>
+<div class="line"><span class="lineno">  410</span>    <a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>() = scale*(<a class="code hl_function" href="#a90f523b2b557d1a135851a3fc0999a40">timezero</a>()-origin);</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">for</span> (node_t *p : *<span class="keyword">this</span> ) {</div>
+<div class="line"><span class="lineno">  412</span>      p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a> = scale*(p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>-origin);</div>
+<div class="line"><span class="lineno">  413</span>    }</div>
+<div class="line"><span class="lineno">  414</span>    <a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>() = scale*(<a class="code hl_function" href="#ab1bae819d94c8e4d9033d48864818da2">time</a>()-origin);</div>
+<div class="line"><span class="lineno">  415</span>  };</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -4562,7 +4699,6 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  168</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="seirs__pomp_8c.html#af933676109efed7ab34cea71d748a517">S</a>;</div>
 <div class="line"><span class="lineno">  169</span>}</div>
 <div class="ttc" id="acblv_8cc_html_a33ff034771ebd72517dbfe440bde3558"><div class="ttname"><a href="cblv_8cc.html#a33ff034771ebd72517dbfe440bde3558">make_matrix</a></div><div class="ttdeci">static R_INLINE SEXP make_matrix(size_t nrow, size_t ncol, const char **names)</div><div class="ttdef"><b>Definition</b> <a href="cblv_8cc_source.html#l00012">cblv.cc:13</a></div></div>
-<div class="ttc" id="aclassgenealogy__t_html_a434e6e52bbf748439a69a176ecdc45e2"><div class="ttname"><a href="#a434e6e52bbf748439a69a176ecdc45e2">genealogy_t::prune</a></div><div class="ttdeci">genealogy_t &amp; prune(void)</div><div class="ttdoc">prune the tree (drop all black balls)</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00311">genealogy.h:311</a></div></div>
 <div class="ttc" id="aclassgenealogy__t_html_ac0c582df009aea1c1ea7267fd2f4933a"><div class="ttname"><a href="#ac0c582df009aea1c1ea7267fd2f4933a">genealogy_t::cblv</a></div><div class="ttdeci">friend SEXP cblv(genealogy_t &amp;)</div><div class="ttdoc">return the CBLV representation as an R matrix</div><div class="ttdef"><b>Definition</b> <a href="cblv_8cc_source.html#l00150">cblv.cc:151</a></div></div>
 <div class="ttc" id="aclassgenealogy__t_html_ae3e9f670c3d98d5878787ae6d374fc4e"><div class="ttname"><a href="#ae3e9f670c3d98d5878787ae6d374fc4e">genealogy_t::obscure</a></div><div class="ttdeci">genealogy_t &amp; obscure(void)</div><div class="ttdoc">erase all deme information</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00322">genealogy.h:322</a></div></div>
 <div class="ttc" id="aclassgenealogy__t_html_af9b62fa58a340fda8969cc011b392c87"><div class="ttname"><a href="#af9b62fa58a340fda8969cc011b392c87">genealogy_t::insert_zlb</a></div><div class="ttdeci">genealogy_t &amp; insert_zlb(void)</div><div class="ttdoc">insert zero-length branches for samples where needed</div><div class="ttdef"><b>Definition</b> <a href="genealogy_8h_source.html#l00359">genealogy.h:359</a></div></div>
@@ -4794,6 +4930,7 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="newick_8cc_source.html">newick.cc</a></li>
 <li>src/<a class="el" href="parse_8cc_source.html">parse.cc</a></li>
 <li>src/<a class="el" href="structure_8cc_source.html">structure.cc</a></li>
+<li>src/<a class="el" href="subsample_8cc_source.html">subsample.cc</a></li>
 <li>src/<a class="el" href="sum_8cc_source.html">sum.cc</a></li>
 <li>src/<a class="el" href="yaml_8cc_source.html">yaml.cc</a></li>
 </ul>

@@ -43,6 +43,7 @@ var classgenealogy__t =
     [ "sample_migrate", "classgenealogy__t.html#ac1b5058d312f0b06ad06b441233ed10a", null ],
     [ "scan_branch_label", "classgenealogy__t.html#aeb5e39433971ba80ea2c87c811e9858b", null ],
     [ "structure", "classgenealogy__t.html#a149f0045d94d692dc7c7c874a354bc59", null ],
+    [ "subsample", "classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d", null ],
     [ "time", "classgenealogy__t.html#ab1bae819d94c8e4d9033d48864818da2", null ],
     [ "time", "classgenealogy__t.html#a0aa8b1fdacbf5547df50959c0515166d", null ],
     [ "time_rescale", "classgenealogy__t.html#a07f3ff67bfcf61c7681d538cb870d5eb", null ],

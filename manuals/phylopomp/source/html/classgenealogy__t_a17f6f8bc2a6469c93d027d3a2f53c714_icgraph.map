@@ -1,43 +1,47 @@
 <map id="genealogy_t::clean" name="genealogy_t::clean">
-<area shape="rect" id="Node000001" title="clean up" alt="" coords="795,476,940,501"/>
-<area shape="rect" id="Node000002" href="$classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="551,277,741,303"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="840,469,660,305,663,301,843,465"/>
-<area shape="rect" id="Node000011" href="$classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="314,452,490,477"/>
-<area shape="poly" id="edge23_Node000001_Node000011" title=" " alt="" coords="781,487,490,472,490,467,781,482"/>
-<area shape="rect" id="Node000014" href="$classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="309,501,495,527"/>
-<area shape="poly" id="edge24_Node000001_Node000014" title=" " alt="" coords="781,496,496,512,495,506,780,491"/>
-<area shape="rect" id="Node000016" href="$classgenealogy__t.html#a133124a0202aea8216be20b602faad1e" title="destructor" alt="" coords="545,552,747,577"/>
-<area shape="poly" id="edge25_Node000001_Node000016" title=" " alt="" coords="821,509,748,535,689,555,687,549,746,530,819,504"/>
-<area shape="rect" id="Node000003" href="$classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="121,301,259,327"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="537,298,259,313,259,308,536,293"/>
-<area shape="rect" id="Node000004" href="$classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="307,55,497,80"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="631,266,610,227,580,180,542,133,496,94,474,82,476,78,499,89,546,130,585,177,615,225,635,263"/>
-<area shape="rect" id="Node000005" href="$classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="307,104,497,129"/>
-<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="626,268,573,205,536,171,496,143,471,132,473,127,499,138,540,167,577,201,630,265"/>
-<area shape="rect" id="Node000006" href="$classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="315,5,489,31"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="634,264,616,217,587,157,547,96,523,68,496,44,476,33,479,28,499,40,527,64,552,92,592,154,621,215,639,263"/>
-<area shape="rect" id="Node000008" href="$classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="321,353,483,379"/>
-<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="592,309,445,356,443,351,590,304"/>
-<area shape="rect" id="Node000010" href="$classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="309,153,495,179"/>
-<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="618,271,564,231,496,192,465,181,467,176,498,188,567,226,621,267"/>
-<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="630,316,576,379,540,413,499,442,469,454,467,450,496,437,536,409,572,375,626,312"/>
-<area shape="rect" id="Node000012" href="$classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="314,203,490,228"/>
-<area shape="poly" id="edge16_Node000002_Node000012" title=" " alt="" coords="597,275,497,242,456,231,457,225,498,237,599,270"/>
-<area shape="rect" id="Node000013" href="$classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="309,252,495,277"/>
-<area shape="poly" id="edge17_Node000002_Node000013" title=" " alt="" coords="536,281,495,277,496,272,537,276"/>
-<area shape="poly" id="edge18_Node000002_Node000014" title=" " alt="" coords="635,317,615,356,585,403,546,452,499,492,477,504,474,499,496,488,542,448,580,400,610,353,631,314"/>
-<area shape="rect" id="Node000015" href="$classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="329,403,475,428"/>
-<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="620,314,566,354,498,392,463,405,462,400,496,388,563,349,617,309"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="216,291,208,283,190,280,175,282,166,287,165,292,169,300,165,303,159,293,162,283,173,277,190,275,211,278,220,287"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="314,40,309,44,260,154,199,302,194,300,255,152,305,40,311,36"/>
-<area shape="rect" id="Node000007" href="$getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="5,377,73,403"/>
-<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="319,38,308,44,257,82,211,127,170,176,134,225,79,317,49,378,44,376,74,315,130,223,166,172,207,123,254,78,305,40,316,34"/>
-<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="336,353,242,329,243,324,337,347"/>
-<area shape="poly" id="edge13_Node000008_Node000007" title=" " alt="" coords="308,375,74,390,73,385,308,370"/>
-<area shape="rect" id="Node000009" href="$gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="157,403,223,428"/>
-<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="334,384,224,410,223,405,333,379"/>
-<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="143,410,73,398,74,393,144,405"/>
-<area shape="poly" id="edge20_Node000015_Node000003" title=" " alt="" coords="328,401,306,392,249,360,206,329,209,325,252,356,308,388,330,396"/>
-<area shape="poly" id="edge22_Node000015_Node000007" title=" " alt="" coords="326,433,259,442,189,450,159,450,121,442,84,425,55,405,58,401,86,421,122,437,159,444,189,445,258,437,326,428"/>
-<area shape="poly" id="edge21_Node000015_Node000009" title=" " alt="" coords="315,418,224,418,224,413,315,413"/>
+<area shape="rect" id="Node000001" title="clean up" alt="" coords="864,476,1009,501"/>
+<area shape="rect" id="Node000002" href="$classgenealogy__t.html#a4eadff4b427283fd2f7d0319a56b4386" title=" " alt="" coords="620,277,811,303"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="909,469,729,305,733,301,913,465"/>
+<area shape="rect" id="Node000011" href="$classgenealogy__t.html#a327cec99c735e2ef49c109877d9c90a3" title="copy assignment operator" alt="" coords="383,452,559,477"/>
+<area shape="poly" id="edge25_Node000001_Node000011" title=" " alt="" coords="850,487,559,472,560,467,850,482"/>
+<area shape="rect" id="Node000014" href="$classgenealogy__t.html#a99d5b783669b8b9221c2377081aa45ac" title="binary deserialization" alt="" coords="378,501,565,527"/>
+<area shape="poly" id="edge26_Node000001_Node000014" title=" " alt="" coords="850,496,565,512,565,506,850,491"/>
+<area shape="rect" id="Node000018" href="$classgenealogy__t.html#a133124a0202aea8216be20b602faad1e" title="destructor" alt="" coords="615,552,816,577"/>
+<area shape="poly" id="edge27_Node000001_Node000018" title=" " alt="" coords="890,509,817,535,758,555,757,549,815,530,888,504"/>
+<area shape="rect" id="Node000003" href="$classgenealogy__t.html#ac0c582df009aea1c1ea7267fd2f4933a" title="return the CBLV representation as an R matrix" alt="" coords="169,352,306,377"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="671,310,622,327,567,342,498,353,429,361,307,367,306,362,428,355,498,348,566,337,620,322,670,305"/>
+<area shape="rect" id="Node000004" href="$classgenealogy__t.html#a58ca938694f2f15c3dffa7aed5e223ab" title="copy constructor" alt="" coords="376,55,567,80"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="700,266,680,227,650,180,611,133,565,94,543,82,545,78,568,89,615,130,654,177,684,225,705,263"/>
+<area shape="rect" id="Node000005" href="$classgenealogy__t.html#ae1152dd1477636a93e881f78d36b7165" title="move constructor" alt="" coords="376,104,567,129"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="695,268,642,205,606,171,565,143,540,132,542,127,568,138,609,167,646,201,699,265"/>
+<area shape="rect" id="Node000006" href="$classgenealogy__t.html#af9b62fa58a340fda8969cc011b392c87" title="insert zero&#45;length branches for samples where needed" alt="" coords="385,403,558,428"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="687,313,633,349,568,386,518,405,516,400,566,381,630,345,684,309"/>
+<area shape="rect" id="Node000008" href="$classgenealogy__t.html#ae3e9f670c3d98d5878787ae6d374fc4e" title="erase all deme information" alt="" coords="391,301,552,327"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="606,303,552,309,552,303,606,298"/>
+<area shape="rect" id="Node000010" href="$classgenealogy__t.html#a839588e9ef2bac0f9bd7b0ec77cf3fc9" title="merges two genealogies, adjusting time, t0, and ndeme as needed" alt="" coords="378,153,565,179"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="687,271,633,232,566,194,531,181,533,176,568,189,635,227,690,267"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="699,316,646,379,609,414,568,443,542,454,540,449,565,438,606,410,642,376,695,312"/>
+<area shape="rect" id="Node000012" href="$classgenealogy__t.html#ab920df6f1f27eebf99460634ae15ab94" title="move assignment operator" alt="" coords="383,203,559,228"/>
+<area shape="poly" id="edge16_Node000002_Node000012" title=" " alt="" coords="664,275,566,243,521,231,523,225,567,238,666,270"/>
+<area shape="rect" id="Node000013" href="$classgenealogy__t.html#abd7443b6ddc5006ac83963db98816389" title="binary serialization" alt="" coords="378,252,565,277"/>
+<area shape="poly" id="edge17_Node000002_Node000013" title=" " alt="" coords="606,281,565,277,565,272,606,276"/>
+<area shape="poly" id="edge18_Node000002_Node000014" title=" " alt="" coords="705,317,684,356,654,403,615,452,568,492,546,504,544,499,565,488,611,448,650,400,680,353,700,314"/>
+<area shape="rect" id="Node000015" href="$classgenealogy__t.html#a434e6e52bbf748439a69a176ecdc45e2" title="prune the tree (drop all black balls)" alt="" coords="398,5,545,31"/>
+<area shape="poly" id="edge19_Node000002_Node000015" title=" " alt="" coords="703,264,685,217,657,157,617,96,592,68,565,44,543,32,546,28,568,40,596,64,621,92,661,154,690,215,708,263"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="270,342,261,334,237,331,218,333,208,337,206,343,211,350,207,353,200,344,204,334,216,328,237,325,263,329,273,338"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="398,402,296,380,297,375,399,397"/>
+<area shape="rect" id="Node000007" href="$getinfo_8cc.html#a8ff1a282de677306937f9bf16df322d7" title=" " alt="" coords="18,252,86,277"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="371,431,317,432,259,427,200,415,145,392,113,367,87,335,56,279,61,276,91,332,117,363,148,388,202,410,259,422,317,426,371,425"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="399,332,297,355,296,349,398,327"/>
+<area shape="poly" id="edge13_Node000008_Node000007" title=" " alt="" coords="377,306,86,271,87,266,378,300"/>
+<area shape="rect" id="Node000009" href="$gendat_8cc.html#a4e3d8844891d744acec1ab83f38cb9e6" title="data&#45;frame format" alt="" coords="204,227,271,252"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="402,300,375,293,327,274,270,253,272,248,329,269,377,287,403,295"/>
+<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="191,248,87,263,86,257,190,243"/>
+<area shape="poly" id="edge20_Node000015_Node000003" title=" " alt="" coords="387,36,378,44,358,70,348,96,345,121,346,147,348,202,343,233,330,266,314,293,294,317,256,354,252,350,290,314,309,290,326,263,338,232,342,202,340,147,339,121,343,94,353,67,374,40,384,32"/>
+<area shape="poly" id="edge22_Node000015_Node000007" title=" " alt="" coords="395,37,377,44,280,97,191,157,117,214,69,254,66,250,114,209,187,153,277,92,375,40,393,32"/>
+<area shape="poly" id="edge21_Node000015_Node000009" title=" " alt="" coords="387,37,378,44,358,68,351,92,345,118,330,149,292,194,256,228,252,224,288,191,326,146,340,117,346,90,354,65,374,40,384,33"/>
+<area shape="rect" id="Node000016" href="$classgenealogy__t.html#a6ac0bda906ceae47ff593ac3c53f527d" title=" " alt="" coords="147,5,328,31"/>
+<area shape="poly" id="edge23_Node000015_Node000016" title=" " alt="" coords="384,21,328,21,328,15,384,15"/>
+<area shape="rect" id="Node000017" href="$subsample_8cc.html#a3e0a01f0d036d6bfaf753fb7fed72e5b" title="extract the bare genealogy" alt="" coords="5,5,99,31"/>
+<area shape="poly" id="edge24_Node000016_Node000017" title=" " alt="" coords="133,21,99,21,99,15,133,15"/>
 </map>

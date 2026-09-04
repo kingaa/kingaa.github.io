@@ -49,7 +49,7 @@ var hierarchy =
     [ "popul_proc_t< siir_state_t, siir_parameters_t, 9 >", "classpopul__proc__t.html", [
       [ "master_t< siir_proc_t, 2 >", "classmaster__t.html", null ]
     ] ],
-    [ "popul_proc_t< sir_state_t, sir_parameters_t, 4 >", "classpopul__proc__t.html", [
+    [ "popul_proc_t< sir_state_t, sir_parameters_t, 5 >", "classpopul__proc__t.html", [
       [ "master_t< sir_proc_t, 1 >", "classmaster__t.html", null ]
     ] ],
     [ "popul_proc_t< strains_state_t, strains_parameters_t, 9 >", "classpopul__proc__t.html", [

@@ -258,7 +258,7 @@ $(function(){initNavTree('nodeseq_8h_source.html',''); initResizable(true); });
 <div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a990ffa0ecf7f2d8f6bd66004e42c0b58">  143</a></span>  <a class="code hl_class" href="classnode__t.html">node_t</a> *<a class="code hl_function" href="classnodeseq__t.html#a990ffa0ecf7f2d8f6bd66004e42c0b58">position</a> (<span class="keywordtype">int</span> <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a>) {</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_typedef" href="nodeseq_8h.html#ab7cf8c23ad3ad8416142396f5600e3e9">node_it</a> k = cbegin();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">auto</span> k = cbegin();</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="lbdp__pomp_8c.html#ad5228cd48403ef9d8b632f5c7c124720">n</a> &amp;&amp; k != cend()) {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      i++; k++;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
@@ -335,7 +335,7 @@ $(function(){initNavTree('nodeseq_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span></div>
 <div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394">  211</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394">weed</a> (<span class="keywordtype">void</span>) {</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <a class="code hl_typedef" href="nodeseq_8h.html#afdd200c13cb7754d81aaa5deeff703ed">node_nit</a> j = begin();</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">auto</span> j = begin();</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">while</span> (j != end()) {</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>      <span class="keywordflow">if</span> ((*j)-&gt;dead_root()) {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <a class="code hl_function" href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">destroy_node</a>(*(j++));</div>
@@ -348,116 +348,119 @@ $(function(){initNavTree('nodeseq_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span></div>
 <div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb">  223</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classnodeseq__t.html#a254feb97445b95db5fe02b3ed1f433bb">comb</a> (<span class="keywordtype">void</span>) {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a> *p : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      <span class="keywordflow">if</span> (p-&gt;size() == 1 &amp;&amp; p-&gt;<a class="code hl_function" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <a class="code hl_function" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624">swap</a>(p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>(),p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    }</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <a class="code hl_function" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394">weed</a>();</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  };</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = rbegin(); it != rend(); ++it) {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      <a class="code hl_class" href="classnode__t.html">node_t</a> *p = *it;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      <span class="keywordflow">if</span> (p-&gt;size() == 0) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <a class="code hl_function" href="classnodeseq__t.html#a125256a336ee2dceb0747bea92dffc78">detach</a>(p);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p-&gt;size() == 1 &amp;&amp; p-&gt;<a class="code hl_function" href="classpocket__t.html#affc2fde2447d03aaf5c8990525c23bf6">holds</a>(<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a>)) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <a class="code hl_function" href="classnodeseq__t.html#a69dc328641a94b6a0494d645fcf8c624">swap</a>(p-&gt;<a class="code hl_function" href="classpocket__t.html#a778485d19ff278c7fbe70c92fec904e9">last_ball</a>(),p-&gt;<a class="code hl_function" href="classnode__t.html#acb3ee337996be158355dd6aaaa9811fa">green_ball</a>());</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_function" href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394">weed</a>();</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  };</div>
 </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span></div>
-<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">  237</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b, <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u) {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <a class="code hl_class" href="classnode__t.html">node_t</a> *p = b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">while</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() == <a class="code hl_variable" href="node_8h.html#affb5e86666af08d682543f786e480f13">null_lineage</a>) {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() = u;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      p = p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>();</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  };</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="foldopen" id="foldopen00240" data-start="{" data-end="}">
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">  240</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b, <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <a class="code hl_class" href="classnode__t.html">node_t</a> *p = b-&gt;<a class="code hl_function" href="classball__t.html#a7018ea86bba5844d30904e3242ec45c4">holder</a>();</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">while</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() == <a class="code hl_variable" href="node_8h.html#affb5e86666af08d682543f786e480f13">null_lineage</a>) {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      p-&gt;<a class="code hl_function" href="classnode__t.html#a230f2503e7d244fb24ee145ecf6dd651">lineage</a>() = u;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      p = p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  };</div>
 </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  std::unordered_map&lt;name_t, std::vector&lt;node_t*&gt;&gt;</div>
-<div class="foldopen" id="foldopen00249" data-start="{" data-end="}">
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">  249</a></span>  <a class="code hl_function" href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">children_map</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    std::unordered_map&lt;name_t, std::vector&lt;node_t*&gt;&gt; children;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    children.reserve(size());</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="comment">// initialise every node with an empty vector</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a>* p : *<span class="keyword">this</span>)</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      children[p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>];</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a>* p : *<span class="keyword">this</span>) {</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keywordflow">if</span> (!p-&gt;<a class="code hl_function" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>())</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        children[p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>()-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>].push_back(p);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">return</span> children;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  };</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  std::unordered_map&lt;name_t, std::vector&lt;node_t*&gt;&gt;</div>
+<div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">  252</a></span>  <a class="code hl_function" href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">children_map</a> (<span class="keywordtype">void</span>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    std::unordered_map&lt;name_t, std::vector&lt;node_t*&gt;&gt; children;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    children.reserve(size());</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="comment">// initialise every node with an empty vector</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a>* p : *<span class="keyword">this</span>)</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      children[p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>];</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a>* p : *<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordflow">if</span> (!p-&gt;<a class="code hl_function" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>())</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        children[p-&gt;<a class="code hl_function" href="classnode__t.html#a144e254a1b8b22ce1f905f0e80cf55fb">parent</a>()-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>].push_back(p);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">return</span> children;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  };</div>
 </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  std::vector&lt;node_t*&gt;</div>
-<div class="foldopen" id="foldopen00264" data-start="{" data-end="}">
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">  264</a></span>  <a class="code hl_function" href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">sorted_roots</a></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  (</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>   <span class="keyword">const</span> std::unordered_map&lt;name_t, slate_t&gt;&amp; height</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>   )<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    std::vector&lt;node_t*&gt; roots;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a>* p : *<span class="keyword">this</span>)</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordflow">if</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) roots.push_back(p);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    std::sort(roots.begin(), roots.end(),</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>              [&amp;height](<a class="code hl_class" href="classnode__t.html">node_t</a>* a, <a class="code hl_class" href="classnode__t.html">node_t</a>* b) {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                return height.at(a-&gt;uniq) &gt; height.at(b-&gt;uniq);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>              });</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">return</span> roots;</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  };</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  std::vector&lt;node_t*&gt;</div>
+<div class="foldopen" id="foldopen00267" data-start="{" data-end="}">
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">  267</a></span>  <a class="code hl_function" href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">sorted_roots</a></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  (</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>   <span class="keyword">const</span> std::unordered_map&lt;name_t, slate_t&gt;&amp; height</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>   )<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    std::vector&lt;node_t*&gt; roots;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a>* p : *<span class="keyword">this</span>)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <span class="keywordflow">if</span> (p-&gt;<a class="code hl_function" href="classnode__t.html#a7b42edef9d30827acaef62beff27582f">is_root</a>()) roots.push_back(p);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    std::sort(roots.begin(), roots.end(),</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>              [&amp;height](<a class="code hl_class" href="classnode__t.html">node_t</a>* a, <a class="code hl_class" href="classnode__t.html">node_t</a>* b) {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                return height.at(a-&gt;uniq) &gt; height.at(b-&gt;uniq);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>              });</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">return</span> roots;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  };</div>
 </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  std::vector&lt;node_t*&gt;</div>
-<div class="foldopen" id="foldopen00282" data-start="{" data-end="}">
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">  282</a></span>  <a class="code hl_function" href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">ladderize</a></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  (</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>   std::unordered_map&lt;<a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>,std::vector&lt;node_t*&gt;&gt;&amp; children</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>   )<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    std::unordered_map&lt;name_t, slate_t&gt; height;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    height.reserve(size());</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = rbegin(); it != rend(); ++it) {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <a class="code hl_class" href="classnode__t.html">node_t</a>* p = *it;</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      <span class="keyword">auto</span>&amp; ch = children.at(p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      <span class="keywordflow">if</span> (ch.empty()) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        height[p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>] = p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        std::sort(ch.begin(), ch.end(),</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                  [&amp;height](<a class="code hl_class" href="classnode__t.html">node_t</a>* a, <a class="code hl_class" href="classnode__t.html">node_t</a>* b) {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                    return height.at(a-&gt;uniq) &gt; height.at(b-&gt;uniq);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                  });</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        height[p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>] = height.at(ch[0]-&gt;uniq);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">sorted_roots</a>(height);</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  };</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  std::vector&lt;node_t*&gt;</div>
+<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">  285</a></span>  <a class="code hl_function" href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">ladderize</a></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  (</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>   std::unordered_map&lt;<a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a>,std::vector&lt;node_t*&gt;&gt;&amp; children</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>   )<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    std::unordered_map&lt;name_t, slate_t&gt; height;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    height.reserve(size());</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = rbegin(); it != rend(); ++it) {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <a class="code hl_class" href="classnode__t.html">node_t</a>* p = *it;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      <span class="keyword">auto</span>&amp; ch = children.at(p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      <span class="keywordflow">if</span> (ch.empty()) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        height[p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>] = p-&gt;<a class="code hl_variable" href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">slate</a>;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        std::sort(ch.begin(), ch.end(),</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                  [&amp;height](<a class="code hl_class" href="classnode__t.html">node_t</a>* a, <a class="code hl_class" href="classnode__t.html">node_t</a>* b) {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                    return height.at(a-&gt;uniq) &gt; height.at(b-&gt;uniq);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                  });</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        height[p-&gt;<a class="code hl_variable" href="classnode__t.html#acaa19616699522ec853e82c3923b0ce7">uniq</a>] = height.at(ch[0]-&gt;uniq);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      }</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">sorted_roots</a>(height);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  };</div>
 </div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span></div>
-<div class="foldopen" id="foldopen00309" data-start="{" data-end="}">
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">  309</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">trace_lineages</a> (<span class="keywordtype">void</span>) {</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="comment">// we trace each lineage in turn.</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="comment">// because we move from early to late,</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="comment">// the order is guaranteed to be valid.</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u = 0;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a> *p : *<span class="keyword">this</span> ) {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b : *p) {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">if</span> (b-&gt;color==<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) {</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>          <a class="code hl_function" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a>(b,u);</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>          u++;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        }</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      }</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  };</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span></div>
+<div class="foldopen" id="foldopen00312" data-start="{" data-end="}">
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">  312</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">trace_lineages</a> (<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="comment">// we trace each lineage in turn.</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="comment">// because we move from early to late,</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="comment">// the order is guaranteed to be valid.</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <a class="code hl_typedef" href="internal_8h.html#a5c08bbb85c89413f5e8af55c20429103">name_t</a> u = 0;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classnode__t.html">node_t</a> *p : *<span class="keyword">this</span> ) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>      <span class="keywordflow">for</span> (<a class="code hl_class" href="classball__t.html">ball_t</a> *b : *p) {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">if</span> (b-&gt;color==<a class="code hl_enumvalue" href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a8f5fa6b484ac7e2a97943d915cf224e2">blue</a>) {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>          <a class="code hl_function" href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">trace_lineage</a>(b,u);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>          u++;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  };</div>
 </div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  string_t <a class="code hl_function" href="classnodeseq__t.html#a5ee4aa52a55d7a6f7062168b2936c80a">yaml</a> (string_t tab = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  SEXP <a class="code hl_function" href="classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253">structure</a> (<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  string_t <a class="code hl_function" href="classnodeseq__t.html#a1cc5a9d9c0e36bccad0cbf98867b90d2">newick</a> (<a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t, <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> te, <span class="keywordtype">bool</span> showdeme, <span class="keywordtype">bool</span> extended) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>};</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  string_t <a class="code hl_function" href="classnodeseq__t.html#a5ee4aa52a55d7a6f7062168b2936c80a">yaml</a> (string_t tab = <span class="stringliteral">&quot;&quot;</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  SEXP <a class="code hl_function" href="classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253">structure</a> (<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  string_t <a class="code hl_function" href="classnodeseq__t.html#a1cc5a9d9c0e36bccad0cbf98867b90d2">newick</a> (<a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> t, <a class="code hl_typedef" href="internal_8h.html#af450b2ac2081b900cfe5a2e5b5530357">slate_t</a> te, <span class="keywordtype">bool</span> showdeme, <span class="keywordtype">bool</span> extended) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>};</div>
 </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1">color_t</a></div><div class="ttdeci">color_t</div><div class="ttdoc">BALL COLORS.</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a6aa25890c44e0aac424e56338abe47ca">green</a></div><div class="ttdeci">@ green</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
 <div class="ttc" id="aball_8h_html_a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370"><div class="ttname"><a href="ball_8h.html#a0a8ef1b5e1941b7257e545cc33405ff1a775364fe1f3fffe99686bf6d572a7370">black</a></div><div class="ttdeci">@ black</div><div class="ttdef"><b>Definition</b> <a href="ball_8h_source.html#l00012">ball.h:12</a></div></div>
@@ -479,10 +482,10 @@ $(function(){initNavTree('nodeseq_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassnode__t_html_ae75443c0b7626aac23b3633f5c1011e9"><div class="ttname"><a href="classnode__t.html#ae75443c0b7626aac23b3633f5c1011e9">node_t::slate</a></div><div class="ttdeci">slate_t slate</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00035">node.h:35</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html"><div class="ttname"><a href="classnodeseq__t.html">nodeseq_t</a></div><div class="ttdoc">A sequence of nodes.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">nodeseq.h:19</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a02549bd0fd1a66ee1045d3e41c31c394"><div class="ttname"><a href="classnodeseq__t.html#a02549bd0fd1a66ee1045d3e41c31c394">nodeseq_t::weed</a></div><div class="ttdeci">void weed(void)</div><div class="ttdoc">drop all dead roots</div><div class="ttdef"><b>Definition</b> <a href="#l00211">nodeseq.h:211</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a054513b50a1efa636b620e4f2743a0c1"><div class="ttname"><a href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">nodeseq_t::children_map</a></div><div class="ttdeci">std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; children_map(void) const</div><div class="ttdoc">map nodes onto vector of children</div><div class="ttdef"><b>Definition</b> <a href="#l00249">nodeseq.h:249</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a054513b50a1efa636b620e4f2743a0c1"><div class="ttname"><a href="classnodeseq__t.html#a054513b50a1efa636b620e4f2743a0c1">nodeseq_t::children_map</a></div><div class="ttdeci">std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; children_map(void) const</div><div class="ttdoc">map nodes onto vector of children</div><div class="ttdef"><b>Definition</b> <a href="#l00252">nodeseq.h:252</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a125256a336ee2dceb0747bea92dffc78"><div class="ttname"><a href="classnodeseq__t.html#a125256a336ee2dceb0747bea92dffc78">nodeseq_t::detach</a></div><div class="ttdeci">void detach(node_t *p)</div><div class="ttdef"><b>Definition</b> <a href="#l00176">nodeseq.h:176</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a165644e4095236a169a47db1a915141f"><div class="ttname"><a href="classnodeseq__t.html#a165644e4095236a169a47db1a915141f">nodeseq_t::clean</a></div><div class="ttdeci">void clean(void)</div><div class="ttdoc">clean up: delete all nodes, reset globals</div><div class="ttdef"><b>Definition</b> <a href="#l00024">nodeseq.h:24</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a16b0cf23fe151c5ce4696041da8c2a27"><div class="ttname"><a href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">nodeseq_t::trace_lineage</a></div><div class="ttdeci">void trace_lineage(ball_t *b, name_t u)</div><div class="ttdef"><b>Definition</b> <a href="#l00237">nodeseq.h:237</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a16b0cf23fe151c5ce4696041da8c2a27"><div class="ttname"><a href="classnodeseq__t.html#a16b0cf23fe151c5ce4696041da8c2a27">nodeseq_t::trace_lineage</a></div><div class="ttdeci">void trace_lineage(ball_t *b, name_t u)</div><div class="ttdef"><b>Definition</b> <a href="#l00240">nodeseq.h:240</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a1cc5a9d9c0e36bccad0cbf98867b90d2"><div class="ttname"><a href="classnodeseq__t.html#a1cc5a9d9c0e36bccad0cbf98867b90d2">nodeseq_t::newick</a></div><div class="ttdeci">string_t newick(slate_t t, slate_t te, bool showdeme, bool extended) const</div><div class="ttdoc">put genealogy at time t into Newick format.</div><div class="ttdef"><b>Definition</b> <a href="newick_8cc_source.html#l00092">newick.cc:93</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a1dcd896b978d4aa2e756e1a976b79d11"><div class="ttname"><a href="classnodeseq__t.html#a1dcd896b978d4aa2e756e1a976b79d11">nodeseq_t::node_map</a></div><div class="ttdeci">std::unordered_map&lt; name_t, node_t * &gt; node_map(void) const</div><div class="ttdoc">map node names onto pointers</div><div class="ttdef"><b>Definition</b> <a href="#l00090">nodeseq.h:90</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a21d15f69c9d577ba0cc8c94bcde0c9f3"><div class="ttname"><a href="classnodeseq__t.html#a21d15f69c9d577ba0cc8c94bcde0c9f3">nodeseq_t::ntime</a></div><div class="ttdeci">size_t ntime(slate_t t) const</div><div class="ttdoc">Number of distinct timepoints.</div><div class="ttdef"><b>Definition</b> <a href="#l00128">nodeseq.h:128</a></div></div>
@@ -491,7 +494,7 @@ $(function(){initNavTree('nodeseq_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassnodeseq__t_html_a378e6e3ebf0a59a3f041227f22eb8ed5"><div class="ttname"><a href="classnodeseq__t.html#a378e6e3ebf0a59a3f041227f22eb8ed5">nodeseq_t::operator&gt;&gt;</a></div><div class="ttdeci">friend raw_t * operator&gt;&gt;(const nodeseq_t &amp;G, raw_t *o)</div><div class="ttdoc">binary serialization</div><div class="ttdef"><b>Definition</b> <a href="#l00047">nodeseq.h:47</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a3c1a1fecd87741fbd9b5d4844c4e4276"><div class="ttname"><a href="classnodeseq__t.html#a3c1a1fecd87741fbd9b5d4844c4e4276">nodeseq_t::destroy_node</a></div><div class="ttdeci">void destroy_node(node_t *p)</div><div class="ttdoc">remove a dead root node</div><div class="ttdef"><b>Definition</b> <a href="#l00205">nodeseq.h:205</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a3c6308f6fb71abd427e28129d8a5c146"><div class="ttname"><a href="classnodeseq__t.html#a3c6308f6fb71abd427e28129d8a5c146">nodeseq_t::attach</a></div><div class="ttdeci">void attach(node_t *p, node_t *q)</div><div class="ttdef"><b>Definition</b> <a href="#l00171">nodeseq.h:171</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a51e47d09293e266450a15cb5d29008eb"><div class="ttname"><a href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">nodeseq_t::ladderize</a></div><div class="ttdeci">std::vector&lt; node_t * &gt; ladderize(std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; &amp;children) const</div><div class="ttdef"><b>Definition</b> <a href="#l00282">nodeseq.h:283</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a51e47d09293e266450a15cb5d29008eb"><div class="ttname"><a href="classnodeseq__t.html#a51e47d09293e266450a15cb5d29008eb">nodeseq_t::ladderize</a></div><div class="ttdeci">std::vector&lt; node_t * &gt; ladderize(std::unordered_map&lt; name_t, std::vector&lt; node_t * &gt; &gt; &amp;children) const</div><div class="ttdef"><b>Definition</b> <a href="#l00285">nodeseq.h:286</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a572f5e5f6d038618a3d97faa5a962253"><div class="ttname"><a href="classnodeseq__t.html#a572f5e5f6d038618a3d97faa5a962253">nodeseq_t::structure</a></div><div class="ttdeci">SEXP structure(void) const</div><div class="ttdoc">R list description.</div><div class="ttdef"><b>Definition</b> <a href="structure_8cc_source.html#l00070">structure.cc:71</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a59269f90e8ac44b94f7610aaea662d0e"><div class="ttname"><a href="classnodeseq__t.html#a59269f90e8ac44b94f7610aaea662d0e">nodeseq_t::bytesize</a></div><div class="ttdeci">size_t bytesize(void) const</div><div class="ttdoc">size of serialized binary form</div><div class="ttdef"><b>Definition</b> <a href="#l00040">nodeseq.h:40</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a5b3576542f04b82beb2cd9bf89279390"><div class="ttname"><a href="classnodeseq__t.html#a5b3576542f04b82beb2cd9bf89279390">nodeseq_t::drop</a></div><div class="ttdeci">void drop(ball_t *a)</div><div class="ttdef"><b>Definition</b> <a href="#l00189">nodeseq.h:189</a></div></div>
@@ -501,8 +504,8 @@ $(function(){initNavTree('nodeseq_8h_source.html',''); initResizable(true); });
 <div class="ttc" id="aclassnodeseq__t_html_a6e3d15ce3489935b81089a55907f9f22"><div class="ttname"><a href="classnodeseq__t.html#a6e3d15ce3489935b81089a55907f9f22">nodeseq_t::length</a></div><div class="ttdeci">size_t length(void) const</div><div class="ttdoc">Number of nodes in the sequence.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">nodeseq.h:139</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a73dff058ff34687a7e869d2483635a9d"><div class="ttname"><a href="classnodeseq__t.html#a73dff058ff34687a7e869d2483635a9d">nodeseq_t::move</a></div><div class="ttdeci">void move(ball_t *b, node_t *p, node_t *q)</div><div class="ttdoc">move ball b from p to q</div><div class="ttdef"><b>Definition</b> <a href="#l00156">nodeseq.h:156</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a79d7f31a5b5bfe6879bd4ed3ac8c8b93"><div class="ttname"><a href="classnodeseq__t.html#a79d7f31a5b5bfe6879bd4ed3ac8c8b93">nodeseq_t::colored</a></div><div class="ttdeci">pocket_t * colored(color_t col) const</div><div class="ttdoc">Get all balls of a color.</div><div class="ttdef"><b>Definition</b> <a href="#l00118">nodeseq.h:118</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a7d003899b6bbc529699e1a02858de8ce"><div class="ttname"><a href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">nodeseq_t::trace_lineages</a></div><div class="ttdeci">void trace_lineages(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00309">nodeseq.h:309</a></div></div>
-<div class="ttc" id="aclassnodeseq__t_html_a98eaf8c8d0e3104436d99cdff70709b4"><div class="ttname"><a href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">nodeseq_t::sorted_roots</a></div><div class="ttdeci">std::vector&lt; node_t * &gt; sorted_roots(const std::unordered_map&lt; name_t, slate_t &gt; &amp;height) const</div><div class="ttdoc">collect root nodes and sort them in order of decreasing subtree height</div><div class="ttdef"><b>Definition</b> <a href="#l00264">nodeseq.h:265</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a7d003899b6bbc529699e1a02858de8ce"><div class="ttname"><a href="classnodeseq__t.html#a7d003899b6bbc529699e1a02858de8ce">nodeseq_t::trace_lineages</a></div><div class="ttdeci">void trace_lineages(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00312">nodeseq.h:312</a></div></div>
+<div class="ttc" id="aclassnodeseq__t_html_a98eaf8c8d0e3104436d99cdff70709b4"><div class="ttname"><a href="classnodeseq__t.html#a98eaf8c8d0e3104436d99cdff70709b4">nodeseq_t::sorted_roots</a></div><div class="ttdeci">std::vector&lt; node_t * &gt; sorted_roots(const std::unordered_map&lt; name_t, slate_t &gt; &amp;height) const</div><div class="ttdoc">collect root nodes and sort them in order of decreasing subtree height</div><div class="ttdef"><b>Definition</b> <a href="#l00267">nodeseq.h:268</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_a990ffa0ecf7f2d8f6bd66004e42c0b58"><div class="ttname"><a href="classnodeseq__t.html#a990ffa0ecf7f2d8f6bd66004e42c0b58">nodeseq_t::position</a></div><div class="ttdeci">node_t * position(int n)</div><div class="ttdoc">traverse to nth node, retrieve pointer</div><div class="ttdef"><b>Definition</b> <a href="#l00143">nodeseq.h:143</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_aa348d670f5f37837d2baaec31eb63ecc"><div class="ttname"><a href="classnodeseq__t.html#aa348d670f5f37837d2baaec31eb63ecc">nodeseq_t::repair_owners</a></div><div class="ttdeci">void repair_owners(const std::unordered_map&lt; name_t, ball_t * &gt; &amp;names)</div><div class="ttdef"><b>Definition</b> <a href="#l00082">nodeseq.h:82</a></div></div>
 <div class="ttc" id="aclassnodeseq__t_html_abdea5d655fdc954c93db77e6fecd5957"><div class="ttname"><a href="classnodeseq__t.html#abdea5d655fdc954c93db77e6fecd5957">nodeseq_t::~nodeseq_t</a></div><div class="ttdeci">~nodeseq_t(void)</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition</b> <a href="#l00032">nodeseq.h:32</a></div></div>
